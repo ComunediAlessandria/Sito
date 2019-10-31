@@ -1,0 +1,132 @@
+<!-- INIZIO TESTATA -->
+<div class="TopTestata hidden-print">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-6 col-sm-3 col-md-2">
+                <a href="https://www.regione.piemonte.it/web/" class="IcoRC target_blank" title="Regione Piemonte">Regione Piemonte</a>  
+            </div>
+            <div class="hidden-xs col-sm-3 col-md-3">
+                <a href="https://www.regione.piemonte.it/web/temi/fondi-progetti-europei" class="IcoRC target_blank" title="POR FESR Piemonte">POR FESR Piemonte 2014-2020</a>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-7">
+                 <div class="right">
+                    <a href="{MODULE:FlexPage:PageId=682}" class="AccediServizi" title="Servizi Online">Servizi Online</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="sidebar-offcanvas row-offcanvas hidden-print " id="sidebar" role="navigation">
+    <div class="MenuVBIG js-menu-marika">
+        {MODULE:IndexTree: ID=6, renderer=MenuMarika, trailtree, complete, open=3}
+        {MODULE:IndexTree: ID=7, renderer=MenuMarika, trailtree, complete, open=3}
+        {MODULE:IndexTree: ID=9, renderer=MenuMarika, trailtree, complete, open=3}
+        {MODULE:IndexTree: ID=8, renderer=MenuMarika, trailtree, complete, open=3}
+        {MODULE:IndexTree: ID=3, renderer=MenuMarika, trailtree, complete, open=3}
+       <!-- {MODULE:IndexTree: ID=3, renderer=MenuMarika, trailtree, complete, open=3}
+        {MODULE:IndexTree: ID=13, renderer=MenuMarika, trailtree, complete, open=3}
+        {MODULE:IndexTree: ID=4, renderer=MenuMarika, trailtree, complete, open=3}
+        {MODULE:IndexTree: ID=6, renderer=MenuMarika, trailtree, complete, open=3}-->
+    </div>   
+    <!--</div>   
+    </div>   
+    </div>   -->
+</div>
+        
+<div id="tWrapper">
+    <div class="Testata">
+        <div class="btnBurger hidden-print">    
+            <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="marika-offcanvas" data-target="#sidebar"> 
+                <span class="hamb-top"></span> 
+                <span class="hamb-middle"></span> 
+                <span class="hamb-bottom"></span> 
+                <div class="menu">MENU</div>
+            </button>                            
+        </div> 
+        <div class="container-fluid"> 
+            <div class="row">               
+                <div class="contlogo">
+                    <div class="col-xs-8 col-sm-5 col-md-5 col-lg-5">
+                        <a href="{MODULE:FlexPage:Internal=home}" class="Logo" title="Comune di Alessandria">
+                            <div class="logo">
+                                <img src="kAssetsUSR/img/StemmaAlessandria.png" alt="Comune di Alessandria"  />
+                                Citt&agrave;  di Alessandria 
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="hidden-xs hidden-sm col-md-5 col-lg-2 hidden-print">
+                        <div class="hidden-xs BoxSocial">
+                            <p>Seguici su</p>
+                            <a class="Fb hvr-outline-out target_blank" href="https://www.facebook.com/comunealessandria/?ref=br_rs" title="Visita la nostra pagina Facebook"></a> 
+
+                             <a class="Tw hvr-outline-out target_blank" href="https://twitter.com/com_alessandria?lang=it" title="Visita la nostra pagina Twitter"></a>    
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-4 hidden-print">
+                        <div class="BoxSpidCerca">
+                            <div id="BoxCerca"  data-placement="left">
+                                {MODULE:Search:kind=v3,id=1}
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>                     
+        </div> 
+        <!--<div id="BoxCerca2" class="visible-xs search-box">{MODULE:Search:kind=v3,id=1}</div>-->
+    </div>
+</div>
+
+
+<!--<div class="RigaBiancaSotto"></div>-->
+<div class="Top"> 
+    <div class="MenuHTop">
+        <div class="container-fluid">
+            <div class="row"> 
+                <div class="col-xs-12 col-md-12  col-lg-12 ">
+                    <!--<a class="GoAway" name="menuPrincipale" id="menuPrincipale">Menu principale</a>-->
+                    {MODULE:IndexTree: ID=1, trailtree, complete, open=1{include-parameter-t1}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Bread">
+        <div class="container-fluid">
+            <div class="row"> 
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-8 col-sm-9 ">
+                            <div class="Breadcrumb">
+                                <p><a href="{MODULE:FlexPage:internal=home}" lang="it">Home</a> <span class="ImgBread">/</span> {MODULE:BreadCrumb}</p>
+                            </div>
+                        </div>
+                         <div class="col-xs-4 col-sm-3 text-right">
+                                <div class='socialWheelWrapper hidden-print'>
+                                    <span class='wheel-button'>Condividi</span>
+                                    <span class='wheel-button' title='condividi'>
+                                        <i class="fa fa-share-alt" aria-hidden="false"></i>
+                                    </span>
+                                    <ul id='socialWheel' class='wheel'>
+                                        <!--<li class='item'><a href='#' id='swLi' title='condividi su Linkedin'><i class="fa fa-linkedin" aria-hidden="true"></i><span class='hidden'>Linkedin</span></a></li>-->
+                                        <li class='item'><a href='#' id='swFb' title='condividi su Facebook'><i class="fa fa-facebook" aria-hidden="true"></i><span class='hidden'>Facebook</span></a></li>
+                                        <li class='item'><a href='#' id='swTw' title='condividi su Twitter'><i class="fa fa-twitter" aria-hidden="true"></i><span class='hidden'>Twitter</span></a></li>
+                                    </ul>
+                                </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {:if:notempty:CORPOPAGINA}
+        <div class="SfondoMain" >{PAGE.SFONDOMAIN}</div>
+    {:endif}
+    
+</div>
+
+    <div class="clear"></div>
+
+<!-- FINE TESTATA -->

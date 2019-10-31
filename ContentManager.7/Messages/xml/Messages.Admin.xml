@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="it">
+
+	<!--
+		Template amministrativo
+	-->
+
+	<group id='admin' define='false'>
+
+		<message id='lblHelp' lang:it='Guida Contestuale' lang:en='Help' lang:es='Guia Contextual'/>
+		<message id='lblCurUser' lang:it='Utente Corrente' lang:en='Current User' lang:es='Usuario'/>
+		<message id='lblMenu' lang:it='Menu Amministrativo' lang:en='Administrative Menu' lang:es='Area administrativa' />
+		<message id='lblBack' lang:it='Torna al Sito' lang:en='Back to Site' lang:es='Ir al sitio'/>
+		<message id='lblCopy' lang:it='è un prodotto' lang:en='is a product by' lang:es='es un producto de' />
+
+		<!-- tAdminBreadcrumb -->
+
+		<message id='lblBC' lang:it='Sei in' lang:en='You are here' lang:es='Se encuentra en'/>
+		<message id='lblBCHead' lang:it='Area Amministrativa' lang:en='Administrative Area' lang:es='Area administrativa'/>
+		<!-- admin v2 -->
+		<message id='bcBack' lang:it='Sito' lang:en='Site' lang:es='Sitio'/>
+
+		<!-- tLangSwitchAdmin -->
+
+		<message id='lblCurLang' lang:it='Lingua Corrente' lang:en='Current Language' lang:es='Idioma'/>
+		<message id='btnChange' lang:it='Cambia Lingua' lang:en='Change' lang:es='Cambiar idioma'/>
+
+		<!-- admin v2 -->
+		<message id='lblCLang' lang:it='Lingua Contenuti' lang:en='Content Language' lang:es='[es] Content Language'/>
+		<message id='lblMan' lang:it='Manuale' lang:en='User Manual' lang:es='[es] User manual'/>
+		<message id='lblChP' lang:it='Modifica Password' lang:en='Change Password' lang:es='[es] Change Password'/>
+		<message id='lblHome' lang:it='Torna al Sito' lang:en='Back to Site' lang:es='[es] Back to Site'/>
+
+		<!-- pannello laterale di informazioni sulla pagina -->
+
+		<message id='lblLastMod' lang:it='Ultima modifica' lang:en='Last Change' lang:es='última modificación' />
+		<message id='lblStato' lang:it='Stato' lang:en='Status' lang:es='Estado' />
+		<message id='lblMod' lang:it='Modifica Pagina' lang:en='Modify Page' lang:es='Modificar página' />
+		<message id='lblShow' lang:it='Mostra in Elenco' lang:en='Show in Page List' lang:es='Visualizar en elenco'/>
+
+		<message id='lblAmministrazione' lang:it='Amministrazione' lang:en='Admin Area' lang:es='Area administrativa' />
+
+		<!-- pannello laterale di logout -->
+
+		<message id='lblCurAUser' lang:it='Utente Amministrativo corrente' lang:en='Current Admin User' lang:es='Usuario administrativo actual'/>
+		<message id='lblChPsw' lang:it='Cambia Password' lang:en='Modify Password' lang:es='Modificar Password'/>
+		<message id='lblLogout' lang:it='Disconnetti' lang:en='Logout' lang:es='Cerrar sesión '/>
+
+		<!-- page status -->
+
+		<message id='psDef' lang:it='Definitiva' lang:en='Published' lang:es='Definitivo'/>
+		<message id='psWIP' lang:it='In Costruzione' lang:en='In Progress' lang:es='En construcción'/>
+		<message id='psHid' lang:it='Nascosta' lang:en='Hidden' lang:es='Escondido'/>
+
+	</group>
+</messages>

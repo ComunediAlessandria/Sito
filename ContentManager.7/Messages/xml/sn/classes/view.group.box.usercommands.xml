@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="lang" defaultlang="IT">
+  <group id="snViewGroupBoxUserCommands" define="false">
+    <message id="back" lang:it="Torna al Gruppo" lang:en="Back to the Group" lang:fr="Retour au groupe" lang:de="Zurück zur Gruppe" lang:es="Volver al grupo" lang:ru="Вернуться к группе"/>
+    <message id="tback"/>
+  </group>
+</messages>

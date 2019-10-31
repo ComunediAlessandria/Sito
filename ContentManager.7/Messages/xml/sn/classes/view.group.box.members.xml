@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="lang" defaultlang="IT">
+	<group id="snViewGroupBoxMembers" define="false">
+		<message id="none"
+			lang:it="Non ci sono utenti iscritti al gruppo."
+			lang:en="There are no members inside the group."
+			lang:fr="Il n'y a pas de membres au sein du groupe."
+			lang:de="Es sind keine Mitglieder innerhalb der Gruppe."
+			lang:es="No hay miembros dentro del grupo."
+			lang:ru="Там Нет пользователей внутри группы."
+		/>
+		<message id="btitle"
+			lang:it="Membri"
+			lang:en="Members"
+			lang:fr="Membres"
+			lang:de="Mitglieder"
+			lang:es="Miembros"
+			lang:ru="Пользователи"
+		/>
+		<message id="all"
+			lang:it="Tutti"
+			lang:en="All"
+			lang:fr="Tous"
+			lang:de="Alle"
+			lang:es="Todos"
+			lang:ru="Все"
+		/>
+		<message id="member"
+			lang:it="membro"
+			lang:en="member"
+			lang:fr="membre"
+			lang:de="Mitglied"
+			lang:es="miembro"
+			lang:ru="член"
+		/>
+		<message id="members"
+			lang:it="membri"
+			lang:en="members"
+			lang:fr="membres"
+			lang:de="Mitgliedr"
+			lang:es="miembros"
+			lang:ru="член"
+		/>
+		<message id="nom"
+			lang:it="nessun membro"
+			lang:en="no member"
+			lang:fr="aucun membre"
+			lang:de="Kein Mitglied"
+			lang:es="ningún miembro"
+			lang:ru="Ни один из членов"
+		/>
+	</group>
+</messages>

@@ -1,0 +1,43 @@
+<style>
+
+/* siccome fldErr sovrascrive fldBox è necessario mantenere l'ordine qui */
+
+.fldBox {
+
+	border: 1px solid black;
+}
+
+.fldErr {
+
+	border: 1px solid red;
+}
+
+</style>
+
+{ERR}
+
+<form id="form" method="post" action="{ACTION}">
+
+	<h1 class="AdminPageTitle">Scheda Sondaggio</h1>
+
+	<table class="AdminTable">
+
+	  <tr> 
+	    <th>Campo</th>
+	    <th>Valore</th>
+	  </tr>
+
+		<!-- BEGIN row -->
+		<tr class="{CLASSTR}"> 
+			<th class="nowrap">{NAME}&nbsp;{OBB}</th>
+			<td class="AdminTableTDWidth100">{INPUT}</td>
+		</tr>
+		<!-- END row -->
+
+	</table>
+
+	<div class="AdminPageFooterCommand"> 
+		{HIDDEN} <input name="Submit" type="submit" value="Salva le modifiche" /> 
+	</div>
+
+</form>

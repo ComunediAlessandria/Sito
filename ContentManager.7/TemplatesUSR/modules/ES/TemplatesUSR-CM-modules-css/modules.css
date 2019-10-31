@@ -1,0 +1,102 @@
+A.adminLinkOnSite {
+	display: block;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: .8em;
+	font-weight: normal;
+	color: #000000;
+	background-color: #D6E0F7;
+	text-decoration: none;
+	text-align: center;
+	height: 1em;
+	margin: 0px 4px 0px 4px; 
+	padding: 0px 2px 1px 2px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #FFFFFF #000000 #000000 #FFFFFF;
+}
+A.adminLinkOnSite:hover {
+	margin:  0 4px 0 4px;
+	padding: 1px 1px 0 3px;
+	border-color: #000000 #FFFFFF  #FFFFFF #000000;
+}
+A.adminLinkOnSite:active {
+	color: #000000;
+	background-color: #FEC643;
+	border-color: #000000 #FFFFFF  #FFFFFF #000000;
+}
+
+/* ****** USER LOGIN - Inizio **** */
+.FlexLoginBoxContainer  {
+ text-align:center;
+ margin: 1em auto 1em auto;
+}
+
+.FlexLoginBox {
+	border: 1px solid #003399;
+	width: 400px;
+	padding-right: 155px;
+    background-image: url(TemplatesUSR-modules-img/Enter.jpg);
+	background-position: top right;
+	background-repeat:repeat-y;
+}
+
+[MOZOPEN]
+.FlexLoginBox
+  {
+  margin: 0 auto;
+  width: 245px;
+  min-height: 169px;
+}
+[MOZCLOSE]
+
+
+
+
+
+.LoginText {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #003399;
+}
+.LoginTitle {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16pt;
+	font-weight: bold;
+	color: #000066;
+}
+.LoginSmallText {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #999999;
+}
+A.LoginSmallText:link, A.LoginSmallText:visited, A.LoginSmallText:active, {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #999999;
+	text-decoration: none;
+}
+A.LoginSmallText:hover{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #999999;
+	text-decoration: underline;
+}
+
+A.ForumArticleLink:link, A.ForumArticleLink:visited, A.ForumArticleLink:active{
+font-family: Verdana, Arial, Helvetica, sans-serif; font-size: .75em; font-weight: normal; color: #000099; background-color: transparent; text-decoration: none;
+}
+
+A.ForumArticleLink:hover {
+font-family: Verdana, Arial, Helvetica, sans-serif; font-size: .75em; font-weight: normal; color: #000099; background-color: transparent; text-decoration: underline;
+}
+
+.ForumArticleAuthor {
+font-family: Verdana, Arial, Helvetica, sans-serif; font-size: .75em; font-weight: normal; color: #000000; background-color: transparent;  margin-left: 4px;}
+
+.ForumArticleData {
+font-family: Verdana, Arial, Helvetica, sans-serif; font-size: .60em; font-weight: normal; color: #000000; background-color: transparent; font-style: italic; }
+
+.ArticleTable {
+margin-bottom: 8px;
+}
+

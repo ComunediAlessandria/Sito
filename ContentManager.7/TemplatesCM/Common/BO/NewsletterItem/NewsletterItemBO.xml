@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='iso-8859-1' ?>
+<bo id='Newsletter'>
+	<table name='NL' />
+	<key name='IDNL' />
+
+	<field name='Name'				type='varchar'		len='200'		default='' />
+	<field name='IsPublic'			type='int' default='0' />
+	<field name='BCPage'			type='varchar'		len='100'		default='' />
+
+	<field name='SenderName'		type='varchar'		len='250'		default='' />
+	<field name='SenderEmail'		type='varchar'		len='100'		default='' />
+
+	<field name='IDAuthorGroup'		type='int' default='0' />
+	<field name='IDSenderGroup'		type='int' default='0' />
+
+	<field name='ReplyEmail'		type='varchar'		len='100'		default='' />
+
+	<field name='TemplateEmail'		type='varchar'		len='100'		default='' />
+	<field name='TemplateBrowse'	type='varchar'		len='100'		default='' />
+
+	<join kind='M:N' name='jCommunity' joinTable='JNLCommunity' joinFields='IDNL:IDCommunity' dstTable='Community' dstField='IDCommunity:Description' />
+
+	<field name='IDSource'		type='int' default='0' />
+
+	<!-- non posso usare qui gli N:1 perch? sono verso la stessa tabella -->
+	<_join kind='N:1' name='jAuthorGroup' srcField='IDAuthorGroup' dstTable='Gruppi' dstField='IDGruppo' />
+	<_join kind='N:1' name='jSenderGroup' srcField='IDSenderGroup' dstTable='Gruppi' dstField='IDGruppo' />
+
+</bo>

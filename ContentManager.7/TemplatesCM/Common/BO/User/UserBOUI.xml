@@ -1,0 +1,290 @@
+<?xml version='1.0' encoding='iso-8859-1' ?>
+<ui id='user'>
+
+	<page
+		title='__(bo-utenti.title)'
+		permission='UT'
+	/>
+
+	<presenter
+		type='Template'
+		filename='User/tUserEdit.html'
+	/>
+
+	<elements>
+		<element	id='Nome'			BO='Nome'			type='text'			size='40'		maxlen='100'		label='__(bo-utenti.name)' />
+		<element	id='Email'			BO='Email'			type='text'			size='40'		maxlen='50'			label='__(bo-utenti.mail)' class='span8' />
+		<element	id='Note'			BO='Note'			type='textarea'		rows='4'		cols='60'			label='__(bo-utenti.note)' class='span8' />
+		<element	id='Username'		BO='Username'		type='text'			size='15'		maxlen='50'			label='Username' />
+		<element	id='Password'		BO='Password'		type='password'		size='15'		maxlen='50'			label='Password'  />
+		<element	id='CanChangePw'	BO='CanChangePw'	type='radio'		valueset='YesNo'					label="__(bo-utenti.ccp)"/>
+<!--		<element	id='IDLingua'		BO='IDLingua'		type='select'		valueset='Lang'						label='Lingua principale' /> -->
+
+		<element	id='pswexpiry'		BO=''	type='radio' valueset='YesNo' label='__(bo-utenti.epe)' />
+		<element	id='pswexpiryforce'	BO=''	type='check' label='__(bo-utenti.fpe)' />
+
+		<element	id='Lang'			BO='Lang'			type='select'		valueset='Lang'				label='__(bo-utenti.bolan)' />
+
+		<element	id='IDBLOBValid'	BO='IDBLOBValid'	type='select'		valueset='BLOBValid'				label='__(bo-utenti.valid)' />
+		<element	id='jGruppi'		BO='jGruppi'		type='checkset'		cols='4'									label='__(bo-utenti.gr)' />
+		<element	id='IDGruppoPrincipale'	BO='IDGruppoPrincipale'	type='select'		valueset='Gruppi'				label='__(bo-utenti.mgr)' />
+
+	</elements>
+
+	<validations>
+		<validation id='Nome'		type='mandatory'		forfield='Nome' />
+		<validation id='Username'	type='mandatory'		forfield='Username' />
+		<validation id='Password'	type='mandatory'		forfield='Password' />
+<!--		<validation id='IDLingua'	type='mandatory'		forfield='IDLingua' /> -->
+
+		<validation id='ValidUsername' type='php'>
+			<![CDATA[
+
+					// verifica che il nome utente cominci con una lettera
+
+				$ok = true; $message = '';
+
+				$username = $pars['ELEMENTS']['Username']->getValue();
+				if ($username != '') {
+
+					$pars['ELEMENTS'][ 'Username' ]->setError(false);
+
+					if (preg_match('|^[A-Za-z][A-Za-z0-9_\-\*\.\@]*$|', $username) === 0) {
+
+						$message = "__(bo-utenti.erruname)";
+						$ok = false;
+						$pars['ELEMENTS']['Username']->setError(true);
+					}
+				}
+
+				return array($ok, $message);
+			]]>
+		</validation>
+
+		<validation id='DupUsername' type='php'>
+			<![CDATA[
+
+					// verifica che non ci siano duplicazioni di username
+					// in $pars
+
+				$ok = TRUE; $message = '';
+
+				$username = $pars['ELEMENTS']['Username']->GetValue();
+				if ($username != '') {
+
+					$pars['ELEMENTS'][ 'Username' ]->SetError(FALSE);
+
+					$dupUser = CountRecords('Users', DBUCase('Username') . ' = ' . q(strtoupper($username)) . ' AND ID_User <> ' . $pars['BO']->ID());
+					if ($dupUser > 0) {
+
+						$message = '__(bo-utenti.errdup)';
+						$ok = FALSE;
+						$pars['ELEMENTS'][ 'Username' ]->SetError(TRUE);
+					}
+				}
+
+				return array($ok, $message);
+			]]>
+		</validation>
+		<validation id='vGruppi' type='php'>
+			<![CDATA[
+
+					// verifica che l'utente abbia scelto almeno un gruppo
+					// e che il gruppo scelto come principale sia uno dei
+					// gruppi cui l'utente è iscritto
+					// in $pars
+
+				$ok = TRUE; $message = '';
+
+				$pars['ELEMENTS']['IDGruppoPrincipale']->SetError(FALSE);
+				$pars['ELEMENTS']['jGruppi']->SetError(FALSE);
+
+				$v = $pars['ELEMENTS']['jGruppi']->GetValue();
+				if (count($v) === 0) {
+
+					$pars['ELEMENTS'][ 'jGruppi' ]->SetError(TRUE);
+
+					$message = "__(bo-utenti.errnogr)";
+					$ok = FALSE;
+
+				} else {
+
+					if (! in_array($pars['ELEMENTS']['IDGruppoPrincipale']->GetValue(), $v)) {
+
+						$pars['ELEMENTS'][ 'IDGruppoPrincipale' ]->SetError(TRUE);
+
+						$message = "__(bo-utenti.errnomaingr)";
+						$ok = FALSE;
+					}
+				}
+
+				return array($ok, $message);
+			]]>
+		</validation>
+
+		<validation id='ValidEmailFormat' type='php'>
+			<![CDATA[
+
+					// verifica che il campo email abbia formato valido
+					// HAL 2007 12 20
+
+				$ok = TRUE; $message = '';
+
+				$email = $pars['ELEMENTS']['Email']->GetValue();
+				if ($email != '') {
+
+					$pars['ELEMENTS'][ 'Email' ]->SetError(FALSE);
+
+					$posAt = strpos($email, '@');
+					$posDot = strpos($email, '.', $posAt + 1);
+					$numAt = count(explode('@', $email)) - 1;
+					if ($posAt === FALSE || $posDot === FALSE || $numAt > 1) {
+
+						$message = '__(bo-utenti.erremail)';
+						$ok = FALSE;
+						$pars['ELEMENTS'][ 'Email' ]->SetError(TRUE);
+					}
+				}
+
+				return array($ok, $message);
+			]]>
+		</validation>
+
+		<validation id='ValidPassword' type='php'><![CDATA[
+
+				$ok = true; $message = '';
+
+				$pw = $pars['ELEMENTS']['Password']->getValue();
+				if ($pw != '') {
+
+					$pars['ELEMENTS']['Password']->SetError(false);
+
+					inc::mod('modInstancer');
+
+					$ps = FlexClassInstancer::Create('PasswordSecurity');
+
+					$r = $ps->evaluate($pw, false);
+					if (! $r) {
+
+						$message =  '__(bo-utenti.errpwd): ' . $ps->Message();
+						$ok = false;
+						$pars['ELEMENTS']['Password']->setError(true);
+					}
+				}
+
+				return array($ok, $message);
+
+		]]></validation>
+	</validations>
+
+<!--
+	<valueset id='Lang' kind='DISTINCT' table='Languages' colid='IDLanguage' column='DescrizioneIT' />
+-->
+	<valueset id='Lang'>
+		<value id='EN' text='__(bo-common.lanen)' />
+		<value id='IT' text='__(bo-common.lanit)' />
+<!--
+		<value id='ES' text='__(bo-common.lanes)' />
+		<value id='DE' text='__(bo-common.lande)' />
+-->
+	</valueset>
+
+
+
+	<valueset id='BLOBValid' kind='DISTINCT' table='ValidationSet' colid='IDVS' column='Name' allownull='yes' />
+	<valueset id='Gruppi' kind='DISTINCT' table='Gruppi' colid='IDGruppo' column='DescrizioneIT' allownull='no' />
+
+	<valueset id='YesNo'>
+		<value id='0' text='__(bo-common.no)' />
+		<value id='1' text='__(bo-common.yes)' />
+	</valueset>
+
+	<event id='onBeforeForm' when='onBeforeForm' type='php'><![CDATA[
+
+		FlexInclude(kIncPath . 'DateTime.inc.php');
+
+		$boui = $pars['BO'];
+		if (Config('login.password.expiry')) {
+
+				// se la password ha scadenza, informa di quando scadrà
+
+			$dt = FlexDateTime::LongToTS($boui->BO()->GetField('PasswordExpiry'));
+d($dt);
+			$boui->SetValue('pswexpiry', $dt > 0 ? 1 : 0);
+
+			UseHelper('FriendlyTime');
+
+			$boui->SetPlaceholder(
+				'passwordexpirydate',
+				$dt === 0 ?
+					'__(bo-utenti.errnoexp)'
+				:
+					(
+						$dt > time() ?
+							'__(bo-utenti.errwillexp) ' . date('d/m/y H:i', $dt) . ' (' . FT::Format($dt, NULL, TRUE) . ')'
+						:
+							'__(bo-utenti.errisexp) ' . date('d/m/y H:i', $dt)
+					)
+			);
+		} else
+			$boui->SetPlaceholder('passwordexpirydate','');
+
+			// aggiunge la descrizione dei criteri di validazione presenti
+
+		FlexInclude(kModPath . 'modInstancer.php');
+
+		$ps = FlexClassInstancer::Create('PasswordSecurity');
+
+		$boui->SetPlaceholder('passwordmode', $ps->Description());
+
+	]]></event>
+
+	<event id='onAfterParse' when='onAfterParse' type='php'><![CDATA[
+
+/*
+										CanChangePW (bool)
+
+										0				1
+
+						=== 0		non scade			non scade
+
+PasswordExpiry (date)
+
+						!== 0
+
+*/
+
+			// forza l'expire della password
+
+		$boui = $pars['BO'];
+		if ($boui->getValue('pswexpiry') == 1 && config('login.password.expiry')) {
+
+			$vf = config('login.password.validfor');
+			if ($vf > 0) {
+
+//				FlexInclude(kIncPath . 'DateTime.inc.php');
+				inc::i('DateTime.inc');
+
+				if ($boui->getValue('pswexpiryforce') == 1)
+					$boui->BO()->setField('PasswordExpiry', FlexDateTime::TSToLong(time()));
+				else if (FlexDateTime::LongToTS($boui->BO()->GetField('PasswordExpiry')) == 0) {
+
+					$boui->BO()->setField('PasswordExpiry', FlexDateTime::TSToLong(time() + $vf * 60 * 60 * 24));
+				}
+			}
+
+		} else
+			$boui->BO()->SetField('PasswordExpiry', FlexDateTime::TSToLong(0));
+
+			// rende l'informazione sull'expiry disponibile al BO
+
+		$boui->BO()->setPrivateValue('force-expiry', $boui->getValue('pswexpiryforce') == 1);
+
+	]]></event>
+
+	<!-- UI per la cancellazione - per adesso qui, domani in un file XML separato -->
+
+	<delete
+		template='User/tUserDelAsk.html'
+	/>
+</ui>

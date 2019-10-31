@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="it">
+	<group id="bfrmc" define="false">
+
+		<message id="frdt" lang:it="FORM - Captcha" lang:en="FORM - Captcha"/>
+
+		<message id="st" lang:it="Stile" lang:en="Style"/>
+		<message id="ac" lang:it="a capo" lang:en="newline"/>
+
+		<!-- elenco degli stili -->
+		<message id="s-red" lang:it="Rosso" lang:en="Red"/>
+		<message id="s-white" lang:it="Bianco" lang:en="White"/>
+		<message id="s-blackglass" lang:it="Nero" lang:en="Black"/>
+		<message id="s-clean" lang:it="Semplificato" lang:en="Simple"/>
+
+	</group>
+</messages>

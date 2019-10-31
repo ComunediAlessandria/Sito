@@ -1,0 +1,66 @@
+	<!-- BEGIN nodata -->
+		<div class="alert">__(pgasrcl.nos)</div>
+	<!-- END nodata -->
+
+	<!-- BEGIN th -->
+		<div class="well well-small"> {btnadd}</div>
+
+		  <table class="table table-striped table-bordered table-condensed table-hover flexbo-list-table results">
+			<thead>
+			  <tr>
+				<th scope="col">__(pgasrcl.ha)</th>
+				<th scope="col" >__(.hn)</th>
+<!--
+				<th scope="col" >Username</th>
+				<th scope="col" >Gruppi</th>
+				<th scope="col" >Attivo</th>
+				<th scope="col" >Email</th>
+-->
+			  </tr>
+			</thead>
+			<tbody>
+	
+	<!-- END th -->
+
+	<!-- BEGIN tr -->
+			  <tr class="{CLASSTR}">
+				<td><div class="btn-group">{modlink} {dellink}</div></td>
+				<td>{nome}</td>
+<!--
+				<td>{Username}</td>
+				<td>{Gruppi}</td>
+				<td class="BLOBWidthTDN10"><div class="BLOBALignCenter">{Attivo}</div></td>
+				<td>{email}</td>
+-->
+			  </tr>
+	<!-- END tr -->
+
+	<!-- BEGIN tf -->
+			</tbody>
+		</table>
+	<!-- END tf -->
+
+	<!-- BEGIN footer -->
+
+	
+	<!-- /div -->
+	<!-- END footer -->
+
+
+<!-- BEGIN Export -->
+<div class="AdminPageFooterCommand">
+	<a href='{LinkToExport}'>
+		<img src='TemplatesCM-img/XLS.gif' title="__(.xs)">
+			__(.x)
+		</a>
+</div>
+<!-- END Export -->
+
+
+<!-- BEGIN ExportData -->
+<div class="AdminPageFooterCommand">
+<form action='{LinkToExport}' method='post' id=''>
+	<input type="submit" name="CSV" value="__(.csv)" />
+</form>
+</div>
+<!-- END ExportData -->

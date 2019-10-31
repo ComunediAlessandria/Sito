@@ -1,0 +1,114 @@
+[[:section:frame:]]
+
+<h2>_(pagetitle:Elenco Sezioni Social Wall)_</h2>
+
+<div class='well well-small'>
+	<!--
+	<div class='row'>
+		<label for='results_for_page' class='span3 control-label'>
+			_(paginationlabel:Risultati per pagina)_
+		</label>
+
+		<div class='span1'>
+			[[
+				id: results_for_page,
+				kind: DropDown,
+				values: {
+					10: 10,
+					20: 20,
+					30: 30,
+					50: 50
+				},
+				class: form-control
+			]]
+		</div>
+	</div>
+	-->
+	<div class='row'>
+
+		<div class='control-group span2'>
+			<label for='sw_name_filter' class='control-label'>_(section:Sezione)_</label>
+			[[
+				id: sw_name_filter,
+				kind: Text,
+				maxlength: 20,
+				postproc: trim,
+				class: form-control
+			]]
+		</div>
+
+
+		<div class="span2 offset1">
+			<label class='span2 control-label'>&nbsp;</label>
+
+			[[ id: btnNext, kind: submit, value: _q(btnNext:Ricerca)_, class: 'btn btn-primary' ]]
+		</div>
+
+		<div class="span2">
+			<label class='span2 control-label'>&nbsp;</label>
+
+			[[ id: btnReset, kind: submit, value: _q(btnReset:Reimposta)_, class: 'btn' ]]
+		</div>
+
+		<div class="span2">
+			<label class='span2 control-label'>&nbsp;</label>
+
+			<a class="btn" href='{addURL}' title=_q(add:Aggiungi)_>
+				<i class='icon icon-plus'></i> _(add)_
+			</a>
+		</div>
+
+
+	</div>
+</div>
+
+<br />
+
+<div>
+	{results}
+</div>
+
+<div>
+	[[
+		id: page,
+		kind: BootstrapPaginator,
+		windowsize: 3
+	]]
+</div>
+
+[[:section:table:
+_(confirm:Vuoi veramente eliminare questa sezione?)_
+]]
+
+<table class="table table-striped table-bordered table-condensed table-hover flexbo-list-table results">
+	<thead>
+		<tr>
+			<th class="span1">_(actions:Azioni)_</th>
+			<th scope="col">_(name:Sezione)_</th>
+		</tr>
+	</thead>
+	<tbody>
+ <!-- BEGIN row -->
+		<tr>
+		   <td>
+			   <div class="btn-group">
+				  <a href='{editURL}' class='btn' title=_q(edit:Modifica)_><i class='icon icon-pencil'></i></a>
+				  <a href='{delURL}' class='btn delBtn' title='{deltitle}'><i class='{delicon}'></i></a>
+			   </div>
+		   </td>
+		   <td>{description}</td>
+		</tr>
+ <!-- END row -->
+		<tr class="tfooter">
+			<td colspan="9">
+				<div>_(tot:Totale)_: {total_records}</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+[[:section:noresult]]
+
+<div class="alert alert-error">
+	_(norecord:Nessuna sezione disponibile)_
+</div>

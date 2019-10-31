@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='iso-8859-1' ?>
+<bo id='gruppo'>
+
+	<table name='Gruppi' />
+	<key name='IDGruppo' />
+
+	<field name='DescrizioneIT'		type='varchar'		len='100'		default='' />
+	<field name='sortIndex'			type='int'							default='0' />
+	<field name='Diritti'			type='varchar'		len='255'		default='' />
+	<field name='Note'					type='text'						default='' />
+
+<!--
+
+ALTER TABLE `Gruppi` ADD `Diritti` VARCHAR( 255 ) NOT NULL AFTER `DescrizioneIT` ;
+
+
+
+	<join kind='M:N' name='jDiritti'	joinTable='JGruppiDiritti'	joinFields='IDGruppo:IDDiritto' dstTable='Diritti' dstField='IDDiritto:DescrizioneIT' />
+-->
+
+	<delete>
+
+		<condition id='jGruppi' type='count' table='JUsersGruppi' field='IDGruppo' />
+		<condition id='testphp' type='php'>
+			<![CDATA[
+
+					// always fail
+
+				return TRUE;
+				return array(
+						'p1'	=> 'v1',
+						'p2'	=> 'v2',
+					);
+
+			]]>
+		</condition>
+	</delete>
+	
+	<event id='onAfterSave' when='onAfterSave' type='php'>
+	<![CDATA[
+
+			// in $pars
+
+		FlexInclude(kClsPath . 'clsFlexDataCaches.php');		
+
+		$c = FlexDataCaches::Gruppi();
+		$c->Invalidate();
+	]]>
+	</event>
+</bo>

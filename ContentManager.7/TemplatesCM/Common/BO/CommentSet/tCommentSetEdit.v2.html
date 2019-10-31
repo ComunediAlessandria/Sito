@@ -1,0 +1,67 @@
+{ERR}
+<form id="AdminFormBO" class="form-horizontal" enctype='multipart/form-data' method="post" action="{ACTION}">
+	<div class='well well-small'>		
+	
+		<div class="control-group">
+			<label class="control-label" for="{TAG_Titolo}">{LBL_Titolo}</label>
+			<div class="controls"> {VAL_Titolo}</div>
+		</div>
+		
+		<div class="control-group">
+			<label class="control-label" for="{TAG_tPost}">{LBL_tPost}</label>
+			<div class="controls"> {VAL_tPost}</div>
+		</div>
+		
+		<div class="control-group">
+			<label class="control-label" for="{TAG_tView}">{LBL_tView}</label>
+			<div class="controls"> {VAL_tView}</div>
+		</div>
+		
+		<div class="control-group">
+			<label class="control-label" for="{TAG_canInsert}">{LBL_canInsert}</label>
+			<div class="controls"> {VAL_canInsert}</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label" for="{TAG_canView}">{LBL_canView}</label>
+			<div class="controls"> {VAL_canView}</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label" for="{TAG_RichiestaApprovazione}">{LBL_RichiestaApprovazione}</label>
+			<div class="controls"> {VAL_RichiestaApprovazione}</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label" for="{TAG_Captcha}">{LBL_Captcha}</label>
+			<div class="controls"> {VAL_Captcha}</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label" for="{TAG_Stato}">{LBL_Stato}</label>
+			<div class="controls"> {VAL_Stato}</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label" for="{TAG_GruppoAmministratori}">{LBL_GruppoAmministratori}</label>
+			<div class="controls"> {VAL_GruppoAmministratori}</div>
+		</div>
+
+	</div>
+
+
+
+	
+	<div class='well well-small'>
+		<div class='row'>
+			<div class='span2'>
+					<input name="btnCancel" type="submit" class='btn' value="__(bo-common.canc)" />
+			</div>
+			<div class='span2'>
+				{HIDDEN}
+				<input name="Submit" type="submit" class='btn btn-primary' value="__(bo-common.save)" />
+			</div>
+		</div>
+	</div>
+	
+</form>

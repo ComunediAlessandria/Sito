@@ -1,0 +1,80 @@
+
+
+<div class='row row-well'>
+	<div class='col-md-12'>
+		{searchform}
+	</div>
+</div>
+
+<div class='row row-well'>
+	<div class='col-md-12'>
+		{addbtn}
+		<div class="alert alert-info pull-right" style='margin-bottom: 0; '>{passexpiry}</div>
+	</div>
+</div>
+
+
+
+<!-- BEGIN nodata -->
+	<div class="alert alert-warning" role="alert">
+		<h2>__(pgelu.no)</h2>
+	</div>
+<!-- END nodata -->
+
+
+<!-- BEGIN th -->
+
+	  <table class="table table-striped table-condensed table-hover flexbo-list-table">
+		<thead>
+		  <tr>
+			<th scope="col" class='AdminIcoCell'>__(.thac)</th>
+			<th scope="col" >__(.ln)</th>
+			<th scope="col" >Username</th>
+			<th scope="col" >__(.lgs)</th>
+			<th scope="col" >__(.tha)</th>
+			<th scope="col" >Email</th>
+		  </tr>
+		</thead>
+		<tbody>
+
+<!-- END th -->
+
+<!-- BEGIN tr -->
+		  <tr>
+			<td><div class="btn-group">{modlink} {dellink}</div></td>
+			<td>{Nome}</td>
+			<td>{Username}</td>
+			<td>{Gruppi}</td>
+			<td class="BLOBWidthTDN10"><div class="BLOBALignCenter">{Attivo}</div></td>
+			<td>{email}</td>
+		  </tr>
+<!-- END tr -->
+
+<!-- BEGIN tf -->
+			<tr class="tfooter">
+				<td colspan="6">
+					<div class="pull-right">
+							{pagination}
+					</div>
+					<p>__(.ft): {nrecords}</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+<!-- END tf -->
+
+<!-- BEGIN footer -->
+
+<!-- END footer -->
+
+
+<!-- BEGIN Export -->
+
+	<div class='row row-well'>
+		<div class='col-md-12'>
+			<a href='{LinkToExport}' class="btn btn-default"><i class="moon-icon-file-excel "></i>
+				__(.xp)
+			</a>
+		</div>
+	</div>
+<!-- END Export -->

@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='iso-8859-1' ?>
+<objdef>
+
+	<!--
+		id: identificativo
+		method: metodo per recuperare l'XML di definizione
+		boobject: [default: BONew] nome dell'oggetto da istanziare per il BO
+
+		bo:		definizione dell'XML per il BO
+		ui:		definizione dell'XML per la UI
+		uilist:		definizione dell'XML per la UIList
+	 -->
+
+	<object kind='v2' id='user'		method='file'	bo='User/UserBO.xml'		ui='User/UserBOUI.xml'	uilist='User/UserBOUIList.xml'	/>
+	<object kind='v2' id='poll'		method='file'	bo='Poll/PollBO.xml'		ui='Poll/PollBOUI.xml' 	uilist='Poll/PollBOUIList.xml'	/>
+	<object kind='v2' id='canale'		method='file'	bo='Canali/CanaliBO.xml'	ui='Canali/CanaliBOUI.xml'	uilist='Canali/CanaliBOUIList.xml'	/>
+	<object kind='v2' id='gruppi'		method='file'	bo='Gruppi/GruppiBO.xml'	ui='Gruppi/GruppiBOUI.xml'	uilist='Gruppi/GruppiBOUIList.xml'	/>
+	<object kind='v2' id='acronym'	method='file'	bo='Acronym/AcronymBO.xml'	ui='Acronym/AcronymBOUI.xml'	uilist='Acronym/AcronymBOUIList.xml'	/>
+	<object kind='v2' id='index'		method='file'	bo='Index/IndexBO.xml'		ui='Index/IndexBOUI.xml'	uilist='Index/IndexBOUIList.xml'	/>
+	<object kind='v2' id='FlexValid'	method='file'	bo='FlexValid/FlexValidBO.xml' ui='FlexValid/FlexValidBOUI.xml'	uilist='FlexValid/FlexValidBOUIList.xml'	/>
+	<object kind='v2' id='forum'		method='file'	bo='Forum/ForumBO.xml' 		ui='Forum/ForumBOUI.xml'	uilist='Forum/ForumBOUIList.xml'	/>
+	<object kind='v2' id='lingue'		method='file'	bo='Lingue/LingueBO.xml' 	ui='Lingue/LingueBOUI.xml'	uilist='Lingue/LingueBOUIList.xml'	/>
+	<object kind='v2' id='alias'		method='file'	bo='Aliases/AliasBO.xml' 	ui='Aliases/AliasBOUI.xml'	uilist='Aliases/AliasBOUIList.xml'	/>
+
+	<object kind='v2' id='AccessRules'	method='file'	bo='AccessRules/AccessRulesBO.xml' ui='AccessRules/AccessRulesBOUI.xml'	uilist='AccessRules/AccessRulesBOUIList.xml'	/>
+	<object kind='v2' id='communityitem'	method='file'	bo='CommunityItem/CommunityItemBO.xml' ui='CommunityItem/CommunityItemBOUI.xml'	uilist='CommunityItem/CommunityItemBOUIList.xml'	/>
+	<object kind='v2' id='communityuser'	method='file'	bo='CommunityUser/CommunityUsersBO.xml' ui='CommunityUser/CommunityUsersBOUI.xml'	uilist='CommunityUser/CommunityUsersBOUIList.xml'	/>
+	<object kind='v2' id='NewsletterItem'	method='file'	bo='NewsletterItem/NewsletterItemBO.xml' ui='NewsletterItem/NewsletterItemBOUI.xml'	uilist='NewsletterItem/NewsletterItemBOUIList.xml'	/>
+
+	<object kind='v2' id='SMSNewsletterItem'	method='file'	bo='SMSNewsletter/SMSNewsletterBO.xml' ui='SMSNewsletter/SMSNewsletterBOUI.xml'	uilist='SMSNewsletter/SMSNewsletterBOUIList.xml'	/>
+
+	<object kind='v2' id='GPGallery'	method='file'	bo='GalleryPlus/GPGalleryBO.xml'	ui='GalleryPlus/GPGalleryBOUI.xml'	uilist='GalleryPlus/GPGalleryBOUIList.xml'	/>
+	<object kind='v2' id='GPAlbum'	method='file'	bo='GalleryPlus/GPAlbumBO.xml'		ui='GalleryPlus/GPAlbumBOUI.xml'	uilist='GalleryPlus/GPAlbumBOUIList.xml'	/>
+	<object kind='v2' id='GPImg'		method='file'	bo='GalleryPlus/GPImgBO.xml'		ui='GalleryPlus/GPImgBOUI.xml'		uilist='GalleryPlus/GPImgBOUIList.xml'		/>
+
+	<object kind='v2' id='feeditem'	method='file'	bo='FeedItem/FeedItemBO.xml' ui='FeedItem/FeedItemBOUI.xml'	uilist='FeedItem/FeedItemBOUIList.xml'	/>
+
+	<object kind='v2' id='AxesBC' method='file'
+		boobject='BOArray'
+		bo='AxesBC/BO.xml'
+		ui='AxesBC/BOUI.xml'
+		uilist='AxesBC/BOUIList.xml'
+	/>
+
+	<object kind='v2' id='FYTVideo'	method='file'
+		bo='YouTube/FYTVideoBO.xml'
+		ui='YouTube/FYTVideoBOUI.xml'
+		uilist='YouTube/FYTVideoBOUIList.xml'
+	/>
+
+	<object kind='v2' id='commentset'		method='file'	bo='CommentSet/CommentSetBO.xml' 		ui='CommentSet/CommentSetBOUI.xml'	uilist='CommentSet/CommentSetBOUIList.xml'	/>
+
+	<object kind='v2' id='sqconn'
+		method='file'
+		bo='SQconn/BO.xml'
+		ui='SQconn/BOUI.xml'
+		uilist='SQconn/BOUIList.xml'
+	/>
+
+</objdef>

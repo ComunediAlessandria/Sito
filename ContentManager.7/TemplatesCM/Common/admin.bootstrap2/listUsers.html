@@ -1,0 +1,88 @@
+
+	<div class='well well-small'>
+		{searchform}
+	</div>
+
+	<div class="well well-small">
+		<div class="row">
+			<div class="span3">
+				{addbtn}
+			</div>
+			<div class="span8">
+				<p class="text-right">{passexpiry}</p>			
+			</div>
+		</div>
+	</div>	
+
+	<!-- BEGIN nodata -->
+		<div class='well well-small'>
+			<p>__(pgelu.no)</p>
+		</div>
+	<!-- END nodata -->
+
+	<!-- BEGIN th -->
+		  <table class="table table-striped table-bordered table-condensed table-hover flexbo-list-table">
+			<thead>
+			  <tr>
+				<th scope="col" class='AdminIcoCell'>__(.thac)</th>
+				<th scope="col" >__(.ln)</th>
+				<th scope="col" >Username</th>
+				<th scope="col" >__(.lgs)</th>
+				<th scope="col" >__(.tha)</th>
+				<th scope="col" >Email</th>
+			  </tr>
+			</thead>
+			<tbody>
+	
+	<!-- END th -->
+
+	<!-- BEGIN tr -->
+			  <tr class="{CLASSTR}">
+				<td><div class="btn-group">{modlink} {dellink}</div></td>
+				<td>{Nome}</td>
+				<td>{Username}</td>
+				<td>{Gruppi}</td>
+				<td class="BLOBWidthTDN10"><div class="BLOBALignCenter">{Attivo}</div></td>
+				<td>{email}</td>
+			  </tr>
+	<!-- END tr -->
+
+	<!-- BEGIN tf -->
+				<tr class="tfooter">
+					<td colspan="6">
+						<div class="pull-right">
+								{pagination}
+						</div>
+						<p>__(.ft): {nrecords}</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	<!-- END tf -->
+
+	<!-- BEGIN footer -->
+
+	<!-- END footer -->
+
+
+<!-- BEGIN Export -->
+<div class="well well-small">
+	<a href='{LinkToExport}' class="btn"><i class="moon-icon-file-excel "></i> 
+		__(.xp)
+	</a>
+</div>
+<!-- END Export -->
+
+
+<!-- BEGIN ExportData -->
+<div class="well well-small">
+<form action='{LinkToExport}' method='post' id=''>
+	<input type="submit" name="CSV" class="btn" value="__(.xp)" />
+</form>
+</div>
+<!-- END ExportData -->
+
+
+
+
+

@@ -1,0 +1,34 @@
+a:19:{s:2:"pt";s:19:"Rigenerazione Cache";s:5:"ddall";s:5:"Tutte";s:6:"ddblob";s:17:"Pagine Editoriali";s:5:"ddphp";s:10:"Pagine PHP";s:2:"ok";s:8:"Rigenera";s:2:"no";s:7:"Annulla";s:2:"ck";s:13:"Tipo di cache";s:4:"info";s:12:"Informazioni";s:4:"cctt";s:28:"Cache eliminate con successo";s:4:"cctx";s:63:"
+				Le cache verranno rigenerate al primo accesso al sito.
+			";s:2:"i1";s:458:"
+				{KFFNAME} utilizza per il proprio funzionamento e per accelerare i tempi di risposta
+				alcune strutture dati precalcolate chiamate genericamente Cache.
+				<br />
+				La rigenerazione delle Cache <strong>è un'operazione molto onerosa per il server</strong>
+				che è costretto, per servire la prima pagina successiva alla distruzione,
+				ad effettuare nuovamente tutte le elaborazioni,
+				e va quindi eseguita solo in caso di reale necessità.
+			";s:2:"i2";s:141:"
+				Se si intende procedere, occorre <strong>selezionare il/i tipo/i di cache da rigenerare</strong>
+				e premere il pulsante Rigenera.
+			";s:4:"ltmp";s:39:"Porzioni di codice comuni a più pagine";s:4:"itmp";s:167:"
+				comprende i pannelli degli elencatori di canale, i menu, la mappa del sito, ecc.
+				La rigenerazione di questi dati <strong>è relativamente rapida</strong>.
+			";s:3:"lex";s:30:"Versioni statiche delle pagine";s:3:"iex";s:642:"
+				Su questo sito &egrave; abilitata una opzione di funzionamento di {KFFNAME}
+				che genera versioni statiche delle pagine al fine di massimizzare le prestazioni
+				in condizioni di altissimo traffico.
+				In occasione della richiesta da parte di un utente di una specifica pagina,
+				viene generata una versione statica della stessa,
+				così da ridurre l'accesso al database per le successive richieste di quella pagina
+				nell'ambito di un periodo temporale impostabile (generalmente 30 minuti).
+				Per forzare la rigenerazione di tutte le pagine, senza attendere il tempo
+				di scadenza di ciascuna, rigenerare questa cache.
+			";s:3:"lmd";s:17:"Meta Informazioni";s:4:"lmdl";s:15:"limitatamente a";s:3:"imd";s:374:"
+				comprende tutte le strutture dati che permettono il corretto funzionamento del sito.
+				<br />
+				<strong>Attenzione!</strong> La rigenerazione di questi dati è onerosa ed in siti
+				con migliaia di pagine e più lingue
+				<strong> può richiedere diversi minuti</strong>, pertanto questa opzione è da
+				<strong>utilizzare solo in casi eccezionali.</strong>
+			";}

@@ -1,0 +1,34 @@
+<div id="AdminCorpoBox">
+	<h1>Scheda Acronimi, Abbreviazioni, Parole straniere d'uso comune</h1>
+	{ERR}
+	<form id="AdminFormBO" method="post" action="{ACTION}">
+
+		<div class="AdminFormBORowEven">
+			<fieldset class="AdminFormBOFieldset">
+				<legend class="AdminFormBOFieldsetLegend">{LBL_Kind}</legend>
+				<div class="CheckSet">{VAL_Kind}</div>
+			</fieldset>
+		</div>
+
+		<div class="AdminFormBORowOdd">
+			<label class="AdminFormBOLabel" for='{TAG_Search}'>{LBL_Search}</label>
+			<div class="AdminFormBOField">{VAL_Search}</div>
+		</div>
+
+		<div class="AdminFormBORowEven">
+			<label class="AdminFormBOLabel" for='{TAG_Value}'>{LBL_Value}</label>
+			<div class="AdminFormBOField">{VAL_Value}</div>
+		</div>
+
+		<div class="AdminFormBORowOdd">
+			<label class="AdminFormBOLabel" for='{TAG_Lang}'>{LBL_Lang}</label>
+			<div class="AdminFormBOField">{VAL_Lang}</div>
+		</div>
+
+		<div class="AdminPageFooterCommand">
+			{HIDDEN} <input name="Submit" type="submit" value="Salva le modifiche" />
+			<input name="btnCancel" type="submit" value="Annulla le modifiche" />
+		</div>
+
+	</form>
+</div>

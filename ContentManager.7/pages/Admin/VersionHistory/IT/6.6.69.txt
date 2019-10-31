@@ -1,0 +1,12 @@
+Implementata paginazione nell'elenco elementi del modulo Libreria
+
+Evoluzioni al modulo SocialNetwork. Introdotta la possibilit&agrave; di ridefinire e personalizzare l'editing del profilo. Introdotto il supporto multi lingua. Introdotta la possibilit&agrave; di differenziare i profili nel motore di ricerca del social network. Introdotta la possibilit&agrave; di delega in amministrazione dei gruppi ad uno o pi&ugrave; membri.
+
+Evoluzione del modulo Newsletter. Introdotta la richiesta di conferma prima della spedizione definitiva. Introdotto l'export di lettura delle newsletter basate su community e miste community pi&ugrave; fonti. Introdotta la validazione a video del codice del template di spedizione lettera.
+
+Evoluzione del modulo Geo. Nell'estrattore di punti Geo non vengono mostrati i punti relativi a pagine nascoste o in costruzione. Implementato filtro in base alla data evento della pagina che contiene i punti: Nessun limite, Eventi in
+corso oggi, Eventi in corso da oggi in poi, Eventi in corso da domani in poi.
+
+Nuove API di programmazione.
+
+Piccoli bug fix.

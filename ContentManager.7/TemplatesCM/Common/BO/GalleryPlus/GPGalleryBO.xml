@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='iso-8859-1' ?>
+<bo id='GPGalleryBO'>
+
+	<table name='GPGallery' />
+	<key name='IDGallery' />
+
+		<!-- Campi multi lingua -->
+	
+	<join kind='1:N' name='jTitle' 		dstTable='GPGalleryI18N' dstField='IDGallery' fields='Lang,Value' where="Name='Title'" />
+	<join kind='1:N' name='jDescription' 	dstTable='GPGalleryI18N' dstField='IDGallery' fields='Lang,Value' where="Name='Description'" />
+
+		<!--  -->
+
+	<field name='IDAlbumOwner'	type='int'		default='-1' />
+	<field name='ShowInList'	type='int'		default='1' />
+	<field name='SortIndex'		type='int'		default='' />
+	<field name='GalleryPage'		type='varchar'		len='100'		default='' />
+	<field name='DataOraUltimaModifica'	type='TS'	default='' />
+	<field name='UtenteUltimaModifica'	type='varchar'		len='50' default='' />
+
+	<delete>
+		<condition id='AlbumFigli' type='count' table='GPAlbum' field='IDGallery' />
+	</delete>
+
+	<event id='onAfterNew' when='onAfterNew' type='php'>
+	   <![CDATA[
+
+		UseHelper('XMLConf');
+
+		$confData = XMLConf('GalleryPlusConf.xml');
+
+		$default = array();
+		if (is_array($confData['GPDEFVALUE']))
+			foreach ($confData['GPDEFVALUE'] as $id => $value)
+				$default[$id] = $value['VALUE'];
+		
+		if (isset($default['GalleryShow'])) {
+		
+			switch (strtoupper($default['GalleryShow']))	{
+				case 'TRUE':	$pars['BO']->SetField('ShowInList', 1);
+						break;
+				case 'FALSE':	$pars['BO']->SetField('ShowInList', 0);
+						break;
+			}
+		}	
+
+			// calcola un valore di sortindex che sia di 10 maggiore di quello
+			// più grande presente nella tabella
+    
+	     $pars['BO']->SetField('SortIndex', GetFieldFromTable('MAX(SortIndex)', 'GPGallery', '1=1') + 10);
+	   ]]>
+	 </event>
+
+	<event id='onBeforeDel' when='onBeforeDel' type='php'>
+	   <![CDATA[
+	   
+				// elimino i record I18N associati alla Galleria che si sta cancellando
+			
+			ExecuteSQL('DELETE FROM GPGalleryI18N WHERE IDGallery=' . $pars['BO']->mID);
+	   ]]>
+	 </event>
+
+	<event id='onBeforeSave' when='onBeforeSave' type='php'>
+		<![CDATA[
+			$pars['BO']->SetField('DataOraUltimaModifica', DBDateFunc('NOW'));
+			$pars['BO']->SetField('UtenteUltimaModifica', $GLOBALS['user']->Username());
+		]]>
+	</event>
+
+	<!--  Invalido la cache della Lista Gallerie Quando salvo e riordino -->
+
+	<event id='onAfterSave' when='onAfterSave' type='php'>
+			<![CDATA[
+				FlexInclude(kModPath . 'modGalleryPlus.php');
+				GPCache::InvalidateGallery($pars['BO']->mID);
+			]]>
+	</event>
+
+	<event id='onAfterSwap' when='onAfterSwap' type='php'>
+			<![CDATA[
+				FlexInclude(kModPath . 'modGalleryPlus.php');
+				GPCache::InvalidateGallery($pars['ID1']);
+				GPCache::InvalidateGallery($pars['ID2']);
+			]]>
+	</event>
+
+	<event id='onAfterDel' when='onAfterDel' type='php'>
+			<![CDATA[
+				FlexInclude(kModPath . 'modGalleryPlus.php');
+				GPCache::InvalidateGallery($pars['BO']->mID);
+			]]>
+	</event>
+</bo>

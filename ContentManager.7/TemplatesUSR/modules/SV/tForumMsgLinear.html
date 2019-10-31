@@ -1,0 +1,46 @@
+
+<h1 class="viewTitolo">Forum {FORUMTITLE}</h1>
+<h2 class="viewSottotitolo">Discussione: {TopicTitle}</h2>
+
+<div class="ForumMsgList">
+
+<table summary="Elenco Messaggi della discussione {TopicTitle:escape:h} - pagina {pagno}">
+	<thead>
+		<tr>
+			<th scope="col" class="BLOBAlignLeft">Autore</th>		
+			<th scope="col" class="BLOBAlignLeft">Messaggio</th>
+		</tr>
+	</thead>
+	<tbody>
+	<!-- BEGIN TopicArticle -->
+		<tr>
+			<th scope="row" class="TopicMsg">{btnDel} {btnApp} {AutoreEmail} </th>
+			<td class="TopicMsg"> 
+				<p class="ForumMsgDate"><em>{DateTime:date:l d/m/y H_i}</em></p>
+				<h2>{Titolo}</h2>
+				<p>{TESTO}</p>
+				<div><a href="{REPLYLINK}">Rispondi</a></div>
+			</td>
+		</tr>
+	<!-- END TopicArticle -->
+	<!-- BEGIN ReplyArticle -->
+		<tr>
+			<th scope="row"> {btnDel} {btnApp} {AutoreEmail} </th>
+			<td> 
+				<p class="ForumMsgDate"><em>{DateTime:date:l d/m/y H_i}</em></p>
+				<h2>{Titolo}</h2>
+				<p>{TESTO}</p>
+				<div><a href="{REPLYLINK}">Rispondi</a></div>
+			</td>
+		</tr>
+	<!-- END ReplyArticle -->
+	</tbody>
+</table>
+<p><a href='{HOMELINK}' class='ForumLink'>Ritorna al Forum completo</a></p>
+</div>
+
+<div class="ForumPaginator">
+	{NAVIGATION}
+</div>
+
+

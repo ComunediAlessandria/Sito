@@ -1,0 +1,46 @@
+<form method='post' action='{ACTION}'>
+	
+	<div id='AdminCorpoBox'>
+		<h1>__(pgal.pt) {KFFNAME}</h1>
+		<div class='AdminPageFooterCommand'>
+			<label for='ADD'>__(.ins):</label>
+				<textarea name='ADD' id='ADD' cols='60' rows='1'></textarea>
+			<input type='image' src='TemplatesCM-img/icoAdd.gif' name='image' alt='__(.a)' />
+			__(.a)
+		</div>
+
+		<table
+			class="AdminTable"
+			summary="__(.td)"
+		>
+
+			<thead>
+				<tr>
+					<th scope='col' class='AdminIcoCell'>__(.tha)</th>
+					<th scope='col'>__(.thm)</th>
+					<th scope='col'>__(.ths)</th>
+					<th scope='col'>__(.thv)</th>
+					<th scope='col'>__(.thp)</th>
+				</tr>
+			</thead>
+
+			<tbody>
+			<!-- BEGIN row -->
+				<tr class='{CLASSTR}'>
+				<td class='AdminIcoCell'>{DELLINK} {MODLINK}</td>
+				<th scope='row'>{NAME}</th>
+				<td>{EXP}</td>
+				<td>({VALID})</td>
+				<td>{PARS}</td>
+				</tr>
+			<!-- END row -->
+			</tbody>
+
+		</table>
+
+	</div>
+</form>
+
+<div class='AdminPageFooterStatus'>
+	__(.sr): {SERIAL}
+</div>

@@ -1,0 +1,148 @@
+<style type="text/css" media="screen">
+	.AdminTableRowAlert {
+		background-color: rgb(255,165,155);
+	}
+</style>
+
+<h1>__(pgasl.pt) {tipoelenco}</h1>
+
+<!-- BEGIN Switch -->
+		<div class="AdminPageFooterCommand">
+
+			__(.h): {linkQueue} | {linkCron} | {linkHistory}
+			&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+			__(.ct): {curtime}
+		</div>
+<!-- END Switch -->
+
+<!-- BEGIN Add -->
+
+	<form action="{FrmAction}" method="post">
+
+		<div class="AdminPageFooterCommand">
+				<label for="tasklist">__(.tadd):</label>
+					{tasklist}
+				<input type="submit" id="AdminFiltroElencoSubmit" value="__(.tcadd)" name="__(.tcadd)" />
+				<input type="submit" value="__(.tupd)" name="__(.tupd)" />
+		</div>
+
+	</form>
+
+<!-- END Add -->
+
+<!-- BEGIN TableHeaderCron -->
+
+	<table class="AdminTable" summary="__(.ttbl)">
+		<thead>
+			<tr>
+				<th scope="col" class='AdminIcoCellWide'>__(.tac)</th>
+				<th scope="col" >__(.tn)</th>
+				<th scope="col" >__(.te)</th>
+				<th scope="col" >__(.tnx)</th>
+				<th scope="col" >__(.ti)</th>
+			</tr>
+		</thead>
+
+		<tbody>
+<!-- END TableHeaderCron -->
+
+<!-- BEGIN TableRowCron -->
+			<tr class="{CLASSTR}">
+				<td class='AdminIcoCellWide'>{DELLINK} {MODLINK} {chlink}</td>
+				<td>{Nome}</td>
+				<td>{cron}{status}</td>
+				<td>{RunAt}</td>
+				<td>{parinfo}</td>
+		  </tr>
+<!-- END TableRowCron -->
+
+<!-- BEGIN TableHeaderQueue -->
+
+	<table class="AdminTable" summary="__(.ttbl)">
+		<thead>
+			<tr>
+				<th scope="col" class='AdminIcoCellWide'>__(.tac)</th>
+				<th scope="col" >__(.tn)</th>
+				<th scope="col" >__(.te)</th>
+				<th scope="col" >__(.tnx)</th>
+				<th scope="col" >__(.ti)</th>
+			</tr>
+		</thead>
+
+		<tbody>
+<!-- END TableHeaderQueue -->
+
+<!-- BEGIN TableRowQueue -->
+			<tr class="{CLASSTR}">
+				<td class='AdminIcoCellWide'>{DELLINK} {MODLINK} {UNBLOCKLINK}</td>
+				<td>{Nome}</td>
+				<td>{Stato}</td>
+				<td>{Info}</td>
+				<td>{parinfo}</td>
+		  </tr>
+<!-- END TableRowQueue -->
+
+<!-- BEGIN TableHeaderHistory -->
+
+	<table class="AdminTable" summary="__(.ttbl)">
+		<thead>
+			<tr>
+				<th scope="col" >__(.tn)</th>
+				<th scope="col" >__(.tst)</th>
+				<th scope="col" >__(.td)</th>
+				<th scope="col" >__(.ti)</th>
+			</tr>
+		</thead>
+
+		<tbody>
+<!-- END TableHeaderHistory -->
+
+<!-- BEGIN TableRowHistory -->
+			<tr class="{CLASSTR}">
+				<td>{Nome}</td>
+				<td>{Start}</td>
+				<td>{time}</td>
+				<td>{parinfo}</td>
+		  </tr>
+<!-- END TableRowHistory -->
+
+
+<!-- BEGIN TableFooter -->
+		</tbody>
+	</table>
+<!-- END TableFooter -->
+
+<!-- BEGIN Footer -->
+	<div class="AdminPageFooterStatus">&nbsp;</div>
+
+	<div> &nbsp; </div>
+<!-- END Footer -->
+
+<!-- BEGIN Navi -->
+	<div>{Navi}</div>
+<!-- END Navi -->
+
+<!-- BEGIN TableEmpty -->
+<div class="AdminPageFooterCommand">
+	__(.tno).
+</div>
+<!-- END TableEmpty -->
+
+<!-- BEGIN Log -->
+<div class="AdminCorpoRowEven">
+
+
+
+<pre style='font-family: Consola, Tahoma, Sans-serif; font-size: 10px; margin: 0;'>
+<strong>__(.tlog):</strong>
+{CNT}
+</pre>
+
+</div>
+<div class="AdminCorpoRowOdd">
+	<p><a href='{Download}'>__(.tlogd)</a></p>
+</div>
+<div class="AdminPageFooterStatus">&nbsp;</div>
+<!-- END Log -->
+
+{DELCONFIRM}

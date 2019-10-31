@@ -1,0 +1,11 @@
+Miglioramenti modulo SimpleQuery 
+
+Nuove funzionalit&agrave; della dashboard per il controllo dei parametri del server che possono impattare sulla sicurezza
+
+Miglioramenti relativi alla sicurezza
+
+Miglioramento alla gestione di operazioni pianificate concorrenti
+
+Adeguamento modulo Gallerie Video alle nuove API YouTube
+
+Miglioramento nei  meccanismi di copia e incolla dei paragrafi

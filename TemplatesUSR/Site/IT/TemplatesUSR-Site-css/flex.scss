@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900');
+
+@import "scss/fonts";
+@import "scss/variables";
+@import "scss/mixins";
+@import "scss/typography";
+@import "scss/flex-objects";
+@import "scss/vco";   
+   
+/* elements */
+html {
+    font-size: $ParSize;  
+}   
+ 
+body {
+    @extend %Par;
+    min-width: 320px;
+    position: relative;
+}
+
+@media screen and (min-width: $MaxWGrid) {
+    .container {
+        max-width: $MaxWGrid;
+    }   
+} 
+
+   
+// TESTATA
+.sticky-wrapper {
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+//HEADER   
+header {
+    border-top: 5px solid $ParScuro;   
+    background-color: $BgGrey1;
+    border-bottom: 1px solid $BgGrey;
+    .menu-top {
+        display: block;   
+        ol {
+            @include flexBox(row wrap);
+            list-style: none;
+            justify-content: flex-end;   
+            li {
+                @include flexItem(0 1 auto);   
+            }
+            a, li.LIStrong strong {   
+                display: block;
+                padding: 10px 20px;   
+                color: $ParScuro;
+                @include transition(background 0.3s ease-out);
+                &:hover { background-color: $BgGrey; }
+            }
+            li.LIStrong strong {
+                @extend %Font-1-Regular;
+                background-color: $BgGrey;
+            }
+        }
+        ol ol { display: none; }
+    }
+}
+.wrap-breadcrumb {   
+    display: block;   
+    border-bottom: 1px solid $BgGrey; 
+    a.bread-home {
+        display: inline-block;
+        float: left;
+        vertical-align: middle;
+        height: 100%;
+        padding: 10px 0;
+        margin-right: 15px;
+    }      
+    .breadcrumb {
+        background-color: white;
+        margin: 0;
+        padding: 10px 0;
+        li {
+            display: block;
+            &:after {
+                content: " - "; 
+                display: inline-block;
+                margin: 0 10px 0 5px;
+            }
+            &:last-child:after { display: none; }
+            a { color: black;
+                &:hover { color: black; text-decoration: underline; }
+            }
+            &.active { color: black; @extend %Font-1-SemiBold; }
+        }
+    }
+}
+
+.corpopagina {
+    padding: 50px 0;
+    .userFormat3 { background-color: #f1d794; }
+}
+
+#my-tabs {
+    display: block;   
+    background-color: white;
+    padding: 30px 0;  
+    ul.nav-tabs {
+        padding: 10px 30px 0;
+        @include flexBox(row nowrap);
+        background-color: #dee2e6;
+        border-bottom:0;
+        li {
+            @include flexItem(0 1 auto);
+            display: block;
+            margin: 0 2px;  
+            a {
+                padding: 10px 15px;
+                display: block;
+                color: $ParScuro;
+                @include transition(background 0.3s ease-out);
+                &.active, &:hover {
+                    border-radius: 5px 5px 0 0;
+                    background-color: white;
+                    color: $ParScuro;
+                }
+            }
+        }
+    }
+    #my-tabs-contents {
+        border: 1px solid #dee2e6;
+        display: block;
+        border-top: 0;
+        padding: 30px;
+    }
+}
+
+ul.viewUL {
+    margin: 0 20px;
+  &.BLOBListSymbolDisc {   
+    list-style-type: none;   
+    //margin: 0 20px;
+    & li {
+      &:before {
+        content:" ";
+        height: 6px;
+        width: 6px;
+        display: inline-block;
+        margin: 0 10px 0 -17px;
+        border-radius:50%;
+        background-color: #b4193e;
+        vertical-align: middle;
+        position:relative;
+      }
+    }
+  }
+  &.BLOBListSymbolCircle {
+    list-style-type: none;
+    //margin: 0 20px;
+    & li {
+      &:before {
+        content:" ";
+        height: 6px;
+        width: 6px;
+        display: inline-block;
+        margin: 0 10px 0 -17px;
+        border-radius:50%;
+        border:2px solid #b4193e;
+        background-color:$Trasp;
+        vertical-align: middle;
+        position:relative;
+      }
+    }
+  }
+  &.BLOBListSymbolSquare {
+    list-style-type: none;   
+    //margin: 0 20px;   
+    & li {
+      &:before {
+        content:" ";
+        height: 6px;
+        width: 6px;     
+        display: inline-block;
+        margin: 0 10px 0 -17px;
+        background-color: #b4193e;
+        vertical-align: middle;
+        position:relative;
+      }
+    }
+  }
+  &.BLOBListSymbolNone li { margin-left:0;}
+  & li > ol {padding:5px 0 5px 30px;}
+}
+ol.viewOL {
+    margin: 0 20px;
+    &.BLOBListSymbolCustom1 {
+        margin: 0;
+        list-style: none;
+        & li {
+            margin: 0;
+          &:before {
+            content: " - ";
+            margin: 0 5px;
+          }
+        }
+    }
+    &.BLOBListSymbolCustom2 {
+        margin: 0;
+        list-style: none;
+        & li {
+            margin: 0;
+          &:before {
+            content: " * ";
+            margin: 0 5px;
+          }
+        }
+    }
+}
+.BLOBListSymbolDecimal, .BLOBListSymbolLowerLetter, .BLOBListSymbolUpperLetter {
+  margin: 0 20px;
+  & li { display:list-item !important;}
+}

@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='iso-8859-1' ?>
+<uilist id='AxesBC'>
+
+	<page
+		title='__(bo-axebc.listtitle)'
+		permission='CAN'
+	/>
+
+	<presenter
+		type='Template'
+		filename='AxesBC/tList.html'
+	/>
+
+	<options>
+		<option name='modlink' label='__(bo-common.mod) associazione %s' element='id' />
+		<option name='dellink' label='__(bo-common.del) associazione %s' element='id' />
+	</options>
+
+	<elements>
+		<element	id='id'	bo='id'	label='Associazione'	transform='TID'	/>
+		<element	id='pagination'	bo='pagination'	label='Paginazione'		transform='TPag'		/>
+		<element	id='mdvalue'	bo='mdvalue'	label='Data di Paginazione'		transform='TMDValue'		/>
+		<element	id='bcpage'		bo='bcpage'		label='Pagina BC' 		transform='TPageTitleLinked'	/>
+		<element	id='sort'		bo='sort'		label='Sort' 				/>
+		<element	id='value'		bo='value'		label='IDs' 			transform='TAxes'		/>
+		<element	id='NumPages'	bo='value'		label='' 				transform='TNumPages'	/>
+		<element	id='NumPagesLinked'	bo='value'		label='' 				transform='TNumPagesLinked'	/>
+
+		<element	id='JumpTo'		bo='value'		label='' 				transform='TJumpTo'	/>
+	</elements>
+
+	<sortOrder>
+		<sortKey	when='after'	bo='sort'	mode='n'	order='DESC' />
+		<sortKey	when='after'	bo='value'		order='ASC' />
+	</sortOrder>
+
+	<transform id='TID' type='php'><![CDATA[
+
+		return $pars['ID'];
+
+	]]></transform>
+
+	<transform id='TNumPages' type='php'><![CDATA[
+
+//		FlexInclude(kModPath . 'modFlexMDUtils.php');
+		inc::mod('modFlexMDUtils');
+
+		return FlexMD::countFromSearch(array(
+			new MDFilterBLOBPages(),
+			new MDFilterCanale(explode(',', $value), 'AND'),
+		));
+
+	]]></transform>
+
+	<transform id='TNumPagesLinked' type='php'><![CDATA[
+
+//			FlexInclude(kModPath . 'modCanali.php');
+			inc::mod('modCanali');
+
+//			if ($ui->isV2()) {
+
+//				FlexInclude(kModPath . 'modFlexMDUtils.php');
+				inc::mod('modFlexMDUtils');
+
+				$q = FlexMD::countFromSearch(array(
+					new MDFilterBLOBPages(),
+					new MDFilterCanale(explode(',', $value), 'AND'),
+				));
+
+				return "<a href='"
+					. addParameter(kBaseURL . 'pages/adm.v2/listPages.php') . '?channel=' . $value . '&filter=all'
+					. "' title='" . __('bo-axebc.epca',$pars['ID']) . "'>" .$q .  '</a>';
+
+//			} else
+//				return "<a href='"
+//					. addParameter(kPageEditPages, array(ChannelToGet('canale', explode(',', $value)), 'CSM=OR', 'pageFilter=All'))
+//					. "' title='Elenco delle pagine classificate come la classificazione della Associazione " . $pars['ID']. "'>Elenco pagine
+//					dell'associazione " . $pars['ID'] . '</a>';
+
+
+	]]></transform>
+
+	<transform id='TJumpTo' type='php'><![CDATA[
+
+//			FlexInclude(kModPath . 'modCanali.php');
+			inc::mod('modCanali');
+
+//			if ($ui->isV2()) {
+
+				return "<a href='"
+					. addParameter(kBaseURL . 'pages/adm.v2/listPages.php') . '?channel=' . $value . '&filter=all'
+					. "' title='Elenco delle pagine classificate come la classificazione'>Elenco pagine dell'associazione " . $pars['ID'] . '</a>';
+
+//			} else
+//				return "<a href='"
+//					. AddParameter(kPageEditPages, array(ChannelToGet('canale', explode(',', $value)), 'CSM=OR', 'pageFilter=All'))
+//					. "' title='Elenco delle pagine classificate come la classificazione della Associazione " . $pars['ID']. "'>Elenco pagine
+//				dell'associazione " . $pars['ID'] . '</a>';
+
+	]]></transform>
+
+	<transform id='TAxes' type='php'><![CDATA[
+
+			//UseHelper('Classificator');
+			//return ClassificatorHelper::Status('pageclassificator', explode(',', $value), array('context' => 'pagelist'));
+
+			inc::mod('backoffice/blobLayoutHelper');
+
+			return blhUIChannelDecoder::create(explode(',', $value))->asString();
+
+	]]></transform>
+
+	<transform id='TPag' type='map' from='NO;AA;AM;AG;CA;PG' to='__(bo-axebc.pdnone);__(bo-axebc.pdy);__(bo-axebc.pdym);__(bo-axebc.pdymd);__(bo-axebc.pdcal);__(bo-axebc.pdpage)' />
+	<transform id='TMDValue' type='map' from='ValidFrom;EventDate' to="(__(bo-axebc.mdvf));(__(bo-axebc.mded))" empty='(__(bo-axebc.mdvf))'/>
+
+	<transform id='TPageTitle' type='flexpage' attr='PageTitle' />
+	<transform id='TPageTitleLinked' type='php'><![CDATA[
+
+		$parts = explode(':', $value);
+
+//		FlexInclude(kModPath . 'modFlexMDUtils.php');
+		inc::mod('modFlexMDUtils');
+
+		$meta = FlexMD::getPageAttr(
+			$parts[0] . ':' . $parts[1],
+			array('PageTitle' => '','PageIndexTitle' => '','URLview' => ''),
+			kLang //$GLOBALS['gLanguage']
+		);
+
+		if (! is_null($meta)) {
+
+			$title = $meta['PageTitle'];
+
+				// alcune pagine PHP non hanno il titolo
+
+			if ($title === '')
+				$title = $meta['PageIndexTitle'];
+
+			if ($title === '')
+				$title = 'Empty page Title: [' . $parts[0] . ':' . $parts[1] . '] for language [' . $l . ']';
+
+			$url =  $meta['URLview'];
+
+		} else {
+
+			$title = $value;
+			$url = '';
+		}
+
+		if ($url != '')
+			return "<a href='" . $url . "' class='target_blank' title='" . __('bo-axebc.ltp') . ' ' . $title. "'>" . $title . "</a>";
+		else
+			return $title;
+
+	]]></transform>
+
+</uilist>

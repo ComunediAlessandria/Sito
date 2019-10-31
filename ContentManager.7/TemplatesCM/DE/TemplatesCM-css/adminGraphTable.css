@@ -1,0 +1,40 @@
+/* --- STATISTICHE DEL SITO --------------------------------------- */
+
+table.AdminGraphTableH, table.AdminGraphTableV{
+	width: auto; 
+	margin: 0 auto;
+	color: #000000; background-color: #ffffff;
+	padding: 0;
+}
+table.AdminGraphTableH td, table.AdminGraphTableH th,
+table.AdminGraphTableV td, table.AdminGraphTableV th {
+	text-align: center;
+	padding: 0 .2em;
+	vertical-align: bottom;
+}
+table.AdminGraphTableH th, table.AdminGraphTableV th {
+	font-weight: normal;
+	line-height: 1em;
+}
+table.AdminGraphTableV td img {
+	vertical-align: bottom;
+}
+table.AdminGraphTableH td{text-align: left; padding: .2em 0;}
+table.AdminGraphTableH td img {
+	display: block;
+}
+
+
+
+table.AdminStatsTable thead th { text-align: right; }
+
+table.AdminStatsTable thead th.cellA1 { text-align: left;}
+
+table.AdminStatsTable tbody td { text-align: right;  }
+
+table.AdminStatsTable tbody td.totaleclass { font-weight: bold; }
+
+table.AdminStatsTable tr a:hover, 
+table.AdminStatsTable tr a:active, 
+table.AdminStatsTable tr a:focus {text-decoration: none;} 
+

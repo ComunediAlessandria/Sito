@@ -1,0 +1,11 @@
+
+Struttura della cartella Extensions/sn:
+
+	- apps/			gestione applicazioni
+	- snConf.php	file per la personalizzazioni del sn
+	- assets/		contiene asset (elementi che devono essere serviti via web) - cfr snAsset
+		img/		immagini
+		css/		css
+	- template/		
+	- messages.xml	file che permette di specificare alcune stringhe per il sn (cfr: sn/snAssets/messages.xml)
+	- custom/		root per l'estensione delle classi proprie del sn

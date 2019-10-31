@@ -1,0 +1,43 @@
+<h1 class='viewTitolo'>
+	Richiesta credenziali di accesso
+</h1>
+
+<p class='viewPar'>
+	Se non ricordi la username e/o la password di accesso,
+	compila almeno uno dei campi del form sottostante e
+	premi il pulsante Invia.
+</p>
+
+<div class='viewLineBreak'>&nbsp;</div>
+
+<p class='viewPar'>
+	Le tue credenziali saranno spedite all'indirizzo
+	email che hai fornito all'atto della registrazione al sito.
+</p>
+
+<div class='viewLineBreak'>&nbsp;</div>
+
+{err}
+
+<div id='CommunityUserForm'>
+
+	<form id='formCommunityRemeber' method='post' action='{ACTION}'>
+
+		<div>
+			<label for='username' lang='en' class='CommunityUserLbl'>Username:</label>
+			<span class='CommunityUserFormText'>
+				<input name='username' type='text' size='20' id='username' />
+			</span>
+		
+			<label for='email' lang='en' class='CommunityUserLbl'>Email:</label>
+			<span class='CommunityUserFormText'>
+				<input name='email' type='text' size='20' id='email' />
+			</span>
+		
+			<div class='viewLineBreak'>&nbsp;</div>
+		
+			<input name='Submit' type='submit' value='Invia' id='CommunityUserFormSubmit' />
+		</div>
+
+	</form>
+</div>

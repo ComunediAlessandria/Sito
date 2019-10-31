@@ -1,0 +1,46 @@
+
+
+- Extensions/BLOBElements.php:
+
+		flexInclude(kExtensionsPath .'SocialWall/clsBLOBElementSocialWall.php');
+		$GLOBALS['gBLOBExtensions'][] = new clsBLOBElementSocialWall();
+
+- cli-workers/social-wall
+- AdminCustomExtensions.xml
+
+
+
+- DB:
+
+CREATE DATABASE  `cm_biorepair_custom` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+CREATE TABLE `SwBoxes` (
+  `idBox` int(11) NOT NULL auto_increment,
+  `idSection` int(11) NOT NULL,
+  `sid` varchar(15) NOT NULL,
+  `title` varchar(45) default NULL,
+  `dateStart` bigint(20) default '-1',
+  `dateEnd` bigint(20) default '-1',
+  `isActive` tinyint(1) default '0',
+  `sortOrder` int(11) NOT NULL default '-1',
+  `multipleLanguage` tinyint(1) NOT NULL default '1',
+  `boxData` text,
+  `creationDate` bigint(20) default NULL,
+  PRIMARY KEY  (`idBox`)
+)  DEFAULT CHARSET=utf8 ;
+
+CREATE TABLE `SwSections` (
+  `idSection` int(11) NOT NULL auto_increment,
+  `description` varchar(50) NOT NULL,
+  PRIMARY KEY  (`idSection`),
+  UNIQUE KEY `description_UNIQUE` (`description`)
+)  DEFAULT CHARSET=utf8 ;
+
+
+- Aggiornamento per la gestione di più lingue
+
+  ALTER TABLE  `SwBoxes` ADD  `lang` CHAR( 2 ) NOT NULL AFTER  `idSection` ;
+  ALTER TABLE `SwBoxes` DROP `multipleLanguage`;
+  update `SwBoxes` set lang = 'IT'

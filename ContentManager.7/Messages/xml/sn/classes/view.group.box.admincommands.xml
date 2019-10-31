@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="lang" defaultlang="IT">
+	<group id="snViewGroupBoxAdmincommands" define="false">
+		<message id="back"
+			lang:it="Torna al Gruppo"
+			lang:en="Back to the Group"
+			lang:fr="Retour au Groupe"
+			lang:de="Zurück zu der Gruppe"
+			lang:es="Volver al grupo"
+			lang:ru="Вернуться к группе"
+		/>
+		<message id="tback"/>
+		<message id="edit"
+			lang:it="Modifica il gruppo"
+			lang:en="Edit the Group"
+			lang:fr="Modifier le groupe"
+			lang:de="Bearbeiten Sie die Gruppe"
+			lang:es="Editar el grupo"
+			lang:ru="Редактирования группы"
+		/>
+		<message id="tedit"/>
+		<message id="add"
+			lang:it="Aggiungi/Invita Membri"
+			lang:en="Add/Invite new members"
+			lang:fr="Ajouter / Inviter des membres"
+			lang:de="Hinzufügen / Mitglieder einladen"
+			lang:es="Añadir / Invitar Miembros"
+			lang:ru="Добавить / пригласить пользователей"
+		/>
+		<message id="tadd"/>
+		<message id="req"
+			lang:it="C'è una richiesta da approvare"
+			lang:en="There is a request to approve"
+			lang:fr="Il ya une demande d'approbation"
+			lang:de="Es gibt eine Anforderung zur Genehmigung"
+			lang:es="Hay una solicitud para aprobar"
+			lang:ru="Существует просьбой одобрить"
+		/>
+		<message id="reqs"
+			lang:it="Ci sono %s richieste da approvare"
+			lang:en="There are %s requests to approve"
+			lang:fr="Il ya %s demandes d'approuver"
+			lang:de="Es gibt %s Anträge zu genehmigen"
+			lang:es="Hay %s solicitudes para aprobar"
+			lang:ru="Есть %s запросов утвердить"
+		/>
+		<message id="handle"
+			lang:it="Gestisci"
+			lang:en="Manage"
+			lang:fr="Gérer"
+			lang:de="verwalten"
+			lang:es="gestionar"
+			lang:ru="управлять"
+		/>
+		<message id="title"
+			lang:it="Amministrazione"
+			lang:en="Administration"
+			lang:fr="gestion"
+			lang:de="Verwaltung"
+			lang:es="administración"
+			lang:ru="управление"
+		/>
+	</group>
+</messages>

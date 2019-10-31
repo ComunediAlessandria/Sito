@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="it">
+	<group id="brssimp" define="false">
+		<message id="ifr" lang:it="Importa Feed RSS" lang:en="RSS Feed import"/>
+		<message id="predefinito" lang:it="Predefinito" lang:en="Predefined"/>
+	<!--	<message id="aspetto" lang:it="Aspetto" lang:en="Layout"/> -->
+		<message id="nt" lang:it="Nome Telaio" lang:en="Template Name"/>
+		<message id="ifr0" lang:it="Indirizzo feed RSS" lang:en="RSS feed Address"/>
+	<!--	<message id="articoli" lang:it="Numero di Articoli" lang:en="Number of Posts"/> -->
+		<message id="dv" lang:it="Articoli da visualizzare" lang:en="Posts to show"/>
+		<message id="ds" lang:it="Articoli da saltare" lang:en="Posts to skip"/>
+		<message id="dcs" lang:it="Durata cache (sec)" lang:en="Cache time (secs)"/>
+	</group>
+</messages>

@@ -1,0 +1,13 @@
+a:30:{s:4:"dbtt";s:40:"[NL] Attenzione: database non aggiornato";s:4:"dbtx";s:270:"[NL] 
+				La versione corrente del database (%1$03d)
+				non è allineata con la versione distribuita con questa versione di FlexCMP (%2$03d). È necessario procedere quanto prima all'aggiornamento poiché
+				questa situazione potrebbe portare dei malfunzionamenti.
+			";s:4:"scfs";s:24:"[NL] Verifica Filesystem";s:6:"scpath";s:13:"[NL] Percorso";s:4:"scdl";s:29:"[NL] Directory Listing Aperto";s:5:"scpex";s:26:"[NL] Codice PHP Eseguibile";s:6:"scpass";s:9:"[NL] PASS";s:6:"scfail";s:9:"[NL] FAIL";s:3:"scm";s:107:"[NL] 
+				<strong>Attenzione</strong>:
+				Uno o più controlli di sicurezza hanno dato esito negativo:
+			";s:9:"scinstall";s:381:"[NL] 
+				È possibile installare nelle directory un file <code>.htaccess</code> per tentare di risolvere il problema.
+				Nel caso già esista un file <code>.htaccess</code> è possibile sovrascriverlo.
+				<a href='%1$s' class='btn btn-small btn-primary' type='button'>Installa</a>
+				<a href='%2$s' class='btn btn-small btn-primary' type='button'>Installa e sovrascrivi</a>
+			";s:3:"pwa";s:83:"[NL] Le password degli utenti amministrativi sono memorizzate in chiaro su database";s:3:"pwu";s:81:"[NL] Le password degli utenti di community sono memorizzate in chiaro su database";s:8:"vi-title";s:50:"[NL] Nuove caratteristiche della versione %s di %s";s:4:"vi-h";s:30:"[NL] Evoluzione delle Versioni";s:8:"pv-title";s:31:"[NL] Statistiche in Tempo Reale";s:4:"pv-c";s:24:"[NL] visitatori correnti";s:8:"lp-title";s:27:"[NL] Ultime Pagine Visitate";s:8:"ui-title";s:24:"[NL] Informazioni Utente";s:10:"ui-browser";s:19:"[NL] %s versione %s";s:5:"ui-bs";s:15:"[NL] SUPPORTATO";s:6:"ui-bns";s:19:"[NL] NON SUPPORTATO";s:7:"ui-bie8";s:28:"[NL] PARZIALMENTE SUPPORTATO";s:4:"ui-w";s:14:"[NL] Benvenuto";s:5:"ui-mg";s:22:"[NL] Gruppo Principale";s:5:"ui-la";s:19:"[NL] Ultimo accesso";s:5:"ui-bl";s:22:"[NL] Lingua backoffice";s:5:"ui-bv";s:21:"[NL] Versione Browser";s:5:"ui-bp";s:16:"[NL] Piattaforma";s:5:"ui-br";s:24:"[NL] Risoluzione Browser";s:8:"ii-title";s:30:"[NL] Informazioni sul Prodotto";}

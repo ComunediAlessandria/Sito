@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="lang" defaultlang="IT">
+	<group id="snViewSearchNoresults" define="false">
+		<message id="noterm"
+			lang:it="Non hai inserito alcun termine di ricerca."
+			lang:en="You did not enter any search term."
+			lang:fr="Vous n'avez pas saisi un terme de recherche."
+			lang:de="Sie haben kein beliebiges Suchwort."
+			lang:es="No has introducido ningún término de búsqueda."
+			lang:ru="Вы не ввели любого поиска."
+		/>
+		<message id="nores"
+			lang:it="La ricerca di %s non ha prodotto risultati. &lt;br /&gt;Assicurati di aver inserito correttamente il termine da ricercare."
+			lang:en="Searching for %s returned no result. &lt;br /&gt;Please make you entered the right query."
+			lang:fr="Recherche de %s ne donne aucun résultat. &lt;br /&gt;S'il vous plaît assurez-vous entré la bonne requête."
+			lang:de="Suche nach %s ergab kein Ergebnis. &lt;br /&gt;PBitte machen Sie in die richtige Abfrage."
+			lang:es="Búsqueda de %s devuelve ningún resultado. &lt;br /&gt;Por favor, asegúrese que ha introducido la consulta derecha."
+			lang:ru="%s Поиск не дал результатов. &lt;br /&gt;Пожалуйста, убедитесь, вы вошли в правом запроса."
+		/>
+		<message id="title"
+			lang:it="Risultati della Ricerca"
+			lang:en="Search results"
+			lang:fr="Résultats de la recherche"
+			lang:de="Suchergebnisse"
+			lang:es="Resultados de la búsqueda"
+			lang:ru="Результаты поиска"
+		/>
+	</group>
+</messages>

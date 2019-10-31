@@ -1,0 +1,58 @@
+<!-- BEGIN PageHeader -->
+<h1>__(palidx.indici)</h1>
+<!-- END PageHeader -->
+
+<!-- BEGIN AggiungiIndice -->
+<div class="AdminPageFooterCommand">
+	<a href="{ADDLINK}">
+		<img src='TemplatesCM-img/icoAdd.gif' alt='' class='AdminIco' width='20' height='20' />
+		__(.ani)
+	</a>
+</div>
+<!-- END AggiungiIndice -->
+
+
+<!-- BEGIN TableEmpty -->
+<h2>__(.ni)</h2>
+<!-- END TableEmpty -->
+
+<!-- BEGIN TableHeader -->
+<div>
+ <table class="AdminTable" summary="__(.sum)">
+		<thead>
+		  <tr>
+			<th scope="col" class='AdminIcoCellWide'>__(.az)</th>
+			<th scope="col" >__(.name)</th>
+			<th scope="col" >__(.id)</th>
+			<th scope="col" >__(.gp)</th>
+			<th scope="col" >__(.sim)</th>
+			<th scope="col" >__(.siml)</th>
+		  </tr>
+		</thead>
+		<tbody>
+
+<!-- END TableHeader -->
+
+<!-- BEGIN TableRow -->
+		  <tr class="{ZebraRowClass}">
+			<td class='AdminIcoCellWide'>
+				{DELACTION}
+				{EDITACTION}
+				{EDITTREEACTION}
+			</td>
+			<th scope="row">{Nome}</th>
+			<td>{COLLECTIONID}</td>
+			<td>{IDOWNER}</td>
+			<td>{SHOWINMAP}</td>
+			<td>{MAPMAXDEEP}</td>
+		  </tr>
+<!-- END TableRow -->
+
+
+<!-- BEGIN TableFooter -->
+		</tbody>
+	</table>
+</div>
+<div class="AdminPageFooterStatus">__(.noi): {TOTRECORDS} </div>
+<!-- END TableFooter -->
+

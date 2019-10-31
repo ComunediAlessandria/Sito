@@ -1,0 +1,51 @@
+#!/usr/bin/php -q
+<?php
+
+	$config = array(
+
+		'tag'				=> '[tag]',
+
+		'localDir'			=> '[localDir][dstDir]',
+//                onlyTemplates                   => TRUE,
+
+		'remoteHost'		=> 'web1',
+		'remoteDBHost'		=> 'web1',
+		'remoteDir'			=> '/home/flexcmp.com/dev/web/[dstDir]',
+		'confFile'    		=> 'web.conf',
+
+		'remoteDBServer'	=> '192.168.50.25',
+		'remoteDBUsername'	=> 'root',
+		'remoteDBPassword'	=> 'estintoreaco2n.2',
+
+		'remoteUserGroup'	=> 'apache:nobody',
+
+		'localDBName'		=> '[dstDB]',
+		'remoteDBName'		=> '[dstDB]',
+
+		'remoteCMHome'		=> '/home/ContentManager.7',
+
+			// deve encodare il contenuto dei file prima del trasferimento?
+
+		'encoded'			=> false,
+
+			// directory aggiuntive da trasferire assieme allo scheletro del file
+
+		'additionalDirs'	=> array(),
+
+			// directory aggiuntive da trasferire solo quando il master è
+			// in locale e da preservare ad ogni upload dello scheletro
+			// al pari delle dir di immagini, files ed embed
+
+		'additionalDataDirs'	=> array(),
+
+			// tabelle aggiuntive di cui deve essere trasferita solo la struttura
+
+		'tblOnlyStructure' 	=> array(),
+
+			// tabelle aggiuntive di cui trasferire struttura e dati
+
+		'tblTransfer' 		=> array(),
+	);
+
+	include('cm/Scripts/SiteDeploy');
+?>

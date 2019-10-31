@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='iso-8859-1' ?>
+<ui id='Validazione'>
+
+	<presenter
+		type='Template'
+		filename='FlexValid/FlexValidEdit.html'
+	/>
+
+	<page
+		title='__(bo-validation.formtitle)'
+		permission='EDV'
+	/>
+
+	<elements>
+		<element id='Name'				BO='Name'				type='text'			size='50' maxlen='100'		label='__(bo-validation.name)' class='span8' />
+		<element id='Description'		BO='Description'		type='textarea'		rows='4'	cols='60'		label='__(bo-validation.desc)' class='span8' />
+		<element id='ValidationData'	BO='ValidationData'		type='validation'	label='__(bo-validation.settings)' />
+	</elements>
+
+	<validations>
+		<validation id='Name' type='mandatory' forfield='Name' />
+	</validations>
+
+	<!-- UI per la cancellazione - per adesso qui, domani in un file XML separato -->
+
+	<delete
+		template='FlexValid/FlexValidDelAsk.html'
+	/>
+
+</ui>

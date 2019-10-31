@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="it">
+	<group id="bnp" define="false">
+		<message id="ai" lang:it="Avanti - Indietro" lang:en="Prev - Next"/>
+		<message id="pnelpnciai" lang:it="[Prev/Next Error: La pagina non compare in alcun indice]" lang:en="[Prev/Next Error: cannot find the page in any index]"/>
+	</group>
+</messages>

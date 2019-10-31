@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='iso-8859-1' ?>
+<uilist id='Valid'>
+
+	<presenter
+		type='Template'
+		filename='FlexValid/FlexValidList.html'
+		page='20'
+	/>
+	<page
+		title='__(bo-validation.title)'
+		permission='EDV'
+	/>	
+
+	<options>
+		<option name='modlink' label='__(bo-common.mod) %s' element='Name' />
+		<option name='dellink' label='__(bo-common.del) %s' element='Name' />
+	</options>
+
+	<elements>
+		<element id='Description' bo='Description' label='Descrizione' />
+		<element id='Name' bo='Name' label='Nome' />
+	</elements>
+
+	<sortOrder>
+		<sortKey		bo='Name'		order='ASC' />
+	</sortOrder>
+
+</uilist>

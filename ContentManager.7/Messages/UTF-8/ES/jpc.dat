@@ -1,0 +1,9 @@
+a:30:{s:2:"tt";s:24:"[ES] Scelta Destinazione";s:3:"can";s:12:"[ES] Annulla";s:2:"ok";s:13:"[ES] Conferma";s:2:"og";s:24:"[ES] Gruppo Proprietario";s:2:"tm";s:108:"[ES] 
+				Il risultato della ricerca comprende troppi elementi. L'elenco è stato limitato ai primi 100.
+			";s:3:"thu";s:31:"[ES] 
+				URL<br />Parlante
+			";s:4:"thti";s:24:"[ES] Titolo negli Indici";s:3:"tht";s:10:"[ES] Title";s:11:"PEBLOBTitle";s:31:"[ES] Link ad una pagina interna";s:10:"PEBLOBInfo";s:302:"[ES] 
+				Per limitare le pagine presenti nell'elenco sosottostante è possibile filtrarle in
+				base ad una parola presente nel titolo, oppure digitando il numero pagina, oppure digitando la url parlante:
+				digitare la parola (o parte di essa) nel campo di testo e premere il pulsante 'filtra'.
+			";s:6:"filtra";s:11:"[ES] Filtra";s:4:"mtlp";s:27:"[ES] Mostra tutte le Pagine";s:5:"tblob";s:22:"[ES] Pagine Editoriali";s:2:"ft";s:43:"[ES] Link ad una pagina Applicativa (Fixed)";s:2:"fi";s:59:"[ES] Seleziona la pagina desiderata dall'elenco sottostante";s:6:"tfixed";s:23:"[ES] Pagine Applicative";s:2:"ht";s:28:"[ES] Link ad una pagina HTML";s:2:"hi";s:59:"[ES] Seleziona la pagina desiderata dall'elenco sottostante";s:5:"thtml";s:16:"[ES] Pagine HTML";s:2:"et";s:36:"[ES] Link ad una pagina Special (ex)";s:2:"ei";s:59:"[ES] Seleziona la pagina desiderata dall'elenco sottostante";s:3:"tex";s:12:"[ES] Special";s:2:"xt";s:31:"[ES] Link ad una pagina Esterna";s:2:"xi";s:32:"[ES] Inserisci l'indirizzo (URL)";s:3:"xtt";s:28:"[ES] Titolo del collegamento";s:5:"thttp";s:25:"[ES] Collegamenti Esterni";s:5:"dblob";s:22:"[ES] Pagina Editoriale";s:4:"dphp";s:23:"[ES] Pagina Applicativa";s:5:"dhtml";s:16:"[ES] Pagina HTML";s:5:"dhttp";s:25:"[ES] Collegamento Esterno";}

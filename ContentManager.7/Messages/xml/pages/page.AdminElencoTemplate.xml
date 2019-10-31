@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE FlexCMPMessages SYSTEM '/FlexCMPMessages.dtd'>
+<messages xmlns:lang='#' defaultlang='IT'>
+	<group id='pgaet' define='false' scope='json'>
+
+		<message id='pt'
+			lang:it="Modelli di Pagina"
+			lang:en="Page Models"
+		/>
+
+		<message id='pw'
+			lang:it="ANTEPRIMA pagina %s"
+			lang:en="Preview of page %s"
+		/>
+
+		<message id='del'
+			lang:it="ELIMINA modello %s"
+			lang:en="DELETE model %s"
+		/>
+
+		<message id='cdel'
+			lang:it="Confermi l'eliminazione?"
+			lang:en="Really delete model?"
+		/>
+
+		<message id='dup'
+			lang:it="DUPLICA modello %s"
+			lang:en="DUPLICATE model %s"
+		/>
+
+		<message id='cdup'
+			lang:it="Confermi la duplicazione?"
+			lang:en="Really duplicate model"
+		/>
+
+		<message id='mod'
+			lang:it="MODIFICA modello %s"
+			lang:en="EDIT model %s"
+		/>
+
+		<message id='fn'
+			lang:it="Pagina numero '%s'"
+			lang:en="Page number '%s'"
+		/>
+
+		<message id='fc'
+			lang:it="contenenti '%s'"
+			lang:en="containing '%s'"
+		/>
+
+		<!-- combo sort -->
+
+		<message id='st'
+			lang:it='Titolo'
+			lang:en='Title'
+		/>
+
+		<message id='sd'
+			lang:it='Data di Modifica'
+			lang:en='Modified Date'
+		/>
+
+		<message id='ssd'
+			lang:it='Data Inizio Validità'
+			lang:en='Start Validity Date'
+		/>
+
+		<message id='ssed'
+			lang:it='Data Termine Validità'
+			lang:en='End Validity Date'
+		/>
+
+		<message id='stp'
+			lang:it='Modello Grafico'
+			lang:en='Graphic Model'
+		/>
+
+		<!-- template tElencoTemplate -->
+
+		<message id='add'
+			lang:it='AGGIUNGI UN NUOVO MODELLO DI PAGINA'
+			lang:en='ADD A NEW PAGE MODEL'
+		/>
+
+		<message id='td'
+			lang:it="Tabella contenente l'elenco delle pagine: nella prima colonna sono contenuti i comandi di eliminazione, duplicazione, modifica, anteprima della pagina"
+			lang:en='Table containing pages list'
+		/>
+
+		<message id='tha'
+			lang:it='Azioni'
+			lang:en='Actions'
+		/>
+
+		<message id='thn'
+			lang:it='Numero'
+			lang:en='Number'
+		/>
+
+		<message id='tht'
+			lang:it='Titolo Modello'
+			lang:en='Model Title'
+		/>
+
+		<message id='thgp'
+			lang:it='Gruppo Proprietario'
+			lang:en='Owner Group'
+		/>
+
+		<message id='thgs'
+			lang:it='Gruppi che possono utilizzare il modello'
+			lang:en='Groups able to use the model'
+		/>
+
+		<message id='f'
+			lang:it='NUMERO MODELLI ELENCATI'
+			lang:en='NUMBER OF LISTED MODELS'
+		/>
+
+		<message id='no'
+			lang:it='NON CI SONO MODELLI DI PAGINA DA VISUALIZZARE'
+			lang:en='THERE ARE NO PAGE MODELS AVAILABLE'
+		/>
+
+		<!-- v2 - dialog -->
+
+		<message id='ddTitle'
+			lang:it='Cancellazione Modello di Pagina'
+			lang:en='Delete Page Model'
+		/>
+
+		<message id='ddText'>
+			<trans lang='IT'><![CDATA[
+				Vuoi davvero cancellare il modello di pagina '<strong>%s</strong>'?
+			]]></trans>
+			<trans lang='EN'><![CDATA[
+				Do you really want to delete the page model '<strong>%s</strong>'?
+			]]></trans>
+		</message>
+
+		<message id='ddNote'
+			lang:it="L'operazione eliminerà definitvamente il modello di pagina scelto."
+			lang:en='The object will be permanently deleted.'
+		/>
+
+		<message id='ddBtnOK'
+			lang:it='Elimina'
+			lang:en='Delete'
+		/>
+
+		<message id='ddBtnCancel'
+			lang:it='Annulla'
+			lang:en='Cancel'
+		/>
+	</group>
+</messages>

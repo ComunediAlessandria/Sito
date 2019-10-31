@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='iso-8859-1' ?>
+<uilist id='canale'>
+
+	<page
+		title='__(bo-forum.listtitle)'
+		permission='FOR'
+	/>
+
+	<presenter
+		type='Template'
+		filename='Forum/tForumList.html'
+	/>
+
+	<options>
+		<option name='modlink' label='__(bo-common.mod) %s' element='Nome' />
+		<option name='dellink' label='__(bo-common.del) %s' element='Nome' />
+	</options>
+
+	<elements>
+		<element	id='Nome'		bo='DescrizioneIT'	label='Titolo'		/>
+		<element	id='Moderato'	bo='Moderato'		label='Moderato'	transform='YesNo' />
+		<element	id='GruppoModeratori'	bo='IDOwnerGroup'		label='Gruppo Moderatori'	transform='Moderatori' />
+		<element	id='Community'	bo='IDCommunity'		label='Limitato alla Community'	transform='Community' />
+		<element	id='ViewStyle'	bo='ViewStyle'		label='Visualizzazione'	transform='viewStyle' />
+	</elements>
+	
+	<transform id='YesNo' type='map' from='0;1' to="__(bo-common.no);__(bo-common.yes)" />
+	<transform id='viewStyle' type='map' from='0;1' to='__(.tree);__(.linear)' />
+	<transform id='Moderatori' type='php'>
+		<![CDATA[
+
+				// ricava il nome del Gruppo
+
+			$gruppo = GetFieldFromTable('DescrizioneIT' , 'Gruppi' , 'IDGruppo=' . $value);
+			return ($gruppo != '' ? $gruppo : '-');
+		]]>
+	</transform>
+	
+	<transform id='Community' type='php'>
+		<![CDATA[
+
+				// ricava il nome della Community
+
+			$community = GetFieldFromTable('Description' , 'Community' , 'IDCommunity=' . $value);
+			return ($community != '' ? $community : '-');
+		]]>
+	</transform>	
+
+</uilist>

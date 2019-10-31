@@ -1,0 +1,28 @@
+<div class="col-xs-12 col-md-8 col-md-offset-2 text-center BoxLoginComm">
+    {ERR}
+	
+    <h1>Accesso area riservata</h1> 
+    <br />
+    <div class="viewPar Accesso">
+        <form id="form" method="post" action="{ACTION}">	
+            <fieldset>
+                <div class="Blocco">
+                    <label for="username" lang="en">Username:</label>
+                    <input name="username" type="text" value="{USERNAME}" size="20" id="username" />
+                    <div class="clearfix"></div>
+                </div>
+                <div class="Blocco">
+                    <label for="password" lang="en">Password:</label>
+                    <input name="password" type="password" size="20" id="password" />
+                    <div class="clearfix"></div>
+                </div>
+                <div class="Blocco">
+                    <input name="Submit" type="submit" class="submit" value="Entra &raquo;" /> 
+                    <div class="GoAway">{HIDDEN}</div>
+                    <div class="clearfix"></div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <p>Se non ricordi lo <strong>username</strong> o la <strong>password</strong> puoi richiederle cliccando <a href='{linkremember}'>qui</a></p>
+</div>

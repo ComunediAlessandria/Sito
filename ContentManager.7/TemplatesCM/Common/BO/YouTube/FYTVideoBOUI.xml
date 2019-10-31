@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='iso-8859-1' ?>
+<ui id='FYTVideo'>
+	<presenter
+		type='Template'
+		filename='YouTube/FYTVideoEdit.html'
+	/>
+		<page
+			title='Personalizzazioni - Scheda Modello'
+			permission='YTA'
+	/>
+
+	<elements>
+
+		<element	id='VideoID'	BO='VideoID'	type='text'	size='30'	maxlen='30'	label='VideoID' mode='RO'/>
+		<element	id='AuthorName'	BO='AuthorName'	type='text'	size='50'	maxlen='50'	label='Autore' mode='RO' />
+		<element	id='VideoTitle'	BO='VideoTitle'	type='text'	size='50'	maxlen='250'	label='Titolo YouTube' mode='RO' />
+		<element	id='DescFull'	BO='DescFull'	type='text'	size='50'	maxlen='250'	label='Descrizione YouTube' mode='RO' />
+		<element	id='Tags'	BO='Tags'	type='text'	size='250'	maxlen='250'	label='Parole Chiave YouTube' mode='RO' />
+		<element	id='ParoleChiave'	BO='ParoleChiave'	type='text'	size='80'	maxlen='250'	label='Parole Chiave' class='span8' />
+		<element	id='RelatedLink'		bo='RelatedLink'		type='FlexPage'	allowexternal='true' label='Destinazione' 					/>
+		<element	id='OpenLinkINW'		bo='OpenLinkINW'		type='check' class='checkbox' label='Apre il link in una nuova finestra' 					/>
+
+
+
+		<element	id='DTUpdated'	BO='DTUpdated'	type='datetime'	mode='RO'	label='Data Video YouTube' />
+		<element	id='DataOraVideo'	BO='DataOraVideo'	type='datetime'	minyear='1970' label='Data Video' />
+
+		<element	id='Classification'		bo='Classification'		type='classification'		configuration='videoclassificator' label='Classificazione' 	/>
+
+		<element	id='jTitolo'		BO='jTitolo'		size='80'	maxlen='250'	type='multitext'	valueset='Languages' class='span8'	mapping='Lang:Value'	label='Titolo'>
+  		<![CDATA[
+			<div id='D_%1$s'><label for='%1$s' class='AdminFormBOLabel'>%3$s (%4$s)</label>%2$s</div>
+		 ]]>
+		</element>
+
+		<element	id='jDescrizione'	BO='jDescrizione'	cols='80'	rows='4'	type='multitextarea' style='false' valueset='Languages' 	class='span8' mapping='Lang:Value'	label='Descrizione'>
+	  		<![CDATA[
+				<div id='D_%1$s'><label for='%1$s' class='AdminFormBOLabel'>%3$s (%4$s)</label>%2$s</div>
+			 ]]>
+		</element>
+
+		<element	id='jTrascrizione'	BO='jTrascrizione'	cols='80'	rows='4'	type='multitextarea' style='false' valueset='Languages' 	class='span8' mapping='Lang:Value'	label='Trascrizione'>
+  		<![CDATA[
+			<div id='D_%1$s'><label for='%1$s' class='AdminFormBOLabel'>%3$s (%4$s)</label>%2$s</div>
+		 ]]>
+		</element>
+
+		<element	id='jRelatedLink'	BO='jRelatedLink'	size='50'	maxlen='250'	type='multitext' valueset='Languages' 	mapping='Lang:Value'	class='span8' label='Testo del link'>
+  		<![CDATA[
+			<div id='D_%1$s'><label for='%1$s' class='AdminFormBOLabel'>%3$s (%4$s)</label>%2$s</div>
+		 ]]>
+		</element>
+
+		<element id='DataOraUltimaModifica'	bo='DataOraUltimaModifica'		type='text'	mode='RO'	size='10'	maxlen='32'	label='Data ultima modifica' />
+		<element id='UtenteUltimaModifica'	bo='UtenteUltimaModifica'		type='text'	mode='RO'	size='10'	maxlen='32'	label='Utente ultima modifica' />
+	</elements>
+
+	<valueset id='YesNo'>
+		<value id='1' text='Si' />
+		<value id='0' text='No' />
+	</valueset>
+	<valueset id='Languages' kind='DISTINCT' table='Languages' colid='Lang' column='DescrizioneIT' orderby='IDLanguage' />
+
+
+	<validations>
+
+		<validation id='TitleMandatory' type='php'>
+			<![CDATA[
+
+					// verifica che per le lingue abilitate vi sia il Titolo tradotto.
+
+				$ok = TRUE; $message = '';
+
+				$mlField = $pars['ELEMENTS']['jTitolo']->GetValue();
+
+				$mlFieldValues = array();
+				foreach($mlField as $singleLanguageValue)
+					$mlFieldValues[$singleLanguageValue['Lang']] = trim($singleLanguageValue['Value']);
+
+					// ottiene l'elenco delle lingue abilitate
+
+				FlexInclude(kModPath . 'modLanguage.php');
+
+				$cLang = FlexLanguages::GetCache();
+
+					// la GetArray restituisce un array numerico
+
+				$enabledLangs = array();
+				foreach ($cLang->GetArray(array('DescrizioneIT', 'Stato')) as $langCode => $data)
+					if ($data[1] == 2) {
+
+						$enabledLangs[] = $langCode;
+						if ($mlFieldValues[$langCode] === '')
+									$ok = FALSE;
+					}
+
+				if (! $ok) {
+
+					$pars['ELEMENTS'][ 'jTitolo' ]->SetError(TRUE);
+					$message = 'Il titolo del Video &egrave; obbligatorio in tutte le lingue attive (' . join(', ', $enabledLangs) . ')';
+				}
+
+				return array($ok, $message);
+			]]>
+		</validation>
+		<validation id='RelatedLinkMandatory' type='php'>
+			<![CDATA[
+
+
+					// verifica che per le lingue abilitate vi sia il Titolo tradotto.
+
+				$ok = TRUE; $message = '';
+
+				$mlField = $pars['ELEMENTS']['jRelatedLink']->GetValue();
+
+				$mlFieldValues = array();
+				foreach($mlField as $singleLanguageValue)
+					$mlFieldValues[$singleLanguageValue['Lang']] = trim($singleLanguageValue['Value']);
+
+					// ottiene l'elenco delle lingue abilitate
+
+				FlexInclude(kModPath . 'modLanguage.php');
+
+				$cLang = FlexLanguages::GetCache();
+
+					// la GetArray restituisce un array numerico
+
+				$enabledLangs = array();
+				foreach ($cLang->GetArray(array('DescrizioneIT', 'Stato')) as $langCode => $data)
+					if ($data[1] == 2) {
+
+						$enabledLangs[] = $langCode;
+						if ($mlFieldValues[$langCode] === '')
+									$ok = FALSE;
+					}
+
+				$relLink = (string)$pars['ELEMENTS']['RelatedLink']->GetValue();
+
+				if ((! $ok) && ($relLink != '')) {
+
+					$pars['ELEMENTS'][ 'jRelatedLink' ]->SetError(TRUE);
+					$message = 'Nel caso sia impostata la destinazione del link di approfondimento, la descrizione del link &egrave; obbligatoria in tutte le lingue attive (' . join(', ', $enabledLangs) . ')';
+
+				} else
+					$ok = TRUE;
+
+				return array($ok, $message);
+			]]>
+		</validation>
+	</validations>
+
+	<events>
+		<event id='onBeforeForm' when='onBeforeForm' type='php'>
+		<![CDATA[
+				$vid = $pars['BO']->GetValue('VideoID');
+				$pars['BO']->SetPlaceholder('VID', $vid);
+				$pars['BO']->SetPlaceholder('lang', $GLOBALS['gLanguage']);
+		]]>
+		</event>
+	</events>
+
+	<!-- UI per la cancellazione - per adesso qui, domani in un file XML separato -->
+
+	<delete
+		template='YouTube/FYTVideoDelAsk.html'
+		failTemplate='YouTube/FYTVideoDelFailed.html'
+		pagetitle='Cancellazione Video'
+		>
+
+		<onfail id='CategoriaInSottoCategorie' condition='CategoriaInSottoCategorie'>
+			<![CDATA[
+				<strong>Questa Categoria &egrave; associata a {nRec} Proposte. </strong> <br />
+				Una volta modificate le Categorie nelle Proposte associate, sarà possibile eliminare questa Categoria.
+			]]>
+		</onfail>
+	</delete>
+
+
+</ui>

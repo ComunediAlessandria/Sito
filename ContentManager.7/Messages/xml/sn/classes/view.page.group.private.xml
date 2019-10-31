@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="lang" defaultlang="IT">
+	<group id="snViewPageGroupPrivate" define="false">
+		<message id="line1"
+			lang:it="Questo gruppo è privato."
+			lang:en="This group is private."
+			lang:fr="Ce groupe est privé."
+			lang:de="Diese Gruppe ist privat."
+			lang:es="Este grupo es privado."
+			lang:ru="Эта группа является частной."
+		/>
+		<message id="line2"
+			lang:it="Per accedere ai contenuti dei gruppi è necessario essere iscritti"
+			lang:en="To access group's content you need to join it first"
+			lang:fr="Pour accéder au contenu des groupes auxquels vous devez être enregistré"
+			lang:de="Um den Inhalt der Gruppen zugreifen müssen Sie registriert sein"
+			lang:es="Para acceder al contenido de los grupos es necesario estar registrado"
+			lang:ru="Для доступа к содержимому из групп вы должны быть зарегистрированы"
+		/>
+	</group>
+</messages>

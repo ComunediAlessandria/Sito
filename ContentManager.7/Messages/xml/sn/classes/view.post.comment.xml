@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="lang" defaultlang="IT">
+	<group id="snViewPostComment" define="false">
+		<message id="delete"
+			lang:it="Elimina"
+			lang:en="Delete"
+			lang:fr="Supprimer"
+			lang:de="Löschen"
+			lang:es="Borrar"
+			lang:ru="Удалить"
+		/>
+	</group>
+</messages>

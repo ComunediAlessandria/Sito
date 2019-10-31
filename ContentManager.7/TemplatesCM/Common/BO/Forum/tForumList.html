@@ -1,0 +1,32 @@
+<div id="AdminCorpoBox">
+	<h1>Forum</h1>
+		<div class="AdminPageFooterCommand"><a href="{ADDLINK}">{ADDIMG}Aggiungi un nuovo Forum</a></div>
+	  <table class="AdminTable" summary="Tabella contenente l'elenco dei Forum: nella prima colonna sono contenuti i comandi di eliminazione e modifica del Forum.">
+		<thead>
+		  <tr>
+			<td scope="col" class='AdminIcoCell'>Azioni</td>
+			<th scope="col" abbr="Nome">Nome Forum</th>
+			<th scope="col">Moderato</th>
+			<th scope="col">Gruppo Moderatori</th>
+			<th scope="col">Limitato alla <span lang="en">Community</span></th>
+			<th scope="col">Visualizzazione</th>
+		  </tr>
+		</thead>
+
+		<tbody>
+		  <!-- BEGIN row -->
+		  <tr class="{CLASSTR}">
+			<td class='AdminIcoCell'>{DELLINK} {MODLINK}</td>
+			<th scope="row">{NOME}</th>
+			<td>{MODERATO}</td>
+			<td>{GRUPPOMODERATORI}</td>
+			<td>{COMMUNITY}</td>
+			<td>{VIEWSTYLE}</td>
+		  </tr>
+		  <!-- END row -->
+		</tbody>
+
+	</table>
+		<div class="AdminPageFooterCommand"><a href="{ADDLINK}">{ADDIMG}Aggiungi un nuovo Forum</a></div>
+</div>
+<div class="AdminPageFooterStatus"> NUMERO FORUM PRESENTI: {TOTRECORDS} </div>

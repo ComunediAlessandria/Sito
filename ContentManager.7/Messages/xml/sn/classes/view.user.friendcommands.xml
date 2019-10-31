@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="lang" defaultlang="IT">
+  <group id="snViewUserFriendCommands" define="false">
+    <message id="mail" lang:it="Scrivi Messaggio" lang:en="Write a message" lang:fr="Écrire un message" lang:de="Nachricht schreiben" lang:es="Write a message" lang:ru="Написать сообщение"/>
+    <message id="tmail"/>
+  </group>
+</messages>

@@ -1,0 +1,29 @@
+<h1 class="viewTitolo text-center ">Richiesta credenziali di accesso</h1>
+
+<div class="col-xs-12 col-md-8 col-md-offset-2 text-center BoxLoginComm">
+    <p>
+    Se non ricordi il nome utente e/o la password di accesso, compila almeno uno dei campi del modulo sottostante e premi il pulsante <strong>"Invia"</strong>.<br />
+	Le tue credenziali saranno spedite all'indirizzo email che ci hai fornito quanto ti sei iscritto al sito.</p>
+    
+    {ERR}
+    <div class="viewPar Accesso">
+        <form id="formCommunityRemeber" method="post" action="{ACTION}">
+            <fieldset>
+                <div class="Blocco">
+                    <label for="username">Nome utente:</label>
+                    <input name="username" type="text" size="20" id="username" />
+                    <div class="clearfix"></div>
+                </div>
+                <div class="Blocco">
+                    <label for="email" lang="en">Email:</label>
+                    <input name="email" type="text" size="20" id="email" />
+                    <div class="clearfix"></div>
+                </div>
+                <div class="Blocco">
+                    <input class="submit" name="Submit" type="submit" value="Invia &raquo;" id="CommunityUserFormSubmit" />
+                    <div class="clearfix"></div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

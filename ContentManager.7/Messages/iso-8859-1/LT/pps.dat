@@ -1,0 +1,11 @@
+a:15:{s:2:"pi";s:14:"Pagina Interna";s:6:"filtra";s:6:"Filtra";s:4:"mtlp";s:22:"Mostra tutte le Pagine";s:2:"np";s:14:"Nessuna pagina";s:11:"PEBLOBTitle";s:26:"Link ad una pagina interna";s:10:"PEBLOBInfo";s:234:"
+				Per limitare le pagine presenti nell'elenco sosottostante &egrave; possibile filtrarle in
+				base ad una parola presente nel titolo: digitare la parola (o parte di essa)
+				nel campo di testo e premere il pulsante 'filtra'.
+			";s:10:"PEBLOBDesc";s:81:"
+				Seleziona la pagina desiderata cliccando il link dall'elenco sottostante
+			";s:2:"le";s:12:"Link Esterno";s:15:"PEExternalTitle";s:32:"Link ad un indirizzo web esterno";s:14:"PEExternalHTTP";s:14:"Indirizzo HTTP";s:14:"PEExternalInfo";s:70:"
+				Digita nel campo sottostante l'indirizzo http di destinazione
+			";s:8:"aggiorna";s:8:"Aggiorna";s:12:"PEClassTitle";s:18:"Link ad una pagina";s:11:"PEClassPage";s:6:"Pagina";s:11:"PEClassInfo";s:63:"
+				Seleziona la pagina desiderata dall'elenco sottostante
+			";}

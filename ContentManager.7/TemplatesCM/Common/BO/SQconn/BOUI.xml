@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='iso-8859-1' ?>
+<ui id='SimpleQueryConf'>
+
+	<page
+		title='Simple Query - Configurazione Connessione'
+		permission='SQ'
+	/>
+
+	<presenter
+		type='Template'
+		filename='SQconn/tEdit.html'
+	/>
+
+	<elements>
+		<element	id='ConnectionName'		bo='ConnectionName'	type='text'		size='30' maxlen='100' label='__(bo-sq.connectionname)' 	/>
+		<element	id='DBDriver'			bo='DBDriver'		type='select'	valueset='vsDBDriver'		 label='__(bo-sq.dbdriver)' 	/>
+		<element	id='DBHost'				bo='DBHost'			type='text'		size='30' maxlen='50' label='__(bo-sq.dbhost)' 	/>
+		<element	id='DBUser'				bo='DBUser'			type='text'		size='30' maxlen='50' label='__(bo-sq.dbuser)' 	/>
+		<element	id='DBPass'				bo='DBPass'			type='text'		size='30' maxlen='50' label='__(bo-sq.dbpass)' 	/>
+		<element	id='DBName'				bo='DBName'			type='text'		size='30' maxlen='50' label='__(bo-sq.dbname)' 	/>
+		<element	id='ConnectionString'	bo='ConnectionString'	type='text'	size='60' maxlen='250' class='span8'	 label='__(bo-sq.connstring)' 	/>
+	</elements>
+
+
+
+	
+	<valueset id='vsDBDriver' kind='PHP' ><![CDATA[
+
+		inc::mod('sq/sqHelper');
+		$l = sqHelper::GetDBDriverList();
+		$res = array();
+		$res[] = array('ID' => '-1' , 'TEXT' => '--');
+		foreach($l as $val => $t) {
+
+			$val = $val === 'MySQLi' ? 'MySQL' : $val;
+			
+			$res[] =  array('ID' => $val, 'TEXT' => $t);	
+		}
+		return $res;
+
+	]]>
+	</valueset>	
+
+	<validations>
+		<validation id='NomeConnectionUnique' type='php'>
+			<![CDATA[
+				$ok = TRUE; $message = '';
+         		$ConnectionName = trim($pars['ELEMENTS']['ConnectionName']->GetValue());
+
+				if ($ConnectionName!='') {
+					
+					$test = 'ConnectionName=' . q($ConnectionName) . ' AND IDSimpleQueryConf <>' . (int)$pars['BO']->ID();
+					if ((CountRecords('SimpleQueryConf', $test )) > 0) 
+						$message = "La ConnectionName deve essere univoca!";
+					
+				}
+ 		        
+				if ($message != '') {
+				
+					$ok = FALSE;
+					$pars['ELEMENTS'][ 'ConnectionName' ]->SetError(TRUE);
+				}
+					
+				return array($ok, $message);
+			]]>
+		</validation>
+		<validation id='ConnectionName'		type='mandatory'		forfield='ConnectionName' />
+		<validation id='ConnectionValid' type='php'>
+			<![CDATA[
+
+				$drv = trim($pars['ELEMENTS']['DBDriver']->GetValue());
+				if ($drv == '-1') {
+					$pars['ELEMENTS'][ 'DBDriver' ]->SetError(TRUE);
+					return array(false,__('bo-sq.errdbdriver'));
+				}
+				
+				inc::mod('sq/class/sqDBs');
+
+				$ok = TRUE; $message = '';
+
+				$p = array();		
+				foreach(array('DBDriver','DBHost','DBUser','DBPass','DBName','ConnectionString' ) as $k)
+						$p[$k] = trim($pars['ELEMENTS'][$k]->GetValue());
+				
+				$open = false;
+				$db = sqDBs::getConnectionFromDBPars($p);
+				$open = $db->open();
+				
+				if ($open !== true)
+					$message = __('bo-sq.errdbconn') . $db->error();
+	        
+				if ($message != '') {
+				
+					$ok = FALSE;
+					$pars['ELEMENTS'][ 'DBDriver' ]->SetError(TRUE);
+				}
+					
+				return array($ok, $message);
+			]]>
+		</validation>		
+		
+
+		
+		
+	</validations>
+
+	<!-- UI per la cancellazione - per adesso qui, domani in un file XML separato -->
+	
+	<delete
+		template='SQconn/tDelAsk.html'
+	/>
+</ui>

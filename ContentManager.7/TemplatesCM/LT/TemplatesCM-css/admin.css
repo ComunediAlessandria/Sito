@@ -1,0 +1,293 @@
+/*
+
+	CLASSI NECESSARIA ALLA IMPAGINAZIONE TABLE FREE
+
+	Sarebbe più sensato metterli nel BlobView ma questo è il solo css invocato sicuramente da tutti
+
+*/
+
+/* commentata così per i linter */
+/*--@processurl off */
+
+P { margin: 0; padding: 0;}
+
+.BLOBAlignLeft {
+ text-align: left;
+ position: relative; /* serve per gestire un bug di ie http://www.positioniseverything.net/explorer/peekaboo.html */
+}
+
+.BLOBAlignCenter { text-align: center;}
+.BLOBAlignRight { text-align: right;}
+.BLOBAlignJustify { text-align:justify;}
+
+.BLOBBlockAlignCenter { text-align: center; }
+.BLOBBlockAlignCenter div {margin: 0 auto;}
+.BLOBBlockAlignRight { float: right;}
+.BLOBBlockAlignLeft { float:left;}
+
+.BLOBListSymbolDisc { list-style-type: disc;}
+.BLOBListSymbolCircle { list-style-type: circle;}
+.BLOBListSymbolSquare { list-style-type: square;}
+.BLOBListSymbolDecimal { list-style-type: decimal;}
+.BLOBListSymbolLowerLetter { list-style-type: lower-alpha;}
+.BLOBListSymbolUpperLetter { list-style-type: upper-alpha;}
+.BLOBListSymbolNone { list-style-type: none;}
+
+.BLOBFloatClear {
+ clear: both;
+ }
+.BLOBFloatLeft {
+ float: left;
+ position: relative; /* serve per gestire un bug di ie http://www.positioniseverything.net/explorer/peekaboo.html */
+}
+
+.BLOBFloatRight {
+ float: right;
+ position: relative; /* serve per gestire un bug di ie http://www.positioniseverything.net/explorer/peekaboo.html */
+}
+
+.BLOBMarginLeft {
+ margin-left: 10px;
+}
+
+.BLOBMarginRight {
+ margin-right: 10px;
+}
+
+
+.BLOBIMGSpacerLeft { padding-left: 10px;}
+.BLOBIMGSpacerRight { padding-right: 10px;}
+
+
+
+.BLOBVAlignMiddle {
+ vertical-align: middle;
+}
+
+.BLOBVAlignTop {
+ vertical-align: top;
+}
+
+.BLOBVAlignBottom {
+ vertical-align: bottom;
+}
+
+
+.BLOBWidth100 {width: 100%;}
+.BLOBWidth50 {width: 49%;}
+
+/* usato per affiancare orrizontalmente n oggetti */
+.BLOBWidthN1 {float: left; width: 99%;}
+.BLOBWidthN2 {float: left; width: 49.5%;}
+.BLOBWidthN3 {float: left; width: 33%;}
+.BLOBWidthN4 {float: left; width: 24.7%;}
+.BLOBWidthN5 {float: left; width: 19.8%;}
+.BLOBWidthN6 {float: left; width: 16.5%;}
+.BLOBWidthN7 {float: left; width: 14.1%;}
+.BLOBWidthN8 {float: left; width: 12.3%;}
+.BLOBWidthN9 {float: left; width: 11.0%;}
+.BLOBWidthN10 {float: left; width: 9.9%;}
+.BLOBWidthN11 {float: left; width: 9.0%;}
+.BLOBWidthN12 {float: left; width: 8.2%;}
+.BLOBWidthN13 {float: left; width: 7.6%;}
+.BLOBWidthN14 {float: left; width: 7.0%;}
+.BLOBWidthN15 {float: left; width: 6.6%;}
+
+/* usato per la dimensione delle celle delle tabelle */
+.BLOBWidthTDN1 {width: 99%;}
+.BLOBWidthTDN2 {width: 49.5%;}
+.BLOBWidthTDN3 {width: 33%;}
+.BLOBWidthTDN4 {width: 24.7%;}
+.BLOBWidthTDN5 {width: 19.8%;}
+.BLOBWidthTDN6 {width: 16.5%;}
+.BLOBWidthTDN7 {width: 14.1%;}
+.BLOBWidthTDN8 {width: 12.3%;}
+.BLOBWidthTDN9 {width: 11.0%;}
+.BLOBWidthTDN10 {width: 9.9%;}
+.BLOBWidthTDN11 {width: 9.0%;}
+.BLOBWidthTDN12 {width: 8.2%;}
+.BLOBWidthTDN13 {width: 7.6%;}
+.BLOBWidthTDN14 {width: 7.0%;}
+.BLOBWidthTDN15 {width: 6.6%;}
+
+
+
+
+.BLOBWidthEmpty {}
+
+.BLOBRow1px {
+ font-size: .05em;
+ height: 1px;
+}
+
+.BLOBHidden{
+	visibility:hidden;
+	position: absolute;
+	top: -1000em;
+	font-size: .1em;
+}
+
+
+img {
+ border-width: 0;
+}
+
+table {
+ border-width: 0;
+}
+
+form {
+ padding: 0px; margin: 0px;
+}
+
+.FlexCMPError {
+ position: relative;
+ margin: 2em 0 2em 0;
+ padding: .5em;
+ font-family:Verdana, Arial, Helvetica, sans-serif;
+ font-size: .9em;
+ font-weight:bold;
+ color: #000000;
+ background-color:#FFFF66;
+ border: 2px solid #FF0000;
+}
+
+.errList{
+	 position: relative;
+	 margin: 1em 0;
+	 padding: .5em;
+	 font-family:Verdana, Arial, Helvetica, sans-serif;
+	 font-size: .9em;
+	 font-weight:bold;
+	 color: #000000;
+	 background-color:#FFFF66;
+	 border: 2px solid #FF0000;
+	list-style-type: none;
+}
+
+.nowrap {
+ white-space:nowrap;
+}
+
+
+
+
+
+/* Nuovi stili per XHTML -------------------------------------------------------------------------- */
+
+
+.adminPanelPageInfo {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	text-align:left;
+	border: 1px solid #000066;
+	margin: .3em;
+	padding: .3em;
+}
+.adminPanelPageInfoItem {
+	font-size: .65em;
+	font-weight: normal;
+}
+.adminPanelPageInfoItemTitle {
+	font-size: .65em;
+	font-weight: bold;
+}
+
+/* Bordo del campo bloboject che diventa rosso se lasci vuoto un campo obbligatori */
+.fldBox {border: 1px solid black;}
+.fldErr {border: 1px solid red;}
+
+
+/* Da qui inizia il vero admin.css, le classi sopra servono all'impaginazione tablefree */
+A.adminLinkOnSite {
+	display: block;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: .8em;
+	font-weight: normal;
+	color: #000000;
+	background-color: #D6E0F7;
+	text-decoration: none;
+	text-align: center;
+	height: 1em;
+	margin: 0px 4px 0px 4px;
+	padding: 0px 2px 1px 2px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #FFFFFF #000000 #000000 #FFFFFF;
+}
+A.adminLinkOnSite:hover {
+	margin:  0 4px 0 4px;
+	padding: 1px 1px 0 3px;
+	border-color: #000000 #FFFFFF  #FFFFFF #000000;
+}
+A.adminLinkOnSite:active {
+	color: #000000;
+	background-color: #FEC643;
+	border-color: #000000 #FFFFFF  #FFFFFF #000000;
+}
+
+
+/* ------------------------ FORM DI LOGIN ---------------- */
+
+
+.FlexLoginBoxContainer  {
+ width: 100%;
+ text-align:center;
+}
+
+.FlexLoginBox {
+	border: 1px solid #003399;
+	width: 400px;
+	text-align: left;
+	background-image: url(TemplatesUSR-CM-modules-img/Enter.jpg);
+	background-position: top right;
+	background-repeat:repeat-y;
+	margin: auto auto;
+}
+
+.FlexLoginContent{
+ width: 245px;
+ text-align: center;
+}
+
+
+.FlexLoginTitle{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #000066;
+	background-color: #FFFFFF;
+	margin: .2em 0em .2em 0em;
+}
+.FlexLoginLabel {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: .9em;
+	color: #003399;
+	background-color: #FFFFFF;
+}
+.FlexLoginField {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: .9em;
+	color: #000000;
+	background-color: #FFFFFF;
+}
+
+.FlexLoginButton{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: .9em;
+	color: #003399;
+	background-color: #FFFFFF;
+	margin: .2em 0em .2em 0em;
+}
+.FlexLoginSmallText {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: .7em;
+	color: #333333;
+	background-color: #FFFFFF;
+	text-align:left;
+	margin-bottom: 1em;
+}
+.FlexLoginSmallText A{
+	color: #333333;
+	background-color: #FFFFFF;
+}

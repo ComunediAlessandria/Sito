@@ -1,0 +1,64 @@
+[[:section:frame]]
+<h1>Scheda rilevazione Qualità dell'aria</h1> 
+<div class=''>
+	{page}
+</div>
+<br />
+<div class="row">
+	<div class="span2">
+		[[ id: btnNext, kind: submit, value: "Salva ed esci", class: 'btn btn-primary btn-block' ]]
+	</div>
+	<div class="span2">
+		[[ id: btnCancel, kind: submit, value: "Esci senza salvare", class: 'btn btn-block' ]]
+	</div>
+</div>
+
+<br />
+
+
+[[:section:page]]
+
+<div class="row-fluid">
+	<div class="span2">
+		<label for="Data_d">Data (*)</label>
+		[[
+		id: Data,
+		kind: BootstrapQADatepicker,
+		class: span12,
+		validate: {
+			NotEmpty: 'Campo obbligatorio'
+		}
+		]]
+	</div>
+	<div class="span2">
+		<label for="PM10">PM10 (*)</label>
+		[[
+		id: PM10,
+		kind: Text,
+		class: span12,
+		validate: {
+			isInteger: 'Il valore deve essere un intero positivo o uguale a zero'
+		}
+		]]
+		
+	</div>
+	<div class="span3">
+		<br />
+		<p>In caso di misurazione assente inserire 0 (sul sito comparirà la scritta N.D.)</p>
+	</div>
+</div>
+<div class="row-fluid">
+	<div class="span4">
+		<label for="Note">Eventuale nota pubblica</label>
+		[[
+		id: Note,
+		kind: Text,
+		maxlength: 50,
+		size:50,
+		class: span12
+		
+		]]
+	</div>
+</div>
+
+[[:section:pagexxxx]]

@@ -1,0 +1,35 @@
+<div class="well well-small">
+	<a href="{ADDLINK}" class='btn btn-success'><i class="moon-icon-plus icon-white"></i> __(bo-community.add)</a>
+</div>
+
+<table class="table table-striped table-bordered table-condensed table-hover flexbo-list-table">
+<thead>
+  <tr>
+	<th scope="col" class='AdminIcoCell'>__(bo-community.actions)</th>
+	<th scope="col" >ID</th>
+	<th scope="col" >__(bo-community.comname)</th>
+	<th scope="col" >__(bo-community.public)</th>
+	<th scope="col" >__(bo-community.nu)</th>
+  </tr>
+</thead>
+<tbody>
+
+  <!-- BEGIN row -->
+  <tr class="{CLASSTR}">
+	<td><div class="btn-group">{MODLINK} {DELLINK}</div></td>
+	<td scope="row" >{ID}</td>
+	<th scope="row" >{DESCRIPTION}</th>
+	<td scope="row" >{ISPUBLIC}</td>
+	<td scope="row" >{NUSERS}</td>
+  </tr>
+  <!-- END row -->
+		<tr class="tfooter">
+			<td colspan="5">
+				<div class="pull-right">
+
+				</div>
+				<p>__(bo-community.hm): {TOTRECORDS}</p>
+			</td>
+		</tr>
+	</tbody>
+</table>

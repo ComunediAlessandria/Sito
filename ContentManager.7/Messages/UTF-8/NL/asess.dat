@@ -1,0 +1,8 @@
+a:9:{s:2:"pt";s:19:"[NL] Accesso Negato";s:4:"nopt";s:27:"[NL] Permessi Insufficienti";s:4:"nopm";s:61:"[NL] Non hai sufficienti diritti per accedere a questa pagina";s:4:"expt";s:21:"[NL] Sessione Scaduta";s:4:"expm";s:103:"[NL] 
+				L'accesso non è consentito:
+				occorre effettuare nuovamente il <a href='%s'>Login</a>.
+			";s:4:"nolt";s:36:"[NL] Licenza non abilitata o scaduta";s:4:"nolm";s:109:"[NL] 
+				Per continuare ad utilizzare le funzionalità del prodotto è necessario aggiornare la licenza.
+			";s:5:"gerrt";s:20:"[NL] Errore Generico";s:5:"gerrm";s:89:"[NL] 
+				Si è verificato un errore. <a href='%s'>Torna all'area amministrativa</a>.
+			";}

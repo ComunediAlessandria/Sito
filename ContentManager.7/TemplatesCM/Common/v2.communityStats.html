@@ -1,0 +1,53 @@
+<!-- BEGIN FilterForm -->
+<form method='post' action='{SearchAction}' id='filterform' class='form-inline'>
+	<div class='well well-small'>
+
+		<label for='frmAnno'>__(pastats.repType):</label>
+		{selectReport}
+
+		<label for='frmPeriodo'>__(pastats.period):</label>
+		{selectPeriodo}
+
+		<label for='frmCommunity'>__(pastats.community):</label>
+		{selectCommunity}
+
+		<input type='submit' value='__(pastats.update)' class="btn btn-primary" />
+
+	</div>
+</form>
+<!-- END FilterForm -->
+
+
+
+<!-- BEGIN MonthlyStats -->
+	{MonthlyGraph}
+	{MonthlyTable}
+<div class='well well-small'>
+	<a href='{excelHref}' class='btn'><i class="moon-icon-file-excel "></i> __(pastats.monthstats) - __(pastats.community): {community}</a>
+</div>
+<!-- END MonthlyStats -->
+
+
+
+<!-- BEGIN Pages -->
+	{PagesTable}
+<!-- END Pages -->
+
+<!-- BEGIN NoData -->
+<div class='alert alert-info'>
+	__(pastats.nodata)
+</div>
+<!-- END NoData -->
+
+
+<!-- BEGIN NoPermission -->
+<div class='alert'>
+	__(pastats.nocommunitypermission)
+</div>
+<!-- END NoPermission -->
+
+<a href='#TopStatPage' class='btn goToTop'><i class="moon-icon-arrow-up-2"></i> __(pastats.btt)</a>
+
+
+
+

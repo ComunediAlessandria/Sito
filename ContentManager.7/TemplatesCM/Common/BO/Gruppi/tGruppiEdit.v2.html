@@ -1,0 +1,46 @@
+{ERR}
+
+<form class="form-horizontal" method="post" action="{ACTION}">
+
+	<div class="well well-small">
+		<div class="control-group">
+			<label class="control-label" for="{TAG_Nome}">{LBL_Nome}</label>
+			<div class="controls"> {VAL_Nome}</div>
+		</div>
+		<div class="row">
+			<div class="span9">
+			{VAL_Diritti}
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="{TAG_Note}">{LBL_Note}</label>
+			<div class="controls"> {VAL_Note}</div>
+		</div>
+	</div>
+
+
+
+	<div class='alert alert-info'>
+		<div class='row'>
+			<div class='span2'>
+				{LBL_ElencoIscritti}
+			</div>
+			<div class='span9'>
+				{VAL_ElencoIscritti}
+			</div>
+		</div>
+	</div>
+	
+	<div class='well well-small'>
+		<div class='row'>
+			<div class='span2'>
+					<input name="btnCancel" type="submit" class='btn' value="__(bo-common.canc)" />
+			</div>
+			<div class='span2'>
+				{HIDDEN}
+				<input name="Submit" type="submit" class='btn btn-primary' value="__(bo-common.save)" />
+			</div>
+		</div>
+	</div>
+	
+</form>

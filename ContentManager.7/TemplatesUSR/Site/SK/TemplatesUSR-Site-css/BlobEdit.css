@@ -1,0 +1,74 @@
+.editTitolo {   	
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 1.1em;
+	font-weight: bold;
+	color: #0D437F;
+	background-color: #FFFFFF;
+	padding: 0px;
+	margin: 1px; 
+	border-top: 1px solid #CCCCCC;
+	border-right: 1px solid #CCCCCC;
+	border-bottom: 4px solid #FFC444;
+	border-left: 1px solid #CCCCCC;
+	width: 100%;
+	}
+
+.editSottotitolo {
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: .9em; 
+	font-weight: bold; 
+	color: #0D437F; 
+	background-color: #EEF3F7; 
+ 	width: 100%;
+}
+
+.editSotTitCell{ 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: .9em; 
+	font-weight: bold; 
+	color: #0D437F; 
+	background-color: #EEF3F7; 
+ 	width: 100%;
+}
+
+.editPar {  
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: .75em; 
+	color: #333333; 
+	background-color:  #FFFFFF;
+	width: 100%; }
+ 
+.editParCell { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: .75em; 
+	color: #333333; 
+	background-color: #FFFFFF; 
+	width: 100%; }
+	
+.editImgCell {  width: 50%}
+.editTextCell { width: 50% }
+.editInfo {  
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 12px; 
+	width: 100%; }
+.editInfoHDR {  
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 12px
+}
+.editHR { color: #5276A0; background-color: transparent; height: 1px;}
+
+.editLinkText {
+ font-family: Verdana, Arial, Helvetica, sans-serif; 
+ font-size: .75em; 
+ font-weight: bold; 
+ color: #CC0000; 
+ background-color: #FFFFFF; 
+}
+
+
+
+.userFormat1{font-weight: bold; }
+.userFormat2{font-style: italic; }
+.userFormat3{font-size: 40px; color: #000000; background-color: #FFFF33; }
+
+

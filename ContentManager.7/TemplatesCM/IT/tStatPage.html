@@ -1,0 +1,269 @@
+<!-- BEGIN FilterForm -->
+<h1><a name='TopStatPage'>Statistiche di Accesso</a></h1>
+
+<div class="AdminPageFooterCommand">
+	<div>
+		<form method='post' action='{SearchAction}'>
+
+			<label for='frmAnno'>Tipo di report:</label>
+			{selectReport}
+
+			<label for='frmPeriodo'>Periodo:</label>
+			{selectPeriodo}
+
+			<label for='frmAnno'>Lingua:</label>
+			{selectLingua}
+
+			<input type='submit' value='Aggiorna' />
+		</form>
+	</div>
+</div>
+<!-- END FilterForm -->
+
+<!-- BEGIN AccessStatJumper -->
+<div class="AdminPageFooterCommand">
+	Visualizza direttamente:
+		<a href='#SA1'>Andamento mensile senza i motori di ricerca</a>,
+		<a href='#SA2'>Andamento mensile compresi i motori di ricerca</a>,
+		<a href='#SA3'>Andamento giornaliero</a>,
+		<a href='#SA4'>Andamento per giorno della settimana</a>,
+		<a href='#SA5'>Andamento orario</a>.
+</div>
+<!-- END AccessStatJumper -->
+
+<!-- BEGIN MonthlyStatsNoBot -->
+    <h2>
+    	<a name='SA1'> Andamento mensile senza i motori di ricerca - Lingua: {lingua}</a>
+    	(<a href='#SEEXALL' title="Collegamento all'elenco dei motori di ricerca esclusi">*</a>)
+    </h2>
+	{MonthlyGraph}
+	{MonthlyTable}
+<div class='AdminPageFooterCommand'>
+	<a href='{excelHref}'>{ExcelIco}Andamento mensile senza i motori di ricerca - Lingua: {lingua} - Formato Excel</a>
+</div>
+<div class='AdminPageFooterCommand'>
+	<a href='#TopStatPage'>Torna ad inizio Pagina</a>
+</div>
+<!-- END MonthlyStatsNoBot -->
+
+<!-- BEGIN MonthlyStatsWBot -->
+    <h2><a name='SA2'> Andamento mensile compresi i motori di ricerca - Lingua: {lingua}</a></h2>
+	{MonthlyTable}
+<div class='AdminPageFooterCommand'>
+	<a href='{excelHref}'>{ExcelIco}Andamento mensile compresi i motori di ricerca - Lingua: {lingua} - Formato Excel</a>
+</div>
+<div class='AdminPageFooterCommand'>
+	<a href='#TopStatPage'>Torna ad inizio Pagina</a>
+</div>
+<!-- END MonthlyStatsWBot -->
+
+
+<!-- BEGIN DailyStats -->
+    <h2>
+    	<a name='SA3'> Andamento giornaliero di {mese} {anno} - Lingua: {lingua}</a>
+    	(<a href='#SEEXALL' title="Collegamento all'elenco dei motori di ricerca esclusi">*</a>)
+    </h2>
+    {DailyGraph}
+	{DailyTable}
+<div class='AdminPageFooterCommand'>
+	<a href='{excelHrefS}'>{ExcelIco}Andamento giornaliero senza i motori di ricerca di {mese} {anno} - Lingua: {lingua} - Formato Excel</a> <br />
+	<a href='{excelHrefC}'>{ExcelIco}Andamento giornaliero compresi i motori di ricerca di {mese} {anno} - Lingua: {lingua} - Formato Excel</a> <br />
+</div>
+<div class='AdminPageFooterCommand'>
+	<a href='#TopStatPage'>Torna ad inizio Pagina</a>
+</div>
+<!-- END DailyStats -->
+
+<!-- BEGIN WeeklyStats -->
+    <h2>
+    	<a name='SA4'> Andamento per giorno della settimana di {mese} {anno} - Lingua: {lingua}</a>
+    	(<a href='#SEEXALL' title="Collegamento all'elenco dei motori di ricerca esclusi">*</a>)</h2>
+	{WeeklyGraph}
+	{WeeklyTable}
+<div class='AdminPageFooterCommand'>
+	<a href='{excelHref}'>{ExcelIco}Andamento per giorno della settimana di {mese} {anno} - Lingua: {lingua} - Formato Excel</a>
+</div>
+<div class='AdminPageFooterCommand'>
+	<a href='#TopStatPage'>Torna ad inizio Pagina</a>
+</div>
+<!-- END WeeklyStats -->
+
+<!-- BEGIN HourlyStats -->
+    <h2>
+    	<a name='SA5'> Andamento orario di {mese} {anno} - Lingua: {lingua}</a>
+    	(<a href='#SEEXALL' title="Collegamento all'elenco dei motori di ricerca esclusi">*</a>)
+    </h2>
+	{HourlyGraph}
+	{HourlyTable}
+<div class='AdminPageFooterCommand'>
+	<a href='{excelHref}'>{ExcelIco}Andamento orario di {mese} {anno} - Lingua: {lingua} - Formato Excel</a>
+</div>
+<div class='AdminPageFooterCommand'>
+	<a href='#TopStatPage'>Torna ad inizio Pagina</a>
+</div>
+<!-- END HourlyStats -->
+
+
+<!-- BEGIN Pages -->
+    <h2>
+    	Pagine pi&ugrave; viste di {mese} {anno} - Lingua: {lingua}</a>
+    	(<a href='#SEEXALL' title="Collegamento all'elenco dei motori di ricerca esclusi">*</a>)
+    </h2>
+	{PagesTable}
+<div class='AdminPageFooterCommand'>
+	<a href='#TopStatPage'>Torna ad inizio Pagina</a>
+</div>
+<!-- END Pages -->
+
+
+<!-- BEGIN RefererStatJumper -->
+<div class="AdminPageFooterCommand">
+	Visualizza direttamente:
+		<a href='#R1'>Analisi dei tipi di accesso</a>,
+		{SEJump}
+		<a href='#R{Num}'>Altre pagine di provenienza</a>.
+</div>
+<!-- END RefererStatJumper -->
+
+<!-- BEGIN Referers -->
+    <h2><a name='R1'>Analisi dei tipi di accesso al sito di {mese} {anno} - Lingua: {lingua}</a></h2>
+	{ReferersTable}
+<div class='AdminPageFooterCommand'>
+	<a href='#TopStatPage'>Torna ad inizio Pagina</a>
+</div>
+<!-- END Referers -->
+
+<!-- BEGIN RefererSEDetail -->
+    <h2><a name='R{Num}'>Principali parole chiave di provenienza da {Motore} di {mese} {anno} - Lingua: {lingua}</a></h2>
+	{SETable}
+<div class='AdminPageFooterCommand'>
+	<a href='#TopStatPage'>Torna ad inizio Pagina</a>
+</div>
+<!-- END RefererSEDetail -->
+
+<!-- BEGIN RefererOtherDetail -->
+    <h2><a name='R{Num}'>Altre pagine di provenienza di {mese} {anno} - Lingua: {lingua}</a></h2>
+	{SETable}
+<div class='AdminPageFooterCommand'>
+	<a href='#TopStatPage'>Torna ad inizio Pagina</a>
+</div>
+<!-- END RefererOtherDetail -->
+
+
+
+<!-- BEGIN BehaviourStatJumper -->
+<div class="AdminPageFooterCommand">
+	Visualizza direttamente:
+		<a href='#SB1'>Distribuzione pagine viste per visita</a>,
+		<a href='#SB2'>Distribuzione tempo di permanenza per visita</a>.
+</div>
+<!-- END BehaviourStatJumper -->
+
+<!-- BEGIN BehaviourPageStats -->
+    <h2>
+    	<a name='SA1'> Distribuzione pagine viste per visita di {mese} {anno} - Lingua: {lingua} - esclusi i motori di ricerca</a>
+    	(<a href='#SEEXONE' title="Collegamento all'elenco dei motori di ricerca esclusi">*</a>)
+    </h2>
+	{BehaviourPageTable}
+<div class='AdminPageFooterCommand'>
+	<a href='#TopStatPage'>Torna ad inizio Pagina</a>
+</div>
+<!-- END BehaviourPageStats -->
+
+
+<!-- BEGIN BehaviourTimeStats -->
+    <h2>
+    	<a name='SA1'> Distribuzione tempo di permanenza per visita di {mese} {anno} - Lingua: {lingua} - esclusi i motori di ricerca</a>
+    	(<a href='#SEEXONE' title="Collegamento all'elenco dei motori di ricerca esclusi">*</a>)
+    </h2>
+	{BehaviourTimeTable}
+<div class='AdminPageFooterCommand'>
+	<a href='#TopStatPage'>Torna ad inizio Pagina</a>
+</div>
+<!-- END BehaviourTimeStats -->
+
+<!-- BEGIN ClassSummaryStats -->
+    <h2>
+    	<a name='SG1'> Visite di {mese} {anno} raggruppate per classificazione - Lingua: {lingua}</a>
+    	(<a href='#SEEXALL' title="Collegamento all'elenco dei motori di ricerca esclusi">*</a>)
+    </h2>
+	{SummaryTable}
+<div class='AdminPageFooterCommand'>
+	<a href='{excelHref}'>{ExcelIco} Visite di {mese} {anno} raggruppate per classificazione - Lingua: {lingua} - Formato Excel</a>
+</div>
+<div class='AdminPageFooterCommand'>
+	<a href='#TopStatPage'>Torna ad inizio Pagina</a>
+</div>
+<!-- END ClassSummaryStats -->
+
+
+
+<!-- BEGIN ClassDetailStats -->
+    <h2>
+    	<a name='SCD{IDC}'> Pagine pi&ugrave; viste di {mese} {anno} - {classificazione} - Lingua: {lingua}</a>
+    	(<a href='#SEEXALL' title="Collegamento all'elenco dei motori di ricerca esclusi">*</a>)
+    </h2>
+	{PagesTable}
+<div class='AdminPageFooterCommand'>
+	<a href='{excelHref}'>{ExcelIco} Pagine pi&ugrave; viste di {mese} {anno} - {classificazione} -  Lingua: {lingua} - Formato Excel</a>
+</div>
+<div class='AdminPageFooterCommand'>
+	<a href='#TopStatPage'>Torna ad inizio Pagina</a>
+</div>
+<!-- END ClassDetailStats -->
+
+
+<!-- BEGIN ClassStatsEmpty -->
+<div class='AdminPageFooterCommand'>
+	<strong> Configurazione non impostata. </strong>
+	<br /> Nella configurazione della classificazione del sito, manca la configurazione relativa agli assi da utilizzare nelle statistiche (statclassificator).
+</div>
+<!-- END ClassStatsEmpty -->
+
+
+<!-- BEGIN SEExludedAll -->
+	<h2><a name='SEEXALL'>(*) Elenco dei motori di ricerca esclusi</a></h2>
+	{SEExludedAllTable}
+<div class='AdminPageFooterCommand'>
+	<a href='#TopStatPage'>Torna ad inizio Pagina</a>
+</div>
+<!-- END SEExludedAll -->
+
+
+<!-- BEGIN SEExludedOne -->
+	<h2><a name='SEEXONE'>(*) Elenco dei motori di ricerca esclusi di {mese} {anno}</a></h2>
+	{SEExludedOneTable}
+<div class='AdminPageFooterCommand'>
+	<a href='#TopStatPage'>Torna ad inizio Pagina</a>
+</div>
+<!-- END SEExludedOne -->
+
+<!-- BEGIN UAStats -->
+    <h2> Elenco dei principali sistemi di navigazione {mese} {anno} - Lingua: {lingua}  </h2>
+	{UATable}
+<div class='AdminPageFooterCommand'>
+	<a href='#TopStatPage'>Torna ad inizio Pagina</a>
+</div>
+<!-- END UAStats -->
+
+<!-- BEGIN UAStatsEmpty -->
+<div class='AdminPageFooterStatus'>
+	<strong> Nessun Sistema di Navigazione rilevato. </strong>
+	<br /> Le informazioni relative ai Sistemi di Navigazione vengono registrate da {KFFNAME} solo dopo gli aggiornamenti di Febbraio 2007.
+</div>
+<!-- END UAStatsEmpty -->
+
+
+<!-- BEGIN IPStats -->
+    <h2> Elenco dei principali indirizzi IP di provenienza {mese} {anno} - Lingua: {lingua}  </h2>
+	{IPTable}
+<div class='AdminPageFooterStatus'>
+	Dal Febbraio 2007 le esclusioni dei motori di ricerca avvengono solamente in base alla stringa di riconoscimento del sistema di navigazione (user agent). Dopo tale data tutti gli IP risultano non esclusi: sono escluse le richieste provenienti da quegli IP se lo user agent che ha effettuato la richiesta rientra tra le stringhe di esclusione dei motori di ricerca.
+	 
+</div>	
+<div class='AdminPageFooterCommand'>
+	<a href='#TopStatPage'>Torna ad inizio Pagina</a>
+</div>
+<!-- END IPStats -->
+
+

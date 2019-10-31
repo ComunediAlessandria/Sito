@@ -1,0 +1,58 @@
+<div id="AdminCorpoBox">
+	<h1>Scheda Forum</h1>
+	{ERR}
+	<form id="AdminFormBO" method="post" action="{ACTION}">
+		<div class="AdminFormBORowEven">
+			<label class="AdminFormBOLabel" for='{TAG_Nome}'>{LBL_Nome}</label>
+			<div class="AdminFormBOField">{VAL_Nome}</div>
+		</div>
+		<div class="AdminFormBORowOdd">
+			<fieldset class="AdminFormBOFieldset">
+				<legend class="AdminFormBOFieldsetLegend">{LBL_Moderato}</legend>
+				<div>{VAL_Moderato}</div>
+			</fieldset>
+		</div>
+
+		<div class="AdminFormBORowEven">
+			<label class="AdminFormBOLabel" for='{TAG_IDOwnerGroup}'>{LBL_IDOwnerGroup}</label>
+			<div class="AdminFormBOField">{VAL_IDOwnerGroup}</div>
+		</div>
+
+		<div class="AdminFormBORowOdd">
+			<label class="AdminFormBOLabel" for='{TAG_IDCommunity}'>{LBL_IDCommunity}</label>
+			<div class="AdminFormBOField">{VAL_IDCommunity}</div>
+		</div>
+
+		<div class="AdminFormBORowEven">
+			<label class="AdminFormBOLabel" for='{TAG_ViewStyle}'>{LBL_ViewStyle}</label>
+			<div class="AdminFormBOField">{VAL_ViewStyle}</div>
+		</div>
+
+		<div class="AdminFormBORowOdd">
+			<label class="AdminFormBOLabel" for='{TAG_TopicPP}'>{LBL_TopicPP}</label>
+			<div class="AdminFormBOField">{VAL_TopicPP}</div>
+		</div>
+		<div class="AdminFormBORowEven">
+			<label class="AdminFormBOLabel" for='{TAG_MsgPP}'>{LBL_MsgPP}</label>
+			<div class="AdminFormBOField">{VAL_MsgPP}</div>
+		</div>
+		<div class="AdminFormBORowOdd">
+			<label class="AdminFormBOLabel" for='{TAG_TemplateShow}'>{LBL_TemplateShow}</label>
+			<div class="AdminFormBOField">{VAL_TemplateShow}</div>
+		</div>
+		<div class="AdminFormBORowEven">
+			<label class="AdminFormBOLabel" for='{TAG_TemplateCompose}'>{LBL_TemplateCompose}</label>
+			<div class="AdminFormBOField">{VAL_TemplateCompose}</div>
+		</div>
+
+		<div class="AdminFormBORowOdd">
+			<label class="AdminFormBOLabel" for='{TAG_sort}'>{LBL_sort}</label>
+			<div class="AdminFormBOField">{VAL_sort}</div>
+		</div>
+
+		<div class="AdminPageFooterCommand">
+			{HIDDEN} <input name="Submit" type="submit" value="Salva le modifiche" />
+			<input name="btnCancel" type="submit" value="Annulla le modifiche" />
+		</div>
+	</form>
+</div>

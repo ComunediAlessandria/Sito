@@ -1,0 +1,861 @@
+
+
+.viewUL .viewLI {
+    @extend %Par;
+    margin-bottom: 10px;
+}
+
+ol, ul {
+    margin:0;
+    padding: 0;
+}
+
+
+
+
+
+.BLOBAlignLeft {
+  text-align: left;
+  position: relative;
+}
+
+.BLOBAlignCenter { text-align: center; }
+.BLOBAlignRight { text-align: right; }
+.BLOBAlignJustify { text-align:justify; }
+
+.BLOBBlockAlignCenter { text-align: center; }
+.BLOBBlockAlignCenter div {margin: 0 auto;}
+.BLOBBlockAlignRight { float: right;}
+.BLOBBlockAlignLeft { float:left;}
+
+.BLOBBlockAlignCenter dl {
+  margin: 0 auto 20px;
+}
+
+ul.BLOBListSymbolDisc { list-style-type: disc;}
+ul.BLOBListSymbolCircle { list-style-type: circle;}
+ul.BLOBListSymbolSquare { list-style-type: square;}
+ol.BLOBListSymbolDecimal { list-style-type: decimal;}
+ol.BLOBListSymbolLowerLetter { list-style-type: lower-alpha;}
+ol.BLOBListSymbolUpperLetter { list-style-type: upper-alpha;}
+ul.BLOBListSymbolNone { list-style-type: none;}
+ul.viewUL li.viewLI { display: list-item; }
+
+.BLOBFloatClear { clear: both; }
+.BLOBFloatLeft { float: left; position: relative; }
+.BLOBFloatRight { float: right; }
+.BLOBMarginLeft {
+ padding-left: 10px;
+}
+
+.BLOBMarginRight {
+ padding-right: 10px;
+}
+
+.BLOBIMGSpacerLeft { padding-left: 10px;}
+.BLOBIMGSpacerRight { padding-right: 10px;}
+
+.BLOBVAlignMiddle {
+ vertical-align: middle;
+}
+
+.BLOBVAlignTop {
+ vertical-align: top;
+}
+
+.BLOBVAlignBottom {
+ vertical-align: bottom;
+}
+
+
+.BLOBWidth100 {width: 100%;}
+.BLOBWidth50 {width: 49%;}
+
+/* usato per affiancare orrizontalmente n oggetti */
+.BLOBWidthN1 {float: left; width: 99%;}
+.BLOBWidthN2 {float: left; width: 49.5%;}
+.BLOBWidthN3 {float: left; width: 33%;}
+.BLOBWidthN4 {float: left; width: 24.7%;}
+.BLOBWidthN5 {float: left; width: 19.8%;}
+.BLOBWidthN6 {float: left; width: 16.5%;}
+.BLOBWidthN7 {float: left; width: 14.1%;}
+.BLOBWidthN8 {float: left; width: 12.3%;}
+.BLOBWidthN9 {float: left; width: 11.0%;}
+.BLOBWidthN10 {float: left; width: 9.9%;}
+.BLOBWidthN11 {float: left; width: 9.0%;}
+.BLOBWidthN12 {float: left; width: 8.2%;}
+.BLOBWidthN13 {float: left; width: 7.6%;}
+.BLOBWidthN14 {float: left; width: 7.0%;}
+.BLOBWidthN15 {float: left; width: 6.6%;}
+
+/* usato per la dimensione delle celle delle tabelle */
+.BLOBWidthTDN1 {width: 99%;}
+.BLOBWidthTDN2 {width: 49.5%;}
+.BLOBWidthTDN3 {width: 33%;}
+.BLOBWidthTDN4 {width: 24.7%;}
+.BLOBWidthTDN5 {width: 19.8%;}
+.BLOBWidthTDN6 {width: 16.5%;}
+.BLOBWidthTDN7 {width: 14.1%;}
+.BLOBWidthTDN8 {width: 12.3%;}
+.BLOBWidthTDN9 {width: 11.0%;}
+.BLOBWidthTDN10 {width: 9.9%;}
+.BLOBWidthTDN11 {width: 9.0%;}
+.BLOBWidthTDN12 {width: 8.2%;}
+.BLOBWidthTDN13 {width: 7.6%;}
+.BLOBWidthTDN14 {width: 7.0%;}
+.BLOBWidthTDN15 {width: 6.6%;}
+
+
+
+
+.BLOBWidthEmpty {}
+
+.BLOBRow1px {
+  font-size: .05em;
+  height: 1px;
+}
+
+.BLOBHidden{
+  visibility:hidden;
+  position: absolute;
+  top: -1000em;
+  font-size: .1em;
+}
+
+.FlexCMPError {
+  position: relative;
+  margin: 2em 0 2em 0;
+  padding: .5em;
+  font-family:Verdana, Arial, Helvetica, sans-serif;
+  font-size: .9em;
+  font-weight:bold;
+  color: #000000;
+  background-color:#FFFF66;
+  border: 2px solid #FF0000;
+}
+
+.errList{
+  margin: 1em auto;
+  max-width: 600px;
+  padding: .5em;
+  font-family:Verdana, Arial, Helvetica, sans-serif;
+  font-size: .9em;
+  font-weight:bold;
+  color: #000000;
+  background-color:#f2dede;
+  border: 1px solid #ebccd1;
+  list-style-type: none;
+  border-radius: 4px;
+}
+
+.nowrap {
+ white-space:nowrap;
+}
+
+/* Bordo del campo bloboject che diventa rosso se lasci vuoto un campo obbligatori */
+.fldBox {border: 1px solid black;}
+.fldErr {border: 1px solid red;  }
+
+
+// FINE VECCHIO FILE ADMIN.CSS
+
+
+// 2 COL con i flex box, da sistemare e attivare sui siti 
+
+
+/*
+.BLOBWidth100 {
+  @include flexBox(row nowrap);
+  .BLOBFloatClear {
+    @include flexItem(0 1 100%);
+  }
+  .BLOBFloatLeft, .BLOBFloatRight {
+    @include flexItem(0 1 50%);
+    float: none;
+    padding: 0;
+    &.BLOBMarginLeft {
+      & + div {
+        @include flexItem(1 1 auto);
+        margin: 0 !important;
+        order: -1;
+        padding-right: 20px;
+      }
+    }
+    &.BLOBMarginRight {
+      & + div {
+        @include flexItem(1 1 auto);
+        margin: 0 !important;
+        order: 0;
+        padding-left: 20px;
+      }
+    }
+    &.BLOBWidth50 {
+      width: 50%;
+    }
+  }
+  .BLOBFloatLeft.BLOBWidth50 { padding-right: 10px; }
+  .BLOBFloatRight.BLOBWidth50 { padding-left: 10px; }
+}
+*/
+
+.BLOBFloatClear.BLOBWidth100 {
+  
+}
+/*
+.BLOBListSymbolCustom1 {
+  position: relative;
+  li {
+    position: relative;
+    display: block;
+    padding-left: 20px;
+    line-height: 25px;
+    font-size: 20px;
+    margin-bottom: 15px;
+    &:before {
+      content: "\f105";
+      font-family: 'font-awesome-solid';
+      color: #5079B8;
+      margin-right: 10px;
+      font-size: 26px;
+      top: 1px;
+      display: inline-block;
+      position: absolute;
+      left: 0;
+    }
+  }
+}
+*/
+
+/* ADMINLINK */
+.adminlinks {
+  background-color: $Admin-bg; 
+  position: relative;
+  z-index: 90;
+  font-family: Arial,sans-serif;
+  text-align: center;    
+  font-size: 16px;
+  line-height: 22px;
+  color: $Admin-txt;
+  .admin-logged-panel, .admin-backoffice-link, .admin-logged-panel, p {
+    font-family: Arial,sans-serif;
+    display: block;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    font-size: 15px;
+    line-height: 15px;
+    color: $Admin-txt;
+  }
+  .admin-logged-panel { margin-top: 30px; }
+  .adminPanelPageInfoItemTitle { font-weight: bold; margin-top: 20px; }
+  .adminPanelPageInfoLower { margin-bottom: 20px; }
+  .adminPanelPageInfoLower + p { font-weight: bold; margin-bottom: 10px; color: $Admin-txt; }
+  a {
+    display:block;
+    margin: 5px auto;
+    padding: 5px 25px;
+    background-color:$Admin-btn-bg;
+    border: 2px solid darken( $Admin-btn-bg, 10% );
+    color: $Admin-btn-txt;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight:bold;
+    text-decoration:none;
+    text-transform:uppercase;
+    cursor:pointer;    
+    max-width: 300px;   
+    @include transition(background-color 0.3s ease-in-out);
+    border-radius: 4px;
+    &:hover {
+      background-color: lighten( $Admin-btn-bg, 10% );
+      color: $Admin-btn-txt;
+    }
+  }
+}
+
+
+/* Begin Stili di reset */
+.GoAway{ position:absolute; top:-10000px; left:-10000px; }
+
+img { max-width:100%; height: auto; }
+a:hover, a:focus, a:active { text-decoration: none; outline: none; }
+
+.BLOBAlignCenter.viewPar { text-align: center; }
+
+
+
+
+input:-webkit-autofill { /* Rimuove il colore giallo dell'autocomplete di chrome negli input */
+    -webkit-box-shadow: 0 0 0 30px #e5e5e5 inset !important;
+    border: 1px solid #e5e5e5 !important;
+    -webkit-text-fill-color: black !important;
+}
+dl {
+  width: 100% !important;
+  & dd {
+    text-align: center;
+    font-style: italic;
+  }
+}
+
+/* End stili reset */
+
+
+
+.frame {
+  overflow: hidden;
+}
+.fx-lightbox {
+  box-sizing: content-box;
+}
+.viewCaption dd {
+  margin-top: 5px;
+  font-size: .75rem;
+  text-align: center;
+}
+
+
+.NoPadSx, .noPadSx  { padding-left: 0 !important; }
+.NoPadDx, .noPadDx { padding-right: 0 !important; }
+.NoPad, .noPad  { padding-left: 0 !important; padding-right: 0 !important; }
+
+.PadUpDown { padding: 50px 0; }
+.PadUp { padding: 50px 0 0 0; }
+.PadDown { padding: 0 0 50px 0; }
+.PadUpDownBig { padding: 100px 0; }
+
+.BLOBHidden { display: none; }
+.BoxFloatDx { display: block; float: right; margin: 0 0 30px 30px; }
+
+
+.formError, .formErrorList {
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #c00;
+}
+.errList {
+  padding-left: 0;
+  border: none;
+  background-color: $Trasp;
+    @extend %Font-1-Regular;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #c00;
+}
+.communityForm input[type='text'], .communityForm input[type='password'] {
+    font-size: .8rem;
+    height: auto;
+    margin-bottom: 15px;
+    padding: 7px 9px;
+  border-radius: 0;
+}
+.communityForm label {
+    font-size: 13px;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #555;
+}
+
+
+/* box login community */
+.form-signin {
+  max-width: 300px;
+  padding: 19px 29px 29px;
+  margin: 0 auto 20px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+          box-shadow: 0 1px 2px rgba(0,0,0,.05);
+  .form-signin-heading,
+  .checkbox { margin-bottom: 10px; }
+  input[type="text"],
+  input[type="password"] {
+    font-size: 16px;
+    height: auto;
+    margin-bottom: 15px;
+    padding: 7px 9px;
+  }
+}
+
+
+
+
+
+/* Stili Tabella */
+table.viewTable {
+  border-top: 2px solid $ProjectColor1 !important;
+  border-left: none !important;
+  margin: 20px 0;
+  & tr {
+    border-bottom: 2px solid $ProjectColor1 !important;
+    & th, & td {
+      border-right: none !important;
+      border-bottom: none !important;  
+      padding: 15px 10px !important;    
+    }
+    & th.viewTableHRTD  {
+      background-color: $ProjectColor1 !important;
+      & .viewTableHRCellText {
+        @extend %Font-1-Bold;
+        font-size: 20px;
+        line-height: 20px;
+        color: white;        
+      }
+    }
+    & th.viewTableHCTD {
+      & .viewTableHCCellText {
+        color: #000 !important;
+        font-weight: normal;
+      }
+    }
+    &.odd {
+      background-color: #f1f1f1; 
+    }
+    & a.viewLink.viewLinkIMG img { 
+      min-width: 30px;
+      opacity: 1;
+      @include transition(opacity 0.3s ease-in-out); 
+    }
+    & a.viewLink.viewLinkIMG:hover img { 
+      opacity: 0.8;
+    }
+  }
+  & .viewTableHCCellText {
+    @extend %Font-1-Bold;
+    font-size: 20px;
+    line-height: 20px;
+    color: white;
+  }
+  & .viewTableCellText {
+    @extend %Font-1-Regular;
+    font-size: 18px;
+    line-height: 22px;
+    color: black;
+  }
+  & tr td:first-child {
+    & .viewTableCellText {
+      text-align: left;
+    }
+  }
+  & th:first-child {
+    & .viewTableHRCellText {
+      text-align: left;
+    }
+  }  
+  & .userFormat3 {
+    color: #333;
+    font-style: italic;
+    font-size: 15px;
+  }
+}
+
+
+/* flex helper */
+.BLOBFloatRight.BLOBIMGSpacerLeft img, 
+.BLOBFloatLeft.BLOBIMGSpacerRight img {
+  position: relative;
+  z-index: 1;
+}
+.BLOBFloatLeft { 
+  float:left; 
+  position:relative; 
+
+}
+.BLOBFloatRight{ 
+  float:right; 
+  position:relative; 
+
+}
+.BLOBBlockAlignLeft, .BLOBBlockAlignRight { 
+  max-width: 100%;
+}
+.BLOBBlockAlignCenter { text-align:center; display: block; }
+.BLOBWidth50 { width:48%; }
+
+.BLOBIMGSpacerRight {
+    padding-right: 15px;
+}
+.BLOBIMGSpacerLeft {
+    padding-left: 15px;
+}
+.BLOBRow1px {
+  height: 1px;
+}
+.BLOBWidth100 { margin: 0 0 20px 0; }
+.viewGMap {
+  max-width: 100%;
+  clear:both;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.BLOBFloatClear {
+  position: relative;
+  height: 0px;
+}
+
+
+
+
+.viewLineBreak {
+  clear: both;
+}
+/* ---------- Calendario -------------- */
+
+.SearchRefine  {
+  dl {
+    dd {
+      text-align: left;
+
+    }
+  }
+  .SearchResultKeyword {
+    color: $ProjectColor1;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .goAway {
+    display: none;
+  }
+  .percentualeAttinenza { font-size: 14px; }
+}
+
+
+
+@media screen and (max-width: 500px) {
+  .BLOBWidth100 {
+    & .BLOBFloatLeft.BLOBMarginRight, & .BLOBFloatRight.BLOBMarginLeft {
+      width: 100% !important;
+      margin: 10px 0 !important;
+      float: none;
+      padding: 0;
+      & + div {
+        width: 100% !important;
+        margin: 10px 0 !important;
+        float: none;
+        padding: 0;
+      }
+    }
+    & .BLOBFloatLeft.BLOBWidth50, & .BLOBFloatRight.BLOBWidth50 {
+        width: 100% !important;
+        margin: 10px 0 !important;
+        float: none;
+        padding: 0;
+    }
+  }
+}
+
+/* gloci */
+.glociset .mapIconLabel {
+    position: absolute;
+    text-align: center;
+    z-index: 9999;
+  @extend %Font-1-Bold;
+  font-size: 20px;
+  line-height:20px;
+  color: white;
+}
+.glociset .viewGMap .gm-style-iw .Fumetto h3, 
+.glociset .viewGMap .gm-style-iw .Fumetto h3 a {
+  @extend %Font-1-SemiBold;
+  font-size: 24px;
+  line-height:26px;
+  padding:0;
+  margin:0 0 15px 0;
+  color: #333;
+  text-decoration: none;
+  text-align:left;
+  letter-spacing: -0.6px;
+}
+.Fumetto {
+  padding: 10px 0;
+  p {
+    @extend %Font-1-Regular;
+    font-size: 14px;
+    line-height:18px;
+    padding:0;
+    margin:0;
+    color: #333;
+    text-decoration: none;
+    letter-spacing: -0.4px;
+    text-align:left;
+    a {
+      display:inline-block;
+      @extend %Font-1-SemiBold;
+      font-size: 15px;
+      line-height: 15px;
+      padding:0;
+      margin:20px 0 0 0;
+      color: $ProjectColor1;
+      text-decoration: none;
+      text-align:left;
+      letter-spacing: -0.6px;
+      span {
+          border: 2px solid $ProjectColor1;
+          border-radius: 50%;
+          font-size: 12px;
+          margin-left: 7px;
+          padding: 3px;
+      }
+    }
+  }
+}
+
+
+.viewAnchorList {
+  margin: 30px 0;
+  li {
+    list-style: none;
+    position: relative;
+    display: block;
+    padding-left: 15px;
+    &:before {
+      content: ">";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 21px;
+      color: $ProjectColor1;
+      @extend %Font-1-SemiBold;
+      
+    }
+    a {
+      color: black;
+      &:hover {
+        color: $ProjectColor1;
+      }
+    }
+  }
+}
+
+.blob-element-download {
+  a {
+    text-decoration: none;
+    img {
+      margin-right: 10px;
+    }
+    .BLOBDownloadSize {
+      font-size: 18px;
+      margin-left: 5px;
+    }
+  }
+}
+
+form {
+  .form-input-text {
+    position: relative;
+    display: block;
+    .formTextLabel {
+      position: relative;
+      display: block;
+      top: 27px;
+      font-size: 18px;
+      line-height: 18px;
+      z-index: 1;
+      cursor: pointer;
+      @extend %Font-1-SemiBold;
+      @include transition(top 0.3s ease-in-out);
+    }
+    &.active .formTextLabel {
+        top: 15px;
+    }
+    .formText {
+      position: relative;
+      display: block;
+      border: none;
+      border-bottom: 1px solid #ccc;
+      outline: 0;
+      font-size: 17px;
+      line-height: 17px;
+      cursor: pointer;
+      &:active, &:hover, &:focus { outline: 0; }
+    }      
+    &.active .formText {
+      border-bottom: 1px solid $ProjectColor1;
+    }
+  }  
+  .form-input-area {
+      position: relative;
+      display: block;  
+      .formTextAreaLabel {
+        position: relative;
+        display: block;   
+        font-size: 18px;
+        line-height: 18px;
+        z-index: 1;
+        cursor: pointer;
+        @extend %Font-1-SemiBold;      
+      }
+      .formTextArea {
+        border: 1px solid #ccc;
+        display: block;
+        width: 100%;
+        margin-bottom: 30px;
+        font-size: 16px;
+        line-height: 20px;
+        padding: 10px 15px;
+        @include transition(border .3s ease-in-out);
+        &:focus, &:active {
+          border-bottom: 1px solid $ProjectColor1;
+          outline: 0;
+        }
+      }
+  }
+}
+
+.SearchRefine {
+  ul {
+    li {
+      display: inline-block;
+      list-style: none;
+      border: 1px solid darken(#37A6DE, 20%);
+      margin-left: -1px;
+      position: relative;
+      a, strong {
+        padding: 5px 20px;
+        background-color: #37A6DE;
+        color: #fff;
+        display: block;
+        position: relative;
+        font-size: 16px;
+        text-transform: uppercase;
+        @extend %Font-1-SemiBold;
+        @extend %TrBgColor;
+      }
+      a:hover, strong {
+        color: #37A6DE;
+        background-color: #fff;
+        
+      }
+    }
+    & + p.viewPar a {
+      display: block;
+      position: relative;
+      color: white;
+      border: 2px solid #7E2172;
+      background-color: #7E2172;
+      padding: 10px 25px;
+      margin: 50px 0 10px;
+      width: 300px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+  dl {
+    dt {
+      a {
+        color: #7E2172;
+        @extend %TrColor;
+        &:hover {
+          color: $ProjectColor1;
+        }
+      }
+    }
+    dd {
+      text-align: left;
+      font-size: 17px;
+      margin: 0;
+      span {
+        
+      }
+      p {
+        
+      }
+      .percentualeAttinenza {
+        font-size: 14px;
+        display: block;
+        border-bottom: 1px solid #f1f1f1;
+        padding-bottom: 20px;
+        margin-bottom: 20px;        
+      }
+      em {
+        display: none;
+        strong {
+          
+        }
+      }
+    }
+  }
+}
+.wrap-search-advanced {
+  input[type="text"] {
+    border: 1px solid #ccc;
+    display: block;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    padding: 5px 10px;
+    font-size: 17px;
+    width: 300px;
+  }
+  input[type="checkbox"] {
+    margin-right: 7px;
+    cursor: pointer;
+  }
+  .ClassificationFormBlock {
+    ol {
+      li {
+        list-style: none;
+      }
+    }
+  }
+  .AdminPageFooterCommandButton {
+    @extend %Font-1-Bold;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 23px 53px;
+    text-transform: uppercase;    
+    @include transition(color 0.3s ease-in-out, background-color 0.3s ease-in-out, border 0.3s ease-in-out);
+    color: white;
+    border: 2px solid #ccc;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    &:hover {
+        color: white;
+        border: 2px solid $ProjectColor1;
+        background-color: lighten($ProjectColor1, 10%);            
+    }
+  }
+}
+.goAway { display: none; }
+
+.viewIndexSlice {
+  display: block;
+  border-top: 1px solid $BgGrey;
+  border-bottom: 1px solid $BgGrey;
+  margin: 20px 0;
+  padding: 20px;
+  ol {
+    list-style: none;
+    position: relative;
+    li {
+      position: relative;
+      display: block;
+      margin: 10px 0;
+      a {
+        position: relative;
+        padding-left: 15px;
+        color: black;
+        @include transition(text-decoration .3s ease-in-out);
+        &:hover {
+          text-decoration: underline;
+        }
+        &:before {
+        content:" ";
+        height: 6px;
+        width: 6px;
+        display: inline-block;
+        margin: 0 10px 0 -17px;
+        border-radius:50%;
+        background-color: black;
+        vertical-align: middle;
+        position:relative;
+      }
+      }
+    }
+  }
+}

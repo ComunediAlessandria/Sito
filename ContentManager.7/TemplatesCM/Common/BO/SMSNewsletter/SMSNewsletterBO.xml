@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='iso-8859-1' ?>
+<bo id='SMSNewsletter'>
+	<table name='SMSNL' />
+	<key name='IDSMSNL' />
+
+	<field name='Name'			type='varchar'		len='200'		default='' />
+	<field name='Description'		type='text'		default='' />
+	<field name='SenderName'		type='varchar'		len='250'		default='' />
+	<field name='IDOwner'			type='int' 		default='0' />
+	<field name='Source'			type='varchar'		len='255'		default='' />
+
+	<join kind='N:1' name='jOwnerGroup' srcField='IDOwner' dstTable='Gruppi' dstField='IDGruppo' />
+	
+</bo>

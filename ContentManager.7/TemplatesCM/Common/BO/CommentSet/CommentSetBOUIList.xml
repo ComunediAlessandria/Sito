@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='iso-8859-1' ?>
+<uilist id='commentset'>
+	<page
+		title='Impostazioni commenti'
+		permission='COMS'
+	/>
+
+	<presenter
+		type='Template'
+		filename='CommentSet/tCommentSetList.html'
+	/>
+
+	<options>
+		<option name='modlink' label='MODIFICA %s' element='Titolo' />
+		<option name='dellink' label='CANCELLA %s' element='Titolo' />
+	</options>
+
+	<elements>
+		<element	id='Titolo'		bo='title'	label='Titolo'		/>
+		<element	id='GruppoAmministratori'	bo='IDAdministrator'		label='Gruppo Amministratori'	transform='tAmministratori' />
+		<element	id='RichiestaApprovazione'	bo='cShouldApprove'		label='RichiestaApprovazione'	transform='tSiNo' />
+		<element	id='hasCaptcha'				bo='hasCaptcha'			label='HasCaptcha'	transform='tSiNo' />		
+		<element	id='canInsert'		bo='canInsert'	label='Inserimento'			transform='tCommunity'	/>
+		<element	id='canView'		bo='canView'	label='Visualizzazione'		transform='tCommunity'	/>
+		<element	id='disabled'		bo='disabled'	label='Stato'		transform='tDisabled'	/>
+	</elements>
+
+	<transform id='tSiNo' type='map' from='0;1' to="No;Si'" />
+	<transform id='tDisabled' type='map' from='0;1' to="Abilitato;Disabilitato" />
+
+	<transform id='tAmministratori' type='php'>
+		<![CDATA[
+
+				// ricava il nome del Gruppo
+
+			$gruppo = GetFieldFromTable('DescrizioneIT' , 'Gruppi' , 'IDGruppo=' . $value);
+			return ($gruppo != '' ? $gruppo : '-');
+		]]>
+	</transform>
+
+	<transform id='tCommunity' type='php'>
+		<![CDATA[
+
+			if ($value > 0)
+				return GetFieldFromTable('Description' , 'Community' , 'IDCommunity=' . $value);
+			else
+				return $value == 0 ? '*Non abilitato' : '*Nessuna limitazione';
+
+		]]>
+	</transform>	
+	
+</uilist>

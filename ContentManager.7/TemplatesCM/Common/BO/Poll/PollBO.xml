@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='iso-8859-1' ?>
+<bo id='poll'>
+	<table name='Poll' />
+	<key name='IDPoll' />
+
+	<_field name='IDPoll'			type='int'						default='999' />
+	<field name='Titolo'			type='text'						default='' />
+	<field name='Testo'			type='text'						default='' />
+	<field name='Risposte'			type='text'						default='' />
+</bo>

@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='iso-8859-1' ?>
+<ui id='forum'>
+
+	<page
+		title='__(bo-forum.formtitle)'
+		permission='FOR'
+	/>
+
+	<presenter
+		type='Template'
+		filename='Forum/tForumEdit.html'
+		_action='http://...'
+	/>
+
+
+
+	<elements>
+		<element	id='Nome'			bo='DescrizioneIT'			type='text'		size='40'			maxlen='250'	label='__(bo-forum.forumname)' />
+		<element	id='Moderato'		bo='Moderato'				type='radio'	valueset='YesNo'					label='__(.moderated)'/>
+		<element	id='IDOwnerGroup'	BO='IDOwnerGroup'			type='select'	valueset='Gruppi'					label='__(.modgr)' />
+		<element	id='IDCommunity'	BO='IDCommunity'			type='select'	valueset='Community'				label='__(.limtocom)' />
+		<element	id='ViewStyle'		BO='ViewStyle'				type='select'	valueset='VSViewStyle'				label="__(.display)" />
+		
+		<element	id='TopicPP'		bo='TopicPP'				type='text'		size='3'			maxlen='2'	label='__(.tpp)' />
+		<element	id='MsgPP'			bo='MsgPP'					type='text'		size='3'			maxlen='2'	label='__(.mpp)' />
+		
+		<element	id='TemplateShow'		BO='TemplateShow'		type='select'	valueset='VSTemplate'		label='__(.stpl)' />
+		<element	id='TemplateCompose'	BO='TemplateCompose'	type='select'	valueset='VSTemplate'		label='__(.itpl)' />
+		<element	id='sort'	BO='sort'	type='select'	valueset='VSSort'		label='__(.order)' />
+	</elements>
+
+
+	<validations>
+		<validation id='Nome'			type='mandatory'		forfield='Nome' />
+		<validation id='NumericTopic'	type='numeric'			forfield='TopicPP' />
+		<validation id='NumericMsg'		type='numeric'			forfield='MsgPP' />
+		<validation id='vMod' type='php'>
+			<![CDATA[
+				
+					// verifica che ci sia coerenza fra l'impostazione di gruppo moderato
+					// e la presenza o meno di un gruppo moderatore
+					// e che il gruppo scelto come principale sia uno dei
+					// gruppi cui l'utente è iscritto
+
+					// in $pars
+					
+				$ok = TRUE; $message = '';
+
+				$isModerated = $pars['ELEMENTS']['Moderato']->GetValue();
+				$modGroup = $pars['ELEMENTS']['IDOwnerGroup']->GetValue();
+
+				if ($isModerated && $modGroup == -1) {
+
+					$pars['ELEMENTS']['Moderato']->SetError(TRUE);
+					$pars['ELEMENTS']['IDOwnerGroup']->SetError(TRUE);
+
+					$message = __('bo-forum.errmodgr');
+					$ok = FALSE;
+
+				} else if (! $isModerated && $modGroup != -1) {
+
+					$pars['ELEMENTS'][ 'Moderato' ]->SetError(TRUE);
+					$pars['ELEMENTS'][ 'IDOwnerGroup' ]->SetError(TRUE);
+
+					$message = __('bo-forum.errmodnogr');
+					$ok = FALSE;
+				}
+
+				return array($ok, $message);
+			]]>
+		</validation>
+	</validations>
+
+	<valueset id='YesNo' kind='boolean' />
+	<valueset
+		id='VSTemplate'
+		kind='FILE'
+		path='{K:kSiteTemplatePath}'
+		filter='(.*)\.html'
+		allownull='no'
+	/>
+
+	<valueset id='VSViewStyle'>
+		<value id='0' text='__(bo-forum.tree)' />
+		<value id='1' text='__(bo-forum.linear)' />
+	</valueset>
+
+	<valueset id='VSSort'>
+		<value id='0' text='__(bo-forum.chrono)' />
+		<value id='1' text='__(bo-forum.chronodesc)' />
+	</valueset>
+
+	<valueset id='Gruppi' kind='DISTINCT' table='Gruppi' colid='IDGruppo' column='DescrizioneIT' allownull='yes' />
+	<valueset id='Community' kind='DISTINCT' table='Community' colid='IDCommunity' column='Description' allownull='yes' />
+
+	<!-- UI per la cancellazione - per adesso qui, domani in un file XML separato -->
+	
+	<delete
+	
+		template='Forum/tForumDelAsk.html'
+	/>
+</ui>

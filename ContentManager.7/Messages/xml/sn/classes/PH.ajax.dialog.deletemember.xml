@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="lang" defaultlang="IT">
+  <group id="snPHAjaxDialogDeleteMember" define="false">
+    <message id="title"
+		lang:it="Elimina Utente dal Gruppo"
+		lang:en="Remove User from Group"
+		lang:fr="Supprimer l'utilisateur du groupe"
+		lang:de="Benutzer aus Gruppe entfernen"
+		lang:es="Quitar a los usuarios del grupo"
+		lang:ru="Удалить пользователя из группы"
+	/>
+    <message id="content"
+		lang:it="Sei sicuro di voler eliminare %s dal Gruppo?"
+		lang:en="Are you sure you want to remove %s from the Group?"
+		lang:fr="Etes-vous sûr de vouloir supprimer %s du groupe?"
+		lang:de="Sind Sie sicher, dass Sie %s aus der Gruppe zu entfernen?"
+		lang:es="¿Está seguro de que desea eliminar %s del Grupo?"
+		lang:ru="Вы уверены, что хотите удалить %s из этой группы?"
+	/>
+    <message id="ok"
+		lang:it="Elimina"
+		lang:en="Remove"
+		lang:fr="Supprimer"
+		lang:de="Entfernen"
+		lang:es="Quitar"
+		lang:ru="Удалить"
+	/>
+    <message id="cancel"
+		lang:it="Annulla"
+		lang:en="Cancel"
+		lang:fr="Annuler"
+		lang:de="Abbrechen"
+		lang:es="Cancelar"
+		lang:ru="Отмена"
+	/>
+  </group>
+</messages>

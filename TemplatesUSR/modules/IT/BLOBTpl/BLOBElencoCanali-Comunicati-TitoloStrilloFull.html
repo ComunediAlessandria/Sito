@@ -1,0 +1,63 @@
+<!-- BEGIN beginlist -->
+<!-- Elenco - in sola modalità "calendario" - delle pagine della categoria "{CANALE}" -->
+<div class="comunicati">
+	<div class="row">
+		
+	<!-- END beginlist -->
+
+	<!-- BEGIN row -->
+	<div class="col-xs-12">
+		<a href='{LINK}' class="hvr-overline-from-left" >
+			<div class="itemComunicati2">	
+			   <div class="barra"></div><br />
+			   <div class="testoN">
+						<h3>{TITOLO}</h3><br />
+						{STRILLO}
+				</div>	
+			</div>
+	    </a>
+	</div>
+	<!-- END row -->
+	<!-- BEGIN endlist -->
+
+
+	</div>
+</div>
+<div class="clear">&nbsp;</div>
+<!-- END endlist -->
+
+
+{INDEX}
+
+<!-- BEGIN index -->
+<div id="ChannelPager" class="viewPar">
+	{SELECTION}
+	{PGYEAR}
+	{PGMONTH}
+	{PGDAY}
+	{PGCALENDAR}
+	{PGPAGINATOR}
+	<div id="ChannelClear">&nbsp;</div>
+</div>
+<!-- END index -->
+
+<!-- BEGIN selection -->
+{PAGINATOR} 
+	<!--<div id="ChannelSelection">Selezione corrente: <strong>{CANALE} {SELDAY} {SELMONTH} {SELYEAR} </strong></div>-->
+<!-- END selection -->
+
+<!-- BEGIN pgYear -->
+<div id="ChannelYearList"><div id="ChannelYearLabel">Seleziona anno:</div> {YEARS}</div>
+<!-- END pgYear -->
+
+<!-- BEGIN pgMonth -->
+	<div id="ChannelMonthList"><div id="ChannelMonthLabel">Seleziona mese:</div> {MONTHS}</div>
+<!-- END pgMonth -->
+
+<!-- BEGIN pgDay -->
+	<div id="ChannelDayList"><div id="ChannelDayLabel">Seleziona giorno:</div> {DAYS}</div>
+<!-- END pgDay -->
+
+<!-- BEGIN pgCalendar -->
+	<div>{CALENDAR}</div>
+<!-- END pgCalendar -->

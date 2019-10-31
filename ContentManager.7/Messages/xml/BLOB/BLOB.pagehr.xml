@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="it">
+	<group id="bpagehr" define="false">
+		<message id="lds" lang:it="Linea di separazione" lang:en="Horizontal Rule" lang:es="Linea de separacion"/>
+		<message id="larghezza" lang:it="Larghezza" lang:en="Width" lang:es="Anchura"/>
+		<message id="spessore" lang:it="Spessore" lang:en="Thickness" lang:es="Grosor"/>
+		<message id="colore" lang:it="Colore" lang:en="Colour" lang:es="Color"/>
+	</group>
+</messages>

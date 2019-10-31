@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="lang" defaultlang="IT">
+  <group id="snViewGroupWallpost" define="false">
+    <message id="mtitle" lang:it="Messaggio per il gruppo ..." lang:en="Message for the group ..." lang:fr="Message pour le groupe ..." lang:de="Nachricht für die Gruppe ..." lang:es="Mensaje para el grupo ..." lang:ru="Сообщение для группы ..."/>
+    <message id="ldoc" lang:it="Documento" lang:en="Document" lang:fr="Document" lang:de="Document" lang:es="Document" lang:ru="Document"/>
+    <message id="limg" lang:it="Immagine" lang:en="Image" lang:fr="Image" lang:de="Bild" lang:es="Imagen" lang:ru="Изображение"/>
+    <message id="llink" lang:it="Indirizzo" lang:en="URL" lang:fr="URL" lang:de="URL" lang:es="URL" lang:ru="URL"/>
+    <message id="lyoutube" lang:it="URL YouTube" lang:en="YouTube URL" lang:fr="YouTube URL" lang:de="YouTube URL" lang:es="YouTube URL" lang:ru="YouTube URL"/>
+    <message id="afile" lang:it="Allegato" lang:en="Attachment" lang:fr="Pièce jointe" lang:de="Befestigung" lang:es="Adjunto" lang:ru="вложения"/>
+    <message id="alink" lang:it="Collegamento" lang:en="Link" lang:fr="Lien" lang:de="Link" lang:es="Enlace" lang:ru="ссылка"/>
+    <message id="aimg" lang:it="Immagine" lang:en="Image" lang:fr="Image" lang:de="Bild" lang:es="Imagen" lang:ru="Изображение"/>
+    <message id="ayoutube" lang:it="Video YouTube" lang:en="YouTube Video" lang:fr="YouTube Video" lang:de="YouTube Video" lang:es="YouTube Video" lang:ru="YouTube Video"/>
+    <message id="share" lang:it="Condividi" lang:en="Share" lang:fr="Share" lang:de="Share" lang:es="Share" lang:ru="Share"/>
+    <message id="atitle" lang:it="Azioni" lang:en="Actions" lang:fr="Actions" lang:de="Aktionen" lang:es="Acciones" lang:ru="Действия"/>
+    <message id="ins" lang:it="Inserisci" lang:en="Add" lang:fr="Ajouter" lang:de="Hinzufügen" lang:es="Añadir" lang:ru="добавлять"/>
+  </group>
+</messages>

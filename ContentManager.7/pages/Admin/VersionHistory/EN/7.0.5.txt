@@ -1,0 +1,13 @@
+Complete redesign of the administrative interface (backoffice).
+
+New dashboard with real-time statistics.
+
+New visual editor. Toolbar organized by subject matter with accordion, reorganization of the metadata section, drag & drop support for uploading files and images. New calendar widget  and classification widget with a higher usability.
+
+Greater compatibility with modern browsers. Dropped support for older versions of Internet Explorer (6 and 7). Limitations with the very dated Internet Explorer 8. Full support for Chrome, FireFox, Safari, Internet Explorer 9 and 10.
+
+Update statistics with new dynamic graphs.
+
+Google Maps API v.3
+
+Several optimizations.

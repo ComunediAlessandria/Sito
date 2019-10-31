@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="it">
+	<group id="bho" define="false">
+
+		<message id="desc" lang:it="Codice HTML" lang:en="HTML Code" lang:es="[es] HTML Code"/>
+
+		<message id="lh" lang:it="HTML" lang:en="HTML" lang:es="[es] HTML"/>
+
+		<message id='note'>
+			<trans lang='IT'><![CDATA[
+				Attenzione: l'inserimento di codice malformato può compromettere la visualizzazione della pagina
+			]]></trans>
+			<trans lang='EN'><![CDATA[
+				Please note: the inclusion of malformed code may be affecting the display of the page
+			]]></trans>
+		</message>
+
+		<message id='locked'>
+			<trans lang='IT'><![CDATA[
+				Non si possiedono permesso e/o licenze per la modifica dell'oggetto.
+			]]></trans>
+			<trans lang='EN'><![CDATA[
+				No Permission and/or Licence for editing of this object.
+			]]></trans>
+		</message>
+
+	</group>
+</messages>

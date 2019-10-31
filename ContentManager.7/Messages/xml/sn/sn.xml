@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="lang" defaultlang="IT">
+
+    <!-- definizioni globali per sn -->
+
+  <group id="sn" define="false">
+
+    <!-- FMHelper -->
+
+    <message id="eli"
+        lang:it="Si sono verificati i seguenti errori"
+        lang:en="Errors"
+        lang:fr="Erreurs"
+        lang:de="Fehler"
+        lang:es="Errores"
+        lang:ru="Ошибки"
+    />
+
+  </group>
+</messages>

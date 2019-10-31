@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="it">
+	<group id="bnva" define="false">
+		<message id="npa" lang:it="Navigazione per Assi" lang:en="Axes Navigation"/>
+		<message id="ic" lang:it="Indice Completo" lang:en="Complete Index"/>
+		<message id="tcnf" lang:it="Trail con nodi Figli" lang:en="Index Trail with child nodes"/>
+		<message id="tcnfef" lang:it="Trail con nodi Figli e Fratelli" lang:en="Index Trail with both child and siblings nodes"/>
+		<message id="nessuno" lang:it="Nessuno" lang:en="None"/>
+		<message id="tutti" lang:it="Tutti" lang:en="All"/>
+		<message id="ns" lang:it="Non Scadute" lang:en="Not Expired"/>
+		<message id="scadute" lang:it="Scadute" lang:en="Expired"/>
+		<message id="tp" lang:it="Titolo Pagina" lang:en="Page Title"/>
+		<message id="ts" lang:it="Titolo Strillo" lang:en="Abstract Title"/>
+		<message id="dum" lang:it="Data Ultima Modifica" lang:en="Last Modification Time"/>
+		<message id="div" lang:it="Data Inizio Validità" lang:en="Start Validity Time"/>
+		<message id="dtv" lang:it="Data Termine Validità" lang:en="End Validity Time"/>
+		<message id="die" lang:it="Data Inizio Evento" lang:en="Start Event Time"/>
+		<message id="dfe" lang:it="Data Fine Evento" lang:en="End Event Time"/>
+		<message id="pdco" lang:it="Proprietà di Classificazione oggetto " lang:en="Object Classification Properties"/>
+		<message id="classificazione" lang:it="Classificazione" lang:en="Classification"/>
+		<message id="cde" lang:it="Criteri di Estrazione" lang:en="Selection Criteria"/>
+		<message id="asse" lang:it="Asse" lang:en="Axis"/>
+		<message id="validit" lang:it="Validità" lang:en="Validity"/>
+		<message id="op" lang:it="Ordina per" lang:en="Sort using"/>
+		<message id="is" lang:it=" in senso " lang:en="by"/>
+		<message id="nt" lang:it="Nome Telaio" lang:en="Template Name"/>
+		<message id="idn" lang:it="Indice di Navigazione" lang:en="Navigation Index"/>
+		<message id="nepp" lang:it="Numero elementi per Pagina" lang:en="Number of elements per Page"/>
+		<message id="si" lang:it="Selezione Iniziale" lang:en="Initial Selection"/>
+
+		<message id="oa" lang:it="Crescente" lang:en="Ascending"/>
+		<message id="od" lang:it="Decrescente" lang:en="Descending"/>
+
+	</group>
+</messages>

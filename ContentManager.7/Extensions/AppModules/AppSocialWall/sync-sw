@@ -1,0 +1,97 @@
+#!/usr/bin/php
+<?php
+return;
+	$opt = array(
+		'--rsh="ssh -q"',
+		'--recursive',
+
+			// mantiene i permessi
+
+		'--perms',
+
+			// verifica anche il checksum per la modifica
+
+		'--checksum',
+
+			// opzioni output
+
+		'-v',
+		'--human-readable',
+//		'--progress',
+		'--itemize-changes',
+
+			// esclusioni
+
+		'--exclude ".DS_Store"',
+		'--exclude "._.DS_Store"',
+
+		'--exclude "_*"',
+		'--exclude "._*"',
+
+			// limite bandwidth (KB/s)
+
+//		'--bwlimit=60',
+
+			// se ho dei link che puntano a dir li espande
+
+//		'--copy-dirlinks',
+		'--copy-links',
+
+//		'--extended-attributes',
+		'--compress',
+		'--partial',
+
+		'--delete',
+		'--delete-after',
+
+//		'--dry-run',
+	);
+
+	$neoSite = 'Biorepair';
+
+	// $webSite = 'biorepair.it';
+	// $webUser = 'biorepair.it-sftp:g4210495782';
+	// $dstBP = 'root@web1:/home/' . $webSite . '/www/web/flex/';
+
+		// su dev
+
+	$webUser = 'biorepair.it-sftp:g4210495782';
+
+	$srcBP = '/home/cverond/www/' . $neoSite . '/';
+	$dstBP = 'root@web1:/home/biorepair.it/www/web/flex/';
+
+	$pt = array(
+		'Extensions/AdminCustomExtensions.xml' => 'Extensions/AdminCustomExtensions.xml',
+		'Extensions/BLOBElements.php' => 'Extensions/BLOBElements.php',
+//		'Extensions/conf.inc.php' => 'Extensions/conf.inc.php',
+		'Extensions/Overlay/' => 'Extensions/Overlay/',
+		'Extensions/HTMLFormObjects/' => 'Extensions/HTMLFormObjects/',
+		'Extensions/SocialWall/' => 'Extensions/SocialWall/',
+		'Extensions/cli-workers/' => 'Extensions/cli-workers/',
+		'Messages/' => 'Messages/',
+		'Conf/social-wall.php' => 'Conf/social-wall.php',
+	);
+/*
+//	$cmd = 'rsync --rsh=ssh  --recursive -p --human-readable --checksum -v  --exclude ".DS_Store" --exclude "._.DS_Store" --bwlimit=40  ~/Pictures/PhotoBase/ "cverond@milk:PhotoBase/"';
+
+	$cmd = 'rsync ' . join(' ', $opt) . ' /home/cverond/www/Blanx/Extensions/ "web1:/home/flexcmp.com/dev/web/BlanxTeaser/Extensions/"';
+	passthru($cmd);
+
+	$cmd = 'rsync ' . join(' ', $opt) . ' /home/cverond/www/Blanx/TemplatesUSR/ "web1:/home/flexcmp.com/dev/web/BlanxTeaser/TemplatesUSR/"';
+	passthru($cmd);
+*/
+	foreach ($pt as $src => $dst) {
+
+		$src = $srcBP . $src;
+		$dst = $dstBP . $dst;
+
+		passthru(
+			'rsync ' . join(' ', $opt) . ' ' . $src . ' "' . $dst . '"'
+		);
+
+		list(, $dst) = explode (':', $dst);
+
+		passthru(
+			'ssh -q root@web1 "chown -R ' . $webUser . ' ' . $dst . '"'
+		);
+	}

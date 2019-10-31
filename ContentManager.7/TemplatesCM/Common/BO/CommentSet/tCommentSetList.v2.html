@@ -1,0 +1,41 @@
+<div class="well well-small">
+<a href="{ADDLINK}" class='btn btn-success'><i class="moon-icon-plus icon-white"></i> Aggiungi una nuova impostazione</a>
+</div>
+
+<table class="table table-striped table-bordered table-condensed table-hover flexbo-list-table">
+<thead>
+  <tr>
+	<th scope="col" class='AdminIcoCell'>Azioni</th>
+	<th scope="col" abbr="Nome">Nome Impostazione</th>
+	<th scope="col">Stato</th>
+	<th scope="col">Richiesta Approvazione?</th>
+	<th scope="col">Captcha Abilitato?</th>
+	<th scope="col">Gruppo Amministratori</th>
+	<th scope="col">Inserimento</th>
+	<th scope="col">Visualizzazione</th>
+  </tr>
+</thead>
+
+<tbody>
+  <!-- BEGIN row -->
+  <tr class="{CLASSTR}">
+	<td><div class="btn-group">{MODLINK}</div></td>
+	<th scope="row">{TITOLO}</th>
+	<td>{DISABLED}</td>
+	<td>{RICHIESTAAPPROVAZIONE}</td>
+	<td>{HASCAPTCHA}</td>
+	<td>{GRUPPOAMMINISTRATORI}</td>
+	<td>{CANINSERT}</td>
+	<td>{CANVIEW}</td>
+  </tr>
+  <!-- END row -->
+		<tr class="tfooter">
+			<td colspan="8">
+				<div class="pull-right">
+
+				</div>
+				<p>NUMERO IMPOSTAZIONI PRESENTI: {TOTRECORDS}</p>
+			</td>
+		</tr>
+	</tbody>
+</table>

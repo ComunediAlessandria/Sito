@@ -1,0 +1,66 @@
+<form id='F' method='post' action='{ACTION}'>
+
+	<div class='well well-small'>
+		{btnAdd}
+	</div>
+<!--
+	NON CANCELLARE: E' il filtro da attivare quanso servirà
+
+	<div id="AdminFiltroElencoPagine">
+		<fieldset>
+			<legend>Modelli da mostrare</legend>
+			<div>{CMBFILTER}</div>
+			{CMBCANALE}
+			<label for="filterTitle">contenenti nel titolo la parola:</label>{FILTER}
+		</fieldset>
+			<label for="sort">ordina per:</label> {CMBSORT}
+			<input type="submit" name="Aggiorna" value="Aggiorna" id="AdminFiltroElencoSubmit" />
+			<input type="submit" name="nofilter" value="Reimposta"  id="AdminFiltroElencoReset" />
+	</div>
+	{HIDDEN}{CMBKIND}
+-->
+</form>
+
+	<!-- BEGIN tHead -->
+	<table class="table table-striped table-bordered table-condensed table-hover flexbo-list-table" summary="__(pgaet.td)" id='tablePages'>
+		<thead>
+			<tr>
+				<th scope="col" class='AdminIcoCellWide'>__(pgaet.tha)</th>
+				<th scope="col">__(.thn)</th>
+				<th scope="col">__(.tht)</th>
+				<th scope="col">__(.thgp)</th>
+				<th scope="col">__(.thgs)</th>
+			</tr>
+		</thead>
+		<tbody>
+	<!-- END tHead -->
+
+	<!-- BEGIN row -->
+			  <tr class="{CLASSTR}">
+			<td><div class="btn-group">{IMGMOD} {IMGDUP} {IMGDEL}</div></td>
+			<td>{ID}</td>
+			<th scope="row">{PAGETITLE}</th>
+			<td>{OWNER}</td>
+			<td>{GROUPS}</td>
+		  </tr>
+	<!-- END row -->
+
+	<!-- BEGIN tFooter -->
+			<tr class="tfooter">
+				<td colspan="5">
+					<div class="pull-right">
+							&nbsp;
+					</div>
+					<p>__(.f): {TOTRECORDS}</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>	
+	<!-- END tFooter -->
+
+	<!-- BEGIN noData -->
+	<div class="alert">__(.no)</div>
+	<!-- END noData -->
+
+
+

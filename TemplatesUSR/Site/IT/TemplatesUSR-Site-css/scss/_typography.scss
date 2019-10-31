@@ -1,0 +1,149 @@
+// In questo file andiamo a inserire tutti gli stili dei testi, dei pulsanti, ... condivisi dal progetto
+
+%Font-1-Light { font-family: 'Source Sans Pro',sans-serif; font-weight: 300; }
+%Font-1-Regular { font-family: 'Source Sans Pro',sans-serif; font-weight: 400; }
+%Font-1-SemiBold { font-family: 'Source Sans Pro',sans-serif; font-weight: 600; }
+%Font-1-Bold { font-family: 'Source Sans Pro',sans-serif; font-weight: 700; }
+
+
+h1, %titolo-h1 {
+  font-size:    $h1Size;
+  line-height:  $h1Line;
+  font-family:  $h1Font;
+  font-weight:  $h1FontW;
+  color:        $h1Color;
+  
+  
+  margin: 0 0 20px 0;
+  letter-spacing: -2px;
+  
+  @include break-point(lg) {
+
+  } 
+  @include break-point(md) {
+
+  } 
+  @include break-point(sm) {
+
+  } 
+  @include break-point(xs) {
+
+  } 
+}
+
+h2, h2.viewTitolo2, %titolo-h2 {
+  font-size:    $h2Size;
+  line-height:  $h2Line;
+  font-family:  $h2Font;
+  font-weight:  $h2FontW;
+  color:        $h2Color;
+  
+  margin: 0 0 15px 0;
+  
+  @include break-point(lg) {
+
+  } 
+  @include break-point(md) {
+
+  } 
+  @include break-point(sm) {
+
+  } 
+  @include break-point(xs) {
+
+  } 
+}
+h3, h3.viewTitolo3, %titolo-h3 {  
+  font-size:    $h3Size;
+  line-height:  $h3Line;
+  font-family:  $h3Font;
+  font-weight:  $h3FontW;
+  color:        $h3Color;
+  
+  margin: 0 0 12px 0;
+  
+  @include break-point(lg) {
+
+  } 
+  @include break-point(md) {
+
+  } 
+  @include break-point(sm) {
+
+  } 
+  @include break-point(xs) {
+
+  } 
+}
+h4, h4.viewTitolo4, %titolo-h4 { 
+  font-size:    $h4Size;
+  line-height:  $h4Line;
+  font-family:  $h4Font;
+  font-weight:  $h4FontW;
+  color:        $h4Color;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+  margin: 0 0 10px 0;
+  
+  @include break-point(lg) {
+
+  } 
+  @include break-point(md) {
+
+  } 
+  @include break-point(sm) {
+
+  } 
+  @include break-point(xs) {
+
+  } 
+}
+h5, h5.viewTitolo5, %titolo-h5 {
+  font-size:    $h5Size;
+  line-height:  $h5Line;
+  font-family:  $h5Font;
+  font-weight:  $h5FontW;
+  color:        $h5Color;
+  border-bottom: 1px solid #f1f1f1;
+  padding-bottom: 15px;
+  margin: 0 0 5px 0;
+  
+  @include break-point(lg) {
+
+  } 
+  @include break-point(md) {
+
+  } 
+  @include break-point(sm) {
+
+  } 
+  @include break-point(xs) {
+
+  } 
+}
+
+.viewPar p, .viewParCell p, p, %Par {
+  color:        $ParColor;
+  font-size:    $ParSize;
+  line-height:  $ParLine;
+  font-family:  $ParFont;
+  font-weight:  $ParFontW;
+  margin:       0 0 15px 0;
+  strong {
+    font-weight: $StrongFontW;
+  }
+}   
+a.viewLink, a, %Link { 
+  color:        $LinkColor; 
+  &:hover {
+    color:      $LinkColorHover;
+  }
+}
+
+a.viewLink { text-decoration: underline; }
+
+
+
+.bg-grey, %BgGrey {
+  background-color: $BgGrey;
+}

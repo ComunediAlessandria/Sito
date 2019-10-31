@@ -1,0 +1,28 @@
+[[:section:frame]]
+
+<div class='alertbox'>{err}</div>
+
+    {page}
+
+    <div>
+        [[ id: btnNext, kind: submit, value: 'Procedi', class: 'btn btn-primary' ]]
+        [[ id: btnCancel, kind: submit, value: 'Annulla', class: 'btn' ]]
+    </div>
+[[:section:page]]
+
+<div class='well'>
+    <fieldset>
+        <legend>_(descr:Nome Sezione)_:</legend>
+        <div class='row'>
+            <span class="span4">
+                <label for='description'></label>
+                [[
+                    id: description,
+                    kind: Text,
+                    class: form-control,
+                    allownull : false
+                ]]
+            </span>
+        </div>
+    </fieldset>
+</div>

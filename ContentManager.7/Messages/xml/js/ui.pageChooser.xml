@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE FlexCMPMessages SYSTEM '/FlexCMPMessages.dtd'>
+<messages xmlns:lang="#" defaultlang="it">
+
+	<group id='jpc' define='false' scope='json'>
+
+		<!-- titolo default -->
+
+		<message id='tt' lang:it='Scelta Destinazione' lang:en='Choose Target' />
+
+		<!-- pulsanti comuni nei dialog -->
+		<message id='can' lang:it='Annulla' lang:en='Cancel' />
+		<message id='ok' lang:it='Conferma' lang:en='OK' />
+
+		<message id='og' lang:it='Gruppo Proprietario' lang:en='Owner Group' />
+
+		<message id='tm'>
+			<trans lang='it'><![CDATA[
+				Il risultato della ricerca comprende troppi elementi. L'elenco è stato limitato ai primi 100.
+			]]></trans>
+			<trans lang='en'><![CDATA[
+				Result from search has too many items. It was truncated to the first 100.
+			]]></trans>
+		</message>
+
+		<!-- intestazioni tabelle risultati BLOB -->
+		<message id='thu'>
+			<trans lang='it'><![CDATA[
+				URL<br />Parlante
+			]]></trans>
+			<trans lang='en'><![CDATA[
+				URL
+			]]></trans>
+		</message>
+		<message id='thti' lang:it='Titolo negli Indici' lang:en='Title in Indexes' />
+		<message id='tht' lang:it='Title' lang:en='Title' />
+
+		<message id='PEBLOBTitle' lang:it='Link ad una pagina interna' lang:en='Link to Editorial Page' />
+		<message id='PEBLOBInfo'>
+			<trans lang='it'><![CDATA[
+				Per limitare le pagine presenti nell'elenco sosottostante è possibile filtrarle in
+				base ad una parola presente nel titolo, oppure digitando il numero pagina, oppure digitando la url parlante:
+				digitare la parola (o parte di essa) nel campo di testo e premere il pulsante 'filtra'.
+			]]></trans>
+			<trans lang='en'><![CDATA[
+				You can filter the pages in the following list
+			]]></trans>
+		</message>
+		<message id='filtra' lang:it='Filtra' lang:en='Filter' />
+		<message id='mtlp' lang:it='Mostra tutte le Pagine' lang:en='Show all the Pages' />
+
+		<message id='tblob' lang:it='Pagine Editoriali' lang:en='Editorial Pages' />
+
+		<!-- fixed -->
+		<message id='ft' lang:it='Link ad una pagina Applicativa (Fixed)' lang:en='Link to an Application Page (Fixed)' />
+		<message id='fi' lang:it="Seleziona la pagina desiderata dall'elenco sottostante" lang:en='Choose the page from the following list' />
+
+		<message id='tfixed' lang:it='Pagine Applicative' lang:en='Application Pages' />
+
+		<!-- html -->
+		<message id='ht' lang:it='Link ad una pagina HTML' lang:en='Link to an HTML Page' />
+		<message id='hi' lang:it="Seleziona la pagina desiderata dall'elenco sottostante" lang:en='Choose the page from the following list' />
+
+		<message id='thtml' lang:it='Pagine HTML' lang:en='HTML Pages' />
+
+		<!-- extended -->
+		<message id='et' lang:it='Link ad una pagina Special (ex)' lang:en='Link to Special Page (ex)' />
+		<message id='ei' lang:it="Seleziona la pagina desiderata dall'elenco sottostante" lang:en='Choose the page from the following list' />
+
+		<message id='tex' lang:it='Special' lang:en='Special' />
+
+		<!-- external -->
+		<message id='xt' lang:it='Link ad una pagina Esterna' lang:en='External Link' />
+		<message id='xi' lang:it="Inserisci l'indirizzo (URL)" lang:en='URL Address' />
+		<message id='xtt' lang:it="Titolo del collegamento" lang:en='Link Title' />
+
+		<message id='thttp' lang:it='Collegamenti Esterni' lang:en='External Link' />
+
+		<!-- decodifiche -->
+
+		<message id='dblob' lang:it='Pagina Editoriale' lang:en='Editorial Page' />
+		<message id='dphp' lang:it='Pagina Applicativa' lang:en='Application Page' />
+		<message id='dhtml' lang:it='Pagina HTML' lang:en='HTML Page' />
+		<message id='dhttp' lang:it='Collegamento Esterno' lang:en='External Link' />
+
+	</group>
+
+</messages>

@@ -1,0 +1,159 @@
+<style type="text/css" media="screen">
+	.AdminTableRowAlert {
+		background-color: rgb(255,165,155);
+	}
+</style>
+
+<!-- <h2>__(pgasl.pt) {tipoelenco}</h2> -->
+
+<!-- BEGIN Switch -->
+			<!-- __(.h) -->
+			<ul class="nav nav-tabs">
+				<li class='{classQueue}'>{linkQueue}</li>
+				<li class='{classCron}'>{linkCron}</li>
+				<li class='{classHistory}'>{linkHistory}</li>
+			</ul>
+
+<!-- END Switch -->
+
+<!-- BEGIN Add -->
+
+	<form action="{FrmAction}" method="post" class="form-inline">
+
+		<div class="well well-small">
+				<label for="tasklist">__(.tadd):</label>
+					{tasklist}
+				<button type="submit" id="AdminFiltroElencoSubmit" class="btn btn-success"><i class="moon-icon-plus icon-white"></i> __(.tcadd)</button>
+				<button type="submit" name="__(.tupd)" class="btn">__(.tupd)</button>
+		</div>
+
+	</form>
+<!-- END Add -->
+
+<!-- BEGIN TableHeaderCron -->
+
+	<table class="table table-bordered table-condensed table-hover flexbo-list-table" summary="__(.ttbl)">
+		<thead>
+			<tr>
+				<th scope="col" class='AdminIcoCellWide'>__(.tac)</th>
+				<th scope="col" >__(.tn)</th>
+				<th scope="col" >__(.te)</th>
+				<th scope="col" >__(.tnx)</th>
+				<th scope="col" >__(.ti)</th>
+			</tr>
+		</thead>
+
+		<tbody>
+<!-- END TableHeaderCron -->
+
+<!-- BEGIN TableRowCron -->
+			<tr>
+				<td class='AdminIcoCellWide'><div class="btn-group">{MODLINK} {DELLINK} {chlink}</div></td>
+				<td>{Nome}</td>
+				<td>{cron}{status}</td>
+				<td>{RunAt}</td>
+				<td>{parinfo}</td>
+		  </tr>
+<!-- END TableRowCron -->
+
+<!-- BEGIN TableHeaderQueue -->
+
+	<table class="table table-bordered table-condensed table-hover flexbo-list-table" summary="__(.ttbl)">
+		<thead>
+			<tr>
+				<th scope="col" class='AdminIcoCellWide'>__(.tac)</th>
+				<th scope="col" >__(.tn)</th>
+				<th scope="col" >__(.te)</th>
+				<th scope="col" >__(.tnx)</th>
+				<th scope="col" >__(.ti)</th>
+			</tr>
+		</thead>
+
+		<tbody>
+<!-- END TableHeaderQueue -->
+
+<!-- BEGIN TableRowQueue -->
+			<tr class='{tr-class}'>
+				<td class='AdminIcoCellWide'><div class="btn-group">{MODLINK} {DELLINK}  {UNBLOCKLINK}</div></td>
+				<td>{Nome}</td>
+				<td>{Stato}</td>
+				<td>{Info}</td>
+				<td>{parinfo}</td>
+			</tr>
+<!-- END TableRowQueue -->
+
+<!-- BEGIN TableHeaderHistory -->
+
+	<table class="table table-bordered table-condensed table-hover flexbo-list-table" summary="__(.ttbl)">
+		<thead>
+			<tr>
+				<th scope="col" >__(.tn)</th>
+				<th scope="col" >__(.tst)</th>
+				<th scope="col" >__(.td)</th>
+				<th scope="col" >__(.ti)</th>
+				<th scope="col" >&nbsp;</th>
+			</tr>
+		</thead>
+
+		<tbody>
+<!-- END TableHeaderHistory -->
+
+<!-- BEGIN TableRowHistory -->
+			<tr>
+				<td>{Nome}</td>
+				<td>{Start}</td>
+				<td>{time}</td>
+				<td>{parinfo}</td>
+				<td>&nbsp;</td>
+		  </tr>
+<!-- END TableRowHistory -->
+
+
+<!-- BEGIN TableFooter -->
+			<tr class="tfooter">
+				<td colspan="5">
+					<div class="span1">
+						&nbsp;
+					</div>
+					<div class="pull-right">
+							{pagination}
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+<!-- END TableFooter -->
+
+<!-- BEGIN Footer -->
+<div class='alert alert-info'>
+__(.ct): {curtime}
+</div>
+<!-- END Footer -->
+
+
+<!-- BEGIN TableEmpty -->
+<div class="well well-small">
+	__(.tno).
+</div>
+<!-- END TableEmpty -->
+
+<!-- BEGIN Log -->
+
+<div class='well well-small'>
+	<div class="row">
+		<div class="span8">
+			<strong>__(.tlog):</strong>
+		</div>
+	</div>
+	<pre id='log-container' class="pre-scrollable">{CNT}</pre>
+	<div class="row">
+		<div class="span8">
+			<a href='{Download}' class='btn'>__(.tlogd)</a>
+		</div>
+	</div>
+</div>
+
+
+<!-- END Log -->
+
+{DELCONFIRM}

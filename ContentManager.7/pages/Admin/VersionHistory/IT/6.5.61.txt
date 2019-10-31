@@ -1,0 +1,14 @@
+Nuovo segnaposto per i telai del sito che permette di specificare per la pagina corrente (o una pagina specificata) la data evento, oppure la data di inizio validit&agrave;, oppure di fine validit&agrave;.
+
+Nuova limitazione di accesso negli indici (o menu) di navigazione del sito. Per ogni indice &egrave; possibile specificare un Gruppo Proprietario, limitando di fatto le possibilit&agrave; di modifica dell'indice stesso agli utenti amministrativi membri del gruppo specificato.
+
+Nuovo oggetto di pagina per l'inserimento di una mappa Google Map con singolo marker e fumetto contenente testo specificabile attraverso l'oggetto stesso. <br />
+Per il funzionamento &egrave; necessario che il cliente richieda la "Google Maps API Key" (sottoscrivendo cos&iacute; le condizioni di licenza di Google). La stringa di attivazione deve essere inserita nel file di configurazione del sito.<br />
+Si sconsiglia l'utilizzo di questo oggetto in siti accessibili.
+
+Nuove opzioni per il form di ricerca relativo al motore di ricerca interno al sito. <br />
+Possibilit&agrave; di preimpostare i canali/valori di classificazione a cui limitare la ricerca. <br />
+Possibilit&agrave; di far apparire nel form rapido parte dell'interfaccia della Ricerca Avanzata per limitare la ricerca a specifici canali / valori di classificazione.
+
+Nuovo oggetto di pagina per l'inserimento di Video YouTube (si rimanda ai singoli utilizzatori di FlexCMP la responsabilit&agrave; di utilizzare YouTube in conformit&agrave; ai termini di licenza dello stesso). <br />
+Si sconsiglia l'utilizzo di questo oggetto in siti accessibili.

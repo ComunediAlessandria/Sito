@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='iso-8859-1' ?>
+<ui id='CommunityUsers'>
+
+	<presenter
+		type='Template'
+		filename='./tCommunityUsersEdit-E.html'
+	/>
+
+	<page
+	
+		title='Modifica Profilo Utente'
+		_template='Main.html'
+	/>
+
+	<elements>
+		<element	id='Username'			BO='Username'	type='text'	mode='RO' size='50'		maxlen='50'				label='Username' />
+<!--
+		<element	id='Password'			BO='Password'	type='password'	size='50'		maxlen='50'			label='Password' />
+		<element	id='Password2'			BO=''	type='password'	size='50'		maxlen='50'					label='Conferma Password' />
+-->
+		<element	id='email'				BO='email'	type='text'	mode='RO' size='50'		maxlen='80'					label='email' />
+
+		<element	id='Nome'				BO='Nome'	type='text'	size='50'		maxlen='250'				label='Nome' />
+		<element	id='Cognome'			BO='Cognome'	type='text'	size='50'		maxlen='250'			label='Cognome' />
+		<element	id='Lang'				BO='Lang'		type='select'				valueset='Lang'			label='Lingua' />
+		<element	id='ReceiveNL'			BO='ReceiveNL'	type='check'			label='Acconsento a ricevere comunicazioni da questo sito' />
+
+		<element	id='jCommunity'			BO='jCommunity'		type='checkset'			label='Community' />
+	</elements>
+
+	<valueset id='Community' kind='DISTINCT' table='Community' colid='IDCommunity' column='Description' allownull='yes' />
+
+	<validations>
+		<validation id='ValidUsername' type='php'>
+			<![CDATA[
+
+					// verifica che il nome utente cominci con una lettera
+
+				$ok = TRUE; $message = '';
+
+				$username = $pars['ELEMENTS']['Username']->GetValue();
+				if ($username != '') {
+
+					$pars['ELEMENTS'][ 'Username' ]->SetError(FALSE);
+
+					if (preg_match('|^[A-Za-z][A-Za-z0-9_\-\*\.\@]*$|', $username) === 0) {
+
+						$message = "Lo username specificato non &egrave; valido. Deve iniziare con una lettera e pu&ograve; contenere lettere, numeri ed i caratteri '_', '-', '*', '.', '@'";
+						$ok = FALSE;
+						$pars['ELEMENTS'][ 'Username' ]->SetError(TRUE);
+					}
+				}
+
+				return array($ok, $message);
+			]]>
+		</validation>
+	</validations>
+
+	<valueset id='Lang' kind='DISTINCT' table='Languages' colid='Lang' column='DescrizioneIT' />
+
+	<!-- UI per la cancellazione - per adesso qui, domani in un file XML separato -->
+	
+	<delete
+		template='./tCommunityUsersDelAsk.html'	
+	/>
+
+</ui>

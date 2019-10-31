@@ -1,0 +1,200 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE FlexCMPMessages SYSTEM '/FlexCMPMessages.dtd'>
+<messages xmlns:lang="#" defaultlang="it">
+	<group id='bow' define='false'>
+
+		<!-- alert per update db -->
+
+		<message id='dbtt'
+			lang:it='Attenzione: database non aggiornato'
+			lang:en='Warning: database is not updated'
+		/>
+
+		<message id='dbtx'>
+			<trans lang='IT'><![CDATA[
+				La versione corrente del database (%1$03d)
+				non è allineata con la versione distribuita con questa versione di FlexCMP (%2$03d). È necessario procedere quanto prima all'aggiornamento poiché
+				questa situazione potrebbe portare dei malfunzionamenti.
+			]]></trans>
+			<trans lang='EN'><![CDATA[
+				Current database version (%1$03d) doesn't match the database version distributed with this version of FlexCMP (%2$03d). The database should be updated as soon as possible otherwise malfunctions could occur.
+			]]></trans>
+		</message>
+
+		<!-- alert per controlli di sicurezza -->
+
+		<message id='scfs'
+			lang:it='Verifica Filesystem'
+			lang:en='Filesystem'
+		/>
+
+		<message id='scpath'
+			lang:it='Percorso'
+			lang:en='Path'
+		/>
+
+		<message id='scdl'
+			lang:it='Directory Listing Aperto'
+			lang:en='Directory Listing Open'
+		/>
+
+		<message id='scpex'
+			lang:it='Codice PHP Eseguibile'
+			lang:en='PHP Code Executable'
+		/>
+
+		<message id='scpass'
+			lang:it='PASS'
+			lang:en='PASS'
+		/>
+
+		<message id='scfail'
+			lang:it='FAIL'
+			lang:en='FAIL'
+		/>
+
+		<message id='scm'>
+			<trans lang='IT'><![CDATA[
+				<strong>Attenzione</strong>:
+				Uno o più controlli di sicurezza hanno dato esito negativo:
+			]]></trans>
+			<trans lang='EN'><![CDATA[
+				<strong>Warning</strong>:
+				One or more security checks failed:
+			]]></trans>
+		</message>
+
+		<message id='scinstall'>
+			<trans lang='IT'><![CDATA[
+				È possibile installare nelle directory un file <code>.htaccess</code> per tentare di risolvere il problema.
+				Nel caso già esista un file <code>.htaccess</code> è possibile sovrascriverlo.
+				<a href='%1$s' class='btn btn-small btn-primary' type='button'>Installa</a>
+				<a href='%2$s' class='btn btn-small btn-primary' type='button'>Installa e sovrascrivi</a>
+			]]></trans>
+			<trans lang='EN'><![CDATA[
+				Install an <code>.htaccess</code> file in paths to try to block access.
+				If an <code>.htaccess</code> file already exists it can be overwrite.
+				<a href='%1$s' class='btn btn-small btn-primary' type='button'>Install</a>
+				<a href='%2$s' class='btn btn-small btn-primary' type='button'>Install and overwrite</a>
+			]]></trans>
+		</message>
+
+		<message id='pwa'
+			lang:it='Le password degli utenti amministrativi sono memorizzate in chiaro su database'
+			lang:en='Passwords of administrative users are stored in plain on database'
+		/>
+
+		<message id='pwu'
+			lang:it='Le password degli utenti di community sono memorizzate in chiaro su database'
+			lang:en='Passwords of community users are stored in plain on database'
+		/>
+
+		<!-- widget: version info -->
+
+		<message id='vi-title'
+			lang:it='Nuove caratteristiche della versione %s di %s'
+			lang:en='New features in version %s of %s'
+		/>
+
+		<message id='vi-h'
+			lang:it='Evoluzione delle Versioni'
+			lang:en='Version History'
+		/>
+
+		<!-- widget: page views -->
+
+		<message id='pv-title'
+			lang:it='Statistiche in Tempo Reale'
+			lang:en='Real Time Statistics'
+		/>
+
+		<message id='pv-c'
+			lang:it='visitatori correnti'
+			lang:en='current visitors'
+		/>
+
+		<!-- widget: last pages -->
+
+		<message id='lp-title'
+			lang:it='Ultime Pagine Visitate'
+			lang:en='Last Pages Viewed'
+		/>
+
+		<!-- widget: user info -->
+
+		<message id='ui-title'
+			lang:it='Informazioni Utente'
+			lang:en='User Info'
+		/>
+
+		<message id='ui-browser'
+			lang:it='%s versione %s'
+			lang:en='%s version %s'
+		/>
+
+		<message id='ui-bs'>
+			<trans lang='it'>SUPPORTATO</trans>
+			<trans lang='en'>SUPPORTED</trans>
+		</message>
+
+		<message id='ui-bns'>
+			<trans lang='it'>NON SUPPORTATO</trans>
+			<trans lang='en'>NOT SUPPORTED</trans>
+		</message>
+
+		<message id='ui-bie8'>
+			<trans lang='it'>PARZIALMENTE SUPPORTATO</trans>
+			<trans lang='en'>PARTIALLY SUPPORTED</trans>
+		</message>
+
+		<message id='ui-w'
+			lang:it='Benvenuto'
+			lang:en='Welcome'
+		/>
+
+		<message id='ui-mg'
+			lang:it='Gruppo Principale'
+			lang:en='Main Group'
+		/>
+
+		<message id='ui-la'
+			lang:it='Ultimo accesso'
+			lang:en='Last login'
+		/>
+
+		<message id='ui-bl'
+			lang:it='Lingua backoffice'
+			lang:en='Backoffice Language'
+		/>
+
+		<message id='ui-bv'
+			lang:it='Versione Browser'
+			lang:en='Browser Version'
+		/>
+
+		<message id='ui-bp'
+			lang:it='Piattaforma'
+			lang:en='Platform'
+		/>
+
+		<message id='ui-br'
+			lang:it='Risoluzione Browser'
+			lang:en='Browser Resolution'
+		/>
+
+		<!-- widget: Installation info -->
+
+		<message id='ii-title'
+			lang:it='Informazioni sul Prodotto'
+			lang:en='Product Info'
+		/>
+
+<!--
+		<message id='empty'>
+			<trans lang='it'>E' necessario inserire o lo username o l'email</trans>
+			<trans lang='en'>konieczne jest podanie username albo e-mail</trans>
+		</message>
+ -->
+
+	</group>
+</messages>

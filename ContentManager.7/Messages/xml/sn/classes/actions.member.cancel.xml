@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="lang" defaultlang="IT">
+  <group id="snActionMemberCancel" define="false">
+    <message id="del"
+    lang:it="L'iscrizione al gruppo &amp;egrave; stata annullata come richiesto."
+    lang:en="The entry to the group has been canceled as requested."
+    lang:fr="L'entrée dans le groupe a été annulé à la demande."
+    lang:de="Der Eintritt zu der Gruppe wurde abgesagt, wie verlangt."
+    lang:es="La entrada al grupo ha sido cancelada a petición."
+    lang:ru="Вступление в группу был отменен по просьбе."
+    />
+  </group>
+</messages>

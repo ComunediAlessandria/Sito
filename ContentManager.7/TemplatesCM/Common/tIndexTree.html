@@ -1,0 +1,71 @@
+	{TREEHEADER}
+
+
+<div id="AdminCorpoBox">
+	<form id='F' method='post' action='{FORMACTION}'>
+
+		{HIDDEN}
+
+		<h1 class="AdminPageTitle">__(ei.lblTitle)</h1>
+<!--
+		<div class='AdminPageFooterCommand'>
+			<div class='jsShow'>
+				<label for='IDCollection'>Seleziona Indice:</label>
+				{COLLECTION}
+			</div>
+			&nbsp;{LINKAC}
+		</div>
+	-->
+	
+		<div class='AdminPageFooterCommand'>
+			__(ei.lblMod): {INDEXNAME}&nbsp;&nbsp;&nbsp;{LINKAC}
+		</div>
+
+			<!-- Bottoni per le operazioni sull'indice -->
+
+		<div id="AdminIndex" class='jsShowB'>
+			<div id="AdminIndexTreePanel">
+				<div class='AdminIndexTreeBtn jsShowB'> {CMDOPEN} {CMDDELETE} {CMDEDIT} {CMDADD} {CMDUPDATE} </div>
+				<div id='treediv'>{TREE}</div>
+			</div>
+			<div id="AdminIndexParsPanel">
+				<div class="AdminIndexBasePars BLOBFloatLeft">
+					<table summary="__(ei.tblLegend)" class="AdminIndexBaseParsTable">
+						<tr>
+							<th>__(ei.lblHP):</th>
+							<td><input type="checkbox" name="frmHomePage" id="frmHomePage" value="checkbox" /></td>
+						</tr>
+						<tr>
+							<th>__(ei.lblGP):</th>
+							<td>{COMBOGRUPPI}</td>
+						</tr>
+						<tr>
+							<th>__(ei.lblAK):</th>
+							<td><input type="text" name="frmAccessKey" id="frmAccessKey" size="1" maxlength="1" /></td>
+						</tr>
+					</table>
+				</div>
+
+				<div style="font-size: .1em; clear:both;">&nbsp;</div>
+
+				<div id='PageSelector'>
+					<iframe id='FlexPageSelector' frameborder='' src='{IFRAME}' scrolling="no"></iframe>
+				</div>
+
+			</div>
+			<div style="clear:both;">&nbsp;</div>
+
+				<!-- Campi di input nascosti -->
+
+			<input type='hidden' id='frmFrom' name='frmFrom'     value=''   />
+			<input type='hidden' id='frmTo' name='frmTo'       value=''   />
+			<input type='hidden' id='frmDragKind' name='frmDragKind' value=''  />
+			<input type='hidden' name='frmIDIndex'  id='frmIDIndex' value='' />
+			<input type='hidden' name='frmSelectedPanel' id='frmSelectedPanel' />
+			<input type='hidden' name='frmIndexAttributes' id='frmIndexAttributes' />
+			<input type='hidden' name='frmSelectedElementGID' id='frmSelectedElementGID' value='' />
+
+		</div>
+
+	</form>
+</div>

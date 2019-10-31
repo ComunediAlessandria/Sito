@@ -1,0 +1,93 @@
+
+<h1>__(pgasrcl.pt)</h1>
+
+<!--
+	<div class='AdminPageFooterCommand'>
+		{searchform}
+	</div>
+-->
+
+	<!-- BEGIN nodata -->
+		<p>__(.nos)</p>
+	<!-- END nodata -->
+
+	<!-- BEGIN th -->
+		<div class="AdminPageFooterCommand">
+			<a href="{addlink}">
+				{addimg} __(.add)
+			</a>
+		</div>
+
+		  <table class="AdminTable" summary="">
+			<thead>
+			  <tr>
+				<th scope="col" class='AdminIcoCell'>__(.ha)</th>
+				<th scope="col" >__(.hn)</th>
+<!--
+				<th scope="col" >Username</th>
+				<th scope="col" >Gruppi</th>
+				<th scope="col" >Attivo</th>
+				<th scope="col" >Email</th>
+-->
+			  </tr>
+			</thead>
+			<tbody>
+	
+	<!-- END th -->
+
+	<!-- BEGIN tr -->
+			  <tr class="{CLASSTR}">
+				<td class='AdminIcoCell'>{modlink} {dellink}</td>
+				<td>{nome}</td>
+<!--
+				<td>{Username}</td>
+				<td>{Gruppi}</td>
+				<td class="BLOBWidthTDN10"><div class="BLOBALignCenter">{Attivo}</div></td>
+				<td>{email}</td>
+-->
+			  </tr>
+	<!-- END tr -->
+
+	<!-- BEGIN tf -->
+			</tbody>
+		</table>
+	<!-- END tf -->
+
+	<!-- BEGIN footer -->
+		<div class="AdminPageFooterCommand">
+			<a href="{addlink}">
+				{addimg} __(.add)
+			</a>
+		</div>
+	
+		<div class="AdminPageFooterStatus">
+			{nrecords}
+		</div>
+	
+		<!-- div class="AdminPageFooterStatus">
+			<a href='{xlslink}'><img src='TemplatesCM-img/XLS.gif' alt='Excel'> Esporta Utenti selezionati in formato Excel XLS</a>
+		</div -->
+
+		<div>{pagination}</div>
+	
+	<!-- /div -->
+	<!-- END footer -->
+
+
+<!-- BEGIN Export -->
+<div class="AdminPageFooterCommand">
+	<a href='{LinkToExport}'>
+		<img src='TemplatesCM-img/XLS.gif' title="__(.xs)">
+			__(.x)
+		</a>
+</div>
+<!-- END Export -->
+
+
+<!-- BEGIN ExportData -->
+<div class="AdminPageFooterCommand">
+<form action='{LinkToExport}' method='post' id=''>
+	<input type="submit" name="CSV" value="__(.csv)" />
+</form>
+</div>
+<!-- END ExportData -->

@@ -1,0 +1,21 @@
+
+
+(1) abilitare il provider di identità nella site.conf:
+
+	'community.iplist' => 'linkedin;local',
+
+(2) inserire il placeholder nel template tCommunityLogin.html
+
+	Viene valorizzato con l'URL di destinazione per iniziare il processo
+	di login. Ad esempio:
+
+		<div>Login con: <a href='{linkedInLoginURL}'>LinkedIn</a></div>
+
+(3) inserire le informazioni di configurazione dell'Applicazione
+	LinkedIn utilizzata per il login in Conf/linkedin-ip.php:
+
+		appConfigure(array(
+			'*linkedin-ip.client-id' => '<id applicazione>',
+			'*linkedin-ip.client-secret' => '<secret>',
+			'*linkedin-ip.client-scope' => 'r_basicprofile r_emailaddress',
+		));

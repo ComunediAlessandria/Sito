@@ -1,0 +1,464 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{LANGUAGE}" lang="{LANGUAGE}">
+
+<head>
+	<title>Alfacod newsletter</title>
+	<meta http-equiv="Content-Type"  content="text/html charset=UTF-8" />
+	<style>
+		body {
+			background-color:#ffffff; 
+			font-size:100%; 
+			width:100%; 
+			margin:0 auto; 
+			padding:0;
+		}		
+		table {
+			margin:0 auto;
+			font-size:100%; 
+			font-family:Arial, Helvetica, sans-serif;
+		}
+		h1, h2, h3, h4, a, div, p, dl, dt, dd, span, ol, ul {
+		}
+		a {
+			color:#02075b; 
+		}
+		a:hover {
+			text-decoration:none;
+		}
+		li {	
+			margin-bottom:20px;
+		}
+		P { 
+			margin: 0; 
+			padding: 0;
+		}
+		.BLOBAlignLeft {
+			text-align: left;
+			position: relative; /* serve per gestire un bug di ie http://www.positioniseverything.net/explorer/peekaboo.html */
+		}
+
+		.BLOBAlignCenter { 
+			text-align: center;
+		}
+		.BLOBAlignRight  { 
+			text-align: right;
+		}
+		.BLOBAlignJustify  { 
+			text-align:justify;
+		}
+		.BLOBBlockAlignCenter { 
+			text-align: center; 
+		}
+		.BLOBBlockAlignCenter div { 
+			margin: 0 auto;
+		}
+		.BLOBBlockAlignRight { 
+			float: right;
+		}
+		.BLOBBlockAlignLeft  { 
+			float:left;
+		}
+		.BLOBListSymbolDisc { 
+			list-style-type: disc;
+		}
+		.BLOBListSymbolCircle { 
+			list-style-type: circle;
+		}
+		.BLOBListSymbolSquare { 
+			list-style-type: square;
+		}
+		.BLOBListSymbolDecimal {
+			list-style-type: decimal;
+		}
+		.BLOBListSymbolLowerLetter {
+			list-style-type: lower-alpha;
+		}
+		.BLOBListSymbolUpperLetter {
+			list-style-type: upper-alpha;
+		}
+		.BLOBListSymbolNone {
+			list-style-type: none;
+		}
+		.BLOBFloatClear {
+			clear: both; 
+		}
+		.BLOBFloatLeft {
+			float: left;
+			position: relative; /* serve per gestire un bug di ie http://www.positioniseverything.net/explorer/peekaboo.html */
+		}
+		.BLOBFloatRight {
+			float: right;
+			position: relative; /* serve per gestire un bug di ie http://www.positioniseverything.net/explorer/peekaboo.html */
+		}	
+		.BLOBMarginLeft {
+			margin-left: 10px;
+		}
+		.BLOBMarginRight {
+			margin-right: 10px;
+		}
+		.BLOBIMGSpacerLeft { 
+			padding-left: 10px;
+		}
+		.BLOBIMGSpacerRight {
+			padding-right: 10px;
+		}
+		.BLOBVAlignMiddle {
+			vertical-align: middle;
+		}
+		.BLOBVAlignTop {
+			vertical-align: top;
+		}
+		.BLOBVAlignBottom {
+			vertical-align: bottom;
+		}		
+		.BLOBWidth100 {
+			width: 100%;
+		}
+		.BLOBWidth50 {
+			width: 49%;
+		}
+		.BLOBRow1px {
+			font-size: .05em;
+			height: 1px;
+		}
+		.BLOBHidden{
+			visibility:hidden;
+			position: absolute;
+			top: -1000em;
+			font-size: .1em;
+		}
+		img {
+		 border-width: 0;
+		}
+
+		/* -------- OGGETTI DI CORPO PAGINA -------- */
+		h1, h2, h3, h4, h5, h6 {
+			margin:10px 0; 
+			padding:1px; 
+			font-size:1em;
+			color:#2F2C2C; 
+			background-color:transparent;
+		}
+			/* Livello 2 */
+		.viewSottotitolo, .viewSotTitCell, ol.RSSBlock h2 {
+			margin-bottom:8px; 
+			font-size:.8em; 
+			min-height:1.1em; 
+		}
+			/* Livello 3 */
+		.viewTitolo3 {
+			margin-bottom:6px; 
+			font-size:.85em; 
+			padding-left:15px; 
+		}
+			/* Livello 4 */
+		.viewTitolo4 {
+			margin-bottom:5px; 
+			font-size:.8em; 
+			padding-left:11px; 
+		}
+			/* Livello 5 */
+		.viewTitolo5 {
+			margin-bottom:5px; 
+			font-size:.75em; 
+			padding-left:11px; 
+		}
+		/* ------- PARAGRAFAZIONI ------- */
+		.viewPar, .viewParCell, .viewLI {
+			color:#333333; 
+			font-size:13px; 
+			padding:2px 0;
+		}
+		/* ------- LINK(+IMMAGINE) E ALLEGATI(DOWNLOAD) ------- */
+		a {
+			color:#223F5A; 
+			background-color:transparent;
+		}
+		a:hover {
+			text-decoration:none;
+		 }
+		a.viewLink {
+			font-size:.7em;
+		}
+		a.viewLinkIMG img {
+			border:none; padding-right:5px; background-color:#FFFFFF; color:#2F2C2C;
+		}
+		/* ------- SOTTOTITOLO+PARAGRAFO+IMMAGINE ------- */
+		dl.viewCaption, dl.viewCaption dt, dl.viewCaption dt img {
+			margin:0; padding:0;
+		}
+		dl.viewCaption dd {
+			margin:0; padding:0; color:#2F2C2C; 
+			font-size:.7em; font-style:italic; text-align:center;
+		}
+		/* ------- TABELLE DATI ------- */
+		.viewTable {
+			margin:10px 0;
+		}
+		.ViewSpaceCell {
+			width:10px;
+		}
+		.viewTextCell {
+			width:100%;
+		}
+		.viewTableCellText {
+			font-size:.7em; text-align:left; color:#2F2C2C; padding:2px 1px;
+		}
+		.viewTableTDContainer {
+			font-size:1.2em;
+		}
+		.viewTableHRTD, .viewTableHCTD { 
+			color:#FFFFFF; background-color:#19466E;
+		}
+		.viewTableHRTD a, .viewTableHCTD a { 
+			color:#FFFFFF; background-color:#19466E;
+		}
+		.viewTableHRTD a:hover, .viewTableHCTD a:hover { 
+			text-decoration:none;
+		}
+		.viewTableHRCellText, .viewTableHCCellText { 
+			color:#FFFFFF; background-color:#19466E;
+			font-size:.7em; font-weight:bold; text-align:left; padding:2px 1px;
+		}
+		.viewTableCellText a.viewLink {
+			font-size:1em;
+		}
+		/* ------- ELENCO LINK AD ANCORA ------- */
+		.viewAnchorList {
+			list-style-type:none; margin:5px 0 10px 5px; padding:0; clear:both; width:99%;
+		}
+		.viewAnchorList li {
+			margin:2px 0; padding:0 1px;
+		}
+		.viewAnchorList li a.viewAnchor {
+			background:none; padding:0; font-weight:normal;
+		}
+		a.viewAnchor {
+			font-size:.7em; font-weight:bold; padding:.2em 1px;
+		}
+		/* ------- RIGA VUOTA E DI SEPARAZIONE ------- */
+		.viewLineBreak { 
+			height:10px;
+		}
+		.viewHR { 
+			color:#223F5A; height:2px; 
+		}
+		/* ------- CORSIVO GRASSETTO ED EVIDENZIATO ------- */
+		.userFormat1 {
+			font-weight:bold; 
+		}
+		.userFormat2 {
+			font-style:italic; 
+		}
+		.userFormat3 {
+			color:#FFFFFF; background-color:#223F5A; padding:1px; 
+		}
+		/* ------- ELENCHI PUNTATI E NUMERATI ------- */
+			/* Tutte le liste */
+		.viewUL, .viewOL, .viewLI ul, .viewLI ol {
+			margin:0; padding:0 0 0 23px; 
+		}
+		.viewUL ol, .viewOL ol, .viewLI ul ol, .viewLI ol ol {
+			margin:0; padding:0 0 0 12px;
+		}
+		.viewLI ol li {
+			font-size:1em;
+		}
+		/* ------- PORZIONE DI INDICE ------- */
+		.viewIndexSlice ol {
+			list-style-type:none; margin:10px 0; padding:0;
+			font-size:.75em; font-weight:bold;
+		}
+		.viewIndexSlice ol li {
+			float:left; min-width:190px; 
+			margin:0 10px 10px 0; padding:7px; color:#2F2C2C;
+			background:transparent url(kAssetsUSR/img/Oggetti/Slice.gif) 0 0 repeat-y;
+		}
+		.viewIndexSlice ol li a {
+			color:#2F2C2C; background-color:transparent; text-decoration:none;
+		}
+		.viewIndexSlice ol li a:hover {
+			text-decoration:underline;
+		}
+		
+		/* ------- ELEMENTI PERSONALIZZATI DA "CM" ------- */	
+			/* BoxDimensioneFissa per testi a dimensione bloccata tipo privacy */
+
+		/* Costanti del Progetto */
+
+		/* --- Classi "prezzemolo" da usare ovunque --- */
+		.GoAway {
+			position:absolute; top:-10000px; left:-10000px;
+		}
+		.clear {
+			clear:both; width:99%; height:1px; line-height:.05em; font-size:.05em;
+		}
+		/* ------ SEZIONI AGGIUNTIVE ------ */
+			/* Sezione di fondo pagina per allineare i link */
+		.LinkAllineati {
+			text-align:center; margin:10px 0;
+		}
+		.LinkAllineati div {
+			display:inline;
+		}
+		.LinkAllineati div img {
+			margin:0 5px;
+		}
+		
+		/* -------- CANALI -------- */
+			/* -------- Elementi Generici -------- */
+		.ElencoCanale ol {
+			list-style-type:none; margin:0; padding:0; color:#2F2C2C; background-color:transparent; 
+		}
+		.ElencoCanale li {
+			margin:0 0 10px; font-size:.7em; min-height:1%; 
+		}
+		.ElencoCanale h3 {
+			font-size:1.1em; padding:0; margin:0 0 5px;
+		}
+		.ElencoCanale img {
+			float:left; padding:0 5px 5px 0;
+		}
+		.ElencoCanale a {
+			font-weight:bold;
+		}
+		.ElencoCanale p {
+			margin:0; padding:0;
+		}
+		.ElencoCanale p a {
+			color:#2F2C2C; background-color:transparent; font-weight:normal;
+		}
+			/* -------- Elencatore predefinito: NewsBlock -------- */
+		.NewsBlock {
+			width:100%; margin:7px 0; font-size:.7em; color:#2F2C2C; background-color:transparent;
+		}
+		.NewsBlockImgLeft {
+			float:left; margin:0 5px 5px 0;
+		}
+		.NewsBlockImgRight {
+			float:right; margin:0 0 5px 5px;
+		}
+			/* --- Elencatore "Notizie affiancate" --- */
+		.Affianca li {
+			float:left; margin-right:.2%; width:49.7%; 
+		}
+		.AffiancaImg img {
+			max-height:80px; max-width:120px; 
+		}
+			/* --- Elencatore "Foto Titolo Strillo" --- */
+		.ElencoCalendario {
+			margin:20px 0; padding-top:20px; border-top:1px solid #2F2C2C;
+		}	
+		.ElencoCalendario .CalendarioInt {
+			float:left; width:13em; font-size:.7em;
+		}	
+		.CalendarioInt .viewCalendar {
+			margin:0; padding:0;
+		}	
+		.CalendarioInt .viewCalendar div {
+			font-size:1.2em; color:#223F5A; background-color:transparent; text-align:center;
+		}	
+		.ElencoCalendario ol {
+			margin-left:13em; padding-left:15px;
+		}
+		.SezAgg .viewCalendar {
+			font-size:.9em; margin:0 auto;
+		}	
+			/* --- Elencatore "Primo Piano" --- */
+		.PrimoPiano img {
+			max-height:133px; max-width:200px; 
+		}	
+			/* -------- Paginazione -------- */
+		#ChannelPager {	
+			padding:10px 0; margin:10px 0; border-top:1px solid #2F2C2C;
+		}
+		#ChannelYearLabel, #ChannelMonthLabel, #ChannelDayLabel {
+			float:left; line-height:2em;
+		}
+		#ChannelYearList, #ChannelMonthList, #ChannelDayList {
+			clear:left;
+		}
+		#ChannelYearList ol li.ChannelSelItem strong {
+			margin:0 7px;
+		}
+		#ChannelPager ol { 	
+			list-style-type:none; border-left:1px solid #2F2C2C;	
+			margin:0; padding:0;
+		}
+		#ChannelPager li {	
+			margin:0; padding:0; border-right:1px solid #2F2C2C; float:left; line-height:2em;	
+		}
+		#ChannelPager a, #ChannelPager strong {	
+			font-weight:bold; margin:0 7px;
+		}
+		.ChannelSelItem span {	
+			padding:0 7px; font-weight:bold;
+		}
+		.ChannelEmptyItem span {
+			display:none;
+		}
+		#ChannelClear {	
+			clear:both; height:1px; line-height:.05em; font-size:.05em;
+		}
+		acronym, abbr {
+			border-bottom:none; cursor:help; 
+		}
+		.ImgStampa {
+			display:none;
+		}
+
+		.TDTop {
+			width:550px; text-align:center; padding:0 10px;
+		}	
+		.TDCent {
+			width:550px; font-size:1.3em; padding:10px;
+		}	
+		.TDBottom {
+			width:550px; text-align:center; padding:10px; font-size:.9em; font-weight:bold;
+		}	
+		.TDBottom a {
+			color:#0B3667;
+		}
+		.InfoLettera {
+			color:#575757; font-size:1.3em;
+		}
+	</style>
+</head>
+
+<body>
+
+	<table width="800" bgcolor="#f5f5f5" border="0" cellspacing="0" cellpadding="0">
+    	<tr>
+        	<td width="70">&nbsp;</td>
+            <td width="660">
+                <table width="660" border="0" cellspacing="0" cellpadding="0">
+                	<tr>
+                    	<td>
+                        	<p>Se non visualizzi il contenuto <a href="#">clicca qui</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#" title="Vai al sito FlexCMP"><img src="kAssetsUSR/img/Testata/TestataStampa.jpg" alt="Vai al sito FlexCMP" width="614" height="117" /></a><br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {CORPOPAGINA}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="{linkRemember}">Password dimenticata?</a> | <a href="{linkUserPage}">Cambia i tuoi dati personali</a> | <a href="{linkDelete}">Annulla l'iscrizione</a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        	<td width="70">&nbsp;</td>
+        </tr>
+	</table>
+
+</body>
+
+</html>

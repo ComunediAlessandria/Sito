@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="lang" defaultlang="IT">
+  <group id="snPHAdminForbidden" define="false">
+    <message id="title"
+    	lang:it="Accesso Negato"
+    	lang:en="Access Denied"
+    	lang:fr="Accès Refusé"
+    	lang:de="Zugriff verweigert"
+    	lang:es="Acceso denegado"
+    	lang:ru="доступ запрещен"
+    />
+    <message id="msg"
+    	lang:it="Non si posseggono abbastanza privilegi per poter accedere alla sezione di amministrazione del sito."
+    	lang:en="Not possess enough privileges to access the administration section of the site."
+    	lang:fr="Ne possèdent pas suffisamment de privilèges pour accéder à la section d'administration du site."
+    	lang:de="Nicht über ausreichende Berechtigungen, um den Administrationsbereich der Website zuzugreifen."
+    	lang:es="No poseer suficientes privilegios para acceder a la sección de administración del sitio."
+    	lang:ru="Не имеют достаточных привилегий для доступа администрации разделе сайта."
+    />
+  </group>
+</messages>

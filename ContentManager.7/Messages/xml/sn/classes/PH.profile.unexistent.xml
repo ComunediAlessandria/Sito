@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="lang" defaultlang="IT">
+	<group id="snPHProfileUnexistent" define="false">
+		<message id="header"
+			lang:it="Utente non Esistente"
+			lang:en="User non existent"
+			lang:fr="L'utilisateur n'existe pas"
+			lang:de="Benutzer existiert nicht"
+			lang:es="El usuario no existe"
+			lang:ru="Пользователь не существует"
+		/>
+		<message id="title"
+			lang:it="Utente non Esistente"
+			lang:en="User non existent"
+			lang:fr="L'utilisateur n'existe pas"
+			lang:de="Benutzer existiert nicht"
+			lang:es="El usuario no existe"
+			lang:ru="Пользователь не существует"
+		/>
+	</group>
+</messages>

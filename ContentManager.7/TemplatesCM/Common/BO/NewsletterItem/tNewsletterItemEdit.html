@@ -1,0 +1,76 @@
+<div id="AdminCorpoBox">
+	<h1>Scheda Newsletter</h1>
+	{ERR}
+	<form id="AdminFormBO" method="post" action="{ACTION}">
+
+		<div class="AdminFormBORowEven">
+			<label class="AdminFormBOLabel" for='{TAG_Name}'>{LBL_Name}</label>
+			<div class="AdminFormBOField">{VAL_Name}</div>
+		</div>
+
+		<div class="AdminFormBORowOdd">
+			<label class="AdminFormBOLabel" for='{TAG_BCPage}'>{LBL_BCPage}</label>
+			<div class="AdminFormBOField">{VAL_BCPage}</div>
+		</div>
+
+		<div class="AdminFormBORowEven">
+			<label class="AdminFormBOLabel" for='{TAG_IsPublic}'>{LBL_IsPublic}</label>
+			<div class="AdminFormBOField">{VAL_IsPublic}</div>
+		</div>
+
+		<div class="AdminFormBORowOdd">
+			<label class="AdminFormBOLabel" for='{TAG_SenderName}'>{LBL_SenderName}</label>
+			<div class="AdminFormBOField">{VAL_SenderName}</div>
+		</div>
+
+		<div class="AdminFormBORowEven">
+			<label class="AdminFormBOLabel" for='{TAG_SenderEmail}'>{LBL_SenderEmail}</label>
+			<div class="AdminFormBOField">{VAL_SenderEmail}</div>
+		</div>
+
+			<div class="AdminFormBORowOdd">
+				<label class="AdminFormBOLabel" for='{TAG_ReplyEmail}'>{LBL_ReplyEmail}</label>
+				<div class="AdminFormBOField">{VAL_ReplyEmail}</div>
+		</div>
+
+
+		<div class="AdminFormBORowEven">
+			<label class="AdminFormBOLabel" for='{TAG_IDAuthorGroup}'>{LBL_IDAuthorGroup}</label>
+			<div class="AdminFormBOField">{VAL_IDAuthorGroup}</div>
+		</div>
+
+		<div class="AdminFormBORowOdd">
+			<label class="AdminFormBOLabel" for='{TAG_IDSenderGroup}'>{LBL_IDSenderGroup}</label>
+			<div class="AdminFormBOField">{VAL_IDSenderGroup}</div>
+		</div>
+
+
+
+		<div class="AdminFormBORowEven">
+			<label class="AdminFormBOLabel" for='{TAG_TemplateEmail}'>{LBL_TemplateEmail}</label>
+			<div class="AdminFormBOField">{VAL_TemplateEmail}</div>
+		</div>
+
+		<div class="AdminFormBORowOdd">
+			<label class="AdminFormBOLabel" for='{TAG_TemplateBrowse}'>{LBL_TemplateBrowse}</label>
+			<div class="AdminFormBOField">{VAL_TemplateBrowse}</div>
+		</div>
+
+		<div class="AdminFormBORowEven">
+			<fieldset class="AdminFormBOFieldset">
+				<legend  class="AdminFormBOFieldsetLegend">{LBL_jCommunity}</legend>
+				<div>{VAL_jCommunity}</div>
+			</fieldset>
+		</div>
+
+		<div class="AdminFormBORowOdd">
+			<label class="AdminFormBOLabel" for='{TAG_IDSource}'>{LBL_IDSource}</label>
+			<div class="AdminFormBOField">{VAL_IDSource}</div>
+		</div>
+
+		<div class="AdminPageFooterCommand">
+			{HIDDEN} <input name="Submit" type="submit" value="Salva le modifiche" />
+			<input name="btnCancel" type="submit" value="Annulla le modifiche" />
+		</div>
+	</form>
+</div>

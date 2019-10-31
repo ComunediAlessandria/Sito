@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE FlexCMPMessages SYSTEM '/FlexCMPMessages.dtd'>
+<messages xmlns:lang="#" defaultlang="it">
+
+	<group id='[...]' define='false'>
+
+		<message id='[...]' lang:it='[...]' lang:en='[...]' />
+
+		<!-- esempio di messaggio lungo/con HTML -->
+		<message id='[...]'>
+			<trans lang='it'><![CDATA[
+				[...]
+
+					Riferimento al secondo parametro: %2$s
+
+			]]></trans>
+			<trans lang='en'><![CDATA[
+				[...]
+			]]></trans>
+		</message>
+
+	</group>
+
+	<group id='[...]' define='false'>
+
+	</group>
+
+	<group id='[...]' superseeds='Messages.BLOBList.xml' define='false'>
+
+	</group>
+
+	<group id='[...]' scope='json' define='false'>
+
+	</group>
+
+</messages>

@@ -1,0 +1,59 @@
+[[:section:frame:]]
+
+	{page}
+
+[[:section:page:]]
+
+<div class='row-fluid'>
+	<div class='span12 well well-small'>
+
+		<div class='row-fluid'>
+			<div class='span10 offset1'>
+				{err}
+			</div>
+		</div>
+
+		<div class='row-fluid form-horizontal'>
+
+			<div class="control-group">
+				<label class="control-label" for="inputEmail">_(api-keys-edit.lbl-api-key)_</label>
+				<div class="controls" style='padding-top: 5px'>
+					<code style='font-size: 1.2em'>{apikey}</code>
+				</div>
+			</div>
+
+			<div class="control-group">
+				<label class="control-label" for="dtExpire">_(api-keys-edit.lbl-expiry)_</label>
+				<div class="controls">
+					[[ id: dtExpire, kind: DTChooser, mode: dt, format: dbmysql, allownull: false ]]
+				</div>
+			</div>
+
+			<div class="control-group">
+				<label class="control-label" for="permissions">_(api-keys-edit.lbl-permissions)_</label>
+				<div class="controls">
+					[[ id: permissions, kind: FlexPermissions ]]
+				</div>
+			</div>
+
+			<div class="control-group">
+				<label class="control-label" for="notes">_(api-keys-edit.lbl-notes)_</label>
+				<div class="controls">
+					[[ id: notes, kind: textarea, class:'span12' ]]
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+</div>
+
+<div class='well well-small'>
+	<div class='row-fluid'>
+		<div class='span2 offset10'>
+			[[ id: btnCancel, kind: Submit, value: _q(api-keys-edit.bcn)_, class:'btn' ]]
+			&nbsp;&nbsp;&nbsp;
+			[[ id: btnNext, kind: Submit, value: _q(api-keys-edit.bok)_, class:'btn btn-primary' ]]
+		</div>
+	</div>
+</div>

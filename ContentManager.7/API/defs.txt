@@ -1,0 +1,174 @@
+FlexAPIBLOBElement.inc.php:class FlexAPIBLOBElement extends clsBLOBElement {}
+
+FlexAPICommunities.inc.php:class FlexAPICommunities {
+FlexAPICommunities.inc.php:class apiCommunities extends FlexAPICommunities {}
+
+FlexAPICUser.inc.php:class FlexAPICUser {
+
+FlexAPIDB.inc.php:class FlexAPIDB {
+FlexAPIDB.inc.php:class apiDB extends FlexAPIDB {}
+
+FlexAPIFlexUsers.inc.php:class FlexAPIFlexUsers {
+FlexAPIFlexUsers.inc.php:class apiFlexUsers extends FlexAPIFlexUsers {}
+
+FlexAPIFormControls.inc.php:class FlexAPIFormControls {
+
+FlexAPIFormManager.inc.php:class FlexAPIFormManager extends HTMLFormMgr {
+FlexAPIFormManager.inc.php:class apiFormManager extends FlexAPIFormManager {}
+* FlexAPIFormManager.inc.php:class FormObjectError extends HTMLFormObject {
+
+FlexAPIBLOBObject.inc.php:class apiBLOBObject {
+* FlexAPIBLOBObject.inc.php:class apiBElMapper {
+* FlexAPIBLOBObject.inc.php:class apiBElMapperSerializedMap extends apiBElMapper {
+* FlexAPIBLOBObject.inc.php:class apiBElMapperContainer extends apiBElMapperSerializedMap {
+
+FlexAPIi18nTable.inc.php:class FlexAPIi18nTable extends i18nDB {}
+* FlexAPIi18nTable.inc.php:class apiDBTable extends i18nDB {}
+* FlexAPIi18nTable.inc.php:class i18nDB {
+* FlexAPIi18nTable.inc.php:class i18nDBTransaction extends i18nDB {
+* FlexAPIi18nTable.inc.php:class sql {
+* FlexAPIi18nTable.inc.php:class i18nTable {
+
+FlexAPIi5Apps.inc.php:class FlexAPIi5Apps {
+* FlexAPIi5Apps.inc.php:class FlexAPIi5AppPrg {
+* FlexAPIi5Apps.inc.php:class FlexAPIi5AppError {
+
+FlexAPILang.inc.php:class FlexAPILang {
+FlexAPILang.inc.php:class apiLang extends FlexAPILang {}
+* FlexAPILang.inc.php:class l10n extends FlexAPILang {}
+
+FlexAPILister.inc.php:class FlexAPILister extends apiListerBase {}
+FlexAPILister.inc.php:class apiLister extends apiListerBase {}
+* FlexAPILister.inc.php:class apiListerBase extends xLister {
+* FlexAPILister.inc.php:class xWizardElPaginatorShort Extends xWizardElPaginator {
+* FlexAPILister.inc.php:class xWizardElTotRec extends HTMLFormObject {
+
+FlexAPIMail.inc.php:class FlexAPIMail {
+FlexAPIMail.inc.php:class apiMail extends FlexAPIMail {}
+* FlexAPIMail.inc.php:class FlexAPIMailAttachment {
+* FlexAPIMail.inc.php:class FlexAPIMailTemplate {
+* FlexAPIMail.inc.php:class apiMailTemplate extends FlexAPIMailTemplate {}
+
+FlexAPIMD.inc.php:class FlexAPIMD {
+FlexAPIMD.inc.php:class apiMD extends FlexAPIMD {}
+
+FlexAPIPage.inc.php:class FlexAPIPage {
+FlexAPIPage.inc.php:class apiPage extends FlexAPIPage {}
+
+FlexAPISQ.inc.php:class FlexAPISQ extends sqAPI {}
+
+FlexAPITemplate.inc.php:class FlexAPITemplate extends apiTemplateBase {}
+FlexAPITemplate.inc.php:class apiTemplate extends apiTemplateBase {}
+* FlexAPITemplate.inc.php:class apiTemplateBase extends xTemplateBundle {
+
+FlexAPIUser.inc.php:class FlexAPIUser {
+FlexAPIUser.inc.php:class apiUser extends FlexAPIUser {}
+
+FlexAPIWizard.inc.php:class apiWizard extends xWizard {
+FlexAPIWizard.inc.php:class FlexAPIWizard extends apiWizard {}
+* FlexAPIWizard.inc.php:class apiWizardPage extends xWizardPage {
+* FlexAPIWizard.inc.php:class FlexAPIWizardMessages extends xWizardMessages {}
+* FlexAPIWizard.inc.php:class HTMLFormWizardAggregate extends HTMLFormObjectAggregate {
+
+FlexAPIWizardOnePage.inc.php:class FlexAPIWizardOnePage extends apiWizardOnePageBase {}
+FlexAPIWizardOnePage.inc.php:class apiWizardOnePage extends apiWizardOnePageBase {}
+* FlexAPIWizardOnePage.inc.php:class apiWizardOnePageBase extends xWizardOnePage {
+
+
+
+
+
+
+
+FlexAPIFlexCU.inc.php:class FlexAPIFlexCU {
+FlexAPIFlexCU.v2.inc.php:class FlexAPIFlexCU {
+FlexAPIFlexCU.v2.inc.php:class apiFlexCU extends FlexAPIFlexCU {}
+
+** eccezione ** FlexAPIflexDB.inc.php:class flexDB extends dbTransactional {
+
+
+include/IterableRSCommunity.php:class apiIterableRSCommunity extends apiIterableRS {
+include/IterableRS.php:// la decodifica dei singoli record può essere fatta in due modi: o usando la classe
+include/IterableRS.php:// override del metodo current della classe apiIterableRS
+include/IterableRS.php:class apiIterableRS implements Iterator {
+include/IterableRS.php:class apiIterableRSDecoded extends apiIterableRS {
+include/_dbDrvMySQLi.php:class dbDrvMySQLi extends dbDriver {
+include/IterableRSFlexUser.php:class apiIterableRSFlexUser extends apiIterableRS {
+include/_dbDrvDB2i.php:class dbDrvDB2i extends dbDriver {
+include/dbg.php:class FlexAPIdbg {
+include/dbg.php:		$function = (isset($t[6]['class']) ? ($t[6]['class'] . '::') : '') . (isset($t[6]['function']) ? $t[6]['function'] : '[MAIN]');
+include/dbg.php:		return "<a href='#' onclick='$(\"#" . $id . "\").show(); return false;'>*</a>|<span id='" . $id . "' class='where'>" . $h . ': </span>' . $c;
+include/dbg.php:		return "\n<div class='line'>\n\t"
+include/dbg.php:			$o = "<pre class='dump'>" . htmlentities(print_r($v, true), ENT_NOQUOTES, encoding) . '</pre>';
+include/dbg.php:			$o = "<pre class='dump'>" . htmlentities(print_r($v, true), ENT_NOQUOTES, encoding) . '</pre>';
+include/dbg.php:			"sprintf('[<span class=\"utf\">%02x %02x %02x</span>] ', ord('\\1'), ord('\\2'), ord('\\3'))",
+include/dbg.php:			"sprintf('[<span class=\"utf\">%02x %02x</span>] ', ord('\\1'), ord('\\2'))",
+include/UserPage.php:class FlexUserPage extends clsFlexPage {
+include/UserPage.php:		 * Imposta la classificazione per una pagina in modo che possa essere indicizzata
+include/UserPage.php:		 * dal motore di ricerca e possa fornire diverse classificazioni a seconda del
+include/UserPage.php:		 * @param mixed $ids singolo id di classificazione o array di id di classificazione
+include/UserPage.php:class OGTag {
+include/UserPage.php:class TCTTag {
+include/_dbDrvODBCDB2i.php:class dbDrvODBCDB2i extends dbDriver {
+include/ArrayRecord.php:// classe che incapsula un array usata per i record (ma forse da generalizzare nelle api)
+include/ArrayRecord.php:class apiArrayRecord implements ArrayAccess {
+include/ArrayRecord.php:class apiArrayRecordCP implements ArrayAccess, iToArray {
+include/ArrayRecord.php:		$o = array('Object of class <em>apiArrayRecordCP</em>');
+include/BElMappers/clsblobelementdownload.php:class apiBElMapperclsblobelementdownload extends apiBElMapperSerializedMap {
+include/BElMappers/clsblobelementrepositoryobject.php:class apiBElMapperclsblobelementrepositoryobject extends apiBElMapperSerializedMap {
+include/BElMappers/clsblobelementgpalbum.php:class apiBElMapperclsblobelementgpalbum extends apiBElMapperSerializedMap {
+include/BElMappers/clsblobelementpar.php:class apiBElMapperclsblobelementpar extends apiBElMapperSerializedMap {
+include/BElMappers/clsblobelementhr.php:class apiBElMapperclsblobelementhr extends apiBElMapperSerializedMap {
+include/BElMappers/clsblobelementanchor.php:class apiBElMapperclsblobelementanchor extends apiBElMapperSerializedMap {
+include/BElMappers/clsblobpageinfo.php:class apiBElMapperclsblobpageinfo extends apiBElMapperSerializedMap {
+include/BElMappers/clsblobpageinfo.php:		'classification:10:array/classification',
+include/BElMappers/clsblobelementfeedlink.php:class apiBElMapperclsblobelementfeedlink extends apiBElMapperSerializedMap {
+include/BElMappers/clsblobelementyoutube.php:class apiBElMapperclsblobelementyoutube extends apiBElMapperSerializedMap {
+include/BElMappers/clsblobelementcshow.php:class apiBElMapperclsblobelementcshow extends apiBElMapperSerializedMap {
+include/BElMappers/clsblobelementimg.php:class apiBElMapperclsblobelementimg extends apiBElMapperSerializedMap {
+include/BElMappers/clsblobelementelencocanali.php:class apiBElMapperclsblobelementelencocanali extends apiBElMapperSerializedMap {
+include/BElMappers/clsblobelementelencocanali.php:		'classification:~channels:array/classification, classification-mode:$mMode:string, filter:$subset:int',
+include/BElMappers/clsblobelementanchorlist.php:class apiBElMapperclsblobelementanchorlist extends apiBElMapperSerializedMap {}
+include/BElMappers/clsblobelementrssimporter.php:class apiBElMapperclsblobelementrssimporter extends apiBElMapperSerializedMap {
+include/BElMappers/clsblobelementanchorlink.php:class apiBElMapperclsblobelementanchorlink extends apiBElMapperSerializedMap {
+include/BElMappers/clsblobelementpageimporter.php:class apiBElMapperclsblobelementpageimporter extends apiBElMapperSerializedMap {
+include/BElMappers/clsblobelementcontainernamed.php:class apiBElMapperclsblobelementcontainernamed extends apiBElMapperContainer {
+include/BElMappers/clsblobelementtitle.php:class apiBElMapperclsblobelementtitle extends apiBElMapperSerializedMap {
+include/BElMappers/clsblobelementcinsert.php:class apiBElMapperclsblobelementcinsert extends apiBElMapperSerializedMap {
+include/BElMappers/clsblobelementcontainerconditioned.php:class apiBElMapperclsblobelementcontainerconditioned extends apiBElMapperContainer {
+include/BElMappers/clsblobelementnavaxes.php:class apiBElMapperclsblobelementnavaxes extends apiBElMapperSerializedMap {
+include/BElMappers/clsblobelementnavaxes.php:		'classification:*7:array/classification, axe:*4:id/id-axe, filter:*6:int, sort-field:*5:string/md-field',
+include/BElMappers/clsblobelementimgrow.php:class apiBElMapperclsblobelementimgrow extends apiBElMapperSerializedMap {
+include/BElMappers/clsblobelementindexslice.php:class apiBElMapperclsblobelementindexslice extends apiBElMapperSerializedMap {
+include/BElMappers/clsblobelementgpalbumlist.php:class apiBElMapperclsblobelementgpalbumlist extends apiBElMapperSerializedMap {
+include/BElMappers/clsblobelementtable.php:class apiBElMapperclsblobelementtable extends apiBElMapperSerializedMap {
+include/BElMappers/clsblobelementvideo.php:class apiBElMapperclsblobelementvideo extends apiBElMapperSerializedMap {
+include/BElMappers/clsblobelementvco.php:class apiBElMapperclsblobelementvco extends apiBElMapperSerializedMap {
+include/BElMappers/clsblobelementglociset.php:class apiBElMapperclsblobelementglociset extends apiBElMapperSerializedMap {
+include/BElMappers/clsblobelementglociset.php:		'classification:~classification:array/classification',
+include/BElMappers/clsblobelementglociset.php:		'frontend-configuration:*fecl:string/???, frontend-classification:*feclids:array/classification',
+include/BElMappers/clsblobelementglociset.php:	protected function classification() {
+include/BElMappers/clsblobelementcalendar.php:class apiBElMapperclsblobelementcalendar extends apiBElMapperSerializedMap {
+include/BElMappers/clsblobelementcalendar.php:	protected $map = 'classification:0:array/classification, classification-mode:1, targetpage:2:string/pagedesc';
+include/BElMappers/clsblobelementgpgallerylist.php:class apiBElMapperclsblobelementgpgallerylist extends apiBElMapperSerializedMap {
+include/BElMappers/clsblobelementinternallink.php:class apiBElMapperclsblobelementinternallink extends apiBElMapperSerializedMap {
+include/BElMappers/clsblobelementforum.php:class apiBElMapperclsblobelementforum extends apiBElMapperSerializedMap {
+include/BElMappers/clsblobelementembed.php:class apiBElMapperclsblobelementembed extends apiBElMapperSerializedMap {
+include/BElMappers/clsblobelementtext.php:class apiBElMapperclsblobelementtext extends apiBElMapperSerializedMap {
+include/BElMappers/clsblobelementtablecontainer.php:class apiBElMapperclsblobelementtablecontainer extends apiBElMapperContainer {
+include/BElMappers/clsblobelementimgpar.php:class apiBElMapperclsblobelementimgpar extends apiBElMapperSerializedMap {
+include/BElMappers/clsblobelementbr.php:class apiBElMapperclsblobelementbr extends apiBElMapperSerializedMap {
+include/BElMappers/mainContainer.php:class apiBElMapperMainContainer extends apiBElMapperContainer {
+include/BElMappers/clsblobelementgloci.php:class apiBElMapperclsblobelementgloci extends apiBElMapperSerializedMap {
+include/BElMappers/clsblobelementgloci.php:		'classification-override:~cloverride:array/classification',
+include/BElMappers/clsblobelementrepositorylist.php:class apiBElMapperclsblobelementrepositorylist extends apiBElMapperSerializedMap {
+include/BElMappers/clsblobelementrepositorylist.php:	protected $map = 'classification:~channels:array/classification, items-kind:~mykind:array';
+include/AdminPage.php:class FlexAdminPage extends boAdminPage {
+include/IterableRSFlexCUser.php:class apiIterableRSFlexCUser extends apiIterableRS {
+readme.txt:		in relazione alla classificazione del motore di ricerca
+readme.txt:	- aggiunta la classe uCTemplate, lightweighting template basato su uTemplate in grado di usare
+readme.txt:	- nuova classe per la gestione delle community Flex (FlexAPICommunities)
+readme.txt:	- prima versione della classe per la gestione degli utenti Flex Locali, compresi gruppi e permessi:
+readme.txt:	- abbreviazioni naming per le classi (i vecchi nomi sono deprecati nella 1.1):
+readme.txt:	La funzione CommunityCurrentUserData(), CommunityMemberOf() e isCommunityUser() della classe non sono più supportate.
+readme.txt:	Funzioni e classi deprecate rimangono disponibili nella 1.1, ma potrebbero non esserlo più nelle successive versioni.

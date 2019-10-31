@@ -1,0 +1,21 @@
+
+:meta[[
+	subject: ':DescriptionFromUID[[{uid}]] ha inserito un nuovo commento',
+	css:	'./css/mail.css'
+]]
+
+<p class='snMailTitle'>
+	:NameLinkFromUID[[{uid}]] ha inserito un nuovo commento:
+</p>
+<p class='snMailText'>
+	{text}
+</p>
+<p>
+	Per visualizzare il thread di discussione segui
+	:a[[
+		href: 'post/show/{postid}',
+		content: 'questo',
+		title: 'Visualizza'
+	]]
+	link.
+</p>

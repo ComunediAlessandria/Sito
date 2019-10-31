@@ -1,0 +1,52 @@
+/* Required Stylesheets */
+.wheel {
+	position: relative;
+	top: 10px;
+	margin: 0 0 0 10px;
+	padding: 0;
+	list-style-type: none;
+}
+.wheel-button:focus, .wheel-button:active {
+	outline: none;
+}
+.wheel, .wheel li, .wheel li a {
+	display: inline-block;
+}
+.wheel li {
+	margin-left: 10px;
+}
+.wheel li:first-child {
+	margin-left: 10px;
+}
+.wheel li a {
+	display: block;
+	margin: 0 auto;
+
+}
+@media screen and (min-width: 768px) {
+	.wheel {
+		top: 5px;
+		margin-left: 0;
+	}
+		.wheel-button {
+	  	position: relative;
+		display: block;
+	}
+	#socialWheel {
+		pos__ition: absolute!important;
+	}
+	.wheel {
+	  margin: 0;
+	  padding: 0;
+	  list-style: none;
+	  position: relative;
+	  display: none;
+	}
+	.wheel li {
+	  overflow: hidden;
+	  float:left;
+	}	
+	.wheel li a {
+	  display: block;
+	}
+}

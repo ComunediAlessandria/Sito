@@ -1,0 +1,107 @@
+<search>
+	<!--
+
+		Definizione di un form e dei relativi parametri
+
+			id: id univoco
+			template: template da usare
+
+			clconfiguration: configurazione da usare (cfr: axes.xml)
+			clrefine: id dell'asse da usare nella raffinazione
+			clpresel: id preselezionati negli assi
+			clfilter: insieme di id per il filtraggio dei risultati
+			clfilterhidden: come 'clfilter', ma non vengono mostrati nella descrizione dei risultati
+	-->
+	<form
+		id='1'
+		template='tSearchForm.v3.html'
+
+		clconfiguration='searchclassification'
+		clrefine='searchrefine'
+	>
+	</form>
+
+	<form
+		id='2'
+		template='tSearchForm.v3.onlytext.html'
+	/>
+
+	<!--
+
+		Definizione di un set di risultati
+
+		id: id univoco
+		template: template da usare
+
+		maxresults: massimo numero di pagine
+		itemsperpage: numero di risultati per pagina
+
+	-->
+	<results
+		id='1'
+		template='tSearchResult.v3.html'
+		maxresults='100'
+		itemsperpage='10'
+	>
+	</results>
+
+	<!--
+
+		Definizione di una pagina di ricerca (form + risultati)
+
+		id: id univoco
+		template: template da usare
+
+		form: id del form da usare
+		results: id dei risultati da usare
+
+		title: titolo della pagina
+		breadcrumb: valore da inserire nel BC
+
+		NOTA: alcuni valori possono essere personalizzati per lingua.
+
+				title-it='Risultato della Ricerca'
+				title-en='Search Result'
+
+			Viene dapprima cercato il valore nella lingua corrente, poi un eventuale valore
+			senza lingua e se nessuno viene trovato, viene usato un default.
+
+			Valori che supportano la lingua:
+
+				- title
+				- breadcrumb
+
+		'sort' specifica l'ordinamento di default (rel, mw, lm)
+	-->
+
+	<page
+		id='1'
+		template='Main.html'
+
+		form='1'
+		results='1'
+
+		title='Risultato della Ricerca'
+		breadcrumb='Risultato della Ricerca'
+
+		sort='rel'
+	/>
+
+	<!--
+
+		Definizione di un pannello di ricerca
+
+		id: id univoco
+		form: form da utilizzare
+		page: page da utilizzare
+
+		showinsearchpage: mostra nella pagina di ricerca
+	-->
+	<panel
+		id='1'
+		form='2'
+		page='1'
+		showiinsearchpage='true'
+	/>
+
+</search>

@@ -1,0 +1,25 @@
+<div id="AdminCorpoBox">
+	<h1>Sondaggi</h1>
+	<div class="AdminPageFooterCommand"><a href="{ADDLINK}">{ADDIMG}Aggiungi un nuovo Sondaggio</a></div>
+	  <table class="AdminTable" summary="Tabella contenente l'elenco dei Sondaggi: nella prima colonna sono contenuti i comandi di eliminazione e modifica del sondaggio.">
+		<thead>
+		  <tr> 
+			<th scope="col" class='AdminIcoCell'>Azioni</th>
+			<th scope="col">Titolo Sondaggio</th>
+			<th scope="col">Numero Voti</th>
+		  </tr>
+		</thead>
+		<tbody>
+	  <!-- BEGIN row -->
+	  <tr class="{CLASSTR}"> 
+		<td class='AdminIcoCell'>{DELLINK} {MODLINK}</td>
+		<th scope="row">{TITOLO}</th>
+		<td>{NUMVOTI}</td>
+	  </tr>
+	  <!-- END row -->
+		</tbody>
+	</table>
+	<div class="AdminPageFooterCommand"><a href="{ADDLINK}">{ADDIMG}Aggiungi un nuovo Sondaggio</a></div>
+</div>
+<div class="AdminPageFooterStatus"> NUMERO SONDAGGI PRESENTI: {TOTRECORDS} </div>
+<div>{PAGESELECTOR} </div>

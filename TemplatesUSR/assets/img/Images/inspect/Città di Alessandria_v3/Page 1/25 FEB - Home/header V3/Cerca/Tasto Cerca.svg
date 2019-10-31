@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 53.2 (72643) - https://sketchapp.com -->
+    <title>B34AFD30-26B0-4E2E-BB3C-754043C94D84</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <polygon id="path-1" points="18.191 17.356 18.191 0 9.51345 0 0.8359 0 0.8359 17.356 18.191 17.356"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="25-FEB---Home" transform="translate(-1181.000000, -80.000000)">
+            <g id="header-V3">
+                <g id="Cerca" transform="translate(897.000000, 80.000000)">
+                    <g id="Tasto-Cerca" transform="translate(284.000000, 0.000000)">
+                        <rect id="Rectangle-6" fill="#E2253F" x="0" y="0" width="48" height="48"></rect>
+                        <g id="Page-1" transform="translate(11.000000, 12.000000)">
+                            <g id="Group-3" transform="translate(6.000000, 0.000000)">
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#path-1"></use>
+                                </mask>
+                                <g id="Clip-2"></g>
+                                <path d="M5.3579,4.521 C4.2469,5.63 3.6349,7.107 3.6349,8.679 C3.6349,10.248 4.2469,11.725 5.3579,12.835 C6.4689,13.944 7.9449,14.556 9.5149,14.556 C11.0849,14.556 12.5609,13.944 13.6709,12.835 C15.9629,10.542 15.9629,6.813 13.6709,4.521 C12.5609,3.411 11.0849,2.799 9.5149,2.799 C7.9449,2.799 6.4689,3.411 5.3579,4.521 M3.3789,14.814 C1.7389,13.175 0.8359,10.995 0.8359,8.679 C0.8359,6.359 1.7389,4.18 3.3789,2.541 C5.0179,0.902 7.1959,0 9.5149,0 C11.8319,0 14.0119,0.902 15.6509,2.541 C17.2889,4.18 18.1919,6.359 18.1919,8.679 C18.1919,10.995 17.2889,13.175 15.6509,14.814 C14.0119,16.453 11.8319,17.356 9.5149,17.356 C7.1959,17.356 5.0179,16.453 3.3789,14.814" id="Fill-1" fill="#FFFFFF" mask="url(#mask-2)"></path>
+                            </g>
+                            <path d="M12,13 L2,23" id="Fill-4" fill="#3F3A31"></path>
+                            <polygon id="Fill-6" fill="#FFFFFF" points="1.89955434 25 12 14.9004199 10.1004457 13 0 23.1006084"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

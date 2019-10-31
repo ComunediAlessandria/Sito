@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="it">
+	<group id="bmm" define="false">
+
+		<!-- Vimeo -->
+
+		<message id="vdesc" lang:it="Vimeo" lang:en="Vimeo" />
+
+		<message id="vid" lang:it="URL" lang:en="URL" />
+		<message id="vap" lang:it="Avvia al Caricamento (autoplay)" lang:en="Video Autoplay" />
+		<message id="vlo" lang:it="Riproduci in continuazione (loop)" lang:en="Video Loop" />
+
+		<!-- ISSUU -->
+
+		<message id="idesc" lang:it="ISSUU" lang:en="ISSUU" />
+		<message id="iid" lang:it="URL" lang:en="URL" />
+
+
+		<!-- Slideshare -->
+
+		<message id="ssdesc" lang:it="Slideshare" lang:en="Slideshare" />
+		<message id="ssid" lang:it="Identificativo Deck o URL" lang:en="Deck ID or URL" />
+		<message id="ssss" lang:it="Slide Iniziale" lang:en="Start with Slide" />
+
+		<!-- Common -->
+		<!--
+		<message id="wi" lang:it="Larghezza" lang:en="Width" />
+		<message id="he" lang:it="Altezza" lang:en="Slideshare" />
+		-->
+
+		<message id="sz" lang:it="Dimensioni" lang:en="Size" />
+		<message id="szm" lang:it="Dimensioni Massime" lang:en="Maximum Size" />
+
+	</group>
+</messages>

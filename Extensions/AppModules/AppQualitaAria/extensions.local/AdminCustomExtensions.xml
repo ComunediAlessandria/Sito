@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<menu>	
+	<item
+			id='AppQualitaAriaList'
+			description='Qualit&#224; dell&apos;aria'
+			url='ext:AppModules/AppQualitaAria/pages/quariaList.php'
+			pars=''
+			permission='QUARIA'
+		>
+			<BOequiv>
+				<item bo='File=quariaList.php'	menuid='AppQualitaAriaList'		/>
+			</BOequiv>
+			<![CDATA[
+				Qualit&#224; dell&apos;aria
+			]]>
+
+		<item
+			id='AppQualitaAriaEdit'
+			description='Scheda rilevazione Qualit&#224; dell&apos;aria'
+			url='ext:AppModules/AppQualitaAria/pages/quariaList.php'
+			pars=''
+			permission='QUARIA'
+		>
+			<BOequiv>
+				<item bo='File=quariaEdit.php'	menuid='AppQualitaAriaEdit'		/>
+			</BOequiv>
+			<![CDATA[
+				Scheda rilevazione Qualit&#224; dell&apos;aria
+		]]>
+		</item>
+	</item>
+	<item
+			id='AppQualitaAriaMisureAntismogList'
+			description='Misure Antismog'
+			url='ext:AppModules/AppQualitaAria/pages/misureAntismogList.php'
+			pars=''
+			permission='QUARIAMIANSM'
+		>
+			<BOequiv>
+				<item bo='File=misureAntismogList.php'	menuid='AppQualitaAriaMisureAntismogList'		/>
+			</BOequiv>
+			<![CDATA[
+				Misure Antismog
+			]]>
+
+		<item
+			id='AppQualitaAriaMisAntismogEdit'
+			description='Scheda misure antismog'
+			url='ext:AppModules/AppQualitaAria/pages/misureAntismogEdit.php'
+			pars=''
+			permission='QUARIAMIANSM'
+		>
+			<BOequiv>
+				<item bo='File=misureAntismogEdit.php'	menuid='AppQualitaAriaMisAntismogEdit'		/>
+			</BOequiv>
+			<![CDATA[
+				Scheda misure antismog
+		]]>
+		</item>
+	</item>
+	
+</menu>

@@ -1,0 +1,96 @@
+
+<!-- BEGIN CommunitySearchForm -->
+<h1>__(pgcul.pt)</h1>
+
+<div class='AdminPageFooterCommand'>
+
+	<form method='post'>
+			<label for='frmCom'>__(.flt)</label>
+
+			{SelettoreCom}
+
+			<input type="submit" name="Aggiorna" value="__(.upd)"  />
+			<input type="submit" name="xls" value="__(.exp)" />
+			<input type="submit" name="csv" value="__(.expcsv)" />
+
+			<div> &nbsp; </div>
+
+			<fieldset>
+				<legend> __(.lmt) </legend>
+
+				<label for='frmNome'>__(.name):</label>
+				<input type='text' value='{frmNome}' name='frmNome' id='frmNome' maxlength='50' size='20' />
+
+				<label for='frmCognome'>__(.sur):</label>
+				<input type='text' value='{frmCognome}' name='frmCognome' id='frmCognome' maxlength='50' size='20' />
+
+				<label for='frmUsername'>__(.user):</label>
+				<input type='text' value='{frmUsername}' name='frmUsername' id='frmUsername' maxlength='50' size='20' />
+
+				<label for='frmEmail'>__(.email):</label>
+				<input type='text' value='{frmEmail}' name='frmEmail' id='frmEmail' maxlength='50' size='20' />
+
+			</fieldset>
+
+			<input type='hidden' name='frmHaveData' value='OK' />
+	</form>
+
+</div>
+
+<!-- END CommunitySearchForm -->
+
+
+
+
+<!-- BEGIN TableEmpty -->
+<p>__(.none).</p>
+<!-- END TableEmpty -->
+
+<!-- BEGIN TableHeader -->
+	<div class="AdminPageFooterCommand"><a href="{ADDLINK}">{ADDIMG} __(.add)</a></div>
+	  <table class="AdminTable" summary="__(.td)">
+		<thead>
+		  <tr>
+			<th scope="col" class='AdminIcoCell'>__(.tha)</th>
+			<th scope="col" >__(.ths)</th>
+			<th scope="col" >__(.thn)</th>
+			<th scope="col" >__(.thu)</th>
+			<th scope="col" >__(.the)</th>
+			<th scope="col" >__(.then)</th>
+			<th scope="col" >__(.thc)</th>
+			<th scope="col" >__(.thdi)</th>
+
+		  </tr>
+		</thead>
+		<tbody>
+
+<!-- END TableHeader -->
+
+<!-- BEGIN TableRow -->
+		  <tr class="{CLASSTR}">
+			<td class='AdminIcoCell'>{DELLINK} {MODLINK}</td>
+			<td>{Cognome}</td>
+			<td>{Nome}</td>
+			<td>{Username}</td>
+			<td>{email}</td>
+			<td class="BLOBWidthTDN10"><div class="BLOBALignCenter">{Enabled}</div></td>
+			<td>{CommunityNames}</td>
+			<td>{DataInserimento}</td>
+		  </tr>
+<!-- END TableRow -->
+
+
+<!-- BEGIN TableFooter -->
+		</tbody>
+	</table>
+<!-- END TableFooter -->
+
+<!-- BEGIN Footer -->
+	<div class="AdminPageFooterCommand"><a href="{ADDLINK}">{ADDIMG} __(.add)</a></div>
+
+	<div class="AdminPageFooterStatus"> __(.num): {TOTRECORDS}</div>
+
+	<div>{PAGINATORE}</div>
+
+</div>
+<!-- END Footer -->

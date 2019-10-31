@@ -1,0 +1,7 @@
+Nuova gestione opzionale delle cache attraverso server memcached anzich&egrave; su file system. Richiede l'installazione di un server memcached. 
+
+Migliorati i meccanismi di copia e incolla del testo formattato negli oggetti Paragrafo, [SottoTitolo + Paragrafo] + Immagine, Testo Personalizzato. <br />Ora &egrave; possibile copiare ed incollare testo tra questi oggetti manenendo il grassetto, il corsivo  ed i link (compatibilit&agrave; piena con i browser Internet Explorer versione 6 o successiva).
+
+Abilitato il copia e incolla del testo formattato da Microsoft Word all'interno dell'oggetto Paragrafo.<br />Automaticamente vengono riconosciuti e creati gli oggetti Titolo di primo, secondo e terzo livello, i paragrafi, le tabelle. Vengono matenuti da word anche grassetto, corsivo e link.<br />Eventuali caratteri non SGML validi come ad esempio le virgolette ed l'apostrofo utilizzati da Microsoft Word vengono convertiti negli equivalenti caratteri validi.   
+
+Correzione di alcuni bug.

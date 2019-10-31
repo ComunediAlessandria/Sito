@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="it">
+	<group id="bimgrow" define="false">
+		<message id="ci" lang:it="Caricamento Immagine n. %s" lang:en="Upload Image n. %s" lang:es="Cargar imagenes n. %s"/>
+		<message id="rdsi" lang:it="Riga di %s immagini" lang:en="Line of %s images" lang:es="Linea de %s imagenes"/>
+		<message id="elisdos" lang:it="Elimina l'immagine %s dell'oggetto %s" lang:en="Delete image %s in item %s" lang:es="Elimina l'immagine %s dell'oggetto %s"/>
+
+		<message id="in" lang:it="Numero Immagini" lang:en="Number of Images" lang:es="[es] Number of Images"/>
+
+	</group>
+</messages>

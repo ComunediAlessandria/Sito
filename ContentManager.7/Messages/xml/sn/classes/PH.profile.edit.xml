@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="lang" defaultlang="IT">
+  <group id="snPHProfileEdit" define="false">
+    <message id="pnew" lang:it="Creazione Iniziale Profilo" lang:en="Create a Profile" lang:fr="Créer un profil" lang:de="Erstellen Sie ein Profil" lang:es="Creación de un perfil" lang:ru="Создание профиля"/>
+    <message id="pmod" lang:it="Modifica Profilo" lang:en="Edit Profile" lang:fr="Modifier le profil" lang:de="Profil bearbeiten" lang:es="Editar Perfil" lang:ru="Редактировать профиль"/>
+    <message id="lmain" lang:it="Informazioni Principali" lang:en="Main Details" lang:fr="informations importantes" lang:de="Wichtige Informationen" lang:es="información adicional" lang:ru="важная информация"/>
+    <message id="nome" lang:it="Nome" lang:en="First Name" lang:fr="Nom" lang:de="Vorname" lang:es="Nombre" lang:ru="Имя"/>
+    <message id="cognome" lang:it="Cognome" lang:en="Last Name" lang:fr="Prénom" lang:de="Nachname" lang:es="apellido" lang:ru="Фамилия"/>
+    <message id="email" lang:it="Email" lang:en="Email address" lang:fr="adresse e-mail" lang:de="E-Mail-Adresse" lang:es="dirección de correo electrónico" lang:ru="Эл. почта"/>
+    <message id="show" lang:it="Mostra nel mio profilo" lang:en="Show in my profile" lang:fr="Afficher dans mon profil" lang:de="Zeigen Sie in meinem Profil" lang:es="Mostrar en mi perfil" lang:ru="Показать в моем профиле"/>
+    <message id="ladd" lang:it="Informazioni Aggiuntive" lang:en="Additional Details" lang:fr="Informations complémentaires" lang:de="Weitere Informationen" lang:es="información adicional" lang:ru="дополнительная информация"/>
+    <message id="birth" lang:it="Data di Nascita" lang:en="Date of birth" lang:fr="Date de naissance" lang:de="Geburtsdatum" lang:es="Fecha de nacimiento" lang:ru="День рождения"/>
+    <message id="inprofile" lang:it="Nel Profilo" lang:en="In the profile" lang:fr="dans le profil" lang:de="Im Profil" lang:es="En Perfil" lang:ru="В профиль"/>
+    <message id="phide" lang:it="Non mostrare la mia data di nascita" lang:en="Do not show my birthday" lang:fr="Ne pas montrer ma date de naissance" lang:de="Nicht mehr anzeigen mein Geburtsdatum" lang:es="No mostrar mi fecha de nacimiento" lang:ru="Не показывать мою дату рождения"/>
+    <message id="pdm" lang:it="Mostra solo giorno e mese" lang:en="Show only day and month of birth" lang:fr="Afficher uniquement le jour et le mois" lang:de="Zeige nur Tag und Monat" lang:es="Mostrar sólo día y mes" lang:ru="Показать только день и месяц"/>
+    <message id="pshow" lang:it="Mostra la mia data di nascita completa" lang:en="Show my full birthday" lang:fr="Afficher ma date de naissance complète" lang:de="Zeigen Sie meine volle Geburtsdatum" lang:es="Mostrar mi fecha de nacimiento completa" lang:ru="Показать мою полную дату рождения"/>
+    <message id="city" lang:it="Città" lang:en="City" lang:fr="Ville" lang:de="Stadt" lang:es="Ciudad" lang:ru="Местонахождение"/>
+    <message id="sna" lang:it="Non Specificato" lang:en="Not specified" lang:fr="Non spécifié" lang:de="Keine Angabe" lang:es="No especificado" lang:ru="Не указан"/>
+    <message id="sm" lang:it="Maschile" lang:en="Male" lang:fr="Homme" lang:de="Männlich" lang:es="Masculino" lang:ru="Мужской"/>
+    <message id="sf" lang:it="Femminile" lang:en="Female" lang:fr="Femme" lang:de="Weiblich" lang:es="Mujer" lang:ru="Женщины"/>
+    <message id="note" lang:it="Note" lang:en="Notes" lang:fr="Notes" lang:de="Notes" lang:es="Notes" lang:ru="Заметки"/>
+    <message id="limg" lang:it="Immagine" lang:en="Image" lang:fr="Image" lang:de="Bild" lang:es="Imagen" lang:ru="Изображение"/>
+    <message id="img" lang:it="Immagine" lang:en="Image" lang:fr="Image" lang:de="Bild" lang:es="Imagen" lang:ru="Изображение"/>
+    <message id="inone" lang:it="nessuna immagine" lang:en="no image" lang:fr="pas d'image" lang:de="kein Bild" lang:es="no hay imagen" lang:ru="нет фото"/>
+    <message id="cancel" lang:it="Annulla" lang:en="Cancel" lang:fr="Annuler" lang:de="Abbrechen" lang:es="Cancelar" lang:ru="Отмена"/>
+    <message id="save"
+		lang:it="Registra le Modifiche"
+		lang:en="Save"
+		lang:fr="Sauvegarder"
+		lang:de="Speichern"
+		lang:es="Guardar"
+		lang:ru="экономить"
+	/>
+    <message id="enome" lang:it="È necessario inserire un valore per il nome" lang:en="It is necessary to enter a name" lang:fr="Vous devez entrer une valeur pour le nom" lang:de="Sie müssen einen Wert für den Namen" lang:es="Debe ingresar un valor para el nombre" lang:ru="Вы должны ввести значение в поле Имя"/>
+    <message id="sex" lang:it="Sesso"
+			lang:en="Sex"
+			lang:fr="Sexe"
+			lang:de="Geschlecht"
+			lang:es="Sexo"
+			lang:ru="пол"
+		/>/>
+  </group>
+</messages>

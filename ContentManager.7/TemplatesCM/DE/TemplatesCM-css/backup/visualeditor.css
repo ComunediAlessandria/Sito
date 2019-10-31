@@ -1,0 +1,295 @@
+Input {
+	border: 1px solid #666666; margin: 0px;
+}
+
+Textarea {
+	border: 1px solid #666666; margin: 0px;
+}
+
+P {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.RadioButton{
+ vertical-align:middle;
+ border: none;
+ height: .7em;
+}
+.CheckBox {
+ vertical-align:middle;
+ border: none;
+}
+.InputIMG{
+ vertical-align:middle;
+ border: none;
+}
+
+/*---------------------- */
+
+
+#FlexEditBody {
+color: #000000;
+background-color: #FFFFFF;
+background-image: none;
+margin: 0px;
+font-size: 100%;
+text-align:left;
+}
+
+
+
+#FlexEditToolBar{
+	position:absolute; 
+	left:0px; 
+	top:0px; 
+	color:#000000;
+	background-color:#EEEEEE;
+	font-family:verdana, arial, sans-serif; 
+	font-size:.6em;
+	width: 16em;
+	border-width: 2px 2px 0px 2px;
+	border-style:solid;
+	border-color: #003399;	
+}
+#FlexEditToolBarTitle{
+	background-image: url(../TemplatesCM-img/admin/sfondo-admin-edit.gif);	 
+	text-align:center;
+	border-bottom: 2px solid #003399;		
+}
+#FlexEditToolBarTitle A{
+	line-height: 150%;
+	font-size:1.2em;
+	color:#000099;
+	background-color:transparent;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+.FlexEditToolBarIcon {
+ 	border: 0px; 
+	margin: 2px 4px 2px 4px;
+	vertical-align:middle;
+}
+.FlexEditToolBarInput{
+	font-size:.8em;
+}
+
+#FlexEditToolBarSelector{
+	border-bottom: 2px solid #003399;
+	margin: 0; padding: 0;
+	width: 100%;
+}
+#FlexEditToolBarSelector ul{
+	margin: 0; padding: 0;
+	list-style-type:none;
+}
+
+#FlexEditToolBarSelector ul li{
+	display: inline; 
+	margin: 0 0 0 -2px;
+}
+#FlexEditToolBarSelector ul li a{
+	padding: 0 .3em 0 .3em;
+	margin: 0;
+	color: #000000;
+	background-color:#EEEEEE; 
+	text-decoration: none;
+	border-left: 1px solid #003399;
+}
+#FlexEditToolBarSelector ul li a:hover{
+	color: #FFFFFF;
+	background-color:#003399; 
+}
+#FlexEditToolBarSelector ul li a.FlexEditToolBarSelectorCurrent{
+	padding: 0 1em 0 -2px;
+	margin: 0;
+	color: #FFFFFF;
+	background-color:#003399; 
+	text-decoration: none;
+	border-left: 1px solid #003399;
+	font-weight: bold;
+}
+#FlexEditToolBarSelector ul li a.FlexEditToolBarSelectorCurrent:hover{
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color:#003399; 
+}
+
+
+
+
+
+#FlexEditToolBar-AllUserBlock, #FlexEditToolBar-TextBlock, 
+	#FlexEditToolBar-SepBlock, #FlexEditToolBar-MultiMediaBlock,
+	#FlexEditToolBar-LinksBlock, #FlexEditToolBar-VariousBlock, 
+	#FlexEditToolBar-ForumBlock, #FlexEditToolBar-TableBlock,
+	#FlexEditToolBar-PHPBlock, #FlexEditToolBar-FormBlock
+{
+	margin: 0; padding: 0; 
+}
+.FlexEditToolBar-Block {
+	border-bottom: 2px solid #003399;
+}
+
+#FlexEditMainPane{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: .6em;	
+	margin: .2em .2em .2em 17em;
+}
+#FlexEditMainPane table {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	border-collapse:collapse;
+	width: 100%;
+}
+
+#FlexEditMainPane table tr{
+	border: 0;
+	padding: 0;
+	margin: 0;
+	border-collapse:collapse;
+}
+
+#FlexEditMainPane table td{
+	width: 100%;
+	padding-right: 6px;		
+	border: 0px;
+	margin: 0px;
+	vertical-align:top;
+}
+
+#FlexEditMainPane td.FlexEditTextAreaButtons{
+	width: 19px;
+	margin: 0px; 
+	padding: 0px;
+	vertical-align: top;
+}
+
+#FlexEditMainPane td.FlexEditTextArea {
+	border: 1px solid #666666;
+	margin: 0px;
+	padding: 1px;
+	color: #000000;
+	background-color: #FFFFFF;
+}
+
+
+#FlexEditMainPane table th {
+	font-weight:normal;
+	text-align:left;
+	white-space:nowrap;
+	padding-left: 6px; 
+	border: 0px;
+	margin: 0px;
+	vertical-align:top;
+}
+
+.FlexEditToolbarPageInfoBox Select, .FlexEditToolbarPageInfoBox Input, 
+.FlexEditToolbarPageInfoBox TextArea, .FlexEditToolbarPageInfoBox div.editorLite,
+.FlexEditToolbarElementTitle Select, .FlexEditToolbarElementTitle Input {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 1.1em;
+	margin: 0px;
+	padding: 0px;	
+}
+
+
+.FlexEditToolbarPageInfoBox{
+	color: #000000;
+	background-color: #EAFCE8;
+	border-width: 1px 1px 0px 1px;
+	border-style: solid;
+	border-color: #003399;
+}
+.FlexEditToolbarValidationBox{
+	color: #000000;
+	background-color: #FFCCCC;
+	border-width: 1px 1px 0px 1px;
+	border-style: solid;
+	border-color: #003399;
+}
+
+.FlexEditToolbarPageInfoTitle{
+	padding: 2px 0px 2px 4px;
+	vertical-align: middle;
+	background-image: url(../TemplatesCM-img/admin/sfondo-admin-edit-Top.gif); 
+}
+
+
+.FlexEditToolbarPageInfoTitle img {
+	vertical-align: middle;
+}
+.FlexEditToolbarElementBox{
+	color: #000000;
+	background-color: #D0D8F2;
+	border-width: 0px 1px 0px 1px;
+	border-style: solid;
+	border-color: #003399;
+}
+
+.FlexEditToolbarElementTitle{
+	padding: 0px 0px 0px 4px;
+	vertical-align: middle;
+	font-size: 1em;
+	background-image: url(../TemplatesCM-img/admin/sfondo-admin-edit.gif); 
+}
+.FlexEditToolbarElementTitle img {
+	vertical-align: middle;
+}
+
+.FlexEditDropTarget{
+ font-size: .1em;
+ line-height: 2px;
+ height: 2px;
+ color:#000000;
+ background-color:#FFFFFF;
+ border-width: 1px 1px 1px 1px;
+ border-style: solid;
+ border-color: #003399;
+}
+
+.FlexEditObjectContent{
+	color: #000000;
+	background-color: #FFFFEA;
+	margin: 0px;
+	padding: 2px;	
+	font-size: 15px;
+}
+.FlexEditObjectContentInContainer{
+	color: #000000;
+	background-color: #D6DBF7;
+}	
+
+/* per la segnalazione degli errori */
+
+.FlexEditObjectErrorContainer {
+	border: 1px solid #CC0000;
+	color: #000000;
+	background-color: #FFCCCC;
+	margin: 0;
+	padding: 0px;	
+	font-size: 1em;
+}
+
+.FlexEditObjectMessageWarning{ }
+.FlexEditObjectMessageFatal{ }
+
+
+.FlexEditObjectErrorContainer ul {
+	list-style-position: inside;
+	list-style-type:square;
+	margin: 0 0 0 .5em;
+	padding: 0;
+}
+.FlexEditObjectErrorContainer ul li {
+	margin: 0; padding: 0px;
+}
+
+
+
+.FlexEditAdminLabel, .FlexEditAdminField{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: .7em;
+}

@@ -1,0 +1,42 @@
+<div id="AdminCorpoBox">
+
+	<h1>Gestione Assi</h1>
+
+
+	<form id='F' method='post' action='{ACTION}'>
+	{HIDDEN}
+
+	<!-- BEGIN tHead -->
+
+	<table summary="Tabella contenente l'elenco degli Assi: nella prima colonna sono contenuti i comandi di modifica degli assi.">
+		<thead>
+			<tr>
+				<th scope="col" class='AdminIcoCellNarrow'>Azioni</th>
+				<th scope="col">Nome Asse</th>
+				<th scope="col">Identificativo Asse</th>
+			</tr>
+		</thead>
+		<tbody>
+	<!-- END tHead -->
+
+	<!-- BEGIN row -->
+		<tr class="{CLASSTR}">
+			<td class='AdminIcoCellNarrow'>{IMGMOD} </td>
+			<td>{ASSE}</td>
+			<th scope="row">{ID}</th>
+		</tr>
+	<!-- END row -->
+
+	<!-- BEGIN tFooter -->
+		</tbody>
+	</table>
+	<div class="AdminPageFooterStatus">NUMERO ASSI PRESENTI: {TOTAXES}</div>
+	<!-- END tFooter -->
+
+	<!-- BEGIN noData -->
+	<div class="AdminPageFooterCommand">NON CI SONO ASSI DA VISUALIZZARE</div>
+	<!-- END noData -->
+
+</form>
+
+</div>

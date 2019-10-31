@@ -1,0 +1,54 @@
+
+	{ERR}
+
+<form id="AdminFormBO" class="form-horizontal" enctype='multipart/form-data' method="post" action="{ACTION}">
+
+	<div class='well well-small'>
+
+		<div class="control-group">
+			<label class="control-label" for="{TAG_ConnectionName}">{LBL_ConnectionName}</label>
+			<div class="controls"> {VAL_ConnectionName}</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="{TAG_DBDriver}">{LBL_DBDriver}</label>
+			<div class="controls"> {VAL_DBDriver}</div>
+		</div>		
+		<div class="control-group">
+			<label class="control-label" for="{TAG_DBHost}">{LBL_DBHost}</label>
+			<div class="controls"> {VAL_DBHost}</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="{TAG_DBName}">{LBL_DBName}</label>
+			<div class="controls"> {VAL_DBName} (ODBC DSN)</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="{TAG_DBUser}">{LBL_DBUser}</label>
+			<div class="controls"> {VAL_DBUser}</div>
+		</div>	
+	
+		<div class="control-group">
+			<label class="control-label" for="{TAG_DBPass}">{LBL_DBPass}</label>
+			<div class="controls"> {VAL_DBPass}</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="{TAG_ConnectionString}">{LBL_ConnectionString}</label>
+			<div class="controls"> {VAL_ConnectionString}</div>
+		</div>	
+	
+	</div>
+
+
+	<div class='well well-small'>
+		<div class='row'>
+			<div class='span2'>
+					<input name="btnCancel" type="submit" class='btn' value="__(bo-common.canc)" />
+			</div>
+			<div class='span2'>
+				{HIDDEN}
+				<input name="Submit" type="submit" class='btn btn-primary' value="__(bo-common.save)" />
+			</div>
+		</div>
+	</div>
+
+
+</form>

@@ -1,0 +1,15 @@
+a:14:{s:2:"ad";s:6:"Added.";s:2:"de";s:8:"Deleted.";s:2:"ni";s:24:"site was never indicized";s:3:"icd";s:25:"operation in progress for";s:4:"schp";s:87:"
+				Search Engine update scheduled.
+				Next update scheduled: <strong>%s</strong>
+			";s:4:"schu";s:85:"
+				One off Search Engine update scheduled.
+				Next update: <strong>%s</strong>
+			";s:3:"del";s:6:"Cancel";s:2:"st";s:6:"Status";s:2:"pt";s:20:"Search Engine Update";s:4:"head";s:221:"
+				In order to update the Search Engine, it is necessary to index the contents. 
+				As this task may take some time, it must therefore be scheduled.<br />
+				The last indexing was carried out: <strong>%s</strong>.
+			";s:2:"nx";s:28:"Next scheduled site indexing";s:3:"nxn";s:4:"none";s:3:"new";s:32:"Schedule a new site indexing now";s:4:"foot";s:192:"
+				Activation times of scheduled tasks are approximate: 
+				they are dependent on the verification time (roughly every 10 minutes) 
+				and the duration of execution of the task itself.
+			";}

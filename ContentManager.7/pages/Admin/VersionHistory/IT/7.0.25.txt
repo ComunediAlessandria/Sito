@@ -1,0 +1,3 @@
+Implementato meccanismo per informativa privacy legata alla Legge europea sui cookies
+
+Numerose ottimizzazioni e bug fix

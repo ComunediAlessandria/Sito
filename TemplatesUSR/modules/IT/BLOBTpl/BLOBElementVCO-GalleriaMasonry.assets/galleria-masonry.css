@@ -1,0 +1,21 @@
+.vco-masonry {
+}
+.vco-masonry .item {
+  margin-bottom: 30px;
+}
+.vco-masonry .item .fancy-item {
+  display: block !important;
+  position: relative;
+  opacity: 1;
+  cursor: pointer;
+  border: 2px solid transparent;
+  -webkit-transition: border 0.3s ease-in-out, opacity 1s ease-in-out;
+     -moz-transition: border 0.3s ease-in-out, opacity 1s ease-in-out;
+      -ms-transition: border 0.3s ease-in-out, opacity 1s ease-in-out;
+       -o-transition: border 0.3s ease-in-out, opacity 1s ease-in-out;
+          transition: border 0.3s ease-in-out, opacity 1s ease-in-out;
+}
+.vco-masonry .item .fancy-item:hover {
+  border: 2px solid #E2253F;
+  opacity: 0.85;
+}

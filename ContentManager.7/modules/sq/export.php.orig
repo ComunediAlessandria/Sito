@@ -1,0 +1,45 @@
+<?php
+
+	FlexAPI::APIInclude(array('dbg','SQ'));
+
+		// estraggo i parametri di SimpleQuery
+	$pars = FlexAPISQ::getPars();
+
+		// Aggiorno l'history di simple query memorizzando la pagina corrente
+	FlexAPISQ::updateHistory('Show sq pars', $pars, $isBack = true);
+
+	$queryInfo = FlexAPISQ::getQueryInfo($pars);
+
+	$conn = FlexAPISQ::getConnection($queryInfo['SQLPARS']['idconn']);
+
+	list(,$filename) = FlexAPISQ::GetBackLink($pars);
+	$filename = str_replace (array(" ",'..',"'"), array("_",'.',''), $filename);
+	$filename = preg_replace ("/[^0-9^a-z^A-Z^_^.]/", "", $filename);
+	$filename .= '-' . date('Ymd-His');
+
+
+	// look
+	// http://www.enonic.com/en/community/tutorials/creating-excel-files-with-enonic-cms
+
+	$rs = $conn->select($queryInfo['SQL']);
+	if ($conn->error() === false && $rs !== false) {
+	   header ("Content-Type: application/vnd.ms-excel");
+	   header ("Content-Disposition: inline; filename=" . $filename . '.xls');
+		$rn = 0;
+		while ($rec = $rs->getNext()) {
+
+			if ($rn == 0) {
+				echo "<table border='1'>";
+				echo "<tr><th>" . join('</th><th>', array_keys($rec)) . "</th></tr>";
+			}
+
+			if (kLang != 'EN')
+				foreach($rec as $k => $fld)
+					$rec[$k] = (is_numeric($fld)) ? str_replace('.',',',$fld) : $fld;
+
+			echo '<tr><td>' . join('</td><td>', $rec) . '</td></tr>';
+			$rn++;
+		}
+		echo '</table>';
+	}
+?>

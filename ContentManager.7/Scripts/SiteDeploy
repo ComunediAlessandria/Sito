@@ -1,0 +1,537 @@
+#!php5 -q
+<?php
+
+	include_once(dirname(__FILE__) . '/Func.inc.php');
+
+	$env = new Env();
+	$cl = $env->CL();
+
+/*
+	$config = array(
+
+		tag				=> 'FlexCMP',
+
+		localDir			=> '/home/cverond/www/FlexCMPdemo',
+
+		remoteHost			=> 'new.id eafutura.com',
+		remoteDBHost			=> 'new.id eafutura.com',
+		remoteDBServer			=> 'localhost',
+		remoteDir			=> '/home/flexcmp.com/www/web/flex_2',
+
+		remoteDBUsername		=> 'ns1site',
+		remoteDBPassword		=> 'migrazione',
+
+		remoteUserGroup			=> 'flexcmp.com:nobody',
+
+		localDBName			=> 'cm_flexcmsdemo',
+		remoteDBName			=> 'cm_flexcmsdemo_2',
+
+			// deve encodare il contenuto dei file prima del trasferimento?
+
+		encoded					=> TRUE,
+
+			// directory aggiuntive da trasferire assieme allo scheletro del file
+
+		additionalDirs			=> array(),
+
+			// directory aggiuntive da trasferire solo quando il master è
+			// in locale e da preservare ad ogni upload dello scheletro
+			// al pari delle dir di immagini, files ed embed
+
+		additionalDataDirs		=> array(),
+
+		// tabelle aggiuntive di cui deve essere trasferita solo la struttura
+
+		tblOnlyStructure => array(),
+
+		// tabelle aggiuntive di cui trasferire struttura e dati
+
+		tblTransfer => array(),
+		additionalDB	=> array(),
+	);
+*/
+
+	if (! is_array($config)) {
+
+		echo "\nLo script non può essere invocato direttamente. Informazioni di configurazione mancanti.\n\n";
+		exit;
+	}
+
+	$gConfig = array(
+
+		//remoteCMHome		=> '/usr/lib/php/ContentManager',
+		'remoteDBServer'	=> 'localhost',
+
+		'localDBUsername'	=> 'interch',
+		'localDBPassword'	=> '',
+//		'encodeApp'			=> '/usr/local/Zend/bin/zendenc',
+		'encodeApp'			=> '/usr/local/bin/zendenc5',
+		'packetMethod'		=> 'tgz',
+		'mandatoryDirs'		=> array('Messages'),		// dir da creare se non ci sono
+		'remoteUser'		=> 'root',
+	);
+
+		// merge dei due array di configurazione
+
+	$config = array_merge($gConfig, $config);
+
+	$now = date('Ymd.H.i');
+	$tag = CFG('tag');
+
+		// inserisce il path della backup directory
+		// prendendo la dir padre di quella di deploy
+
+	$dn = NormalizeDir(CFG('remoteDir'));
+	$c = explode('/', $dn);
+	$backupDir = join('/', array_slice($c, 0, count($c) - 2)) . '/BACKUP/' . $tag . '.' . $now;
+
+		// normalizzazione e check dei parametri
+
+		// toglie un eventuale '/' in fondo al nome della dir
+
+	if (substr($config['remoteDir'], strlen($config['remoteDir']) -1, 1) == '/')
+		$config['remoteDir'] = substr($config['remoteDir'], 0, strlen($config['remoteDir']) -1);
+
+		// parse dei parametri
+
+	$firstTime = isset($_SERVER['argv'][1]) && $_SERVER['argv'][1] === '--first-time';
+
+		// opzioni booleane
+
+	$offlineDeploy = CFG('onlyPacket') == true;
+
+	$srcDir = NormalizeDir(CFG('localDir'));
+
+	if (CFG('confFile') != '' && (is_file($srcDir . 'site.conf.tmp') || is_file($srcDir . 'site.conf.php.tmp')))
+		die("Another conf file from aborted deploy.\n");
+
+		// nel caso di primo deploy verifica che non esista già il DB
+
+	$r = doRemoteCommandWithOutput(
+	        CFG('remoteDBHost'),
+	        sprintf('mysql --host=%s --user=%s --password=%s -e "SHOW DATABASES LIKE \\"%s\\""', CFG('remoteDBServer'), CFG('remoteDBUsername'), CFG('remoteDBPassword'), CFG('remoteDBName'))
+	);
+
+	if ($firstTime && count($r) > 0)
+	        die(sprintf('Remote database [%s] exists.' . CR, CFG('remoteDBName')));
+
+	if (! $firstTime && ! $offlineDeploy)
+		DoBackup($backupDir);
+
+	$cmPacketName = 'FlexCM.' . $tag . '.' . $now;
+	$dbPacketName = 'FlexDB.' . $tag . '.' . $now;
+
+	$transferDataDirs = true;
+	$transferDB = true;
+
+	if (! is_null(CFG('onlyTemplates')))
+		$transferDataDirs = $transferDB = CFG('onlyTemplates') === false;
+
+	if (true) {
+
+			// crea le dir che non ci sono
+
+		foreach (CFG('mandatoryDirs') as $d)
+			if (! is_dir($srcDir . $d))
+				mkdir($srcDir . $d);
+
+		if (CFG('encoded')) {
+
+				// copia il contenuto della directory sorgente in una dir temporanea
+
+			execute('rm -rf /tmp/FlexWorkDir');
+
+			$cmd = CFG('encodeApp') . ' --recursive --no-header --quiet --ignore admin --ignore cm --ignore tmp ' . CFG('localDir') . ' /tmp/FlexWorkDir';
+			execute($cmd);
+
+			$srcDir = '/tmp/FlexWorkDir/';
+		}
+
+			// trasferimento dello 'scheletro' del sito:
+			//
+			// - directory dei template			(TemplatesUSR)
+			// - directory delle estensioni			(Extensions)
+			// - directory delle Fixed Pages		(FixedPages)
+			// - eventuali altre directory specificate
+
+		$dirs = array('TemplatesUSR', 'Extensions', 'Messages', 'FixedPages', 'site.conf.php', 'index.*');
+		$exclude = array();
+
+		if (is_array(CFG('additionalDirs')))
+			$dirs = array_merge($dirs, CFG('additionalDirs'));
+
+		if ($transferDataDirs) {
+
+			$exclude = array_merge($exclude, array('images/unreferenced', 'files/unreferenced', 'embed/unreferenced'));
+			$dirs = array_merge($dirs, array('images', 'files', 'embed', 'AppData/Redational'));
+
+			if (is_array(CFG('additionalDataDirs')))
+				$dirs = array_merge($dirs, CFG('additionalDataDirs'));
+		}
+
+			// se ho un file di configurazione particolare da usare
+			// copio il vecchio conf e lo sostituisco ...
+
+		if (CFG('confFile') != '') {
+
+			$cmd = "mv " . $srcDir . "site.conf.php " . $srcDir . "site.conf.php.tmp";
+			execute($cmd);
+
+			$cmd = "cp " . $srcDir . "conf/" . CFG('confFile') . " " . $srcDir . "/site.conf.php";
+			execute($cmd);
+		}
+
+		$v = array();
+		foreach ($exclude as $e)
+			$v[] = '--exclude ' . $e;
+
+		$cmd = "(cd " . $srcDir . "; tar czf /tmp/" . $cmPacketName . ".gz  " . join(' ', $v) . ' ' . join(' ', $dirs) . ")";
+		execute($cmd);
+
+			// se ho un file di configurazione particolare da usare
+			// ripristino il vecchio conf
+
+		if (CFG('confFile') != '') {
+
+//			$cmd = "mv --force " . $srcDir . "site.conf.tmp " . $srcDir . "site.conf";
+//			Execute($cmd);
+
+			$cmd = "mv --force " . $srcDir . "site.conf.php.tmp " . $srcDir . "site.conf.php";
+			execute($cmd);
+		}
+
+		if ($offlineDeploy) {
+
+				// scompatto la struttura appena creata, aggiungo un'immagine del DB e rimpacchetto
+
+			$dstDir = "/tmp/" . $tag;
+			$packetFile = $tag . '.' . $now . '.' . CFG('packetMethod');
+
+			execute("rm -rf " . $dstDir);
+			execute("mkdir " . $dstDir);
+
+			execute("(cd " . $dstDir . "; tar xzf /tmp/" . $cmPacketName . ".gz)");
+
+				// se ho un file di configurazione particolare da usare ...
+
+			if (CFG('confFile') != '') {
+
+				$cmd = "cp " . $srcDir . "conf/" . CFG('confFile') . " " . $dstDir . "/site.conf";
+				execute($cmd);
+			}
+
+				// aggiunge la directory /tmp
+
+			execute("(cd " . $dstDir . "; mkdir tmp)");
+
+				// dump del DB e degli eventuali altri DB
+
+			// DumpAllDB($dstDir . '/db.sql');
+			DumpDB(CFG('localDBName'), $dstDir . '/db.sql', array(
+				'TRUNCATE TABLE DBCache;',
+			));
+
+			if (is_array(CFG('additionalDB')))
+				foreach (CFG('additionalDB') as $db)
+					DumpDB($db, $dstDir . '/' . $db . '.sql');
+
+			if (CFG('packetMethod') === 'tgz') {
+
+				$cmd = "(cd /tmp; tar czvf " . $packetFile . " " . $tag . ")";
+				execute($cmd);
+
+			} else {
+
+				$cmd = "(cd /tmp; zip -r " . $packetFile . " " . $tag . ")";
+				execute($cmd);
+			}
+
+			execute("rm -rf " . $dstDir);
+
+			if (CFG('packetDestinationDir') != '') {
+
+				$cmd = "mv /tmp/$packetFile  " . CFG('packetDestinationDir');
+				execute($cmd);
+				echo 'Packet created in ' . CFG('packetDestinationDir') . '/' . $packetFile . "\n";
+
+			} else
+				echo 'Packet created in ' . $packetFile . "\n";
+
+			exit;
+
+		} else {
+
+				// upload del pacchetto
+
+			$cmd = "scp /tmp/" . $cmPacketName . ".gz " . CFG('remoteUser') . '@' . CFG('remoteHost') . ":/tmp";
+			execute($cmd);
+
+				// installazione del pacchetto
+
+			$destinationDir = CFG('remoteDir');
+
+			$cmd = "mkdir " . $destinationDir;
+			doRemoteCommand(CFG('remoteHost'), $cmd);
+
+			$cmd = "(cd " . $destinationDir . "; tar xzf /tmp/" . $cmPacketName . ".gz)";
+			doRemoteCommand(CFG('remoteHost'), $cmd);
+
+				// se non trasferisco le Data Directory copio le versioni
+				// precedenti
+
+			if (! $transferDataDirs) {
+
+				$cDirs = array_merge(
+					array('images', 'files', 'embed'),
+					is_array(CFG('additionalDataDirs')) ? CFG('additionalDataDirs') : array()
+				);
+
+				foreach ($cDirs as $dd) {
+
+						$cmd = 'cp --archive ' . $backupDir . $dd . ' ' . $destinationDir . '/' . $dd;
+						doRemoteCommand(CFG('remoteHost'), $cmd);
+				}
+/*
+				$cmd = "cp --archive " . $destinationDir . ".$now/images " . $destinationDir;
+				DoRemoteCommand($GLOBALS[config][remoteHost], $cmd);
+
+				$cmd = "cp --archive " . $destinationDir . ".$now/files " . $destinationDir;
+				DoRemoteCommand($GLOBALS[config][remoteHost], $cmd);
+
+				$cmd = "cp --archive " . $destinationDir . ".$now/embed " . $destinationDir;
+				DoRemoteCommand($GLOBALS[config][remoteHost], $cmd);
+
+					// se sono specificate delle altre directory, dopo aver
+					// copiato i dati vecchi ne copia il contenuto nella
+					// nuova struttura
+
+				if (is_array($config[additionalDataDirs])) {
+
+					foreach ($config[additionalDataDirs] as $dd) {
+
+						$cmd = "cp --archive " . $destinationDir . ".$now/$dd " . $destinationDir . "/$dd";
+						DoRemoteCommand($GLOBALS[config][remoteHost], $cmd);
+					}
+				}
+*/
+			}
+
+				// crea le directory che potrebbero non essere state trasferite
+
+			$cDirs = array('tmp', 'Logs', 'AppData/Redational', 'AppData/WebLive', 'AppData/Local');
+			foreach ($cDirs as $d) {
+
+				$cmd = "mkdir -p " . $destinationDir . '/' . $d;
+				doRemoteCommand(CFG('remoteHost'), $cmd);
+			}
+
+/*
+			$hasScript = DoRemoteCommand(CFG('remoteHost'), 'test -x /usr/local/bin/afterdeploypermissions') == 0;
+			if ($hasScript) {
+
+				$cmd = "(cd " . $destinationDir . "; /usr/local/bin/afterdeploypermissions)";
+				DoRemoteCommand(CFG('remoteHost'), $cmd);
+
+			} else {
+
+					// comunque modifica i permessi nelle dir per scrivere
+					// (da cambiare quando ci sarà un utente di apache)
+
+				$cmd = "chmod a+w " . $destinationDir . "/images " . $destinationDir . "/files " . $destinationDir . "/embed";
+				DoRemoteCommand(CFG('remoteHost'), $cmd);
+
+				$cmd = "chmod a+w " . $destinationDir . "/tmp";
+				DoRemoteCommand(CFG('remoteHost'), $cmd);
+
+					// aggiorna owner
+
+				$cmd = "chown -R " . CFG('remoteUserGroup') . " " . $destinationDir;
+				DoRemoteCommand(CFG('remoteHost'), $cmd);
+			}
+*/
+				// aggiorna i link al CM solo se remoteCMHome è valorizzata
+
+			if (CFG('remoteCMHome') != '') {
+
+				$cmd = "ln -s " . CFG('remoteCMHome') . " " . $destinationDir . "/cm";
+				DoRemoteCommand(CFG('remoteHost'), $cmd);
+
+					// admin è un linck alla cm
+
+				$cmd = "(cd " . $destinationDir  . "; ln -s cm/admin admin)";
+//				$cmd = "ln -s " . CFG('remoteCMHome') . "/admin " . $destinationDir . "/admin";
+				DoRemoteCommand(CFG('remoteHost'), $cmd);
+			}
+
+				// cleanup
+
+			Execute("rm -rf /tmp/$cmPacketName.gz");
+			DoRemoteCommand(CFG('remoteHost'), "rm -rf /tmp/$cmPacketName.gz");
+		}
+	}
+
+		// trasferimento del contenuto del sito:
+		//
+		// - directory per immagini, file e contenuti embed (embed, files, images)
+		// - database
+		// - eventuali altre directory specificate
+
+		// trasferimento del DB
+
+	if ($transferDB) {
+
+		$pw = (CFG('localDBPassword') != '' ? (' --password=' . CFG('localDBPassword')) : '');
+		if ($firstTime) {
+
+				// trasferisce tutto il DB
+
+			DumpDB(CFG('localDBName'), '/tmp/' . $dbPacketName, array(
+				'TRUNCATE TABLE DBCache;',
+				"GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, ALTER, INDEX, LOCK TABLES, DROP ON " . CFG('remoteDBName') . ".* TO '4210412733'@'192.168.50.%' IDENTIFIED BY 'A09\$_4fe_&wcno!!';",
+			));
+
+		} else {
+
+				// tabelle di cui deve essere trasferita solo la struttura
+
+			$tblOnlyStructure = array('SearchEngine', 'SearchCl', 'DBCache'); // LogAccess LogAdmin
+	//		$tblOnlyStructure = array('Sessions', 'engine', 'keywords', 'tempspider', 'DBCache');
+
+			if (is_array(CFG('tblOnlyStructure')))
+				$tblOnlyStructure = array_merge($tblOnlyStructure, CFG('tblOnlyStructure'));
+
+				// tabelle di cui trasferire struttura e dati
+				//
+				// 'Diritti', 'JGruppiDiritti',
+
+			$tblTransfer = array('Aliases', /*'Charset',*/ 'DataRepository', 'Acronym', 'DCanali', 'Forum', 'ForumMsg',
+				'Gruppi', 'JUsersGruppi', 'Languages', 'Pagine', 'Versioning',
+				'Poll', 'PollVote', 'Repository', 'Stato', 'Users', 'tIndexCache',
+				'Community', 'CommunityJUsers', 'CommunityUsers',
+				'FlexImportURL',
+				'Gallery', 'GalleryImages',
+				'GPAlbum', 'GPAlbumI18N', 'GPGallery', 'GPGalleryI18N', 'GPImages', 'GPImagesI18N',
+				'AccessRules',
+				);
+
+			if (is_array(CFG('tblTransfer')))
+				$tblTransfer = array_merge($tblTransfer, CFG('tblTransfer'));
+
+			$cmd = "mysqldump --compatible=mysql40 -u " . CFG('localDBUsername') . $pw . " --add-drop-table "
+				. CFG('localDBName') . " " . join(' ', $tblTransfer). " > /tmp/$dbPacketName";
+
+			Execute($cmd);
+
+			$cmd = "mysqldump --compatible=mysql40 -u " . CFG('localDBUsername') . $pw . " --add-drop-table --no-data "
+				. CFG('localDBName') . " " . join(' ', $tblOnlyStructure). " >> /tmp/$dbPacketName";
+
+			Execute($cmd);
+		}
+
+		$cmd = "gzip /tmp/" . $dbPacketName;
+		Execute($cmd);
+
+			// upload del file
+
+		$cmd = "scp /tmp/" . $dbPacketName . ".gz " . CFG('remoteUser') . '@' . CFG('remoteHost') . ":/tmp";
+		Execute($cmd);
+
+			// se ho specificato il nome del DB remoto inserisco l'sql, altrimenti
+			// lascio una copia del file SQL
+
+		if (CFG('remoteDBName') != '') {
+
+				// inserimento nel database remoto
+
+			if ($firstTime) {
+
+				$cmd = "mysqladmin -h " . CFG('remoteDBServer') . " -u " . CFG('remoteDBUsername') . " --password=" . CFG('remoteDBPassword') . " create " . CFG('remoteDBName');
+				DoRemoteCommand(CFG('remoteDBHost'), $cmd);
+			}
+
+			$cmd = "zcat /tmp/" . $dbPacketName . ".gz | mysql -h " . CFG('remoteDBServer') . " -u " . CFG('remoteDBUsername') . " --password=" . CFG('remoteDBPassword')
+				. " " . CFG('remoteDBName');
+
+			DoRemoteCommand(CFG('remoteDBHost'), $cmd);
+
+		} else {
+
+			$cmd = "zcat /tmp/$dbPacketName.gz > " . CFG('remoteDir') . "/DB.sql";
+			DoRemoteCommand(CFG('remoteDBHost'), $cmd);
+		}
+
+			// db aggiuntivi
+
+		if (is_array(CFG('additionalDB'))) {
+
+			foreach (CFG('additionalDB') as $db) {
+
+				unlink('/tmp/' . $db . '.sql');
+				DumpDB($db, '/tmp/' . $db . '.sql');
+
+				$cmd = "scp /tmp/" . $db . '.sql '  . CFG('remoteUser') . '@' . CFG('remoteHost') . ":/tmp";
+				Execute($cmd);
+
+				DoRemoteCommand(CFG('remoteDBHost'),
+					'mysqladmin -h ' . CFG('remoteDBServer') . ' -u ' . CFG('remoteDBUsername') . " --password=" . CFG('remoteDBPassword') . ' create ' . $db
+				);
+
+				$cmd = "cat /tmp/$db.sql | mysql -h " . CFG('remoteDBServer') . " -u " . CFG('remoteDBUsername') . " --password=" . CFG('remoteDBPassword')
+				. " " . $db;
+
+				DoRemoteCommand(CFG('remoteDBHost'), $cmd);
+			}
+		}
+
+			// cleanup
+
+		Execute("rm -rf /tmp/" . $dbPacketName . ".gz");
+		DoRemoteCommand(CFG('remoteDBHost'), "rm -rf /tmp/" . $dbPacketName . ".gz");
+	}
+
+	return;
+
+function DoBackup($backupDir) {
+
+	global $now;
+
+	if (ExistsRemoteDir(CFG('remoteDBHost'), CFG('remoteDir'))) {
+
+		if (CFG('remoteDBUsername') != '') {
+
+			$cmd = "mysqldump -h " . CFG('remoteDBServer') . " -u " . CFG('remoteDBUsername') . " --password=" . CFG('remoteDBPassword')
+				. " --add-drop-table --quote-names "
+				. CFG('remoteDBName') . " | gzip > " . CFG('remoteDir') . "/db.$now.sql.gz";
+
+			DoRemoteCommand(CFG('remoteDBHost'), $cmd);
+		}
+	}
+
+		// crea la dir per il backup
+
+	$cmd = 'mkdir -p ' . dirname($backupDir);
+	DoRemoteCommand(CFG('remoteDBHost'), $cmd);
+
+	$cmd = 'mv ' . CFG('remoteDir') . ' ' . $backupDir;
+	DoRemoteCommand(CFG('remoteDBHost'), $cmd);
+}
+
+function DumpDB($dbName, $fileName, $additionalCmd = array()) {
+
+	$fp = fopen($fileName, 'w');
+	fputs($fp, "\nDROP DATABASE IF EXISTS " . $dbName . ";\n");
+	fputs($fp, "\nCREATE DATABASE " . $dbName . " DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;\n");
+	fputs($fp, "\nUSE " . $dbName . ";\n");
+	fclose($fp);
+
+	$cmd = "mysqldump --compatible=mysql40 -u " . CFG('localDBUsername') . " --add-drop-table --quote-names "
+		. $dbName . "  >> $fileName";
+
+	Execute($cmd);
+
+	$fp = fopen($fileName, 'a');
+	foreach ($additionalCmd as $cmd)
+		fputs($fp, "\n\n" . $cmd . "\n\n");
+
+	fclose($fp);
+}

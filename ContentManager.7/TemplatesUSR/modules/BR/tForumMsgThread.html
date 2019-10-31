@@ -1,0 +1,39 @@
+<h1 class="viewTitolo">Forum {FORUMTITLE}</h1>
+<h2 class="viewSottotitolo">Discussione: {TopicTitle}</h2>
+
+<div class="ForumMsgList">
+<table summary="Messaggio {Titolo}">
+	<thead>
+		<tr>
+			<th scope="col" class="BLOBAlignLeft">Autore</th>		
+			<th scope="col" class="BLOBAlignLeft">Messaggio</th>
+		</tr>
+	</thead>
+	<tbody>
+	<!-- BEGIN TopicArticle -->
+		<tr>
+			<th scope="row"> {AutoreEmail} </th>
+			<td> 
+				<p class="ForumMsgDate"><em>{DateTime:date:l d/m/y H_i}</em></p>
+				<h2>{Titolo}</h2>
+				<p>{TESTO}</p>
+				<div><a href="{REPLYLINK}">Rispondi</a></div>
+			</td>
+		</tr>
+	<!-- END TopicArticle -->
+	</tbody>
+</table>
+<p><a href='{HOMELINK}' class='ForumLink'>Ritorna al Forum completo</a></p>
+</div>
+
+<div class="ForumThreadList">
+{THREAD}
+</div>
+
+
+
+
+
+
+
+

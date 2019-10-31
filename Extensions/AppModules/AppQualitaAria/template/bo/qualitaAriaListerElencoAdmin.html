@@ -1,0 +1,141 @@
+[[:section:frame:]]
+<h1>Archivio rilevazioni Qualità dell'aria</h1>
+<div class="well well-small">
+	<div class="row-fluid">
+		<div class="span2 ">	
+			<label for="DataDa_d">Data da</label>
+			[[
+			id: DataDa,
+			kind: BootstrapQADatepicker,
+			class: span12
+			]]
+		</div>
+		<div class="span2 ">	
+			<label for="DataA_d">Data a</label>
+			[[
+			id: DataA,
+			kind: BootstrapQADatepicker,
+			class: span12
+			]]
+		</div>
+		<div class="span3 ">
+			<label>&nbsp;</label>
+			[[id: btnNext, kind: Submit, value: "Cerca", class: "btn btn-primary"]]
+			[[id: btnReset, kind: Submit,value: Reimposta, class: "btn btn-inverse"]]
+		</div>
+	</div>
+</div>
+<br />
+<div class="row-fluid">
+	<div class="span2">
+		<a href="{URLNew}" class="btn btn-success"><i class="moon-icon-plus icon-white"></i> Nuova rilevazione</a>
+	</div>
+</div>
+<br />
+
+
+<div class="results">
+	{results}
+</div>
+	
+<div class="pagination pagination-centered">
+	[[	
+		id: p, 
+		kind: BootstrapPaginator, 
+		windowsize: 5,
+		class: "pagination"
+	]]
+</div>
+
+[[:section:results:]]
+
+<table class="table table-bordered table-striped">
+	<thead>
+		<tr>
+			<th scope="col" class="span1">Azioni</th>
+			<th scope="col" class="span1">ID</th>
+			<th scope="col" class="span2">Data</th>
+			<th scope="col" class="span2">Valore</th>
+			<th scope="col" class="span6">Nota</th>
+		</tr>
+	</thead>
+	<tbody>
+<!-- BEGIN row -->		
+		<tr>
+			<td class="">
+				<div class="pagination-centered">
+					<a href="{URLEdit}" class="btn btn-default" title="modifica rilevazione data {Data}"><i class="icon-pencil"></i></a>
+					<a href="#" class="btn btn-default btnDelRec"  data-urldelete='{URLDel}' title="cancella rilevazione data {Data}"><i class="icon-trash"></i></a>
+				</div>
+			</td>
+			<th scope="row">{IDQualitaAria}</th>
+			<td scope="col">{Data}</td>
+			<td scope="col">{PM10}</td>
+			<td scope="col">{Note}</td>
+		</tr>
+<!-- END row -->
+	</tbody>
+	<tfooter>
+		<tr>
+			<td colspan="5">
+				Trovati <strong>{nrec}</strong> record.
+			</td>
+		</tr>
+	</tfooter>
+</table>
+
+
+
+[[:section:noresults:]]
+
+
+<p>La ricerca non ha prodotto risultati.</p>
+
+[[:section:xxxxx:]]
+
+				<a href="{URLDel}" class="btn btn-default" title="cancella rilevazione data {Data}"><i class="icon-trash"></i></a>
+
+			[[id: btnExp, kind: Submit, value: "Esporta", class: "btn btn-info"]]
+
+	<div class="span2">
+			<label for="Nome">Nome</label>
+			[[
+			id: Nome,
+			kind: Text,
+			class: "span12"
+			]]
+		</div>
+		<div class="span2">
+			<label for="Cognome">Cognome</label>
+			[[
+			id: Cognome,
+			kind: Text,
+			class: "span12"
+			]]
+		</div>
+		<div class="span2">
+			<label for="datada">Inserita dal</label>
+			[[
+				id: datada, 
+				kind: DTChooserPatSvil,
+				mode: d, 
+				format: ts,
+				allownull: true,
+				placeholder: "GG/MM/AAAA",
+				class: "form-control",
+				renderer: "bootstrap2"
+			]]
+		</div>
+		<div class="span2">
+			<label for="datada">Inserita al</label>
+			[[
+				id: dataa, 
+				kind: DTChooserPatSvil,
+				mode: d, 
+				format: ts,
+				allownull: true,
+				placeholder: "GG/MM/AAAA",
+				class: "form-control",
+				renderer: "bootstrap2"
+			]]
+		</div>

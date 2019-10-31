@@ -1,0 +1,114 @@
+
+<!-- immagini di riferimento -->
+<div style='display:none;'>{IMGTEMPLATE}</div>
+<!-- -->
+
+<div id="AdminCorpoBox">
+
+	<h1>{DESC}</h1>
+
+	<!-- BEGIN Add -->
+
+	<form method='post' action='{ACTION}'>
+		<div class="AdminPageFooterCommand">
+
+			<div style='float: right'>
+				<a href='{linkwastebasket}'>
+					<img src='TemplatesCM-img/Wastebasket/GuardaContenutoCestino.gif' alt='Accedi al CESTINO' class='AdminIco' width='20' height='20' />
+					__(pl.lblWastebasket)
+				</a>
+			</div>
+
+			<fieldset id="AdminElencoPagineAggiungi">
+				<label for="tplID">__(pl.lblAddPage)</label> {MODELLI}
+				<input type='submit' name='btNewPage' value='__(pl.lblAdd)' />
+			</fieldset>
+		</div>
+	</form>
+	
+	<!-- END Add -->
+
+	<form id='F' method='post' action='{ACTION}'>
+		<div id="AdminFiltroElencoPagine">
+			<fieldset>
+				<legend>__(pl.lblToShow)</legend>
+				<div>{CMBFILTER}</div>
+				{CMBCANALE}
+			</fieldset>
+			<label for="filterTitle">__(pl.lblCnt):</label>{FILTER}
+			<label for="filtertpl">__(pl.lblTpl):</label>{CMBTPL}
+			<label for="filtergroup">__(pl.lblGroup):</label>{CMBGROUP}
+			<label for="sort">__(pl.lblSort):</label> {CMBSORT}
+			<br />
+			<input type="submit" name="Aggiorna" value="__(pl.lblUpdate)" id="AdminFiltroElencoSubmit" />
+			<input type="submit" name="nofilter" value="__(pl.lblReset)" id="AdminFiltroElencoReset" />
+		</div>
+	
+		{HIDDEN}
+		{CMBKIND}
+		
+	</form>
+	
+	<!-- BEGIN TooMuchPages -->
+		<div class='errList'>
+			<span>
+				__(pl.lblTooMany1)
+				<br />
+				__(pl.lblTooMany2)
+			</span>
+		</div>
+	<!-- END TooMuchPages -->
+
+	<!-- BEGIN tHead -->
+	<table summary="__(pl.lbltSummary)" id='tablePages'>
+		<thead>
+			<tr>
+				<th scope="col" class='AdminIcoCellWide'>__(pl.lblAzioni)</th>
+				<th scope="col">__(pl.lblNumero)</th>
+				<th scope="col">__(pl.lblTitolo)</th>
+				{TH1}
+				{TH2}
+				{TH3}
+				{TH4}
+			</tr>
+		</thead>
+
+		<tbody>
+	<!-- END tHead -->
+
+	<!-- BEGIN row -->
+		  <tr id='{ROWID}' class="{CLASSTR}">
+			<td class='AdminIcoCellWide'>{IMGDEL} {IMGDUP} {IMGMOD} {IMGPWD} {IMGNEW} {IMGVERS}</td>
+			<td>{ID}</td>
+			<th scope="row">{PAGETITLE}</th>
+			{TB1}
+			{TB2}
+			{TB3}
+			{TB4}
+		  </tr>
+	<!-- END row -->
+
+	<!-- BEGIN tFooter -->
+		</tbody>
+	</table>
+	
+	<div class="AdminPageFooterStatus">
+		__(pl.lblTotPages): {TOTRECORDS}
+	</div>
+	
+	<!-- <div>{PAGESELECTOR}</div> -->
+	<!-- END tFooter -->
+
+	<!-- BEGIN noData -->
+	<div class="AdminPageFooterStatus">
+		__(pl.lblNoPages)
+	</div>
+	<!-- END noData -->
+
+	<!-- BEGIN expiringPages -->
+	<div class="errList">
+		{expmsg}
+	</div>
+	<!-- END expiringPages -->
+
+</div>

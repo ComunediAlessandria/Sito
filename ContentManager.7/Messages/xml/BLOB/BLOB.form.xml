@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="it">
+	<group id="bfrm" define="false">
+		<message id="frdt" lang:it="FORM - Riga di testo" lang:en="FORM - Text Field"/>
+		<message id="descrizione" lang:it="Descrizione" lang:en="Description"/>
+		<message id="ndc" lang:it="Nome del Campo" lang:en="Field Name"/>
+		<message id="vp" lang:it="Valore predefinito" lang:en="Default Value"/>
+		<message id="ac" lang:it="a capo" lang:en="newline"/>
+		<message id="validazione" lang:it="Validazione" lang:en="Validation"/>
+
+		<message id="fhid" lang:it="FORM - Testo Nascosto" lang:en="FORM - Hidden Text"/>
+
+		<message id="fbdt" lang:it="FORM - Blocco di testo" lang:en="FORM - Text Block"/>
+		<message id="descrizione0" lang:it="Descrizione" lang:en="Description"/>
+		<message id="ndc0" lang:it="Nome del Campo" lang:en="Field Name"/>
+		<message id="vp0" lang:it="Valore predefinito" lang:en="Default Value"/>
+		<message id="ac0" lang:it="a capo" lang:en="newline"/>
+		<message id="validazione0" lang:it="Validazione" lang:en="Validation"/>
+		<message id="fcds" lang:it="FORM - Casella di spunta" lang:en="FORM - Checkbox"/>
+		<message id="descrizione00" lang:it="Descrizione" lang:en="Description"/>
+		<message id="ndc00" lang:it="Nome del Campo" lang:en="Field Name"/>
+		<message id="casdad" lang:it="Checkbox a sinistra, descrizione a destra" lang:en="Checkbox on left, description right"/>
+		<message id="validazione00" lang:it="Validazione" lang:en="Validation"/>
+		<message id="fead" lang:it="FORM - Elenco a discesa" lang:en="FORM - Dropdown List"/>
+
+		<message id="val1" lang:it="Valore 1" lang:en="First Value"/>
+		<message id="val2" lang:it="Valore 2" lang:en="Second Value"/>
+		<message id="val3" lang:it="Valore 3" lang:en="Third Value"/>
+
+		<message id="key1" lang:it="key-uno" lang:en="key-one"/>
+		<message id="key2" lang:it="key-due" lang:en="key-two"/>
+		<message id="key3" lang:it="key-tre" lang:en="key-three"/>
+
+		<message id="descrizione000" lang:it="Descrizione" lang:en="Description"/>
+		<message id="ndc000" lang:it="Nome del Campo" lang:en="Field Name"/>
+		<message id="valori" lang:it="Valori" lang:en="Values"/>
+		<message id="ac00" lang:it="a capo" lang:en="newline"/>
+		<message id="validazione000" lang:it="Validazione" lang:en="Validation"/>
+		<message id="fods" lang:it="FORM - Opzioni di Scelta" lang:en="FORM - Option List"/>
+		<message id="descrizione0000" lang:it="Descrizione" lang:en="Description"/>
+		<message id="ndc0000" lang:it="Nome del Campo" lang:en="Field Name"/>
+		<message id="valori0" lang:it="Valori" lang:en="Values"/>
+		<message id="validazione0000" lang:it="Validazione" lang:en="Validation"/>
+		<message id="mdc" lang:it="Mostra descrizione campo" lang:en="Show Field Description"/>
+		<message id="fpdi" lang:it="FORM - Pulsante di invio" lang:en="FORM - Submit Button"/>
+		<message id="tdp" lang:it="Titolo del Pulsante" lang:en="Button Title"/>
+		<message id="fse" lang:it="FORM - Spedizione Email" lang:en="FORM - Send Email"/>
+		<message id="diea" lang:it="Destinatario/i email (A)" lang:en="Mail Recipient (TO)"/>
+		<message id="pcc" lang:it="Per conoscenza (CC)" lang:en="Carbon Copy (CC)"/>
+		<message id="te" lang:it="Titolo email" lang:en="Mail Subject"/>
+		<message id="te0" lang:it="Testo email" lang:en="Mail Text"/>
+		<message id="cch" lang:it="Consente contenuto HTML" lang:en="Allow HTML in mail"/>
+		<message id="fssx" lang:it="FORM - Registra Informazioni" lang:en="FORM - Save Data"/>
+		<message id="ndf" lang:it="Nome del file" lang:en="File Name"/>
+		<message id="fv" lang:it="FORM - Validazione" lang:en="FORM - Validation"/>
+
+		<!-- form redirector -->
+
+			<!-- dropdown modalità -->
+
+		<message id="ddmod" lang:it="Modalità" lang:en="Mode"/>
+
+		<message id="r-page" lang:it="Sostituisci Pagina" lang:en="Replace whole page"/>
+		<message id="r-form" lang:it="Sostituisci solo gli elementi del Form" lang:en="Replace Form elements only"/>
+		<message id="r-form-elements" lang:it="Sostituisci gli elementi del Form e tutti gli elementi intermedi" lang:en="Replace Form elements and every internal object"/>
+		<message id="r-all-forms" lang:it="Sostituisci Form e disabilita altri form sulla pagina" lang:en="Replace form and disable other forms on page"/>
+		<message id="r-redirect" lang:it="Redireziona alla pagina specificata" lang:en="Redirect to page"/>
+
+
+		<message id="tdm" lang:it="Testo del messaggio" lang:en="Message Text"/>
+		<message id="fr" lang:it="FORM - Redirezione" lang:en="FORM - Redirect"/>
+		<message id="tdc" lang:it="Testo di Conferma" lang:en="Confirmation Text"/>
+		<message id="pdd" lang:it="Pagina di Destinazione" lang:en="Destination Page"/>
+		<message id="tdl" lang:it="Testo del link" lang:en="Link Text"/>
+
+		<message id="pagina" lang:it="Pagina" lang:en="Page"/>
+		<message id="import" lang:it="Importa automaticamente tutti i campi del form" lang:en="Automatically import all fields of the form"/>
+
+		<!-- form upload -->
+
+		<message id="ffu" lang:it="FORM - Caricamento Documenti" lang:en="FORM - File Upload"/>
+		<message id="ffud" lang:it="Descrizione" lang:en="Description"/>
+		<message id="maxd" lang:it="Dimensione Massima (KB)" lang:en="Max File Size (KB)"/>
+		<message id="dki" lang:it="Tipo Documento" lang:en="Document Kind"/>
+
+		<message id="ddocs" lang:it="Documenti" lang:en="Documents"/>
+		<message id="dimg" lang:it="Immagini" lang:en="Images"/>
+		<message id="ddata" lang:it="Dati" lang:en="Data"/>
+		<message id="darch" lang:it="Archivi" lang:en="Archives"/>
+
+		<!-- messaggi errore per validazione -->
+		<message id="eem" lang:it="Il campo deve contenere un valore" lang:en="Field cannot be empty" />
+		<message id="eee" lang:it="Il campo deve contenere un indirizzo email valido" lang:en="Invalid email" />
+		<message id="eec" lang:it="Validazione Captcha Fallita" lang:en="Invalid Captcha" />
+
+		<message id="efus"
+			lang:it="Le dimensioni del documento caricato (%s KB) superano le massime dimensioni ammesse (%s KB)"
+			lang:en="Document size (%s KB) is larger than allowed upload size (%s KB)"
+		/>
+
+		<message id="efuk"
+			lang:it="Il tipo di documento caricato (%s) non è fra quelli consentiti (%s)"
+			lang:en="Uploaded document kind (%s) is not allowed (allowed are: %s)"
+		/>
+
+	</group>
+</messages>

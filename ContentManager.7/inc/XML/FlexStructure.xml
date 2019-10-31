@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<FlexCMP>
+
+	<filesystem>
+
+		<!--
+			Staging -> Produzione, con contenuto (redazionali)
+		-->
+		<fsgroup kind='redational'>
+			<directory name='Images Storage Folder' path='{K:kImagesPath}' permission='wd' contentpermission='w' />
+			<directory name='Files Storage Folder' path='{K:kFilesPath}' permission='wd' contentpermission='w' />
+			<directory name='Embed Storage Folder' path='{K:kEmbedPath}' permission='wd' contentpermission='w' />
+
+			<directory name='Application Storage (redational)' path='{K:kAppDataRedationalPath}' permission='wd' contentpermission='w' />
+		</fsgroup>
+
+		<!--
+			Staging -> Produzione, con contenuto (custom)
+		-->
+		<fsgroup kind='custom'>
+			<directory name='Extensions' path='{K:kExtensionsPath}' permission='rd' />
+			<directory name='Fixed Pages' path='{K:kDataPath}FixedPages/' permission='rd' />
+			<directory name='Templates (User)' path='{K:kDataPath}TemplatesUSR/' permission='rd' />
+		</fsgroup>
+
+		<!--
+			Produzione -> Staging, con contenuto (weblivedata)
+		-->
+		<fsgroup kind='weblivedata'>
+			<directory name='Application Storage (weblivedata)' path='{K:kAppDataWebLivePath}' permission='wd' contentpermission='w' />
+		</fsgroup>
+
+		<!--
+			Staging -> Produzione, solo struttura (dynamic content)
+		-->
+		<fsgroup kind='dynamic'>
+			<directory name='Temporary Folder' path='{K:kTmpPath}' permission='wd' contentpermission='w' />
+		</fsgroup>
+
+		<!--
+			Non copiare (site dependent)
+		-->
+		<fsgroup kind='sitedependent'>
+			<directory name='Link to cm' path='{K:kDataPath}cm' permission='lrd' contentpermission='r' />
+			<directory name='Link to Admin' path='{K:kDataPath}admin' permission='lrd' contentpermission='r' />
+			<file name='Site Conf file' path='{K:kDataPath}site.conf' permission='r' />
+			<directory name='Log Folder' path='{K:kLogsPath}' permission='wd' contentpermission='w' />
+			<directory name='Application Storage (Local)' path='{K:kAppDataLocalPath}' permission='wd' contentpermission='w' />
+			<directory name='Configuration Folder' path='{K:kConfPath}' permission='wd' contentpermission='w' />
+		</fsgroup>
+
+	</filesystem>
+
+	<db>
+		<tables>
+
+			<!--
+				Staging -> Produzione, con contenuto (redazionali)
+			-->
+			<tablegroup kind='redational'>
+				<table name='AccessRules' />
+				<table name='Acronym' />
+				<table name='Aliases' />
+				<table name='Community' />
+				<table name='CommunityI18N' />
+				<_table name='DCanali' />
+				<table name='FlexImportURL' />
+				<table name='Forum' />
+				<table name='Gallery' />
+				<table name='GalleryImages' />
+				<table name='Gruppi' />
+				<table name='JNLCommunity' />
+				<table name='Languages' />
+				<_table name='Charset' />
+				<table name='NL' />
+				<table name='NLLetter' />
+				<table name='Pagine' />
+				<table name='Poll' />
+				<table name='tIndexCache' />
+				<table name='DataRepository' />
+				<table name='ValidationSet' />
+
+					<!-- Gallery -->
+
+                <table name='GPAlbum' />
+                <table name='GPAlbumI18N' />
+				<table name='GPGallery' />
+				<table name='GPGalleryI18N' />
+				<table name='GPImages' />
+				<table name='GPImagesI18N' />
+
+					<!-- Feeds -->
+
+				<table name='Feeds' />
+				<table name='FeedsI18N' />
+
+					<!-- youtube -->
+
+				<table name='FYTVideo' />
+				<table name='FYTVideoClassification' />
+				<table name='FYTVideoI18N' />
+
+					<!-- simplequery -->
+
+				<table name='SimpleQueryConf' />
+				<table name='SimpleQueryDD' />
+
+					<!-- commenti -->
+
+				<table name='commentSet' />
+
+					<!-- gloci -->
+
+				<table name='gLoci' />
+				<table name='gLociAccess' />
+				<table name='gLociCl' />
+			</tablegroup>
+
+			<!--
+				Obsolete (obsolete)
+			-->
+			<tablegroup kind='obsolete'>
+				<table name='DBCache' />
+				<table name='JUsersGruppi' />
+				<table name='Stato' />
+			</tablegroup>
+
+			<!--
+				Produzione -> Staging, con contenuto (weblivedata)
+			-->
+			<tablegroup kind='weblivedata'>
+				<table name='CommunityJUsers' />
+				<table name='CommunityUsers' />
+				<table name='CommunityUsersAD' />
+				<table name='ForumMsg' />
+				<table name='NLSentLog' />
+				<table name='PollVote' />
+				<table name='SearchHistory' />
+
+				<table name='BLOBFormData' />
+				<table name='NLSourceSent' />
+				<table name='commentEntry' />
+			</tablegroup>
+
+			<!--
+				Non copiare (logging)
+			-->
+			<tablegroup kind='logging'>
+
+					<!-- Logging raw -->
+
+				<table name='LogAccess' />
+				<table name='LogEvents' />
+				<table name='LogAdmin' />
+
+					<!-- Logging calcolato -->
+
+				<table name='LogAccessDaily' />
+				<table name='LogAccessHourly' />
+				<table name='LogAccessIP' />
+				<table name='LogAccessPages' />
+				<table name='LogAccessPageXVisit' />
+				<table name='LogAccessReferers' />
+				<table name='LogAccessSE' />
+				<table name='LogAccessTimeXVisit' />
+				<table name='LogAccessUA' />
+				<table name='LogAccessPagesClass' />
+
+				<table name='LogAccessClassPagesViewed' />
+				<table name='LogAccessCommunityUsers' />
+				<table name='LogAccessCommunityJUsers' />
+				<table name='LogAccessDownload' />
+				<table name='LogAccessMonthlyByCommunity' />
+				<table name='LogAccessPagesByCommunity' />
+			</tablegroup>
+
+			<!--
+				Staging -> Produzione, solo struttura (dynamic content)
+			-->
+			<tablegroup kind='dynamic'>
+				<table name='Locks' />
+				<table name='SearchEngine' />
+				<table name='SearchCl' />
+				<table name='SearchTag' />
+			</tablegroup>
+
+			<!--
+				Non copiare (site dependent)
+			-->
+			<tablegroup kind='sitedependent'>
+				<table name='Repository' />
+				<table name='Users' />
+				<table name='Versioning' />
+				<table name='vIndexes' />
+				<table name='LogAccessTmp' />
+
+				<!-- Scheduler -->
+
+				<_table name='Scheduler' />
+				<table name='SchedulerCron' />
+				<table name='SchedulerQueue' />
+				<table name='SchedulerHistory' />
+
+				<!-- TBD: inserire tabelle metadati MD* -->
+
+				<table name='NLLetterVersioning' />
+				<table name='SMSMessage' />
+				<table name='SMSNL' />
+				<table name='SMSSentLog' />
+				<table name='SearchURLs' />
+				<table name='UsersPrefs' />
+				<table name='VersioningSnapshot' />
+			</tablegroup>
+
+		</tables>
+	</db>
+
+	<!--
+		Applicazioni esterne ncessarie (devono esistere gli eseguibili ed
+		essere eseguibili dall'utente httpd)
+	-->
+	<applications>
+		<application name='PDFtoText' confkey='PathPDFToText' />
+		<application name='Tidy' confkey='PathTidy' />
+		<application name='Convert' confkey='PathConvert' />
+	</applications>
+</FlexCMP>

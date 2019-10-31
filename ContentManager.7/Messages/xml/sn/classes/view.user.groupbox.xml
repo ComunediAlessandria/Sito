@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="lang" defaultlang="IT">
+	<group id="snViewUserGroupbox" define="false">
+		<message id="rreq"
+			lang:it="In Attesa di Approvazione"
+			lang:en="Waiting for approval"
+			lang:fr="En attente d'approbation"
+			lang:de="Warten auf Genehmigung"
+			lang:es="Esperando aprobación"
+			lang:ru="Ожидает одобрения"
+		/>
+		<message id="admin"
+			lang:it="Amministrati"
+			lang:en="Managed"
+			lang:fr="Géré"
+			lang:de="Geschaft"
+			lang:es="Gestionado"
+			lang:ru="Управляется"
+		/>
+		<message id="tshow"
+		/>
+		<message id="title"
+			lang:it="Gruppi"
+			lang:en="Groups"
+			lang:fr="Groupes"
+			lang:de="Gruppen"
+			lang:es="Grupos"
+			lang:ru="Группы"
+		/>
+		<message id="all"
+			lang:it="Tutti"
+			lang:en="All"
+			lang:fr="Tous"
+			lang:de="Alle"
+			lang:es="Todos"
+			lang:ru="Все"
+		/>
+	</group>
+</messages>

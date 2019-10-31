@@ -1,0 +1,5 @@
+a:11:{s:6:"ancora";s:6:"Ancora";s:2:"ta";s:13:"Titolo Ancora";s:3:"nmn";s:24:"Non mostrare nell'elenco";s:4:"elaa";s:21:"Elenco Link ad Ancore";s:3:"laa";s:14:"Link ad Ancora";s:3:"tdl";s:14:"Testo del Link";s:3:"add";s:22:"Ancora di destinazione";s:3:"aid";s:9:"ID Ancora";s:4:"aidp";s:34:"(vuoto per generazione automatica)";s:3:"alk";s:13:"Collegamento:";s:3:"eid";s:194:"
+				Gli ID devono cominciare con una lettera che può essere seguita da quasiasi
+				numero di lettere, cifre (0-9), trattini (-), carattere 'underscore' (_),
+				due punti (:) e punti (.).
+			";}

@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="{LANGUAGE}">
+<head>
+
+	<meta charset="{CHARSET}">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- START INDEX --><title>Città di Alessandria - {TITLE}</title><!-- STOP INDEX -->
+
+	<!-- Bootstrap 3.7-->
+	<link href="kAssetsUSR/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="kAssetsUSR/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+	<link rel='stylesheet' type='text/css' media='screen' href='[CSS]/r_flex.css' />
+    <link href='kAssetsUSR/css/wheelmenu.css' rel='stylesheet'>        
+    <link rel="stylesheet" type="text/css" media="print" href="[CSS]/Stampa.css" />
+    <link rel="stylesheet" type="text/css" href="kAssetsUSR/fancy/jquery.fancybox.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+    
+	<meta name='keywords' content='{KEYWORDS}' />
+	<meta name='description' content='{DESCRIPTION}' />
+	<meta name="author" content="Idea Futura srl - www.ideafutura.com" />
+    <meta name="robots" content="index,follow" />
+
+    <link rel="shortcut icon" href="kAssetsUSR/img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="kAssetsUSR/img/favicon/apple-touch-icon.png" />
+
+	{:metadata:js:include}
+        bootstrap/js/bootstrap.min.js
+        js/jquery.dotdotdot.js
+        js/DropDownMenu.js
+        js/winResizer.js
+        js/jquery.waypoints.min.js
+        js/sticky.min.js
+        js/gallery.js
+        js/galleryslider.js
+        fancy/jquery.fancybox.pack.js
+        js/spin.min.js
+        js/jquery.wheelmenu.min.js
+         js/menuMarika.js
+	{:endmetadata}
+
+	{:metadata:js:onload}
+    $('.MenuHTop ol li a').addClass('hvr-underline-from-left');
+
+    var nr = Math.floor(Math.random() * 7) + 1;
+    var classe_sfondo = ' Sfondo' + nr;
+
+    $('.SfondoTopHome').addClass(classe_sfondo);
+    $('.slide').addClass(classe_sfondo);
+
+    var ww = $(window).width();
+    if (ww > 767) {
+        $(window).scroll(function(){ 
+            var el = $('.Testata');
+            if ($(window).scrollTop() >= 100) {
+                $(el).addClass('stuck');
+            }
+            else {
+                $(el).removeClass('stuck');
+            }
+        });
+    }
+
+
+     $('.wheel-button').on('click' , function(){
+            $('#socialWheel').toggle();
+        });
+
+        var wlh = window.location.href;
+        
+        $('#socialWheel li a').addClass('target_blank');
+        $('#swLi').attr('href' , 'http://www.linkedin.com/shareArticle?url=' + wlh);
+        $('#swTw').attr('href' , 'https://twitter.com/intent/tweet?text={TITLE}&url=' + wlh );
+        $('#swFb').attr('href' , 'https://www.facebook.com/sharer/sharer.php?u=' + wlh);
+
+
+    // Configure/customize these variables.
+    var showChar = 600;  // How many characters are shown by default
+    var showChar2 = 120;
+    var ellipsestext = "...";
+    var lesstext = "Riduci";
+    var  moretext= "Leggi di pi&ugrave; <i class='fa fa-chevron-down'></i>";
+    
+    $('.riducitesto').each(function() {
+        var content = $(this).html();
+        if(content.length > showChar2) {
+            var c = content.substr(0, showChar2);
+            var h = content.substr(showChar2, content.length - showChar2);
+            var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span>';
+            $(this).html(html);
+        }
+ 
+    });
+
+    $('.leggialtro').each(function() {
+        var content = $(this).html();
+        if(content.length > showChar) {
+            var c = content.substr(0, showChar);
+            var h = content.substr(showChar, content.length - showChar);
+            var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<br><br><br><hr><a href="" class="morelink">' + moretext + '</a></span>';
+            $(this).html(html);
+        }
+ 
+    });
+
+     $('.morecont').each(function() {
+        var content = $(this).html();
+        //alert(content);
+        var html = '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + content + '</span>&nbsp;&nbsp;<br><br><br><hr><a href="" class="morelink">' + moretext + '</a></span>';
+            $(this).html(html);
+    });
+
+    $('.more').each(function() {
+        var content = $(this).html();
+        if(content.length > showChar) {
+            var c = content.substr(0, showChar);
+            var h = content.substr(showChar, content.length - showChar);
+            var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<br><br><br><hr><a href="" class="morelink">' + moretext + '</a></span>';
+            $(this).html(html);
+        }
+ 
+    });
+ 
+    $(".morelink").click(function(){
+        if($(this).hasClass("less")) {
+            $(this).removeClass("less");
+            $(this).html(moretext);
+        } else {
+            $(this).addClass("less");
+            $(this).html(lesstext);
+        }
+        $(this).parent().prev().toggle();
+        //$('.morecontent span').prev().toggle();
+        $('.morecontent span').toggle();
+        return false;
+    });
+
+    //$('#dest').load('Alessandria/misure-antismog-2019 #result');
+    
+    $.get('testfile.txt', function(data) { 
+        // alert(data); 
+        //copia il contenuto del file all'interno del div 
+        //aggiungendo il tag <BR /> per ogni riga del file
+           // $('#dest').html(data.replace('\n','<br />')); 
+    });
+
+
+	{:endmetadata}
+
+</head>

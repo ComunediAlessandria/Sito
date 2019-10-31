@@ -1,0 +1,70 @@
+
+{#Include TemplatesUSR-Site-include/Header.html}
+<body class="push-body-toright home" id="Home">
+<div id="fb-root"></div>
+
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v2.8&appId=299466920230993";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+<div class="push_container">
+{#Include TemplatesUSR-Site-include/Testata-Home.html}
+            <!-- START INDEX -->
+    {:if:notempty:CORPOPAGINA}              
+        <section class="WhiteContent">
+            <div class="container"> 
+                <div class="row ">
+                    <div class="col-xs-12">
+                        {CORPOPAGINA}
+                    </div>   
+                </div>
+            </div>
+        </section>
+    {:endif}
+
+    <section class="GrayContent ComunicatiStampa">
+        <div class="container"> 
+            <div class="row ">
+                <div class="col-xs-12">
+                    {PAGE.COMSTAMPA}
+                </div>   
+            </div>
+        </div>
+    </section>
+
+    <section class="WhiteContent Eventi">
+        <div class="container"> 
+            <div class="row ">
+                <div class="col-xs-12">
+                    {PAGE.EVENTI}
+                </div>   
+            </div>
+        </div>
+    </section>
+
+    <section class="Argomenti">
+        <div class="container"> 
+            <div class="row ">
+                <div class="col-xs-12">
+                    {PAGE.ARGOMENTI}
+                </div>   
+            </div>
+        </div>
+    </section>
+
+    <!-- STOP INDEX -->
+            
+            {#Include TemplatesUSR-Site-include/Footer.html}
+
+            {#Include TemplatesUSR-Site-include/AdminLink.html}
+            
+        </div>
+    </body>
+</html>

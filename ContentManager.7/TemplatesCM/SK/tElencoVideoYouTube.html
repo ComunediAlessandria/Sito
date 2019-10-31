@@ -1,0 +1,150 @@
+<!-- BEGIN SearchForm -->
+<h1>{Titolo}</h1>
+<div class='AdminPageFooterCommand'>
+	<form action='{action}' id='FYTVideoSearch' method='post'>
+
+			<input type='hidden' name='frmHaveData' value='OK' />
+			<fieldset>
+				<legend>{legendRicercaYouTube}</legend>
+				<label for='frmTestoRicercaY'>{lblTestoRicerca}:</label> {frmTestoRicercaY}
+				<label for='frmAutoreY'>{lblAutore}:</label> {frmAutoreY}
+				<label for='frmOrdinamentoY'>{lblOrdinamento}:</label> {frmOrdinamentoY}<br />
+				<label for='frmCodiceVideoY'>{lblCodiceVideoLong}:</label> {frmCodiceVideoY}
+				
+				<div class='buttons'>
+					<input type="submit" id="SubmitY" name="SubmitY" value="{lblCercaY}"  />
+					<input type="submit" id="ResetY" name="ResetY" value="{lblReset}"  />
+				</div>				
+			</fieldset>
+			
+			<fieldset>
+				<legend>{legendRicercaArchivio}</legend>
+				<label for='frmTestoRicercaA'>{lblTestoRicerca}:</label> {frmTestoRicercaA}
+				<label for='frmAutoreA'>{lblAutore}:</label> {frmAutoreA}
+				<label for='frmCodiceVideoA'>{lblCodiceVideoShort}:</label> {frmCodiceVideoA}
+				<div>{Classification}</div>
+				<div class='buttons'>
+					<input type="submit" id="SubmitA" name="SubmitA" value="{lblCercaA}"  />
+					<input type="submit" id="ResetA" name="ResetA" value="{lblReset}"  />
+				</div>				
+			</fieldset>
+	
+	</form>
+</div>
+{ERR}
+<!-- END SearchForm -->
+
+<!-- BEGIN EmptySearch -->
+<div class="AdminCorpoRowEven"><p>{Msg}</p></div>
+<!-- END EmptySearch -->
+
+
+
+<!-- BEGIN TableEmpty -->
+<div class="AdminCorpoRowEven"><p>{Msg}</p></div>
+<!-- END TableEmpty -->
+
+<!-- BEGIN TableHeader -->
+	<h2>{lblRisultatoRicerca}</h2>
+	<div class="AdminPageFooterCommand"> {lblVideoTrovati}: {from} - {to} {lblCirca} {Tot}</div>
+	  <table class="AdminTable" id='FYTVideoTable' summary="{lblListaclientiTableSummary}">
+		<thead>
+		  <tr>
+			<th scope="col" >{lblAnteprima}</th>
+			<th scope="col" >{lblInfoYouTube}</th>
+			<th scope="col" >{lblInfoArchivio}</th>
+		  </tr>
+		</thead>
+		<tbody>
+<!-- END TableHeader -->
+
+<!-- BEGIN TableRow -->
+		  <tr class="{CLASSTR}">
+			<th scope='row'>
+				<a href='{hrefPlayer}' title='{prevAlt}'>{SmallThumb} <br />
+					{prevICO} {VideoID}
+				</a>
+			</th>
+			<td>
+					<dl>
+						<dt>{lblVideoTitle}</dt><dd><strong>{VideoTitle}</strong></dd>
+						<dt>{LblDescrizione}</dt><dd>{DescFull}</dd>
+						<dt>{lblParoleChiave}</dt><dd>{Tags}</dd>
+						<dt>{LblDurata}</dt><dd>{DurationMinSec}</dd>
+						<dt>{LblDataVideo}</dt><dd>{UpdatedDate}</dd>
+					</dl> 
+			</td>
+			<td>
+					<dl>
+						<dt>{lblVideoTitle}</dt><dd><strong>{Titolo}</strong></dd>
+						<dt>{LblDescrizione}</dt><dd>{Descrizione}</dd>
+						<dt>{lblParoleChiave}</dt><dd>{ParoleChiave}</dd>
+						<dt>{lblClassificazione}</dt><dd>{Classificazione}</dd>
+						<dt>{LblDataVideo}</dt><dd>{DataOraVideo}</dd>
+						<dt>{actionBtn} {delBtn}</dt>
+					</dl> 			
+			</td>
+		  </tr>
+<!-- END TableRow -->
+
+<!-- BEGIN TableFooter -->
+		</tbody>
+	</table>
+<!-- END TableFooter -->
+
+
+
+<!-- BEGIN VideoPlayer -->
+<div class="AdminCorpoRowEven">
+	
+	<div style='float: left; width: {width}px; height{height}: px; margin: 0 10px 0 0;' >
+		<object width="{width}" height="{height}">
+			<param name="movie" value="http://www.youtube.com/v/{VideoID}&hl={lang}&fs=1&rel=0" />
+			<param name="allowFullScreen" value="true" />
+			<param name="allowscriptaccess" value="always" />
+			<embed src="http://www.youtube.com/v/{VideoID}&hl={lang}&fs=1&rel=0" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="{width}" height="{height}" />
+		</object>
+	</div>
+	
+	<div class='AdminCorpoDL' style='margin-left: {width}px;'>
+		<h2>{lblInfoYouTube}</h2>
+		<dl>
+			<dt>{lblVideoTitle}:</dt><dd><strong>{VideoTitle}</strong></dd>
+			<dt>{lblVideoID}:</dt><dd>{VideoID}</dd>
+			<dt>{LblDescrizione}:</dt><dd>{DescFull} &nbsp;</dd>
+			<dt>{LblAuthorName}:</dt><dd>{AuthorName}</dd>
+			<dt>{LblDurata}:</dt><dd>{Duration}</dd>
+			<dt>{LblVisualizzazioni}:</dt><dd>{ViewCount}</dd>
+			<dt>{lblCategoria}:</dt><dd>{Category}</dd>
+			<dt>{lblParoleChiave}:</dt><dd>{Tags} &nbsp;</dd>
+		</dl>
+		<h2>{actionBtn} {delBtn}</h2>
+		<dl>
+			<dt>{lblVideoTitle}:</dt><dd><strong>{Titolo}</strong></dd>
+			<dt>{LblDescrizione}:</dt><dd>{Descrizione}</dd>
+			<dt>{lblParoleChiave}</dt><dd>{ParoleChiave}</dd>
+			<dt>{lblTrascrizione}</dt><dd>{Trascrizione} &nbsp;</dd>
+			<dt>{lblClassificazione}:</dt><dd>{Classificazione}</dd>
+			<dt>{lblRelatedLink}:</dt><dd>{RelatedLink}</dd>
+		</dl>
+	</div>	
+	<div style='clear: both;'></div>
+	<h2><a href='{HrefBackToResult}'>{lblRitornaAlRisultatoRicerca}</a></h2>
+</div>
+<!-- END VideoPlayer -->
+
+<!-- BEGIN VideoNotFound -->
+<div class="AdminCorpoRowEven">
+	<h2>{msg}</h2>
+</div>
+<!-- END VideoNotFound -->
+
+<!-- BEGIN Navi -->
+	<div class="AdminCorpoRowOdd"> {Paginatore} </div>
+<!-- END Navi -->
+
+<!-- BEGIN Footer -->
+	<div class="AdminPageFooterStatus">{lblTotVideoInArchivio}: {VideoInArchivio}</div>
+<!-- END Footer -->
+
+

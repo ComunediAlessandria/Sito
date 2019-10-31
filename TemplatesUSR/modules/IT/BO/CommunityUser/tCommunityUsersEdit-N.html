@@ -1,0 +1,92 @@
+<div class="FormRegistrazione col-12">
+
+    <h1 class="text-center">Registrazione Utente</h1>
+    
+    {ERR}
+
+    <form class="form-horizontal" method="post" action="{ACTION}">
+         <div class="form-row">   
+            <div class="form-group col-md-4">
+                <label for="{TAG_Nome}">{LBL_Nome}</label>
+                {VAL_Nome}
+            </div>	
+    
+            <div class="form-group col-md-4">
+                <label for="{TAG_Cognome}">{LBL_Cognome}</label>
+                {VAL_Cognome}
+            </div>	
+            
+            <div class="form-group col-md-4">
+                <label class="labelEmail" for="{TAG_email}">{LBL_email}</label>
+                {VAL_email}
+            </div>
+        </div>
+        <div class="form-row">
+	        <div class="form-group col-md-4">
+                <label for="{TAG_Ente}">{LBL_Ente}</label>
+                {VAL_Ente}
+            </div>
+   	        <div class="form-group col-md-4">
+                <label for="{TAG_Ruolo}">{LBL_Ruolo}</label>
+                {VAL_Ruolo}
+            </div>
+       	    <div class="form-group col-md-4">
+                <label for="{TAG_Telefono}">{LBL_Telefono}</label>
+                {VAL_Telefono}
+            </div>
+        </div>
+        <br /><br />
+        <div class="form-row justify-content-center">
+            <div class="col-md-4">
+    	        <div class="form-group">
+                    <label for="{TAG_Username}">{LBL_Username}</label>
+                    {VAL_Username}
+                </div>
+        
+                <div class="form-group">
+                    <label for="{TAG_Password}">{LBL_Password}</label>
+                    {VAL_Password}
+                </div>
+                
+                <div class="form-group">
+                    <label for="{TAG_Password2}">{LBL_Password2}</label>
+                    {VAL_Password2}
+                </div> 
+            </div>
+        </div>
+        <div class="form-row">       
+            <div class="form-group">
+            	<br /><br />
+                <h4>Informativa sulla privacy</h4>
+                <p>
+                A norma del d.lgs.196/2003 sulla privacy nelle banche dati, Dedagroup S.p.A. - titolare dei dati del trattamento - con sede in Trento - Loc. Palazzine 120/f, 38121, comunica che i dati sopra riportati potranno essere utilizzati per il solo invio di materiale informativo sulle attività di Dedagroup S.p.A. In nessun caso tali dati saranno ceduti a terzi. Ai sensi dell'art.7 d.lgs.196/2003, si possono esercitare i relativi diritti fra cui consultare, modificare, cancellare i dati od opporsi al loro trattamento per fini di invio materiale informativo rivolgendosi al titolare al suddetto indirizzo.
+                </p>
+                <br />
+            </div>
+        </div>
+        <div class="form-row">    
+			 <div class="form-group">
+                {VAL_Privacy}
+                <label class="labelCheck" for="{TAG_Privacy}">{LBL_Privacy}</label>
+            </div>    
+        </div>
+        <div class="form-row">
+			<div class="form-group">
+				<fieldset>
+					<legend>Seleziona gli strumenti di interesse:</legend>
+					{VAL_jCommunity}
+				</fieldset>
+			</div>
+        </div>
+        <div class="form-row">
+    		<div class="form-group">
+    			{VAL_ReceiveNL}{HIDDEN}{VAL_Lang}
+    		</div> 
+	    </div>
+        <div class="form-row justify-content-center">
+			<div class="form-group">
+                <input class="btn btn-primary" name="Submit" type="submit" value="Iscriviti" />
+            </div>
+        </div>   
+    </form>
+</div>

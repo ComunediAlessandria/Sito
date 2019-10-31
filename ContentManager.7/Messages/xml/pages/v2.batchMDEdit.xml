@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE FlexCMPMessages SYSTEM '/FlexCMPMessages.dtd'>
+<messages xmlns:lang="#" defaultlang="it">
+
+	<group id='bmde' define='false'>
+
+		<message id='dsi' lang:it="data Filne Validità nell'intervallo" lang:en='Expiry date in Interval' />
+		<message id='nc' lang:it="Nessuna Community" lang:en='No Community' />
+
+	</group>
+
+</messages>

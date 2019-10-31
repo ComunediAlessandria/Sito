@@ -1,0 +1,52 @@
+
+RewriteEngine on
+
+	# TBD: se il file non esiste passa il controllo a PHP per verificare
+	# se è un file cache (eg. thumbnail) e nel caso ricrearlo
+
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule (.*) /flex/cm/pages/ServeCache.php?cache=$1 [QSA, L]
+
+	# se l'URL indica un file o una directory lo serve direttamente
+
+RewriteCond %{REQUEST_FILENAME} -d [OR]
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule .+ - [L]
+
+	# front-controller API
+
+RewriteRule ^api/v1/(.*)$ /flex/cm/api.php?_api_v=v1&_api_p=$1 [QSA,NC,L]
+
+# RewriteRule /$ - [PT,NS]
+
+	# rende opzionale lo '/' finale nelle URL
+
+RewriteRule ^(.*)/$ /$1 [L,R]
+
+	# accesso diretto all'area amministrativa
+
+RewriteRule ^admin$ /flex/admin/index.php [L,NC,QSA]
+
+	# servizio della sitemap
+
+RewriteRule ^sitemap\.xml$ /flex/cm/pages/SiteMap.php [L]
+
+	# se sto processando un'URL riscritta termino qui
+
+RewriteRule SU_		-	[L,NS]
+
+	# nel caso in cui si usi una porta diversa dalla 80
+	# è necessario inserire questa riga al posto di quella
+	# precedente
+
+#RewriteRule SU_		-	[E=REDIRECT_PORT:<numeroporta>,L,NS]
+
+	# se ho un alias, redireziona alla pagina di servizio
+	# assumo che tutto quello che eventualmente compare dopo /L/ siano parametri
+
+RewriteRule ^([A-Za-z0-9_\.-]+)(/L/.*)?/?$	/flex/cm/pages/ServeBLOB.php/SU_/$1$2	[L,NS]
+RewriteRule ^([A-Za-z0-9_\.-]+)/([A-Za-z0-9_\.-]+)(/L/.*)?/?$	/flex/cm/pages/ServeBLOB.php/SU_/$1:$2$3	[L,NS]
+
+# RewriteRule ^([A-Za-z0-9_\.-]+)/([A-Za-z0-9_\.-]+)/([A-Za-z0-9_\.-]+)(/L/.*)?$  /flex/cm/pages/ServeBLOB.php/SU_/$1:$2:$3$4     [L,NS]
+# RewriteRule ^([A-Za-z0-9_\.-]+)/([A-Za-z0-9_\.-]+)/([A-Za-z0-9_\.-]+)/([A-Za-z0-9_\.-]+)(/L/.*)?$       /flex/cm/pages/ServeBLOB.php/SU_/$1:$2:$3:$4$5  [L,NS]

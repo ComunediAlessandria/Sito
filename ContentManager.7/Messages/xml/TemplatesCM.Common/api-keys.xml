@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="IT">
+	<group id="api-keys-edit" define="false">
+
+		<message id='pt'
+			lang:it="Modifica API Key"
+			lang:en='API Key Edit'
+		/>
+
+		<!-- label del form -->
+
+		<message id='lbl-api-key'
+			lang:it="API Key"
+			lang:en='API Key'
+		/>
+		<message id='lbl-expiry'
+			lang:it="Scadenza"
+			lang:en='Expiry'
+		/>
+		<message id='lbl-permissions'
+			lang:it="Permessi"
+			lang:en='Permissions'
+		/>
+		<message id='lbl-notes'
+			lang:it="Note"
+			lang:en='Notes'
+		/>
+
+		<!-- bottoni -->
+
+		<message id='bcn'
+			lang:it="Annulla"
+			lang:en='Cancel'
+		/>
+		<message id='bok'
+			lang:it="Registra"
+			lang:en='Save'
+		/>
+
+		<!-- messaggio chiave nuova -->
+
+		<message id='msg-new'
+			lang:it="Generata al salvataggio"
+			lang:en='Generated on save'
+		/>
+
+	</group>
+
+	<group id="api-keys-list" define="false"  scope='json'>
+
+		<message id='pt'
+			lang:it="Elenco API Key"
+			lang:en='API Key List'
+		/>
+
+		<message id='badd'
+			lang:it="Crea nuova API Key"
+			lang:en='Create a new API Key'
+		/>
+
+		<!-- tabella -->
+
+		<message id='tsum'
+			lang:it="Tabella con l\'elenco delle API KEY"
+			lang:en='Table with API KEYs list'
+		/>
+
+		<message id='tha'
+			lang:it="Azioni"
+			lang:en='Actions'
+		/>
+		<message id='thkey'
+			lang:it="KEY"
+			lang:en='KEY'
+		/>
+		<message id='thdtc'
+			lang:it="Creata il"
+			lang:en='Created'
+		/>
+		<message id='thcby'
+			lang:it="da"
+			lang:en='by'
+		/>
+		<message id='thdte'
+			lang:it="Scadenza"
+			lang:en='Expire'
+		/>
+		<message id='thn'
+			lang:it="Note"
+			lang:en='Notes'
+		/>
+
+		<message id='nm'
+			lang:it="Numero Chiavi"
+			lang:en='Number of Keys'
+		/>
+
+		<message id='link-edit'
+			lang:it="Modifica"
+			lang:en='Edit'
+		/>
+
+		<message id='link-del'
+			lang:it="Elimina"
+			lang:en='Delete'
+		/>
+
+		<message id='link-enable'
+			lang:it="Abilita"
+			lang:en='Enable Key'
+		/>
+
+		<message id='link-disable'
+			lang:it="Disabilita"
+			lang:en='Disable Key'
+		/>
+
+		<message id='none'>
+			<trans lang='IT'><![CDATA[
+				Non è ancora stata definita alcuna API Key
+			]]></trans>
+			<trans lang='EN'><![CDATA[
+				No API Keys created
+			]]></trans>
+		</message>
+
+		<!-- dialog conferma cancellazione -->
+
+		<message id='dialog-title'
+			lang:it="Eliminazione API Key"
+			lang:en='Delete API Key'
+		/>
+
+		<message id='dialog-text'>
+			<trans lang='IT'><![CDATA[
+				Si desidera eliminare l'API Key selezionata?
+			]]></trans>
+			<trans lang='EN'><![CDATA[
+				Do you really want to delete the selected API Key?
+			]]></trans>
+		</message>
+
+		<message id='dialog-note'>
+			<trans lang='IT'><![CDATA[
+				Una volta eliminata l'API Key, tutte le applicazioni esterne
+				che fanno riferiento a questa API Key smetteranno di funzionare.
+			]]></trans>
+			<trans lang='EN'><![CDATA[
+				Once deleted, every external application referring this API Key
+				will no longer work correctly.
+			]]></trans>
+		</message>
+
+		<message id='dialog-btn-ok'
+			lang:it="Elimina"
+			lang:en='Delete'
+		/>
+
+		<message id='dialog-btn-cancel'
+			lang:it="Annulla"
+			lang:en='Cancel'
+		/>
+
+	</group>
+</messages>

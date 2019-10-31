@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="lang" defaultlang="IT">
+  <group id="snViewUserPostDocList" define="false">
+    <message id="none" lang:it="Non ci sono documenti." lang:en="There are no documents." lang:fr="Il n'y a pas de documents." lang:de="Es gibt keine Dokumente." lang:es="No hay documentos." lang:ru="Там нет документов."/>
+    <message id="title" lang:it="Documenti" lang:en="Documents" lang:fr="Documents" lang:de="Dokumente" lang:es="Documentos" lang:ru="Документы"/>
+    <message id="all" lang:it="Tutti" lang:en="All" lang:fr="Tous" lang:de="Alle" lang:es="Todos" lang:ru="Все"/>
+    <message id="tcomm"/>
+  </group>
+</messages>

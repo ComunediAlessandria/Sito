@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="it">
+
+	<!--
+		Metadati
+	-->
+
+	<group id='md' define='false'>
+
+		<!-- filtri -->
+
+		<message id='filterExpired' lang:it='Scadute' lang:en='Expired' lang:es='Caducadas'/>
+		<message id='filterNotExpired' lang:it='Non Scadute' lang:en='Not Expired' lang:es='Non Caducadas' />
+		<message id='filterExpiring' lang:it='In Scadenza' lang:en='Expiring' lang:es='En caducidad' />
+		<message id='filterNone' lang:it='Nessuna' lang:en='None' lang:es='Ninguna'/>
+		<message id='filterApproved' lang:it='Approvate' lang:en='Approved' lang:es='Aprobadas'/>
+		<message id='filterUnapproved' lang:it='Non Approvate' lang:en='Unapproved' lang:es='Por aprobar'/>
+
+		<message id='filterEvExpired' lang:it='Scaduti' lang:en='Expired' lang:es='Caducados'/>
+		<message id='filterEvNotExpired' lang:it='Non Scaduti' lang:en='Not Expired' lang:es='Non Caducados' />
+
+	</group>
+</messages>

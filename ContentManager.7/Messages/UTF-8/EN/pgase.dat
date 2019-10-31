@@ -1,0 +1,3 @@
+a:13:{s:2:"pt";s:6:"Source";s:3:"nof";s:7:"No file";s:4:"vcsv";s:20:"No CSV file selected";s:3:"vnm";s:24:"No source name specified";s:5:"rrows";s:35:"(Only the first %s rows are showed)";s:4:"rsum";s:107:"The document is made of %s names. The number of columns is %s. Rows having the wrong columns number are %s.";s:2:"ln";s:4:"Name";s:2:"lk";s:4:"Kind";s:2:"lc";s:12:"CSV Document";s:2:"bv";s:29:"Check correctness of the file";s:3:"bok";s:4:"Save";s:4:"bcan";s:6:"Cancel";s:16:"errnoemailcolumn";s:102:"
+				<strong>Error</strong>: The source csv file does not contain the required column called email
+			";}

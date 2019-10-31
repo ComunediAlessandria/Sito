@@ -1,0 +1,33 @@
+
+	<div id="AdminCorpoBox">
+		<h1>Pagina bloccata!</h1>
+
+		<div class="AdminCorpoRowEven">
+			<p>
+				<strong>Attenzione!</strong> La pagina alla quale state cercando di accedere risulta attualmente aperta in modifica da parte di un altro utente.
+			</p>
+		</div>
+
+		<div class="AdminCorpoRowOdd">
+			<ul>
+				<li>Utente che sta effettuando la modifica: <strong>{user}</strong></li>
+				<li>Data ed ora di inizio modifica: <strong>{time:date:d/m/y H.i}</strong></li>
+			</ul>
+		</div>
+
+	  <!-- BEGIN unlock -->
+		<div class="AdminCorpoRowEven">
+			<p>
+				Forzare lo sblocco della pagina può portare a perdite di dati.<br />
+				Se sbloccate una pagina attualmente in modifica da parte di un diverso utente (ignorando esplicitamente il blocco di sicurezza), allora acquisirete accesso esclusivo a tale pagina, impedendo a tale utente il salvataggio del lavoro.
+
+
+			</p>
+			<p>
+				Per sbloccare la pagina, fare click <a href='{href}'>qui</a>.
+			</p>
+		</div>
+ 	<!-- END unlock -->
+
+		<div class='AdminPageFooterStatus'> &nbsp;</div>
+	</div>

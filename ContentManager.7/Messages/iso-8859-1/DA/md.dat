@@ -1,0 +1,1 @@
+a:8:{s:13:"filterExpired";s:12:"[DA] Scadute";s:16:"filterNotExpired";s:16:"[DA] Non Scadute";s:14:"filterExpiring";s:16:"[DA] In Scadenza";s:10:"filterNone";s:12:"[DA] Nessuna";s:14:"filterApproved";s:14:"[DA] Approvate";s:16:"filterUnapproved";s:18:"[DA] Non Approvate";s:15:"filterEvExpired";s:12:"[DA] Scaduti";s:18:"filterEvNotExpired";s:16:"[DA] Non Scaduti";}

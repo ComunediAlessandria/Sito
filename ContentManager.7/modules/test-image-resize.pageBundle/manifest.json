@@ -1,0 +1,18 @@
+{
+	"tag": "test-image-resize",
+
+	"routes": {
+
+		"testImageResize": "/test-image-resize"
+	},
+
+	"menus": [
+
+		{
+			"title": "Test Resize Immagini",
+			"items": {
+				"test-image-resize": { "title": "Test", "href": "/test-image-resize" },
+			}
+		}
+	]
+}

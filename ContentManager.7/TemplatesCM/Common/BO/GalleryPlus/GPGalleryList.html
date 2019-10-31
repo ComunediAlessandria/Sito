@@ -1,0 +1,40 @@
+<div id="AdminCorpoBox">
+	 <h1>Gallerie</h1>
+
+	<!-- BEGIN AddBlockTop -->
+		<div class="AdminPageFooterCommand"><a href="{ADDLINK}">{ADDIMG}Aggiungi una nuova Galleria</a></div>
+	<!-- END AddBlockTop -->
+
+	 <table class="AdminTable" summary="Tabella contenente l'elenco delle Gallerie: nella prima colonna sono contenuti i comandi di eliminazione e modifica della Galleria.">
+		<thead>
+		  <tr style='text-align: right;'>
+			<th scope="col">Azioni</th>
+			<th scope="col">Galleria</th>
+			<th scope="col" class='AdminTableAlignRight'>Ordine</th>
+			<th scope="col" class='AdminTableAlignRight'>Mostra in elenco</th>
+			<th scope="col" class='AdminTableAlignRight'>Gruppo <abbr title='Amministrativo'>Amm.</abbr> Album</th>
+			<th scope="col" class='AdminTableAlignRight'>Album</th>
+			<th scope="col" class='AdminTableAlignRight'>Immagini</th>
+			<th scope="col" class='AdminTableAlignRight'>Ultima Immagine</th>
+		  </tr>
+		</thead>
+		<tbody>
+	  <!-- BEGIN row -->
+		  <tr class="{CLASSTR} AdminTableAlignRight">
+			<td style='width: 78px; white-space: nowrap;'>{DELLINK} {MODLINK} {DETAILLINK}</td>
+			<th scope='row' class='AdminTableAlignLeft'>{TITLE}</th>
+			<td style='white-space: nowrap'>{SORTINDEX} {UPLINK} {DNLINK}</td>
+			<td>{SHOWINLIST}</td>
+			<td style='white-space: nowrap'>{GRUPPO}</td>
+			<td>{NUMALBUM}</td>
+			<td>{NUMFOTO}</td>
+			<td>{ULTIMAFOTO}</td>
+		  </tr>
+	  <!-- END row -->
+		</tbody>
+	</table>
+
+
+	<div class="AdminPageFooterStatus"> &nbsp; </div>
+
+</div>

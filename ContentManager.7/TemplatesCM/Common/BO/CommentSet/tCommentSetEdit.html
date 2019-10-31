@@ -1,0 +1,53 @@
+<div id="AdminCorpoBox">
+	<h1>Scheda impostazione commenti</h1>
+	{ERR}
+	<form id="AdminFormBO" method="post" action="{ACTION}">
+		<div class="AdminFormBORowEven">
+			<label class="AdminFormBOLabel" for='{TAG_Titolo}'>{LBL_Titolo}</label>
+			<div class="AdminFormBOField">{VAL_Titolo}</div>
+		</div>
+		<div class="AdminFormBORowEven">
+			<label class="AdminFormBOLabel" for='{TAG_tPost}'>{LBL_tPost}</label>
+			<div class="AdminFormBOField">{VAL_tPost}</div>
+		</div>
+		<div class="AdminFormBORowEven">
+			<label class="AdminFormBOLabel" for='{TAG_tView}'>{LBL_tView}</label>
+			<div class="AdminFormBOField">{VAL_tView}</div>
+		</div>
+		<div class="AdminFormBORowEven">
+			<label class="AdminFormBOLabel" for='{TAG_canInsert}'>{LBL_canInsert}</label>
+			<div class="AdminFormBOField">{VAL_canInsert}</div>
+		</div>
+		<div class="AdminFormBORowEven">
+			<label class="AdminFormBOLabel" for='{TAG_canView}'>{LBL_canView}</label>
+			<div class="AdminFormBOField">{VAL_canView}</div>
+		</div>
+		<div class="AdminFormBORowEven">
+			<label class="AdminFormBOLabel" for='{TAG_RichiestaApprovazione}'>{LBL_RichiestaApprovazione}</label>
+			<div class="AdminFormBOField">{VAL_RichiestaApprovazione}</div>
+		</div>
+
+		<div class="AdminFormBORowEven">
+			<label class="AdminFormBOLabel" for='{TAG_Captcha}'>{LBL_Captcha}</label>
+			<div class="AdminFormBOField">{VAL_Captcha}</div>
+		</div>
+		<div class="AdminFormBORowEven">
+			<label class="AdminFormBOLabel" for='{TAG_Stato}'>{LBL_Stato}</label>
+			<div class="AdminFormBOField">{VAL_Stato}</div>
+		</div>
+
+		<div class="AdminFormBORowEven">
+			<label class="AdminFormBOLabel" for='{TAG_GruppoAmministratori}'>{LBL_GruppoAmministratori}</label>
+			<div class="AdminFormBOField">{VAL_GruppoAmministratori}</div>
+		</div>
+
+		
+
+	
+
+		<div class="AdminPageFooterCommand">
+			{HIDDEN} <input name="Submit" type="submit" value="Salva le modifiche" />
+			<input name="btnCancel" type="submit" value="Annulla le modifiche" />
+		</div>
+	</form>
+</div>

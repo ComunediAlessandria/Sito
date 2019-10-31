@@ -1,0 +1,59 @@
+
+
+Elenco degli eventi:
+
+	profile/new		creazione iniziale dell'utente		
+	
+	action/error	non è stato possibile gestire l'azione			name: nome dell'azione
+
+
+
+	friend/request	richiesta di relazione							uid: chi fa la richiesta
+																	cid: chi è oggetto della richiesta
+																	msg: messaggio di richiesta
+
+	friend/accept	conferma di relazione							uid: chi ha accettato
+																	cid: chi aveva richiesto
+
+	friend/del		cancellazione di relazione						uid: chi ha eliminato
+																	cid: chi era il contatto
+
+	friend/deny		negazione di relazione							uid: chi ha eliminato
+																	cid: chi era il contatto
+
+
+
+	member/request	richiesta di partecipazione a gruppo			uid: chi fa la richiesta
+																	gid: id del gruppo
+
+	member/accept	accettazione di partecipazione a gruppo			uid: chi fa la richiesta
+																	gid: id del gruppo
+
+	member/join		iscrizione a gruppo libero						uid: chi fa la richiesta
+																	gid: id del gruppo
+
+	member/invite	iscrizione a gruppo dall'admin					uid: chi fa la richiesta
+																	gid: id del gruppo
+
+	member/deny		diniego di partecipazione a gruppo				uid: chi fa la richiesta
+																	gid: id del gruppo
+
+	member/cancel	cancellazione dal gruppo (utente)				uid: chi fa la richiesta
+																	gid: id del gruppo
+
+	member/delete	cancellazione dal gruppo (admin)				uid: chi fa la richiesta
+																	gid: id del gruppo
+
+
+	comment/add		creazione di un commeneto						uid: chi ha fatto il commento
+																	postid: id del post
+																	text: testo del commento
+
+
+	group/wallpost	post sul wall del gruppo						uid: chi ha fatto il post
+																	gid: gruppo destinazione
+																	pid: identificativo del post
+																	what: cosa ('dm', ...)
+																	data	=> array(
+																		'text'	=> $st
+																	)

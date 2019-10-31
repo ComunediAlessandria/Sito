@@ -1,0 +1,98 @@
+#!/usr/bin/php
+<?php
+
+$tp = dirname(__FILE__);
+
+$containerName = basename(realpath($tp)); // SocialWall
+
+$absPathSource = realpath($tp) . '/';
+$absPathExtensionsSite = realpath($tp . '/..') . '/';
+$absPathExtensionsLocal = realpath($tp . '/extensions.local') . '/';
+
+	// relativo ad Extensions/
+
+$relPathExtensionsLocal = str_replace($absPathExtensionsSite, null, $absPathExtensionsLocal);
+
+//var_dump($relPathExtensionsLocal); exit;
+
+//var_dump($pathSource);var_dump($pathExtensionsSite);var_dump($pathExtensionsLocal);
+
+include_once($tp . '/../../../cm/modules/Helper/JSON.php');
+
+$installConf = JSON(
+	file_get_contents($absPathExtensionsLocal . 'manifest.json')
+);
+
+//var_dump($installConf);
+
+foreach ($installConf['install'] as $data) {
+
+	$path = $data['path'];
+
+	$hasDir = strpos($path, '/') !== false;
+
+//	$srcPath = $pathExtensionsLocal . $path;
+	$absDstPath = $absPathExtensionsSite . $path;
+
+	if (! file_exists($absDstPath)) {
+
+		if ($hasDir) {
+
+			$c = explode('/', $path);
+
+			$s = array_shift($c);
+
+//echo $relPathExtensionsLocal . $s . ' -> ' . $absPathExtensionsSite . $s . "\n";
+
+			symlink($relPathExtensionsLocal . $s, $absPathExtensionsSite . $s);
+
+		} else {
+
+			symlink($relPathExtensionsLocal . $path, $absDstPath);
+		}
+
+
+	} else
+		echo "Skipping " . $path . ": file exists\n";
+}
+
+	// verifica che la dir per i messaggi esista
+
+if (! is_dir($tp . '/../../Messages/xml/'))
+	mkdir($tp . '/../../Messages/xml/');
+
+$absPathMessagesSite = realpath($tp . '/../../Messages/xml/') . '/';
+$absPathMessagesLocal = realpath($tp . '/messages.local/xml') . '/';
+
+	// relativo ad Extensions/
+
+$relPathMessagesLocal = str_replace($absPathExtensionsSite, null, $absPathExtensionsLocal);
+
+//var_dump($relPathMessagesLocal); exit;
+foreach (glob($absPathMessagesLocal . '*') as $mfn) {
+
+	$fn = basename($mfn);
+
+	if (! is_link($absPathMessagesSite . $fn)) {
+
+//		echo '../../Extensions/' . $containerName . '/messages.local/xml/' . $fn . ' -> ' .  $absPathMessagesSite . $fn . "\n";
+
+		symlink(
+			'../../Extensions/' . $containerName . '/messages.local/xml/' . $fn,
+			$absPathMessagesSite . $fn
+		);
+
+//		symlink('../../Extensions/SocialWall/messages.local/xml/' . $fn, $absPathMessagesSite . $fn);
+
+	} else
+		echo "Skipping " . $mfn . ": file exists\n";
+}
+
+$absPathConfigSite = realpath($tp . '/../../Conf/') . '/';
+
+if (! is_file($absPathConfigSite . 'social-wall.php')) {
+
+	copy($absPathSource . 'social-wall.config.php', $absPathConfigSite . 'social-wall.php');
+
+} else
+	echo "Skipping configuration: file exists\n";

@@ -1,0 +1,15 @@
+a:14:{s:2:"ad";s:14:"[NL] Aggiunta.";s:2:"de";s:16:"[NL] Cancellata.";s:2:"ni";s:41:"[NL] il sito non è mai stato indicizzato";s:3:"icd";s:16:"[NL] in corso da";s:4:"schp";s:132:"[NL] 
+				È stato pianificato un aggiornamento periodico del motore di ricerca.
+				Prossimo aggiornamento: <strong>%s</strong>
+			";s:4:"schu";s:133:"[NL] 
+				È stato pianificato un aggiornamento una tantum del motore di ricerca.
+				Prossimo aggiornamento: <strong>%s</strong>
+			";s:3:"del";s:12:"[NL] Annulla";s:2:"st";s:10:"[NL] Stato";s:2:"pt";s:36:"[NL] Aggiornamento Motore di ricerca";s:4:"head";s:261:"[NL] 
+				Per aggiornare il Motore di Ricerca occorre eseguire l'indicizzazione dei contenuti.
+				Tale operazione può richiedere diverso tempo e deve essere pertanto pianificata. <br />
+				L'ultima indicizzazione è stata eseguita il <strong>%s</strong>.
+			";s:2:"nx";s:40:"[NL] Prossime indicizzazioni pianificate";s:3:"nxn";s:12:"[NL] nessuna";s:3:"new";s:49:"[NL] Pianifica una nuova indicizzazione immediata";s:4:"foot";s:220:"[NL] 
+				Gli orari di attivazione delle attività pianificate sono indicativi in
+				quanto dipendenti dall'intervallo di verifica
+				(indicativamente 10 minuti) e dalla	durata di esecuzione delle attività stessa.
+			";}

@@ -1,0 +1,54 @@
+<div class="Commenti">
+
+	{err}
+
+	<div class="CommentiForm">
+		<div class="UserForm">
+			<label for="nome"><strong>Nome</strong></label>: [[ id: nome, kind: username, canmodify: true ]]
+		</div>
+		<div class="CommentoIns">
+			<label for="commento"><strong>Commento</strong></label>: [[ id: commento, kind: TextArea, rows: 10, cols: 60]]
+		</div>
+		<div>
+			{:if:notempty:vote}
+				<div>Voto: {vote}</div>
+			{:endif}
+		</div>
+		<div>
+			{:if:notempty:captcha}
+				<br />
+				{captcha}
+			{:endif}
+		</div>
+		[[ id: btnSubmit, kind: Submit, value: 'Invia', class: AdminPageFooterCommandButton ]]
+	</div>
+
+</div>
+
+
+[[_onformaterrors{
+	D('Errori!', $ev->FormValues());
+var_dump(func_get_arg(1));
+var_dump(func_get_arg(2));
+
+	return "KAPPA";
+}]]
+
+[[onvalidate{
+
+	$v = $ev->FormValues();
+
+	$rv = array();
+	if (empty($v['nome']))
+		$rv['nome'] = 'E\' necessario inserire un nome';
+
+	if (empty($v['commento']))
+		$rv['commento'] = 'Per favore, inserisci un commento';
+
+	return $rv;
+}]]
+
+[[oncomplete{
+
+	return '<div class="Thx">Ti ringraziamo per avere insertito il commento. Esso sarà visibile al più presto, compatibilmente con la netiquette</div>';
+}]]

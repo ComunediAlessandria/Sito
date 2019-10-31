@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="it">
+	<group id="bpir" define="false">
+
+<!--		<message id="t" lang:it="Informazioni oggetto di Libreria" lang:en="Information about the Object" /> -->
+		<message id="c" lang:it="Classificazione" lang:en="Classification" />
+		<message id="n" lang:it="Nome" lang:en="Name" />
+		<message id="co" lang:it="Classificazione oggetto di Libreria" lang:en="Item's Classification" />
+
+		<message id="s" lang:it="Ordinamento" lang:en="Sort" />
+		<message id='se'>
+			<trans lang='it'><![CDATA[
+				Questo valore verrà usato per ordinare gli elementi quando
+				vengono estratti in gruppi
+			]]></trans>
+			<trans lang='en'><![CDATA[
+				Sorting of group of elements extracted will be based on this value
+			]]></trans>
+		</message>
+	</group>
+</messages>

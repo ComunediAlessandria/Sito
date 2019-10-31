@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="lang" defaultlang="IT">
+	<group id="snPHAjaxDialogDocPromote" define="false">
+		<message id="ltitolo"
+			lang:it="Titolo"
+			lang:en="Title"
+			lang:fr="Titre"
+			lang:de="Titel"
+			lang:es="Título"
+			lang:ru="название"
+		/>
+		<message id="ldescrizione"
+			lang:it="Descrizione"
+			lang:en="Description"
+			lang:fr="Description"
+			lang:de="Beschreibung"
+			lang:es="Descripción"
+			lang:ru="описание"
+		/>
+		<message id="title"
+			lang:it="Aggiungi ai documenti del gruppo %s"
+			lang:en="Add to documents of the %s group"
+			lang:fr="Ajouter aux documents du groupe %s"
+			lang:de="In den Dokumenten der Gruppe %s"
+			lang:es="Añadir a los documentos del grupo %s"
+			lang:ru="Добавить в документах группы %s"
+		/>
+		<message id="ok"
+			lang:it="Aggiungi"
+			lang:en="Add"
+			lang:fr="Ajouter"
+			lang:de="Hinzufügen"
+			lang:es="Añadir"
+			lang:ru="добавлять"
+		/>
+		<message id="cancel"
+			lang:it="Annulla"
+			lang:en="Cancel"
+			lang:de="Abbrechen"
+			lang:fr="Annuler"
+			lang:es="Cancelar"
+			lang:ru="Отмена"
+		/>
+	</group>
+</messages>

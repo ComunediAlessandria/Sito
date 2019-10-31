@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="lang" defaultlang="IT">
+  <group id="snLayoutJSDialog" define="false">
+    <message id="ok"
+    	lang:it="OK"
+    	lang:en="OK"
+    	lang:fr="bien"
+    	lang:de="OK"
+    	lang:es="OK"
+    	lang:ru="хорошо"
+    />
+    <message id="cancel"
+    	lang:it="Annulla"
+    	lang:en="Undo"
+    	lang:fr="Annuler"
+    	lang:de="Rückgängig machen"
+    	lang:es="Deshacer"
+    	lang:ru="отменить"
+    />
+  </group>
+</messages>

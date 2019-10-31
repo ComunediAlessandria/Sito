@@ -1,0 +1,60 @@
+<div class="FormRegistrazione col-12">
+    <h1 class="text-center">Registrazione Utente</h1>
+    <br  />
+        {ERR}
+    <form class="form-horizontal" method="post" action="{ACTION}">
+            
+            <div class="control-group col-xs-12 col-sm-6">
+                <label for="{TAG_Nome}">{LBL_Nome}</label>
+                {VAL_Nome}
+            </div>	
+    
+            <div class="control-group col-xs-12 col-sm-6">
+                <label for="{TAG_Cognome}">{LBL_Cognome}</label>
+                {VAL_Cognome}
+            </div>	
+            
+            <div class="control-group col-xs-12 col-sm-6">
+                <label for="{TAG_email}">{LBL_email}</label>
+                {VAL_email}
+            </div>
+    
+	        <div class="control-group col-xs-12 col-sm-6">
+                <label for="{TAG_Ente}">{LBL_Ente}</label>
+                {VAL_Ente}
+            </div>
+   	        <div class="control-group col-xs-12 col-sm-6">
+                <label for="{TAG_Ruolo}">{LBL_Ruolo}</label>
+                {VAL_Ruolo}
+            </div>
+       	    <div class="control-group col-xs-12 col-sm-6">
+                <label for="{TAG_Telefono}">{LBL_Telefono}</label>
+                {VAL_Telefono}
+            </div>
+			
+			<div>&nbsp;</div>
+			
+	        <div class="control-group col-xs-12 col-sm-6">
+                <label for="{TAG_Username}">{LBL_Username}</label>
+                {VAL_Username}
+            </div>
+    
+     
+			 <div class="control-group col-xs-12 col-sm-12">
+				<fieldset>
+					<legend>Seleziona gli strumenti di interesse:</legend>
+					{VAL_jCommunity}
+				</fieldset>
+			 
+			 </div>
+			<div>
+				{VAL_ReceiveNL}{HIDDEN}{VAL_Lang}
+			</div> 
+	
+			<div>  <input name="Submit" type="submit" value="Iscriviti" /></div>
+		</div>
+
+    </form>
+</div>
+
+

@@ -1,0 +1,59 @@
+<!-- BEGIN AggiungiIndice -->
+<div class='row row-well'>
+	<div class='col-md-12'>
+		{addbtn}
+	</div>
+</div>
+<!-- END AggiungiIndice -->
+
+<!-- BEGIN TableEmpty -->
+<div class='alert alert-warning' role='alert'>
+	<h2>__(palidx.ni)</h2>
+</div>
+<!-- END TableEmpty -->
+
+<!-- BEGIN TableHeader -->
+
+<table class='table table-striped table-condensed table-hover flexbo-list-table' summary='__(palidx.sum)'>
+	<thead>
+
+		<tr>
+			<th scope='col' class='AdminIcoCellWide'>__(palidx.az)</th>
+			<th scope='col'>{multiple-edit}</th>
+			<th scope='col'>__(.name)</th>
+			<th scope='col'>__(.id)</th>
+			<th scope='col'>__(.gp)</th>
+			<th scope='col'>__(.sim)</th>
+			<th scope='col'>__(.siml)</th>
+		</tr>
+
+	</thead>
+	<tbody>
+
+<!-- END TableHeader -->
+
+<!-- BEGIN TableRow -->
+		<tr>
+			<td>
+				<div class='btn-group'>{EDITACTION} {DELACTION} {DUPACTION}</div> {EDITTREEACTION}
+			</td>
+			<td>{t-check}</td>
+			<th scope='row'>{Nome}</th>
+			<td>{COLLECTIONID}</td>
+			<td>{IDOWNER}</td>
+			<td>{SHOWINMAP}</td>
+			<td>{MAPMAXDEEP}</td>
+		</tr>
+<!-- END TableRow -->
+
+
+<!-- BEGIN TableFooter -->
+		<tr class='tfooter'>
+			<td colspan='7'>
+				<p>__(.noi): {TOTRECORDS}</p>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+
+<!-- END TableFooter -->

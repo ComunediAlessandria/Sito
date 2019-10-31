@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="IT">
+	<group id="SwSectionEdit" define="false" default='it'>
+	<message id="descr"
+		lang:it="Nome Sezione"
+		/>
+	</group>
+</messages>

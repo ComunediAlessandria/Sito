@@ -1,0 +1,18 @@
+
+Generazione della API Key e modifica degli IP che possono usarla:
+
+(1) login su https://console.developers.google.com/project
+
+    utente: flexcmp@gmail.com
+
+(2) accedere al progetto 'FlexCMPBridge'
+
+(3) dal menu di sinistra selezionare
+
+  APIs & auth > Credentials
+
+(4) accedere alle proprietà della chiave
+
+    AIzaSyCgiK3a3HixDbtzsQVY42T2Lus1dzAHs7c
+
+(5) modificare l'elenco degli IP abilitati

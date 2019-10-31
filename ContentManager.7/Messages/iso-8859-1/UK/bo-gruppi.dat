@@ -1,0 +1,4 @@
+a:14:{s:6:"addnew";s:24:"Aggiungi un nuovo Gruppo";s:3:"act";s:6:"Azioni";s:2:"gn";s:11:"Nome Gruppo";s:4:"memb";s:24:"Utenti membri del gruppo";s:2:"hm";s:22:"NUMERO GRUPPI PRESENTI";s:7:"cantdel";s:48:"ATTENZIONE! Non è possibile cancellare il Gruppo";s:9:"waringdel";s:41:"ATTENZIONE! Stai per cancellare il Gruppo";s:9:"listtitle";s:6:"Gruppi";s:9:"edittitle";s:13:"Scheda Gruppo";s:11:"deletetitle";s:20:"Cancellazione Gruppo";s:9:"groupname";s:11:"Nome Gruppo";s:4:"note";s:4:"Note";s:8:"grmember";s:25:"Elenco Iscritti al Gruppo";s:10:"cantdelete";s:219:"
+				<strong>Attenzione</strong>: non e' possibile cancellare il gruppo {DescrizioneIT} poiche' vi sono {nRec} utenti associati al gruppo. <br />
+				Cancellare prima gli utenti associati e poi cancellare il gruppo.
+			";}

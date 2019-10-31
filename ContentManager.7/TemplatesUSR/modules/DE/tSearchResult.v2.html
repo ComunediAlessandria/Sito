@@ -1,0 +1,60 @@
+
+	<h1 class="viewTitolo">
+		Risultato della ricerca
+	</h1>
+
+<!-- BEGIN description -->
+
+		<div class="viewPar">
+			La ricerca <strong>{searchquery}</strong> ha prodotto i seguenti <a href='#sr'>risultati</a> (<strong>{count}</strong> pagine). <br />
+			<a href='{searchlink}'>Esegui una nuova ricerca</a>
+		</div>
+
+		<h2 class='viewSottotitolo'>Raffina i risultati</h2>
+		<div class="viewPar">
+			{searchrefine}
+		</div>
+
+		<h2 class='viewSottotitolo'>Ordina i risultati</h2>
+		<div class="viewPar">
+			{sort}
+		</div>
+
+<!-- END description -->
+
+<!-- BEGIN descriptionnoresults -->
+
+		<p class="viewPar">
+			La ricerca <strong>{searchquery}</strong> ha prodotto i seguenti <a href='#sr'>risultati</a><br />
+			<a href='{searchlink}'>Esegui una nuova ricerca</a>
+		</p>
+
+<!-- END descriptionnoresults -->
+
+
+
+	<h2 class='viewSottotitolo'><a name='sr'>Risultati</a></h2>
+	<dl>
+
+	<!-- BEGIN item -->
+		<dt class='viewPar'><a href='{url}'>{title}</a> <span>[{weight}%]</span> </dt>
+		<dd class='viewPar'>{Data}</dd>
+		<dd class='viewPar'>Parole chiave: <em>{ClassificationDesc}</em></dd>
+		<dd class='viewPar'>ultima modifica: {LastMod}</dd>
+	<!-- END item -->
+
+	</dl>
+
+	<!-- BEGIN notfound -->
+		<p class="viewPar">
+			<strong>
+			NON CI SONO PAGINE CHE SODDISFANO I CRITERI IMPOSTATI
+			</strong>
+		</p>
+	<!-- END notfound -->
+
+	<p class="viewPar">
+	<a href='{searchlink}'>Esegui una nuova ricerca</a>
+	</p>
+
+	{pagination}

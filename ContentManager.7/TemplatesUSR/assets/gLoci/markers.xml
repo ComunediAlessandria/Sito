@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!--
+
+	Le dimensioni e le coordinate sono espresse come:
+	
+		<width>x<height>
+
+-->
+<markers basepath='markers/'>
+	<markergroup desc='Marker di default'>
+		<marker
+			filename='default.png'
+			
+			size='20x34'
+			anchor='10x34'
+			infowin='10x0'
+		/>
+	</markergroup>
+	<markergroup desc='Numeri Rossi'>
+		<marker filename='red00.png' />
+		<marker filename='red01.png' />
+		<marker filename='red02.png' />
+	</markergroup>
+</markers>

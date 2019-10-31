@@ -1,0 +1,64 @@
+{#Include TemplatesUSR-Site-include/HeaderPagina.txt}
+
+<body id="Home">
+
+{#Include TemplatesUSR-Site-include/Skip.txt}
+
+{#Include TemplatesUSR-Site-include/Testata.txt}
+
+<!-- INIZIO MENU ORIZZONTALE -->
+<div class="MenuH">
+	<h1 class="GoAway"><a name="MenuPrincipale" id="MenuPrincipale">Menu principale di navigazione</a></h1>
+	{MODULE:IndexTree: NAME=MenuOrizzontale, trailtree, complete, open=1, sel=BLOB:ID=2}
+</div>
+<!-- FINE MENU ORIZZONTALE -->
+
+{#Include TemplatesUSR-Site-include/Breadcrumb.txt}
+
+<!-- INIZIO GABBIA DI CONTENIMENTO PER FLOTTAGGIO -->
+<div class="BLOBWidth100">
+
+	<!-- INIZIO COLONNA MENU -->
+	<div class="ColSxFloat">
+		{PAGE.SPALLADXSOPRA}		
+		<h1 class="GoAway"><a name="MenuSezione" id="MenuSezione">Menu di sezione</a></h1>
+		<div class="MenuV">
+			{MODULE:IndexTree: NAME=Area Istituzionale, trailtree, complete, open=2}
+		</div>
+		{PAGE.SPALLADXSOTTO}	
+		{#Include TemplatesUSR-Site-include/AdminLink.txt}	
+	</div>
+
+	<!-- FINE COLONNA MENU -->
+
+	<!-- INIZIO COLONNA CONTENUTI -->
+	<div class="ColCent2ColMenuSx">	
+		<div class="OldIEwidth99">
+			<div class="OldIEfloat">
+				<div class="OldIEwidth99">	
+					<div class="Contenuti">
+						{PRINT}
+						<h1 class="GoAway"><a name="Contenuto" id="Contenuto">Contenuto della pagina</a></h1>
+
+						<!-- START INDEX -->{CORPOPAGINA}
+								{:if:notempty:PAGE.LEGGIALTRO}
+									{PAGE.LEGGIALTRO}
+								{:endif} 
+						<!-- STOP INDEX -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clear">&nbsp;</div><!-- PULIZIA "OldIEfloat" FLOAT -->
+	</div>
+	<!-- FINE COLONNA CONTENUTI -->
+
+	<div class="clear">&nbsp;</div><!-- PULIZIA "ColSxFloat" FLOAT -->
+</div>
+<!-- FINE GABBIA DI CONTENIMENTO PER FLOTTAGGIO -->
+	
+{#Include TemplatesUSR-Site-include/FooterImg.txt}
+
+</body>
+
+</html>

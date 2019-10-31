@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="IT">
+	<group id="listPages" superseeds='Messages.BLOBList.xml' define="false">
+
+		<message id='pt'
+			lang:it='Pagine'
+			lang:en='Pages'
+			lang:es='Páginas'
+		/>
+
+		<!-- selettore di creazione nuove pagine -->
+		<message id='optFreeForm' lang:it='ad Impaginazione Libera' lang:en='with free layout' lang:es='with free layout'/>
+
+		<!-- descrizione pagine provenienti da template -->
+		<message id='lblNoTemplate' lang:it='Template senza titolo' lang:en='Template without title' lang:es='Template without title' />
+		<message id='lblSourceTpl' lang:it='Da Modello' lang:en='Model driven' lang:es='Model driven'/>
+		<message id='lblTplDeleted' lang:it='Modello Cancellato' lang:en='Deleted Model' />
+		<message id='lblTemplate' lang:it='Da Modello: %s' lang:en='Model: %s' lang:es='Model: %s'/>
+
+		<message id='lblAddPage' lang:it='Aggiungi una nuova pagina' lang:en='Add a new page' lang:es='Añade una nueva página' />
+		<message id='lblWastebasket' lang:it='Cestino' lang:en='Wastebasket' lang:es='Papelera de reciclage'/>
+
+		<!-- gruppo cancellato -->
+
+		<message id='lblGrpDeleted' lang:it='[Gruppo cancellato]' lang:en='[Deleted group]' lang:es='[Deleted Group]'/>
+
+		<!-- filtri -->
+
+		<message id='lblToShow' lang:it='Pagine da mostrare' lang:en='Pages to be displayed' lang:es='Páginas para mostrar' />
+		<message id='lblCnt' lang:it='che contengono nel titolo' lang:en='containing the word' lang:es='Contenidos en el título de la frase'/>
+		<message id='lblSort' lang:it='ordina per' lang:en='order by'  lang:es='Ordenar por'/>
+		<message id='lblOther' lang:it='altri filtri' lang:en='more filters'  lang:es='[es] more filters'/>
+		<message id='lblUpdate' lang:it='Aggiorna' lang:en='Update' lang:es='Actualizar'/>
+		<message id='lblReset' lang:it='Reimposta' lang:en='Reset' lang:es='Reimpostar'/>
+
+		<!-- selettore per le pagine da mostrare -->
+		<!-- <message id='optNone' lang:it='Nessuna' lang:en='No Pages' lang:es='Ninguna' /> -->
+		<message id='optAll' lang:it='Tutte' lang:en='All' lang:es='Todas' />
+		<message id='optApproved' lang:it='Approvate' lang:en='Approved' lang:es='Aprobadas'/>
+		<message id='optNotApproved' lang:it='Da Approvare' lang:en='To be Approved' lang:es='Por aprobar'/>
+		<message id='optExpired' lang:it='Scadute' lang:en='Expired' lang:es='Caducadas' />
+		<message id='optAlmostExpired' lang:it='In Scadenza (%1$s gg)' lang:en='Expiring in (%1$s)' lang:es='En caducidad (%1$s)'/>
+<!-- 		<message id='optLastMod' lang:it='Ultime %1$s Pagine modificate' lang:en='Last %1$s pages modified' lang:es='Ultimas %1$s páginas modificadas'/>
+ -->
+		<!-- selettore ordinamento -->
+		<message id='optTitle' lang:it='Titolo' lang:en='Title' lang:es='Título'/>
+		<message id='optDM' lang:it='Data di Modifica' lang:en='Edit Date' lang:es='fecha de modificación'/>
+		<message id='optDIV' lang:it='Data Inizio Validità' lang:en='Validity Start' lang:es='Valido desde'/>
+		<message id='optDTV' lang:it='Data Termine Validità' lang:en='Validity End' lang:es='Valido hasta'/>
+		<message id='optDE' lang:it='Data Inizio Evento' lang:en='Event Start Date' lang:es='Fecha del evento - comienzo'/>
+		<message id='optDEE' lang:it='Data Fine Evento' lang:en='Event End Date' lang:es='Fecha del evento - final'/>
+		<message id='optT' lang:it='Telaio Grafico' lang:en='Template' lang:es='Filtro gráfico' />
+		<message id='optID' lang:it='Numero' lang:en='Number' lang:es='Número'/>
+
+
+		<message id='lblGruppo' lang:it='Gruppo Proprietario' lang:en='Owner Group' lang:es='Grupo proprietario'/>
+		<message id='lblCommunity' lang:it='Limitate alla Community' lang:en='Restricted to Community' lang:es='[es] Restricted to Community'/>
+		<message id='lblCommunityNone' lang:it='- Pagine senza limitazione in Community' lang:en='- Pages without Community restriction' lang:es='[es] Not Restricted to Community'/>
+		<message id='lblTelaio' lang:it='Telaio Grafico' lang:en='Template' lang:es='Filtro gráfico'/>
+		<message id='lblCl' lang:it='Classificazione' lang:en='Channels' lang:es='Clasificación'/>
+
+		<!-- informazioni descrizione sul BC  -->
+		<_message id='bcNoChan' lang:it='con Canale non Impostato' lang:en='no channel selected' />
+		<message id='bcPageID' lang:it='Pagina numero %s' lang:en='Page no %s' lang:es='Página %s'/>
+		<message id='bcPageTitle' lang:it="contenenti '%s'" lang:en="contains '%s'" />
+<!-- 		<message id='bcLast' lang:it="Ultime %s pagine modificate" lang:en="Last %s modified" lang:es="Ultimas %s páginas modificadas"/>
+ -->		<message id='bcTemplate' lang:it="con Telaio '%s'" lang:en="Having '%s' Template" lang:es="Having '%s' Template"/>
+		<message id='bcGroup' lang:it="appartenenti al gruppo '%s'" lang:en="belonging to '%s' group" lang:es=""/>_
+		<message id='bcCmn' lang:it="limitate alla community '%s'" lang:en="restricted to community '%s'" lang:es=""/>_
+		<message id='bcCmnx' lang:it="non limitate ad alcuna Community" lang:en="without restriction to any community" lang:es=""/>_
+
+		<!-- intestazioni tabella risultati -->
+
+		<message id='thAzioni' lang:it='Azioni' lang:en='Actions' lang:es='Acción'/>
+		<message id='thNumero' lang:it='Numero' lang:en='Number' lang:es='Número'/>
+		<message id='thTitolo' lang:it='Titolo / URL Parlante' lang:en='Title' lang:es='Título de página'/>
+		<message id='thCl' lang:it='Classificazione' lang:en='Classification' lang:es='Clasificación'/>
+		<message id='thTpl' lang:it='Telaio Grafico' lang:en='Template' lang:es='Filtro gráfico'/>
+		<message id='thPer' lang:it='Permessi' lang:en='Permissions' lang:es='[es] Permissions'/>
+		<message id='thSt' lang:it='Stato' lang:en='Status' lang:es='[es] Status'/>
+		<message id='thVal' lang:it='Validità' lang:en='Validity' lang:es='[es] Validity'/>
+
+		<!-- altri messaggi tabella risultati -->
+		<message id='lblTotPages' lang:it='NUMERO PAGINE ELENCATE' lang:en='NUMBER OF DISPLAYED PAGES' lang:es='Número de páginas enumeradas'/>
+		<message id='di' lang:it='%s di %s' lang:en='%s of %s' lang:es='[es] %s of %s'/>
+		<_message id='lblNoPages' lang:it='NON CI SONO PAGINE DA VISUALIZZARE' lang:en='NO PAGES FOUND' lang:es='PÁGINA NO' />
+		<_message id='lblTpl' lang:it='Telaio' lang:en='Template' lang:es='Filtro gráfico'/>
+		<_message id='lblGroup' lang:it='Gruppo' lang:en='Group' lang:es='[es] Group'/>
+
+		<message id='lblRPP' lang:it='Righe per Pagina' lang:en='ROWS PER PAGE' lang:es='[en] ROWS PER PAGE'/>
+
+		<message id='lblApp'
+			lang:it='Pagina in attesa di Approvazione'
+			lang:en='To be Approved'
+			lang:es='[es] To be Approved'
+		/>
+
+		<!-- menu azioni su pagine -->
+		<message id='aCur' lang:it='Tutte' lang:en='All' lang:es='[es] All'/>
+		<!-- <message id='aAll' lang:it='Elenco Intero' lang:en='All Pages' lang:es='[es] All Pages'/> -->
+		<message id='aNo' lang:it='Nessuna' lang:en='No Page' lang:es='[es] No Page'/>
+
+		<!-- menu info aggiuntive di pagina -->
+		<message id='iDup' lang:it='Duplica' lang:en='Duplicate' lang:es='[es] Duplicate'/>
+		<message id='iVer' lang:it='Versioni precedenti' lang:en='Previous Versions' lang:es='[es] Previous Versions'/>
+		<message id='iDel' lang:it='Elimina' lang:en='Delete' lang:es='[es] Delete'/>
+
+		<message id='iEdit' lang:it='Modifica' lang:en='Edit' lang:es='[es] Edit'/>
+		<message id='iPreview' lang:it='Anteprima' lang:en='Preview' lang:es='[es] Preview'/>
+		<message id='iInfo' lang:it='Informazioni' lang:en='Info' lang:es='[es] Info'/>
+
+		<message id='iL' lang:it='Versioni in Lingua' lang:en='Language Versions' lang:es='[es] Language Versions'/>
+		<message id='iLd' lang:it='Elimina versione %1$s' lang:en='Delete %1$s version' lang:es='[es] Delete %1$s version'/>
+
+		<message id='iDelMod' lang:it='Elimina versione in attesa di approvazione' lang:en='Delete to be approved version' lang:es='[es] Delete ...'/>
+		<message id='iAppMod' lang:it='Approva versione in attesa di approvazione' lang:en='Approve' lang:es='[es] Approve'/>
+
+		<message id='iOw' lang:it='Imposta Proprietario' lang:en='Set Owner' lang:es='[es] Set Owner'/>
+		<message id='iTp' lang:it='Imposta Telaio Grafico' lang:en='Set Page Template' lang:es='[es] Set Page Template'/>
+
+		<message id='iSt' lang:it='Modifica Stato' lang:en='Set Status' lang:es='[es] Set Status'/>
+		<message id='iStI'
+			lang:it='Lo stato verrà modificato per tutte le lingue attive'
+			lang:en='Status will be changed for all active languages'
+			lang:es='[es] Set Status'
+		/>
+
+
+		<!-- quando non ho pagine da visualizzare -->
+		<message id='none'
+			lang:it='NON CI SONO OGGETTI DA VISUALIZZARE CHE RISPONDANO AI CRITERI IMPOSTATI'
+			lang:en='NO OBJECTS'
+		/>
+
+		<!-- troppi risultati nella ricerca
+		<message id='lblTooMany'>
+			<trans lang='IT'>
+				Le pagine rispondenti ai criteri impostati (%2$d) sono troppo numerose per essere elencate:
+				il massimo numero elencabile è %1$d.
+				Si suggerisce di raffinare la propria ricerca.
+			</trans>
+			<trans lang='EN'>
+				There are too many pages ({PAGESFOUND}) responding to your search:
+				you can display at most {MAXPAGES} pages.
+				Please refine your search.
+			</trans>
+		</message>
+
+		-->
+
+		<!-- dialog cancellazione singola pagina -->
+
+		<message id='ddTitle'
+			lang:it='Cancellazione Pagina'
+			lang:en='Delete Page'
+		/>
+
+		<message id='ddText'>
+			<trans lang='IT'><![CDATA[
+				Vuoi davvero cancellare la pagina '<strong>%s</strong>'?
+			]]></trans>
+			<trans lang='EN'><![CDATA[
+				Do you really want to delete the page '<strong>%s</strong>'?
+			]]></trans>
+		</message>
+
+		<message id='ddNote'
+			lang:it="L'operazione eliminerà la pagina ed i suoi riferimenti negli indici."
+			lang:en='...'
+		/>
+
+		<message id='ddBtnOK'
+			lang:it='Elimina'
+			lang:en='Delete'
+		/>
+
+		<message id='ddBtnCancel'
+			lang:it='Annulla'
+			lang:en='Cancel'
+		/>
+
+		<!-- dialog cancellazione singola pagina -->
+
+		<message id='ddgTitle'
+			lang:it='Cancellazione Pagine'
+			lang:en='Delete Page'
+		/>
+
+		<message id='ddgText'>
+			<trans lang='IT'><![CDATA[
+				Vuoi davvero cancellare le pagine selezionate?
+			]]></trans>
+			<trans lang='EN'><![CDATA[
+				Do you really want to delete the selected pages?
+			]]></trans>
+		</message>
+
+		<message id='ddgNote'
+			lang:it="L'operazione eliminerà le pagine ed i loro riferimenti negli indici."
+			lang:en='...'
+		/>
+
+
+		<!-- bubble conferma cancellazione -->
+
+		<message id='ddBubbleTitle'
+			lang:it='Cancellazione Pagina'
+			lang:en='Page Deletion'
+		/>
+
+		<message id='ddBubbleText'
+			lang:it='La cancellazione della/e pagina/e è avvenuta con successo.'
+			lang:en='The page(s) was deleted.'
+		/>
+
+		<!-- bubble conferma cancellazione versione in lingua -->
+
+		<message id='bDvlTT'
+			lang:it='Eliminazione versione in Lingua'
+			lang:en='Language version Deletion'
+		/>
+
+		<message id='bDvlTX'
+			lang:it='La versione in lingua %2$s della pagina n. %1$s è stata eliminata.'
+			lang:en='Page n. %1$s version in %2$s language has been deleted.'
+		/>
+
+		<!-- bubble conferma approvazione -->
+
+		<message id='daBubbleTitle'
+			lang:it='Approvazione Pagina'
+			lang:en='Page Approvation'
+		/>
+
+		<message id='daBubbleText'
+			lang:it='La approvazione della pagina è avvenuta con successo.'
+			lang:en='The page was approved.'
+		/>
+
+		<!-- bubble conferma cancellazione versione da approvare -->
+
+		<message id='dmdBubbleTitle'
+			lang:it='Cancellazione Pagina'
+			lang:en='Page Deletion'
+		/>
+
+		<message id='dmdBubbleText'
+			lang:it='La cancellazione della pagina in attesa di modifica è avvenuta con successo.'
+			lang:en='The page was deleted.'
+		/>
+
+		<!-- bubble conferma cambio proprietario -->
+
+		<message id='bChoTT'
+			lang:it='Modifica Gruppo Proprietario'
+			lang:en='Owner Group'
+		/>
+
+		<message id='bChoTX'
+			lang:it='Il gruppo proprietario della pagina n. %1$s è stato modificato con successo.'
+			lang:en='Owner Group was successfully changed.'
+		/>
+
+		<message id='bChoTXs'
+			lang:it='Il gruppo proprietario delle pagine selezionate è stato modificato con successo.'
+			lang:en='Owner Group was successfully changed.'
+		/>
+
+		<!-- bubble conferma cambio stato -->
+
+		<message id='bChsTT'
+			lang:it='Modifica Stato di Pagina'
+			lang:en='Page Status'
+		/>
+
+		<message id='bChsTX'
+			lang:it='Lo stato della pagina n. %1$s è stato modificato con successo.'
+			lang:en='Page Status was successfully changed.'
+		/>
+
+		<message id='bChsTXs'
+			lang:it='Lo stato delle pagine selezionate è stato modificato con successo.'
+			lang:en='Page Status was successfully changed.'
+		/>
+
+		<!-- bubble conferma cambio template -->
+
+		<message id='bChtTT'
+			lang:it='Modifica Telaio Grafico'
+			lang:en='Set Page Template'
+		/>
+
+		<message id='bChtTX'
+			lang:it='Il telaio grafico della pagina n. %1$s è stato modificato con successo.'
+			lang:en='Page Template was successfully changed.'
+		/>
+
+		<message id='bChtTXs'
+			lang:it='Il telaio grafico delle pagine selezionate è stato modificato con successo.'
+			lang:en='Page Template was successfully changed.'
+		/>
+
+		<!-- bubble errore operazione -->
+
+		<message id='bErrTT'
+			lang:it='Errore'
+			lang:en='Error'
+		/>
+
+		<message id='bErrTX'
+			lang:it='Non è possibile eseguire l&apos; operazione richiesta.'
+			lang:en='The required operation cannot be completed.'
+		/>
+
+		<!-- dialog duplicazione -->
+
+		<message id='dpTitle'
+			lang:it='Duplicazione Pagina'
+			lang:en='Duplicate Page'
+		/>
+
+		<message id='dpText'>
+			<trans lang='IT'><![CDATA[
+				Vuoi davvero duplicare la pagina '<strong>%s</strong>'?
+			]]></trans>
+			<trans lang='EN'><![CDATA[
+				Do you really want to duplicate the page '<strong>%s</strong>'?
+			]]></trans>
+		</message>
+
+		<message id='dpBtnOK'
+			lang:it='Duplica'
+			lang:en='Duplicate'
+		/>
+
+		<message id='dpBtnCancel'
+			lang:it='Annulla'
+			lang:en='Cancel'
+		/>
+
+		<!-- bubble conferma duplicazione -->
+
+		<message id='dpBubbleTitle'
+			lang:it='Duplicazione Pagina'
+			lang:en='Page Duplication'
+		/>
+
+		<message id='dpBubbleText'
+			lang:it='La duplicazione della pagina è avvenuta con successo.'
+			lang:en='The page was duplicated.'
+		/>
+
+		<!-- errore lingue metadati non allineate -->
+
+		<message id='errLang'
+			lang:it='Le lingue abilitate nel sito non sono allineate con quelle definite nei metadati. È necessario procedere alla rigenerazione degli stessi.'
+			lang:en='Languages enabled in the site are not the same defined in metadata. You should rebuild metadata to continue.'
+		/>
+
+	</group>
+<!--
+	<ignore>
+		<message id='add'
+			lang:it='Aggiungi un nuovo oggetto'
+			lang:en='Add new item'
+		/>
+
+		<message id='badd'
+			lang:it='Aggiungi'
+			lang:en='Add'
+		/>
+
+		<message id='srt'
+			lang:it='ordina per'
+			lang:en='sort by'
+		/>
+
+		<message id='lo'
+			lang:it='Elenca oggetti di tipo'
+			lang:en='List items by type'
+		/>
+
+		<message id='ln'
+			lang:it='il cui nome contiene'
+			lang:en='name containing'
+		/>
+
+		<message id='upd'
+			lang:it='Aggiorna'
+			lang:en='Update List'
+		/>
+
+		<message id='all'
+			lang:it='Tutti'
+			lang:en='All'
+		/>
+
+		<message id='nm'
+			lang:it='NUMERO OGGETTI ELENCATI'
+			lang:en='NUMBER OF LISTED OBJECTS'
+		/>
+
+		<message id='bdup'
+			lang:it='DUPLICA oggetto'
+			lang:en='DUPLICATE'
+		/>
+
+		<message id='bdel'
+			lang:it='ELIMINA oggetto'
+			lang:en='DELETE'
+		/>
+
+		<!- - tabella - ->
+
+		<message id='tsum'
+			lang:it="Tabella contenente l'elenco degli oggetti libreria: nella prima colonna sono contenuti i comandi di eliminazione, duplicazione, modifica, anteprima"
+			lang:en='Table containing items list'
+		/>
+
+		<message id='tha'
+			lang:it='Azioni'
+			lang:en='Actions'
+		/>
+
+		<message id='thnm'
+			lang:it='Numero'
+			lang:en='Number'
+		/>
+
+		<message id='thno'
+			lang:it='Nome'
+			lang:en='Name'
+		/>
+
+		<message id='thcl'
+			lang:it='Canali'
+			lang:en='Classification'
+		/>
+
+		<message id='thg'
+			lang:it='Gerarchia'
+			lang:en='Hierarchy'
+		/>
+
+		<message id='tht'
+			lang:it='Tipo'
+			lang:en='Kind'
+		/>
+
+		<!- - dialog cancellazione - ->
+
+		<message id='ddTitle'
+			lang:it='Cancellazione Oggetto di Libreria'
+			lang:en='Delete Repository Object'
+		/>
+
+		<message id='ddText'>
+			<trans lang='IT'><![CDATA[
+				Vuoi davvero cancellare l'oggetto di Libreria '<strong>%s</strong>'?
+			]]></trans>
+			<trans lang='EN'><![CDATA[
+				Do you really want to delete the repository object '<strong>%s</strong>'?
+			]]></trans>
+		</message>
+
+		<message id='ddNote'
+			lang:it="L'operazione eliminerà definitvamente l'oggetto di libreria scelto."
+			lang:en='The object will be permanently deleted.'
+		/>
+
+		<message id='ddBtnOK'
+			lang:it='Elimina'
+			lang:en='Delete'
+		/>
+
+		<message id='ddBtnCancel'
+			lang:it='Annulla'
+			lang:en='Cancel'
+		/>
+
+		<!- - dialog duplicazione - ->
+
+		<message id='dpTitle'
+			lang:it='Duplicazione Oggetto di Libreria'
+			lang:en='Duplicate Repository Object'
+		/>
+
+		<message id='dpText'>
+			<trans lang='IT'><![CDATA[
+				Vuoi davvero duplicare l'oggetto di Libreria '<strong>%s</strong>'?
+			]]></trans>
+			<trans lang='EN'><![CDATA[
+				Do you really want to duplicate the repository object '<strong>%s</strong>'?
+			]]></trans>
+		</message>
+
+		<message id='dpBtnOK'
+			lang:it='Duplica'
+			lang:en='Duplicate'
+		/>
+
+		<message id='dpBtnCancel'
+			lang:it='Annulla'
+			lang:en='Cancel'
+		/>
+
+		<!- - conferma cancellazione - ->
+
+		<message id='bdTitle'
+			lang:it='Oggetto Eliminato.'
+			lang:en='The object was deleted.'
+		/>
+
+		<message id='bdText'>
+			<trans lang='IT'><![CDATA[
+				L'oggetto di Libreria '<strong>%s</strong>' è stato definitivamente eliminato.
+			]]></trans>
+			<trans lang='EN'><![CDATA[
+				The repository object '<strong>%s</strong>' was deleted.
+			]]></trans>
+		</message>
+
+		<!- - conferma duplicazione - ->
+
+		<message id='bpTitle'
+			lang:it='Oggetto Duplicato.'
+			lang:en='The object was duplicated.'
+		/>
+
+		<message id='bpText'>
+			<trans lang='IT'><![CDATA[
+				L'oggetto di Libreria '<strong>%s</strong>' è stato duplicato.
+			]]></trans>
+			<trans lang='EN'><![CDATA[
+				The repository object '<strong>%s</strong>' was duplicated.
+			]]></trans>
+		</message>
+
+	</ignore>
+-->
+</messages>

@@ -1,0 +1,11 @@
+Nuovo Modulo Social Network Relazionale. Consente di creare un social network ricco di funzionalit&agrave; tra gli utenti di Community del sito.
+
+Introdotta possibilit&agrave; di modifica struttura delle tabelle: &egrave; ora possibile inserire o eliminare righe e colonne in qualsiasi punto di ogni tabella.
+
+Aggiunto nuovo oggetto di pagina Tabella Estesa che permette di inserire in ogni cella un oggetto. Al momento sono supportati gli oggetti Download e testo.
+
+Nella schermata amministrativa Pagine &egrave; stato aggiunto il filtro per Gruppo proprietario delle pagine.
+
+Introdotta la possibilit&agrave; di creare utenti di Community che non possono cambiarsi la password.
+
+Correzione di alcuni bug.

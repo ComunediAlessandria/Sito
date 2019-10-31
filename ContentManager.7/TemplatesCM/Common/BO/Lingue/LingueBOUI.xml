@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='iso-8859-1' ?>
+<ui id='index'>
+
+	<page
+		title='__(bo-languages.edittitle)'
+		permission='LAN'
+	/>
+
+	<presenter
+		type='Template'
+		filename='Lingue/LingueEdit.html'
+	/>
+
+	<elements>
+		<element	id='Lang'		BO='Lang'		type='select'		valueset='vLang'	label='__(bo-languages.langcode)' />
+		<element	id='DescrizioneIT'		BO='DescrizioneIT'		type='text'	size='40'	maxlen='250'	label='__(bo-languages.desc)' />
+		<element	id='Stato'		BO='Stato'		type='radio'		valueset='vStato'	label='__(bo-languages.status)' />
+	</elements>
+
+	<valueset id='vLang'>
+		<value id='SQ' text='Albanian' />
+		<value id='AR' text='Arabic' />
+		<value id='BR' text='Portuguese obsolete' />
+		<value id='DA' text='Danish' />
+		<value id='DE' text='German' />
+		<value id='ES' text='Spanish' />
+		<value id='FR' text='French' />
+		<value id='RO' text='Romanian' />
+		<value id='RU' text='Russian' />
+		<value id='SV' text='Swedish' />
+		<value id='IT' text='Italian' />
+		<value id='EN' text='English' />
+		<value id='PL' text='Polish' />
+		<value id='PT' text='Portuguese' />
+		<value id='ZH' text='Chinese' />
+		<value id='HE' text='Hebrew' />
+		<value id='JA' text='Japanese' />
+		<value id='NL' text='Dutch' />
+		<value id='SL' text='Slovene' />
+		<value id='BG' text='Bulgarian' />
+		<value id='HU' text='Hungarian' />
+
+		<value id='NO' text='Norwegian' />
+		<value id='SK' text='Slovak' />
+		<value id='CS' text='Czech' />
+
+		<value id='UK' text='Ukrainian' />
+		<value id='LV' text='Latvian' />
+		<value id='LT' text='Lithuanian' />
+		<value id='KO' text='Korean' />
+
+		<value id='HR' text='Croatian' />
+		<value id='ET' text='Estonian' />
+	</valueset>
+
+	<valueset id='vStato'>
+		<value id='1' text='__(bo-languages.disabled)' />
+		<value id='2' text='__(bo-languages.enabled)' />
+	</valueset>
+
+	<validations>
+		<validation id='Lang'	type='mandatory'	forfield='Lang' />
+		<validation id='Lang'	type='mandatory'	forfield='DescrizioneIT' />
+		<validation id='check' type='php' forfield='Stato'>
+			<![CDATA[
+
+				if (! $pars['BO']->isNew()) {
+
+					$v = $pars['ELEMENTS']['Stato']->getValue();
+					if ($v == 1) {
+
+						if ($pars['ELEMENTS']['Lang']->getValue() == kMainLanguage)
+							return array(false, '__(bo-languages.eerrn)');
+
+						if (countRecords('Languages', 'Stato = 2') == 1)
+							return array(false, '__(bo-languages.eerr)');
+					}
+				}
+
+				return array(true, null);
+
+			]]>
+		</validation>
+	</validations>
+
+	<!-- UI per la cancellazione - per adesso qui, domani in un file XML separato -->
+
+	<delete
+		template='Lingue/LingueDelAsk.html'
+	/>
+
+</ui>

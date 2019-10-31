@@ -1,0 +1,11 @@
+Introdotta la possibilit&agrave; di limitare l'editing di singoli assi di classificazione a specifici gruppi amministrativi.
+
+Abbandonato il supporto alla classificazione a canali.
+
+Implementato il Captcha logico nei forum.
+
+Potenziato il modulo Social Network. Introdotto il supporto ai Gruppi. Introdotto il supporto ai messaggi amministrativi destinati a tutti gli utenti.
+
+Nuove statistiche di accesso alle pagine limitate agli utenti di community.
+
+Estensione delle API di programmazione: API per la gestione dei contenuti multi lingua.

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='iso-8859-1' ?>
+<XMLData>
+
+	<DataSource class='clsDataSourceURL' dir='Classes/'>
+		<DSParameter name='url' value='http://xml.newsisfree.com/feeds/17/617.xml' />
+		<DSParameter name='cache' value='600' /><!-- in secondi -->
+	</DataSource>
+
+	<DataTransform class='clsDataTransformRSS' dir='Classes/'>
+		<DTParameter name='template' value='tEuroNews.html' />
+		<DTParameter name='skip' value='3' />
+		<DTParameter name='num' value='3' />
+	</DataTransform>
+	
+</XMLData>

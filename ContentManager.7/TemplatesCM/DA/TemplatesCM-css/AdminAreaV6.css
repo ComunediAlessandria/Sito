@@ -1,0 +1,1216 @@
+/* --- CLASSI ED IMPOSTAZIONI GENERALI --------------------------------------- */
+
+form{margin: 0; padding: 0;}
+
+.AdminHide{position: absolute; left: -1000em; top: 0;}
+.jsShow, .jsShowB{display: none;}
+.jsHide{}
+.InputIMG{width: 20px; height: 20px;}
+
+.HideShowIcon { width: 20px; float: left;}
+
+.errList{
+	position: relative;
+	margin: .5em;  padding: .5em;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: .9em; font-weight:bold;
+	color: #000000; background-color:#FFFF66;
+	border: 2px solid #FF0000;
+	list-style-type:none;
+}
+
+/* --- TESTATA AREA AMMINISTRATIVA --------------------------------------- */
+
+#AdminTestata{float: left; width: 100%; color: #ffeb00; background-color: #2d4a82; font-size: .7em; font-weight: bold;}
+#AdminGuida{float: right; width: auto; margin: 0 .5em 0 1em; padding: .5em 0 .5em 1em; border-left: 1px solid #749cbf; min-height: 1.2em;}
+
+#AdminGuida a{display: block; width: auto;
+	color: #ffffff; background-color: #2d4a82; font-weight: bold; border: 1px solid #ffeb00;
+	text-decoration: none; padding: 1px 24px 1px 4px;
+	background-image: url(../TemplatesCM-img/AdminGuida.gif); background-position: center right; background-repeat:no-repeat;	}
+#AdminGui
+#AdminTestata p{float: right; width: auto; border-right: 1px solid #749cbf; margin: 0 1em; padding: 0 1em; line-height: 2.6em; white-space: nowrap}
+#AdminTestata p span {color: #ffffff; background-color: #2d4a82; font-weight: normal; margin: 0 0 0 .3em;}
+ #AdminTestata form{float: right; width: auto; margin: 0; padding: .4em 0 0 0;}
+#AdminTestata form label{ font-size: 1em; margin: 0 .3em 0 0;}
+#AdminTestata form select, #AdminTestata form input{font-size: 1em; }
+
+/* --- MENU AREA AMMINISTRATIVA --------------------------------------- */
+
+#AdminMenu{	font-size: .65em;  float: left; clear: both; width: 100%; margin: 0 0 1em 0; padding: 0;
+	background-image: url(../TemplatesCM-img/AdminMenu-BG.jpg); background-position: top left; background-repeat:repeat-x; }
+
+#AdminMenu div {width: 100%; float: left; background-image: url(../TemplatesCM-img/AdminMenu-FlexLogo.jpg); background-position: top left; background-repeat:no-repeat; }
+#AdminMenu.FlexMobile div {background-image: url(../TemplatesCM-img/AdminMenu-FlexMobileLogo.gif);}
+
+#AdminMenu #AdminMenuA{position: absolute; left: -1000em; top: 0;}
+
+#AdminMenu ul {list-style-type: none; margin: 0 0 0 0; padding: 8px 0 0 0; float: right; width: 87%; }
+#AdminMenu ul li { float: left; width: 14%;  height: 5.5em; }
+#AdminMenu ul li a, #AdminMenu ul li strong{ float: left; display: block; font-weight: bold;
+	width: 100%; text-align: center; padding: 50px 0 0 0;
+	color: #002c87; background-color: transparent; text-decoration: underline;
+	background-position: top center; background-repeat:no-repeat; }
+
+#AdminMenu ul li strong {text-decoration: none; }
+
+#AdminMenu ul li.Pag a {background-image: url(../TemplatesCM-img/adminToolBar/Pagine.png);}
+#AdminMenu ul li.Pag a:hover, #AdminMenu ul li.Pag a:active, #AdminMenu ul li.Pag a:focus,
+#AdminMenu ul li.Pag a.tabs-sel, #AdminMenu ul li.Pag strong{ background-image: url(../TemplatesCM-img/adminToolBar/Pagine_sel.png); }
+
+#AdminMenu ul li.Ind a {background-image: url(../TemplatesCM-img/adminToolBar/Indici.png);}
+#AdminMenu ul li.Ind a:hover, #AdminMenu ul li.Ind a:active, #AdminMenu ul li.Ind a:focus,
+#AdminMenu ul li.Ind a.tabs-sel, #AdminMenu ul li.Ind strong { background-image: url(../TemplatesCM-img/adminToolBar/Indici_sel.png); }
+
+#AdminMenu ul li.UG a {background-image: url(../TemplatesCM-img/adminToolBar/GruppiUtenti.png);}
+#AdminMenu ul li.UG a:hover, #AdminMenu ul li.UG a:active, #AdminMenu ul li.UG a:focus,
+#AdminMenu ul li.UG a.tabs-sel, #AdminMenu ul li.UG strong{ background-image: url(../TemplatesCM-img/adminToolBar/GruppiUtenti_sel.png); }
+
+#AdminMenu ul li.Str a {background-image: url(../TemplatesCM-img/adminToolBar/Strumenti.png);}
+#AdminMenu ul li.Str a:hover, #AdminMenu ul li.Str a:active, #AdminMenu ul li.Str a:focus,
+#AdminMenu ul li.Str a.tabs-sel, #AdminMenu ul li.Str strong{	background-image: url(../TemplatesCM-img/adminToolBar/Strumenti_sel.png);  }
+
+#AdminMenu ul li.Imp a{background-image: url(../TemplatesCM-img/adminToolBar/Impostazioni.png);}
+#AdminMenu ul li.Imp a:hover, #AdminMenu ul li.Imp a:active, #AdminMenu ul li.Imp a:focus,
+#AdminMenu ul li.Imp a.tabs-sel, #AdminMenu ul li.Imp strong{ background-image: url(../TemplatesCM-img/adminToolBar/Impostazioni_sel.png); }
+
+#AdminMenu ul li.Mod a {background-image: url(../TemplatesCM-img/adminToolBar/Moduli.png);}
+#AdminMenu ul li.Mod a:hover, #AdminMenu ul li.Mod a:active, #AdminMenu ul li.Mod a:focus,
+#AdminMenu ul li.Mod a.tabs-sel, #AdminMenu ul li.Mod strong{ background-image: url(../TemplatesCM-img/adminToolBar/Moduli_sel.png);  }
+
+#AdminMenu ul li.Int a {background-image: url(../TemplatesCM-img/adminToolBar/Integrazioni.png);}
+#AdminMenu ul li.Int a:hover, #AdminMenu ul li.Int a:active, #AdminMenu ul li.Int a:focus,
+#AdminMenu ul li.Int a.tabs-sel, #AdminMenu ul li.Int strong { background-image: url(../TemplatesCM-img/adminToolBar/Integrazioni_sel.png); }
+
+/* --- BC, LOGOUT, BACKTOSITE AREA AMMINISTRATIVA --------------------------------------- */
+
+#AdminBCZone{clear: both; width: 100%; font-size: .65em; font-weight: bold;
+	position: relative; margin: 0 0 0 0; padding: 0; line-height: 2.5em;}
+
+#AdminBC{ color: #000000; background-color: #f1f1f1; margin: 0 8em 0 12.2em; padding: 0 1em; font-weight: normal;}
+#AdminBC a{color: #000000; background-color: #f1f1f1; text-decoration: underline;}
+#AdminBC a:hover, #AdminBC a:active, #AdminBC a:focus{ text-decoration: none; }
+
+#AdminBackSite{ width: 11em; position: absolute; top:0; left: 0; border-right: 2px solid #ffffff;
+	color: #000000; background-color: #bbedfc;}
+#AdminBackSite a{color: #000000; background-color: #bbedfc; text-decoration: none; display: block; width: 8em;
+	padding: 0 1em 0 3em; background-image: url(../TemplatesCM-img/AdminBackSite.gif); background-position: center left; background-repeat:no-repeat;	}
+#AdminBackSite a:hover, #AdminBackSite a:active, #AdminBackSite a:focus{color: #ffffff; background-color: #2d4a82;}
+
+#AdminLogout{ width: 8em; position: absolute; top:0; right: 0; border-left: 2px solid #ffffff;
+	color: #000000; background-color: #ffeb00;}
+#AdminLogout a{color: #000000; background-color: #ffeb00; text-decoration: none; display: block; width: 5em;
+	padding: 0 2em 0 1em; background-image: url(../TemplatesCM-img/AdminLogout.gif); background-position: center right; background-repeat:no-repeat;}
+#AdminLogout a:hover, #AdminLogout a:active, #AdminLogout a:focus{color: #ffeb00; background-color: #2d4a82;}
+
+/* --- CORPO AREA AMMINISTRATIVA --------------------------------------- */
+
+#AdminAreaBody{
+	font-family: Verdana, Arial, Helvetica, Sans-serif; font-size: 100%;
+	margin: 0; padding: 0;
+	color: #000000; background-color: #ffffff;
+}
+
+#AdminFooter{
+	font-size: .6em;
+	margin: 0; padding: 4em 0 .5em 0;
+	background-image: url(../TemplatesCM-img/AdminBodyBG.gif);
+	background-position: bottom left;
+	background-repeat:repeat-x;
+	text-align: center;
+	vertical-align: text-bottom;
+	color: #ffffff; background-color: #2D4A82;
+}
+#AdminFooter a{color: #ffffff; background-color: #2D4A82; text-decoration: none; font-weight: bold;}
+#AdminFooter a:hover, #AdminFooter a:active, #AdminFooter a:focus{ text-decoration: underline;}
+
+
+#AdminCorpo{
+	margin: 1em 2em 0 2em; padding: 0; min-height: 50%;
+	background-image: url(../TemplatesCM-img/AdminTitleTLCorner.gif);
+	background-position: top left; background-repeat:no-repeat;
+}
+
+.AdminPageInfo{
+	color: #2D4A82; background-color: #ffffff;
+	border-top: 1px solid #2d4a82;
+	border-bottom: 1px solid #2d4a82;
+	border-left: 1px solid #97cff1;
+	border-right: 1px solid #97cff1;
+	background-image: none;
+	font-size: .7em;
+	padding: .5em 1em;
+}
+.AdminPageInfo a {
+	font-weight: bold;
+	color: #2D4A82; background-color: #ffffff;
+}
+
+#AdminCorpo h1{
+color: #ffffff; background-color: #2d4a82;
+display: inline; font-size: .9em; line-height: 1.6em;
+margin: 0 0 0 6px; padding: .2em 2em .2em 1em;
+background-image: url(../TemplatesCM-img/AdminTitleTRCorner.gif); background-position: top right; background-repeat:no-repeat;}
+
+#AdminCorpo h2{
+	margin: 0; padding: .2em 1em;
+	font-size: .9em;
+	font-weight: bold;
+	color: #000000;
+	background-color: #ecf8ff;
+	border: 1px solid #97cff1;
+}
+
+#AdminCorpo h3 {
+	color: white; background-color: #2d4a82;
+	font-size: 1.2em; line-height: 2em;
+	margin: 0 0 0 0; padding: 3px 0 3px 10px;
+}
+
+#AdminCorpo h2 a{color: #000000; background-color: transparent; }
+#AdminCorpo h2 a:link, #AdminCorpo h2 a:visited {text-decoration:underline; }
+#AdminCorpo h2 a:active, #AdminCorpo h2 a:hover, #AdminCorpo h2 a:focus {text-decoration:none; }
+
+#AdminCorpo p{
+	margin: 0;
+	padding: 1em;
+	font-size: .7em;
+}
+#AdminCorpo ol, #AdminCorpo ul{
+	margin: 0 2em 0 2em;
+	padding: 0em;
+	font-size: .7em;
+}
+
+#AdminCorpo .button {
+	padding: 1px 3px 1px 3px;
+	margin: 0;
+	color: white;
+	background-color: #2d4a82;
+	font-weight: bold;
+	font-size: 1.1em;
+	border-top: 1px solid #7788B7;
+	border-right: 1px solid #4C629D;
+	border-bottom: 1px solid #4C629D;
+	border-left: 1px solid #4C629D;
+}
+
+
+#AdminCorpo .AdminFormBOTable p, #AdminCorpo .AdminFormBOTable ul{font-size: 1em;}
+#AdminCorpo #AdminFormBO p, #AdminCorpo #AdminFormBO ul{font-size: 1em;}
+#AdminCorpo .AdminFormBO p, #AdminCorpo .AdminFormBO ul{font-size: 1em;}
+
+.AdminCorpoRowEven{
+	border-top: 1px solid #2D4A82;
+	border-left: 1px solid #97cff1;
+	border-right: 1px solid #97cff1;
+	color: #000000;
+	background-color: #f1f1f1;
+	padding: .5em;
+
+
+}
+.AdminCorpoRowOdd{
+	border-top: 1px solid #2D4A82;
+	border-left: 1px solid #97cff1;
+	border-right: 1px solid #97cff1;
+	color: #000000;
+	background-color: #ffffff;
+	padding: .5em;
+}
+
+.AdminCorpoRowEven a{color: #0000ff; background-color: #f1f1f1}
+.AdminCorpoRowOdd a {color: #0000ff; background-color: #ffffff}
+
+
+.AdminCorpoDL {font-size: .75em;}
+.AdminCorpoDL dl { margin:0; position: relative; /* IE6 pekaboo */}
+.AdminCorpoDL dl dt {
+	color:#000;
+	float:left; font-weight:bold;
+	margin-right: 1em; padding: .2em;
+	width: 10em;
+	position: relative; /* IE6 pekaboo */
+}
+.AdminCorpoDL dl dd {
+margin: .1em 0;
+padding: .2em 0;
+border-bottom: 1px solid #ccc;
+}
+
+
+#AdminYesNoLink{
+	margin: 0em 1em 1em 1em ;
+}
+#AdminYesNoLink a{
+	color: #000000;
+	background-color:#f1f1f1;
+	border: 1px solid #000000;
+	font-weight: bold;
+	font-size: .7em;
+	text-decoration: none;
+	margin: 0 4em 0 0;
+	padding: .2em .6em .2em .6em;
+}
+#AdminYesNoLink a:focus, #AdminYesNoLink a:hover, #AdminYesNoLink a:active{
+	color: #000000;
+	background-color:#FFEB00;
+}
+
+
+.AdminPageFooterCommand{
+	clear:both;
+	color: #000000; background-color: #DBF1FF;
+	background-image: url(../TemplatesCM-img/AdminAreaBoxBg.gif);
+	background-position: top left;
+	background-repeat:repeat;
+	margin: 0; padding: .6em 1em;
+	font-size: .7em; font-weight: bold;
+	border-top: 1px solid #2d4a82;
+	border-bottom: 1px solid #2d4a82;
+	border-left: 1px solid #97cff1;
+	border-right: 1px solid #97cff1;
+}
+.AdminPageFooterCommand a{
+	color:#000000;
+	background-color: transparent;
+}
+.AdminPageFooterCommand a img{
+	border: none;
+	vertical-align: middle;
+	padding: 0 4px 0 0;
+}
+
+.AdminPageFooterCommand input, .AdminPageFooterCommand select{
+	vertical-align: middle;
+}
+.AdminPageFooterCommandButton{
+	color: #FFFFFF;
+	background-color:#2D4A82;
+	border: 1px solid #000000;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 0;
+	width: auto;
+}
+
+#AdminCorpo .AdminPageFooterCommand h2{
+	margin: 0; padding: .2em 0;
+	font-size: 1.9em;
+	color: #012547; background-color: transparent;
+	border: none; font-weight: bold;
+}
+
+
+
+.AdminPageFooterStatus{
+	padding: .2em 1em; margin: 0;
+	font-size: .7em;
+	color: #FFFFFF;
+	background-color: #2d4a82;
+	background-image: url(../TemplatesCM-img/AdminfooterStatusBRCorner.gif);
+	background-position: bottom right; background-repeat:no-repeat;
+}
+
+#AdminCorpo table, #IndexTable{
+	border-collapse: collapse;
+	width: 100%;
+	font-size: .7em;
+	margin: 0; padding: 0;
+}
+#AdminCorpo table thead tr th, #AdminCorpo table thead tr td,
+#IndexTable thead tr th, #IndexTable thead tr td
+ {
+	color: #FFFFFF;
+	background-color: #2d4a82;
+	font-weight: bold;
+	text-align:left;
+	padding: .2em 0 .2em 1em;
+}
+
+#AdminCorpo table tbody tr th,
+#IndexTable tbody tr th {
+	text-align: left;
+	font-weight: bold;
+	padding: 0 0 0 .5em;
+	vertical-align:middle;
+}
+#AdminCorpo table tbody tr td {
+	padding: .2em .5em .3em .2em;
+	vertical-align:top;
+}
+#AdminCorpo table tbody tr td img, #IndexTable tbody tr td img,  #IndexTable tbody tr th img{
+	vertical-align:middle;
+	border: none;
+	padding: 0px;
+}
+#IndexTable tbody tr {
+	color: #000000;
+	background-color: #FFFFFF;
+}
+#IndexTable tbody tr td, #IndexTable tbody tr th {
+	vertical-align:top;
+	border-bottom: 1px solid #C1C6CC;
+}
+#IndexTable tbody tr td a img{
+	padding:1px;
+}
+
+
+
+.AdminCellPageInfo{
+	white-space: nowrap;
+	font-family: "Courier New", Courier, monospace;
+	text-align: right;
+}
+
+
+.AdminIcoCell{
+	text-align:left;
+	width: 64px;
+	vertical-align:middle;
+}
+.AdminIcoCellWide{
+	width: 195px;
+	text-align:left;
+	vertical-align:middle;
+	padding: 0;
+}
+.AdminIcoCell a img, .AdminIcoCellWide a img{
+	margin: 0; padding:0;
+	width: 20px; height: 20px;
+	border: none;
+}
+.AdminIcoCell a, .AdminIcoCellWide a{
+	border-left: 1px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	width: 20px; height: 20px;
+	margin: 0 2px;
+}
+
+.AdminIcoCell a:hover, .AdminIcoCell a:active, .AdminIcoCell a:focus,
+.AdminIcoCellWide a:hover, .AdminIcoCellWide a:active, .AdminIcoCellWide a:focus{
+	border-left: 1px solid #000000;
+	border-right: 1px solid #000000;
+}
+
+.AdminTable {
+	border-left: 1px solid #97cff1;
+	border-right: 1px solid #97cff1;
+}
+
+.AdminTableRowOdd{
+	color: #000000;
+	background-color: #f1f1f1;
+}
+.AdminTableRowOdd td a, .AdminTableRowOdd th a{
+	color: #2d4a82;
+	background-color: #f1f1f1;
+	text-decoration:underline;
+}
+.AdminTableRowEven{
+	color: #000000;
+	background-color: #FFFFFF;
+}
+.AdminTableRowEven td a, .AdminTableRowEven th a{
+	color: #2d4a82;
+	background-color: #FFFFFF;
+	text-decoration:underline;
+}
+.AdminTableRowOdd td a:hover, .AdminTableRowOdd td a:focus, .AdminTableRowOdd td a:active,
+.AdminTableRowEven td a:hover, .AdminTableRowEven td a:focus, .AdminTableRowEven td a:active,
+.AdminTableRowOdd th a:hover, .AdminTableRowOdd th a:focus, .AdminTableRowOdd th a:active,
+.AdminTableRowEven th a:hover, .AdminTableRowEven th a:focus, .AdminTableRowEven th a:active{
+	text-decoration: none;
+}
+.AdminTableThumb{
+	border: 1px solid #000000 ! important;
+	margin: 2px ! important;
+}
+
+.AdminTableIcoCell{
+	width: 24px;
+	text-align: center;
+}
+.AdminTableIcoCell img{
+ 	border: none;
+	vertical-align: middle;
+	padding: 0;
+}
+
+#AdminCorpo table.AdminTable .AdminTableAlignLeft{text-align: left;}
+#AdminCorpo table.AdminTable .AdminTableAlignRight{text-align: right;}
+#AdminCorpo table.AdminTable .AdminTableAlignCenter{text-align: center;}
+
+
+/* ---- Pulsanti Strumenti, Impostazioni, ecc - Inizio ---- */
+#AdminCommandList{
+	padding: 0 0 0 0; margin: 0;
+	font-size: .7em;
+	width: 99%;
+	border-top: 1px solid #2d4a82;
+}
+#AdminCommandListFooter{
+	clear:left;
+}
+#AdminCommandList dl{
+	width: 100%;
+	padding: 0;
+	margin: 4px 0 0 0;
+	float: left;
+	color: #000000;
+	background-color: #ecf8ff;
+	border-right: 1px solid #97cff1;
+	border-bottom: 1px solid #97cff1;
+	border-left: 1px solid #97cff1;
+
+}
+#AdminCommandList dt{
+	float: left;
+	width: 20%;
+	padding: 6px 1% 6px 1%;
+	margin: 0 ;
+	font-weight: bold;
+	border-top: 1px solid #97cff1;
+	clear: left;
+	text-align: center;
+}
+#AdminCommandList dt a{
+ 	color: #000000;
+	background-color:#FFFFFF;
+	display: block;
+	width: 80%;
+	padding: 6px 0px 6px 20px;
+	border-top: 1px #96a5c1 solid;
+	border-right: 1px #96a5c1 solid;
+	border-bottom: 1px #2d4a82 solid;
+	border-left: 1px #2d4a82 solid;
+	text-decoration: none;
+	text-align: left;
+	background-image: url(../TemplatesCM-img/AdminDLButtonBg.gif);
+	background-position: bottom left; background-repeat: repeat-x;
+
+}
+#AdminCommandList dt a:hover, #AdminCommandList dt a:focus, #AdminCommandList dt a:active{
+ 	color: #000000;
+	background-color:#FFFFFF;
+}
+#AdminCommandList dd{
+	width: 72%;
+	margin: 0 ;
+	padding: 6px 2% 20px 2%;
+	float: left;
+	text-align: justify;
+	border-top: 1px solid #97cff1;
+}
+
+
+/* --- Corpo Area Amministrativa - Fine --- */
+
+
+
+/* --- PANNELLO INFO PRODOTTO E LICENZA --------------------------------------- */
+#LicencePanel{
+	width: 25em;
+	border: 2px solid #97CFF1;
+	margin: 1em auto; padding: 0;
+	color: #000000; background-color: #DBF1FF;
+}
+#LicencePanel h2{
+	font-size: .9em;
+	margin: 0; padding: .3em;
+	background-image: url(../TemplatesCM-img/AdminAreaBoxBg.gif);
+	background-position: top left;
+	background-repeat:repeat;
+	border: none;
+	border-bottom: 1px solid #97CFF1;
+}
+#LicencePanel dl{
+	font-size: .7em;
+	margin: 0; padding: 0;
+}
+#LicencePanel dl dt{
+	font-weight: bold;
+	color: #000000;
+	background-color: #f1f1f1;
+	margin: 0; padding: .2em 1em .2em 2em;
+}
+#LicencePanel dl dd{
+	font-weight: normal;
+	color: #000000;
+	background-color: #FFFFFF;
+	margin: 0; padding: .2em 1em .2em 3em;
+}
+#LicencePanel dl dd a{
+	color: #002c87;
+	background-color: #FFFFFF;
+	text-decoration: underline;
+}
+#LicencePanel dl dd a:hover, #LicencePanel dl dd a:active, #LicencePanel dl dd a:focus{
+	text-decoration: none;
+}
+
+/* --- PANNELLO HISTORY --------------------------------------- */
+
+.AdminHistory{
+	border-top: 1px solid #2d4a82;
+	border-bottom: 1px solid #2d4a82;
+	border-left: 1px solid #97cff1;
+	border-right: 1px solid #97cff1;
+	margin: 1em auto;
+	padding: 1em;
+	width: 80%;
+}
+
+.LIEven{ color: #000000;  background-color: #f1f1f1;}
+
+
+
+
+/* --- ELENCO PAGINE --------------------------------------- */
+
+
+.FlexEditAdminPageSelectorEmpty{
+	font-style: italic;
+}
+.FlexEditAdminPageSelector{
+	color:#000000;
+	background-color:#FFFFFF;
+	border: 1px solid #000000;
+	padding: 1px;
+	margin: 1px;
+}
+
+
+#AdminElencoPagineAggiungi{
+ border: none;
+ margin: 0; padding: 0;
+}
+#AdminElencoPagineAggiungi select{
+	vertical-align: middle;
+}
+
+#AdminElencoPagineAggiungi input {
+	margin:0; padding:1px 0 3px 25px; text-align:left;
+	background:transparent url(../TemplatesCM-img/icoAdd.gif) 0 1px no-repeat;
+	color:#000000; font-weight:bold; cursor:pointer; border:none;
+}
+
+
+#AdminElencoPagineAggiungi input:hover{
+	text-decoration: none;
+}
+
+
+
+#AdminFiltroElencoPagine{
+	color: #000000; background-color: #DBF1FF;
+	background-image: url(../TemplatesCM-img/AdminAreaBoxBg.gif);
+	background-position: top left;
+	background-repeat:repeat;
+	margin: 0; padding: .6em 1em;
+	border-left: 1px solid #97cff1;
+	border-right: 1px solid #97cff1;
+}
+#AdminFiltroElencoPagine select{
+	margin: 0 0 0 0;
+	vertical-align:middle;
+	color: #000000;
+	background-color: #FFFFFF;
+	font-size: .7em;
+}
+#AdminFiltroElencoPagine input{
+	vertical-align:middle;
+	font-size: .7em;
+	margin: 0 0 0 2em;
+}
+#AdminFiltroElencoPagine label{
+	margin: 0em 1em 0em .8em;
+	font-weight: bold;
+	font-size: .7em;
+}
+
+#AdminFiltroElencoPagine fieldset{
+	border: none;
+	padding: 0 .5em .5em .5em;
+	margin: 0 0 .5em 0;
+}
+#AdminFiltroElencoPagine fieldset legend{
+	color: #000000; background-color: transparent;
+	font-weight:bold;
+	padding: 0; margin: 0;
+	font-size: .7em;
+}
+#AdminFiltroElencoPagine fieldset label{
+	font-weight: normal;
+	margin: 0 1em 0 0;
+	white-space:nowrap;
+}
+#AdminFiltroElencoPagine fieldset select{
+	margin: 0 0 0 0;
+}
+#AdminFiltroElencoPagine fieldset input{
+	margin: 0 0 0 0;
+}
+#AdminFiltroElencoPagine fieldset span{
+	white-space: nowrap;
+}
+
+#AdminFiltroElencoSubmit, .adminFiltroElencoSubmit {
+	color: #000000;
+	background-color:#FFEB00;
+	font-weight: bold;
+	padding: .1em;
+	vertical-align:middle;
+	margin: 0 2em 0 2em;
+}
+#AdminFiltroElencoReset, .adminFiltroElencoReset {
+	color: #FFFFFF;
+	background-color:#2C4981;
+	font-weight: bold;
+	padding: .1em;
+	vertical-align:middle;
+	margin: 0 2em 0 2em;
+
+}
+
+
+
+
+
+/* --- EDIT BO --------------------------------------- */
+
+
+#AdminFormBO, .AdminFormBO{
+	font-size: .7em;
+	border-right: 1px solid #97cff1;
+	border-left: 1px solid #97cff1;
+	border-bottom: 1px solid #97cff1;
+	width: 99%;
+}
+#AdminFormBO textarea, .AdminFormBO textarea{
+	font-size: 1.1em;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+#AdminFormBO textarea.AdminFormXMLCode, .AdminFormBO textarea.AdminFormXMLCode {
+	font-family: "Courier New", Courier, monospace
+}
+
+.AdminFormBORowEven {
+	border-top: 1px solid #2D4A82;
+	float: left;
+	width: 100%;
+	color: #000000;
+	background-color: #ecf8ff;
+}
+.AdminFormBORowOdd {
+	border-top: 1px solid #2D4A82;
+	float: left;
+	width: 100%;
+	color: #000000;
+	background-color: #FFFFFF;
+}
+.AdminFormBORowEven ul.textlist, .AdminFormBORowOdd ul.textlist {list-style-type: none;}
+.AdminFormBORowEven ul.textlist li, .AdminFormBORowOdd ul.textlist li{ float: left; margin: .2em .5em; white-space: nowrap;}
+.AdminFormBORowEven ul.textlist li:after, .AdminFormBORowOdd ul.textlist li:after {content:", ";}
+
+
+.AdminFormBORowEven fieldset table tr td,
+.AdminFormBORowOdd fieldset table tr td {font-size: 1.35em;}
+
+
+.AdminFormBORowEven fieldset, .AdminFormBORowOdd fieldset {border: none;}
+
+.AdminFormBORowEven .BOAreaLite , .AdminFormBORowOdd .BOAreaLite {width: 70%;  margin-left: 22%;}
+#AdminCorpo .AdminFormBORowEven .BOAreaLite .FlexEditTextArea, .AdminFormBORowOdd .BOAreaLite .FlexEditTextArea {background-color: #fff; }
+#AdminCorpo .AdminFormBORowEven .BOAreaLite .FlexEditTextArea p, #AdminCorpo .AdminFormBORowOdd .BOAreaLite .FlexEditTextArea p {margin: 0; padding: 0;}
+#AdminCorpo .FlexEditTextArea .editPar {font-size: 1em;}
+
+.AdminFormBOLabel{
+	float: left;
+	clear: left;
+	width: 20%;
+	padding: .5em;
+	font-weight: bold;
+}
+.AdminFormBOField{
+	float: left;
+	width: 75%;
+	padding: .5em;
+}
+.AdminFormBOField img{
+	border: none;
+	vertical-align:middle;
+}
+.AdminIcoInput{
+	vertical-align:top;
+}
+.AdminFormBOFieldset{
+	border: none;
+	padding: .5em;
+}
+
+.AdminFormBOFieldset input{margin: 1px 0 0 22%; padding: 0;}
+.AdminFormBOFieldset table input{margin: 0 0 0 0; padding: 0;}
+.AdminFormBOFieldset .OptionSet {margin: 0 0 1em 22%; padding: .5em; border-left: 1px solid #97cff1; border-bottom: 1px solid #97cff1;}
+.AdminFormBOFieldset .OptionSet input{margin: 0 1em 0 0; padding: 0;}
+.AdminFormBOFieldset .OptionSet legend{margin: 0 0 0 0;}
+.AdminFormBOFieldset ul{margin: 0 0 0 22%; padding: 0 0 0 1em;}
+.AdminFormBOFieldset fieldset input {margin: 0 0 0 0;}
+
+
+.AdminFormBOFieldset textarea{
+	display:block;
+}
+.AdminFormBOFieldsetLegend{
+	font-weight: bold;
+	color: #000000;
+	background-color: transparent;
+	margin: 0;
+}
+.AdminFormBOTable{}
+.AdminFormBOTable table tr td{font-size: 1.35em;}
+.AdminFormBOTable label{
+	width: 25%; display: block; float: left;
+	margin: .5em .5em .1em .5em; font-weight:bold;
+}
+.AdminFormBOTable input, .AdminFormBOTable select, .AdminFormBOTable textarea{display: block; margin: .5em;}
+.AdminFormBOTable fieldset{ border: none; margin: 0 0 .5em 0;}
+.AdminFormBOTable fieldset legend{ font-weight:bold; color: #000000; background-color:#FFFFFF; }
+.AdminFormBOTable fieldset label{display: inline; float:none; font-weight: normal;}
+.AdminFormBOTable fieldset input{display: inline; margin: 0 0 0 2em;}
+.AdminFormBOTable fieldset select{display: inline; margin: 0 0 0 2em;}
+.AdminFormBOTable ul {margin: 0; padding: 0; list-style-type:none;}
+.AdminFormBOTable ul li input{display: inline; vertical-align:middle; margin: .1em .5em .1em 1em;}
+
+.AdminFormBOTableCellEven{
+	border-top: 1px solid #2D4A82;
+	color: #000000;
+	background-color: #FBF5DD;
+	font-size: 1.3em;
+	width: 50%;
+}
+.AdminFormBOTableCellEven fieldset legend{	color: #000000;	background-color: #FBF5DD;}
+.AdminFormBOTableCellEven ul li a{color: #0000ff;	background-color: #FBF5DD;}
+.AdminFormBOTableCellEven a.AdminFormAdd{
+	padding: .7em .5em .8em 2.5em;
+	background-image:url(../TemplatesCM-img/icoAdd.gif);
+	background-repeat: no-repeat;
+	background-position: 0px 3px;
+	color: #0000ff;	background-color: #FBF5DD;
+	line-height: 2em;
+}
+
+
+.AdminFormBOTableCellOdd{
+	border-top: 1px solid #2D4A82;
+	color: #000000;
+	background-color: #FFFFFF;
+	font-size: 1.3em;
+	width: 50%;
+}
+.AdminFormBOTableCellOdd fieldset legend{	color: #000000;	background-color: #FFFFFF;}
+.AdminFormBOTableCellOdd ul li a{color: #0000ff;	background-color: #FFFFFF;}
+.AdminFormBOTableCellOdd a.AdminFormAdd{
+	padding: .7em .5em .8em 2.5em;
+	background-image:url(../TemplatesCM-img/icoAdd.gif);
+	background-repeat: no-repeat;
+	background-position: 0px 3px;
+	color: #0000ff;	background-color: #FFFFFF;
+	line-height: 2em;
+}
+
+.AdminFormBOTableCellOdd dl, .AdminFormBOTableCellEven dl{
+	margin: .5em 0;
+	font-size: .7em;
+}
+.AdminFormBOTableCellOdd dl dt, .AdminFormBOTableCellEven dl dt{
+	font-weight: bold;
+	margin: 0; padding: 0;
+	width: 20%;
+	float: left;
+	border-top: 1px solid #999999;
+}
+.AdminFormBOTableCellOdd dl dd, .AdminFormBOTableCellEven dl dd{
+	float: left;
+	width: 70%;
+	border-top: 1px solid #999999;
+	margin: 0;
+}
+
+.AdminValidElements {
+	margin: 0;
+}
+.AdminValidElements fieldset{
+	margin: 0 0 1em 0;
+	padding: 0 0 0 2em;
+	border:none;
+}
+.AdminValidElements fieldset legend{
+	font-weight: bold;
+	padding: 0 1em 0 0;
+	margin: 0 0 0 -2em;
+	color: #000000;
+	background-color: transparent;
+}
+.AdminValidElements fieldset div{
+	font-style: italic;
+}
+.AdminValidElements fieldset input, .AdminValidElements fieldset select{
+	vertical-align:middle;
+}
+
+.AdminPollList ol{
+	margin: 0 0 1em 0; padding: 0;
+	list-style-type:square;
+
+}
+.AdminPollList ol li{ margin: .2em 0 0 0; font-size: 1.3em; padding: 0 0 .2em 0; border-bottom: 1px solid #97cff1;}
+
+.AdminPollList input{
+	vertical-align:middle;
+}
+
+.AdminFormBOBox{
+	border: 1px solid #2D4A82;
+}
+.AdminFormBOErr{
+	border: 1px solid #ff0000;
+}
+#AdminFormBO, .AdminFormBO {
+	clear:both;
+}
+
+/* --- ANALISI DEL SITO --------------------------------------- */
+
+#AdminCorpoFilterForm{
+	color: #000000; background-color: #DBF1FF;
+	background-image: url(../TemplatesCM-img/AdminAreaBoxBg.gif);
+	background-position: top left;
+	background-repeat:repeat;
+	border-left: 1px solid #97cff1;
+	border-right: 1px solid #97cff1;
+	border-top: 1px solid #2C4981;
+	border-bottom: 1px solid #2C4981;
+	padding: .3em .3em .8em .3em;
+}
+
+#AdminCorpoFilterForm fieldset{
+	border-style: solid;
+	border-color: #2C4981;
+	border-width: 1px 0px 0px 0px;
+	padding: 0;
+	margin: 0 0 0 0;
+}
+
+#AdminCorpoFilterForm select{
+	margin: 0 0 0 0;
+	vertical-align:middle;
+	font-size: .7em;
+}
+#AdminCorpoFilterForm input{
+	vertical-align:middle;
+	font-size: .7em;
+	margin: 0; padding: .1em .5em;
+	width: 22em; text-align: left;
+}
+#AdminCorpoFilterForm label{
+	margin: 0em 0em 0em .8em;
+	font-weight: bold;
+	font-size: .7em;
+}
+
+#AdminCorpoFilterForm fieldset fieldset{
+	border: none;
+	padding: 0; margin: 0;
+	vertical-align:middle;
+}
+
+#AdminCorpoFilterForm fieldset fieldset input {display: inline; margin: 0;}
+#AdminCorpoFilterForm fieldset legend{
+	color: #000000; background-color: transparent;
+	font-weight:bold;
+	padding: 0 1em 0 1em;
+	font-size: .7em;
+}
+
+#AdminValidationList{
+	font-size: .7em;
+	margin: 1em 0 0 0; padding: 0 0 0 0;
+	background-image: url(../TemplatesCM-img/AdminTitleTLCorner.gif);
+	background-position: top left; background-repeat:no-repeat;
+}
+
+#AdminValidationList h1{ font-size: 1.2em;}
+
+#AdminValidationList h2{
+	color: #000000;
+	background-color: #ecf8ff;
+	padding: .2em; 	margin: 0;
+	font-size: 1.2em;
+}
+#AdminValidationList h2 a{
+	color: #000000;
+	background-color: transparent;
+	font-size: 1em;
+}
+#AdminValidationList h2 a:hover, #AdminValidationList h2 a:active{
+	text-decoration: none;
+}
+
+.AdminValidationListItemOKEven{
+	color: #000000;
+	background-color: #f1f1f1;
+	padding: .2em 0 .2em 2em;
+	border-left: 1px solid #97cff1;
+	border-right: 1px solid #97cff1;
+}
+.AdminValidationListItemOKOdd{
+	color: #000000;
+	background-color: #f1f1f1;
+	padding: .2em 0 .2em 2em;
+	border: 1px solid #97cff1;
+}
+.AdminValidationListItemOKEven img,
+.AdminValidationListItemOKOdd img{
+	vertical-align: middle;
+}
+
+.AdminValidationListItemKO{
+	color: #000000;
+	background-color:#FFC3C3;
+	padding: .2em 2em .2em 2em;
+	border-top: none;
+	border-bottom: 1px solid #CC0000;
+	border-left: 1px solid #97cff1;
+	border-right: 1px solid #97cff1;
+
+}
+.AdminValidationListItemKOpar{
+	margin: 0; padding: .5em;
+	border: 1px solid #585858;
+	color:#000000;
+	background-color:#FFFFFF;
+}
+
+/* --- STATISTICHE DEL SITO --------------------------------------- */
+
+.AdminGraphTableContainer{
+	text-align: center;
+	color: #000000; background-color: #ffffff;
+	padding: .5em 0;
+	border-left: 1px solid #97cff1;
+	border-right: 1px solid #97cff1;
+}
+#AdminCorpo table.AdminGraphTableH, #AdminCorpo table.AdminGraphTableV{
+	width: auto;
+	margin: 0 auto;
+	color: #000000; background-color: #ffffff;
+	border: 1px solid #999999;
+	padding: 0;
+}
+#AdminCorpo table.AdminGraphTableH td, #AdminCorpo table.AdminGraphTableH th,
+#AdminCorpo table.AdminGraphTableV td, #AdminCorpo table.AdminGraphTableV th {
+	text-align: center;
+	padding: 0 .2em;
+	vertical-align: bottom;
+}
+#AdminCorpo table.AdminGraphTableH th, #AdminCorpo table.AdminGraphTableV th {
+	font-weight: normal;
+	line-height: 1em;
+}
+#AdminCorpo table.AdminGraphTableV td img {
+	vertical-align: bottom;
+}
+#AdminCorpo table.AdminGraphTableH td{text-align: left; padding: .2em 0;}
+#AdminCorpo table.AdminGraphTableH td img {
+	display: block;
+}
+
+#AdminCorpo table.AdminStatsTable {
+	border-left: 1px solid #97cff1;
+	border-right: 1px solid #97cff1;
+}
+
+#AdminCorpo table.AdminStatsTable thead th { text-align: right; padding-right: 1em; }
+
+#AdminCorpo table.AdminStatsTable thead th.cellA1 { text-align: left;}
+
+#AdminCorpo table.AdminStatsTable tbody td { text-align: right; padding-right: 1em; }
+
+#AdminCorpo table.AdminStatsTable tbody td.totaleclass { font-weight: bold; }
+
+#AdminCorpo table.AdminStatsTable tr.AdminStatsRowEven {
+	color: #000000;
+	background-color: #ffffff;
+}
+#AdminCorpo table.AdminStatsTable tr.AdminStatsRowEven a{
+	color: #0000ff;
+	background-color: #ffffff;
+}
+
+#AdminCorpo table.AdminStatsTable tr.AdminStatsRowOdd {
+	color: #000000;
+	background-color: #FBF5DD;
+}
+#AdminCorpo table.AdminStatsTable tr.AdminStatsRowOdd a{
+	color: #0000ff;
+	background-color: #FBF5DD;
+}
+#AdminCorpo table.AdminStatsTable tr a:hover,
+#AdminCorpo table.AdminStatsTable tr a:active,
+#AdminCorpo table.AdminStatsTable tr a:focus {text-decoration: none;}
+
+/* ---------------- CLASSIFCATORE ------------------------- */
+
+.ClassificationFormBlock{
+	height: 19em; overflow: auto;
+	border: 1px solid #9DA7B5;
+	padding: 1px;
+}
+.ClassificationFormBlock fieldset{
+	width: 30%; float: left;
+	padding: 2px; margin: 0 2px;
+	border: 1px solid #9DA7B5;
+
+}
+.ClassificationFormBlock fieldset legend{
+	font-weight: bold;
+	color: #000000; background-color: transparent;
+}
+
+.ClassificationFormBlock fieldset ol {
+	list-style-type: none; margin: 0; padding: 0;
+	height: 17em;  overflow: auto;
+}
+.ClassificationFormBlock fieldset ol li {
+	text-indent: -2em;
+	padding: 0 0 0 2em;
+}
+.ClassificationFormBlock fieldset ol li input{ vertical-align: middle;}
+.ClassificationFormBlock fieldset ol li ol {
+	margin: 0 0 0 2em; height: auto;
+}
+.ClassificationFormBlock fieldset ol li input {border: none;}
+.ClassificationStatusBlock{	font-size: .75em;}
+#FYTVideoSearch .ClassificationStatusBlock{	font-size: 1em; font-weight: normal;}
+.ClassificationFormStatus {margin: -1.2em 0 0 9em; font-size: .75em;}
+
+
+#AdminCorpo .ClassificationFormBlock ol { font-size: 1em; margin: 0; padding: 0;}
+#AdminCorpo .ClassificationFormBlock fieldset ol li {
+	text-indent: -2em;
+	padding: 0 0 0 2em;
+}
+
+#AdminFiltroElencoPagine .ClassificationFormBlock {width: 98%; float: left; margin: 1em 0}
+#AdminFiltroElencoPagine .ClassificationFormBlock fieldset{
+	border: 1px solid #9DA7B5;
+
+}
+.AdminFiltroElencoPagineClassification  {}
+.AdminFiltroElencoPagineClassification div.ClassificationStatusBlock{}
+
+#AdminFiltroElencoPagine fieldset .AdminFiltroElencoPagineClassification label	{
+	white-space: normal;
+}
+
+#FYTVideoSearch fieldset{margin: .5em 0;}
+#FYTVideoSearch fieldset legend{ color: #fff; background-color: #2D4A82; margin: 0 0 .5em 0; padding: .2em;}
+#FYTVideoSearch fieldset div.buttons {margin: .5em 0 0 0; clear: both;}
+#FYTVideoSearch fieldset #SubmitY, #FYTVideoSearch fieldset #SubmitA { color:#FFFFFF; background-color:#2C4981; font-weight: bold; font-size: 1em; margin: 0 2em 0 0;}
+#FYTVideoSearch fieldset #ResetY, #FYTVideoSearch fieldset #ResetA { color:#000000; background-color:#FFEB00; font-weight: bold; font-size: 1em;}
+
+#FYTVideoTable tbody tr th{ vertical-align: top; padding: .5em 0; text-align: center;  }
+#FYTVideoTable tbody tr td{ width: 44%; padding: .5em;}
+#FYTVideoTable tbody tr th a {text-decoration: none;}
+#FYTVideoTable tbody tr th a:hover {text-decoration: underline;}
+#FYTVideoTable tbody tr th a img {border: none; vertical-align: middle; margin: .2em 0;}
+
+
+/* ---------------- PAGINATORE BO ------------------------- */
+#AdminCorpo .FlexNavi ol {font-size: 1em;}
+
+.FlexNavi {
+	font-size: .7em;
+	margin: .5em 0 0 0;  padding: .2em 0;
+	text-align:center; line-height: 1.5em;
+}
+.FlexNavi span {
+	display: inline;
+	margin: 0 .2em; padding: .1em;
+}
+.FlexNavi ol {
+	display: inline;
+	margin: 0 auto; padding: 0;
+	list-style-type: none;
+	font-weight:bold;
+}
+.FlexNavi ol li {
+	display:inline;
+	padding: .1em; margin: 0 .2em;
+	font-size: 1em;
+}
+.FlexNavi ol li a, .FlexNavi span a {
+	color: #273F6F; background-color: #DBF1FF;
+	text-decoration: underline;
+	padding: 0; margin: 0;
+}
+
+.FlexNavi li.NavInactive {
+	border: 1px solid #2D4A82;
+	color: #ffffff; 	background-color: #2D4A82;
+}
+.FlexNavi span.NavInactive{
+	border: 1px solid #97CFF1;
+	color: #000000; 	background-color: #ffffff;
+}
+
+.FlexNavi span.NavActive a,
+.FlexNavi li.NavActive a {
+	color: #273F6F; 	background-color: #DBF1FF;
+	border: 1px solid #97CFF1;
+	padding: .1em;
+}
+.FlexNavi ol li a:hover, .FlexNavi ol li a:active, .FlexNavi ol li a:focus,
+.FlexNavi span.NavActive a:hover, .FlexNavi span.NavActive a:active, .FlexNavi span.NavActive a:focus{
+	text-decoration: none;
+}
+
+
+/* ------------------- Oggetto BOUI Classificatore ---------------- */
+#AdminFormBO div.PageInfoPropertyButton {float: left; width: 25px; }
+#AdminFormBO div.PageInfoPropertyButton input {float: left; width: 20px;}
+#AdminFormBO div.ClassificationFormBlock{height: auto; float: left; width: 99%;}
+#AdminFormBO .ClassificationFormBlock fieldset {width: 96%; border: none; float: left;}
+#AdminFormBO div.jsHide fieldset {width: 30%; border: 1px solid #9DA7B5;}
+#AdminFormBO div.jsHide{height: 20em; overflow: auto;}
+#AdminFormBO div.jsHide ol ol {overflow: visible;}
+#AdminFormBO .ClassificationFormStatus { font-size:1em; margin:0; }
+
+/* Indice Accessibile */
+
+#IndexTable  th {
+
+	line-height: 2em;
+}
+
+.acIndexButton {
+
+	color: #fff;
+	background-color:#2D4A82;
+	border: 1px solid black;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 3px 10px;
+	width: auto;
+}
+
+.acEmptyRow {
+
+	line-height: 50px;
+	text-align: center;
+
+	font-size: 1.2em;
+}
+

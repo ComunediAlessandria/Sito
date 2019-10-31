@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="it">
+	<group id="bislice" define="false">
+		<message id="pi" lang:it="Porzione Indice" lang:en="Index Slice"/>
+		<message id="indice" lang:it="Indice" lang:en="Index"/>
+	</group>
+</messages>

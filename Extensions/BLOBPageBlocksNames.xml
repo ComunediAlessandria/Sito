@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<blobpageblocksnames>	
+
+	<blockname id='PRIMOPIANO' description='Box "In primo piano"'>
+		<![CDATA[
+			<div class="PrimoPiano">
+				<h2 class="viewSottotitolo"><a href="{MODULE:FlexPage:PageID=4226}"><span>In primo piano</span></a></h2>
+				<div class="BoxRosa">
+					{CONTENT}
+				</div>	
+			</div>	
+		]]>
+	</blockname>	
+
+	<blockname id='INIZIATIVE' description='Box "Manifestazioni e iniziative"'>
+		<![CDATA[
+			<div class="Iniziative">
+				<h2 class="viewSottotitolo"><a href="{MODULE:FlexPage:PageID=254}"><span>Manifestazioni e iniziative</span></a></h2>
+				<div class="BoxVerde">
+					{CONTENT}
+				</div>	
+			</div>	
+		]]>
+	</blockname>
+	
+	<blockname id='SPALLASXSOPRA' description='Menu Sx - Box Sopra'>
+		<![CDATA[
+			<div class="SezAgg">
+				{CONTENT}
+			</div>				
+		]]>
+	</blockname>
+	
+	<blockname id='SPALLASXSOTTO' description='Menu Sx - Box Sotto'>
+		<![CDATA[
+			<div class="SezAgg">
+				{CONTENT}
+			</div>				
+		]]>
+	</blockname>
+	
+	<blockname id='SPALLADXSOPRA' description='Menu Dx - Box Sopra'>
+		<![CDATA[
+			<div class="SezAgg">
+				{CONTENT}
+			</div>				
+		]]>
+	</blockname>
+	
+	<blockname id='SPALLADXSOTTO' description='Menu Dx - Box Sotto'>
+		<![CDATA[
+			<div class="SezAgg">
+				{CONTENT}
+			</div>				
+		]]>
+	</blockname>
+
+	<blockname id='SFONDOMAIN' description='Testata con Immagini'>
+		<![CDATA[
+			{CONTENT}
+		]]>
+	</blockname>
+
+	<blockname id='MENUH2' description='Home - Secondo menu orizzontale'>
+		<![CDATA[
+			
+				{CONTENT}
+							
+		]]>
+	</blockname>
+
+	<blockname id='COMSTAMPA' description='Home - Comunicati Stampa'>
+		<![CDATA[
+			<div class="SezAgg">
+				{CONTENT}
+			</div>				
+		]]>
+	</blockname>
+
+	<blockname id='ANTISMOG' description='Home - Antismog'>
+		<![CDATA[
+			<div class="itemH2XL">
+				{CONTENT}
+			</div>				
+		]]>
+	</blockname>
+
+	<blockname id='EVENTI' description='Home - Eventi'>
+		<![CDATA[
+			<div class="SezAgg">
+				{CONTENT}
+			</div>				
+		]]>
+	</blockname>
+
+	<blockname id='ARGOMENTI' description='Home - Argomenti'>
+		<![CDATA[
+			<div class="SezAgg">
+				{CONTENT}
+			</div>				
+		]]>
+	</blockname>
+
+	<blockname id='NOTIZIEHOME' description='Home - Notizia in primo piano'>
+		<![CDATA[
+			<div class="SezAgg">
+				{CONTENT}
+			</div>				
+		]]>
+	</blockname>
+
+	<blockname id='DOWNLOAD' description='Box - Download'>
+		<![CDATA[
+			<div class="SezAgg">
+				{CONTENT}
+			</div>				
+		]]>
+	</blockname>
+
+	<blockname id='CORRELATE' description='Anagrafe - Correlate'>
+		<![CDATA[
+			<div class="SezAgg">
+				{CONTENT}
+			</div>				
+		]]>
+	</blockname>
+	
+
+	<blockname id='LEGGIALTRO' description='Leggi Altro'>
+		<![CDATA[
+			<span class="morecont">
+				{CONTENT}
+			</span>	
+		]]>
+	</blockname>
+
+	<blockname id='LINKUTILI' description='Link Utili'>
+		<![CDATA[
+			<span class="SezAgg">
+				{CONTENT}
+			</span>	
+		]]>
+	</blockname>
+
+</blobpageblocksnames>

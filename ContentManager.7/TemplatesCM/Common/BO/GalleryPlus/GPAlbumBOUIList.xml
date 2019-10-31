@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='iso-8859-1' ?>
+<uilist id='GPAlbumBOUIList'>
+
+	<presenter
+		type='AdvancedTemplate'
+		filename='GalleryPlus/GPAlbumList.html'
+
+	/>
+	<page
+		title='__(bo-gallery.albumlisttitle)'	
+		permission='GPA'
+	>
+		<pagetag id='info' type='php'>
+			<![CDATA[
+
+				FlexInclude(kModPath . 'modGalleryPlus.php');
+
+				if (HasPar('IDGallery')) {
+
+					$id = (int)URLPar('IDGallery');
+
+				} else {
+
+					$fd = unserialize(urldecode(URLPar('FD')));
+					foreach ($fd as $name => $value)
+						if ($name === 'IDGallery')
+							$id = (int)$value;
+				}
+
+				return __('bo-gallery.albumofgallery') . ': ' 
+						. GPUtils::GetGalleryTitle($id, $GLOBALS['gLanguage']);
+			]]>
+		</pagetag>		
+	</page>
+
+	 <permissions>
+		  <permission action='add' type='php'>
+		  <![CDATA[
+			 return $GLOBALS['gAlbum.isGPA']; 
+		  ]]>
+		  </permission>
+
+		  <permission action='l
+			' type='php'>
+		  <![CDATA[
+			 return $GLOBALS['gAlbum.isGPA']; 
+		  ]]>
+		  </permission>
+
+		  <permission action='modify' type='php'>
+		  <![CDATA[
+			 return $GLOBALS['gAlbum.isGPA']; 
+		  ]]>
+		  </permission>
+		  <permission action='sort' type='php'>
+		  <![CDATA[
+			 return $GLOBALS['gAlbum.isGPA']; 
+		  ]]>
+		  </permission>
+	 </permissions>
+
+	<options>
+		<option name='modlink' label='__(bo-common.mod) %s' element='AlbumTitle' />
+		<option name='dellink' label='__(bo-common.del) %s' element='AlbumTitle' />
+		<option name='dnlink'  label="__(bo-common.up) %s" element='AlbumTitle' />
+		<option name='uplink' label="__(bo-common.down) %s" element='AlbumTitle' />		
+		<option name='addlink' pars='IDGallery={FILTER:IDGallery}'/>
+	</options>
+
+	<filter>	
+		<item id='IDGallery' 	ref='IDGallery'	initialvalue=''  label='__(bo-gallery.gal)' />		
+	</filter>
+	
+	<elements>
+		<element	id='NumFoto'		bo=''		label='Numero Immagini' transform='AlbumNumFoto'	/>
+		<element	id='SortIndex'		bo='SortIndex'		label='Ordine' 	/>
+		<element	id='ShowInList'		bo='ShowInList'	label='Mostra in elenco' 	transform='TSiNo'	/>
+
+		<element	id='DetailLink'		bo=''		label='' 	transform='DetailLink'	/>
+		
+		<element	id='AlbumTitle'		bo=''		label='' 	transform='MLAlbumTitle'	/>
+		
+		<element	id='GalleryTitle'	bo=''		label='' 	transform='MLGalleryTitle'	/>
+		<element	id='GruppoProprietario'	bo=''		label='' 	transform='Gruppo'	/>
+		<element	id='UltimaImmagine'	bo=''		label='' 	transform='UltimaImmagine'	/>
+	</elements>
+
+	<sortOrder>
+		<sortKey when='bo' mode='n' bo='SortIndex'  order='ASC' />		
+	</sortOrder>
+
+	<transform id='TSiNo' type='map' from='0;1' to='__(bo-common.no);__(bo-common.yes)' />
+
+	<transform id='DetailLink' type='php'>
+	<![CDATA[
+		return $GLOBALS['gAlbum.cache'][ $pars['ID'] ]['DetailLink'];
+	]]>
+	</transform>
+
+	<transform id='MLAlbumTitle' type='php'>
+	<![CDATA[
+		return $GLOBALS['gAlbum.cache'][ $pars['ID'] ][ 'AlbumTitle' ];
+	]]>
+	</transform>
+
+	<transform id='MLGalleryTitle' type='php'>
+	<![CDATA[
+		return $GLOBALS['gAlbum.cache'][ $pars['ID'] ][ 'GalleryTitle' ];
+	]]>
+	</transform>
+	
+	<transform id='UltimaImmagine' type='php'>
+	<![CDATA[
+		return ($GLOBALS['gAlbum.cache'][ $pars['ID'] ]['DataOraUltimaImmagine'] != '') ? 
+			date('d/m/Y H:i', $GLOBALS['gAlbum.cache'][ $pars['ID'] ]['DataOraUltimaImmagine']) :
+			__('bo-gallery.nopic');
+	]]>
+	</transform>	
+
+	<transform id='AlbumNumFoto' type='php'>
+	<![CDATA[
+		return (int)$GLOBALS['gAlbum.cache'][ $pars['ID'] ]['NumFoto'];			
+	]]>
+	</transform>	
+
+
+	<transform id='Gruppo' type='php'>
+		<![CDATA[
+			return $GLOBALS['gAlbum.cache'][ $pars['ID'] ]['Gruppo'];			
+		]]>
+	</transform>
+
+	<events>
+		<event id='onAfterParseForm' when='onAfterParseForm' type='php'>
+		<![CDATA[
+		
+			$GLOBALS['gAlbum.isGPA'] = $GLOBALS['user']->CheckPermesso('GPA');
+			$GLOBALS['gAlbum.isGPG'] = $GLOBALS['user']->CheckPermesso('GPG');
+
+			FlexInclude(kModPath . 'modGalleryPlus.php');
+
+			$albumList = new GPAlbumList($pars['BO']->mUI->GetValue('IDGallery'), $GLOBALS['gLanguage']);
+
+			$pvl = $albumList->GetPrivateList();
+
+			$buffer = array();
+			if (is_array($pvl))
+				foreach ($pvl as $id => $album) {
+
+					$buffer[ $album->mValues['IDAlbum'] ] = $album->mValues;
+
+					$albumLinkTitle  = '';
+					if ($GLOBALS['gAlbum.isGPA'] && $GLOBALS['user']->GroupBelongs($album->mValues['IDAlbumOwner'])) {
+
+						$albumLinkTitle = "<a class='btn' href='" . 
+								AddParameter( kPageBOList, array('OBJ=GPImg', 'IDAlbum=' . $album->mValues['IDAlbum'] )) . 
+								"' title=" . q(__('bo-gallery.phtoofalbum') . ' ' . $album->mValues['AlbumTitle']) . ">" . 
+								'<i class="moon-icon-images"></i>' . '</a>';
+					} 
+
+					$buffer[ $album->mValues['IDAlbum'] ]['DetailLink'] = $albumLinkTitle;
+				}
+
+			$GLOBALS['gAlbum.cache'] = $buffer;
+		]]>
+		</event>
+
+		<event id='onBeforeServePage' when='onBeforeServePage' type='php'>
+		<![CDATA[
+
+			FlexInclude(kModPath . 'modGalleryPlus.php');
+
+			if (HasPar('IDGallery')) {
+				
+				$id = (int)URLPar('IDGallery');
+
+			} else {
+
+				$fd = unserialize(urldecode(URLPar('FD')));
+					foreach ($fd as $name => $value)
+						if ($name === 'IDGallery')
+							$id = (int)$value;
+			}	
+			
+			$objID = URLPar('OBJ');
+
+			$page = $pars['PAGE'];
+			$page->SetPageBreadCrumb( GPUtils::GetBOBC('List', $page->GetPageBreadCrumb(), $objID, $id));
+		]]>
+		</event>
+	</events>
+</uilist>

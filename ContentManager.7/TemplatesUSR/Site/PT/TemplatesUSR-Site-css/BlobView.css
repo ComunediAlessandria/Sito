@@ -1,0 +1,129 @@
+.viewTitolo {
+	width: 100%;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 1.1em;
+	font-weight: bold;
+	color: #0D437F;
+	background-color: transparent;
+	padding: 0px;
+	margin-top: 0px; margin-bottom: 1em;
+	border-width: 0px 0px 4px 0px;
+	border-style: solid;
+	border-color: #FFC444;
+}
+.viewSottotitolo {  
+	width: 100%;
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: .9em; 
+	font-weight: bold; 
+	color: #0D437F; 
+	background-color: #EEF3F7; 
+	margin-top: 0px; margin-bottom: .9em; 
+ }
+
+.viewSotTitCell {  
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 1em; 
+	font-weight: bold; 
+	color: #0D437F; 
+	background-color: #EEF3F7; 
+	margin-top: 0px; margin-bottom: 10px;  
+ }
+
+.viewPar {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: .75em; color: #333333; background-color: transparent;}
+
+.viewUL {margin-left: 1em; margin-top: 0px; margin-bottom: 0px; padding: 0em;}
+
+.viewOL { margin-top: 0px; margin-bottom: 0px; }
+
+.viewLI { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: .75em; color: #333333; background-color: transparent;}
+/* Oggetti Paragrafo + Img */
+.viewParCell { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: .75em; color: #333333; background-color: transparent;}
+.ViewSpaceCell {width: 10px;}
+.viewTextCell { width: 100%;}
+
+/* */
+.viewTable {}
+.viewTableTD {}
+.viewTableCellText { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: .75em; color: #333333; background-color: transparent; text-align: left;}
+
+/* Cella di Intestazione Riga */
+.viewTableHRTD { color: #333333; background-color: #EEEEEE; }
+.viewTableHRCellText {
+font-family: Verdana, Arial, Helvetica, sans-serif; font-size: .75em; color: #333333; background-color: transparent; font-weight: bold;
+	text-align: left;
+ }
+/* Cella di Intestazione Colonna */
+.viewTableHCTD { color: #333333; background-color: #EEEEEE; }
+.viewTableHCCellText {
+font-family: Verdana, Arial, Helvetica, sans-serif; font-size: .75em; color: #333333; background-color: transparent; font-weight: bold; 
+	text-align: left;
+}
+
+
+
+
+
+
+A.viewLink {
+ font-family: Verdana, Arial, Helvetica, sans-serif; 
+ font-size: .75em; 
+ font-weight: bold; 
+ color: #CC0000; 
+ background-color: #FFFFFF; 
+ text-decoration: none;
+ padding-left: 16px;
+ background-image: url(TemplatesUSR-Site-img/freccia.gif);
+ background-position: 0px 0px;
+ background-repeat:no-repeat;
+}
+
+[IE501OPEN]
+A.viewLink {
+ padding-left: 0px;
+ background-image: none;}
+[IE501CLOSE]
+
+A.viewLink:active {
+ color: #FFFFFF; 
+ background-color: #990000; 
+}
+A.viewLink:hover {
+ color: #FFFFFF; 
+ background-color: #CC0000; 
+}
+
+
+
+
+A.ViewLink > IMG {
+  padding-left: 0px;
+}
+
+/* */
+.formTextLabel {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: .75em; color: #333333; background-color: transparent; white-space:nowrap;}
+.formTextAreaLabel {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: .75em; color: #333333; background-color: transparent;}
+.formCheckboxLabel {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: .75em; color: #333333; background-color: transparent;}
+.formDropDownLabel {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: .75em; color: #333333; background-color: transparent;}
+.formText { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: .75em; width: 96%;}
+.formTextArea { font-family: Verdana, Arial, Helvetica, sans-serif;  font-size: .75em; width: 96%;}
+.formDropDown { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: .75em; width: 96%;}
+.formError {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: .75em; font-weight: bold; color: #CC0000; background-color: transparent;}
+.formErrorList { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: .75em; font-weight: bold; color: #000000; background-color: transparent;}
+
+.formRedirector {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: .75em; font-weight: normal; color: #000000; background-color: transparent;}
+
+.formCheckbox { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: .75em; font-style: normal; font-weight: normal; color: #000000; background-color: transparent; }
+.formMandatory {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: .75em; width: 3%;}
+.formCheckbox { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 12px; 
+	border: 1px solid #666666; margin: 2px;}
+/* */
+.viewLineBreak { height: 1em;}
+.page {page-break-before: always; }
+.viewHR { color: #5276A0; background-color: transparent; height: 1px; }
+
+.userFormat1{font-weight: bold; }
+.userFormat2{font-style: italic; }
+.userFormat3{color: #000000; background-color: #FFFF33; }

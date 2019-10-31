@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE FlexCMPMessages SYSTEM '/FlexCMPMessages.dtd'>
+<messages xmlns:lang="#" defaultlang="it">
+	<group id='hjqui' define='false'>
+
+		<!-- titoli default dialog -->
+
+		<message id='ok'
+			lang:it='OK'
+			lang:en='OK'
+		/>
+
+		<message id='cancel'
+			lang:it='Annulla'
+			lang:en='Cancel'
+		/>
+
+	</group>
+</messages>

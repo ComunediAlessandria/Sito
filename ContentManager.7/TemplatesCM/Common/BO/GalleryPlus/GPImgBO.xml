@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='iso-8859-1' ?>
+<bo id='GPImagesBO'>
+
+	<table name='GPImages' />
+	<key name='IDImage' />
+
+		<!-- Campi multi lingua -->
+
+	<join kind='1:N' name='jAlt' 		dstTable='GPImagesI18N' dstField='IDImage' fields='Lang,Value' where="Name='Alt'" />
+	<join kind='1:N' name='jCaption' 	dstTable='GPImagesI18N' dstField='IDImage' fields='Lang,Value' where="Name='Caption'" />
+	<join kind='1:N' name='jTitle' 		dstTable='GPImagesI18N' dstField='IDImage' fields='Lang,Value' where="Name='Title'" />
+
+		<!--   -->
+
+	<field name='IDAlbum'		type='int'	default='0' />
+	<field name='FileName'		type='varchar'		len='200'	default='' />
+	<field name='SortIndex'		type='varchar'		len='250'	default='' />
+	<field name='DataOraUltimaModifica'	type='TS'	default='' />
+	<field name='UtenteUltimaModifica'	type='varchar'		len='50' default='' />
+
+		<!-- Eventi -->
+
+	<event id='onBeforeDel' when='onBeforeDel' type='php'><![CDATA[
+
+				// elimino i record I18N associati alla Galleria che si sta cancellando
+
+			executeSQL('DELETE FROM GPImagesI18N WHERE IDImage=' . $pars['BO']->mID);
+
+				//  prima di cancellare elimino il file associato
+
+			if ($pars['BO']->GetField('FileName') != '') {
+
+				unlink( kGPImagesPath . $pars['BO']->GetField('FileName') );
+				rmdir( kGPImagesPath. dirname($pars['BO']->GetField('FileName')) );
+			}
+
+	]]></event>
+
+	<event id='onAfterNew' when='onAfterNew' type='php'><![CDATA[
+
+			// calcola un valore di sortindex che sia di 10 maggiore di quello
+			// più grande presente nella tabella
+
+	     $pars['BO']->SetField('SortIndex', GetFieldFromTable('MAX(SortIndex)', 'GPImages', '1=1') + 10);
+
+	     $idItem = URLPar('IDAlbum', -1, 'G');
+	     if (! is_numeric($idItem))
+			$idItem = -1;
+
+	     $pars['BO']->SetField('IDAlbum', $idItem);
+
+	]]></event>
+
+	<event id='onBeforeSave' when='onBeforeSave' type='php'><![CDATA[
+
+		$pars['BO']->SetField('DataOraUltimaModifica', DBDateFunc('NOW'));
+		$pars['BO']->SetField('UtenteUltimaModifica', $GLOBALS['user']->Username());
+
+	]]></event>
+
+	<event id='onAfterSave' when='onAfterSave' type='php'><![CDATA[
+
+		//FlexInclude(kModPath . 'modGalleryPlus.php');
+		inc::mod('modGalleryPlus');
+		GPCache::InvalidateImage($pars['BO']->mID);
+
+	]]></event>
+
+	<event id='onAfterSwap' when='onAfterSwap' type='php'><![CDATA[
+
+		//FlexInclude(kModPath . 'modGalleryPlus.php');
+		inc::mod('modGalleryPlus');
+
+		GPCache::InvalidateImage($pars['ID1']);
+		GPCache::InvalidateImage($pars['ID2']);
+
+	]]></event>
+
+	<event id='onAfterDel' when='onAfterDel' type='php'><![CDATA[
+
+		//FlexInclude(kModPath . 'modGalleryPlus.php');
+		inc::mod('modGalleryPlus');
+		GPCache::InvalidateImage($pars['BO']->mID);
+
+	]]></event>
+</bo>

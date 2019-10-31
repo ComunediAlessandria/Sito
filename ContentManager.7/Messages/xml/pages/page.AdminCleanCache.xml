@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE FlexCMPMessages SYSTEM '/FlexCMPMessages.dtd'>
+<messages xmlns:lang='#' defaultlang='IT'>
+	<group id='pgacc' define='false'>
+
+		<message id='pt'
+			lang:it='Rigenerazione Cache'
+			lang:en='Cache Regeneration'
+		/>
+
+		<message id='ddall'
+			lang:it='Tutte'
+			lang:en='All'
+		/>
+
+		<message id='ddblob'
+			lang:it='Pagine Editoriali'
+			lang:en='Editorial Pages'
+		/>
+
+		<message id='ddphp'
+			lang:it='Pagine PHP'
+			lang:en='PHP Pages'
+		/>
+
+		<message id='ok'
+			lang:it='Rigenera'
+			lang:en='Regenerate'
+		/>
+
+		<message id='no'
+			lang:it='Annulla'
+			lang:en='Cancel'
+		/>
+
+		<message id='ck'
+			lang:it='Tipo di cache'
+			lang:en='Cache type'
+		/>
+
+		<message id='info'
+			lang:it='Informazioni'
+			lang:en='Information'
+		/>
+
+		<!-- conferma rigenerazione cache -->
+
+		<message id='cctt'
+			lang:it='Cache eliminate con successo'
+			lang:en='Cache successfull deleted'
+		/>
+
+		<message id='cctx'>
+			<trans lang='it'><![CDATA[
+				Le cache verranno rigenerate al primo accesso al sito.
+			]]></trans>
+			<trans lang='en'><![CDATA[
+				The cache will be regenerated at the first access to the web site.
+			]]></trans>
+		</message>
+
+
+		<!-- template tCleanCache -->
+
+		<message id='i1'>
+			<trans lang='it'><![CDATA[
+				{KFFNAME} utilizza per il proprio funzionamento e per accelerare i tempi di risposta
+				alcune strutture dati precalcolate chiamate genericamente Cache.
+				<br />
+				La rigenerazione delle Cache <strong>è un'operazione molto onerosa per il server</strong>
+				che è costretto, per servire la prima pagina successiva alla distruzione,
+				ad effettuare nuovamente tutte le elaborazioni,
+				e va quindi eseguita solo in caso di reale necessità.
+			]]></trans>
+			<trans lang='en'><![CDATA[
+				{KFFNAME} uses some precalculated data structures for its functioning and to speed up
+				response times. These structures are generically called Cache.
+				<br />
+				<strong>Cache regeneration is a taxing task for the server to perform</strong> and
+				should therefore only be carried out if really necessary, as the server must perform
+			]]></trans>
+		</message>
+
+		<message id='i2'>
+			<trans lang='it'><![CDATA[
+				Se si intende procedere, occorre <strong>selezionare il/i tipo/i di cache da rigenerare</strong>
+				e premere il pulsante Rigenera.
+			]]></trans>
+			<trans lang='en'><![CDATA[
+				If you want to proceed, you have to <strong>select the type or types of caches
+				to regenerate</strong> and press the Regenerate button.
+			]]></trans>
+		</message>
+
+		<message id='ltmp'
+			lang:it='Porzioni di codice comuni a più pagine'
+			lang:en='Parts of codes common to several pages'
+		/>
+
+		<message id='itmp'>
+			<trans lang='it'><![CDATA[
+				comprende i pannelli degli elencatori di canale, i menu, la mappa del sito, ecc.
+				La rigenerazione di questi dati <strong>è relativamente rapida</strong>.
+			]]></trans>
+			<trans lang='en'><![CDATA[
+				these include the panels of channel lists, menus, the site map etc.
+				<strong>The regeneration of this data is relatively quick.</strong>
+			]]></trans>
+		</message>
+
+		<message id='lex'
+			lang:it='Versioni statiche delle pagine'
+			lang:en='Static Versions of Pages'
+		/>
+
+		<message id='iex'>
+			<trans lang='it'><![CDATA[
+				Su questo sito &egrave; abilitata una opzione di funzionamento di {KFFNAME}
+				che genera versioni statiche delle pagine al fine di massimizzare le prestazioni
+				in condizioni di altissimo traffico.
+				In occasione della richiesta da parte di un utente di una specifica pagina,
+				viene generata una versione statica della stessa,
+				così da ridurre l'accesso al database per le successive richieste di quella pagina
+				nell'ambito di un periodo temporale impostabile (generalmente 30 minuti).
+				Per forzare la rigenerazione di tutte le pagine, senza attendere il tempo
+				di scadenza di ciascuna, rigenerare questa cache.
+			]]></trans>
+			<trans lang='en'><![CDATA[
+				This site is equipped with a {KFFNAME} function option which produces static versions
+				of pages in order to maximise performance during periods of heavy site traffic.
+				When a user requests a certain page, a static version of the page is produced,
+				so as to reduce access to the database for subsequent requests for said page,
+				for an adjustable time (usually 30 minutes). To impose the regeneration of all pages
+				without waiting for the expiry of each one, regenerate the following cache
+			]]></trans>
+		</message>
+
+		<message id='lmd'
+			lang:it='Meta Informazioni'
+			lang:en='Meta Informations'
+		/>
+
+		<message id='lmdl'
+			lang:it='limitatamente a'
+			lang:en='only for'
+		/>
+
+		<message id='imd'>
+			<trans lang='it'><![CDATA[
+				comprende tutte le strutture dati che permettono il corretto funzionamento del sito.
+				<br />
+				<strong>Attenzione!</strong> La rigenerazione di questi dati è onerosa ed in siti
+				con migliaia di pagine e più lingue
+				<strong> può richiedere diversi minuti</strong>, pertanto questa opzione è da
+				<strong>utilizzare solo in casi eccezionali.</strong>
+			]]></trans>
+			<trans lang='en'><![CDATA[
+				includes all data structures which allow the site to function properly.<br />
+				<strong>Warning! The regeneration of this data is taxing.</strong
+				Sites which have thousands of pages and in different languages <strong>may take several minutes</strong>,
+				and is therefore <strong>only to be used in exceptional circumstances.</strong>
+
+			]]></trans>
+		</message>
+
+	</group>
+</messages>

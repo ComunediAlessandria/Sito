@@ -1,0 +1,40 @@
+<div id="AdminCorpoBox">
+
+	 <h1>Album di Immagini</h1>
+
+	<div class="AdminPageFooterCommand">{INFO}</div>
+
+	<!-- BEGIN AddBlockTop -->
+	 <div class="AdminPageFooterCommand"><a href="{ADDLINK}">{ADDIMG}Aggiungi un nuovo Album</a></div>
+	<!-- END AddBlockTop -->
+
+	 <table class="AdminTable" summary="Tabella contenente l'elenco degli Album: nella prima colonna sono contenuti i comandi di eliminazione e modifica dell'Album.">
+		<thead>
+		  <tr>
+			<th scope="col">Azioni</th>
+			<th scope="col">Album</th>
+			<th scope="col" class='AdminTableAlignRight'>Ordine</th>
+			<th scope="col" class='AdminTableAlignRight'>Mostra in elenco</th>
+			<th scope="col">Gruppo <abbr tytle='Amministratori'>Amm.</abbr></th>
+			<th scope="col" class='AdminTableAlignRight'>Immagini</th>
+			<th scope="col" class='AdminTableAlignRight'>Ultima Immagine</th>
+		  </tr>
+		</thead>
+		<tbody>
+	  <!-- BEGIN row -->
+		  <tr class="{CLASSTR}">
+			<td style='width: 78px; white-space: nowrap;'>{DELLINK} {MODLINK} {DETAILLINK}</td>
+			<th scope='row'>{ALBUMTITLE}</td>
+			<td style='white-space: nowrap' class='AdminTableAlignRight'>***{SORTINDEX} {UPLINK} {DNLINK}</td>
+			<td class='AdminTableAlignRight'>{SHOWINLIST}</td>
+			<td>{GRUPPOPROPRIETARIO}</td>
+			<td class='AdminTableAlignRight'>{NUMFOTO}</td>
+			<td class='AdminTableAlignRight'>{ULTIMAIMMAGINE}</td>
+		  </tr>
+	  <!-- END row -->
+		<tbody>
+	</table>
+
+
+	<div class="AdminPageFooterStatus"> &nbsp; </div>
+</div>

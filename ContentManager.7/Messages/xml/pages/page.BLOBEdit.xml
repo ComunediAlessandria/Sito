@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE FlexCMPMessages SYSTEM '/FlexCMPMessages.dtd'>
+<messages xmlns:lang='#' defaultlang='IT'>
+	<group id='pgbed' define='false'>
+
+		<message id='pt'
+			lang:it='Modifica Pagina'
+			lang:en='Edit Page'
+		/>
+
+<!--
+		<message id='t'
+			lang:it='Validazioni'
+			lang:en='Checks'
+		/>
+		-->
+
+		<message id='e'
+			lang:it='Errori'
+			lang:en='Errors'
+		/>
+
+		<message id='verrm'
+			lang:it='ATTENZIONE: non è possibile salvare la pagina a causa della presenza di errori di validazione.'
+			lang:en='WARNING: page cannot be saved due to the presence of validation errors.'
+		/>
+		<message id='verrs'
+			lang:it='Correggere gli errori oppure uscire senza salvare.'
+			lang:en='Correct errors or quit without saving'
+		/>
+
+		<message id='w'
+			lang:it='Avvertimenti'
+			lang:en='Warnings'
+		/>
+
+		<message id='vwarm'
+			lang:it='ATTENZIONE: non è possibile salvare la pagina a causa della presenza di avvertimenti di validazione.'
+			lang:en='WARNING: page cannot be saved due to the presence of validation warnings.'
+		/>
+		<message id='vwars'
+			lang:it="Per salvare ignorando gli avvertimenti usare il link 'Ignora Avvertimenti'"
+			lang:en="Use the 'Ignore Warnings' link to save ignoring warnings."
+		/>
+
+		<!-- messaggi di validazione di clsBLOBxhtml -->
+
+		<message id='ee'
+			lang:it='Errore'
+			lang:en='Error'
+		/>
+
+		<message id='ww'
+			lang:it='Avvertimento'
+			lang:en='Warning'
+		/>
+
+		<!-- errore con sessione scaduta -->
+
+		<message id='esess'
+			lang:it='Errore non identificabile nella modifica della pagina.'
+			lang:en='There was an error in page editing.'
+		/>
+
+		<!-- indicazione su barra degli oggetti per editing in template -->
+
+		<message id='lbl'
+			lang:it='Etichetta'
+			lang.en='Field Label'
+		/>
+
+		<!-- check per abilitazione paste da word -->
+
+		<message id='wp'
+			lang:it='Abilita Riconoscimento Word'
+			lang.en='Enable Word Paste'
+		/>
+
+		<message id='wpx'
+			lang:it='Quando si incolla del testo in un elemento paragrafo riconosce elementi di struttura'
+			lang.en='...'
+		/>
+
+	</group>
+</messages>

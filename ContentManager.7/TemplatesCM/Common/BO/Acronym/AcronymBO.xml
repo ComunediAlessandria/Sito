@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='iso-8859-1' ?>
+<bo id='acronym'>
+	<table name='Acronym' />
+	<key name='IDAcronym' />
+
+	<field name='Kind'	type='varchar'		len='20'	default='AC' />
+	<field name='Search'	type='varchar'		len='100'	default='' />
+	<field name='Value'	type='varchar'		len='250'	default='' />
+	<field name='Lang'	type='varchar'		len='3'		default='IT' />
+</bo>

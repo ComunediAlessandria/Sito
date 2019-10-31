@@ -1,0 +1,42 @@
+<div id='AdminCorpoBox'>
+
+	<h1>Scheda Breadcrumb - Classificazioni</h1>
+
+	{ERR}
+
+	<form id='AdminFormBO' method='post' action='{ACTION}'>
+	
+		<div class="AdminFormBORowEven">
+			<fieldset class="AdminFormBOFieldset">
+				<legend  class="AdminFormBOFieldsetLegend">{LBL_value}</legend>
+				<div>{VAL_value}</div>
+			</fieldset>
+		</div>
+
+		<div class='AdminFormBORowOdd'>
+			<label class='AdminFormBOLabel' for='{TAG_bcpage}'>{LBL_bcpage}</label>
+			<div class='AdminFormBOField'>{VAL_bcpage}</div>
+		</div>
+
+		<div class='AdminFormBORowEven'>
+			<label class='AdminFormBOLabel' for='{TAG_pagination}'>{LBL_pagination}</label>
+			<div class='AdminFormBOField'>{VAL_pagination}</div>
+		</div>
+
+		<div class='AdminFormBORowOdd'>
+			<label class='AdminFormBOLabel' for='{TAG_mdvalue}'>{LBL_mdvalue}</label>
+			<div class='AdminFormBOField'>{VAL_mdvalue}</div>
+		</div>
+
+		<div class='AdminFormBORowOdd'>
+			<label class='AdminFormBOLabel' for='{TAG_sort}'>{LBL_sort}</label>
+			<div class='AdminFormBOField'>{VAL_sort}</div>
+		</div>
+
+		<div class='AdminPageFooterCommand'>
+			{HIDDEN} <input name='Submit' type='submit' value='Salva le modifiche' />
+			<input name='btnCancel' type='submit' value='Annulla le modifiche' />
+		</div>
+
+	</form>
+</div>

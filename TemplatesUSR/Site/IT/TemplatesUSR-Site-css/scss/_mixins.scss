@@ -1,0 +1,331 @@
+
+// MIXIN
+@mixin break-point($point) {
+  @if $point == xxl {
+    @media only screen and (min-width:1500px)
+    {
+      @content;
+    }
+  }
+  @else if $point == xl {
+    @media only screen and (max-width:1499px)
+    {
+      @content;
+    }
+  }  
+  @else if $point == lg {
+    @media only screen and (max-width:1199px)
+    {
+      @content;
+    }
+  }
+  @else if $point == md {
+    @media only screen and (max-width:991px)
+    {
+      @content;
+    }
+  }
+  @else if $point == sm {
+    @media only screen and (max-width:768px)
+    {
+      @content;
+    }
+  }
+  @else if $point == xs {
+    @media only screen and (max-width:576px)
+    {
+      @content;
+    }
+  }
+}
+
+
+@mixin transform($transform...) {
+  -webkit-transform: $transform;
+  -moz-transform:    $transform;
+  -ms-transform:     $transform;
+  -o-transform:      $transform;
+  transform:         $transform;
+}
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition:    $args;
+  -ms-transition:     $args;
+  -o-transition:      $args;
+  transition:         $args;
+}
+
+// MIXIN PER FLEX BOX
+@mixin flexBox($flexFlow) {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;  
+
+    -webkit-flex-flow: $flexFlow;
+    flex-flow: $flexFlow;    
+}
+@mixin flexItem($flexItem) {
+    -webkit-flex: $flexItem;
+    -moz-flex: $flexItem;
+    -ms-flex: $flexItem;
+    -o-flex: $flexItem;
+    flex: $flexItem;   
+}
+@mixin flexOrder($order){
+    -webkit-box-ordinal-group: $order; // old
+    -moz-box-ordinal-group: $order; // old
+    -ms-flex-order: $order; // ie
+    -webkit-order: $order; // new
+    order: $order; // new
+}
+
+
+@mixin btnStondato($colore) {
+    display: inline-block;
+    border: 2px solid $colore;
+    color: $colore;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: underline;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    margin: 30px 0;
+}
+@mixin btnSquadrato($colore) {
+    display: inline-block;
+    border: 2px solid $colore;
+    color: $colore;
+    padding: 10px 20px;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    margin: 30px 0;
+}
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+@mixin fontAwesomeIcon($carattere) {
+    content: $carattere;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+@mixin gradient($start-color, $end-color, $orientation) {
+   background: $start-color;
+   @if $orientation == vertical
+   {
+     // vertical
+     background: -moz-linear-gradient(top,  $start-color 0%, $end-color 100%);
+     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$start-color), color-stop(100%,$end-color));
+     background: -webkit-linear-gradient(top,  $start-color 0%,$end-color 100%);
+     background: -o-linear-gradient(top,  $start-color 0%,$end-color 100%);
+     background: -ms-linear-gradient(top,  $start-color 0%,$end-color 100%);
+     background: linear-gradient(to bottom,  $start-color 0%,$end-color 100%);
+     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start-color', endColorstr='$end-color',GradientType=0 );
+   }
+   @else if $orientation == horizontal
+   {
+     // horizontal
+     background: -moz-linear-gradient(left,  $start-color 0%, $end-color 100%);
+     background: -webkit-gradient(linear, left top, right top, color-stop(0%,$start-color), color-stop(100%,$end-color));
+     background: -webkit-linear-gradient(left,  $start-color 0%,$end-color 100%);
+     background: -o-linear-gradient(left,  $start-color 0%,$end-color 100%);
+     background: -ms-linear-gradient(left,  $start-color 0%,$end-color 100%);
+     background: linear-gradient(to right,  $start-color 0%,$end-color 100%);
+     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start-color', endColorstr='$end-color',GradientType=1 );
+   }
+   @else
+   {
+     // radial
+     background: -moz-radial-gradient(center, ellipse cover,  $start-color 0%, $end-color 100%);
+     background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,$start-color), color-stop(100%,$end-color));
+     background: -webkit-radial-gradient(center, ellipse cover,  $start-color 0%,$end-color 100%);
+     background: -o-radial-gradient(center, ellipse cover,  $start-color 0%,$end-color 100%);
+     background: -ms-radial-gradient(center, ellipse cover,  $start-color 0%,$end-color 100%);
+     background: radial-gradient(ellipse at center,  $start-color 0%,$end-color 100%);
+     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start-color', endColorstr='$end-color',GradientType=1 );
+   }
+ }
+
+/* 
+  ghost-button, esempio utilizo: 
+  @include ghost-button(“Trebuchet”, 12px, #ffffff, 5px, #34dec6, #34dec6, 4px, 300ms, #000000 ); 
+*/ 
+@mixin ghost-button($font, $font-size, $font-color, $border-size, $bg-color, $border-color, $padding, $transition-speed, $hover-color) {
+  display:inline-block;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-family: $font;
+  font-size: $font-size;
+  color:$font-color;
+  background-color:$bg-color;
+  border:$border-size solid $border-color;
+  padding:$padding;
+  -webkit-transition: color $transition-speed, background $transition-speed;
+  transition: color $transition-speed, background $transition-speed;
+  &:hover
+  {
+    background:$border-color;
+    color:$hover-color;
+  }
+}
+
+/*
+    Example usage: 
+    @include animation(10s, 5s, changecolour)
+ */
+@mixin animation ($delay, $duration, $animation) {
+    -webkit-animation-delay: $delay;
+    -webkit-animation-duration: $duration;
+    -webkit-animation-name: $animation;
+    -webkit-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+    -moz-animation-delay: $delay;
+    -moz-animation-duration: $duration;
+    -moz-animation-name: $animation;
+    -moz-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+    -o-animation-delay: $delay;
+    -o-animation-duration: $duration;
+    -o-animation-name: $animation;
+    -o-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+    animation-delay: $delay;
+    animation-duration: $duration;
+    animation-name: $animation;
+    animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+}
+
+
+
+// Placeholder
+%CenterBoth {
+    left: 50%;
+    top: 50%;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+%CenterVert {
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);      
+}
+%CenterOriz {
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);      
+}
+
+%ImgBg {
+  display: block;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-color: $Trasp;
+  background-repeat:no-repeat; 
+}
+
+%TrBgColor {
+  -webkit-transition: background 0.3s ease-in-out, color 0.3s ease-in-out; /* Safari */
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out; 
+}
+%TrBg {
+  -webkit-transition: background 0.3s ease-in-out; /* Safari */
+  transition: background 0.3s ease-in-out; 
+}
+%TrColor {
+  -webkit-transition: color 0.3s ease-in-out; /* Safari */
+  transition: color 0.3s ease-in-out; 
+}
+%TrOpacity {
+  -webkit-transition: opacity 0.3s ease-in-out; /* Safari */
+  transition: opacity 0.3s ease-in-out; 
+}
+
+%overlay-sfumatura {
+    background: rgb(31,28,107);
+    background: -moz-linear-gradient(54deg, rgba(31,28,107,.7) 0%, rgba(24,121,194,.7) 100%);
+    background: -webkit-linear-gradient(54deg, rgba(31,28,107,.7) 0%, rgba(24,121,194,.7) 100%);
+    background: linear-gradient(54deg, rgba(31,28,107,.7) 0%, rgba(24,121,194,.7) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1f1c6b",endColorstr="#1879c2",GradientType=1);
+}
+
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  } 
+}
+
+
+@keyframes fadeIn{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1; 
+  }
+}
+
+@-moz-keyframes fadeIn{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1; 
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1; 
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1; 
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1; 
+  }
+}

@@ -1,0 +1,51 @@
+<!-- BEGIN beginlist -->
+
+{INDEX}
+
+<div class="ElencoCanale FotoTitoloStrillo">
+	<ol>
+<!-- END beginlist -->
+
+<!-- BEGIN row -->
+<li>
+	<div class="col-xs-3 NoPad">
+        <a href="{LINK}">{IMG}</a>
+    </div>
+	<div class="col-xs-9">
+        <a href="{LINK}"><span>{DataEv:DateFormat: d F Y}</span><h3>{TITOLO}</h3></a><!-- END row -->
+	</div>
+    <div class="clearfix"></div>
+</li>
+
+<!-- BEGIN endlist -->
+	</ol>
+</div>
+<!-- END endlist -->
+
+<!-- BEGIN index -->
+<div id="ChannelPager" class="viewPar">
+	{SELECTION}
+	{PGYEAR}
+	{PGMONTH}
+	{PGDAY}
+	{PGCALENDAR}
+	<div class="clear">&nbsp;</div>
+</div>
+<!-- END index -->
+
+
+<!-- BEGIN pgYear -->
+	<div id="ChannelYearList"><div id="ChannelYearLabel">Seleziona anno:</div> {YEARS}</div>
+<!-- END pgYear -->
+
+<!-- BEGIN pgMonth -->
+	<div id="ChannelMonthList"><div id="ChannelMonthLabel">Seleziona mese:</div> {MONTHS}</div>
+<!-- END pgMonth -->
+
+<!-- BEGIN pgDay -->
+	<div id="ChannelDayList"><div id="ChannelDayLabel">Seleziona giorno:</div> {DAYS}</div>
+<!-- END pgDay -->
+
+<!-- BEGIN pgCalendar -->
+	<div>{CALENDAR}</div>
+<!-- END pgCalendar -->

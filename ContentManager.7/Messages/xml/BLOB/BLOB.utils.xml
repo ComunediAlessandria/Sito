@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="it">
+	<group id="but" define="false">
+		<message id="as" lang:it="Allinea Sinistra" lang:en="Left Align" lang:es="Left Align"/>
+		<message id="centra" lang:it="Centra" lang:en="Center" lang:es="Center"/>
+		<message id="ad" lang:it="Allinea Destra" lang:en="Right Align" lang:es="Right Align"/>
+		<message id="giustifica" lang:it="Giustifica" lang:en="Justified" lang:es="Justified"/>
+		<message id="ao" lang:it="Allineamento orizzontale" lang:en="Horizontal alignment" lang:es="Alineacion horizontal"/>
+		<message id="tdo" lang:it="Tipo di Oggetto" lang:en="Object Kind" lang:es="Tipo de objeto"/>
+		<message id="nessuno" lang:it="Nessuno" lang:en="None" lang:es="None"/>
+		<message id="nessuna" lang:it="Nessuna" lang:en="None" lang:es="None"/>
+		<message id="pcpp" lang:it="Puntato con pallino pieno" lang:en="unordered with filled bullet" lang:es="puntos negros"/>
+		<message id="pcpv" lang:it="Puntato con pallino vuoto" lang:en="unordered with empty bullet" lang:es="unordered with empty bullet"/>
+		<message id="pcq" lang:it="Puntato con quadratino" lang:en="unordered with square" lang:es="unordered with square"/>
+		<message id="numerato" lang:it="Numerato" lang:en="ordered" lang:es="ordered"/>
+		<message id="alm" lang:it="A lettere minuscole" lang:en="lowercase letters" lang:es="lowercase letters"/>
+		<message id="alm0" lang:it="A lettere maiuscole" lang:en="uppercase letters" lang:es="uppercase letters"/>
+		<message id="ns" lang:it="Nessun simbolo" lang:en="no symbol" lang:es="no symbol"/>
+		<message id="personalizzato" lang:it="Personalizzato 1" lang:en="custom 1" lang:es="custom 1"/>
+		<message id="personalizzato0" lang:it="Personalizzato 2" lang:en="custom 2" lang:es="custom 2"/>
+		<message id="obbligatorio" lang:it="Obbligatorio" lang:en="Mandatory" lang:es="Mandatory"/>
+		<message id="ev" lang:it="Email Valida" lang:en="Valid Email" lang:es="Valid Email"/>
+	</group>
+</messages>

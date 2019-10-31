@@ -1,0 +1,296 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE FlexCMPMessages SYSTEM '/FlexCMPMessages.dtd'>
+<messages xmlns:lang='#' defaultlang='IT'>
+	<group id='pgasl' define='false'>
+		
+		<!-- tipi di operazioni -->
+
+		<message id='op'
+			lang:it='Operazioni Pianificate'
+			lang:en='Scheduled Tasks'
+		/>
+		
+		<message id='otq'
+			lang:it='In Coda'
+			lang:en='Pending'
+		/>
+
+		<message id='ots'
+			lang:it='Pianificate'
+			lang:en='Scheduled'
+		/>
+
+		<message id='oth'
+			lang:it='Eseguite'
+			lang:en='Executed'
+		/>
+
+		<!-- selezione istante di attivazione -->
+
+		<message id='ia'
+			lang:it='Istante di attivazione'
+			lang:en='Activation Time'
+		/>
+
+		<message id='iad'
+			lang:it='Giorno'
+			lang:en='Day'
+		/>
+
+		<message id='iam'
+			lang:it='Mese'
+			lang:en='Month'
+		/>
+
+		<message id='iay'
+			lang:it='Anno'
+			lang:en='Year'
+		/>
+
+		<message id='iah'
+			lang:it='Ore'
+			lang:en='Hour'
+		/>
+
+		<message id='iai'
+			lang:it='Minuti'
+			lang:en='Minutes'
+		/>
+
+		<message id='iax'>
+			<trans lang='it'><![CDATA[
+						Significato dei quattro valori di pianificazione (separati da spazio):
+						Minuti (0-59, *), Ore (0-23, *), Giorno del mese (1-31, *), Mese dell'anno (1-12, *)
+						<br />
+						Esempi di utilizzo: '30 23 * *' (ore 23:30 di ogni giorno), '0  2  1 *'
+						(ore 2:00 di ogni primo giorno del mese)
+			]]></trans>
+			<trans lang='en'><![CDATA[
+						Explanation of the four scheduling values (with space in between):
+						Minutes (0-59, *), Hours (0-23, *), Day of month (1-31, *), Month in year (1-12, *)
+						<br />
+						eg: '30 23 * *' (every day at 23:30), '0  2  1 *'
+						(first day of every month at 2:00)
+			]]></trans>
+		</message>
+
+		<message id='iaok'
+			lang:it='Conferma'
+			lang:en='OK'
+		/>
+
+		<message id='iano'
+			lang:it='Annulla'
+			lang:en='Cancel'
+		/>
+
+		<message id='otmod'
+			lang:it='Modifica'
+			lang:en='Edit'
+		/>
+
+		<message id='otins'
+			lang:it='Inserimento'
+			lang:en='Insert'
+		/>
+
+		<message id='otinq'
+			lang:it='in Coda'
+			lang:en='Pending'
+		/>
+
+		<message id='otsch'
+			lang:it='Pianificata'
+			lang:en='Scheduled'
+		/>
+
+		<message id='oterr'
+			lang:it='Si sono verificati i seguenti errori'
+			lang:en='Validation errors'
+		/>
+
+		<message id='ote1'
+			lang:it='Non è possibile programmare il task per un orario anteriore a quello attuale'
+			lang:en='The scheduled time has to be in the future'
+		/>
+
+		<message id='ote2'
+			lang:it='Il valore inserito per la pianificazione non è corretto'
+			lang:en="The scheduled value is not correct"
+		/>
+
+		<!-- azioni nell'elenco -->
+
+		<message id='acd'
+			lang:it='ELIMINA'
+			lang:en='DELETE'
+		/>
+
+		<message id='ace'
+			lang:it='MODIFICA'
+			lang:en='EDIT'
+		/>
+
+		<message id='acdis'
+			lang:it='DISABILITA'
+			lang:en='DISABLE'
+		/>
+
+		<message id='acen'
+			lang:it='ABILITA'
+			lang:en='ENABLE'
+		/>
+
+		<message id='aceb'
+			lang:it='ELIMINAZIONE OPERAZIONE BLOCCATA'
+			lang:en='DELETE HALTED TASK'
+		/>
+
+		<!-- task status -->
+
+		<message id='sb'
+			lang:it='bloccato'
+			lang:en='halted'
+		/>
+
+		<message id='se'
+			lang:it='in esecuzione'
+			lang:en='executing'
+		/>
+
+		<message id='sw'
+			lang:it='in attesa'
+			lang:en='waiting'
+		/>
+
+		<message id='sda'
+			lang:it='da'
+			lang:en='since'
+		/>
+
+		<message id='stra'
+			lang:it='tra'
+			lang:en='in'
+		/>
+
+		<message id='strap'
+			lang:it='appena possibile'
+			lang:en='as soon as possible'
+		/>
+
+		<message id='stcr'
+			lang:it='da cron'
+			lang:en='from cron'
+		/>
+
+		<!-- conferma cancellazione -->
+
+		<message id='dct'
+			lang:it='Conferma Eliminazione'
+			lang:en='Delete Confirmation'
+		/>
+
+		<message id='dcm'
+			lang:it='ATTENZIONE! Stai per cancellare il task'
+			lang:en='WARNING: You are about to delete this task'
+		/>
+
+		<message id='dcok'
+			lang:it='CONFERMA Eliminazione'
+			lang:en='DELETE this task'
+		/>
+
+		<message id='dcno'
+			lang:it='ANNULLA'
+			lang:en='CANCEL'
+		/>
+
+		<!-- template tSchedulerList -->
+
+		<message id='pt'
+			lang:it='Elenco Operazioni'
+			lang:en='Showing tasks'
+		/>
+
+		<message id='h'
+			lang:it='Visualizza lo stato delle operazioni'
+			lang:en='Shows task status'
+		/>
+
+		<message id='ct'
+			lang:it='Ora corrente sul server'
+			lang:en='Current time on server'
+		/>
+
+		<message id='tadd'
+			lang:it='Aggiungi una nuova Operazione'
+			lang:en='Add a new task'
+		/>
+
+		<message id='tcadd'
+			lang:it='Aggiungi'
+			lang:en='Add'
+		/>
+
+		<message id='tupd'
+			lang:it='Aggiorna'
+			lang:en='Update'
+		/>
+
+		<message id='ttbl'
+			lang:it="Tabella contenente l'elenco delle operazioni"
+			lang:en='Table with the list of tasks'
+		/>
+
+		<message id='tac'
+			lang:it='Azioni'
+			lang:en='Actions'
+		/>
+
+		<message id='tn'
+			lang:it='Nome'
+			lang:en='Name'
+		/>
+
+		<message id='te'
+			lang:it='Esecuzione'
+			lang:en='Execution'
+		/>
+
+		<message id='tnx'
+			lang:it='Prossima Esecuzione'
+			lang:en='Next Execution'
+		/>
+
+		<message id='ti'
+			lang:it='Informazioni'
+			lang:en='Info'
+		/>
+
+		<message id='tst'
+			lang:it='Istante di partenza'
+			lang:en='Start time'
+		/>
+
+		<message id='td'
+			lang:it='Durata'
+			lang:en='Duration'
+		/>
+
+		<message id='tno'
+			lang:it='Nessun task è attualmente in coda'
+			lang:en='No pending tasks'
+		/>
+
+		<message id='tlog'
+			lang:it='Ultime registrazioni sul Log'
+			lang:en='Last log records'
+		/>
+
+		<message id='tlogd'
+			lang:it="Scarica l'intero file di Log"
+			lang:en='Download log file'
+		/>
+
+	</group>
+</messages>

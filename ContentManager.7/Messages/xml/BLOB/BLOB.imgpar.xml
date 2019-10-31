@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="it">
+	<group id="bimgpar" define="false">
+		<message id="ip" lang:it="Immagine + Paragrafo" lang:en="Image + Paragraph" lang:es="Imagen + Párrafo"/>
+		<message id="pi" lang:it="Paragrafo + Immagine" lang:en="Paragraph + Image" lang:es="Párrafo + Imagen"/>
+		<message id="isp" lang:it="Immagine + [Sottotitolo + Paragrafo]" lang:en="Image + [SubTitle + Paragraph]" lang:es="Imagen + [Subtítulo + Párrafo]"/>
+		<message id="spi" lang:it="[Sottotitolo + Paragrafo] + Immagine" lang:en="[SubTitle + Paragraph] + Image" lang:es="[Subtítulo + Párrafo] + Imagen"/>
+		<message id="elidon" lang:it="Elimina l'immagine dell'oggetto n. " lang:en="Delete image in object n." lang:es="Delete image in object n."/>
+		<message id="sottotitolo" lang:it="Sottotitolo:" lang:en="SubTitle" lang:es="Subtítulo"/>
+		<message id="opzioni" lang:it="Opzioni:" lang:en="Options" lang:es="Opciones"/>
+	</group>
+</messages>

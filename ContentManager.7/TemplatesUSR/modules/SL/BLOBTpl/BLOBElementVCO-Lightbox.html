@@ -1,0 +1,31 @@
+[[:meta
+
+		// http://fancybox.net/
+
+	css: fancybox/jquery.fancybox-1.3.1,
+	jsinclude: [
+		fancybox/jquery.mousewheel-3.0.2.pack.js,
+		fancybox/jquery.fancybox-1.3.1.pack.js
+	]
+
+]]
+
+[[:section name: conf, kind: jsonload, title: Configurazione]]
+
+	$('._lightbox').fancybox({
+		'titleShow'		: [[ kind: select, name: _titleShow, title: 'Mostra Titolo', values: { 'false': 'No', 'true': 'Si'}, default: 'false' ]],
+		'titlePosition'	: '[[ kind: select, name: _titlePosition, title: 'Posizione Titolo', values: { outside: 'Esterno', inside: 'Interno', over: 'Sopra' }, default: 'outside' ]]',
+
+		'transitionIn'	: '[[ kind: select, name: _transitionIn, title: 'Transizione In', values: { none: 'Nessuna', elastic: 'Elastic', fade: 'Fade'}, default: none ]]',
+		'transitionOut'	: '[[ kind: select, name: _transitionOut, title: 'Transizione Out', values: { none: 'Nessuna', elastic: 'Elastic', fade: 'Fade'}, default: none ]]'
+	});
+
+[[:section name: body, repeat: true]]
+
+		<a
+			class='_lightbox'
+			href='[[ref: img, part: href]]'
+			title='[[ kind: text, name: title, title: 'Titolo Immagine' ]]'
+		>
+			[[ kind: img, name: img, title: Immagine ]]
+		</a>

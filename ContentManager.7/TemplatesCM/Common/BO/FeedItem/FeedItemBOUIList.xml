@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='iso-8859-1' ?>
+<uilist id='Feed'>
+
+	<page
+		title='__(bo-feed.listtile)'
+		permission='FEED'
+	/>
+
+	<presenter
+		type='Template'
+		filename='FeedItem/tFeedItemList.html'
+	/>
+
+	<options>
+		<option name='modlink' label='__(bo-common.mod) %s' element='Name' />
+		<option name='dellink' label='__(bo-common.del) %s' element='Name' />
+	</options>
+
+
+	<elements>
+		<element	id='Name'		bo='Name'			label='Nome Feed' />
+		<element	id='Title'		bo='Title'			label='Titolo'				transform='MLTitolo' />
+		<_element	id='NUsers'		bo='IDCommunity'	label='Numero Utenti'		transform='NUsers' />
+		<element	id='Link'		bo='_'				label='Collegamento'		transform='FeedLink' />
+	</elements>
+
+	<sortOrder>
+		<sortKey	bo='Name'		order='ASC' />
+	</sortOrder>
+
+	<transform id='MLTitolo' type='php'><![CDATA[
+
+				// ricava il numero di utenti iscritti alla community
+
+		return GetFieldFromTable('Text', 'FeedsI18N', 'IDFeed = ' . $pars['ID'] . ' AND Kind = "Title" AND Lang = "' . kLang . '"');
+
+	]]></transform>
+
+	<transform id='NUsers' type='php'>
+		<![CDATA[
+
+				// ricava il numero di utenti iscritti alla community
+
+			$n = CountRecords('CommunityJUsers', 'IDCommunity =' . $pars['ID']);
+			return $n != 0 ? $n : '-';
+
+		]]>
+	</transform>
+
+	<transform id='FeedLink' type='php'>
+		<![CDATA[
+
+			return addParameter(kPagesURL . 'ServeFeed.php', array('feed=pages:' . $pars['ID']));
+		]]>
+	</transform>
+
+</uilist>

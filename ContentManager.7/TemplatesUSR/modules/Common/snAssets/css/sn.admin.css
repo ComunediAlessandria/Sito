@@ -1,0 +1,30 @@
+
+#leftmenu, #content {
+
+	margin-top: 10px;
+}
+
+table.admin.elist {
+
+	width: 100%;
+}
+
+table.admin.elist th {
+
+	font-weight: bold;
+	text-align: center;
+
+	padding: 2px 5px;
+}
+
+table.admin.elist td {
+
+	padding: 2px 15px;
+}
+
+table.admin.elist td.cmd,
+table.admin.elist td.dismiss,
+table.admin.elist td.enabled {
+
+	text-align: center;
+}

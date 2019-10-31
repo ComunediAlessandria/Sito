@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<ui id='CommunityUsers'>
+	<elements>
+		<element	id='Ente'		BO='Ente'	type='text'	size='50'	maxlen='50' 	label='Ente o azienda' />
+		<element	id='Ruolo'		BO='Ruolo'	type='text'	size='50'	maxlen='50' 	label='Ruolo' />
+		<element	id='Telefono'	BO='Telefono'	type='text'	size='15'	maxlen='15' 	label='Telefono' />			
+		<element	id='Lang'		BO='Lang'	type='hidden'	label='Lingua' />
+		<element	id='ReceiveNL'	BO='ReceiveNL'	type='check'	label='ReceiveNL' />		
+		<element	id='emailConfermata'	BO='emailConfermata'	type='check'	label='emailConfermata:' />	
+	</elements>	
+	<validations>
+		<validation id='Nome'		type='mandatory'	forfield='Nome' />
+		<validation id='Cognome'	type='mandatory'	forfield='Cognome' />	
+		<validation id='Ente'		type='mandatory'	forfield='Ente' />	
+		<validation id='Telefono'	type='mandatory'	forfield='Telefono' />	
+	</validations>
+</ui>

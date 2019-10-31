@@ -1,0 +1,80 @@
+// Larghezza massima gabbia bootstrap
+	$MaxWGrid:			1400px;
+
+// Break point progetto
+	$Break-XXL:			$MaxWGrid;	//min-width
+	$Break-XL:			1399px; 	//max-width
+	$Break-LG:			1199px; 	//max-width
+	$Break-MD:			991px; 		//max-width
+	$Break-SM:			768px; 		//max-width
+	$Break-XS:			576px; 		//max-width
+
+/* Colori progetto */
+	$Trasp: 			transparent;
+	$ProjectColor1: 	#cccccc;
+	$ProjectColor2: 	darken(#cccccc, 10%);
+	$BgGrey:			#f1f1f1;
+	$BgGrey1:			#fcfcfc; 
+	$ParScuro:			#333333;
+
+
+/* CONFIGURAZIONE VARIABILI OGGETTI TIPOGRAFICI FLEX */
+
+	// Paragrafo
+		$ParColor: 		#000000;
+		$ParSize:		18px;
+		$ParLine:		24px;
+		$ParFont:		'Source Sans Pro',sans-serif;
+		$ParFontW:		400;		
+		$StrongFontW: 	700;
+
+	// Link
+		$LinkColor: 		$ParColor;
+		$LinkColorHover: 	darken($ParScuro, 10%);		
+
+	// Titolo H1
+		$h1Color:	$ParColor;	
+		$h1Size:	30px;
+		$h1Line:	30px;
+		$h1Font:	'Source Sans Pro',sans-serif;
+		$h1FontW:	400;
+		
+	// Titolo H2
+		$h2Color:	$ParColor;	
+		$h2Size:	26px;
+		$h2Line:	26px;
+		$h2Font:	'Source Sans Pro',sans-serif;
+		$h2FontW:	400;
+
+	// Titolo H3
+		$h3Color:	$ParColor;	
+		$h3Size:	24px;
+		$h3Line:	24px;
+		$h3Font:	'Source Sans Pro',sans-serif;
+		$h3FontW:	400;
+
+	// Titolo H4
+		$h4Color:	$ParColor;	
+		$h4Size:	22px;
+		$h4Line:	22px;
+		$h4Font:	'Source Sans Pro',sans-serif;
+		$h4FontW:	400;
+
+	// Titolo H5
+		$h5Color:	$ParColor;	
+		$h5Size:	20px;
+		$h5Line:	20px;
+		$h5Font:	'Source Sans Pro',sans-serif;
+		$h5FontW:	400;		
+
+
+
+
+// Stili pulsanti admin
+	$Admin-txt: 		$ParColor; 		// Colore testi adminlink
+	$Admin-bg: 		white; 			// Colore bg adminlink contenitore 
+	$Admin-btn-bg: 	$ProjectColor1; 	// Colore bg pulsanti adminlink
+	$Admin-btn-txt: 	white; 			// Colore testo pulsanti adminlink
+
+
+

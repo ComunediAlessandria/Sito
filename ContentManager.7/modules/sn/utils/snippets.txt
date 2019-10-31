@@ -1,0 +1,20 @@
+
+* Link
+
+		snTag::A(
+			snLink::Page(array('group', 'edit', $g->ID())),
+			'Modifica il gruppo',
+			array(
+				'title' => 'Rifiuta la richiesta di ' . $e->Description(),
+				'class' =>
+			)
+		);
+
+
+* Link w/ action
+
+		snLink::PageWithAction('#', 'member/deny/' . $uid . '/' . $gid)
+		
+* Confirm Dialog
+
+		'class' => 'snConfirmDialog snMeta-dialoginfo-denymember_' . $uid,

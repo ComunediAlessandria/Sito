@@ -1,0 +1,36 @@
+
+#meteoBox {
+
+	border: 1px solid black;
+	margin: 5px 5px;
+	font-family: verdana,helvetica, sans-serif;
+	background-color: #CBD3D7;
+	padding: 4px;
+}
+
+#meteoBox div {
+
+	text-align: center;
+}
+
+.mText {
+
+	font-size: 0.8em;
+	text-align: center;
+}
+
+#mTitle {
+
+	font-size: 0.8em;
+}
+
+#mTemp {
+
+	font-size: 1.3em;
+	color: red;
+}
+
+#meteoBox img {
+
+	float: right;
+}

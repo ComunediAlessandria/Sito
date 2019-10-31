@@ -1,0 +1,102 @@
+/*
+	ATTENZIONE: questo file è processato dalla ServeCSS, quindi i path nelle url() non vanno messi relativi
+
+	Contiene le definizioni degli stili per la gestione delle funzionalità
+	di editing cross-browser
+
+*/
+
+/* commentata così per i linter */
+/*--@processurl off */
+
+
+.tbtoggle a {
+	float: right; height: 16px; margin: 0 2px;
+}
+
+	/* stato iniziale del bottone per l'unlock della barra */
+
+#locktb {
+	display: none;
+}
+
+	/* titolo e contenitore dell'accordion */
+
+#FlexEditToolBar-Objects h3 {
+
+	font-size:.8em;
+}
+
+#FlexEditToolBar-Objects a {
+
+	padding: 0 0 0 30px;
+}
+
+#FlexEditToolBar-Objects div.pane {
+
+	padding: 0 0 0 2px;
+}
+
+	/* raggruppamento di item (TBD: sostituire l'ennuplicazione per blocchi diversi) */
+
+.FlexEditToolBar-Block {
+
+	font-size:.6em;
+	background-image: url(TemplatesCM-img/visualEditor/EditorToolBarBox.gif);
+	border: 1px solid #9BA7B5;
+	margin: 0 0 3px 0;	padding: 1px 0 2px 4px;
+	color:#000000;	background-color: #EFF1F2;
+	width: 14.5em;
+}
+
+.FlexEditToolBar-Block input.image {
+
+	padding: 3px 4px 0 0;
+	width: 20px; height: 20px;
+	border: none;
+}
+
+input.FlexEditToolBar-Field {
+	margin: 1px 2px 2px 0;
+	width: 15px; height: 16px;
+	vertical-align:middle;
+}
+
+	/* evidenzia il drop target */
+
+.activedrop {
+	background-color: red;
+}
+
+	/* gestione del caricamento */
+
+#formBLOB {
+	display: none;
+}
+
+#loading {
+
+	position: absolute;
+
+	top: 0;
+	left:0;
+
+	width: 100%;
+	height: 100%;
+
+	background: #333;
+}
+
+.loadmessage {
+
+	background: white;
+	border: 1px solid black;
+
+	position: absolute;
+	top: 200px;
+	width: 400px;
+	margin:-50px auto auto -200px;
+	left: 50%;
+
+	padding: 10px;
+}

@@ -1,0 +1,16 @@
+a:18:{s:9:"pagetitle";s:23:"[DA] Spedizione lettera";s:9:"testtitle";s:24:"[DA] Spedizione di prova";s:11:"testaddress";s:54:"[DA] Indirizzo email a cui spedire la lettera di prova";s:8:"testinfo";s:276:"[DA] 
+				La spedizione di prova invia la lettera all'indirizzo specificato.
+				Tale spedizione non crea una versione definitiva della lettera
+				(consentendo di spedirla nuovamente) e non ha la possibilità di includere
+				i dati relativi ad alcun utente di community.
+			";s:10:"dotestsend";s:34:"[DA] Esegui la spedizione di prova";s:18:"successfulsendedto";s:97:"[DA] La spedizione è avvenuta con successo. La newsletter è stata spedita ai seguenti indirizzi";s:16:"noerrnoguarantee";s:117:"[DA] 
+					l'assenza di errori di invio non garantisce la consegna del messaggio o la correttezza degli indirizzi
+			";s:8:"deftitle";s:26:"[DA] Spedizione definitiva";s:10:"defaddress";s:157:"[DA] 
+				Questa Lettera sarà inviata a <strong>%s</strong> utenti di Community.
+				<br />
+				e a <strong>%s</strong> indirizzi prelevati da sorgente.
+			";s:9:"dodefsend";s:36:"[DA] Esegui la spedizione definitiva";s:11:"sendwarning";s:105:"[DA] Inviando la lettera ne verrà creata una versione definitiva e non sarà più possibile modificarla.";s:12:"errnoaddress";s:51:"[DA] Non è stato specificato alcun indirizzo email";s:10:"errmsgbody";s:41:"[DA] Errore nella struttura del messaggio";s:10:"errsending";s:39:"[DA] Errore di spedizione del messaggio";s:12:"backtonllist";s:29:"[DA] Torna all'elenco lettere";s:9:"scheduled";s:97:"[DA] 
+				La spedizione della newsletter è stata pianificata e verrà eseguita non prima del
+			";s:14:"errsendgeneric";s:45:"[DA] Ci sono stati degli errori di spedizione";s:10:"successmsg";s:86:"[DA] 
+				La newsletter è stata correttamente spedita agli indirizzi degli utenti
+			";}

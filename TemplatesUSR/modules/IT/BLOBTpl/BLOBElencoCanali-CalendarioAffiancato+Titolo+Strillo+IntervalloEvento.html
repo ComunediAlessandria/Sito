@@ -1,0 +1,23 @@
+<div class="ElencoCalendario">
+	<div class="col-xs-12 col-sm-4 NOPADSX">
+		{CALENDAR}
+	</div>
+
+<!-- BEGIN beginlist -->
+	<ol class="col-xs-12 col-sm-8">
+<!-- END beginlist -->
+
+<!-- BEGIN row -->
+		<li>
+			<a href="{LINK}">{TITOLO}</a>
+			{DataEv:DateFormat:d/m/Y} - {DataEvEnd:DateFormat:d/m/Y}<br/>
+			{STRILLO}
+		</li>
+<!-- END row -->
+
+<!-- BEGIN endlist -->
+	</ol>
+<!-- END endlist -->
+
+	<div class="clearfix">&nbsp;</div>
+</div>

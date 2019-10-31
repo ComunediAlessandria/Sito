@@ -1,0 +1,5 @@
+Inserita nell'elenco pagine l'evidenziazione automatica delle pagine in scadenza. <br />Aggiunte funzioni a riga di comando per la modifica della data di scadenza su tutte le pagine.
+
+Nuovo modulo Gallerie Video. Permette l'archiviazione e la classificazione di video YouTube con possibilit&grave; di estrazione e consultazione simile a quella ottenibile per le pagine del sito. 
+
+Correzioni di alcuni bug.

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="lang" defaultlang="IT">
+	<group id="snViewTopmenu" define="false">
+		<message id="lsearch"
+			lang:it="Ricerca Utenti e Gruppi"
+			lang:en="Search for Users and Groups"
+			lang:fr="Rechercher des utilisateurs et des groupes"
+			lang:de="Suche nach Benutzer und Gruppen"
+			lang:es="Buscar usuarios y grupos"
+			lang:ru="Поиск для пользователей и групп"
+		/>
+	</group>
+</messages>

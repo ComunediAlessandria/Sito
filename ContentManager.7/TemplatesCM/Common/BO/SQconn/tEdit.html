@@ -1,0 +1,43 @@
+<div id='AdminCorpoBox'>
+
+	<h1>Scheda Configurazione SimpleQuery</h1>
+
+	{ERR}
+
+	<form id='AdminFormBO' method='post' action='{ACTION}'>
+	
+
+		<div class='AdminFormBORowEven'>
+			<label class='AdminFormBOLabel' for='{TAG_ConnectionName}'>{LBL_ConnectionName}</label>
+			<div class='AdminFormBOField'>{VAL_ConnectionName}</div>
+		</div>
+		<div class='AdminFormBORowOdd'>
+			<label class='AdminFormBOLabel' for='{TAG_DBDriver}'>{LBL_DBDriver}</label>
+			<div class='AdminFormBOField'>{VAL_DBDriver}</div>
+		</div>
+		<div class='AdminFormBORowEven'>
+			<label class='AdminFormBOLabel' for='{TAG_DBHost}'>{LBL_DBHost}</label>
+			<div class='AdminFormBOField'>{VAL_DBHost}</div>
+		</div>
+		<div class='AdminFormBORowOdd'>
+			<label class='AdminFormBOLabel' for='{TAG_DBName}'>{LBL_DBName}</label>
+			<div class='AdminFormBOField'>{VAL_DBName} (ODBC DSN)</div>
+		</div>
+		<div class='AdminFormBORowOdd'>
+			<label class='AdminFormBOLabel' for='{TAG_DBUser}'>{LBL_DBUser}</label>
+			<div class='AdminFormBOField'>{VAL_DBUser}</div>
+		</div>		
+		<div class='AdminFormBORowEven'>
+			<label class='AdminFormBOLabel' for='{TAG_DBPass}'>{LBL_DBPass}</label>
+			<div class='AdminFormBOField'>{VAL_DBPass}</div>
+		</div>
+		<div class='AdminFormBORowEven'>
+			<label class='AdminFormBOLabel' for='{TAG_ConnectionString}'>{LBL_ConnectionString}</label>
+			<div class='AdminFormBOField'>{VAL_ConnectionString}</div>
+		</div>				
+		<div class='AdminPageFooterCommand'>
+			{HIDDEN} <input name='Submit' type='submit' value='Salva le modifiche' />
+			<input name='btnCancel' type='submit' value='Annulla le modifiche' />
+		</div>
+	</form>
+</div>

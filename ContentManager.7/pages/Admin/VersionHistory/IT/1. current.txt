@@ -1,0 +1,30 @@
+.markdown
+
+#### Funzionalità Analytics (SEO)
+
+* Supporto per la libreria Google gtag.js (https://developers.google.com/analytics/devguides/collection/gtagjs/)
+* Implementazione `hreflang` per indicizzazione delle versioni in lingua della pagina
+
+#### Funzionalità Editoriali
+
+* È stata aggiunta la verifica di collisione fra le URL della stessa pagina in fase di editing
+* Nell'oggetto elenco pagine è stato aggiunto un flag per mostrare/nascondere le pagine limitate in accesso nel caso di navigazione con utente senza appartenenza alla community
+
+#### Funzionalità di sicurezza
+
+* sanificazione URL per mitigazione problema URL in galleria fotografica
+* sanificazione parametro in get `'BL'` per mitigazione vulnerabilità XSS
+* sanificazione parametro in get `'UT'` per mitigazione vulnerabilità XSS
+
+#### Moduli
+
+* Nuovo modulo per l'invio di form crittografati in supporto alla normativa sul cd. _Whistleblowing_
+
+#### Applicazioni
+
+* È stata introdotta la gestione di _token_ applicativi per l'accesso ad API HTTP che consente l'erogazione di _api key_ con periodo di validità definito e controllo sulle funzionalità
+
+#### Ulteriori Funzionalità
+
+* Miglioramento compatibilità con AWS
+* Supporto per le cache gestite su server con protocollo memcached

@@ -1,0 +1,53 @@
+<style type='text/css'>
+#eu-privacy.open {
+	top: auto;
+	bottom: 0;
+	tran sform: translate(0 , 202px);
+}
+#eu-privacy {
+	top: auto;
+	bottom: -202px;
+	tra nsform: translate(0 , 0);
+}
+#eu-privacy, #eu-privacy a {
+    color: rgb(245, 243, 243);
+    background-color: #464B4F;
+}
+#eu-privacy-inner {
+	margin: 16px 15px 10px;
+}
+#eu-privacy-close {
+	position: absolute;
+	top: auto;
+	bottom: 10px;
+	right: 10px;
+	border: 1px solid #fff;
+	border-radius: 4px;
+	font-size: 14px;
+	padding: 2px;
+	text-decoration: none;
+}
+a#eu-privacy-close:hover { background-color: white; color: #464B4F; }
+
+#eu-privacy-inner p { font-size: 14px; color: rgb(245, 243, 243); }
+#eu-privacy-inner p a { text-decoration: underline; }
+#eu-privacy-inner p a:hover { text-decoration: none; }
+
+@media screen and (min-width: 768px) {
+	#eu-privacy-inner {
+		margin: 16px 74px 10px 15px;
+	}
+}
+
+</style>
+
+<p>
+	<span class='visible-xs'>Accetto la <a href='{:page}'>cookie policy</a></span><span class='hidden-xs'>Continuando ad utilizzare questo sito l'utente acconsente all'utilizzo dei cookie sul browser come descritto nella nostra cookie policy, a meno che non siano stati disattivati. È possibile modificare le impostazioni dei cookie nelle impostazioni del browser, ma parti del sito potrebbero non funzionare correttamente. <a href='{:setPage:BLOB:ID=19}{:page}'>visualizza la cookie policy</a></span>
+</p>
+
+
+<!-- a id='eu-privacy-close' href='#'>
+	<img src='./close-md.png' />
+</a -->
+
+<a id='eu-privacy-close' href='#'>&nbsp;{:message:eupr.button}&nbsp;</a>

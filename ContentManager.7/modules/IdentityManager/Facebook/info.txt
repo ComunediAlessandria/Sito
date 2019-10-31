@@ -1,0 +1,21 @@
+
+
+(1) abilitare il provider di identità nella site.conf:
+
+	'community.iplist' => 'fb;local',
+
+(2) inserire il placeholder nel template tCommunityLogin.html
+
+	Viene valorizzato con l'URL di destinazione per iniziare il processo
+	di login. Ad esempio:
+
+		<div>Login con: <a href='{fbLoginURL}'>Facebook</a></div>
+
+(3) inserire le informazioni di configurazione dell'Applicazione
+	Facebook utilizzata per il login in Conf/fb-ip.php:
+
+		appConfigure(array(
+			'*fb-ip.app-id' => '<id applicazione>',
+			'*fb-ip.app-secret' => '<secret>',
+			'*fb-ip.app-scope' => 'email',
+		));

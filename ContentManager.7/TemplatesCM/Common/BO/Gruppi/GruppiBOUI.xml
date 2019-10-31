@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='iso-8859-1' ?>
+<ui id='canale'>
+
+	<page
+		title='__(bo-gruppi.edittitle)'
+		permission='GR'
+	/>
+
+	<presenter
+		type='Template'
+		filename='Gruppi/tGruppiEdit.html'
+		_action='http://...'
+	/>
+
+	<elements>
+		<element	id='Nome'			bo='DescrizioneIT'	type='text'		size='40'		maxlen='100'		label="__(bo-gruppi.groupname)" />
+		<element	id='Diritti'		BO='Diritti'		type='flexdiritti'		label='Diritti' />		
+		<element	id='ElencoIscritti'	BO=''				type='code'	 code='ElencoIscritti' label='Utenti Iscritti' />		
+		<element	id='Note'		BO='Note'		type='textarea'		rows='4'		cols='60'			label='__(bo-gruppi.note)' class='span8' />
+	</elements>
+
+	<validations>
+		<validation id='Nome'		type='mandatory'		forfield='Nome' />
+	</validations>
+
+	<codes>
+		<code id='ElencoIscritti' type='php'>
+			<![CDATA[
+
+					// in $pars
+
+				$id = $pars['BO']->ID();
+				
+				$users = GetFieldListFromTable('Nome', 'JUsersGruppi LEFT JOIN Users ON JUsersGruppi.IDUser = Users.ID_User', 'JUsersGruppi.IDGruppo = ' . $id, 'Nome');
+				return array(
+					__('bo-gruppi.grmember'),
+					(count($users) > 0 ? 
+						"<ul class='textlist'><li>" . join('</li><li>', $users) . '</li></ul>'
+					:
+						'__(bo-common.nobody)'), ''
+				);
+			]]>
+		</code>
+	</codes>
+
+	<!-- UI per la cancellazione - per adesso qui, domani in un file XML separato -->
+	
+	<delete
+		template='Gruppi/tGruppiDelAsk.html'
+		failTemplate='Gruppi/tGruppiDelFailed.html'
+		
+	>
+		<onfail id='jGruppi' condition='jGruppi'>
+			<![CDATA[
+				__(bo-gruppi.cantdelete)
+			]]>
+		</onfail>
+	</delete>
+</ui>

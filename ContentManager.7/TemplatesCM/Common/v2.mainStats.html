@@ -1,0 +1,186 @@
+<!-- BEGIN FilterForm -->	
+	<form method='post' action='{SearchAction}' id='filterform' class='form-inline'>
+		<div class='well well-small'>
+			<label for='frmAnno'>__(pastats.repType):</label>
+			{selectReport}
+
+			<label for='frmPeriodo'>__(pastats.period):</label>
+			{selectPeriodo}
+
+			<label for='frmAnno'>__(pastats.lang):</label>
+			{selectLingua}
+
+			<input type='submit' value='__(pastats.update)' class="btn btn-primary" />
+		</div>
+	</form>
+
+<!-- END FilterForm -->
+
+<!-- BEGIN AccessStat -->
+<div class="tabbable">
+	<ul class="nav nav-tabs">
+		<li class='active'><a href='#SA1' data-toggle="tab">__(.sa1)</a></li>
+		<li><a href='#SA2' data-toggle="tab">__(.sa2)</a></li>
+		<li><a href='#SA3' data-toggle="tab">__(.sa3)</a></li>
+		<li><a href='#SA4' data-toggle="tab">__(.sa4)</a></li>
+		<li><a href='#SA5' data-toggle="tab">__(.sa5)</a></li>
+	</ul>
+	<div class="tab-content">
+		<div class="tab-pane active" id="SA1">
+				{MonthlyGraph}
+				{MonthlyTable}
+			<div class='well well-small'>
+				<a href='{excelHrefsa1}' class='btn'><i class="moon-icon-file-excel "></i>  __(.sa1) - __(pastats.lang): {lingua} - __(pastats.xlsfmt)</a>
+			</div>
+		</div>
+		<div class="tab-pane" id="SA2">
+				{MonthlyGraphWB}
+				{MonthlyTableWB}
+			<div class='well well-small'>
+				<a href='{excelHrefsa2}' class='btn'><i class="moon-icon-file-excel "></i>  __(.sa2) - __(pastats.lang): {lingua} - __(pastats.xlsfmt)</a>
+			</div>
+		</div>
+		<div class="tab-pane" id="SA3">
+			    {DailyGraph}
+				{DailyTable}
+			<div class='well well-small'>
+				<a href='{excelHrefsa3}' class='btn'><i class="moon-icon-file-excel "></i>  __(.sa3) {mese} {anno} - __(pastats.lang): {lingua} - __(pastats.xlsfmt)</a> <br />
+			</div>
+		</div>
+		<div class="tab-pane" id="SA4">
+				{WeeklyGraph}
+				{WeeklyTable}
+			<div class='well well-small'>
+				<a href='{excelHrefsa4}' class='btn'><i class="moon-icon-file-excel "></i>  __(.sa4) {mese} {anno} - __(pastats.lang): {lingua} - __(pastats.xlsfmt)</a>
+			</div>
+		</div>	
+		<div class="tab-pane" id="SA5">
+				{HourlyGraph}
+				{HourlyTable}
+			<div class='well well-small'>
+				<a href='{excelHrefsa5}' class='btn'><i class="moon-icon-file-excel "></i>  __(.sa5) {mese} {anno} - __(pastats.lang): {lingua} - __(pastats.xlsfmt)</a>
+			</div>
+		</div>			
+	</div>
+</div>
+<!-- END AccessStat -->
+
+
+
+
+<!-- BEGIN Pages -->
+	{PagesTable}
+<!-- END Pages -->
+
+
+<!-- BEGIN RefererStat -->
+<div class="tabbable">
+	<ul class="nav nav-tabs">
+		<li class='active'><a href='#R0' data-toggle="tab">__(.r0)</a></li>
+		{SEJump}
+		<li><a href='#R{Num}' data-toggle="tab">__(.rl)</a></li>
+	</ul>
+	<div class="tab-content">
+		<div class="tab-pane active" id="R0">
+			{ReferersTable}
+		</div>
+<!-- END RefererStat -->
+
+<!-- BEGIN RefererSEDetail -->
+    <div class="tab-pane" id="R{Num}">
+		{SETable}
+	</div>
+<!-- END RefererSEDetail -->
+
+<!-- BEGIN RefererOtherDetail -->
+    <div class="tab-pane" id="R{Num}">
+		{SETable}
+	</div>
+<!-- END RefererOtherDetail -->
+
+
+<!-- BEGIN RefererStatFooter -->
+	</div>
+</div>
+<!-- END RefererStatFooter -->
+
+
+
+
+
+<!-- BEGIN BehaviourStat -->
+<div class="tabbable">
+	<ul class="nav nav-tabs">
+		<li class='active'><a href='#SB1' data-toggle="tab">__(.sb1)</a></li>
+		<li><a href='#SB2' data-toggle="tab">__(.sb2)</a></li>
+	</ul>
+	<div class="tab-content">
+		<div class="tab-pane active" id="SB1">
+			{BehaviourPageTable}
+		</div>
+		<div class="tab-pane" id="SB2">
+			{BehaviourTimeTable}
+		</div>
+	</div>
+</div>
+<!-- END BehaviourStat -->
+
+
+
+
+<!-- BEGIN UAStats -->
+	{UATable}
+<!-- END UAStats -->
+
+<!-- BEGIN UAStatsEmpty -->
+<div class='well well-small'>
+	<strong> Nessun Sistema di Navigazione rilevato. </strong>
+</div>
+<!-- END UAStatsEmpty -->
+
+
+<!-- BEGIN IPStats -->
+	{IPTable}
+<!-- END IPStats -->
+
+
+
+<!-- BEGIN ClassSummaryStats -->
+	{SummaryTable}
+<div class='well well-small'>
+	<a href='{excelHrefsum}' class='btn'><i class="moon-icon-file-excel "></i> __(.vbt) - {mese} {anno} </a>
+</div>
+<!-- END ClassSummaryStats -->
+
+
+<!-- BEGIN ClassDetailStats -->
+	<h3 name="SCD{IDC}" id="SCD{IDC}">
+		<a href='{excelHref}' class="btn"><i class="moon-icon-file-excel "></i>__(pastats.xlsfmt)</a>
+		__(.pwt): {classificazione} 
+	</h3>
+	{PagesTable}
+<!-- END ClassDetailStats -->
+
+
+<!-- BEGIN ClassStatsEmpty -->
+<div class='alert alert-error'>
+	<strong> __(.cnd)</strong>
+	<br /> __(.cndinfo).
+</div>
+<!-- END ClassStatsEmpty -->
+
+
+<!-- BEGIN SEExludedAll -->
+	<h3><a name='SEEXALL'> </a> __(.seel)</h3>
+	{SEExludedAllTable}
+<!-- END SEExludedAll -->
+
+
+<!-- BEGIN SEExludedOne -->
+	<h3><a name='SEEXONE'> </a> __(.seel) {mese} {anno}</h3>
+	{SEExludedOneTable}
+<!-- END SEExludedOne -->
+
+
+<a href='#TopStatPage' class='btn goToTop'><i class="moon-icon-arrow-up-2"></i> __(pastats.btt)</a>
+

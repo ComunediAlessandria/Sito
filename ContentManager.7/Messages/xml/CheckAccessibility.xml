@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="it">
+	<group id="chka" define="false">
+		<message id="mf" lang:it="Molto Facile" lang:en="Very easy" lang:es=""/>
+		<message id="facile" lang:it="Facile" lang:en="Easy" lang:es=""/>
+		<message id="difficile" lang:it="Difficile" lang:en="Difficult" lang:es=""/>
+		<message id="md" lang:it="Molto Difficile" lang:en="Very difficult" lang:es=""/>
+		<message id="qi" lang:it="Quasi Incomprensibile" lang:en="Almost incomprehensible" lang:es=""/>
+		<message id="giorno" lang:it="Giorno" lang:en="Day" lang:es="Día"/>
+		<message id="mese" lang:it="Mese" lang:en="Month" lang:es="Mes"/>
+		<message id="anno" lang:it="Anno" lang:en="Year" lang:es="Año"/>
+		<message id="vce" lang:it="Verifica Collegamenti Esterni" lang:en="Check external links" lang:es="Verificar enlaces externos"/>
+		<message id="cvdce" lang:it="con verifica dei collegamenti esterni" lang:en="with external links check" lang:es="con verificar enlaces externos"/>
+		<message id="eitlclaeia" lang:it="Evidenzia i testi la cui leggibilità è inferiore alla soglia" lang:en="Find all the text whose readability is less than" lang:es="Evidenciar textos en los cuales la legibilidad sea inferior al límite"/>
+		<message id="dpmdi" lang:it="delle pagine modificate dopo il %s" lang:en="of the pages modified since %s" lang:es="de todas las páginas modificadas desde el día %s"/>
+		<message id="dtlp" lang:it="di tutte le pagine" lang:en="of all pages" lang:es="de todas las páginas"/>
+		<message id="vc" lang:it="Verifica Collegamenti" lang:en="Link Report" lang:es="Verificar enlaces"/>
+		<message id="viem" lang:it="Verifica Immagini e Multimedia" lang:en="Images and Multimedia Report" lang:es="Verificar imágenes y multimedia"/>
+		<message id="vdl" lang:it="Verifica di Leggibilità" lang:en="Readability Report" lang:es="Verificar legibilidad"/>
+		<message id="rdv" lang:it="Risultato della verifica" lang:en="Check Results" lang:es="Resultados de la verificación"/>
+		<message id="alp" lang:it="Analizza le pagine" lang:en="Check the pages" lang:es="Analizar las páginas"/></group>
+		<message id="atlp" lang:it="Analizza Tutte le Pagine" lang:en="Check all the pages" lang:es="Analiza todas las páginas"/>
+		<message id="alpmnum" lang:it="Analizza le Pagine modificate nell'ultimo mese" lang:en="Check all the pages modified in the last month" lang:es="Analiza las páginas modificadas en el último mes"/>
+		<message id="alpmapd" lang:it="Analizza le Pagine modificate a partire dal" lang:en="Check all the pages modified since" lang:es="Analiza las páginas modificadas desde el día"/>
+		<message id="taplpi" lang:it="Titolo assente per la pagina ID" lang:en="No title for the page ID" lang:es="Ningún título para la página ID"/>
+		<message id="interno" lang:it="Interno" lang:en="Internal" lang:es="Interior"/>
+		<message id="ipc" lang:it="Interno (Pagina cancellata)" lang:en="Internal (page deleted)" lang:es="Interior (página suprimido)"/>
+		<message id="efc" lang:it="Esterno (Fallita Connessione)" lang:en="External (connection failed)" lang:es="Exterior (no conectar)"/>
+		<message id="esterno" lang:it="Esterno" lang:en="External" lang:es="Exterior"/>
+		<message id="nfcder" lang:it="non funzionante (codice di errore %d)" lang:en="not working (error code %d)" lang:es="no funciona (el código de error %d)"/>
+		<message id="im" lang:it="Indirizzo Mail" lang:en="Email Address" lang:es="Dirección de correo electrónico"/>
+		<message id="enddu" lang:it="Errore nella decodifica dell'URL" lang:en="Error decoding the URL" lang:es="Error de decodificación de la URL"/>
+		<message id="adam" lang:it="Attenzione: descrizione alternativa mancante." lang:en="Warning: no alternative description" lang:es="Atención: falta descripción alternativa"/>
+		<message id="etdlm" lang:it="Errore: testo del link mancante" lang:en="Error: no text in the link" lang:es="Error: Falta el enlace de texto"/>
+		<message id="om" lang:it="Oggetto Multimedia" lang:en="Multimedia" lang:es="Objeto Multimedia"/>
+		<message id="immagine" lang:it="Immagine" lang:en="Image" lang:es="Imagen"/>
+		<message id="idg" lang:it="Indice di Gulpease" lang:en="Gulpease index" lang:es="Índice de Gulpease"/>
+</messages>

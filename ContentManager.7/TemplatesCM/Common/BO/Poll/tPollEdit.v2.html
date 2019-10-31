@@ -1,0 +1,39 @@
+
+	{ERR}
+
+<form id="AdminFormBO" class="form-horizontal" enctype='multipart/form-data' method="post" action="{ACTION}">
+
+	<div class='well well-small'>
+
+		<div class="control-group">
+			<label class="control-label" for="{TAG_Titolo}">{LBL_Titolo}</label>
+			<div class="controls"> {VAL_Titolo}</div>
+		</div>
+		
+		<div class="control-group">
+			<label class="control-label" for="{TAG_Testo}">{LBL_Testo}</label>
+			<div class="controls"> {VAL_Testo}</div>
+		</div>
+		
+		<div class="control-group">
+			<label class="control-label">{LBL_Risposte}</label>
+			<div class="controls"> {VAL_Risposte}</div>
+		</div>
+		
+	</div>
+
+
+	<div class='well well-small'>
+		<div class='row'>
+			<div class='span2'>
+					<input name="btnCancel" type="submit" class='btn' value="__(bo-common.canc)" />
+			</div>
+			<div class='span2'>
+				{HIDDEN}
+				<input name="Submit" type="submit" class='btn btn-primary' value="__(bo-common.save)" />
+			</div>
+		</div>
+	</div>
+
+
+</form>

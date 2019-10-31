@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="lang" defaultlang="IT">
+  <group id="snViewPagePostAnon" define="false">
+    <message id="add" lang:it="Aggiungi ai Contatti" lang:en="Add to Contacts" lang:fr="Ajouter aux contacts" lang:de="Add to Contacts" lang:es="Añadir a contactos" lang:ru="Добавить в контакты"/>
+    <message id="msg" lang:it="Accesso ai contenuti riservato ai contatti dell'autore." lang:en="Access to this content is reserved to the author's contacts" lang:fr="L'accès au contenu réservé aux contacter l'auteur" lang:de="Zugang zu Inhalten für den Kontakt Autor vorbehalten" lang:es="El acceso al contenido reservado para autor de contacto" lang:ru="Доступ к содержимому зарезервированы для обращайтесь к автору"/>
+    <message id="tadd"/>
+  </group>
+</messages>

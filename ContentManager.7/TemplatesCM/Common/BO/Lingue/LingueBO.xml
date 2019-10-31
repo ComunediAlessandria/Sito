@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='iso-8859-1' ?>
+<bo id='language'>
+	<table name='Languages' />
+	<key name='IDLanguage' />
+
+	<fields>
+		<field name='Lang'			type='varchar'		len='2'	default='' />
+		<field name='IDCharset'		type='int'					default='0' />
+		<field name='Stato'			type='int'					default='1' />
+
+		<field name='DescrizioneIT'	type='varchar'		len='250'	default='' />
+	</fields>
+
+	<event id='onAfterSave' when='onAfterSave' type='php'>
+	<![CDATA[
+
+			// in $pars
+
+		// FlexInclude(kClsPath . 'clsFlexDataCaches.php');
+		inc::cls('clsFlexDataCaches');
+
+		$c = FlexDataCaches::Languages();
+		$c->Invalidate();
+	]]>
+	</event>
+	<event id='onBeforeSave' when='onBeforeSave' type='php'><![CDATA[
+
+
+		$bo = $pars['BO'];
+		$bo->SetField('Lang', strtoupper($bo->GetField('Lang')));
+	]]></event>
+</bo>

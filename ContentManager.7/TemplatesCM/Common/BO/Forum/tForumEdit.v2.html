@@ -1,0 +1,72 @@
+	{ERR}
+<form id="AdminFormBO" class="form-horizontal" enctype='multipart/form-data' method="post" action="{ACTION}">
+	
+	<div class='well well-small'>
+
+		<div class="control-group">
+			<label class="control-label" for="{TAG_Nome}">{LBL_Nome}</label>
+			<div class="controls"> {VAL_Nome}</div>
+		</div>
+		
+		<div class="control-group">
+			<label class="control-label">{LBL_Moderato}</label>
+			<div class="controls"> {VAL_Moderato}</div>
+		</div>
+		
+		<div class="control-group">
+			<label class="control-label" for="{TAG_IDOwnerGroup}">{LBL_IDOwnerGroup}</label>
+			<div class="controls"> {VAL_IDOwnerGroup}</div>
+		</div>
+
+
+		<div class="control-group">
+			<label class="control-label" for="{TAG_IDCommunity}">{LBL_IDCommunity}</label>
+			<div class="controls"> {VAL_IDCommunity}</div>
+		</div>
+		
+		<div class="control-group">
+			<label class="control-label" for="{TAG_ViewStyle}">{LBL_ViewStyle}</label>
+			<div class="controls"> {VAL_ViewStyle}</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label" for="{TAG_TopicPP}">{LBL_TopicPP}</label>
+			<div class="controls"> {VAL_TopicPP}</div>
+		</div>
+		
+		<div class="control-group">
+			<label class="control-label" for="{TAG_MsgPP}">{LBL_MsgPP}</label>
+			<div class="controls"> {VAL_MsgPP}</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label" for="{TAG_TemplateShow}">{LBL_TemplateShow}</label>
+			<div class="controls"> {VAL_TemplateShow}</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label" for="{TAG_TemplateCompose}">{LBL_TemplateCompose}</label>
+			<div class="controls"> {VAL_TemplateCompose}</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label" for="{TAG_sort}">{LBL_sort}</label>
+			<div class="controls"> {VAL_sort}</div>
+		</div>
+		
+	</div>	
+		
+
+	<div class='well well-small'>
+		<div class='row'>
+			<div class='span2'>
+					<input name="btnCancel" type="submit" class='btn' value="__(bo-common.canc)" />
+			</div>
+			<div class='span2'>
+				{HIDDEN}
+				<input name="Submit" type="submit" class='btn btn-primary' value="__(bo-common.save)" />
+			</div>
+		</div>
+	</div>
+
+</form>

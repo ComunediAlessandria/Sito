@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='iso-8859-1' ?>
+<bo id='FYTVideo'>
+	
+	<table name='FYTVideo' />
+
+	<key name='IDFYTVideo' />
+
+	<field name='VideoID'	type='text'	default='' />
+
+
+	<field name='VideoTitle'	type='text'	default='' />
+	<field name='DescFull'	type='text'	default='' />
+	
+	<field name='SmallThumb'	type='varchar'		len='250'		default='' />
+	<field name='BigThumb'	type='varchar'		len='250'		default='' />
+
+	<field name='AuthorName'	type='text'	default='' />
+	<field name='Classification'	type='text'	default='' />
+	
+	<field name='Duration'	type='int'	default='0' />
+	
+	<field name='DTUpdated'	type='datetime'	default='' />
+	<field name='DataOraVideo'	type='datetime'	default='' />
+	
+	<field name='Classification'			type='varchar'		len='250'		default='' />
+	<field name='Tags'			type='varchar'		len='250'		default='' />
+	<field name='ParoleChiave'			type='varchar'		len='250'		default='' />
+	
+	<field name='RelatedLink'			type='varchar'		len='250'		default='' />
+	<field name='OpenLinkINW'	type='int'	default='0' />
+	
+		<!-- Campi multi lingua -->
+	
+	<join kind='1:N' name='jTitolo' 		dstTable='FYTVideoI18N' dstField='IDFYTVideo' fields='Lang,Value' where="Name='Titolo'" />
+	<join kind='1:N' name='jDescrizione' 	dstTable='FYTVideoI18N' dstField='IDFYTVideo' fields='Lang,Value' where="Name='Descrizione'" />
+	<join kind='1:N' name='jTrascrizione' 	dstTable='FYTVideoI18N' dstField='IDFYTVideo' fields='Lang,Value' where="Name='Trascrizione'" />
+	<join kind='1:N' name='jRelatedLink' 	dstTable='FYTVideoI18N' dstField='IDFYTVideo' fields='Lang,Value' where="Name='RelatedLink'" />
+
+		<!--  -->
+	
+	
+	<field name='DataOraUltimaModifica'	type='datetime'	default='' />
+	<field name='UtenteUltimaModifica'	type='varchar'	default='50' />
+
+	<event id='onAfterNew' when='onAfterNew' type='php'>
+		<![CDATA[
+			$pars['BO']->SetField('UtenteUltimaModifica', $GLOBALS['user']->Username() );
+			$pars['BO']->SetField('DataOraUltimaModifica', date('Y-m-d H:i:s') );
+			
+			FlexInclude(kModPath . 'YouTube/FYTUtils.php');
+			FYTUtils::SetBOFromYT($pars, UrlPar('VID'), $updateAll = TRUE, $skipCache = TRUE);
+
+		]]>
+	</event>
+
+
+	<event id='onAfterLoad' when='onAfterLoad' type='php'>
+		<![CDATA[
+
+			FlexInclude(kModPath . 'YouTube/FYTUtils.php');
+			FYTUtils::SetBOFromYT($pars, UrlPar('VID'), $updateAll = FALSE, $skipCache = TRUE);
+		]]>
+	</event>
+
+	<event id='onBeforeSave' when='onBeforeSave' type='php'>
+		<![CDATA[
+			$pars['BO']->SetField('UtenteUltimaModifica', $GLOBALS['user']->Username() );
+			$pars['BO']->SetField('DataOraUltimaModifica', date('Y-m-d H:i:s') );
+		]]>
+	</event>
+
+	<event id='onAfterSave' when='onAfterSave' type='php'>
+		<![CDATA[
+				// elimino i record FYTVideoClassification associati al Video Categoria che si sta salvando per poi aggiornali
+			ExecuteSQL('DELETE FROM FYTVideoClassification WHERE IDFYTVideo=' . $pars['BO']->mID);
+			
+				// esplodo il campo separato da virgola Classification e faccio tante insert into nella tabella join
+			$values = explode(',', $pars['BO']->GetField('Classification') );
+			if (count($values) > 0)
+				foreach($values as $val)
+					if ((int)$val > 0)
+						ExecuteSQL( 'INSERT INTO FYTVideoClassification (IDFYTVideo, IDClassification) VALUES(' . $pars['BO']->mID .',' . $val .')' );
+		]]>
+	</event>
+
+	<event id='onBeforeDel' when='onBeforeDel' type='php'>
+	   <![CDATA[
+	   
+				// elimino i record I18N associati al Video che si sta cancellando
+			ExecuteSQL('DELETE FROM FYTVideoI18N WHERE IDFYTVideo=' . $pars['BO']->mID);
+
+				// elimino i record FYTVideoClassification associati al Video Categoria che si sta cancellando
+			ExecuteSQL('DELETE FROM FYTVideoClassification WHERE IDFYTVideo=' . $pars['BO']->mID);			
+	   ]]>
+	 </event>	
+</bo>

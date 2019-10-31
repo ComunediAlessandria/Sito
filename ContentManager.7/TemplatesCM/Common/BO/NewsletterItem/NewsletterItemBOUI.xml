@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='iso-8859-1' ?>
+<ui id='NewsletterItem'>
+
+	<page
+		title='__(bo-nlitem.edittitle)'
+		permission='NL'
+		licence='Newsletter'
+	/>
+
+	<presenter
+		type='Template'
+		filename='NewsletterItem/tNewsletterItemEdit.html'
+	/>
+
+	<elements>
+		<element	id='Name'	bo='Name'	type='text'	size='40'	maxlen='200'	label='__(bo-nlitem.nlname)' />
+		<element	id='BCPage'	bo='BCPage'	type='FlexPage'	label='__(bo-nlitem.bcpage)' />
+		<element	id='IsPublic'	bo='IsPublic'	type='radio'	valueset='Status' label='__(bo-nlitem.type)' />
+		<element	id='SenderName'	bo='SenderName'	type='text'	size='100'	maxlen='250'	label='__(bo-nlitem.sendername)' />
+		<element	id='SenderEmail'	bo='SenderEmail'	type='text'	size='100'	maxlen='100'	label='__(bo-nlitem.sendermail)' />
+		<element	id='ReplyEmail'	bo='ReplyEmail'	type='text'	size='100'	maxlen='100'	label='__(bo-nlitem.replymail)' />
+		<element	id='IDAuthorGroup'	BO='IDAuthorGroup'	type='select'		valueset='Gruppi'	label='__(.graut)' />
+		<element	id='IDSenderGroup'	BO='IDSenderGroup'	type='select'		valueset='Gruppi'	label='__(.grsend)' />
+
+		<element	id='jCommunity'		BO='jCommunity'		type='checkset'	cols="2"	 label='__(.coms2send)' />
+
+		<element	id='TemplateEmail'	BO='TemplateEmail'	type='select'	valueset='TemplateEmail'	label='__(.mailtpl)' />
+		<element	id='TemplateBrowse'	BO='TemplateBrowse'	type='select'	valueset='TemplateSite'	label='__(.webtpl)' />
+		<element	id='IDSource'	BO='IDSource'	type='select'		valueset='Sources'	label='__(.source)' />
+	</elements>
+
+	<validations>
+		<validation id='Name'		type='mandatory'		forfield='Name' />
+	</validations>
+
+	<valueset id='Status'>
+		<value id='1' text='__(.nlpublic)' />
+		<value id='0' text='__(.nlprivate)' />
+	</valueset>
+
+	<valueset
+		id='Gruppi'
+		kind='DISTINCT'
+		table='Gruppi'
+		colid='IDGruppo'
+		column='DescrizioneIT'
+		allownull='no'
+	/>
+
+	<valueset
+		id='TemplateEmail'
+		kind='FILE'
+		path='{K:kNewTemplatesCM_DEF}/NLTpl/;{K:kNewTemplatesUSR}/NLTpl/'
+		filter='TplEmail-(.*)\.html'
+		allownull='no'
+	/>
+
+	<valueset
+		id='TemplateSite'
+		kind='FILE'
+		path='{K:kSiteTemplatePath}'
+		filter='(.*)\.html'
+		allownull='no'
+	/>
+
+	<valueset id='Sources' kind='PHP' ><![CDATA[
+
+		Flexinclude(kModPath . 'Sources.php');
+
+		$s = new Sources();
+
+		$ret = array(array('ID' => 0, 'TEXT' => '---'));
+		foreach ($s->getSources() as $ss)
+			$ret[] = array('ID' => $ss->ID(), 'TEXT' => $ss->Name());
+
+		return $ret;
+
+	]]></valueset>
+
+	<!-- UI per la cancellazione - per adesso qui, domani in un file XML separato -->
+
+	<delete
+		template='NewsletterItem/tNewsletterItemDelAsk.html'
+	/>
+</ui>

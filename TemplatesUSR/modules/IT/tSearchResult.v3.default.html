@@ -1,0 +1,53 @@
+{{ questo è un commento. togliere gli spazi sotto per attivare il dbg }}
+{{ debug:on}}
+
+
+<h1>Risultato della ricerca</h1>
+
+<div class="SearchRefine">
+
+	<!-- BEGIN description -->
+		<p class='viewPar'>La ricerca <strong>{searchquery}</strong> ha prodotto i seguenti risultati: <strong>{count}</strong> pagine<br /><br /></p>
+		<h2 class='viewSottotitolo'>Ordina i risultati</h2>
+		{sort}
+        <br /><br />
+		<p class='viewPar'><a href='{searchlink}'><strong>Esegui una nuova ricerca</strong></a></p>
+        <br /><br />
+		<h2 class='viewSottotitolo'>Risultati:</h2>
+	<!-- END description -->
+
+	<!-- BEGIN descriptionnoresults -->
+		<p class='viewPar'>La ricerca <strong>{searchquery}</strong> non ha prodotto alcun risultato<br /><br /><a href='{searchlink}'>Ricerca avanzata</a></p>
+	<!-- END descriptionnoresults -->
+
+
+	<dl class='viewPar'>
+	
+	<!-- BEGIN item -->
+		<dt><a href='{url}'>{title}</a></dt>
+		<dd>&laquo;<span>{data}</span>&raquo;</dd>
+        <dd><p style="width:0px" title="{weight}% di attinenza"><span class="goAway">{weight}% di attinenza</span></p><em class='percentualeAttinenza'>{weight}% di attinenza</em></dd>
+		<br /><br />
+	<!-- END item -->
+
+	</dl>
+	<br />
+	
+	<div class="GalleryPlus">
+		{pagination}
+	</div>
+
+	<!-- BEGIN notfound -->
+		<p class='viewPar'><strong>Non sono presenti pagine corrispondenti ai criteri di ricerca impostati.</strong></p>
+	<!-- END notfound -->
+
+
+	<!-- BEGIN itemTOBEDELETED -->
+	
+	<dd><strong>Classificazione</strong>: <span class="userFormat3">{ClassificationDesc}</span></dd>
+
+	    <dd><strong>Tag</strong>: {tags}</dd>
+        <dd><strong> Data evento</strong>: {evstart:date:d/m/Y H_i} - {evend:date:d/m/Y H_i}</dd>
+	<!-- END itemTOBEDELETED -->
+	
+</div>

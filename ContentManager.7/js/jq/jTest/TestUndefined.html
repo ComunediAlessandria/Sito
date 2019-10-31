@@ -1,0 +1,83 @@
+<html>
+<head>
+
+	<script type='text/javascript' src='http://pollon.furuz/cverond/FlexCMP/cm/js/jq/jquery.js'></script>
+	<script type='text/javascript' src='http://pollon.furuz/cverond/FlexCMP/cm/js/jq/FlexJS.js'></script>
+
+</head>
+<body>
+
+<script>
+
+var gAppConfigure = {
+	kBlankLinkMessage: ' (Questo collegamento aprirà una nuova finestra)',
+		kBaseURL: 'http://pollon.furuz/cverond/FlexCMP/cm/'
+};
+
+// global undefined
+
+window.gUndefined = window.gUndefined;
+
+	$().ready(function() {
+
+		var res = $('#res');
+		res.append('<h1>Risultati</h1>');
+
+		var n = 100000;
+
+		res.append('=== (undefined): ' + BU(n, Uno) + '<br />');
+		res.append('== (undefined): ' + BU(n, Due) + '<br />');
+		res.append('typeof (undefined): ' + BU(n, Tre) + '<br />');
+
+		res.append('=== (defined): ' + BD(n, Uno) + '<br />');
+		res.append('== (defined): ' + BD(n, Due) + '<br />');
+		res.append('typeof (defined): ' + BD(n, Tre) + '<br />');
+
+//		res.append(aaa === gUndefined ? 'true' : 'false');
+//		res.append(aaa == undefined ? 'true' : 'false');
+
+	});
+
+	function Uno(a) {
+
+		a === gUndefined ? 'true' : 'false';
+	}
+
+	function Due(a) {
+
+		a == gUndefined ? 'true' : 'false';
+	}
+
+	function Tre(a) {
+
+		typeof a === 'undefined' ? 'true' : 'false';
+	}
+
+	function BU(n, fn) {
+
+		var s = new Date().getTime();
+
+		for (var i = 0; i < n; i++)
+			fn();
+
+		return new Date().getTime() - s;
+	}
+
+	function BD(n, fn) {
+
+		var s = new Date().getTime();
+
+		for (var i = 0; i < n; i++)
+			fn(1);
+
+		return new Date().getTime() - s;
+	}
+
+</script>
+
+<div id='res'>
+
+</div>
+
+</body>
+</html>

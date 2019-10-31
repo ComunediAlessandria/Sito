@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="IT">
+  <group id="SwBoxEdit" define="false" default='it'>
+	<message id="language"
+	 lang:it="Lingua"
+	 />
+	<message id="title"
+	 lang:it="Titolo"
+	 />
+	<message id="text"
+	 lang:it="Testo"
+	 />
+	<message id="imagelab"
+	 lang:it="Immagine"
+	 />
+	<message id="delimg"
+	 lang:it="Elimina immagine"
+	 />
+	<message id="linklab"
+	 lang:it="Riferimento pagina web"
+	 />
+	<message id="servDataLab"
+	 lang:it="Dati servizio"
+	 />
+	<message id="swallLegend"
+	 lang:it="Dati di base"
+	 />
+	<message id="section"
+	 lang:it="Sezione"
+	 />
+	<message id="order"
+	 lang:it="Ordinamento"
+	 />
+	<message id="groupTitle"
+	 lang:it="Titolo interno"
+	 />
+	<message id="startDate"
+	 lang:it="Data pubblicazione"
+	 />
+	<message id="endDate"
+	 lang:it="Data Scadenza"
+	 />
+	<message id="active"
+	 lang:it="Attivo?"
+	 />
+	<message id="languageActive"
+	 lang:it="Contenuto in lingua"
+	 />
+	<message id="swall_infoService"
+	 lang:it="Dati relativi al servizio"
+	 />
+	<message id="allLang"
+	 lang:it="non definita"
+	 />
+	<message id="titleErr"
+	 lang:it="Specificare il titolo dell'articolo"
+	 />
+	<message id="textErr"
+	 lang:it="Specificare il testo dell'articolo"
+	 />
+	<message id="embedErr"
+	 lang:it="Specificare i dati per il servizio"
+	 />
+	<message id="artTitleErr"
+	 lang:it="Specificare un titolo per l'articolo"
+	 />
+	<message id="dateErr"
+	 lang:it=" La data specificata non è valida"
+	 />
+	<message id="noserviceData"
+	 lang:it="Nessun dato specificato per il servizio"
+	 />
+	<message id="lang"
+	 lang:it="Lingua"
+	 />
+  </group>
+</messages>

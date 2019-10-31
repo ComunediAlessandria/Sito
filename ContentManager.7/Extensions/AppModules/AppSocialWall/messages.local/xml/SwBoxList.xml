@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="IT">
+  <group id="SwBoxList" define="false" default='it'>
+	<message id="pagetitle"
+	 lang:it="Elenco Articoli Social Wall"
+	 />
+	<message id="paginationlabel"
+	 lang:it="Risultati per pagina"
+	 />
+	<message id="fl_section"
+	 lang:it="Sezione"
+	 />
+	<message id="fl_service"
+	 lang:it="Servizio"
+	 />
+	<message id="fl_grouping"
+	 lang:it="Raggruppamento"
+	 />
+	<message id="btnNext"
+	 lang:it="Ricerca"
+	 />
+	<message id="btnReset"
+	 lang:it="Reimposta"
+	 />
+	<message id="add"
+	 lang:it="Aggiungi"
+	 />
+	<message id="confirm"
+	 lang:it="Vuoi veramente eliminare questa sezione?"
+	 />
+	<message id="actions"
+	 lang:it="Azioni"
+	 />
+	<message id="code"
+	 lang:it="Numero"
+	 />
+	<message id="section"
+	 lang:it="Sezione"
+	 />
+	<message id="service"
+	 lang:it="Servizio"
+	 />
+	<message id="grouping"
+	 lang:it="Titolo"
+	 />
+	<message id="sortOrder"
+	 lang:it="Ordinamento"
+	 />
+	<message id="validRange"
+	 lang:it="Validità"
+	 />
+	<message id="isActive"
+	 lang:it="Attivo"
+	 />
+	<message id="edit"
+	 lang:it="Modifica"
+	 />
+	<message id="del"
+	 lang:it="Elimina"
+	 />
+	<message id="tot"
+	 lang:it="Totale"
+	 />
+	<message id="norecord"
+	 lang:it="Nessun articolo disponibile"
+	 />
+	<message id="allLang"
+	 lang:it="Non definita"
+	 />
+	<message id="lang"
+	 lang:it="Lingua"
+	 />
+  </group>
+</messages>

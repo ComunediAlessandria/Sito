@@ -1,0 +1,8 @@
+a:9:{s:2:"pt";s:19:"[PL] Accesso Negato";s:4:"nopt";s:27:"[PL] Permessi Insufficienti";s:4:"nopm";s:62:"Nie masz wystarczających uprawnień, aby wejść do tego okna";s:4:"expt";s:21:"[PL] Sessione Scaduta";s:4:"expm";s:103:"[PL] 
+				L'accesso non è consentito:
+				occorre effettuare nuovamente il <a href='%s'>Login</a>.
+			";s:4:"nolt";s:36:"[PL] Licenza non abilitata o scaduta";s:4:"nolm";s:109:"[PL] 
+				Per continuare ad utilizzare le funzionalità del prodotto è necessario aggiornare la licenza.
+			";s:5:"gerrt";s:20:"[PL] Errore Generico";s:5:"gerrm";s:89:"[PL] 
+				Si è verificato un errore. <a href='%s'>Torna all'area amministrativa</a>.
+			";}

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="lang" defaultlang="IT">
+	<group id="snViewUserInfobox" define="false">
+		<message id="title"
+			lang:it="Informazioni"
+			lang:en="About"
+			lang:fr="Détails"
+			lang:de="Einzelheiten"
+			lang:es="Detalles"
+			lang:ru="Подробнее"
+		/>
+		<message id="edit"
+			lang:it="Modifica"
+			lang:en="Edit"
+			lang:fr="Modifier"
+			lang:de="Bearbeiten"
+			lang:es="Editar"
+			lang:ru="Изменить"
+		/>
+		<message id="birth"
+			lang:it="Data di nascita"
+			lang:en="Birthday"
+			lang:fr="Anniversaire"
+			lang:de="Geburtstag"
+			lang:es="Cumpleaños"
+			lang:ru="День рождения"
+		/>
+		<message id="sex"
+			lang:it="Sesso"
+			lang:en="Sex"
+			lang:fr="Sexe"
+			lang:de="Geschlecht"
+			lang:es="Sexo"
+			lang:ru="пол"
+		/>
+		<message id="man"
+			lang:it="Uomo"
+			lang:en="Male"
+			lang:fr="Homme"
+			lang:de="Männlich"
+			lang:es="Masculino"
+			lang:ru="Мужской"
+		/>
+		<message id="sna"
+			lang:it="Non Specificato"
+			lang:en="Not specified"
+			lang:fr="Non spécifié"
+			lang:de="Keine Angabe"
+			lang:es="No especificado"
+			lang:ru="Не указан"
+		/>
+		<message id="woman"
+			lang:it="Donna"
+			lang:en="Female"
+			lang:fr="Femme"
+			lang:de="Weiblich"
+			lang:es="Mujer"
+			lang:ru="Женщины"
+		/>
+		<message id="city"
+			lang:it="Città"
+			lang:en="City"
+			lang:fr="Ville"
+			lang:de="Stadt"
+			lang:es="Ciudad"
+			lang:ru="Город"
+		/>
+		<message id="note"
+			lang:it="Note"
+			lang:en="Notes"
+			lang:fr="Note"
+			lang:de="Aufzeichnungen"
+			lang:es="Notas"
+			lang:ru="записка"
+		/>
+	</group>
+</messages>

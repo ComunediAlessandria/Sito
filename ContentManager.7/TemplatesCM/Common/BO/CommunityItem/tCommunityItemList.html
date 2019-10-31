@@ -1,0 +1,40 @@
+<div id="AdminCorpoBox">
+	<h1>Elenco Community</h1>
+		<!--
+		<form method="post" action="{ACTION}">
+			<div class="AdminPageFooterCommand">
+			<label for="frmNome">Filtra gli utenti che contengono la seguente parola:</label> {FRMNOME}
+			<input name="submit" type="submit" value="filtra" />
+			</div>
+		</form>
+		-->
+
+	<div class="AdminPageFooterCommand"><a href="{ADDLINK}">{ADDIMG} Aggiungi una nuova Community</a></div>
+	  <table class="AdminTable" summary="Tabella contenente l'elenco delle Community">
+		<thead>
+		  <tr>
+			<th scope="col" class='AdminIcoCell'>Azioni</th>
+			<th scope="col" >ID</th>
+			<th scope="col" >Nome Community</th>
+			<th scope="col" >Pubblica</th>
+			<th scope="col" >Numero Utenti</th>
+		  </tr>
+		</thead>
+		<tbody>
+
+		  <!-- BEGIN row -->
+		  <tr class="{CLASSTR}">
+			<td class='AdminIcoCell'>{DELLINK} {MODLINK}</td>
+			<td scope="row" >{ID}</td>
+			<th scope="row" >{DESCRIPTION}</th>
+			<td scope="row" >{ISPUBLIC}</td>
+			<td scope="row" >{NUSERS}</td>
+		  </tr>
+		  <!-- END row -->
+
+		</tbody>
+	</table>
+	<div class="AdminPageFooterCommand"><a href="{ADDLINK}">{ADDIMG}Aggiungi una nuova Community</a></div>
+</div>
+<div class="AdminPageFooterStatus"> NUMERO COMMUNITY: {TOTRECORDS}</div>
+<div>{PAGESELECTOR}</div>

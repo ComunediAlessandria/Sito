@@ -1,0 +1,151 @@
+[[:section:frame:]]
+
+<h2>_(pagetitle:Elenco Articoli Social Wall)_</h2>
+
+<div class='well well-small'>
+    <!--
+    <div class='row'>
+	    <label for='results_for_page' class='span1 control-label'>
+	        _(paginationlabel:Risultati per pagina)_
+	    </label>
+	    <div class='span1'>
+	        [[
+	            id: results_for_page,
+	            kind: DropDown,
+	            values: {
+					10: 10,
+					20: 20,
+					30: 30,
+					50: 50
+	            },
+	            class: form-control
+	        ]]
+        </div>
+    </div>
+     -->
+    <div class='row'>
+        <div class='control-group span2'>
+	        <label for='sw_section_filter' class='span2 control-label'>_(fl_section:Sezione)_</label>
+	            [[
+	                id: sw_section_filter,
+	                kind: DropDown,
+	                values : {this.getSectionDropDown},
+	                class: 'form-control input-medium',
+	                allownull: true
+	            ]]
+        </div>
+
+        <div class='control-group span2'>
+            <label for='sw_section_filter' class='span2 control-label'>_(lang:Lingua)_</label>
+                [[
+                    id: lang,
+                    kind: DropDown,
+                    values : {this.getLanguagesDropDown},
+                    class: 'form-control input-medium',
+                    allownull: true
+                ]]
+        </div>
+
+        <div class='span3'>
+            <label for='sw_service_filter' class='span2 control-label'>_(fl_service:Servizio)_</label>
+                [[
+                    id: sw_service_filter,
+                    kind: DropDown,
+                    values : {this.getServicesDropDown},
+                    class: 'form-control input-medium',
+                    allownull: true
+                ]]
+        </div>
+
+        <div class="span2">
+            <label class='span2 control-label'>&nbsp;</label>
+
+            [[ id: btnNext, kind: submit, value: _q(btnNext:Ricerca)_, class: 'btn btn-primary' ]]
+        </div>
+
+        <div class="span2">
+            <label class='span2 control-label'>&nbsp;</label>
+
+            [[ id: btnReset, kind: submit, value: _q(btnReset:Reimposta)_, class: 'btn' ]]
+        </div>
+
+    </div>
+
+</div>
+<div class="row">
+    <div class="span3 btn-group">
+        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+            <i class='icon icon-plus'></i>
+            &nbsp;&nbsp;_(add:Aggiungi)_&nbsp;&nbsp;
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu ">
+	        <!-- add_service links -->
+	        {this.generateAddService}
+	        <!-- /add_service links -->
+        </ul>
+    </div>
+</div>
+<br />
+
+<div>{results}</div>
+
+<div>
+    [[
+        id: page,
+        kind: BootstrapPaginator,
+        windowsize: 3
+    ]]
+</div>
+
+<!-- Section Table with mmetadata -->
+[[:section:table:
+_q(confirm:Vuoi veramente eliminare questa sezione?)_
+]]
+
+<table class="table table-striped table-bordered table-condensed table-hover flexbo-list-table results">
+	<thead>
+		<tr>
+		    <th class="span1">_(actions:Azioni)_</th>
+            <th scope="col">_(code:Numero)_</th>
+            <th scope="col">_(lang:Lingua)_</th>
+			<th scope="col">_(section:Sezione)_</th>
+            <th scope="col">_(service:Servizio)_</th>
+            <th scope="col">_(grouping:Descrizione)_</th>
+            <th scope="col">_(sortOrder:Ordinamento)_</th>
+            <th scope="col">_(validRange:Validità)_</th>
+            <th scope="col">_(isActive:Attivo)_</th>
+		</tr>
+	</thead>
+	<tbody>
+ <!-- BEGIN row -->
+		<tr>
+	       <td>
+	           <div class="btn-group">
+		          <a href='{editURL}' class='btn' title=_q(edit:Modifica)_><i class='icon icon-pencil'></i></a><span> </span>
+                  <a href='{delURL}' class='btn delBtn' title=_q(del:Elimina)_ ><i class='icon icon-trash'></i></a>
+	           </div>
+           </td>
+           <td>{idBox}</td>
+           <td>{lang}</td>
+           <td>{section}</td>
+           <td>{service}</td>
+           <td>{title}</td>
+           <td>{sortOrder}</td>
+           <td>{validRange}</td>
+           <td><span class="icon {isActive}"></span></td>
+		</tr>
+ <!-- END row -->
+		<tr class="tfooter">
+			<td colspan="9">
+                <div>_(tot:Totale)_: {total_records}</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+[[:section:noresult]]
+
+<div class="alert alert-error">
+    _(norecord:Nessun articolo disponibile)_
+</div>

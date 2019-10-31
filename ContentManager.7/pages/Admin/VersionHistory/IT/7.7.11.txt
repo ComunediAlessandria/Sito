@@ -1,0 +1,51 @@
+.markdown
+
+#### Funzionalità Analytics (SEO)
+
+* Open Graph Facebook e Twitter Card abilitati di default
+* Compatibilità con GTM (Google Tag Manager)
+* Supporto ai tracker per Marketing Automation di IBM Watson Marketing e UBX
+
+#### Funzionalità Relative agli indici
+
+* Editing Contemporaneo di più indici
+* Duplicazione di indici
+* Possibilità di aggiungere un collegamento esterno alle voci di indice
+
+#### Funzionalità Editoriali
+
+* Oggetto Form: "campo nascosto" (stringa alfanumerica da riportare nelle email/su dababase ma non visibile sul frontend)
+* Oggetto Form redirezione: con opzione di redirect a pagina custom (per _thank you_ page libera)
+* Oggetto Form recaptcha: aggiornato alla API Google versione v2 (la versione v1, già deprecata, è stata disattivata in data 31 Marzo 2018)
+* Oggetto Elenco punti Geo: abilita/disabilita il raggruppamento (_clustering_) dei punti
+* Oggetto Elenco Pagine: in modalità calendario consente di inserire la data di default
+* Oggetto Elenco Pagine: in modalità calendario consente di rendere sempre visibile la navigazione (frecce)
+* Oggetto Elenco Pagine: implicitamente esclude le pagine non accessibili poiché limitate in Community
+* Oggetto VCO: possibilità di documenti download nel VCO
+* Compatibilità degli elementi form con la libreria: è possibile adesso inserire degli oggetti form all'interno di oggetti libreria
+* Oggetto Ancora: possibilità di specificare l'id di destinazione
+* Nuovo schema di validazione: massimo numero di oggetti editoriali inseribili all'interno di una pagina
+* Oggetto Importa Pagina: aggiunta la possibilità di _override_ per l'encoding della pagina sorgente
+* Oggetto SimpleQuery: supporto ai grafici
+* Oggetto Libreria: aggiunto il supporto per l'ordinamento
+
+#### Funzionalità di sicurezza
+
+* Token _anti-CSRF_ in login Amministrativo
+* Token _anti-CSRF_ in login Community
+* Token _anti-CSRF_ nei form editoriali
+* Scadenza password amministrative abilitate di default a livello configurazione del sito con durata 90gg (valido solo per gli utenti amministritativi che hanno opzione abilitata a SI nel profilo)
+* Cookie serviti in modalità '_secure_' su siti https
+* Meccanismo per rilassare il controllo di sicurezza che impedisce l'inserimento di pagine flex in iframe (cfr. ad esempio ARUBA) all'interno di pagine _custom_
+* Aggiornata in frontend la libreria jQuery alla versione più recente (3.3.1)
+
+#### Ulteriori Funzionalità
+
+* Evoluzioni per conformità al GDPR
+* Elenco pagine: inserendo un elenco di ID separati da virgola nel campo di ricerca vengono elencate le pagine corrispondenti
+* Elenco pagine: possibilità di modificare dall'elenco pagine lo stato per tutte le lingue
+* Export dati form: è stato aggiunto l'identificativo di pagina di inserimento (BLOB-ID=XXX)
+* Nuova funzionalità di spedizione email con supporto SMTP con SSL
+* Funzionalità di inlining CSS nelle mail generate
+* Aggiornamento modulo SMS con compatibilità con NetFun v.2
+

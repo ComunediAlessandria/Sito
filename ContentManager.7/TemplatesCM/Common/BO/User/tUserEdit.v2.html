@@ -1,0 +1,83 @@
+
+	{ERR}
+	<form class="form-horizontal" method="post" action="{ACTION}">
+
+	<div class="well well-small">
+		<div class="control-group">
+			<label class="control-label" for="{TAG_Nome}">{LBL_Nome}</label>
+			<div class="controls"> {VAL_Nome}</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="{TAG_Note}">{LBL_Note}</label>
+			<div class="controls"> {VAL_Note}</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label" for="{TAG_Username}">{LBL_Username}</label>
+			<div class="controls"> {VAL_Username}</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label" for="{TAG_Password}">{LBL_Password}</label>
+			<div class="controls"> {VAL_Password} {passwordmode}</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label" for="{TAG_CanChangePw}">{LBL_CanChangePw}</label>
+			<div class="controls"> {VAL_CanChangePw}</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label" for="{TAG_pswexpiry}">{LBL_pswexpiry}</label>
+			<div class="controls"> {VAL_pswexpiry} {passwordexpirydate}</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label" for="{TAG_pswexpiryforce}">{LBL_pswexpiryforce}</label>
+			<div class="controls"> {VAL_pswexpiryforce} </div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label" for="{TAG_Email}">{LBL_Email}</label>
+			<div class="controls"> {VAL_Email}</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label" for="{TAG_Lang}">{LBL_Lang}</label>
+			<div class="controls"> {VAL_Lang}</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label" for="{TAG_IDBLOBValid}">{LBL_IDBLOBValid}</label>
+			<div class="controls"> {VAL_IDBLOBValid}</div>
+		</div>
+
+		<fieldset>
+			<legend >{LBL_jGruppi}</legend>
+			<div>{VAL_jGruppi}</div>
+		</fieldset>
+
+
+
+		<div class="control-group">
+			<label class="control-label" for="{TAG_IDGruppoPrincipale}">{LBL_IDGruppoPrincipale}</label>
+			<div class="controls"> {VAL_IDGruppoPrincipale}</div>
+		</div>
+
+	</div>
+
+	<div class='well well-small'>
+		<div class='row'>
+			<div class='span2'>
+					<input name="btnCancel" type="submit" class='btn' value="__(bo-common.canc)" />
+			</div>
+			<div class='span2'>
+				{HIDDEN}
+				<input name="Submit" type="submit" class='btn btn-primary' value="__(bo-common.save)" />
+			</div>
+		</div>
+	</div>
+
+
+</form>
+

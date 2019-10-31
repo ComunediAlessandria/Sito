@@ -1,0 +1,57 @@
+<form id='F' method='post' action='{ACTION}'>
+
+
+	<!-- BEGIN tHead -->
+ <table class="table table-striped table-bordered table-condensed table-hover flexbo-list-table" id='tablePages'>
+		<thead>
+			<tr>
+				<th scope="col">__(bo-common.act)</th>
+				<th scope="col">__(pabv.ver)</th>
+				<th scope="col">__(pabv.prev)</th>
+				<th scope="col">__(pabv.dv)</th>
+				<th scope="col">__(pabv.auth)</th>
+				<th scope="col">__(pabv.pt)</th>
+			</tr>
+		</thead>
+		<tbody>
+	<!-- END tHead -->
+
+	<!-- BEGIN rowActual -->
+			<tr class="{CLASSTR}">
+				<td>&nbsp;</td>
+				<td>{NN}</td>
+				<td scope="row">{PREVIEW}</td>
+				<td scope="row">{DATE}</td>
+				<td>{USER}</td>
+				<th>{PAGETITLE}</th>
+			</tr>
+	<!-- END rowActual -->
+
+	<!-- BEGIN row -->
+			<tr class="{CLASSTR}">
+				<td><div class="btn-group">{IMGDEL} {IMGRR}</div></td>
+				<td>{NN}</td>
+				<td scope="row">{PREVIEW}</td>
+				<td scope="row">{DATE}</td>
+				<td>{USER}</td>
+				<th>{PAGETITLE}</th>
+			</tr>
+	<!-- END row -->
+
+	<!-- BEGIN tFooter -->
+		<tr class="tfooter">
+			<td colspan="6">
+				<p>__(pabv.hm): {TOTRECORDS}</p>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+	<!-- END tFooter -->
+
+	<!-- BEGIN noData -->
+	<div class="alert">NON CI SONO VERSIONI DA VISUALIZZARE</div>
+	<!-- END noData -->
+
+
+
+</form>

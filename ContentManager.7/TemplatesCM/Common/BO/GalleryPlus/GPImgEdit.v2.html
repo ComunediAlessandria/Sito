@@ -1,0 +1,67 @@
+{ERR}
+
+<form class="form-horizontal" method="post" action="{ACTION}" enctype='multipart/form-data'>
+
+	<div class="well well-small">
+		
+		<div class="control-group">
+			<!-- Elementi usati dallo switcher JS per le lingue -->
+			<strong>__(bo-common.slc)</strong>:
+			<span id='BOPanelSwitchPanel'></span>
+			<div>__(bo-common.curlang): <span id='BOPanelSwitchCurLanguage'></span></div>
+		</div>	
+
+		<div class="control-group">
+			<label class="control-label" for="{TAG_IDAlbum}">{LBL_IDAlbum}</label>
+			<div class="controls"> {VAL_IDAlbum}</div>
+		</div>
+		
+		
+		<div class="control-group">
+			<label class="control-label">{LBL_jTitle}</label>
+			<div class="controls"> {VAL_jTitle}</div>
+		</div>
+		
+
+		<div class="control-group">
+			<label class="control-label" for="{TAG_FileName}">{LBL_FileName}</label>
+			<div class="controls"> {VAL_FileName}</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label">{LBL_jAlt}</label>
+			<div class="controls"> {VAL_jAlt}</div>
+		</div>
+
+
+		<div class="control-group">
+			<label class="control-label">{LBL_jCaption}</label>
+			<div class="controls"> {VAL_jCaption}</div>
+		</div>
+
+				<div class="control-group">
+					<div class="control-label">{LBL_DataOraUltimaModificaFormatted}</div>
+					<div class="controls"> {VAL_DataOraUltimaModificaFormatted}</div>
+				</div>
+
+				<div class="control-group">
+					<div class="control-label">{LBL_UtenteUltimaModifica}</div>
+					<div class="controls"> {VAL_UtenteUltimaModifica}</div>
+				</div>
+
+			</div>
+
+			<div class='well well-small'>
+				<div class='row'>
+					<div class='span2'>
+							<input name="btnCancel" type="submit" class='btn' value="__(bo-common.canc)" />
+					</div>
+					<div class='span2'>
+						{HIDDEN}
+						<input name="Submit" type="submit" class='btn btn-primary' value="__(bo-common.save)" />
+					</div>
+				</div>
+			</div>
+
+
+		</form>

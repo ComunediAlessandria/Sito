@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<ui id='CommunityUsers'>
+	<presenter
+		type='Template'
+		filename='./tCommunityUsersEdit-N.html'
+	/>
+
+	<page
+	
+		title='Iscrizione area riservata'
+	/>
+
+	<elements>
+		<element	id='Nome'		BO='Nome'		type='text'		size='50'	maxlen='50' 	label='Nome' 			class='form-control' />
+		<element	id='Cognome'	BO='Cognome'	type='text'		size='50'	maxlen='50' 	label='Cognome' 		class='form-control' />
+		<element	id='email'		BO='email'		type='text'		size='50'	maxlen='50' 	label='Email' 			class='form-control' />
+
+		<element	id='Ente'		BO='Ente'		type='text'		size='50'	maxlen='50' 	label='Ente o azienda' 	class='form-control' />
+		<element	id='Ruolo'		BO='Ruolo'		type='text'		size='50'	maxlen='50' 	label='Ruolo' 			class='form-control' />
+		<element	id='Telefono'	BO='Telefono'	type='text'		size='15'	maxlen='15' 	label='Telefono' 		class='form-control' />		
+
+		<element	id='Username'	BO='Username'	type='text'		size='50'	maxlen='50' 	label='Username' 		class='form-control' />
+		<element	id='Password'	BO='Password'	type='Password'	size='50'	maxlen='50' 	label='Password' 		class='form-control' />
+		<element	id='Password2'	BO=''			type='Password'	size='50'	maxlen='50' 	label='Ridigita Password' 		class='form-control' />
+
+		<element	id='Lang'		BO='Lang'		type='hidden'	label='Lingua' />
+		<element	id='ReceiveNL'	BO='ReceiveNL'	type='hidden'	label='ReceiveNL' />		
+	</elements>	
+
+	<validations>
+		<validation id='Nome'		type='mandatory'	forfield='Nome' />
+		<validation id='Cognome'	type='mandatory'	forfield='Cognome' />	
+		<validation id='Ente'		type='mandatory'	forfield='Ente' />	
+		<validation id='Telefono'	type='mandatory'	forfield='Telefono' />	
+	</validations>
+</ui>

@@ -1,0 +1,102 @@
+
+<div id="AdminCorpoBox">
+
+	<h1>{DESC}</h1>
+
+	<!-- BEGIN tAdd -->
+
+	<form id='FADD' method='post' action='{ADDACTION}'>
+		<div class="AdminPageFooterCommand">
+			<fieldset id="AdminElencoPagineAggiungi">
+				<label for="NEW">__(pgaer.add):</label> {OBJLIST}
+				<input type='submit' name='btNewPage' value='__(.badd)' />
+			</fieldset>
+		</div>
+	</form>
+
+	<!-- END tAdd -->
+
+	<!-- BEGIN tFilter -->
+
+	<div id="AdminFiltroElencoPagine">
+		<label for="sort">__(.srt):</label> {CMBSORT}
+		<label for="objKind">__(.lo):</label> {CMBKIND}
+		<label for='filterTitle'> __(.ln):</label> {FILTERTITLE}
+		<input type="submit" name="Aggiorna" value="__(.upd)" id="AdminFiltroElencoSubmit" />
+		<!-- input type="submit" name="nofilter" value="Reimposta"  id="AdminFiltroElencoReset" / -->
+	</div>
+
+	<!-- END tFilter -->
+
+	{TADD}
+
+	{MSGDEL}
+
+	<form id='F' method='post' action='{ACTION}'>
+	{HIDDEN}
+	{TFILTER}
+<!--
+	NON CANCELLARE: E' il filtro da attivare quanso servirà
+
+	<div id="AdminFiltroElencoPagine">
+		<fieldset>
+			<legend>Modelli da mostrare</legend>
+			<div>{CMBFILTER}</div>
+			{CMBCANALE}
+			<label for="filterTitle">contenenti nel titolo la parola:</label>{FILTER}
+		</fieldset>
+			<label for="sort">ordina per:</label> {CMBSORT}
+			<input type="submit" name="Aggiorna" value="Aggiorna" id="AdminFiltroElencoSubmit" />
+			<input type="submit" name="nofilter" value="Reimposta"  id="AdminFiltroElencoReset" />
+	</div>
+	{HIDDEN}{CMBKIND}
+-->
+
+	<!-- BEGIN tHead -->
+
+	<table summary="__(.td)" id='tablePages'>
+		<thead>
+			<tr>
+				<th scope="col" class='AdminIcoCellNarrow'>__(.tha)</th>
+				<th scope="col">__(.thnm)</th>
+				<th scope="col">__(.thno)</th>
+				<th scope="col">__(.thcl)</th>
+				<th scope="col">__(.thg)</th>
+				<th scope="col">__(.tht)</th>
+				<!--
+				<th scope="col" abbr="Proprietario">Gruppo Proprietario</th>
+				<th scope="col" abbr="Gruppi">Gruppi che possono utilizzare il modello</th>
+				-->
+			</tr>
+		</thead>
+		<tbody>
+	<!-- END tHead -->
+
+	<!-- BEGIN row -->
+		<tr class="{CLASSTR}">
+			<td class='AdminIcoCellNarrow'>{IMGDEL} {IMGDUP} {IMGMOD} </td>
+			<td>{ID}</td>
+			<th scope="row">{NAME}</th>
+			<td>{CANALE}</td>
+			<td>{CLASSIFICATION}</td>
+			<td>{CLASS}</td>
+			<!--
+			<td>{OWNER}</td>
+			<td>{GROUPS}</td>
+			-->
+		</tr>
+	<!-- END row -->
+
+	<!-- BEGIN tFooter -->
+		</tbody>
+	</table>
+	<div class="AdminPageFooterStatus">__(.nm): {TOTRECORDS}</div>
+	<!-- END tFooter -->
+
+	<!-- BEGIN noData -->
+	<div class="AdminPageFooterCommand">__(.none)</div>
+	<!-- END noData -->
+
+</form>
+
+</div>

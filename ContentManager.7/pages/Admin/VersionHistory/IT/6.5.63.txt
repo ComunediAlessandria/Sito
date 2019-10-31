@@ -1,0 +1,15 @@
+Modifica al pannello di informazioni sulla pagina che appare agli utenti amministrativi loggati e che contiene anche i pulsanti Amministrazione, Modifica Pagina, ecc. Il pannello ora visualizza tutte le informazioni sullo status: data e utente che ha effettuato l'ultima modifica, status (visibile/nascosta/in costruzione), periodo di valiti&agrave;. Le informazioni sono visibili ai soli utenti che hanno il diritto di modificare la pagina specifica.
+
+Inseriti due nuovi oggetti per la creazione di form. "Form Radio" per l'inserimento di radio button (opzioni di scelta alternative). "Form memorizzazione" che permette il salvataggio dei dati inseriti in un file XML del quale &eacute; possibile specificare il nome. 
+
+Modifica all'oggetto di pagina "Elenco Pagine" nel funzionamento del filtro temporale "non scadute, scadute, tutte". In precedenza "non scadute" estraeva le pagine esterne al periodo di validit&agrave;. Con la modifica introdotta estrae solo quelle scadute e non più quelle non ancora valide.
+
+Modifica all'oggetto di pagina "Elenco Pagine": aggiunto un blocco nel telaio di visualizzazione chiamato "onlylastshow" che viene inserito se l'elencatore mostra le prime n pagine che rispondono ai criteri. Il blocco non viene servito quando l'elencatore mostra le pagine selezionate in base al periodo temporale.
+
+Modifica all'oggetto di pagina "Elenco Pagine": inserito il segnaposto "n" a cui viene sostituito il progressivo della pagina visualizzata nell'elenco (utile per creare classi css con comportamenti legati al numero di elementi visualizzati, ad esempio per inserire un float clear dopo un numero fisso di elementi).
+
+Modifica all'interfaccia di inserimenti link: ora per le pagine interne viene indicato tra parentesi anche il numero della pagina. 
+
+Modifica all'interfaccia di gestione indici: ora non &egrave; più necessario premere il pulsante aggiorna-salva dopo ogni inserimento di voce di indice, ma solo alla fine.
+
+Correzione di alcuni bug.

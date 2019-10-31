@@ -1,0 +1,11 @@
+Nuovi oggetti editoriali per l'inserimento di presentazioni SlideShare, documenti ISSUU, video VIMEO
+
+Nuovo oggetto editoriale  Captcha utile nella creazione di form
+
+Ottimizzazione e compressione css 
+
+Nuova modalit&agrave; di creazione automatica degli indirizzi delle pagine editoriali con formato cm/p.php/it/1 (in precedenza era cm/pages/ServeBLOB.php/L/IT/IDPagina/1); tale modalit&agrave; non sostituisce le URL parlanti gi&agrave; supportate da tempo
+
+Ottimizzazione nella procedura di rigenerazione metadati
+
+Nuovi metodi nelle API di programmazione 1.1

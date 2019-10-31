@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='iso-8859-1' ?>
+<ui id='SMSNewsletter'>
+
+	<page
+		title='__(bo-smsnl.edittitle)'
+		permission='NLSMS'
+		licence='SMS'
+	/>
+
+	<presenter
+		type='Template'
+		filename='SMSNewsletter/SMSNewsletterEdit.html'
+	/>
+
+	<elements>
+		<element	id='Name'			BO='Name'	type='text'	size='40'	maxlen='200'	class='span8' label='__(bo-smsnl.nlname)' />
+		<element	id='Description'	BO='Description'	type='textarea'	cols='60'	rows='4'	class='span8' label='__(bo-smsnl.nldesc)' />
+		<element	id='SenderName'		BO='SenderName'	type='text'	size='20' maxlen='20'	label='__(bo-smsnl.smssender)' />
+		<element	id='Source'			BO='Source'	type='select' valueset='vsSource'	label='__(.smssource)' />
+		<element	id='IDOwner'		BO='IDOwner'	type='select'	valueset='Gruppi'	label='__(.autgr)' />
+	</elements>
+
+	<validations>
+		<validation id='Name'		type='mandatory'		forfield='Name' />
+		<validation id='Source'		type='mandatory'		forfield='Source' />
+		<validation id='SenderLength' type='php'><![CDATA[
+	
+				FlexInclude(kModPath . 'SMS/SMSSender.php');
+				
+				$sd = SMSSender::Factory();
+				
+				$maxlen = $sd->MaxSenderLength();
+	
+				$ok = TRUE; $message = '';
+	
+				$v = $pars['ELEMENTS']['SenderName']->GetValue();
+				if (strlen($v) > $maxlen) {
+				
+					$ok = FALSE;
+					$message = __('bo-smsnl.errmaxlen',$maxlen);
+				}
+				
+				return array($ok, $message);
+		]]></validation>	
+	</validations>
+
+	<valueset
+		id='Gruppi'
+		kind='DISTINCT'
+		table='Gruppi'
+		colid='IDGruppo'
+		column='DescrizioneIT'
+		allownull='no'
+	/>
+
+	<valueset id='vsSource' type='PHP'><![CDATA[
+
+		FlexInclude(kModPath . 'SMS/AddressSourceConfig.php');
+		
+		$res = array();
+		foreach (AddressSourceConfig::SourcesList() as $n => $d)
+			$res[ $n ] = array('ID' => $n, 'TEXT' => $d);
+			
+		return $res;
+
+	]]></valueset>
+
+	<!-- UI per la cancellazione - per adesso qui, domani in un file XML separato -->
+
+	<delete
+	
+		template='SMSNewsletter/SMSNewsletterDelAsk.html'
+	/>
+</ui>

@@ -1,0 +1,45 @@
+
+
+.album-list, .wrap-gallery-list {  }
+.album-list .item, .wrap-gallery-list .item {  }
+.album-list .item a, .wrap-gallery-list .item a {  
+  display: block;
+  position: relative;
+  margin-bottom: 30px;
+  
+}
+.album-list .item a h4, .wrap-gallery-list .item a h4 {
+  text-transform: uppercase;
+  color: black;
+  margin: 15px 0 0;
+  -webkit-transition: color 0.3s ease-in-out;
+     -moz-transition: color 0.3s ease-in-out;
+      -ms-transition: color 0.3s ease-in-out;
+       -o-transition: color 0.3s ease-in-out;
+          transition: color 0.3s ease-in-out;
+}
+.album-list .item a:hover h4, .wrap-gallery-list .item a:hover h4 {
+  color: #E2253F;
+}
+
+.wrap-album {
+}
+.wrap-album .item {
+  margin-bottom: 30px;
+}
+.wrap-album .item .fancy-item {
+  display: block !important;
+  position: relative;
+  opacity: 1;
+  cursor: pointer;
+  border: 2px solid transparent;
+  -webkit-transition: border 0.3s ease-in-out, opacity 1s ease-in-out;
+     -moz-transition: border 0.3s ease-in-out, opacity 1s ease-in-out;
+      -ms-transition: border 0.3s ease-in-out, opacity 1s ease-in-out;
+       -o-transition: border 0.3s ease-in-out, opacity 1s ease-in-out;
+          transition: border 0.3s ease-in-out, opacity 1s ease-in-out;
+}
+.wrap-album .item .fancy-item:hover {
+  border: 2px solid #E2253F;
+  opacity: 0.85;
+}

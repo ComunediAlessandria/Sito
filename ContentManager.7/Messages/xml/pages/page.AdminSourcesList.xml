@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE FlexCMPMessages SYSTEM '/FlexCMPMessages.dtd'>
+<messages xmlns:lang='#' defaultlang='IT'>
+	<group id='pgasrcl' define='false'>
+
+		<message id='del'
+			lang:it='CANCELLA'
+			lang:en='DELETE'
+		/>
+
+		<message id='mod'
+			lang:it='MODIFICA'
+			lang:en='EDIT'
+		/>
+
+		<!-- template tSourcesList -->
+
+		<message id='pt'
+			lang:it='Sorgenti'
+			lang:en='Sources'
+		/>
+
+		<message id='nos'
+			lang:it='Non esiste alcuna Sorgente'
+			lang:en='No Sources available'
+		/>
+
+		<message id='add'
+			lang:it='Aggiungi una nuova Sorgente'
+			lang:en='Add a new Source'
+		/>
+
+		<message id='ha'
+			lang:it='Azioni'
+			lang:en='Actions'
+		/>
+
+		<message id='hn'
+			lang:it='Nome'
+			lang:en='Name'
+		/>
+
+		<message id='x'
+			lang:it='Esporta Utenti selezionati in formato Excel XLS'
+			lang:en='Export selected users in XML format'
+		/>
+
+		<message id='xs'
+			lang:it='Esporta la selezione corrente'
+			lang:en='Export selected users'
+		/>
+
+		<message id='csv'
+			lang:it='Esporta in Excel'
+			lang:en='Export in Excel Format'
+		/>
+
+		<!-- dialog cancellazione -->
+
+		<message id='dt'
+			lang:it='Conferma cancellazione sorgente n. %s'
+			lang:en='Source n. %s deletion'
+		/>
+
+		<message id='dtt'
+			lang:it='Sei sicuro di voler cancellare la sorgente n. %s?'
+			lang:en='Are you sure you want to delete source n. %s?'
+		/>
+
+		<message id='bok'
+			lang:it='Elimina'
+			lang:en='Delete'
+		/>
+
+		<message id='bca'
+			lang:it='Annulla'
+			lang:en='Cancel'
+		/>
+
+	</group>
+</messages>

@@ -1,0 +1,30 @@
+<div id="AdminCorpoBox">
+	<h1>Indici</h1>
+	<div class="AdminPageFooterCommand"><a href="{ADDLINK}">{ADDIMG}Aggiungi un nuovo Indice</a></div>
+	  <table class="AdminTable" summary="Tabella contenente l'elenco degli indici: nella prima colonna sono contenuti i comandi di eliminazione e modifica dell'indice.">
+		<thead>
+		  <tr>
+			<td scope="col" class='AdminIcoCell'>Azioni</td>
+			<th scope="col">Nome</th>
+			<th scope="col">ID</th>
+			<th scope="col">Gruppo Proprietario</th>
+			<th scope="col" abbr="Mostra">Mostra nella Mappa</th>
+			<th scope="col" abbr="Mostra">Mostra nella Mappa sino al livello</th>
+		  </tr>
+		</thead>
+		<tbody>
+	  <!-- BEGIN row -->
+	  <tr class="{CLASSTR}">
+		<td class='AdminIcoCell'>{DELLINK} {MODLINK}</td>
+		<th scope="row">{INDEXNAME}</th>
+		<td>{COLLECTIONID}</td>
+		<td>{IDOWNER}</td>
+		<td>{SHOWINMAP}</td>
+		<td>{MAPMAXDEEP}</td>
+	  </tr>
+	  <!-- END row -->
+		</tbody>
+	</table>
+	<div class="AdminPageFooterCommand"><a href="{ADDLINK}">{ADDIMG}Aggiungi un nuovo Indice</a></div>
+</div>
+<div class="AdminPageFooterStatus"> NUMERO INDICI PRESENTI: {TOTRECORDS} </div>

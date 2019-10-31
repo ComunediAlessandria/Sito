@@ -1,0 +1,1 @@
+a:4:{s:23:"kMessageLoginNoUsername";s:29:"Username no está especificado";s:23:"kMessageLoginNoPassword";s:32:"Contraseña no està; especificada";s:31:"kMessageLoginUnexistentUsername";s:49:"Ningún usuario encontró con el username proveído ";s:26:"kMessageLoginWrongPassword";s:21:"Contraseña incorrecta";}

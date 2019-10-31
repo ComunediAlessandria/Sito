@@ -1,0 +1,4 @@
+Versione FlexCMP: 7.7.15
+Data Freeze: 2019.07.02 16.17
+Flavour: flexcmp
+Data creazione: 24/10/19 10:00

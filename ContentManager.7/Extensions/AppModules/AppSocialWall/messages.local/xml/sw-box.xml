@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE FlexCMPMessages SYSTEM '/FlexCMPMessages.dtd'>
+<messages xmlns:lang='#' defaultlang='IT'>
+	<group id='swm' define='false' default='en'>
+
+		<!-- validazioni -->
+
+		<message id='vne'
+			lang:it='È necessario inserire un valore'
+			lang:en='Please insert a value'
+		/>
+
+		<message id='viu'
+			lang:it='URL non valida'
+			lang:en='URL is not valid'
+		/>
+
+		<message id='vie'
+			lang:it='Il codice embed inserito non è valido'
+			lang:en='Invalid embed code'
+		/>
+
+		<!-- box free -->
+
+		<message id='ft'
+			lang:it='Titolo'
+			lang:en='Title'
+		/>
+
+		<message id='ftx'
+			lang:it='Testo'
+			lang:en='Text'
+		/>
+
+		<message id='fi'
+			lang:it='Immagine'
+			lang:en='Picture'
+		/>
+
+		<message id='fl'
+			lang:it='Collegamento (link)'
+			lang:en='Link'
+		/>
+
+		<message id='flt'
+			lang:it='Testo Collegamento'
+			lang:en='Link Text'
+		/>
+
+		<!-- box pagina flex -->
+
+		<message id='pt'
+			lang:it='Pagina Editoriale'
+			lang:en='Page'
+		/>
+
+		<!-- box tumblr -->
+
+		<message id='tw'
+			lang:it='Larghezza'
+			lang:en='Width'
+		/>
+
+		<message id='tvw'
+			lang:it='È necessario inserire una Larghezza'
+			lang:en='Width must be specified'
+		/>
+
+	</group>
+</messages>

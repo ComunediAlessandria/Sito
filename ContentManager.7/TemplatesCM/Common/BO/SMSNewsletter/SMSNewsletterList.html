@@ -1,0 +1,32 @@
+<div id="AdminCorpoBox">
+	<h1>Newsletter SMS</h1>
+	<div class="AdminPageFooterCommand"><a href="{ADDLINK}">{ADDIMG}Aggiungi una nuova Newsletter SMS</a></div>
+	  <table class="AdminTable" summary="Tabella contenente l'elenco delle Newsletter SMS: nella prima colonna sono contenuti i comandi di eliminazione e modifica della Newsletter SMS.">
+		<thead>
+		  <tr>
+			<td scope="col" class='AdminIcoCell'>Azioni</td>
+			<th scope="col">Nome Newsletter</th>
+			<th scope="col">Autori</th>
+			<th scope="col">Mittente</th>
+			<th scope="col">Destinatari</th>
+		  </tr>
+		</thead>
+		<tbody>
+
+	  <!-- BEGIN row -->
+
+	  <tr class="{CLASSTR}">
+		<td class='AdminIcoCell'>{DELLINK} {MODLINK}</td>
+		<th scope="row">{NAME}</th>
+		<td>{JOWNERGROUP}</td>
+		<td>{SENDERNAME}</td>
+		<td>{NRECIPIENTS}</td>
+	  </tr>
+
+	  <!-- END row -->
+
+		</tbody>
+	</table>
+	<div class="AdminPageFooterCommand"><a href="{ADDLINK}">{ADDIMG}Aggiungi una nuova Newsletter SMS</a></div>
+</div>
+<div class="AdminPageFooterStatus"> NUMERO NEWSLETTER SMS PRESENTI: {TOTRECORDS} </div>

@@ -1,0 +1,17 @@
+Completo rifacimento della gestione Indici. Nuova interfaccia migliorata. Piena compatibilit&agrave; con Internet Explorer (8 o sup), FireFox, Chrome. Introdotto il versioning di sicurezza degli indici. Introdotta la possibilit&agrave; di trascinare foglie o interi rami da un indice all'altro. Separata la definizione dell'home page del sito in apposita sezione. Migliorata l'interfaccia di selezione delle pagine da associare ai nodi dell'indice.
+
+Nuova interfaccia nei paragrafi di testo all'interno dell'editor di pagina: piena compatibilit&agrave; con Internet Explorer (8 o sup), FireFox, Chrome.
+
+Nuova funzionalit&agrave; del motore di ricerca, ora &egrave; possibile indicizzare pagine riservate e mostrarle tra i risultati in funzione delle community dell'utente corrente (per l'implementazione &egrave; richiesto un intervento sulla configurazione del sito e adattamenti nei telai).
+
+Miglioramento nei tempi di calcolo delle statistiche di accesso, adeguamento della lista dei motori di ricerca esclusi, modifica nell'algoritmo di determinazione delle visite.
+
+Opzione di erogazione di siti in https in cluster con gestione del protocollo https solo sul balancer di front end.
+
+Miglioramento nella procedura di erogazione della Google site map xml: aggiunta la data di ultima modifica delle pagine.
+
+Introdotte nuove opzioni per le pagine applicative (fixedpages): url parlanti, gestione dei parametri nei metadati, possibilit&agrave; di associare immagini  per l'indice.
+
+Aggiornamento libreria jQuery JavaScript Library v1.8.3
+
+Piccoli bug fix.

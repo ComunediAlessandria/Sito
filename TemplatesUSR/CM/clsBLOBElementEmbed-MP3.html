@@ -1,0 +1,25 @@
+<div class="BLOBAlignLeft">
+	<object type="application/x-mplayer2" width="250" height="45" title="{DESC}">
+		<param name="src" value="{FILEURL}" />
+		<param name="URL" value="{FILEURL}" />
+		<param name="title" value="{DESC}" />
+		<param name="AutoStart" value="0" />
+		<param name="ShowControls" value="1" />
+		<param name="ClickToPlay" value="1" />
+		<!--[if gte IE 7]> <!-->
+		<object classid="CLSID:6BF52A52-394A-11d3-B153-00C04F79FAA6" width="250" height="45" title="{DESC}">
+			<param name="src" value="{FILEURL}" />
+			<param name="URL" value="{FILEURL}" />
+			<param name="title" value="{DESC}" />
+			<param name="AutoStart" value="0" />
+			<param name="ShowControls" value="1" />
+			<param name="ClickToPlay" value="1" />
+			{DESC}
+		</object>
+		<!--<![endif]-->
+		<!--[if lt IE 7]>
+			alt: <a title="{DESC}" href="{FILEURL}">{DESC}</a>
+		<![endif]--> 
+		{DESC}
+	</object>
+</div>

@@ -1,0 +1,36 @@
+<div id="AdminCorpoBox">
+	<h1>Elenco Feed</h1>
+		<!--
+		<form method="post" action="{ACTION}">
+			<div class="AdminPageFooterCommand">
+			<label for="frmNome">Filtra gli utenti che contengono la seguente parola:</label> {FRMNOME}
+			<input name="submit" type="submit" value="filtra" />
+			</div>
+		</form>
+		-->
+
+	<div class="AdminPageFooterCommand"><a href="{ADDLINK}">{ADDIMG} Aggiungi un nuovo Feed</a></div>
+	  <table class="AdminTable" summary="Tabella contenente l'elenco dei Feed">
+		<thead>
+		  <tr>
+			<th scope="col" class='AdminIcoCell'>Azioni</th>
+			<th scope="col" >Nome Feed</th>
+			<th scope="col" >Titolo</th>
+		  </tr>
+		</thead>
+		<tbody>
+
+		  <!-- BEGIN row -->
+		  <tr class="{CLASSTR}">
+			<td class='AdminIcoCell'>{DELLINK} {MODLINK}</td>
+			<th scope="row" >{NAME}</th>
+			<td scope="row" >{TITLE}</td>
+		  </tr>
+		  <!-- END row -->
+
+		</tbody>
+	</table>
+	<div class="AdminPageFooterCommand"><a href="{ADDLINK}">{ADDIMG}Aggiungi un nuovo Feed</a></div>
+</div>
+<div class="AdminPageFooterStatus"> NUMERO FEED: {TOTRECORDS}</div>
+<div>{PAGESELECTOR}</div>

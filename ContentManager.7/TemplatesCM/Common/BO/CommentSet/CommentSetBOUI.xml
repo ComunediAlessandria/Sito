@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='iso-8859-1' ?>
+<ui id='commentset'>
+	<page
+		title='Scheda impostazione commenti'
+		permission='COMS'
+	/>
+
+	<presenter
+		type='Template'
+		filename='CommentSet/tCommentSetEdit.html'
+		_action='http://...'
+	/>
+
+	<elements>
+		<element	id='Titolo'				bo='title'				type='text'		size='40'				maxlen='100'	label='Titolo' />
+		<element	id='tPost'				bo='tPost'				type='select'	valueset='vsTemplateI'	label='Nome telaio di inserimento' />
+		<element	id='tView'				bo='tView'				type='select'	valueset='vsTemplateV'	label='Nome telaio di visualizzazione' />
+		<element	id='canInsert'			bo='canInsert'			type='select'	valueset='vsCommunity'		label='Inserimento' />
+		<element	id='canView'			bo='canView'			type='select'	valueset='vsCommunity'		label='Visualizzazione' />
+		<element	id='RichiestaApprovazione'	bo='cShouldApprove'		type='select'	valueset='vsApprove'			label='Richiesta approvazione' />
+		<element	id='Captcha'				bo='hasCaptcha'			type='select'	valueset='vsCaptcha'			label='Abilita captcha' />
+		<element	id='GruppoAmministratori'	bo='IDAdministrator'	type='select'	valueset='vsGruppi'				label='Gruppo amministratori' />
+		<element	id='Stato'					bo='disabled'			type='select'	valueset='vsDisabled'			label='Stato' />
+	</elements>
+
+	<validations>
+		<validation id='Titolo'						type='mandatory'		forfield='Titolo' />
+		<validation id='RichiestaApprovazione'		type='mandatory'		forfield='RichiestaApprovazione' />
+		<validation id='Captcha'					type='mandatory'		forfield='Captcha' />
+		<validation id='GruppoAmministratori'		type='mandatory'		forfield='GruppoAmministratori' />
+		<validation id='Stato'						type='mandatory'		forfield='Stato' />
+	</validations>
+
+	<valueset
+		id='vsTemplateI'
+		kind='FILE'
+		path='{K:kTemplateModulesPath}/Comments/;{K:kNewTemplatesCM_DEF}/Comments/'
+		filter='(i.*)\.html'
+		allownull='no'
+	/>
+	
+	<valueset
+		id='vsTemplateV'
+		kind='FILE'
+		path='{K:kTemplateModulesPath}/Comments/;{K:kNewTemplatesCM_DEF}/Comments/'
+		filter='(v.*)\.html'
+		allownull='no'
+	/>
+
+	<valueset id='vsApprove'>
+		<value id='-1' text='--' />
+		<value id='0' text='No' />
+		<value id='1' text="Si'" />
+	</valueset>
+
+
+	<valueset id='vsDisabled'>
+		<value id='0' text='Abilitato' />
+		<value id='1' text='Disabilitato' />
+	</valueset>
+
+	<valueset id='vsCaptcha'>
+		<value id='-1' text='--' />
+		<value id='0' text='No' />
+		<value id='1' text="Si'" />
+	</valueset>
+
+	<valueset id='vsGruppi' kind='DISTINCT' table='Gruppi' colid='IDGruppo' column='DescrizioneIT' allownull='yes' />
+
+	<valueset id='vsCommunity' type='PHP'	>
+		<![CDATA[
+
+		$res = array(
+			-1 	=> array('ID' => -1, 'TEXT' => '*Nessuna limitazione'),
+			0 	=> array('ID' => 0, 'TEXT' => '*Non abilitato'),
+		);
+
+		$it = GetFieldListFromTable('Description, IDCommunity', 'Community');
+		foreach ($it as $t) {
+
+			$res[$t[1]] = array('ID' => $t[1], 'TEXT' => $t[0] );
+		}
+
+		return $res;
+		]]>	
+	</valueset>
+
+	
+	<delete
+	
+		template='CommentSet/tCommentSetDelAsk.html'
+		failTemplate='CommentSet/tCommentSetDelFailed.html'
+		pagetitle='Cancellazione impostazione dei commenti'
+	>
+	<onfail id='CommentiInseriti' condition='CommentiInseriti'>
+			<![CDATA[
+				<strong>Questa impostazione commenti contiene {nRec} commenti associati. </strong> <br />
+
+			]]>
+		</onfail>
+
+	</delete>
+	
+</ui>

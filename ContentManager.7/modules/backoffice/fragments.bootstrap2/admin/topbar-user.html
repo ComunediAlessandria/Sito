@@ -1,0 +1,63 @@
+<div class='topbar user-admin'>
+  <div class='container'>
+	<div class='pull-left logo-container'>
+		{img:boimage}
+	</div>
+
+	<div>
+		<h1 class='adminPageTitle'>
+			{pagetitle}
+		</h1>
+	</div>
+
+	<div class='btn-toolbar pull-right'>
+
+		<div class='btn-group'>
+			<button data-toggle='dropdown' class='btn dropdown-toggle'>
+				<i class='moon-icon-user'></i>
+				{username} <span class='caret'></span>
+			</button>
+
+			<ul class='dropdown-menu dropdown-menu-mini'>
+				<li><a href='{site-home}'><i class='moon-icon-home'></i> {'admin.lblHome':__}</a></li>
+				<li><a href='{ch-p}'><i class='moon-icon-key-2'></i> {'admin.lblChP':__}</a></li>
+				<li><a href='{logout}'><i class='moon-icon-switch'></i> Logout</a></li>
+			</ul>
+
+		</div>
+
+		<div class='btn-group'>
+			<a class='btn disabled'>{'admin.lblCLang':__}</a>
+			<button data-toggle='dropdown' class='btn dropdown-toggle'>
+				{curlang} <span class='caret'></span>
+			</button>
+
+			{dd-languages}
+
+		</div>
+
+		<!-- help -->
+
+		<div class='btn-group'>
+			<a class='btn' href='{man-href}' target='_blank' rel='noopener'>
+				<i class='moon-icon-book'></i>
+				{'admin.lblMan':__}
+			</a>
+		</div>
+
+		<!-- /help -->
+
+	</div>
+  </div>
+</div>
+
+<div class='topbar-low'>
+	<div>
+		<div class='fx-topimage'>
+			{img:boimage}
+		</div>
+		<div class='fx-pagetitle'>
+			{pagetitle}
+		</div>
+	</div>
+</div>

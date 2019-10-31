@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="lang" defaultlang="IT">
+  <group id="snViewUserRequestslist" define="false">
+    <message id="none" lang:it="Nessuna Richiesta" lang:en="No request" lang:fr="Aucune demande" lang:de="Keine Anfrage" lang:es="Niguna solicitud" lang:ru="Нет запроса"/>
+    <message id="accept" lang:it="Accetta" lang:en="Accept" lang:fr="Accepter" lang:de="Akzeptieren" lang:es="Aceptar" lang:ru="Принять"/>
+    <message id="deny" lang:it="Rifiuta" lang:en="Reject" lang:fr="Rejeter" lang:de="Ablehnen" lang:es="Reject" lang:ru="Отклонить"/>
+    <message id="tdeny"/>
+    <message id="title" lang:it="Richieste di Contatto" lang:en="Contact requests" lang:fr="Contactez demandes" lang:de="Kontakt Anfragen" lang:es="Póngase en contacto con peticiones" lang:ru="Связаться с запросами"/>
+    <message id="taccept"/>
+  </group>
+</messages>

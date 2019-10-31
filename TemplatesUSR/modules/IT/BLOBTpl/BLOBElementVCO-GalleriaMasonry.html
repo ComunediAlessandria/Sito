@@ -1,0 +1,41 @@
+[[:meta
+
+    css: [
+        galleria-masonry.css
+    ],
+    jsinclude: [
+
+    ]
+]]
+
+
+[[:section name: conf, kind: jsonload, title: Configurazione]]
+
+   var $grid = $('.vco-masonry').masonry({
+        itemSelector: '.vco-masonry .item',
+        columnWidth: '.vco-masonry .item',
+        percentPosition: true,
+        transitionDuration: 0,
+    });
+
+    $grid.imagesLoaded().progress( function() {
+        $grid.masonry();
+    });
+
+
+
+[[:section name: header]]
+
+<div class="vco-masonry">
+ 
+[[:section name: body, repeat: true]]
+
+    <div class="item col-xs-12 col-sm-6 col-md-4">
+    	<div  class="fancy-item" data-fancybox="gallery"  data-caption="[[ kind: text, name: titolo immagine, title: 'Titolo' ]]">
+            [[ kind: img, name: img, title: Immagine, alt: true, width: width, height: height]] 
+        </div>
+    </div>
+        
+[[:section name: footer]]
+
+</div>

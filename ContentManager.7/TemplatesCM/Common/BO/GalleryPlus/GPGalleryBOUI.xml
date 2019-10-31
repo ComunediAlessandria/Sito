@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='iso-8859-1' ?>
+<ui id='GPGalleryUI'>
+	<presenter
+		type='Template'
+		filename='GalleryPlus/GPGalleryEdit.html'
+	/>
+	<page
+		title='__(bo-gallery.edittitle)'	
+		permission='GPG'
+	/>
+
+	<elements>
+
+		<element	id='jTitle'		BO='jTitle'		size='80'	maxlen='250'	class='span8' type='multitext'	valueset='Languages' 	mapping='Lang:Value'	label='__(bo-gallery.title)'>	
+  		<![CDATA[
+			<div id='D_%1$s'><label for='%1$s' class='AdminFormBOLabel'>%3$s (%4$s)</label>%2$s</div>
+		 ]]>
+		</element>	
+		
+		<element	id='jDescription'	BO='jDescription'	cols='80'	rows='4'	class='span8' type='multitextarea' valueset='Languages' 	mapping='Lang:Value'	label='__(bo-gallery.desc)'>
+  		<![CDATA[
+			<div id='D_%1$s'><label for='%1$s' class='AdminFormBOLabel'>%3$s (%4$s)</label>%2$s</div>
+		 ]]>
+		</element>
+		
+		<element	id='IDAlbumOwner'	BO='IDAlbumOwner'	type='select'		valueset='Gruppi'	label='__(bo-gallery.gaa)' />
+		
+		<element	id='ShowInList'		BO='ShowInList'	type='radio'	valueset='YesNo'	label="__(bo-gallery.sillong)" />
+		<element	id='GalleryPage'	BO='GalleryPage'	type='FlexPage'	label="__(bo-gallery.pagwithgal)" />
+
+		<element	id='DataOraUltimaModifica'	BO='DataOraUltimaModifica'	type='text'	mode='RO'	size='10'	maxlen='20'	label='__(bo-gallery.dtlastmod)' />
+		<element	id='DataOraUltimaModificaFormatted'	BO=''	type='code'	 code='FormatUM'  label='Data Ultima Modifica' />
+		<element	id='UtenteUltimaModifica'	BO='UtenteUltimaModifica'	type='text'	mode='RO' size='10'	maxlen='20'	label='__(bo-gallery.authlastmod)' />
+	</elements>
+
+	<valueset id='Gruppi' kind='DISTINCT' table='Gruppi' colid='IDGruppo' column='DescrizioneIT' allownull='no' />
+	<valueset id='Languages' kind='DISTINCT' table='Languages' colid='Lang' column='DescrizioneIT' orderby='IDLanguage' />
+	
+	<valueset id='YesNo'>
+		<value id='1' text='__(bo-common.yes)' />
+		<value id='0' text='__(bo-common.no)' />
+	</valueset>	
+
+	<codes>
+		<code id='FormatUM' type='php'>
+			<![CDATA[
+				
+				$fdate = $pars['ELEMENTS']['DataOraUltimaModifica']->GetValue() == ''
+						? 
+							''
+						:
+							date('d/m/Y H:i', DBSQLToTime($pars['ELEMENTS']['DataOraUltimaModifica']->GetValue()));
+				
+				return array(
+					$pars['ELEMENTS']['DataOraUltimaModifica']->mPars['LABEL'],
+					$fdate
+				);
+			]]>
+		</code>
+	</codes>
+
+	<validations>
+
+		<validation id='TitleMandatory' type='php'>
+			<![CDATA[
+				
+					// verifica che per le lingue abilitate vi sia il titolo tradotto.
+
+				$ok = TRUE; $message = '';
+
+				$mlField = $pars['ELEMENTS']['jTitle']->GetValue();
+				
+				$mlFieldValues = array();
+				foreach($mlField as $singleLanguageValue) 
+					$mlFieldValues[$singleLanguageValue['Lang']] = trim($singleLanguageValue['Value']);
+
+					// ottiene l'elenco delle lingue abilitate
+
+				FlexInclude(kModPath . 'modLanguage.php');
+			
+				$cLang = FlexLanguages::GetCache();
+			
+					// la GetArray restituisce un array numerico
+			
+				$enabledLangs = array();
+				foreach ($cLang->GetArray(array('DescrizioneIT', 'Stato')) as $langCode => $data)
+					if ($data[1] == 2) {
+					
+						$enabledLangs[] = $langCode;
+						if ($mlFieldValues[$langCode] === '') 
+									$ok = FALSE;				
+					}
+
+				if (! $ok) {
+
+					$pars['ELEMENTS'][ 'jTitle' ]->SetError(TRUE);
+					$message = __('bo-gallery.errgalltitalllang') . ' (' . join(', ', $enabledLangs) . ')';
+				}
+
+				return array($ok, $message);
+			]]>
+		</validation>	
+	</validations>		
+	
+	<!-- UI per la cancellazione - per adesso qui, domani in un file XML separato -->
+
+	<delete	
+		template='GalleryPlus/GPGalleryDelAsk.html'
+		failTemplate='GalleryPlus/GPGalleryDelFailed.html'
+	>
+		<onfail id='AlbumFigli' condition='AlbumFigli'>
+			<![CDATA[
+				<strong>  __(bo-gallery.anum) </strong> <br />
+				 __(bo-gallery.galdelinfo)
+			]]>
+		</onfail>
+	</delete>
+</ui>

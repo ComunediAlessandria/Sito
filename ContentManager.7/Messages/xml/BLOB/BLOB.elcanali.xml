@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="it">
+	<group id="belc" define="false">
+		<message id="ep" lang:it="Elenco pagine" lang:en="Page List"/>
+
+			<!-- dropdown per AND/OR su classificazione -->
+
+		<message id="mads" lang:it="Modalità di Selezione" lang:en="Selection"/>
+		<message id="tges" lang:it="Tute le classificazioni specificate" lang:en="All labels"/>
+		<message id="audes" lang:it="Almeno una delle classificazioni specificate" lang:en="At least one label"/>
+
+		<message id="spp" lang:it="Mostra anche Pagine Protette" lang:en="Also Shows protected pages"/>
+
+		<message id="tutti" lang:it="Tutti" lang:en="All"/>
+		<message id="ns" lang:it="Non Scadute" lang:en="Non Expired"/>
+		<message id="scadute" lang:it="Scadute" lang:en="Expired"/>
+		<message id="tp" lang:it="Titolo Pagina" lang:en="Page Title"/>
+		<message id="ts" lang:it="Titolo Strillo" lang:en="Abstract Title"/>
+		<message id="dum" lang:it="Data Ultima Modifica" lang:en="Date of last modify"/>
+		<message id="div" lang:it="Data Inizio Validità" lang:en="Validity start"/>
+		<message id="dtv" lang:it="Data Termine Validità" lang:en="Validity end"/>
+		<message id="de" lang:it="Data Inizio Evento" lang:en="Event Date (start)"/>
+		<message id="dee" lang:it="Data Fine Evento" lang:en="Event Date (end)"/>
+		<message id="dplt" lang:it="Titolo del Link Strillo" lang:en=""/>
+		<message id="bp" lang:it="Predefinito" lang:en="Standard"/>
+		<message id="nt" lang:it="Nome Telaio:" lang:en="Template Name"/>
+		<message id="padco" lang:it="Proprietà di Classificazione oggetto" lang:en="Property of classification"/>
+		<message id="classificazione" lang:it="Classificazione" lang:en="Classification"/>
+		<message id="va" lang:it="Validità:" lang:en="Validity"/>
+		<message id="op" lang:it="Ordina per:" lang:en="Sort by"/>
+		<message id="is" lang:it=" in senso " lang:en="order"/>
+		<message id="crescente" lang:it="Crescente" lang:en="Ascending"/>
+		<message id="decrescente" lang:it="Decrescente" lang:en="Descending"/>
+		<message id="paginazione" lang:it="Paginazione:" lang:en="Pagination"/>
+		<message id="nepp" lang:it="Numero Elementi per Pagina:" lang:en="Number of items in a page"/>
+		<message id="aspetto" lang:it="Aspetto" lang:en="Layout"/>
+
+		<!-- configurazione cache -->
+
+		<message id="ch" lang:it="alta (basse prestazioni)" lang:en="hi (low performances)"/>
+		<message id="cl" lang:it="bassa (alte prestazioni)" lang:en="low (hi performances)"/>
+
+<!--
+		<message id="filterdate" lang:it="Filtra per Data" lang:en="Date Filter"/>
+
+		<message id="tpdt" lang:it="Tipo Data" lang:en="Which Date"/>
+
+		<message id="dtnone" lang:it="Nessuna" lang:en="None"/>
+		<message id="dtev" lang:it="Intervallo Evento" lang:en="Event Period"/>
+		<message id="dtmod" lang:it="Data Ultima Modifica" lang:en="Last Change Date"/>
+
+		<message id="tpint" lang:it="Tipo Intervallo" lang:en="Interval"/>
+
+		<message id="tpinone" lang:it="Nessuno" lang:en="None"/>
+		<message id="tpitoday" lang:it="oggi" lang:en="today"/>
+		<message id="tpitoa" lang:it="da oggi in poi" lang:en="since today"/>
+		<message id="tpitom" lang:it="da domani in poi" lang:en="since tomorrow"/>
+-->
+
+		<message id="fcrit" lang:it="Criterio di filtro" lang:en="Filter Criteria"/>
+
+		<message id="fdesc" lang:it="Limita alle pagine" lang:en="Limit to pages"/>
+
+		<message id="fnone" lang:it="Nessun limite" lang:en="No filter"/>
+		<message id="fmtd" lang:it="Modificate oggi" lang:en="Modified today"/>
+		<message id="fevtd" lang:it="Eventi in corso oggi" lang:en="Today's events"/>
+		<message id="fevtdo" lang:it="Eventi in corso da oggi in poi" lang:en="Upcoming events (today)"/>
+		<message id="fevtm" lang:it="Eventi in corso da domani in poi" lang:en="Upcoming events (tomorrow)"/>
+
+		<message id="texpire" lang:it="Prestazioni" lang:en="Performances"/>
+		<message id="prio" lang:it="Priorità" lang:en="Priority"/>
+
+		<!-- opzioni immagini -->
+
+		<message id="ar" lang:it="Abilita Ridimensionamento" lang:en="Enable Resize" />
+		<message id="wi" lang:it="Larghezza" lang:en="width" />
+		<message id="he" lang:it="Altezza" lang:en="height" />
+		<message id="pr" lang:it="Mantieni Proporzioni" lang:en="Preserve Aspect ratio" />
+
+		<!-- messaggi verifica presenza BC -->
+
+		<message id='bcw'>
+			<trans lang='it'><![CDATA[
+				<strong>Attenzione</strong>: non esiste una regola per la generazione del Breadcrumb corrispondente
+				al filtro di classificazione selezionato.
+			]]></trans>
+			<trans lang='en'><![CDATA[
+				<strong>Warning</strong>: there is no Breadcrumb rule corresponding to the selected classification.
+			]]></trans>
+		</message>
+
+		<message id='bck'>
+			<trans lang='it'><![CDATA[
+				La classificazione selezionata corrisponde alla regola con <strong>ID %1$s</strong> per la generazione del Breadcrumb.
+			]]></trans>
+			<trans lang='en'><![CDATA[
+				Selected classifications matches rule with <strong>ID %1$s</strong> for Breadcrumb generation.
+			]]></trans>
+		</message>
+	</group>
+</messages>

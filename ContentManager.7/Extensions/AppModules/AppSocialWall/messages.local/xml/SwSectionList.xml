@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="IT">
+  <group id="SwSectionList" define="false" default='it'>
+	<message id="pagetitle"
+	 lang:it="Elenco Sezioni Social Wall"
+	 />
+	<message id="paginationlabel"
+	 lang:it="Risultati per pagina"
+	 />
+	<message id="section"
+	 lang:it="Sezione"
+	 />
+	<message id="btnNext"
+	 lang:it="Ricerca"
+	 />
+	<message id="btnReset"
+	 lang:it="Reimposta"
+	 />
+	<message id="add"
+	 lang:it="Aggiungi"
+	 />
+	<message id="confirm"
+	 lang:it="Vuoi veramente eliminare questa sezione?"
+	 />
+	<message id="actions"
+	 lang:it="Azioni"
+	 />
+	<message id="name"
+	 lang:it="Sezione"
+	 />
+	<message id="edit"
+	 lang:it="Modifica"
+	 />
+	<message id="tot"
+	 lang:it="Totale"
+	 />
+	<message id="norecord"
+	 lang:it="Nessuna sezione disponibile"
+	 />
+  </group>
+</messages>

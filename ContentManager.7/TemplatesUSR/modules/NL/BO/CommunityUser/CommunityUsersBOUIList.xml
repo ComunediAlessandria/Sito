@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='iso-8859-1' ?>
+<uilist id='CommunityUsers'>
+
+	<presenter
+		type='ADVANCEDTEMPLATE'
+		filename='tCommunityUsersList.html'
+	/>
+
+	<page
+		title='Elenco Utenti Community'
+	/>
+
+	<option name='modlink' label='MODIFICA %s' element='Nome' link='P:CommunityUserEdit.php' />
+	<option name='dellink' label='CANCELLA %s' element='Nome' link='K:kPageCommunityUserDel'/>
+	<option name='addlink' link='P:CommunityUserEdit.php' />
+
+	<filter>
+		<item id='Nome' ref='Nome' initialvalue='#' operator='LIKE' label='Cerca per Nome' />
+		<item id='Cognome' ref='Cognome' initialvalue='' operator='LIKE' label='Cerca per Cognome' />
+	</filter>
+
+	<elements>
+		<element	id='Nome'				bo='Nome'				label='Nome' />
+		<element	id='Cognome'			bo='Cognome'			label='Cognome' />
+		<element	id='Username'			bo='Username'			label='Username' />
+		<element	id='Abilitato'			bo='Enabled'			label='Abilitato' transform='TYesNo' />
+		<element	id='CommunityList'		bo='jCommunity'			label='jCommunity' transform='jCommunity' />
+		<element	id='DataInserimento'	bo='DataInserimento'	label='DataInserimento' transform='tData'/>
+	</elements>
+	
+	<transform id='jCommunity' type='join' col='Description' separator=', ' />
+	<transform id='TYesNo' type='map' from='0;1' to='No;Si' />
+	<transform id='tData' type='date' format='d/m/Y' />
+
+	<sortOrder>
+		<sortKey	bo='DataInserimento'	order='DESC' />
+		<sortKey	bo='Nome'				order='ASC' />		
+	</sortOrder>	
+
+</uilist>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="IT">
+	<group id="palidx" define="false">
+		<message id="gi" lang:it="Gestione Indici" lang:en="Indexes" lang:es="Indices"/>
+		<message id="indici" lang:it="Indici" lang:en="Indexes" lang:es="Indices"/>
+		<message id="ani" lang:it="Aggiungi un nuovo Indice" lang:en="Add a new Index" lang:es="Anadir un nuevo indice"/>
+		<message id="ni" lang:it="Nessuna Indice presente" lang:en="There is no Index" lang:es="There is no Index"/>
+		<message id="sum"
+			lang:it="Tabella contenente l'elenco degli Indici: nella prima colonna sono contenuti i comandi di modifica caratteristiche, cancellazione e modifica struttura del'Indice"
+			lang:en="Table containing indexes list"
+			lang:es="Table containing indexes list"
+		/>
+		<message id="az" lang:it="Azioni" lang:en="Actions" lang:es="Actions"/>
+		<message id="name" lang:it="Nome" lang:en="Index Name" lang:es="Index Name"/>
+		<message id="id" lang:it="ID" lang:en="ID" lang:es="ID"/>
+		<message id="gp" lang:it="Gruppo Proprietario" lang:en="Owner Group" lang:es="Owner Group"/>
+		<message id="sim" lang:it="Mostra Nella Mappa" lang:en="Show in Map" lang:es="Show in Map"/>
+		<message id="siml" lang:it="Mostra nella mappa sino al livello" lang:en="Show in Map prior to level" lang:es="Show in Map prior to level"/>
+		<message id="noi" lang:it="NUMERO INDICI PRESENTI" lang:en="TOTAL NUMBER OF INDEXES" lang:es="TOTAL NUMBER OF INDEXES"/>
+		<message id="mci" lang:it="MODIFICA CARATTERISITCHE INDICE" lang:en="CHANGE INDEX PROPERTIES" lang:es="CHANGE INDEX PROPERTIES"/>
+		<message id="ci" lang:it="CANCELLA INDICE" lang:en="DELETE INDEX" lang:es="DELETE INDEX"/>
+		<message id="dup" lang:it="DUPLICA INDICE" lang:en="DUPLICATE INDEX" lang:es="DUPLICATE INDEX"/>
+		<message id="massimo" lang:it="Massimo" lang:en="Maximum" lang:es="Maximum"/>
+		<message id="si" lang:it="Si" lang:en="Yes" lang:es="Si"/>
+		<message id="no" lang:it="No" lang:en="No" lang:es="No"/>
+
+		<message id="msi" lang:it="MODIFICA STRUTTURA INDICE" lang:en="MODIFY INDEX STRUCTURE" lang:es="MODIFY INDEX STRUCTURE"/>
+		<message id="msim" lang:it="MODIFICA STRUTTURA DI PIÙ INDICI" lang:en="MODIFY MULTIPLE INDEX STRUCTURE" lang:es="MODIFY MULTIPLE INDEX STRUCTURE"/>
+	</group>
+</messages>

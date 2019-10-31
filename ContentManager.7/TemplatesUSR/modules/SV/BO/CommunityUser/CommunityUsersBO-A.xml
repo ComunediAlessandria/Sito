@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='iso-8859-1' ?>
+<bo id='CommunityUsers'>
+
+	<!-- è gestito da un BO aprticolare: modCommunityuserBO -->
+
+	<table name='CommunityUsers' />
+	<key name='IDCommunityUser' />
+
+	<field name='Username'			type='varchar'		len='50'	default='' />
+	<field name='Password'			type='varchar'		len='50'	default='' />
+	<field name='email'				type='varchar'		len='80'	default='' />
+	<field name='emailConfermata'	type='tinyint'		len='4'		default='1' />
+	<field name='Enabled'			type='tinyint'		len='4'		default='0' />
+	<field name='DataInserimento'	type='datetime'					default='0000-00-00 00:00:00' />
+	<field name='DataModifica'		type='TS' />
+	<field name='Lang'				type='char'			len='2'		default='IT' />
+	<field name='Nome'				type='varchar'		len='250'	default='' />
+	<field name='Cognome'			type='varchar'		len='250'	default='' />
+	<field name='ReceiveNL'			type='tinyint'		len='4'		default='1' />
+	<field name='token'				type='varchar'		len='32'	default='' />
+	
+	<join kind='M:N' name='jCommunity'
+		joinTable='CommunityJUsers'
+		joinFields='IDCommunityUser:IDCommunity'
+		dstTable='Community'
+		dstField='IDCommunity:Description'
+	/>
+
+	<event id='onAfterNew' when='onAfterNew' type='php'><![CDATA[
+
+			// imposta la lingua dell'utente a quella attiva al
+			// momento dell'iscrizione
+
+		$pars['BO']->SetField('Lang', kLang);
+
+	]]></event>
+
+	<event id='onBeforeSave' when='onBeforeSave' type='php'><![CDATA[
+
+		$bo = $pars['BO'];
+
+			// imposta la data di creazione solo nel caso di nuovo utente
+
+		if ($bo->ID() == -1)
+			$bo->SetField('DataInserimento', DBTimeToSQL(-1, false));
+
+			// se la password non è crittata e il sistema richiede
+			// il salvataggio di password crittate, esegue la
+			// trasformazione
+
+		$pw = $bo->GetField('Password');
+		if (Config('community.password.storage') === 'crypt' && substr($pw, 0, 5) !== ':md5:') {
+
+			$pw = ':md5:' . md5($pw);
+			$bo->SetField('Password', $pw);
+		}
+
+	]]></event>
+</bo>

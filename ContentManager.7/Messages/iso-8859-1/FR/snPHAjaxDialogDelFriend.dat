@@ -1,0 +1,1 @@
+a:5:{s:5:"title";s:15:"Retirer contact";s:7:"content";s:75:"Etes-vous sûr de vouloir supprimer %s à partir de la liste de vos contacts?";s:6:"notice";s:131:"Suppression d'un contact ne peut pas être annulée.<br />À la suite de cette action, le contenu publié par %s ne sera plus affichée.";s:2:"ok";s:9:"Supprimer";s:6:"cancel";s:7:"Annuler";}

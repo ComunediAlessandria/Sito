@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="IT">
+	<group id="pastats" define="false">
+
+		<message id="pagetitle" lang:it="Statistiche" lang:en="Statistics"  />
+		<message id="cspagetitle" lang:it="Statistiche Community" lang:en="Community Statistics"  />
+
+
+		<message id="repType" lang:it="Tipo di Report" lang:en="Report Type"  />
+		<message id="period" lang:it="Periodo" lang:en="Period"  />
+		<message id="community" lang:it="Community" lang:en="Community"  />
+		<message id="lang" lang:it="Lingua" lang:en="Language"  />
+		<message id="update" lang:it="Aggiorna" lang:en="Update"  />
+		
+		<message id="langall" lang:it="Tutte" lang:en="All"  />
+		
+		<message id="xlsfmt" lang:it="Formato Excel" lang:en="Excel Format"  />
+		<message id="seel" lang:it="Elenco dei motori di ricerca esclusi" lang:en="Excluded search engines's list"  />
+		<message id="ex" lang:it="Criterio di esclusione" lang:en="Exclusion criterion"  />
+
+
+		<message id="repAtit" lang:it="Statistiche di accesso" lang:en="Access statistics"  />
+		<message id="repCtit" lang:it="Pagine più visitate" lang:en="Most visited pages"  />
+		<message id="repDtit" lang:it="Analisi provenienza" lang:en="Referrer analysis"  />
+		<message id="repBtit" lang:it="Analisi comportamento Visite" lang:en="Behavior analysis"  />
+		<message id="repEtit" lang:it="Sistemi di Navigazione" lang:en="User Agents"  />
+		<message id="repFtit" lang:it="Indirizzi IP di provenienza" lang:en="Origin ip addresses"  />
+		<message id="repGtit" lang:it="Statistiche per classificazione" lang:en="Classification's Statistics"  />
+
+		<message id="month01" lang:it="Gennaio" lang:en="January"  />
+		<message id="month02" lang:it="Febbraio" lang:en="February"  />
+		<message id="month03" lang:it="Marzo" lang:en="March"  />
+		<message id="month04" lang:it="Aprile" lang:en="April"  />
+		<message id="month05" lang:it="Maggio" lang:en="May"  />
+		<message id="month06" lang:it="Giugno" lang:en="June"  />
+		<message id="month07" lang:it="Luglio" lang:en="July"  />
+		<message id="month08" lang:it="Agosto" lang:en="August"  />
+		<message id="month09" lang:it="Settembre" lang:en="September"  />
+		<message id="month10" lang:it="Ottobre" lang:en="October"  />
+		<message id="month11" lang:it="Novembre" lang:en="November"  />
+		<message id="month12" lang:it="Dicembre" lang:en="December"  />
+		
+		<message id="dow0" lang:it="Domenica" lang:en="Sunday"  />
+		<message id="dow1" lang:it="Lunedì" lang:en="Monday"  />
+		<message id="dow2" lang:it="Martedì" lang:en="Tuesday"  />
+		<message id="dow3" lang:it="Mercoledì" lang:en="Wednesday"  />
+		<message id="dow4" lang:it="Giovedì" lang:en="Thursday"  />
+		<message id="dow5" lang:it="Venerdì" lang:en="Friday"  />
+		<message id="dow6" lang:it="Sabato" lang:en="Saturday"  />
+		
+		            
+		
+		<message id="sa1" lang:it="Mensile senza i motori di ricerca" lang:en="Monthly without search engines"  />
+		<message id="sa2" lang:it="Mensile compresi i motori di ricerca" lang:en="Monthly including search engines"  />
+		<message id="sa3" lang:it="Giornaliero" lang:en="Daily"  />
+		<message id="sa4" lang:it="Settimanale" lang:en="Weekly"  />
+		<message id="sa5" lang:it="Orario" lang:en="Hourly"  />
+
+		<message id="month" lang:it="Mese" lang:en="Month"  />
+		<message id="day" lang:it="Giorno" lang:en="Day"  />
+		<message id="dow" lang:it="Giorno della settimana" lang:en="Day of Week"  />
+		<message id="tod" lang:it="Ora del giorno" lang:en="Time of day"  />
+		
+	
+		<message id="title" lang:it="Titolo" lang:en="Title"  />
+		<message id="pages" lang:it="Pagine" lang:en="Pages"  />
+		<message id="visits" lang:it="Visite" lang:en="Visists"  />
+		<message id="uniqueips" lang:it="IP univoci" lang:en="Unique IPs"  />
+		<message id="perc" lang:it="Percentuale" lang:en="Percentage"  />
+		<message id="numpag" lang:it="Numero Pagina" lang:en="Page Number"  />
+
+
+		<message id="total" lang:it="TOTALE" lang:en="TOTAL"  />
+		<message id="op" lang:it="Altre pagine" lang:en="Other pages"  />
+		<message id="fpwomd" lang:it="Pagina php senza metadati" lang:en="PHP Page without metadata"  />
+		<message id="eptfl" lang:it="Titolo assente per la pagina [%s] nella lingua [%s]" lang:en="Empty page Title: [%s] for language [%s]"  />
+		
+		<message id="loginpage" lang:it="Pagina di Login" lang:en="LoginPage"  />
+		
+
+		<message id="btt" lang:it="Torna ad inizio Pagina" lang:en="Back to Top"  />
+
+		<message id="r0" lang:it="Dati aggregati per provenienza" lang:en="Data aggregated by referrer"  />
+		<message id="rl" lang:it="Altre pagine di provenienza" lang:en="Other referral pages"  />
+
+		
+		<message id="sefrom" lang:it="Proveniente da" lang:en="From"  />
+		<message id="fromos" lang:it="Proviene da link presente in altro sito" lang:en="Comes from a link on another site"  />
+		<message id="fromts" lang:it="Proviene da un altra pagina di questo sito" lang:en="Comes from another page on this site"  />
+		<message id="fromdirect" lang:it="Indirizzo digitato o da Preferiti" lang:en="Address typed or Favorites"  />
+		
+
+		<message id="kws" lang:it="Parola ricercata" lang:en="keyword searched"  />
+		<message id="occ" lang:it="Occorrenze" lang:en="Occurrences"  />
+		
+		<message id="mko" lang:it="Principali parole chiave di %s del mese di %s" lang:en="Main keywords of %s - %s"  />
+		
+		<message id="mpo" lang:it="Principali pagine di provenienza" lang:en="Main Referring pages"  />
+		<message id="po" lang:it="Pagina di provenienza" lang:en="Referring page"  />
+		
+		<message id="sb1" lang:it="Distribuzione pagine viste per visita" lang:en="Distribution of page views per visit"  />
+		<message id="sb2" lang:it="Distribuzione tempo di permanenza per visita" lang:en="Distribution of time spent per visit"  />
+
+		<message id="ppv" lang:it="Pagine per visita" lang:en="Pages per visit"  />
+		<message id="vd" lang:it="Distribuzione Visite" lang:en="Visit's distribution"  />
+		<message id="pd" lang:it="Distribuzione Pagine" lang:en="Page's distribution"  />
+		
+		<message id="rd" lang:it="Tempo di permanenza" lang:en="Residence time"  />
+		<message id="rdnd" lang:it="Indeterminato: 1 sola pagina vista" lang:en="Indefinite: a single page view"  />
+		<message id="rd0s" lang:it="0 secondi con più di una pagina vista" lang:en="0 seconds with more than one page view"  />
+		
+		<message id="ua" lang:it="Sistema di navigazione" lang:en="User Agent"  />	
+		<message id="exluded" lang:it="Escluso" lang:en="Exluded"  />
+		
+		<message id="uastat" lang:it="Elenco dei principali sistemi di navigazione del mese di %s" lang:en="List of main User Agents of %s"  />	
+		<message id="ipstat" lang:it="Elenco dei principali indirizzi IP di provenienza del mese di %s" lang:en="List of main source IP addresses of %s"  />	
+		
+		<message id="ipa" lang:it="Indirizzo IP" lang:en="IP Address"  />	
+
+		<message id="clstattit" lang:it="Distribuzione delle visite per classificazione, motori di ricerca esclusi" lang:en="Distribution of visits by tag, search engines excluded"  />
+		
+		<message id="detail" lang:it="Dettaglio" lang:en="Detail"  />
+		
+		<message id="pwt" lang:it="Pagine classificate con" lang:en="Pages with tag"  />	
+		
+		<message id="mostviewed" lang:it="Elenco delle pagine più viste del mese di %s" lang:en="List of the most visited pages of %s"  />
+		<message id="vbt" lang:it="Visite raggruppate per classificazione" lang:en="Visits grouped by tag"  />	
+		
+		<message id="cnd" lang:it="Configurazione non definita" lang:en="Configuration is not defined"  />	
+		<message id="cndinfo" lang:it="Nella configurazione della classificazione del sito, manca la configurazione relativa agli assi da utilizzare nelle statistiche (statclassificator)" lang:en="In the configuration of the classification of the site, it lacks the configuration relative to the axes to be used in the statistics (statclassificator)"  />	
+		
+		<message id="monthstatsfrom" lang:it="Andamento Mensile a partire da" lang:en="Monthly stats from " />
+		<message id="monthstats" lang:it="Andamento Mensile" lang:en="Monthly stats" />
+		
+		<message id="nodata" lang:it="Non vi sono dati disponibili" lang:en="There are no data available" />
+				
+		<message id="nocommunitypermission" lang:it="Non disponi dei permessi per consultare i dati statistici di nessuna Community." lang:en="You do not have permission to access the statistical data of any community." />
+		
+		
+	</group>
+</messages>

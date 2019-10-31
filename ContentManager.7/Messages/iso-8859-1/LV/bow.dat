@@ -1,0 +1,13 @@
+a:30:{s:4:"dbtt";s:35:"Attenzione: database non aggiornato";s:4:"dbtx";s:262:"
+				La versione corrente del database (%1$03d)
+				non è allineata con la versione distribuita con questa versione di FlexCMP (%2$03d). È necessario procedere quanto prima all'aggiornamento poiché
+				questa situazione potrebbe portare dei malfunzionamenti.
+			";s:4:"scfs";s:19:"Verifica Filesystem";s:6:"scpath";s:8:"Percorso";s:4:"scdl";s:24:"Directory Listing Aperto";s:5:"scpex";s:21:"Codice PHP Eseguibile";s:6:"scpass";s:4:"PASS";s:6:"scfail";s:4:"FAIL";s:3:"scm";s:101:"
+				<strong>Attenzione</strong>:
+				Uno o più controlli di sicurezza hanno dato esito negativo:
+			";s:9:"scinstall";s:373:"
+				È possibile installare nelle directory un file <code>.htaccess</code> per tentare di risolvere il problema.
+				Nel caso già esista un file <code>.htaccess</code> è possibile sovrascriverlo.
+				<a href='%1$s' class='btn btn-small btn-primary' type='button'>Installa</a>
+				<a href='%2$s' class='btn btn-small btn-primary' type='button'>Installa e sovrascrivi</a>
+			";s:3:"pwa";s:78:"Le password degli utenti amministrativi sono memorizzate in chiaro su database";s:3:"pwu";s:76:"Le password degli utenti di community sono memorizzate in chiaro su database";s:8:"vi-title";s:45:"Nuove caratteristiche della versione %s di %s";s:4:"vi-h";s:25:"Evoluzione delle Versioni";s:8:"pv-title";s:26:"Statistiche in Tempo Reale";s:4:"pv-c";s:19:"visitatori correnti";s:8:"lp-title";s:22:"Ultime Pagine Visitate";s:8:"ui-title";s:19:"Informazioni Utente";s:10:"ui-browser";s:14:"%s versione %s";s:5:"ui-bs";s:10:"SUPPORTATO";s:6:"ui-bns";s:14:"NON SUPPORTATO";s:7:"ui-bie8";s:23:"PARZIALMENTE SUPPORTATO";s:4:"ui-w";s:9:"Benvenuto";s:5:"ui-mg";s:17:"Gruppo Principale";s:5:"ui-la";s:14:"Ultimo accesso";s:5:"ui-bl";s:17:"Lingua backoffice";s:5:"ui-bv";s:16:"Versione Browser";s:5:"ui-bp";s:11:"Piattaforma";s:5:"ui-br";s:19:"Risoluzione Browser";s:8:"ii-title";s:25:"Informazioni sul Prodotto";}

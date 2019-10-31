@@ -1,0 +1,9 @@
+Migliorato e potenzionato il modulo Newsletter SMS
+
+Potenziamento dei meccanismi di autenticazione e identificazione. Supporto all'autenticazione con Carta Nazionale dei Servizi (CNS). Nuove funzionalit&agrave; di mapping degli utenti. Nuove modalit&agrave; di interazione con LDAP. Supporto single sign-on in standard OpenID.
+
+Completa ristrutturazione della gestione operazioni pianificate. <br />
+&Egrave; disponibile un nuovo permesso amministrativo ed una nuova interfaccia per accedere alle funzionalit&agrave; di monitoraggio e gestione delle operazioni pianificate. <br />
+Le attivit&agrave; gestite attraverso il meccanismo di pianificazione sono: aggiornamento del motore di ricerca (spidering), ricalcolo periodico delle statistiche, creazione alias, invio lettere di newsletter, sincronismo nelle configurazioni multi staging.
+
+Correzione di alcuni bug.

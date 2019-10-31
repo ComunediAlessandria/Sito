@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<bo id='CommunityUsers'>
+	<field name='Ente'		type='varchar'		len='50'	default='' />
+	<field name='Ruolo'		type='varchar'		len='50'	default='' />
+	<field name='Telefono'	type='varchar'		len='15'	default='' />
+	<field name='ReceiveNL'	type='int'			default='1' />
+	
+	
+	<event id='onBeforeSave' when='onBeforeSave' type='php'>
+		<![CDATA[
+
+			if ($pars['BO']->IsNew()) {
+			
+				$commOri = $pars['BO']->GetField('jCommunity');
+				$pars['BO']->SetField('jCommunity', array_merge(array(2), $commOri));
+			}
+		]]>
+	</event>
+</bo>

@@ -1,0 +1,8 @@
+a:20:{s:2:"pt";s:14:"Elenco API Key";s:4:"badd";s:18:"Crea nuova API Key";s:4:"tsum";s:35:"Tabella con l\'elenco delle API KEY";s:3:"tha";s:6:"Azioni";s:5:"thkey";s:3:"KEY";s:5:"thdtc";s:9:"Creata il";s:5:"thcby";s:2:"da";s:5:"thdte";s:8:"Scadenza";s:3:"thn";s:4:"Note";s:2:"nm";s:13:"Numero Chiavi";s:9:"link-edit";s:8:"Modifica";s:8:"link-del";s:7:"Elimina";s:11:"link-enable";s:7:"Abilita";s:12:"link-disable";s:10:"Disabilita";s:4:"none";s:51:"
+				Non è ancora stata definita alcuna API Key
+			";s:12:"dialog-title";s:20:"Eliminazione API Key";s:11:"dialog-text";s:53:"
+				Si desidera eliminare l'API Key selezionata?
+			";s:11:"dialog-note";s:138:"
+				Una volta eliminata l'API Key, tutte le applicazioni esterne
+				che fanno riferiento a questa API Key smetteranno di funzionare.
+			";s:13:"dialog-btn-ok";s:7:"Elimina";s:17:"dialog-btn-cancel";s:7:"Annulla";}

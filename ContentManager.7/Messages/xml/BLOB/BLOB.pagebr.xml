@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="it">
+	<group id="bpagebr" define="false">
+		<message id="rv" lang:it="Riga vuota (inserisce %d riga/e)" lang:en="Empty Line (%d rows)" lang:es="Linea vacia (%d lineas)"/>
+
+		<message id="altezza" lang:it="Altezza" lang:en="Height" lang:es="altura"/>
+		<message id="nl" lang:it="Numero di righe vuote" lang:en="Number of empty lines" lang:es="Numero de lineas vacias"/>
+
+	</group>
+</messages>

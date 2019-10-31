@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='iso-8859-1' ?>
+<uilist id='alias'>
+
+	<page
+		title='Aliases'
+		permission='ALIS'
+	/>
+
+	<presenter
+		type='Template'
+		filename='Aliases/AliasList.html'
+	/>
+
+	<options>
+		<option name='modlink' label='__(bo-common.mod) %s' element='Short' />
+		<option name='dellink' label='__(bo-common.del) %s' element='Short' />
+	</options>
+
+	<elements>
+		<element	id='Short'			bo='Short'			label='Alias'		/>
+		<element	id='IDPagina'		bo='IDPagina'		label='Pagina'	transform='BLOBPage' />
+	</elements>
+
+	<sortOrder>
+		<sortKey	bo='Short'		order='ASC' />
+	</sortOrder>
+
+	<transform id='BLOBPage' type='php'>
+		<![CDATA[
+				// in $value
+
+			inc::mod('modFlexMDUtils');
+			$meta = FlexMD::getPageAttr($value, 'PageTitle');
+			return is_null($meta) ? '<span class="label label-important">' . __('bo-alias.errnopage',$value) . '</span>' :  $meta;
+		]]>
+	</transform>
+
+</uilist>

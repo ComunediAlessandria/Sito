@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="IT">
+	<group id="pahomepage" define="false">
+
+		<message id="selectpage" lang:it="Seleziona una Pagina" lang:en="Select a Page"  />
+
+		<message id="noinfo" lang:it="Nessuna Informazione" lang:en="No Information"  />
+
+		<message id="pagemodified" lang:it="Pagina modificata" lang:en="Page has been modified"  />
+
+
+	</group>
+</messages>

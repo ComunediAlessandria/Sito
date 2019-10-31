@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="IT">
+	<group id="pali2" define="false">
+
+		<!-- accesso alla pagina con parametri errati -->
+
+		<message id="eti" lang:it="Errore nei parametri" lang:en="Parameters error" lang:es="[es] Parameters error"/>
+		<message id='etext'>
+			<trans lang='it'><![CDATA[
+				La pagina è stata invocata fornendo un numero o una tipologia non corretta
+				di parametri.
+				<br />
+				Per questo motivo la richiesta non può essere completata.
+			]]></trans>
+			<trans lang='en'><![CDATA[
+				There is an error in parameters.
+				<br />
+				The request couldn't be fulfilled.
+			]]></trans>
+			<trans lang='es'><![CDATA[
+				[es]
+				There is an error in parameters.
+				<br />
+				The request couldn't be fulfilled.
+			]]></trans>
+		</message>
+
+		<!-- comandi relativi a tutti gli indici -->
+
+		<message id='isv' lang:it='Registra Modifiche' lang:en='Save Editing' lang:es='[es] Save Editing'/>
+		<message id='ica' lang:it='Annulla Modifiche' lang:en='Cancel Editing' lang:es='[es] Cancel Editing'/>
+		<message id='iai' lang:it='Gestione Indici Alternativa Accessibile' lang:en='Accessible Index Edit' lang:es='Gestión indices alternativa accesible'/>
+
+		<!-- comandi relativi all'indice -->
+
+		<message id='iel' lang:it='Espandi Livello' lang:en='Expand Level' lang:es='[es] Expand Level'/>
+		<message id='ian' lang:it='Aggiungi Nodo' lang:en='Add Node' lang:es='[es] Add Node'/>
+		<message id='in' lang:it='Indice: %s' lang:en='Index: %s' lang:es='[es] Index: %s'/>
+
+		<!-- titolo di pagina -->
+
+		<message id="indici" lang:it="Modifica Indice" lang:en="Index Edit" lang:es="Modificar del indice"/>
+
+<!--
+		<message id="indici" lang:it="Modifica Indice" lang:en="Index Edit" lang:es="Modificar del indice"/>
+		<message id="msi" lang:it="Modifica Struttura Indice" lang:en="Modify Index Structure" lang:es="Cambiar la estructura del Índice de"/>
+		<message id="elimina" lang:it="ELIMINA" lang:en="DELETE" lang:es="Eliminar"/>
+		<message id="registra" lang:it="REGISTRA" lang:en="SAVE" lang:es="Guardar"/>
+		<message id="modifica" lang:it="MODIFICA" lang:en="MODIFY" lang:es="Cambiar"/>
+		<message id="ei" lang:it="ESPANDI INDICE" lang:en="EXPAND INDEX" lang:es="Ampliar el índice"/>
+		<message id="aggiungi" lang:it="AGGIUNGI" lang:en="ADD" lang:es="Añadir"/>
+		<message id="giaa" lang:it="Gestione Indici Alternativa Accessibile" lang:en="Accessible Index Edit" lang:es="Gestión indices alternativa accesible"/>
+
+		<!- - pagina gestione indici accessibili - ->
+
+		<message id="indice" lang:it="Indice" lang:en="Index" lang:es="Indeces"/>
+		<message id="ia" lang:it="Indici Accessibili" lang:en="Accessible Indexes" lang:es="Accessible Indexes"/>
+		<message id="ssdvclpd" lang:it="Sei sicuro di voler cancellare la pagina dall'indice?" lang:en="Are you sure you want to remove the page from the index?" lang:es="Are you sure you want to remove the page from the index?"/>
+		<message id="clp" lang:it="Cancella la Pagina" lang:en="Remove the Page" lang:es="Remove the Page"/>
+		<message id="annulla" lang:it="Annulla" lang:en="Cancel" lang:es="Cancel"/>
+		<message id="pad" lang:it="Proprietà di" lang:en="Properties of" lang:es="Propiedad de"/>
+		<message id="pagina" lang:it="Pagina" lang:en="Page" lang:es="Página"/>
+		<message id="proprietario" lang:it="Proprietario" lang:en="Owner" lang:es="Proprietario"/>
+		<message id="ak" lang:it="Access Key" lang:en="Access Key" lang:es="Access Key"/>
+		<message id="hp" lang:it="Home Page" lang:en="Home Page" lang:es="Página principal"/>
+		<message id="conferma" lang:it="Conferma" lang:en="OK" lang:es="Confirmar"/>
+		<message id="si" lang:it="Seleziona Indice" lang:en="Select Index" lang:es="Seleccionar indice"/>
+		<message id="cis" lang:it="Carica Indice Selezionato" lang:en="Load selected Index" lang:es="Cargar indice seleccionado"/>
+		<message id="rm" lang:it="Registra Modifiche" lang:en="Save" lang:es="Registrar modificaciones"/>
+		<message id="pa" lang:it="Proprietà" lang:en="Properties" lang:es="Propiedad"/>
+		<message id="ed" lang:it="Elemento d'Indice" lang:en="Index Element" lang:es="Elemento de indice"/>
+		<message id="ss" lang:it="Sposta su" lang:en="Move Up" lang:es="Subir"/>
+		<message id="sg" lang:it="Sposta giù" lang:en="Move Down" lang:es="Bajar"/>
+		<message id="al" lang:it="Alza livello" lang:en="Move one level up" lang:es="Subir el nivel"/>
+		<message id="al0" lang:it="Abbassa livello" lang:en="Move one level down" lang:es="Bajar el nivel"/>
+		<message id="cancella" lang:it="Cancella" lang:en="Remove" lang:es="Eliminar"/>
+		<message id="aggiungi0" lang:it="Aggiungi" lang:en="Add" lang:es="Añadir"/>
+
+		<message id="ar" lang:it="L'indice non ha pagine." lang:en="There are no pages in this index." />
+		<message id="art" lang:it="Aggiungi una Pagina" lang:en="Add a Page" />
+-->
+	</group>
+</messages>

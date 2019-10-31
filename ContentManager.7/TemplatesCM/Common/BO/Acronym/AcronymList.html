@@ -1,0 +1,31 @@
+<div id="AdminCorpoBox">
+	<h1>Acronimi, Abbreviazioni, Parole straniere di uso comune</h1>
+	<div class="AdminPageFooterCommand"><a href="{ADDLINK}">{ADDIMG}Aggiungi un nuovo Termine</a></div>
+	  <table class="AdminTable" summary="Tabella contenente l'elenco dei Termini: nella prima colonna sono contenuti i comandi di eliminazione e modifica del termine.">
+		<thead>
+		  <tr>
+			<td scope="col" class='AdminIcoCell'>Azioni</td>
+			<th scope="col">Termine</th>
+			<th scope="col">Significato</th>
+			<th scope="col">Lingua</th>
+			<th scope="col">Tipo</th>
+		  </tr>
+		</thead>
+		<tbody>
+	  <!-- BEGIN row -->
+	  <tr class="{CLASSTR}">
+		<td class='AdminIcoCell'>{DELLINK} {MODLINK}</td>
+		<th scope="row">{SEARCH}</th>
+		<td>{VALUE}</td>
+		<td>{LANG}</td>
+		<td>{KIND}</td>
+	  </tr>
+	  <!-- END row -->
+		</tbody>
+	</table>
+	<div class="AdminPageFooterCommand"><a href="{ADDLINK}">{ADDIMG}Aggiungi un nuovo Termine</a></div>
+</div>
+<div class="AdminPageFooterStatus"> NUMERO ELEMENTI PRESENTI: {TOTRECORDS} </div>
+<div>{PAGESELECTOR} </div>
+
+

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="lang" defaultlang="IT">
+  <group id="snPHAjaxDialogDelcomment" define="false">
+    <message id="title"
+    	lang:it="Eliminazione Commento"
+    	lang:en="Delete Comment"
+    	lang:fr="Supprimer le commentaire"
+    	lang:de="Kommentar löschen"
+    	lang:es="Eliminar un comentario"
+    	lang:ru="Удалить комментарий"
+    />
+    <message id="content"
+    	lang:it="Sei proprio sicuro di voler eliminare questo commento?"
+    	lang:en="Are you sure you want to delete this comment?"
+    	lang:fr="Êtes-vous sûr de vouloir supprimer ce commentaire?"
+    	lang:de="Sind Sie sicher, dass Sie diesen Kommentar löschen?"
+    	lang:es="¿Está seguro que desea eliminar este comentario?"
+    	lang:ru="Вы уверены, что хотите удалить этот комментарий?"
+    />
+    <message id="notice"
+    	lang:it="L'eliminazione del commento non può essere annullata."
+    	lang:en="The elimination of the comment can not be undone."
+    	lang:fr="L'élimination du commentaire ne peut pas être annulée."
+    	lang:de="Die Beseitigung des Kommentars kann nicht rückgängig gemacht werden."
+    	lang:es="La eliminación de la observación no se puede deshacer."
+    	lang:ru="Ликвидация комментарий не может быть отменено."
+    />
+    <message id="ok"
+    	lang:it="Elimina"
+    	lang:en="Delete"
+    	lang:fr="Effacer"
+    	lang:de="Löschen"
+    	lang:es="Borrar"
+    	lang:ru="удалять"
+    />
+    <message id="cancel"
+    	lang:it="Annulla"
+    	lang:en="Undo"
+    	lang:fr="Annuler"
+    	lang:de="Rückgängig machen"
+    	lang:es="Deshacer"
+    	lang:ru="отменить"
+    />
+  </group>
+</messages>

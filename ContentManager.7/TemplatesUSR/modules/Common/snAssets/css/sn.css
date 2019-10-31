@@ -1,0 +1,1813 @@
+
+/* Body */
+@define BodyColor #000
+@define BodyBgColor #fff
+
+/* Columns */
+@define LeftColBgColor #FFF
+@define CenterColBgColor #FFF
+@define RightColBgColor #FFF
+
+/* Header */
+@define HeaderHeight 50px
+@define HeaderColor #FFFFFF
+@define HeaderBgColor #3B5998
+@define HeaderLinkBgColor #5B74AD
+
+/* Status */
+@define StatusColor #000000
+@define StatusNameColor #000000
+@define StatusTextColor #555555
+@define StatusTimeColor #999999
+@define StatusBGColor #EDEFF4
+@define StatusBorderBotColor #CFD6E5
+
+/* Generic Link */
+@define LinkColor #3B5998
+@define LinkBgColor #FFF
+
+/* Box Titles */
+@define BoxTitleColor #000
+@define BoxTitleBgColor #ECEFF5
+
+
+@define BoxTitleLinkColor #3B5998
+@define BoxTitleLinkBgColor #ECEFF5
+@define BoxTitleLinkHoverColor #FFF
+@define BoxTitleLinkHoverBgColor #3B5998
+@define BoxTitleBorderColor #94A3C4
+
+/* Active Buttons */
+@define ButtonBGColor #4C629D
+@define ButtonColor #FFFFFF
+@define ButtonBorderTop #7788B7
+
+/* Post list */
+@define PostListCommentBGColor #ECEFF5
+
+
+/*
+MANCA: box name and status + box ricerca + box filtro amici
+*/
+
+
+/* utils */
+
+.clr {  clear:both; width:99%; height:1px; line-height:1px; font-size:1px; }
+.snHidden { display: none; }
+.snOutOfView { position: absolute; left: -1000em; }
+
+
+/* contenitori - impaginazione */
+
+body {
+	border-width: 0;
+	padding: 0;
+	margin: 0px;
+	font-size: 90%;
+	color: @BodyColor;
+	background: @BodyBgColor;
+ 	font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+}
+
+/* impaginazione */
+
+.header{
+	width: 100%;
+	left: 0;
+	top: 0px;
+	margin: 0;
+	height: @HeaderHeight;
+	color: white;
+	background-color: @HeaderBgColor;
+	border-top: 1px solid #666;
+}
+.headercontent{
+	width: 940px;
+	margin: 1px auto 0 auto;
+}
+
+.main{
+	position: relative;
+	width: 100%;
+	left: 0;
+	top: 0px;
+	margin: 0;
+	padding: 0;
+}
+
+
+.wrapper{
+	position: relative;
+	width: 940px;
+	left: 0;
+	top: 0px;
+	margin: 0 auto;
+	padding: 0 0 30px 0;
+}
+
+.left{
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	width: 200px;
+	margin: 0 0 0 -470px;
+	z-index: 10;
+	background-color: @LeftColBgColor;
+}
+
+.crcontainer{
+	position: relative;
+	top: 0;
+	left: 0;
+	margin: 0 0 0 220px;
+	[IE6OPEN] margin: 0 0 0 240px; [IE6CLOSE]
+}
+.crcontainer1col{
+	position: relative;
+	top: 0;
+	left: 0;
+	margin: 0;
+}
+
+.center{
+	width: 500px;
+	[IE6OPEN] width: 520px; [IE6CLOSE]
+	min-height: 30em;
+	background-color: @CenterColBgColor;
+}
+.center1col{
+	width: 940px;
+	min-height: 30em;
+}
+.right{
+	position: absolute;
+	top: 0px;
+	right: 0;
+	width: 200px;
+	margin: 0;
+	padding: 0 0 30px 0;
+	background-color: @RightColBgColor;
+}
+
+.footer{
+	border-top: 1px solid #BBBBBB;
+	border-left: 1px solid #BBBBBB;
+	border-right: 1px solid #BBBBBB;
+	padding: 4px 20px;
+	background-color: #D3D3D3;
+	width: 100%;
+	position: fixed;
+	[IE6OPEN] position: relative;[IE6CLOSE]
+	bottom: 0;
+	left: 0;
+	font-size: .6em;
+	z-index: 100;
+}
+
+/* blocco name and status */
+
+.status{
+	color: @StatusColor;
+	background-color: @StatusBGColor;
+	border-bottom: 1px solid @StatusBorderBotColor;
+	margin: 0 0 10px 0;
+}
+.nameandstatus {
+	margin: 0 auto;
+	padding: 10px 4px 0 10px;
+	color: @StatusColor;
+	background-color: @StatusBGColor;
+	width: 492px;
+	min-height:40px;
+}
+.nameandstatus h1 {
+	margin: 0; padding: 0;
+	color: @StatusNameColor; background-color: @StatusBGColor;
+	display: inline;
+	font-size: 1.2em;
+	[IE6OPEN] margin: 0 1em 0 0;[IE6CLOSE]
+	[IE7OPEN] margin: 0 1em 0 0;[IE7CLOSE]
+}
+.nameandstatus span {font-size: .9em; color: @StatusTextColor; background-color: transparent;}
+.nameandstatus small.reltime{font-size: .6em; color: @StatusTimeColor;}
+
+#statusmessage textarea { font-family: "lucida grande", tahoma, verdana, arial, sans-serif;}
+
+
+/* top menu */
+
+
+.snSiteName{float: left; width: 20%; font-size: 1.2em; margin: 0; color: #fff;}
+.snSiteName a{}
+.snSiteName img { vertical-align: middle; border: 0;}
+
+
+#topmenu {
+	color: @HeaderColor;
+	background-color: @HeaderBgColor;
+	font-weight: normal;
+	font-size: .75em;
+	padding: 0;
+}
+
+#topmenu #topmenusearch {
+	float: right;
+}
+#topmenu #topmenusearch form {margin: 0; padding: 16px 0 0 10px; }
+#topmenu #topmenusearch form p {margin: 0; padding: 0;}
+#topmenu #topmenusearch form input {margin: 0; padding: 0; display: block; float: left; }
+#topmenu #topmenusearch form input#topSearchTextField{color: #000; background-color: #fff; border: 1px solid @HeaderBgColor; height: 15px; padding: 2px 2px; vertical-align:middle;}
+#topmenu #topmenusearch form input#topSearchTextField.inputFieldHint{ color: #939393; background-color: #fff;}
+#topmenu #topmenusearch form input#topSearchSubmit{}
+
+
+#topmenu a {
+	color: @HeaderColor;
+	background-color: @HeaderBgColor;
+	text-decoration: none;
+	padding: 14px 8px;
+}
+#topmenu a:hover{
+	color: @HeaderColor;
+	background-color: @HeaderLinkBgColor;
+}
+
+
+#topmenu #topmenuright {
+	float: right;
+	margin: 0;
+	padding: 20px 0 0 0;
+}
+#topmenu #topmenuright ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+#topmenu #topmenuright li {
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+
+#topmenu #topmenumain {
+	float: left;
+	margin: 0;
+	padding: 20px 0 0 90px;
+	font-weight: bold;
+}
+#topmenu #topmenumain ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+#topmenu #topmenumain li {
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+/* box */
+
+.box {
+	margin: 0;
+	padding: 0 0 .3em 0;
+}
+
+.box .content{ 	font-size: .8em; padding: 0 0 0 12px;}
+
+.box .title  {
+	border-top:1px solid @BoxTitleBorderColor;
+	color: @BoxTitleColor;
+	background:@BoxTitleBgColor none repeat scroll 0 0;
+	display:block;
+	padding:5px 8px;
+	margin: 0;
+	position:relative;
+}
+.box .title h2 {
+	font-size: .8em;
+	margin: 0;
+	padding: 0;
+}
+.box .title a.textlink {
+	font-size: .75em;
+	text-decoration: none;
+	color: @BoxTitleLinkColor;
+	background-color: @BoxTitleLinkBgColor;
+	margin: 0;
+	padding: 1px;
+	display: block;
+	position: absolute;
+	top: 4px;
+	right: 4px;
+}
+.box .title a.textlink:hover {
+	color: @BoxTitleLinkHoverColor;
+	background-color: @BoxTitleLinkHoverBgColor;
+}
+
+.box .subtitle  {
+	border-bottom:1px solid #D8DFEA;
+	padding:2px 8px;
+	margin: 0 0 5px 0;
+}
+.box .subtitle a {
+	color: @LinkColor; background-color: transparent;
+	font-size: .75em;
+	text-decoration: none;
+}
+.box .subtitle a:hover {
+		text-decoration: underline;
+}
+
+.box small.reltime, .docslist small.reltime{font-size: .8em; color: #999999; white-space: nowrap; padding: 0 0 0 .5em;}
+
+
+/* box per l'inserimento dello status */
+.button{
+	border: 1px solid #1C325C;
+	display: inline-block;
+}
+
+
+.action {
+	margin: 0 0 10px 0;
+	padding: 8px;
+	border: 1px solid #bbb;
+	color: #000;
+	background-color: #EEE;
+	border-top: 1px solid #7E7E7E;
+	border-left: 1px solid #BFBFBF;
+	border-right: 1px solid #BFBFBF;
+	border-bottom: 1px solid #BFBFBF;
+}
+
+.action .title  {
+	border-top:1px solid @BoxTitleBorderColor;
+	background:@BoxTitleBgColor none repeat scroll 0 0;
+	display:block;
+	padding:5px 8px;
+	margin: 0;
+	position:relative;
+}
+.action .title h2 {
+	font-size: .8em;
+	margin: 0;
+	padding: 0;
+}
+.action .content {
+	padding: 0;
+	text-align: right;
+}
+.action form {
+	position: relative;
+	top: 0;
+	left: 0;
+}
+.action .button {
+	position: absolute;
+	bottom: -4px;
+	right: 0;
+	[IE6OPEN] right: 20px;[IE6CLOSE]
+}
+.action #statusupdate {
+	padding: 1px 3px 1px 3px;
+	margin: 0;
+	color: @ButtonColor;
+	background-color: @ButtonBGColor;
+	font-weight: bold;
+	font-size: 1.1em;
+	border-top: 1px solid @ButtonBorderTop;
+	border-right: 1px solid @ButtonBGColor;
+	border-bottom: 1px solid @ButtonBGColor;
+	border-left: 1px solid @ButtonBGColor;
+}
+
+.action #statustext{
+	display: block;
+	width: 468px;
+	margin: 0 auto 8px auto;
+	text-align: left;
+	font-weight: bold;
+	color: #000;
+	background-color: #fff;
+	border: 1px solid #BFBFBF;
+	padding: 3px 6px;
+	font-size: 1.1em;
+
+    resize: none;
+}
+.action #statustext.inputFieldHint{
+	color: #939393;
+	background-color: #fff;
+}
+.action form {
+	margin: 0;
+	padding: 0;
+}
+.action div#statusattach{
+	margin: 0;
+	padding: 0;
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 380px;
+	[IE6OPEN] left: -116px;[IE6CLOSE]
+	[IE7OPEN] left: -106px;[IE7CLOSE]
+}
+.action fieldset{
+	border: none;
+	text-align: left;
+	margin: 0;
+	padding: 0;
+}
+.action fieldset legend{
+	font-weight: bold;
+	color: #999999;
+	margin: 0;
+	padding: 0;
+}
+.action ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	left: 5em;
+	[IE6OPEN]left: 6em;[IE6CLOSE]
+}
+.action ul li {
+	display: inline;
+}
+.action ul li a{
+	color: @LinkColor;
+	background-color: #EEE;
+	text-decoration: none;
+	padding: 1px 2px;
+}
+.action ul li a:hover{
+	color: #eee;
+	background-color: @LinkColor;
+}
+.action fieldset fieldset{
+	height: auto;
+	border: 1px solid #BFBFBF;
+	padding: 2px 2px 2px 10px;
+	margin: 4px 0 0 0;
+}
+.action fieldset fieldset label{
+	width: 7em;
+	padding: 0 .5em 0 0;
+}
+.action fieldset fieldset legend {
+	padding: 0 2px;
+}
+.action fieldset fieldset input {
+	border: 1px solid #3B5998;
+	width: 22em;
+}
+
+/* box per i mesaggi di notifica */
+
+.msgbox, .gmsgbox {
+	position: relative;
+	margin: 10px 0px;
+	padding: 4px 6px;
+	font-size: .9em;
+	width: 486px; float:left;
+}
+
+.msgbox a{color: #000; background-color: transparent;}
+.msgbox a:hover {text-decoration: none;}
+
+.gmsgbox .cmd, .msgbox .cmd {
+	position: absolute;
+	top: 4px;
+	right: 3px;
+	font-size: .9em;
+}
+
+.gmsgbox .cmd a, .msgbox .cmd a {
+	text-decoration: none;
+	font-weight: normal;
+	color: @LinkColor;
+	background-color: transparent;
+}
+
+.gmsgbox .cmd a:hover {
+	color: #fff;
+	background-color: @LinkColor;
+}
+
+.priB, .priM, .priE {
+
+	border: 1px solid #C5A524;
+	background-color: #FFECA0;
+}
+
+.gmsgbox .title {
+	margin: 2px 0; font-size: 1em;
+}
+
+.gmsgbox a { color: #000; background-color: #FFECA0; }
+.gmsgbox a:hover { text-decoration: none; }
+
+.gmsgbox img {
+        float:left; margin-right:5px; width: 100px;
+}
+.gmsgbox .text, .gmsgbox .link {
+	width: 380px; float:left; margin-bottom: 3px;
+}
+.gmsgbox p {
+	float:left; margin:0; padding:0;
+}
+
+
+.profileinfo dl {
+	margin: 4px 0;
+	padding: 0;
+}
+.profileinfo dt {
+	color: #808080;
+}
+.profileinfo dd {
+	color: #000;
+	margin: 0 0 .5em 0;
+	padding: 0;
+}
+
+.profilephoto .content { padding: 0; }
+.profilephoto .content img {}
+
+/*
+	pannello per le foto
+*/
+
+.box.photo .content {padding: 0;}
+.box.photo .content img {}
+
+/*
+	pannello informazioni gruppo
+*/
+
+.box.info dl {
+	margin: 4px 0;
+	padding: 0;
+}
+.box.info dt {
+	color: #808080;
+}
+.box.info dd {
+	color: #000;
+	margin: 0 0 .5em 0;
+	padding: 0;
+}
+
+/*
+	pannello che contiene un elenco di link
+	(eg: comandi per i gruppi)
+*/
+
+.linklist {margin: 0 0 1em 0;}
+.linklist .content {padding: 0;}
+.linklist ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.linklist ul li{
+	display: block;
+	margin: 0;
+	padding:0;
+
+	border-bottom: 1px solid #D8DFEA;
+}
+
+.linklist ul li a {
+	display: block;
+	padding: 4px 8px;
+	text-decoration: none;
+	color: @LinkColor;
+	background-color: @LinkBgColor;
+}
+.linklist ul li a:hover {
+	color: @LinkBgColor;
+	background-color: @LinkColor;
+}
+.linklist ul li.last {padding: 4px 8px;}
+.linklist ul li.last a {padding:0; display: inline;}
+
+.group.info {margin: 0 0 1em 0;}
+.group.info .content {padding: 0 0 0 0px;}
+.group.info .content p {margin: 0; padding: 0;}
+.group.info .content a {
+	color: @LinkColor;
+	background-color: @LinkBgColor;
+	text-decoration: none;
+}
+.group.info .content a:hover {text-decoration: underline;}
+.group.info .content p a {
+	border-bottom: 1px solid #D8DFEA;
+	border-top: 1px solid #D8DFEA;
+	padding: 4px 8px;
+	display: block;
+}
+.group.info .content p a:hover {color: @LinkBgColor; background-color: @LinkColor; text-decoration: none;}
+.group.info dl {margin: 2px 0 0 10px;}
+.group.info dl ul {list-style-type: none; padding: 0; margin: 0 0 0 4px;}
+.group.info .content dl dd ul li a {padding: 0; border: none;}
+.contactslist {
+	clear: both;
+}
+
+.contactslist ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.contactslist ul li{
+	display: block;
+	width: 62px;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+.contactslist ul li a {
+	display: block;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	width: 50px;
+	min-height: 100px;
+	color: @LinkColor;
+	background-color: transparent;
+	text-decoration: none;
+	font-size: .9em;
+	line-height: 1.1em;
+}
+.contactslist ul li a span.contactimg {
+	display: block;
+	margin: 0 0 2px 0;
+	padding: 0;
+	border: 0;
+	width: 50px;
+	height: 50px;
+}
+.contactslist ul li a span.contactimg img {
+	display: block;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+.contactslist ul li a:hover {text-decoration: underline;}
+
+
+.requests{ margin: 0 0 .5em 0;}
+.requests p.norequest {margin: 0; padding: 2px 0; }
+.requests ul {list-style-type: none; margin: 0; padding: 0;}
+.requests ul li.itemrequest {
+	padding: 2px 0 2px 24px;
+	background-position: center left;
+	background-repeat:no-repeat;
+}
+.requests ul li.friend {background-image: url(snAssets/img/RequestFriend.gif);}
+.requests ul li.group {background-image: url(snAssets/img/RequestGroup.gif);}
+.requests ul li.event {background-image: url(snAssets/img/RequestEvent.gif);}
+.requests ul li.itemrequest a { text-decoration: none; color: @LinkColor; background-color: #fff;}
+.requests ul li.itemrequest a:hover {text-decoration: underline;}
+.requests ul li.itemrequest a strong{font-size: 1em; font-weight: bold;}
+
+
+.docs{}
+.docs .content{ padding: 0;}
+.docs p.nodocs {margin: 0; padding: 2px 4px 2px 12px;}
+.docs ul {list-style-type: none; margin: 0; padding: 0;}
+.docs ul li.docli {
+	padding: 2px 0 .5em 24px;
+	margin: 0 0 2px 0;
+	border-bottom: 1px solid #D8DFEA;
+	background-position: 2px 3px;
+	background-repeat:no-repeat;
+}
+.docs ul li a {color: @LinkColor; background-color: #fff; text-decoration: none;}
+.docs ul li a:hover {text-decoration: underline;}
+.docs ul li a.membername {font-size: .9em;}
+
+/* box con l'elenco dei gruppi */
+
+.grlist {}
+.grlist .content { padding: 0; }
+.grlist dl { padding: 0; margin: 0; }
+.grlist dl dt {font-weight: bold; padding: 0; margin: 4px 0 0 0;}
+.grlist dl dd { padding: 0 60px 0 0; margin: 0 0 2px 12px; position: relative; border-bottom: 1px solid #D8DFEA;}
+.grlist dl dd a {color: @LinkColor; background-color: #fff; text-decoration: none;}
+.grlist dl dd a:hover {text-decoration: underline;}
+.grlist dl dd small {white-space: nowrap; display: block; position: absolute; top: 2px; right: 0;}
+
+.groupask { margin: 0 0 .5em 0;}
+.groupask .content a {color: @LinkColor; background-color: #fff; text-decoration: none;}
+.groupask .content a:hover {text-decoration: underline;}
+
+.icon-7z	{ background-image: url(snAssets/img/fileicons/icon-7z.gif);}
+.icon-csv	{ background-image: url(snAssets/img/fileicons/icon-csv.gif);}
+.icon-doc	{ background-image: url(snAssets/img/fileicons/icon-doc.gif);}
+.icon-gif	{ background-image: url(snAssets/img/fileicons/icon-gif.gif);}
+.icon-gz	{ background-image: url(snAssets/img/fileicons/icon-gz.gif);}
+.icon-jpg	{ background-image: url(snAssets/img/fileicons/icon-jpg.gif);}
+.icon-jpeg	{ background-image: url(snAssets/img/fileicons/icon-jpg.gif);}
+.icon-bmp	{ background-image: url(snAssets/img/fileicons/icon-jpg.gif);}
+.icon-mdb	{ background-image: url(snAssets/img/fileicons/icon-mdb.gif);}
+.icon-pdf	{ background-image: url(snAssets/img/fileicons/icon-pdf.gif);}
+.icon-png	{ background-image: url(snAssets/img/fileicons/icon-png.gif);}
+.icon-pps	{ background-image: url(snAssets/img/fileicons/icon-pps.gif);}
+.icon-ppt	{ background-image: url(snAssets/img/fileicons/icon-ppt.gif);}
+.icon-rar	{ background-image: url(snAssets/img/fileicons/icon-rar.gif);}
+.icon-rtf	{ background-image: url(snAssets/img/fileicons/icon-rtf.gif);}
+.icon-tgz	{ background-image: url(snAssets/img/fileicons/icon-tgz.gif);}
+.icon-txt	{ background-image: url(snAssets/img/fileicons/icon-txt.gif);}
+.icon-xls	{ background-image: url(snAssets/img/fileicons/icon-xls.gif);}
+.icon-zip	{ background-image: url(snAssets/img/fileicons/icon-zip.gif);}
+
+
+
+/* intestazione gruppo */
+.groupTitle {}
+.groupTitle h1 {font-size: 1.2em; margin: 4px 0;}
+.groupTitle è {font-size: .9em; font-weight: normal;}
+
+
+/* flusso principale */
+
+.postlist{}
+.postlist .content{padding: 0;}
+.postlist ol {list-style-type: none; margin: 0; padding: 0;}
+.postlist li, .postDetail {
+	border-top: 1px solid #EEEEEE;
+	padding: 4px 0 0 64px;
+	[IE6OPEN]padding: 4px 0 0 0;[IE6CLOSE]
+	margin: 0 0 4px 0;
+	position: relative;
+	top: 0;
+	left: 0;
+	min-height: 70px;
+	[IE6OPEN] height: 70px; [IE6CLOSE]
+	}
+.postlistmember{
+	width: 50px;
+	position: absolute;
+	top: 6px;
+	left: 0;
+	text-align: center;
+}
+.postlistmember a{
+	display: block;
+	width: 50px;
+	height: 50px;
+	margin: 0;
+	padding: 0;
+}
+.postlistmember a img{
+	display: block;
+	border: none;
+	margin: 0 auto;
+}
+.postlisttext{
+	[IE6OPEN] margin: 0 0 0 64px; [IE6CLOSE]
+}
+.postlisttext h3 {
+	font-weight: normal;
+	display: block;
+	margin: 0;
+	padding: 0;
+	font-size: 1.1em;
+	width: 386px;
+}
+.postlisttext h3 a{
+	text-decoration: none;
+	font-size: 1.2em;
+	font-weight: bold;
+	color: @LinkColor;
+	background-color: #fff;
+}
+.postlisttext h3 a:hover{text-decoration: underline;}
+
+	/* azioni possibili sul post */
+
+.postcmd {
+	position: absolute;
+	top: 7px;
+	right: 6px;
+}
+.postcmd a {
+	text-decoration: none;
+	font-weight: normal;
+	color: @LinkColor;
+	background-color: transparent;
+}
+.postcmd a:hover {
+	color: #fff;
+	background-color: @LinkColor;
+}
+
+.postcmd a.admin { color: #EB706D; }
+.postcmd a.admin:hover { color: red; background-color: transparent; }
+
+.postlistcomments {
+	[IE6OPEN] margin: 0 0 0 64px; [IE6CLOSE]
+}
+.postlistcomments small.reltime{font-size: .95em; padding: 0;}
+.postlistcomments a.cmdComment, .postlistcomments a.cmd {text-decoration: none; color: @LinkColor; font-size: .95em;}
+.postlistcomments a.cmdComment:hover, .postlistcomments a.cmdComment:hover {text-decoration: underline;}
+.postlistcomments span.sep {font-size: .9em;}
+
+/* elementi del flusso principale dei post, differenziati per tipo */
+.postvideo{
+	padding: 4px 0 0 0;
+	[IE6OPEN] margin: 0 0 0 64px; [IE6CLOSE]
+}
+
+.postfile{
+	padding: 4px 0 0 0;
+	[IE6OPEN] margin: 0 0 0 64px; [IE6CLOSE]
+}
+.postfile p {margin: 0; padding: 0;}
+.postfile a{
+	color: @LinkColor;
+	background-color: #fff;
+	text-decoration: none;
+	display: block;
+	padding: 2px 0 .5em 24px;
+	background-position: 2px 3px;
+	background-repeat:no-repeat;
+}
+.postfile a:hover{text-decoration: underline;}
+
+
+
+.postimg {
+	padding: 4px 0 4px 0;
+	[IE6OPEN] margin: 0 0 0 64px; [IE6CLOSE]
+}
+.postimg a{
+	margin:0; padding: 0; border: none;
+	text-decoration: none;
+}
+.postimg a img{
+	padding: 2px;
+	border: 1px solid #ccc;
+}
+
+.postlink {
+	padding: 8px 0;
+	[IE6OPEN] margin: 0 0 0 64px; [IE6CLOSE]
+}
+.postlink a{
+	color: @LinkColor;
+	background-color: #fff;
+	text-decoration: none;
+}
+.postlink a:hover{text-decoration: underline;}
+
+
+.postfriendship {
+	padding: 4px 0 4px 0;
+	[IE6OPEN] margin: 0 0 0 64px; [IE6CLOSE]
+}
+.postfriendship p {margin: 0; padding: 0;}
+.postfriendship p a {
+	color: @LinkColor;
+	background-color: #fff;
+	text-decoration: none;
+}
+.postfriendship p a:hover{text-decoration: underline;}
+
+/* box per l'inserimento di un commento */
+
+.insertcomment {
+	margin: 1px 0;
+	padding: 4px 0 4px 6px;
+	[IE6OPEN] margin: 0 0 0 64px; padding: 0px;[IE6CLOSE]
+	background: @PostListCommentBGColor;
+}
+
+.insertcomment div.inputtext {margin: 0; padding: 0; }
+.insertcomment div.inputtext span{
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 32px;
+	border: none;
+	float: left;
+	text-align: left;
+}
+.insertcomment div.inputtext img {
+	display: block;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+.insertcomment div.inputtext textarea {
+	border: 1px solid #BDC7D8;
+	width: 382px;
+	margin: 0 0 4px 6px;
+	text-align: left;
+	height: 2.2em;
+	font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+	font-size: .95em;
+}
+.insertcomment div.inputtext textarea.inputFieldHint{color: #939393;}
+.insertcomment div.inputbutton {text-align: right; padding: 0 8px 0 0;}
+.insertcomment div.inputbutton div.button{
+	[IE6OPEN]display: inline; width: 6em; margin:0; padding: 0;[IE6CLOSE]
+	[IE7OPEN]display: inline; width: 6.8em; margin:0; padding: 0;[IE7CLOSE]
+}
+.insertcomment div.inputbutton .commentbutton{
+	padding: 1px 2px;
+	margin: 0;
+	color: @ButtonColor;
+	background-color: @ButtonBGColor;
+	font-weight: normal;
+	font-size: .9em;
+	border-top: 1px solid @ButtonBorderTop;
+	border-right: 1px solid @ButtonBGColor;
+	border-bottom: 1px solid @ButtonBGColor;
+	border-left: 1px solid @ButtonBGColor;
+}
+
+/* commento al post */
+
+
+.postlistcomments ol {
+	list-style-type: none;
+	margin: 0; padding: 0;
+}
+.postlistcomments ol li {
+	position: relative;
+	top: 0;
+	left: 0;
+	color: #000;
+	background-color: @PostListCommentBGColor;
+	padding: 4px 0 4px 6px;
+	margin: 2px 0;
+	min-height: 32px;
+	font-size: .95em;
+}
+.postlistcomments ol li.morecomments{min-height: 0;}
+.postlistcomments ol li.morecomments p{
+	margin: 0; padding: 0;
+	text-align: left;
+
+}
+.postlistcomments ol li.morecomments p a, 
+.uiMorePosts a {
+	color: @LinkColor; background-color: transparent;
+	display: block;
+	padding: 0 0 0 20px;
+	background-position: 0px 1px;
+	background-repeat:no-repeat;
+	background-image: url(snAssets/img/icon-moremessages.gif);
+	text-decoration: none;
+}
+.uiMorePosts a {
+	background-image: none; 
+	border: 1px solid #BFBFBF;
+	background-color: @BoxTitleBgColor;
+	padding: 4px 6px;
+	font-weight: bold;
+}
+.postlistcomments ol li.morecomments p a:hover, 
+.uiMorePosts a:hover {
+	text-decoration: underline;
+}
+
+.postlistcomments ol li div.commentimage a{
+	display: block;
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	top: 4px;
+	left: 6px;
+	text-align: center;
+}
+.postlistcomments ol li div.commentimage a img {
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+	border: none;
+}
+.postlistcomments ol li div.commenttext {
+	margin: 0 0 0 40px;
+	width: 340px;
+}
+.postlistcomments ol li div.commenttext a.commenttext {
+	text-decoration: none;
+	font-weight: bold;
+	color: @LinkColor;
+	background-color: transparent;
+}
+.postlistcomments ol li div.commenttext a.commenttext:hover { text-decoration: underline;}
+.postlistcomments ol li div.commenttext small {
+	display: block;
+}
+.postlistcomments ol li div.commentdel{
+	position: absolute;
+	top: 4px;
+	right: 6px;
+}
+.postlistcomments ol li div.commentdel a,
+.postlistcomments ol li a.cmdMore {
+	text-decoration: none;
+	font-weight: normal;
+	color: @LinkColor;
+	background-color: transparent;
+}
+.postlistcomments ol li div.commentdel a:hover,
+.postlistcomments ol li a.cmdMore:hover {
+	color: #fff;
+	background-color: @LinkColor;
+}
+
+/* risultati della ricerca */
+
+#searcht, #cmdsearch { border: 1px solid #C0C0C0; }
+.searchbox .userlist {
+	list-style: none;
+	margin: 2px;
+	padding: 2px;
+}
+
+
+/* pagina con elenco completo contatti */
+//.contactslist {}
+ol.memberlist {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+ol.memberlist li {
+
+	padding: 4px 0;
+	border-bottom: 1px solid #D8DFEA;
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 50px;
+}
+
+ol.memberlist li.last { border-bottom: none; }
+
+
+ol.memberlist div.contactimg{
+	width: 50px;
+	position: absolute;
+	top: 6px;
+	left: 0;
+}
+ol.memberlist div.contactimg a{
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 50px;
+}
+ol.memberlist div.contactimg a img {
+	display: block;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+ol.memberlist div.contactname {
+	margin: 10px 0 0 60px;
+	font-size: 1.1em;
+}
+ol.memberlist div.contactname a{text-decoration: none; color: @LinkColor; background-color: #fff; font-weight: bold;}
+ol.memberlist div.contactname a:hover{text-decoration: underline;}
+
+ol.memberlist div.contactdel {
+	position: absolute;
+	top: 4px;
+	right: 4px;
+}
+ol.memberlist div.contactdel a{
+		padding: 1px 2px;
+		text-decoration: none;
+		color: @LinkColor; background-color: @LinkBgColor;
+		font-weight: normal;
+}
+ol.memberlist div.contactdel a:hover{
+	color: @LinkBgColor;
+	background-color: @LinkColor;}
+
+/* pagina con elenco completo richieste */
+.requestslist{}
+
+
+.requestslist h2 {
+	padding: 2px 0 2px 24px;
+	background-position: center left;
+	background-repeat:no-repeat;
+}
+.contactrequest h2 {background-image: url(snAssets/img/RequestFriend.gif);}
+.grouprequest h2  {background-image: url(snAssets/img/RequestGroup.gif);}
+.eventrequest h2 {background-image: url(snAssets/img/RequestEvent.gif);}
+
+.requestslist ol {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	border-bottom: 1px solid #D8DFEA;
+}
+.requestslist ol li {
+	margin: 4px 0;
+	padding: 4px 0;
+	border-top: 1px solid #D8DFEA;
+	position: relative;
+	top: 0;
+	left: 0;
+	min-height: 50px;
+}
+.requestslist ol div.contactimg{
+	width: 50px;
+	position: absolute;
+	top: 6px;
+	left: 0;
+}
+.requestslist ol div.contactimg a{
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 50px;
+}
+.requestslist ol div.contactimg a img {
+	display: block;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+.requestslist ol div.contactname {
+	font-size:1.2em;
+	margin:16px 0 0 60px;
+	width: 260px;
+}
+.requestslist ol div.contactname a{text-decoration: none; color: @LinkColor; background-color: #fff; font-weight: normal;}
+.requestslist ol div.contactname a:hover{text-decoration: underline;}
+
+.requestslist ol div.contactcmd {
+	margin: 16px;
+	font-size: 1.2em;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.requestslist ol div.contactcmd span.button {
+	display: inline-block;
+	margin: 0 2px;
+}
+.requestslist ol div.contactcmd span.button a{
+	display: inline-block;
+	padding: 1px 4px;
+	color: @ButtonColor;
+	background-color: @ButtonBGColor;
+	font-weight: normal;
+	border-top: 1px solid @ButtonBorderTop;
+	border-right: 1px solid @ButtonBGColor;
+	border-bottom: 1px solid @ButtonBGColor;
+	border-left: 1px solid @ButtonBGColor;
+	text-decoration: none;
+}
+.requestslist ol div.contactcmd span.cancel a {
+	color: #333;
+	background-color: #eee;
+	border: 1px solid #eee;
+}
+
+
+/* dialog */
+div.snOverlay {
+	opacity:0.4;filter:alpha(opacity=40);
+	background-color: #333;
+}
+
+div.snDialog {
+	margin: 0;
+	padding: 0;
+	width: 400px;
+}
+div.snDialog div.inner{border: 1px solid #3B5998;}
+
+div.snDialog h2 {
+	margin: 0; padding: 4px 10px;
+	font-size: 1em;
+	color: #fff;
+	background-color: #6D84B4;
+	text-align: left;
+}
+div.snDialog div.content{
+	color: #333;
+	background-color: #fff;
+	padding: 10px 10px;
+}
+
+div.snDialog div.content p {margin: 0; padding: 0;}
+div.snDialog div.content p span.entity{
+	white-space: nowrap;
+	font-weight: bold;
+}
+div.snDialog div.notice{
+	color: #333;
+	background-color: #fff;
+	padding: 0 10px 10px 10px;
+	font-size: .75em;
+}
+
+div.snDialog div.notice p {margin: 0; padding: 0;}
+div.snDialog div.buttons{
+	color: #333;
+	background-color: #ECEFF5;
+	padding: 10px 20px 10px 10px;
+	text-align: right;
+	border-top: 1px solid #3B5998;
+}
+div.snDialog div.buttons span.button {margin: 0 10px 0 0;}
+div.snDialog div.buttons span.button a {
+	display: inline-block;
+	padding: 1px 4px;
+	color: @ButtonColor;
+	background-color: @ButtonBGColor;
+	font-weight: normal;
+	border-top: 1px solid @ButtonBorderTop;
+	border-right: 1px solid @ButtonBGColor;
+	border-bottom: 1px solid @ButtonBGColor;
+	border-left: 1px solid @ButtonBGColor;
+	text-decoration: none;
+}
+
+div.snDialog div.buttons span.cancel a {
+	color: #333;
+	background-color: #eee;
+	border: 1px solid #eee;
+}
+
+
+
+/* pagina con elenco completo documenti */
+
+.docslist {}
+.docslist h2 {}
+.docslist .content{
+	padding: 0 0 0 12px;
+}
+.docslist p.empty {margin: 0; padding: 2px 0; }
+.docslist ul {list-style-type: none; margin: 0; padding: 0;}
+.docslist ul li.docli {
+	padding: 2px 6em .5em 24px;
+	margin: 0 0 2px 0;
+	border-bottom: 1px solid #D8DFEA;
+	background-position: 2px 3px;
+	background-repeat:no-repeat;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+.docslist ul li.docli.last { border-bottom: none; }
+
+
+.docslist ul li.docli div.docdel{
+	position: absolute;
+	top: 0px;
+	right: 2px;
+	width: 6em;
+	text-align: right;
+}
+.docslist ul li.docli div.docdel a{
+		padding: 1px 2px;
+		text-decoration: none;
+		color: @LinkColor; background-color: #fff;
+		font-weight: normal;
+}
+.docslist ul li.docli div.docdel a:hover{color: #fff; background-color: @LinkColor;}
+
+.docslist ul li a {color: @LinkColor; background-color: #fff; text-decoration: none;}
+.docslist ul li a:hover {text-decoration: underline;}
+.docslist ul li a.membername {font-size: .9em;}
+
+
+/* Pagina ricerche */
+
+
+
+.searchlist h2 p.searchnores{ margin: 1em 0;}
+div.searchform{
+	color: #000; background-color: #EEEEEE;
+	border: 1px solid #BFBFBF;
+	padding: 10px 10px;
+	font-size: 1.1em;
+}
+
+div.searchform form {margin: 0; padding: 0;}
+div.searchform form label{
+	display: block;
+	color: #333;
+}
+div.searchform form input{
+
+	width: 400px;
+	padding: 3px 2px;
+	font-size: 1.05em;
+}
+div.searchform form input.mainsearchsubmit {
+	width: auto;
+	padding: 1px 3px 1px 3px;
+	margin: 0;
+	font-size: 1em;
+	color: @ButtonColor;
+	background-color: @ButtonBGColor;
+	font-weight: bold;
+	border-top: 1px solid @ButtonBorderTop;
+	border-right: 1px solid @ButtonBGColor;
+	border-bottom: 1px solid @ButtonBGColor;
+	border-left: 1px solid @ButtonBGColor;
+}
+
+.searchlist ul.userlist {
+	list-style-type: none;
+	margin: 10px 0;
+	padding: 0;
+	border-bottom: 1px solid #EEEEEE;
+}
+.searchlist ul.userlist li {
+	border-top: 1px solid #EEEEEE;
+	padding: 8px 0 0 64px;
+	[IE6OPEN]padding: 4px 0 0 64px;[IE6CLOSE]
+	margin: 0 0 4px 0;
+	position: relative;
+	top: 0;
+	left: 0;
+	min-height: 60px;
+	[IE6OPEN] height: 60px; [IE6CLOSE]
+	}
+.searchlist ul.userlist li .img{
+	width: 50px;
+	position: absolute;
+	top: 6px;
+	left: 0;
+	text-align: center;
+}
+.searchlist ul.userlist li .img a{
+	display: block;
+	width: 50px;
+	height: 50px;
+	margin: 0;
+	padding: 0;
+}
+.searchlist ul.userlist li .img a img{
+	display: block;
+	border: none;
+	margin: 0 auto;
+}
+
+.searchlist ul.userlist li .info {
+	font-weight: normal;
+	display: inline;
+	margin: 0;
+	padding: 0;
+	font-size: 1.1em;
+}
+.searchlist ul.userlist li .info a{
+	text-decoration: none;
+	font-size: 1.1em;
+	font-weight: bold;
+	color: @LinkColor;
+	background-color: #fff;
+}
+.searchlist ul.userlist li .info a:hover{text-decoration: underline;}
+
+.searchlist ul.userlist li div.commands{
+	position: absolute;
+	top: 4px;
+	right: 0;
+}
+.searchlist ul.userlist li div.commands ul {
+	margin: 2px 0;
+	padding: 0;
+	list-style-type: none;
+}
+.searchlist ul.userlist li div.commands ul li {
+	min-height: 0;
+	[IE6OPEN]height: 1.4em;	[IE6CLOSE]
+	display: block;
+	width: 11em;
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+.searchlist ul.userlist li div.commands ul li a {
+	text-align: right;
+	color: @LinkColor;
+	background-color: #fff;
+	text-decoration: none;
+	display: block;
+	width: 11em;
+	border-bottom: 1px solid #EEEEEE;
+	padding: 2px;
+}
+.searchlist ul.userlist li div.commands ul li a:hover{
+	color: #fff;
+	background-color: @LinkColor;
+}
+
+.searchlist ul.userlist li.listitem-header,
+.searchlist ul.userlist li.listitem-footer {
+
+	font-size: 1.2em;
+	margin: 0;
+	padding: 4px 20px 4px 8px;
+	min-height: 0;
+}
+
+.searchlist ul.userlist li.listitem-header {
+	color: @BoxTitleColor;
+	background-color: @BoxTitleBgColor;
+}
+
+.searchlist ul.userlist li.listitem-footer {
+
+	text-align: right;
+}
+
+.searchlist ul.userlist li.listitem-footer a {
+	color: @LinkColor;
+	text-decoration: none;
+}
+
+
+/* dialog generico con form */
+
+.snDialog form {}
+
+.snDialog fieldset {
+	border: none;
+	margin: 0 0 1em 0;
+	padding: .5em 0;}
+
+.snDialog fieldset legend {
+	margin: 0; padding: 0;
+	font-size: 1.1em;
+	font-weight: bold;
+	color: #000;
+}
+
+.snDialog fieldset p {
+	margin: 2px; padding: 2px 0;
+	clear: both;
+	/* border-bottom: 1px solid #D8DFEA; */
+}
+
+.snDialog fieldset label {
+	display: block;
+	width: 12em;
+	float: left;
+	color: #666;
+	font-size: .8em;
+	font-weight:bold;
+	padding: 2px 0 0 0;
+}
+
+.snDialog fieldset input{
+	font-size: .8em;
+}
+.snDialog textarea {
+	border: 1px solid #BDC7D8;
+	font-size: .8em;
+	font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+
+}
+
+/* Pagina modifica profilo */
+.profileEdit {}
+.profileEdit .errorFld { border: 1px solid #c00; }
+.profileEdit .errorMsg { color: #c00; }
+.profileEdit fieldset {
+	border: none;
+	margin: 0 0 1em 0;
+	padding: .5em 0;}
+.profileEdit fieldset legend {
+	margin: 0; padding: 0;
+	font-size: 1.1em;
+	font-weight: bold;
+	color: #000;
+}
+.profileEdit fieldset fieldset.profileEditDate {
+	padding: 0; margin: 0;
+	position: relative;
+	height: 3.5em;
+	border-bottom: 1px solid #D8DFEA;
+}
+
+.profileEdit fieldset fieldset.profileEditDate p { border: none; }
+.profileEdit fieldset fieldset.profileEditDate legend{
+	font-weight: normal;
+	font-size: .9em;
+	padding: 2px 0 0 .2em;
+	color: #666;
+	font-weight: bold;
+}
+.profileEdit fieldset fieldset.profileEditDate span.dateSelector{
+	display: block;
+	position: absolute;
+	top: -1.2em;
+	[SAFARIOPEN] top: 0; [SAFARICLOSE]
+	[IEOPEN] top:0; [IECLOSE]
+	left: 11em;
+}
+.profileEdit fieldset fieldset.profileEditDate span.formExplain{
+	display: block;
+	clear: both;
+	margin: .2em 0 .5em 14.5em;
+	padding: 4px 0 0 0;
+}
+.profileEdit fieldset fieldset.profileEditDate span.formExplain label {display: inline; float: none;}
+.profileEdit fieldset p {
+	margin: 2px; padding: 2px 0;
+	clear: both;
+	border-bottom: 1px solid #D8DFEA;
+}
+.profileEdit fieldset label {
+	display: block;
+	width: 12em;
+	float: left;
+	color: #666;
+	font-size: .9em;
+	font-weight:bold;
+	padding: 2px 0 0 0;
+}
+
+.profileEdit fieldset input{
+	font-size: .9em; border: 1px solid #BDC7D8;	padding: 0 0 1px 0;
+}
+.profileEdit fieldset span.formExplain {
+	display: block;
+	margin: .2em 0 .5em 14.5em;
+	font-size: .75em;
+}
+.profileEdit fieldset p span.formExplain  label {float: none; display: inline; color: #000; font-weight: normal; }
+.profileEdit fieldset p span.formExplain input {margin:0; padding: 0;}
+
+.profileEdit .profileEditButtons{
+	text-align: right;
+	font-size: 1.1em;
+}
+.profileEdit .profileEditButtons span{display: inline-block;}
+.profileEdit .profileEditButtons input {
+	display: inline-block;
+	padding: 1px 4px;
+	margin: 0;
+	color: @ButtonColor;
+	background-color: @ButtonBGColor;
+	font-weight: normal;
+	border-top: 1px solid @ButtonBorderTop;
+	border-right: 1px solid @ButtonBGColor;
+	border-bottom: 1px solid @ButtonBGColor;
+	border-left: 1px solid @ButtonBGColor;
+	text-decoration: none;
+}
+
+.profileEdit .profileEditButtons input#btnCancel {
+	color: #333;
+	background-color: #eee;
+	border: 1px solid #eee;
+}
+.profileEdit textarea {
+	border: 1px solid #BDC7D8;
+	font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+	font-size: .9em;
+}
+
+.profileEditImage input {margin: 0 0 0 12em;}
+
+
+
+
+div.formExplain ul {
+
+	font-size: .8em;
+}
+
+/*
+
+	box di filtraggio generico
+
+*/
+
+form.filter {
+	text-align: right;
+	font-size: .8em;
+}
+
+input.filterText {color: #000; background-color: #fff; border: 1px solid @HeaderBgColor; height: 15px; padding: 2px 2px; vertical-align:middle;}
+input.filterText.inputFieldHint{ color: #939393; background-color: #fff;}
+
+.choices {
+
+	margin: 30px 0 20px 0;
+
+	padding: 2px 10px 8px 0;
+	text-align: right;
+
+	color: gray;
+	font-weight: bold;
+	font-size: 0.8em;
+}
+
+.choices a {
+	padding: 2px 4px;
+	color: @LinkColor; background-color: @LinkBgColor;
+	cursor: pointer;
+	text-decoration: none;
+}
+.choices a.sel {
+	color: white;
+	color: @LinkBgColor; background-color: @LinkColor;
+	cursor: pointer;
+	text-decoration: none;
+}
+.choices a:hover {  }
+
+/*
+	lister
+*/
+
+.lister.lcontainer {
+
+	margin-top: 5px;
+
+	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+	font-size: 11px;
+
+	min-height: 100px;
+}
+
+.lister .lheader, .lister .lfooter {
+	clear:both;
+	overflow: hidden;
+	padding: 6px 8px 5px;
+}
+
+.lister .lheader {
+	border-bottom: 1px solid gray;
+	margin-bottom: 7px;
+}
+
+.lister .lfooter {
+	border-top: 1px solid gray;
+	margin-top: 7px;
+}
+
+.lister .lcontent {
+	margin: 0 6px;
+}
+
+.lister .lleft, .lister .lright label {
+	color: gray;
+	float: left;
+	font-weight: bold;
+	padding: 2px 0px;
+}
+
+.lister .lleft a {
+	padding: 2px 4px;
+	color: @LinkColor;
+	background-color: @LinkBgColor;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.lister .lleft a.sel {
+	color: @LinkBgColor;
+	background-color: @LinkColor;
+
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.lister .lright {
+	float: right;
+}
+
+.lister .lright .llabel {
+	color: gray;
+	float: left;
+	padding: 2px 8px;
+}
+
+.lister .lright form {
+	display: inline;
+	float: left;
+}
+
+.lister .lright form input.text {
+	background-color: white;
+	color: #939393;
+	border: 1px solid #3B5998;
+	height: 12px;
+	padding: 2px;
+	margin-left: 5px;
+	vertical-align: middle;
+}
+
+.lister .lright a {
+	color: @LinkColor;
+	background-color: @LinkBgColor;
+	cursor: pointer;
+	text-decoration: none;
+	padding: 0;
+}
+
+.lister .lright a.sel {
+	color: red;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.lister .lbottom.lleft {
+
+	padding: 3px;
+	border: 1px solid white;
+}
+
+.lister .pager.item, .lister .pager.cmd {
+	display: inline-block;
+	text-align: center;
+	width: 15px;
+
+	padding: 1px 4px;
+	margin: 0 1px;
+	border: 1px solid @LinkColor;
+
+	color: @LinkColor;
+	background-color: @LinkBgColor;
+}
+
+.lister .pager.cmd.un {background-color: transparent;}
+
+.lister .pager.item.sel {
+	color: @LinkBgColor;
+	background-color: @LinkColor;
+	border: 1px solid @LinkBgColor;
+	padding: 2px 4px;
+}
+
+.lister .pager.item.sel a {
+	color: @LinkBgColor;
+	background-color: @LinkColor;
+}
+
+.lister .pager.cmd.un {
+	color: gray;
+	border: 1px solid @LinkBgColor;
+}
+
+/*
+		searchbox
+*/
+
+span.searchbox.eleft  {
+	background: white url(snAssets/img/searchbox/left.gif) no-repeat top left;
+	float: left;
+	width: 19px; height: 19px;
+}
+
+span.searchbox.eright  {
+	background: white url(snAssets/img/searchbox/right-empty.gif) no-repeat top left;
+	float: left;
+	width: 19px; height: 19px;
+}
+
+span.searchbox input {
+	background: white url(snAssets/img/searchbox/background.gif) repeat-x top left;
+	float: left;
+	border: 0;
+	outline: none;
+	height: 19px; width: 120px;
+	padding: 0px;
+	font: 11px/13px arial;
+	color: #000;
+}
+
+/* ol.choices */
+
+/* form manager, campi da evidenziare su errore */
+
+input.feError, textarea.feError {
+	border: 1px solid red !important;
+	background: #EEC5C2 !important;
+}
+
+/*
+	Inclusione del file di personalizzazioni utente
+*/
+
+@include sn.overlay.css optional

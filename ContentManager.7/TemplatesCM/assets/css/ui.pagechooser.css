@@ -1,0 +1,98 @@
+.ui.pagechooser .nav.nav-tabs {
+
+	padding-left: 15px;
+}
+
+.ui.pagechooser .overflow {
+
+	padding: 14px 10px;
+
+	background-color: #f2dede;
+}
+
+.ui.pagechooser .info {
+
+	padding: 14px 20px;
+}
+
+.ui.pagechooser .filter {
+
+	padding: 14px 20px;
+}
+
+.ui.pagechooser .filter input {
+
+  font-weight: normal;
+  line-height: 20px;
+
+  display: inline-block;
+  font-size: 14px;
+  color: #555555;
+  vertical-align: middle;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
+.ui.pagechooser .filter button {
+
+	margin: 0 10px;
+}
+
+.ui.pagechooser .pagelist {
+
+	font-size: 10pt;
+}
+
+.ui.pagechooser .overflow td {
+
+	border: 1px solid rgb(172, 128, 128);
+
+	text-align: center;
+	padding: 5px 0;
+}
+
+.ui.pagechooser th {
+
+	text-align: center;
+	vertical-align: middle;
+
+	background-color: #444;
+}
+
+.ui.pagechooser td {
+
+	padding: 2px;
+}
+
+.ui.pagechooser td.t {
+
+	width: 50%;
+}
+
+.ui.pagechooser th.t {
+
+	text-align: left;
+}
+
+.ui.pagechooser tr.cur {
+
+	background-color: #FFFD7B;
+}
+
+.ui.pagechooser tr.cur td {
+
+	background-color: transparent;
+}
+
+.ui.pagechooser .pagelistcontainer {
+
+	overflow: auto;
+
+	cursor: pointer;
+}
+
+.ui.pagechooser .pagelist b {
+
+	background-color: #CED716;
+}

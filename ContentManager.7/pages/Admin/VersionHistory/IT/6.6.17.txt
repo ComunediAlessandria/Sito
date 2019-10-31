@@ -1,0 +1,22 @@
+Consistenti miglioramenti al modulo Newsletter.<br />
+Sostituzione automatica delle classi css con stili in-line al fine di ottenere una ottimale rappresentazione delle lettere spedite anche nelle webmail che alterano il codice html e css.<br />
+Possibilit&agrave; di specificare nell'oggetto delle lettere i campi di community dei destinatari. Ad esempio al fine di ottenere un oggetto del tipo:  "comunicazione per [[Nome]] [[Cognome]]" in cui Nome e Cognome vengono valorizzati con i dati di ogni destinatario.<br />
+Possibilit&agrave; di utilizzare sezioni aggiuntive condizionate cos&igrave; da variare il contenuto delle lettere per ogni destinatario utilizzando, ad esempio, come condizione in base alla quale servire o meno una determinata sezione i dati di profilo di ogni utente di community destinatario della lettera.<br />
+Possibilit&agrave; di impostare come home page del sito l'ultima lettera spedita di una specifica newsletter.<br />
+Possibilit&agrave; di specificare per ogni lettera l'oggetto ed il titolo pagina del sito attraverso la quale pubblicarla.<br />
+Possibilit&agrave; di specificare per ogni lettera (e non pi&ugrave; solo per l’intera newsletter) il template di spedizione ed il template di visualizzazione nel sito.<br />
+Possibilit&agrave; di impostare come destinatari di una newsletter un file csv in alternativa agli utenti di community.<br />
+Nuovo report di spedizione delle lettere da file csv contenente dettagli sulla spedizione e sulla lettura da parte dei singoli destinatari.<br />
+Possibilit&agrave; di pianificare l'inizio della spedizione delle newsletter definendo una data ora da cui iniziare gli invii.<br />
+
+Modifiche al modulo SMS<br />
+Possibilit&agrave; di spedire SMS concatenati (se il gateway lo consente).<br />
+Possibilit&agrave; di pianificare l'inizio della spedizione degli SMS definendo una data ora da cui iniziare gli invii.<br />
+
+Evoluzione dell'oggetto di Toolbar "Contenitore Condizionato" con l'introduzione di una destinazione diversa dal corpo pagina (criterio analogo alla sezione aggiuntiva).
+ 
+Evoluzione del box di ricerca inseribile nelle pagine (attraverso l'estensione di template MODULE:SEARCH). E' possibile specificare gruppi di assi attraverso i quali raffinare la ricerca, cos&igrave; come impostare specifici valori di classificazione come condizioni per restringere la ricerca. E' cos&igrave; possibile creare maschere di ricerca specializzate e contestuali a specifiche sezioni del sito definite nei telai grafici.
+ 
+Modifiche all'elenco pagine: ora ogni pagina riportata offre un link che permette rapidamente di saltare al sito pubblico, visualizzando la pagina specifica.
+
+Modifica al modulo Galleria di Immagini: introdotta la navigazione sequenziale nella modalit&agrave; Miniature, quando si seleziona la singola miniatura.

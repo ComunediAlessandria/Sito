@@ -1,0 +1,25 @@
+{
+	"tag": "fc-test",
+
+	"routes": {
+
+		"main": "/main"
+	},
+
+	"include-bundles": {
+
+		"spider-test": "cm/modules/Spider/spider-test",
+		"siteTemplates": "cm/modules/siteTemplates",
+		"test-image-resize": "cm/modules/test-image-resize",
+	},
+
+	"__menus": [
+
+		{
+			"title": "Test Template Sito",
+			"items": {
+				"spt": { "title": "Elenco Sezioni per Template", "href": "/spt" },
+			}
+		}
+	]
+}

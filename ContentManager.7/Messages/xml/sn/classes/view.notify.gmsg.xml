@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="lang" defaultlang="IT">
+	<group id="snViewNotifyGMsg" define="false">
+		<message id="close"
+			lang:it="Chiudi"
+			lang:en="Close"
+			lang:fr="Proche"
+			lang:de="Schließen"
+			lang:es="Cerrar"
+			lang:ru="близко"
+		/>
+	</group>
+</messages>

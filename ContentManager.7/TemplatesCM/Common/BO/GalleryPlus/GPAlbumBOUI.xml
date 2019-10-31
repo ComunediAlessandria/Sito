@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='iso-8859-1' ?>
+<ui id='GPAlbumUI'>
+	<presenter
+		type='Template'
+		filename='GalleryPlus/GPAlbumEdit.html'
+	/>
+	<page
+		title='Scheda Album'
+		permission='GPA'
+	/>
+
+	<elements>
+		<element	id='IDGallery'		BO='IDGallery'	type='select'		valueset='vsGallery'	label='Galleria di appartenenza' />
+
+		<element	id='jTitle'		BO='jTitle'		size='80'	maxlen='250' class="span8"	type='multitext'	valueset='Languages' 	mapping='Lang:Value'	label='Titolo'>
+		<![CDATA[
+			<div id='D_%1$s'><label for='%1$s' class='AdminFormBOLabel'>%3$s (%4$s)</label>%2$s</div>
+		]]>
+		</element>
+
+		<element	id='jDescription'	BO='jDescription'	cols='80'	rows='4'	class='span8' type='multitextarea' valueset='Languages' 	mapping='Lang:Value'	label='Descrizione'>
+		<![CDATA[
+			<div id='D_%1$s'><label for='%1$s' class='AdminFormBOLabel'>%3$s (%4$s)</label>%2$s</div>
+		]]>
+		</element>
+
+		<element	id='ViewMode'	BO='ViewMode'	type='radio'	valueset='vsTipoVisualizzazione'	label="Modalità di visualizzazione"/>
+
+		<element	id='SingleMaxW'	BO='SingleMaxW'	type='text'	size='4'	maxlen='4'	class="span1" label='Larghezza Max Immagine Singola' />
+		<element	id='SingleMaxH'	BO='SingleMaxH'	type='text'	size='4'	maxlen='4'	class="span1" label='Altezza Max Immagine Singola' />
+
+		<element	id='ThumbW'	BO='ThumbW'	type='text'	size='4'	maxlen='4' class="span1"	label='Larghezza Miniatura' />
+		<element	id='ThumbH'	BO='ThumbH'	type='text'	size='4'	maxlen='4'	class="span1" label='Altezza Miniatura' />
+
+		<element	id='ThumbXPage'	BO='ThumbXPage'	type='text'	size='4'	maxlen='4'	class="span1" label='Miniature per pagina' />
+
+		<element	id='DataOraUltimaModifica'	BO='DataOraUltimaModifica'	type='datetime'	mode='RO'	size='10'	maxlen='20'	label='Data Ultima Modifica' />
+		<element	id='DataOraUltimaModificaFormatted'	BO=''	type='code'	 code='FormatUM'  label='Data Ultima Modifica' />
+
+		<element	id='UtenteUltimaModifica'	BO='UtenteUltimaModifica'	type='text'	mode='RO' size='10'	maxlen='20'	label='Autore Ultima Modifica' />
+
+		<element	id='ShowInList'		BO='ShowInList'	type='radio'	valueset='YesNo'	label="Mostra nell'elenco Album" />
+	</elements>
+
+	<valueset id='vsGallery' kind='PHP' >
+		<![CDATA[
+
+		$sql = "
+			SELECT
+				GPGalleryI18N.IDGallery,
+				GPGalleryI18N.Value AS GalleryTitle,
+				GPGallery.IDAlbumOwner
+			 FROM
+			 	GPGallery
+			 LEFT JOIN GPGalleryI18N
+			 	ON GPGallery.IDGallery = GPGalleryI18N.IDGallery
+			 WHERE
+			 	GPGalleryI18N.Name='Title'
+			  AND GPGalleryI18N.Lang = " . q($GLOBALS['gLanguage']);
+
+		$rs = GetRS($sql);
+
+		$res = array();
+		$text = array();
+
+		while ($rec = GetNext($rs))
+			if (($GLOBALS['user']->GroupBelongs($rec['IDAlbumOwner']))) {
+
+				$res[] = array('ID' => $rec['IDGallery'], 'TEXT' => ($rec['GalleryTitle']));
+				$text[] = strtolower($rec['GalleryTitle']);
+			}
+
+		FreeRS($rs);
+
+			// NB sorting basato su array e non con order by a causa di una limitazione
+			// di oracle nell'uso di order by con i campi clob (come il text del I28N)
+
+		array_multisort($text, SORT_ASC, SORT_STRING, $res);
+
+		return 	$res;
+	 ]]>
+	</valueset>
+
+	<valueset id='vsTipoVisualizzazione'>
+	  <value id='0' text='Elenco Miniature' />
+	  <value id='1' text='Immagine singola, paginazione numerica' />
+	  <value id='2' text='Immagine singola, paginazione per titolo immagine' />
+	</valueset>
+
+	<valueset id='Languages' kind='DISTINCT' table='Languages' colid='Lang' column='DescrizioneIT' orderby='IDLanguage' />
+
+	<valueset id='YesNo'>
+		<value id='1' text='Si' />
+		<value id='0' text='No' />
+	</valueset>
+
+	<codes>
+		<code id='FormatUM' type='php'>
+			<![CDATA[
+
+				$fdate = $pars['ELEMENTS']['DataOraUltimaModifica']->GetValue() == ''
+						?
+							''
+						:
+							date('d/m/Y H:i', DBSQLToTime($pars['ELEMENTS']['DataOraUltimaModifica']->GetValue()));
+
+				return array(
+					$pars['ELEMENTS']['DataOraUltimaModifica']->mPars['LABEL'],
+					$fdate
+				);
+			]]>
+		</code>
+	</codes>
+
+	<validations>
+		<validation id='SingleMaxW'	type='numeric'	min='10' max ='1200' forfield='SingleMaxW'
+			message='Il campo Larghezza Max Immagine Singola deve essere numerico e compreso tra 10 e 1200' />
+
+		<validation id='SingleMaxH'	type='numeric'	min='10' max ='1200' forfield='SingleMaxH'
+			message='Il campo Altezza Max Immagine Singola deve essere numerico e compreso tra 10 e 1200' />
+
+		<validation id='ThumbW'	type='numeric'	min='10' max ='360' forfield='ThumbW'
+			message='Il campo Larghezza Miniatura deve essere numerico e compreso tra 10 e 360' />
+
+		<validation id='ThumbH'	type='numeric'	min='10' max ='360' forfield='ThumbH'
+			message='Il campo Altezza Miniatura deve essere numerico e compreso tra 10 e 360' />
+
+		<validation id='ThumbXPage'	type='numeric'	min='2' max ='50' forfield='ThumbXPage'
+			message='Il campo Miniature per pagina deve essere numerico e compreso tra 2 e 50' />
+
+		<validation id='TitleMandatory' type='php'>
+			<![CDATA[
+
+					// verifica che per le lingue abilitate vi sia il titolo tradotto.
+
+				$ok = true; $message = '';
+
+				$mlField = $pars['ELEMENTS']['jTitle']->GetValue();
+
+				$mlFieldValues = array();
+				foreach($mlField as $singleLanguageValue)
+					$mlFieldValues[ $singleLanguageValue['Lang'] ] = trim($singleLanguageValue['Value']);
+
+					// ottiene l'elenco delle lingue abilitate
+
+				//FlexInclude(kModPath . 'modLanguage.php');
+				inc::mod('modLanguage');
+
+				$cLang = FlexLanguages::getCache();
+
+					// la GetArray restituisce un array numerico
+
+				$enabledLangs = array();
+				foreach ($cLang->getArray(array('DescrizioneIT', 'Stato')) as $langCode => $data)
+					if ($data[1] == 2) {
+
+						$enabledLangs[] = $langCode;
+						if ($mlFieldValues[$langCode] === '')
+							$ok = false;
+					}
+
+				if (! $ok) {
+
+					$pars['ELEMENTS'][ 'jTitle' ]->setError(true);
+					$message = __('bo-gallery.erralbumtitalllang') . ' ( ' . join(', ', $enabledLangs) . ')';
+				}
+
+				return array($ok, $message);
+			]]>
+		</validation>
+
+	</validations>
+
+	<events>
+		<event id='onBeforeServePage' when='onBeforeServePage' type='php'>
+		<![CDATA[
+
+			$page = $pars['PAGE'];
+
+			//FlexInclude(kModPath . 'modGalleryPlus.php');
+			inc::mod('modGalleryPlus');
+
+			$objID = urlPar('OBJ');
+			$id = (int)urlPar('ID');
+
+			$idGallery = $id === -1 ? (int)urlPar('IDGallery') : -1;
+
+			$page->SetPageBreadCrumb(
+				GPUtils::GetBOBC('Edit', $page->GetPageBreadCrumb(), $objID, $id, $idGallery)
+			);
+
+		]]>
+		</event>
+	</events>
+
+	<!-- UI per la cancellazione - per adesso qui, domani in un file XML separato -->
+
+	<delete
+
+		template='GalleryPlus/GPAlbumDelAsk.html'
+		failTemplate='GalleryPlus/GPAlbumDelFailed.html'
+	>
+
+		<onfail id='ImmaginiFiglie' condition='ImmaginiFiglie'>
+			<![CDATA[
+				<strong>L'Album contiene {nRec} immagini associate. </strong> <br />
+				Una volta eliminate tutte le immagini associate sarà possibile eliminare l'Album.
+			]]>
+		</onfail>
+	</delete>
+</ui>

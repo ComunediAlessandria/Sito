@@ -1,0 +1,28 @@
+<div id="AdminCorpoBox">
+	<h1>Configurazione SimpleQuery</h1>
+	<div class="AdminPageFooterCommand"><a href="{ADDLINK}">{ADDIMG}Aggiungi una nuova configurazione</a></div>
+	  <table class="AdminTable" summary="Tabella contenente l'elenco delle configurazioni: nella prima colonna sono contenuti i comandi per modificare ed eliminare le configurazioni.">
+		<thead>
+		  <tr>
+			<td scope="col" class='AdminIcoCell'>Azioni</td>
+			<th scope="col">Connesione</th>
+			<th scope="col">DBDriver</th>
+			<th scope="col">DBHost</th>
+			<th scope="col">DBUser</th>
+		  </tr>
+		</thead>
+		<tbody>
+	  <!-- BEGIN row -->
+	  <tr class="{CLASSTR}">
+		<td class='AdminIcoCell'>{DELLINK} {MODLINK}</td>
+		<th scope="row">{CONNECTIONNAME}</th>
+		<td>{DBDRIVER}</td>
+		<td>{DBHOST}</td>
+		<td>{DBUSER}</td>
+	  </tr>
+	  <!-- END row -->
+		</tbody>
+	</table>
+	<div class="AdminPageFooterCommand"><a href="{ADDLINK}">{ADDIMG}Aggiungi una nuova configurazione</a></div>
+</div>
+<div class="AdminPageFooterStatus"> NUMERO CONFIGURAZIONI PRESENTI: {TOTRECORDS} </div>

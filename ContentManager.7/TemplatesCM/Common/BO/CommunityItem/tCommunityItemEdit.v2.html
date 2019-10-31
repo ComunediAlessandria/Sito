@@ -1,0 +1,58 @@
+{ERR}
+<form class="form-horizontal" method="post" action="{ACTION}">
+
+	<div class="well well-small">
+		
+		<div class="control-group">
+			<!-- Elementi usati dallo switcher JS per le lingue -->
+			<strong>__(bo-common.slc)</strong>:
+			<span id='BOPanelSwitchPanel'></span>
+			<div>__(bo-common.curlang): <span id='BOPanelSwitchCurLanguage'></span></div>
+		</div>
+		
+		<div class="control-group">
+			<label class="control-label" for="{TAG_Description}">{LBL_Description}</label>
+			<div class="controls"> {VAL_Description}</div>
+		</div>
+	
+		<div class="control-group">
+			<label class="control-label">{LBL_IsPublic}</label>
+			<div class="controls"> {VAL_IsPublic}</div>
+		</div>	
+
+		<div class="control-group">
+			<label class="control-label">{LBL_jPageConfirm}</label>
+			<div class="controls"> {VAL_jPageConfirm}</div>
+		</div>
+	
+		<div class="control-group">
+			<label class="control-label">{LBL_jEmailConfirm}</label>
+			<div class="controls"> {VAL_jEmailConfirm}</div>
+		</div>	
+
+		<div class="control-group">
+			<label class="control-label">{LBL_jPageWelcome}</label>
+			<div class="controls"> {VAL_jPageWelcome}</div>
+		</div>	
+
+		<div class="control-group">
+			<label class="control-label" for="{TAG_IDAdminGroup}">{LBL_IDAdminGroup}</label>
+			<div class="controls"> {VAL_IDAdminGroup}</div>
+		</div>
+
+	</div>
+
+	<div class='well well-small'>
+		<div class='row'>
+			<div class='span2'>
+					<input name="btnCancel" type="submit" class='btn' value="__(bo-common.canc)" />
+			</div>
+			<div class='span2'>
+				{HIDDEN}
+				<input name="Submit" type="submit" class='btn btn-primary' value="__(bo-common.save)" />
+			</div>
+		</div>
+	</div>
+
+
+</form>

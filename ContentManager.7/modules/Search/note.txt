@@ -1,0 +1,6 @@
+
+	ATTENZIONE:
+
+		Search.v2 usa modSearchEngineSearch
+
+		Search.v3 suddivide le classi per la ricerca in SEFormUtils, SEPars ed SESearch

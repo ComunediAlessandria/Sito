@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<bo id='CommunityUsers'>
+	<field name='Ente'		type='varchar'		len='50'	default='' />
+	<field name='Ruolo'		type='varchar'		len='50'	default='' />
+	<field name='Telefono'	type='varchar'		len='15'	default='' />
+	<field name='emailConfermata'	type='int'		default='1' />	
+</bo>

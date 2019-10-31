@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='iso-8859-1' ?>
+<uilist id='FYTVideo'>
+
+	<presenter
+		type='AdvancedTemplate'
+		filename='YouTube/FYTVideoList.html'
+		page='20'
+
+	/>
+	<page
+		title='Personalizzazioni - Categorie'	
+		permission='YTA'
+	/>
+
+	<permissions>
+		<permission action='add' type='php'>
+		<![CDATA[
+			return TRUE; 
+		]]>
+		</permission>
+		<permission action='delete' type='php'>
+		<![CDATA[
+			return TRUE; 
+		]]>
+		</permission>
+		<permission action='modify' type='php'>
+		<![CDATA[
+			return TRUE; 
+		]]>
+		</permission>
+		<permission action='sort' type='php'>
+		<![CDATA[
+			return TRUE; 
+		]]>
+		</permission>
+	</permissions>
+
+	<options>
+		<option name='modlink'	label='MODIFICA %s'			element='Titolo' />
+		<option name='dellink'	label='CANCELLA %s'			element='Titolo' />
+		<option name='dnlink'		label="SPOSTA GIU' %s"	element='Titolo' />
+		<option name='uplink'		label="SPOSTA SU %s" 		element='Titolo' />
+	</options>
+
+	<elements>
+		<element	id='Titolo'	bo=''	label='Titolo' 	transform='MultiLanguageTitolo'	/>
+		<element	id='VideoID'	bo='VideoID'	label='Video ID' />
+		<element	id='AuthorName'	bo='AuthorName'	label='Author' />
+
+	</elements>
+
+	<transform id='tSiNo' type='map' from='0;1' to='No;Si' />
+
+	<transform id='MultiLanguageTitolo' type='php'>
+		<![CDATA[ return $GLOBALS['gFYTVide.cache'][ $pars['ID'] ]['Titolo']; ]]>
+	</transform>
+
+	
+	<sortOrder>
+		<sortKey when='bo' mode='n' bo='DataOraUltimaModifica'  order='ASC' />
+	</sortOrder>
+
+	<events>
+		<event id='onAfterParseForm' when='onAfterParseForm' type='php'>
+		<![CDATA[
+			FlexInclude(
+				kModPath . 'YouTube/class/clsFYTVideos.php'
+			);
+	    
+			$GLOBALS['gFYTVide.cache'] = array();
+			$vids = new clsFYTVideos($GLOBALS['gDB']);
+			$listaVideo = $vids->GetList();
+			foreach($listaVideo as $vid) {
+				$GLOBALS['gFYTVide.cache'][$vid->GetID()]['Titolo'] = $vid->GetField('Titolo');
+			}
+			
+		]]>
+		</event>
+	</events>
+
+</uilist>

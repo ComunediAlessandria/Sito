@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="lang" defaultlang="IT">
+  <group id="snViewUserListItem" define="false">
+    <message id="add" lang:it="Aggiungi ai Contatti" lang:en="Add to contacts" lang:fr="Ajouter aux contacts" lang:de="Add to contacts" lang:es="Añadir a contactos" lang:ru="Добавить в контакты"/>
+    <message id="accept" lang:it="Accetta il Contatto" lang:en="Accept contact" lang:fr="Accepter le contact" lang:de="Akzeptieren Sie den Kontakt" lang:es="Acepte el contacto" lang:ru="Примите контакт"/>
+    <message id="tadd"/>
+    <message id="taccept"/>
+  </group>
+</messages>

@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE FlexCMPMessages SYSTEM '/FlexCMPMessages.dtd'>
+<messages xmlns:lang="#" defaultlang="it">
+
+	<group id='ite' define='false' scope='json'>
+
+		<message id='ab'
+			lang:it='Abbandonando la pagina le modifiche verranno perse. Si desidera continuare?'
+			lang:en='Leaving the page all editing will be lost. Continue?'
+		/>
+
+		<!-- pulsanti comuni nei dialog -->
+		<message id='nd-can' lang:it='Annulla' lang:en='Cancel' />
+		<message id='nd-ok' lang:it='Conferma' lang:en='OK' />
+
+		<!-- bubble comuni -->
+		<message id='wip' lang:it='Operazione in corso' lang:en='Working' />
+		<message id='end' lang:it='Operazione conclusa' lang:en='Finished' />
+
+		<!-- pulsanti dialog info -->
+		<message id='mod' lang:it='Modifica' lang:en='Edit' />
+		<message id='del' lang:it='Elimina' lang:en='Delete' />
+		<message id='add' lang:it='Aggiungi Nodo' lang:en='Add Node' />
+		<message id='edit' lang:it='Modifica Pagina' lang:en='Edit Page' />
+
+		<!-- notifica di salvataggio -->
+		<!-- message id='sw-tt' lang:it='Operazione in corso' lang:en='Working' / -->
+		<message id='sw-tt' ref='wip' />
+		<message id='sw-tx' lang:it='Registrazione delle modifiche' lang:en='Saving' />
+		<!-- message id='sc-tt' lang:it='Operazione conclusa' lang:en='Finished' / -->
+		<message id='sc-tt' ref='end' />
+		<message id='sc-tx' lang:it='Le modifiche sono state registrate' lang:en='Editing saved' />
+
+		<!-- dialogo di annullamento operazioni -->
+		<message id='dc-cancel' lang:it='Riprendi' lang:en='Cancel' />
+		<message id='dc-ok' lang:it='Annulla Modifiche' lang:en='Abort Editing' />
+		<message id='dc-tt' lang:it='Annullamento Modifiche' lang:en='Abort Editing' />
+		<message id='dc-tx' lang:it="Si desidera annullare le modifiche effettuate all'indice?" lang:en='Do you want to abort the index editing?' />
+		<message id='dc-tn' lang:it="Le modifiche effettuate all'indice non saranno registrate." lang:en='All the modification will be canceled.' />
+
+		<!-- dialog page chooser -->
+		<message id='pc-cancel' lang:it='Annulla' lang:en='Cancel' />
+		<message id='pc-ok' lang:it='Registra' lang:en='Save' />
+		<message id='pc-tt' lang:it='Modifica voce di Indice' lang:en='Edit Index Item' />
+
+		<!-- dialog abbandono edit indici per edit pagina -->
+		<message id='pe-tt' lang:it='Modifica della Pagina' lang:en='Edit Page Content' />
+		<message id='pe-tx' lang:it="Verrà salvato l'indice. Continuare?" lang:en='Index will be saved.' />
+		<message id='pe-tn' lang:it="La modifica della pagina richiede la registrazione delle eventuli modifiche all'indice." lang:en='In order to edit page content, the index will be saved.' />
+
+		<!-- dialog eliminazione elemento dall'indice -->
+		<message id='id-tt' lang:it="Eliminazione elemento dall'indice" lang:en='Delete Index Item' />
+		<message id='id-tx' lang:it="Confermi l'eliminazione dell'elemento dall'indice?" lang:en='Do you really want to delete this index item?' />
+		<message id='id-tn' lang:it="L'eliminazione del nodo elimina la voce nell'indice ma non elimina la pagina associata al nodo stesso. Eliminando un nodo che ha altri nodi figli, anche questi saranno eliminati." lang:en='Deleting this item will not affect the page, but only its reference in the index.' />
+
+		<!-- notifica di cancellazione -->
+		<!-- message id='nd-tt' lang:it='Operazione in corso' lang:en='Working' / -->
+		<message id='nd-tt' ref='wip' />
+		<message id='nd-tx' lang:it='Eliminazione del nodo' lang:en='Item Deletion' />
+		<!-- message id='ne-tt' lang:it='Operazione conclusa' lang:en='Finished' / -->
+		<message id='ne-tt' ref='end' />
+		<message id='ne-tx' lang:it='Il nodo è stato eliminato' lang:en='Item was succesfully deleted.' />
+
+		<!-- notifica di aggiunta di un nuovo nodo -->
+		<!-- message id='na-tt' lang:it='Operazione in corso' lang:en='Working' / -->
+		<message id='na-tt' ref='wip' />
+		<message id='na-tx' lang:it='Aggiunta nuovo nodo' lang:en='Add new Item' />
+		<!-- message id='nt-tt' lang:it='Operazione conclusa' lang:en='Finished' / -->
+		<message id='nt-tt' ref='end' />
+		<message id='nt-tx' lang:it='Il nodo è stato aggiunto' lang:en='Item was succesfully added.' />
+
+		<!-- notifica di modifica di un nodo -->
+		<!-- message id='nm-tt' lang:it='Operazione in corso' lang:en='Working' / -->
+		<message id='nm-tt' ref='wip' />
+		<message id='nm-tx' lang:it='Modifica voce di indice' lang:en='Edit Item' />
+		<!-- message id='nu-tt' lang:it='Operazione conclusa' lang:en='Finished' / -->
+		<message id='nu-tt' ref='end' />
+		<message id='nu-tx' lang:it='La voce di indice è stata modificata.' lang:en='Item was succesfully modified.' />
+
+		<!-- notifica di spostamento di un nodo -->
+		<message id='nv-tt' ref='wip' />
+		<message id='nv-tx' lang:it="Spostamento del nodo dell'indice" lang:en='Moving index item' />
+		<message id='nz-tt' ref='end' />
+		<message id='nz-tx' lang:it='Lo spostamento è stato effettuato.' lang:en='Item was succesfully moved.' />
+
+	</group>
+
+</messages>

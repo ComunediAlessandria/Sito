@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="IT">
+	<group id="xAdminHomePage" define="false">
+
+		<message id='title'
+			lang:it='Definizione Home Page Sito'
+			lang:en='Home Page Definition'
+		/>
+
+		<message id='bok'
+			lang:it='Registra modifiche'
+			lang:en='Save'
+		/>
+
+		<message id='bcn'
+			lang:it='Annulla'
+			lang:en='Cancel'
+		/>
+
+		<message id='ro'>
+			<trans lang='IT'><![CDATA[
+				Non è possibile modificare la home page
+					poiché è definita nella configurazione del sito.
+			]]></trans>
+			<trans lang='EN'><![CDATA[
+				Can't edit.
+			]]></trans>
+		</message>
+
+	</group>
+</messages>

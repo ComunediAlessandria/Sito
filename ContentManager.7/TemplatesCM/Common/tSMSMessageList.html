@@ -1,0 +1,61 @@
+<div id="AdminCorpoBox">
+
+	<h1>__(pgasmsl.pt)</h1>
+
+	<!-- BEGIN Filter -->
+
+	<form id='F' method='post' action='{ACTION}'>
+
+		<div id="AdminFiltroElencoPagine">
+			<label for="newsletter">__(.el):</label> {CMBNEWSLETTER}
+			<label for="sort">__(.srt):</label> {CMBSORT}
+			<input type="submit" name="Aggiorna" value="__(.upd)" id="AdminFiltroElencoSubmit" />
+		</div>
+
+		{HIDDEN}
+		{TFILTER}
+	</form>
+
+	<!-- END Filter -->
+
+	<!-- BEGIN Head -->
+
+	<table summary="__(.td)" id='tablePages'>
+		<thead>
+			<tr>
+				<th scope="col">__(.thd)</th>
+				<th scope="col">__(.thn)</th>
+				<th scope="col">__(.thm)</th>
+				<th scope="col">__(.tht)</th>
+				<th scope="col">__(.ths)</th>
+				<th scope="col" style='text-align: center'>__(.thnn)</th>
+				<th scope="col">__(.thr)</th>
+			</tr>
+		</thead>
+		<tbody>
+	<!-- END Head -->
+
+	<!-- BEGIN Row -->
+		<tr class="{CLASSTR}">
+			<td>{DATASPEDIZIONE}</td>
+			<td>{NEWSLETTER}</td>
+			<td>{MITTENTE}</td>
+			<th scope="row">{TESTO}</th>
+			<td>{STATO}</td>
+			<td style='text-align: center'>{DESTINATARI}</td>
+			<td>{DL}</td>
+		</tr>
+	<!-- END Row -->
+
+	<!-- BEGIN Footer -->
+		</tbody>
+	</table>
+	<div class="AdminPageFooterStatus">__(.no): {NUMRECORDS}/{TOTRECORDS}</div>
+	{PAGER}
+	<!-- END Footer -->
+
+	<!-- BEGIN noData -->
+	<div class="AdminPageFooterCommand">__(.none)</div>
+	<!-- END noData -->
+
+</div>

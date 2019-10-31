@@ -1,0 +1,100 @@
+<style>
+/* siccome fldErr sovrascrive fldBox è necessario mantenere l'ordine qui */
+.fldBox {border: 1px solid black;}
+.fldErr {border: 1px solid red;}
+</style>
+
+
+<div id="AdminCorpoBox">
+
+	<h1>Scheda Album</h1>
+
+	{ERR}
+
+	<form id="AdminFormBO" method="post" action="{ACTION}">
+
+
+	<div class="AdminCorpoRowEven">
+
+		<!-- Elementi usati dallo switcher JS per le lingue -->
+
+		<strong>Mostra i contenuti comuni e della lingua</strong>:
+			<span id='BOPanelSwitchPanel'></span>
+		<div>Lingua corrente: <span id='BOPanelSwitchCurLanguage'></span></div>
+
+	</div>
+
+		<div class="AdminFormBORowOdd">
+			<label class="AdminFormBOLabel" for='{TAG_IDGallery}'>{LBL_IDGallery}</label>
+			<div class="AdminFormBOField">{VAL_IDGallery}</div>
+		</div>
+
+
+		<div class="AdminFormBORowEven">
+			<fieldset>
+				<legend class='AdminFormBOFieldsetLegend'> Titolo </legend>
+				{VAL_jTitle}
+			</fieldset>
+		</div>
+
+		<div class="AdminFormBORowOdd">
+			<fieldset>
+				<legend class='AdminFormBOFieldsetLegend'> Descrizione </legend>
+				{VAL_jDescription}
+			</fieldset>
+		</div>
+
+		<div class="AdminFormBORowEven">
+			<fieldset>
+				<legend  class="AdminFormBOFieldsetLegend">{LBL_ViewMode}</legend>
+				<label class="AdminFormBOLabel">&nbsp;</label>
+				<div class="AdminFormBOField">{VAL_ViewMode}<div>
+			</fieldset>
+		</div>
+
+
+
+		<div class="AdminFormBORowOdd">
+			<fieldset>
+				<legend class='AdminFormBOFieldsetLegend'>Dimensioni massime immagine singola </legend>
+				<label for='{TAG_SingleMaxW}'>{LBL_SingleMaxW}</label> {VAL_SingleMaxW} -
+				<label for='{TAG_SingleMaxH}'>{LBL_SingleMaxH}</label> {VAL_SingleMaxH}
+			</fieldset>
+		</div>
+
+		<div class="AdminFormBORowEven">
+			<fieldset>
+				<legend class='AdminFormBOFieldsetLegend'> Dimensioni massime miniatura </legend>
+				<label for='{TAG_ThumbW}'>{LBL_ThumbW}</label> {VAL_ThumbW} -
+				<label for='{TAG_ThumbH}'>{LBL_ThumbH}</label> {VAL_ThumbH}
+			</fieldset>
+		</div>
+
+		<div class="AdminFormBORowOdd">
+			<label class="AdminFormBOLabel" for='{TAG_ThumbXPage}'>{LBL_ThumbXPage}</label>
+			<div class="AdminFormBOField">{VAL_ThumbXPage}</div>
+		</div>
+
+
+		<div class="AdminFormBORowEven">
+			<fieldset>
+				<legend class='AdminFormBOFieldsetLegend'> {LBL_ShowInList} </legend>
+				<label class="AdminFormBOLabel">&nbsp;</label>
+				<div class="AdminFormBOField">{VAL_ShowInList}<div>
+			</fieldset>
+		</div>
+
+		<div class="AdminFormBORowOdd">
+			<div class="AdminFormBOLabel">{LBL_DataOraUltimaModificaFormatted}: </div>
+			<div class="AdminFormBOField">{VAL_DataOraUltimaModificaFormatted} </div>
+			<div class="AdminFormBOLabel">{LBL_UtenteUltimaModifica}: </div>
+			<div class="AdminFormBOField">{VAL_UtenteUltimaModifica} </div>
+		</div>
+
+		<div class="AdminPageFooterCommand">
+			{HIDDEN}
+			<input name="Submit" 	type="submit" value="Salva le modifiche" />
+			<input name="btnCancel" type="submit" value="Annulla le modifiche" />
+		</div>
+	</form>
+</div>

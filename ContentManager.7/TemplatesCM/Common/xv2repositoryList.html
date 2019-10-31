@@ -1,0 +1,92 @@
+[[:section:frame]]
+
+<!--
+	<form method='post' action='{ADDACTION}'>
+-->
+		<div class='well well-small form-inline'>
+				<label for='addKind'>_(add)_:</label> [[ id: addKind, kind: objectlist ]]
+				<!-- input type='submit' name='btNewPage' value='_(badd)_' / -->
+				<!--[[ id: btnAdd, kind: submit, value: '_(badd:Aggiungi)_', class:'btn btn-success' ]]-->
+				<button id="btnAdd" name="btnAdd" class="btn btn-success" type="submit"><i class="moon-icon-plus icon-white"></i> _(badd:Aggiungi)_</button>
+		</div>
+<!--
+	</form>
+-->
+	<div id='AdminFiltroElencoPagine' class='well well-small form-inline'>
+
+		<label for='sort'>_(srt)_:</label>
+			[[ id: sort, kind: dropdown, values: { Name: _(thno:Nome)_, Class: _(tht:Tipo)_, ID: _(thnm:Numero)_ } ]]
+
+		<label for='objKind'>_(lo)_:</label>
+			[[ id: show, kind: objectlist, all: true ]]
+
+		<label for='filterTitle'> _(ln)_:</label>
+			[[ id: filterTitle, kind: text, postproc: trim ]]
+
+			[[ id: btnNext, kind: submit, value: '_(upd:Aggiorna)_', class: 'btn btn-primary' ]]
+	</div>
+
+	{results}
+
+	[[ id: p, kind: paginator, slicesize: 4 ]]
+
+
+
+[[:section:tContent]]
+
+	<!-- BEGIN tHead -->
+	<table summary=_q(tsum)_ id='tablePages' class="table table-striped table-bordered table-condensed table-hover flexbo-list-table">
+		<thead>
+			<tr>
+				<th scope='col' class='AdminIcoCellNarrow'>_(tha)_</th>
+				<th scope='col'>_(thnm)_</th>
+				<th scope='col'>_(thno)_</th>
+				<th scope='col'>_(thcl)_</th>
+				<th scope='col'>_(thg)_</th>
+				<th scope='col'>_(tht)_</th>
+				<!--
+				<th scope="col" abbr="Proprietario">Gruppo Proprietario</th>
+				<th scope="col" abbr="Gruppi">Gruppi che possono utilizzare il modello</th>
+				-->
+			</tr>
+		</thead>
+		<tbody>
+	<!-- END tHead -->
+
+	<!-- BEGIN tRow -->
+		<tr class='{:alternateRowClass}'>
+			<td>
+				<div class="btn-group">
+					{linkMod}{linkDup}{linkDel} 
+				</div>
+			</td>
+			<td>{ID}</td>
+			<th scope='row'>{NAME}</th>
+			<td>{CANALE}</td>
+			<td>{CLASSIFICATION}</td>
+			<td>{CLASS:decodeClass}</td>
+			<!--
+			<td>{OWNER}</td>
+			<td>{GROUPS}</td>
+			-->
+		</tr>
+	<!-- END tRow -->
+
+	<!-- BEGIN tFooter -->
+			<tr class="tfooter">
+				<td colspan="6">
+					<div class="pull-right">
+							{pagination}
+					</div>
+					<p>_(nm)_: {TOTRECORDS}</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<!-- END tFooter -->
+
+	<!-- BEGIN noItems -->
+	<div class="alert">_(none)_</div>
+	<!-- END noItems -->
+
+

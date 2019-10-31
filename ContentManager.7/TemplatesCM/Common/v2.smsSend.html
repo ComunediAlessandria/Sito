@@ -1,0 +1,94 @@
+
+<form method='post' id='AdminFormBO' class='form-horizontal' action=''>
+	<div class='well well-small'>
+
+		<div class='row'>
+			<div class='span12'>
+				<h2>__(pgass.tspt)</h2>
+			</div>
+		</div>
+
+		<div class='row'>
+			<div class='span11'>
+				{err}
+			</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label" for="frmSMSNL">__(.tsnl):</label>
+			<div class="controls">
+				{descNL}
+			</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label" for="frmText">__(.tdt):</label>
+			<div class="controls">
+
+				{frmText}
+
+			</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label">__(.tdr):</label>
+			<div class="controls">
+				<span>
+					<span id='nmsg'>&nbsp;</span>
+					:
+				</span>
+				&nbsp;
+				<span id='charsleft'>
+					0
+				</span>
+			</div>
+		</div>
+
+		<!-- invio di test -->
+
+		<div class='row'>
+			<div class='span12'>
+				<h2>Invio di test</h2>
+			</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label" for="frmNumber">__(.tdn):</label>
+			<!--
+			<div class="controls">
+				{frmNumber}
+			</div>
+			-->
+			<div class="controls">
+				{srcPreview}
+			</div>
+		</div>
+
+		<div class="form-actions">
+			{btnTest}
+		</div>
+
+		<!-- invio definitivo -->
+
+		<div class='row'>
+			<div class='span12'>
+				<h2>__(.tdf)</h2>
+			</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label" for="frmSMSNL">Data/Ora:</label>
+			<div class="controls">
+				{frmDT}
+			</div>
+		</div>
+
+
+		<div class="form-actions">
+			{btnCancel}
+			{btnOK}
+		</div>
+
+	</div>
+	{frmSMSNL}
+</form>

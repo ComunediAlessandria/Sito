@@ -1,0 +1,71 @@
+<STYLE type="text/css">
+
+.pollBox {
+
+	width: 90%;
+	color: #000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	padding: 2px 5px 2px 5px;
+	background: rgb(234,242,255);
+	border: 1px solid rgb(120,172,255);
+}
+
+.pollTitle {
+
+	font-size: 12px;
+	font-weight: bold;
+
+	text-align: center;
+}
+
+.pollText {
+
+	font-size: 9px;
+	text-align: justify;
+}
+
+.pollQuestion {
+
+
+}
+
+.pollList {
+
+	list-style-type: none;
+	text-align: left;
+	
+	margin-left: 5px;
+}
+
+.pollButton {
+
+	font-size: 9px;
+	text-align: center;
+}
+
+</STYLE>		
+
+<FORM NAME='formPoll' METHOD='POST' ACTION='{ACTION}'>
+
+<DIV ALIGN=CENTER>		
+	<DIV CLASS='pollBox'>
+		<STRONG CLASS='pollTitle'>{TITOLO}</STRONG>
+		<DIV CLASS='pollText'>{TESTO}</DIV>
+		<UL CLASS='pollList'>
+			<!-- BEGIN row -->
+			<LI CLASS='pollQuestion'><INPUT TYPE='RADIO' NAME='{NAME}' VALUE='{VALUE}'>{TEXT}</LI>
+			<!-- END row -->
+		</UL>
+
+		<INPUT TYPE='SUBMIT' CLASS='pollButton' VALUE='Vota'>
+		
+		<DIV><A HREF='{LINKRESULT}'>Risultati</A></DIV>
+		<DIV><A HREF='{LINKALL}'>Sondaggi</A></DIV>
+		
+	</DIV>
+</DIV>
+
+{HIDDEN}
+</FORM>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="lang" defaultlang="IT">
+  <group id="snViewPageGroupAPendingreq" define="false">
+    <message id="none" lang:it="Nessuna Richiesta Attiva" lang:en="No active request" lang:fr="No active request" lang:de="No active request" lang:es="No active request" lang:ru="No active request"/>
+    <message id="accept" lang:it="Approva" lang:en="Approve" lang:fr="Approve" lang:de="Approve" lang:es="Approve" lang:ru="Approve"/>
+    <message id="deny" lang:it="Respingi" lang:en="Reject" lang:fr="Rejeter" lang:de="Ablehnen" lang:es="Reject" lang:ru="Отклонить"/>
+    <message id="title" lang:it="Richieste" lang:en="Requests" lang:fr="Demandes" lang:de="Anfragen" lang:es="Solicitudes" lang:ru="запросы"/>
+    <message id="taccept"/>
+  </group>
+</messages>

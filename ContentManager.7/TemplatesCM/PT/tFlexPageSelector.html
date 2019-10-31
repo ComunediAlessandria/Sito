@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='IT' lang='IT'>
+<head>
+<!--
+
+	ATTENZIONE!
+
+		Questo è il template del popup, quindi deve avere tutti gli elementi di pagina
+		(non è gestito dalla FlexPage)
+-->
+
+	<title>Scelta Destinazione Link</title>
+
+<link rel='stylesheet' href='{TEMPLATECSS}/IndexTree.css' type='text/css' />
+
+<style>
+
+.xxx { border: 1px solid red; }
+
+</style>
+
+<script>
+
+function Init() {
+
+	var config = { http: 'on' };
+
+	var src = Source();
+	var value = '';
+	if (src) {
+
+		value = src.GetValue();
+		if (src.GetConfig)
+			config = src.GetConfig();
+	}
+
+	DoConfig(config);
+
+		// switch al pannello relativo al valore iniziale solo nel caso del primo
+		// caricamento, altrimenti torna a quello precedente
+
+//		SetPageID(value);
+
+	if (document.getElementById('frmSelectedPanel').value == '')
+		SetPageID(value);
+	else {
+
+		PanelSwitchTo(document.getElementById('frmSelectedPanel').value);
+
+			// seleziona comunque l'elemento corrente dalla lista
+
+		SelectInPageList(value, true);
+	}
+}
+
+function DoConfig(config) {
+
+	if (config.http) {
+		document.getElementById('lHTTP').style.display = (config.http == 'on' ? '' : 'none');
+	}
+}
+
+function SetPageID(pageID) {
+
+	if (pageID == undefined || pageID == '') {
+
+		PanelSwitchTo('Page');
+		return;
+	}
+
+	var pars = pageID.split(':');
+	switch (pars[0]) {
+
+			case 'BLOB':
+					PanelSwitchTo('Page');
+					var el = document.getElementById('frmIDPagina1');
+					if (el)
+						el.value = pars[0] + ':' + pars[1];
+
+					SelectInPageList(pageID, true);
+
+				break;
+
+			case 'HTML':
+					PanelSwitchTo('FP');
+					document.getElementById('frmFP1').value = pars[0] + ':' + pars[1];
+
+				break;
+
+			case 'PHP':
+					PanelSwitchTo('PHP');
+					document.getElementById('frmPHP1').value = pars[0] + ':' + pars[1];
+				break;
+
+			default:
+					PanelSwitchTo('HTTP');
+					document.getElementById('frmHTTP').value = pageID.replace(/&#039;/g,"'");
+				break;
+	}
+}
+
+var gSelEl = null;
+
+function SelectInPageList(pageID, shouldCenter) {
+
+	if (gSelEl !== null)
+		gSelEl.className = '';
+
+	var list = document.getElementById('PageList');
+	gSelEl = document.getElementById(pageID);
+
+	if (gSelEl !== null) {
+
+		gSelEl.className = 'PageSelected';
+
+		if (shouldCenter)
+			document.getElementById('AdminIndexLinkList').scrollTop = gSelEl.offsetTop - 20;
+	}
+}
+
+function GetPageID() {
+
+	switch (document.getElementById('frmSelectedPanel').value) {
+
+		case 'Page':
+				var el = document.getElementById('frmIDPagina1');
+				return { pageID: el.value, desc: el.item(el.selectedIndex).text };
+			break;
+
+		case 'FP':
+				var el = document.getElementById('frmFP1');
+				return { pageID: el.value, desc: el.item(el.selectedIndex).text };
+			break;
+
+		case 'PHP':
+				var el = document.getElementById('frmPHP1');
+				return { pageID: el.value, desc: el.item(el.selectedIndex).text };
+			break;
+
+		case 'HTTP':
+				var el = document.getElementById('frmHTTP');
+				var vv = el.value.replace(/'/g,"&#039;");
+				return { pageID: vv, desc: vv };
+			break;
+	}
+}
+
+function DoCopy() {
+
+	var src = Source();
+	if (src) {
+
+		var info = GetPageID();
+
+		src.SetValue(info.pageID, info.desc);
+	}
+
+	window.close();
+}
+
+function DoCopyV(pageID, desc) {
+
+	var src = Source();
+	if (src) {
+
+		src.SetValue(pageID, desc);
+	}
+
+	SelectInPageList(pageID, false);
+
+	window.close();
+}
+
+function Source() {
+
+	if (window.opener)
+		return window.opener;
+
+	if (window.parent)
+		return window.parent;
+
+	return window.opener;
+//	return (document.all ? window.dialogArguments : window.opener);
+}
+
+function DoReset() {
+
+	var el = document.getElementById('s');
+	el.value = '*';
+
+	var form = document.getElementById('f');
+	form.submit();
+}
+
+	//
+	// funzioni per il filtraggio del contenuto
+	//
+
+function DoLocalFilter() {
+
+	var el = document.getElementById('idPagina');
+	for (var i = 0; i < 80; i++) {
+
+		el.item(i).style.visibility="hidden";
+//		el.item(i).disabled = true;
+	}
+}
+
+function DoFocus(elName, defaultValue) {
+
+	var el = document.getElementById(elName);
+	if (el.value == defaultValue)
+		el.value = '';
+}
+
+</script>
+
+</head>
+<body onLoad='Init();' id="AdminIndexPopUpBody">
+
+	<form method='get' action='' id='f'>
+
+		<div id='divPanels'>
+
+			<div class="AdminIndexPageTypeSelector">
+				<h2>Seleziona il tipo di Link</h2>
+				<ol>
+					<li id='lPage'><a href='#' onClick='PanelSwitchTo("Page")' title='Pagine generate con {KFFNAME}' id='cPage'>Pagina Interna</a></li>
+					<li id='lFP'><a href='#' onClick='PanelSwitchTo("FP")' title='Pagine HTML residenti nella cartella FixedPages' id='cFP'>&nbsp;&nbsp;HTML&nbsp;&nbsp;</a></li>
+					<li id='lPHP'><a href='#' onClick='PanelSwitchTo("PHP")' title='Pagine PHP residenti nella cartella FixedPages'  id='cPHP'>&nbsp;&nbsp;&nbsp;PHP&nbsp;&nbsp;&nbsp;</a></li>
+					<li id='lHTTP'><a href='#' onClick='PanelSwitchTo("HTTP")' title='Link HTTP'  id='cHTTP'>Link Esterno</a></li>
+				</ol>
+			</div>
+
+			<div id='Page' class="AdminIndexPageTypeSelector">
+				<h2>Link ad una pagina interna {KFFNAME}</h2>
+					<div>
+						Per limitare le pagine presenti nell'elenco soprastante &egrave; possibile filtrarle in base ad una parola presente nel titolo: digitare la parola (o parte) nel campo sottostante e premere filtra.
+					</div>
+					<div>
+						<input type='text' name='frmSearch' value='{SEARCH}' id='s' onfocus='DoFocus("s", "---")' />
+						<input type='submit' value='filtra' />
+						<!-- a href='#' onclick='DoLocalFilter(); return false;' >FFF</a -->
+						<input type='reset' value='Mostra tutte le Pagine' onClick='return DoReset();'/>
+						<input type='hidden' name='frmSelectedPanel' id='frmSelectedPanel' value='{frmSelectedPanel}' />
+
+					</div>
+				<div>Seleziona la pagina desiderata cliccando il link dall'elenco sottostante ({NPAG})</div>
+				<div id="AdminIndexLinkList">{SELECTOR}</div>
+			</div>
+
+			<div id='FP' class="AdminIndexPageTypeSelector">
+				<h2>Link ad una pagina HTML</h2>
+				<div>Seleziona la pagina desiderata dall'elenco sotostante</div>
+				<div>Pagina HTML:&nbsp;{COMBOFP}</div>
+			</div>
+
+			<div id='PHP' class="AdminIndexPageTypeSelector">
+				<h2>Link ad una procedura PHP</h2>
+
+				<div>Seleziona la procedura desiderata dall'elenco sotostante</div>
+				<div>Pagina PHP:&nbsp;{COMBOPHP}</div>
+			</div>
+
+			<div id='HTTP' class="AdminIndexPageTypeSelector">
+				<h2>Link ad un indirizzo web esterno</h2>
+				<div>Digita nel campo sottostante l'indirizzo http di destinazione</div>
+				<div>Indirizzo HTTP:&nbsp; <input type='text' name='frmHTTP' id='frmHTTP' size='80'> <input type='submit' value='Aggiorna' onClick='DoCopy();'/></div>
+			</div>
+
+		</div>
+
+	</form>
+
+<script type='text/javascript' src='{JSPATH}panels.js'></script>
+
+</body>
+</html>

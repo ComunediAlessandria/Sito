@@ -1,0 +1,5 @@
+Introduzione del parametro di ordinamento temporale nei post dei forum
+
+Modifica oggetto Elenco Punti Geografici con introduzione di un filtro di frontend basato sulla classificazione degli elementi geografici
+
+Modifica oggetto Elenco Pagine con introduzione delle opzioni di ridimensionamento delle immagini di strillo

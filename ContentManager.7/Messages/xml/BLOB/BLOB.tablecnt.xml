@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="it">
+	<group id="btcnt" define="false">
+		<message id="cdc" lang:it="Contenitore Due Colonne" lang:en="Container 2 Columns"/>
+		<message id="eac" lang:it="Elementi a coppie" lang:en="Coupled Elements"/>
+		<message id="peasaad" lang:it="Primo elemento a sinistra, altri a destra" lang:en="First element left, remaining right"/>
+		<message id="peadaas" lang:it="Primo elemento a destra, altri a sinistra" lang:en="First element right, remaining left"/>
+		<message id="lcs" lang:it="Larghezza colonna sinistra" lang:en="Left column width"/>
+		<message id="lcd" lang:it="Larghezza colonna destra" lang:en="Right column width"/>
+		<message id="opzioni" lang:it="Opzioni" lang:en="Options"/>
+	</group>
+</messages>

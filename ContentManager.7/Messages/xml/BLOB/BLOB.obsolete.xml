@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="it">
+	<group id="bobs" define="false">
+		<message id="contatore" lang:it="Contatore" lang:en="Counter"/>
+		<message id="valore" lang:it="Valore" lang:en="Value"/>
+		<message id="nascosto" lang:it="Nascosto" lang:en="Hidden"/>
+		<message id="obs"
+			lang:it="Attenzione: oggetto obsoleto. Questo oggetto verrà rimosso nelle prossime versioni del prodotto"
+			lang:en="Warning: obsolete object. This object will be removed in future versions"
+		/>
+	</group>
+</messages>

@@ -1,0 +1,11 @@
+a:15:{s:2:"pi";s:13:"Internal Page";s:6:"filtra";s:6:"Filter";s:4:"mtlp";s:14:"Show all pages";s:2:"np";s:7:"No Page";s:11:"PEBLOBTitle";s:28:"Link toward an Internal Page";s:10:"PEBLOBInfo";s:236:"
+				In order to limit the number of pages in the list, it's possible to apply a filter
+				using a word that should appear in page's title: please type the word (or a part of it)
+				in the text field and press the 'filter' button.
+			";s:10:"PEBLOBDesc";s:97:"
+				Please, choose the desired page by clicking the corresponding link in the following list
+			";s:2:"le";s:13:"External Link";s:15:"PEExternalTitle";s:32:"Link toward an external Web Page";s:14:"PEExternalHTTP";s:12:"HTTP Address";s:14:"PEExternalInfo";s:79:"
+				Please, write in the following text field the destination http address
+			";s:8:"aggiorna";s:6:"Update";s:12:"PEClassTitle";s:26:"Link toward a Page of kind";s:11:"PEClassPage";s:4:"Page";s:11:"PEClassInfo";s:64:"
+				Please, select the desired page from the following list
+			";}

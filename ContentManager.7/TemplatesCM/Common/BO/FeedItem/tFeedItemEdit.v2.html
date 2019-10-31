@@ -1,0 +1,72 @@
+	{ERR}
+
+<form id="AdminFormBO" class="form-horizontal" enctype='multipart/form-data' method="post" action="{ACTION}">
+	<div class='well well-small'>
+
+		<div class="control-group">
+			<!-- Elementi usati dallo switcher JS per le lingue -->
+			<strong>__(bo-common.slc)</strong>:
+			<span id='BOPanelSwitchPanel'></span>
+			<div>__(bo-common.curlang): <span id='BOPanelSwitchCurLanguage'></span></div>
+
+		</div>
+
+		<div class="control-group">
+			<label class="control-label" for="{TAG_Name}">{LBL_Name}</label>
+			<div class="controls"> {VAL_Name}</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label" for="{TAG_jTitle}">{LBL_jTitle}</label>
+			<div class="controls"> {VAL_jTitle}</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label">{LBL_Definition}</label>
+			<div class="controls"> {VAL_Definition}</div>
+		</div>
+
+
+		<div class="control-group">
+			<label class="control-label" for="TAG_Mode">{LBL_Mode}</label>
+			<div class="controls"> {VAL_Mode}</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label" for="TAG_jDescription">{LBL_jDescription}</label>
+			<div class="controls"> {VAL_jDescription}</div>
+		</div>
+
+
+		<div class="control-group">
+			<label class="control-label" for="TAG_Copyright">{LBL_Copyright}</label>
+			<div class="controls"> {VAL_Copyright}</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label" for="TAG_Editor">{LBL_Editor}</label>
+			<div class="controls"> {VAL_Editor}</div>
+		</div>
+
+
+		<div class="control-group">
+			<label class="control-label" for="TAG_ImagePath">{LBL_ImagePath}</label>
+			<div class="controls"> {VAL_ImagePath}</div>
+		</div>
+
+	</div>
+
+
+	<div class='well well-small'>
+		<div class='row'>
+			<div class='span2'>
+					<input name="btnCancel" type="submit" class='btn' value="__(bo-common.canc)" />
+			</div>
+			<div class='span2'>
+				{HIDDEN}
+				<input name="Submit" type="submit" class='btn btn-primary' value="__(bo-common.save)" />
+			</div>
+		</div>
+	</div>
+
+</form>

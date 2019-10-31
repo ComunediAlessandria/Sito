@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title>jDialog</title>
+    <script type="text/javascript" src="../jquery.js"></script>
+    <script type="text/javascript" src="../../BLOBEditMoz.js"></script>
+    <__script type="text/javascript" src="jDialog.js"></script>
+
+    <script type="text/javascript">
+
+	var gAppConfigure = {
+		kBlankLinkMessage: ' (Questo collegamento aprirà una nuova finestra)',
+		kBaseURL: 'http://pollon.furuz/cverond/FlexCMP/cm/'
+	};
+
+	FlexJS.Loader.LoadJS('js/jq/jDialog/jDialog.js');
+
+      $(document).ready(function(){
+        $('a.jDbox').click(function(){
+          var t = this.title || $(this).text() || this.href;
+
+			FlexJS.Loader.LoadJS('js/jq/jDialog/jDialog.js', function () {
+
+				new FlexJS.UI.Dialog(t, '<div align="center">Contenuto</div>', 470, 300);
+			});
+         
+          return false;
+        });
+      });
+    </script>
+</head>
+<body>
+<h1>jDialog</h1>
+
+	<a href="#" class="jDbox">Test Me!</a></li>
+
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+
+	<a href="#" class="jDbox">Test Me!</a></li>
+
+
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+	<div>Content ... scroll me, please!</div>
+</body>
+</html>

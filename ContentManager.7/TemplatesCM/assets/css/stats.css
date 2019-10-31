@@ -1,0 +1,19 @@
+.graph-container {
+	border: 1px solid #CCCCCC;
+	box-shadow: 1px 1px 2px #EEEEEE;
+	margin: 10px 0;
+	padding: 20px;
+	position: relative;
+}
+
+.graph-container .caption {
+    text-align: center;
+	color: #5F5F5F; background-color: #fff;
+	font-weight: bold;
+}
+.morris-hover {z-index: 900 !important}
+
+.AdminStatsTable thead th,.AdminStatsTable tbody td {text-align: right}
+.AdminStatsTable thead th:first-child,.AdminStatsTable tbody td:first-child {text-align: left}
+
+.goToTop{position: fixed; right: 20px; bottom: 40px; z-index: 900;}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="it">
+	<group id="fup" define="false">
+		<message id="co" lang:it="Caricamento Oggetto" lang:en="Upload Object" lang:es="Upload Documento"/>
+		<message id="elimina" lang:it="ELIMINA" lang:en="DELETE" lang:es="BORRAR"/>
+		<message id="nfc" lang:it="Nessun file caricato" lang:en="No Object Uploaded"/>
+		<message id="fi" lang:it="File Immagine" lang:en="Image File" lang:es="Documento de imagen"/>
+		<message id="descrizione" lang:it="Descrizione" lang:en="Description" lang:es="Descripcion"/>
+
+		<message id="hint-i" lang:it="Trascina un'immagine qui per caricare" lang:en="Drag picture file here to upload" lang:es="Drag picture file here to upload"/>
+		<message id="hint-f" lang:it="Trascina un documento qui per caricare" lang:en="Drag file here to upload" lang:es="Drag file here to upload"/>
+
+		<message id="ci" lang:it="Caricamento Immagine" lang:en="Upload Image" lang:es="Cargar imagen"/>
+		<message id="didascalia" lang:it="Didascalia" lang:en="Caption" lang:es="Leyenda"/>
+		<message id="file" lang:it="File" lang:en="File" lang:es="Documento"/>
+		<message id="cf" lang:it="Caricamento File" lang:en="Upload File" lang:es="Cargar documento"/>
+	</group>
+</messages>

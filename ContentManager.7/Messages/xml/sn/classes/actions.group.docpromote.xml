@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="lang" defaultlang="IT">
+  <group id="snActionGroupDocpromote" define="false">
+    <message id="added"
+    lang:it="Il documento specificato &amp;egrave; stato aggiunto ai documenti del gruppo."
+    lang:en="The specified document has been added to group documents."
+    lang:fr="Le document spécifié a été ajouté à regrouper les documents."
+    lang:de="Das angegebene Dokument zur Gruppe Dokumente hinzugefügt."
+    lang:es="El documento especificado se ha añadido a los documentos del grupo."
+    lang:ru="Указанный документ был добавлен в группу документов."
+    />
+  </group>
+</messages>

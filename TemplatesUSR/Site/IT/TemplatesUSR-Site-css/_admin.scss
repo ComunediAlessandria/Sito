@@ -1,0 +1,178 @@
+/* CLASSI NECESSARIA ALLA IMPAGINAZIONE TABLE FREE */
+
+.BLOBAlignLeft {
+ text-align: left;
+ position: relative;
+}
+
+.BLOBAlignCenter { text-align: center;}
+.BLOBAlignRight { text-align: right;}
+.BLOBAlignJustify { text-align:justify;}
+
+.BLOBBlockAlignCenter { text-align: center; }
+.BLOBBlockAlignCenter div {margin: 0 auto;}
+.BLOBBlockAlignRight { float: right;}
+.BLOBBlockAlignLeft { float:left;}
+
+.BLOBBlockAlignCenter dl {
+	margin: 0 auto 20px;
+}
+/*ul li, ol li {
+	display:block;
+}*/
+ul.BLOBListSymbolDisc { list-style-type: disc;}
+ul.BLOBListSymbolCircle { list-style-type: circle;}
+ul.BLOBListSymbolSquare { list-style-type: square;}
+ul.BLOBListSymbolDecimal { list-style-type: decimal;}
+ul.BLOBListSymbolLowerLetter { list-style-type: lower-alpha;}
+ul.BLOBListSymbolUpperLetter { list-style-type: upper-alpha;}
+ul.BLOBListSymbolNone { list-style-type: none;}
+ul.viewUL li.viewLI { display: list-item; }
+
+ol.BLOBListSymbolDisc { list-style-type: disc;}
+ol.BLOBListSymbolCircle { list-style-type: circle;}
+ol.BLOBListSymbolSquare { list-style-type: square;}
+ol.BLOBListSymbolDecimal { list-style-type: decimal;}
+ol.BLOBListSymbolLowerLetter { list-style-type: lower-alpha; padding-left: 20px;}
+ol.BLOBListSymbolUpperLetter { list-style-type: upper-alpha; padding-left: 20px;}
+ol.BLOBListSymbolNone { list-style-type: none;}
+ol.viewUL li.viewLI { display: list-item; }
+
+ul.viewUL li.viewLI {
+  display: list-item; 
+}
+ol.viewUL li.viewLI {
+  display: list-item; 
+}
+li.viewLI {
+  display: list-item; 
+}
+
+.BLOBFloatClear {
+ clear: both; 
+ }
+.BLOBFloatLeft {
+ float: left;
+ position: relative; /* serve per gestire un bug di ie http://www.positioniseverything.net/explorer/peekaboo.html */
+}
+
+.BLOBFloatRight {
+ float: right;
+ position: relative; /* serve per gestire un bug di ie http://www.positioniseverything.net/explorer/peekaboo.html */
+}
+
+.BLOBMarginLeft {
+ margin-left: 10px;
+}
+
+.BLOBMarginRight {
+ margin-right: 10px;
+}
+
+
+.BLOBIMGSpacerLeft { padding-left: 10px;}
+.BLOBIMGSpacerRight { padding-right: 10px;}
+
+
+
+.BLOBVAlignMiddle {
+ vertical-align: middle;
+}
+
+.BLOBVAlignTop {
+ vertical-align: top;
+}
+
+.BLOBVAlignBottom {
+ vertical-align: bottom;
+}
+
+
+.BLOBWidth100 {width: 100%;}
+.BLOBWidth50 {width: 49%;}
+
+/* usato per affiancare orrizontalmente n oggetti */
+.BLOBWidthN1 {float: left; width: 99%;}
+.BLOBWidthN2 {float: left; width: 49.5%;}
+.BLOBWidthN3 {float: left; width: 33%;}
+.BLOBWidthN4 {float: left; width: 24.7%;}
+.BLOBWidthN5 {float: left; width: 19.8%;}
+.BLOBWidthN6 {float: left; width: 16.5%;}
+.BLOBWidthN7 {float: left; width: 14.1%;}
+.BLOBWidthN8 {float: left; width: 12.3%;}
+.BLOBWidthN9 {float: left; width: 11.0%;}
+.BLOBWidthN10 {float: left; width: 9.9%;}
+.BLOBWidthN11 {float: left; width: 9.0%;}
+.BLOBWidthN12 {float: left; width: 8.2%;}
+.BLOBWidthN13 {float: left; width: 7.6%;}
+.BLOBWidthN14 {float: left; width: 7.0%;}
+.BLOBWidthN15 {float: left; width: 6.6%;}
+
+/* usato per la dimensione delle celle delle tabelle */
+.BLOBWidthTDN1 {width: 99%;}
+.BLOBWidthTDN2 {width: 49.5%;}
+.BLOBWidthTDN3 {width: 33%;}
+.BLOBWidthTDN4 {width: 24.7%;}
+.BLOBWidthTDN5 {width: 19.8%;}
+.BLOBWidthTDN6 {width: 16.5%;}
+.BLOBWidthTDN7 {width: 14.1%;}
+.BLOBWidthTDN8 {width: 12.3%;}
+.BLOBWidthTDN9 {width: 11.0%;}
+.BLOBWidthTDN10 {width: 9.9%;}
+.BLOBWidthTDN11 {width: 9.0%;}
+.BLOBWidthTDN12 {width: 8.2%;}
+.BLOBWidthTDN13 {width: 7.6%;}
+.BLOBWidthTDN14 {width: 7.0%;}
+.BLOBWidthTDN15 {width: 6.6%;}
+
+
+
+
+.BLOBWidthEmpty {}
+
+.BLOBRow1px {
+	font-size: .05em;
+	height: 1px;
+}
+
+.BLOBHidden{
+	visibility:hidden;
+	position: absolute;
+	top: -1000em;
+	font-size: .1em;
+}
+
+.FlexCMPError {
+	position: relative;
+	margin: 2em 0 2em 0;
+	padding: .5em;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: .9em;
+	font-weight:bold;
+	color: #000000;
+	background-color:#FFFF66;
+	border: 2px solid #FF0000;
+}
+
+.errList{
+	margin: 1em auto;
+	max-width: 600px;
+	padding: .5em;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: .9em;
+	font-weight:bold;
+	color: #000000;
+	background-color:#f2dede;
+	border: 1px solid #ebccd1;
+	list-style-type: none;
+	border-radius: 4px;
+}
+
+.nowrap {
+ white-space:nowrap;
+}
+
+/* Bordo del campo bloboject che diventa rosso se lasci vuoto un campo obbligatori */
+.fldBox {border: 1px solid black;}
+.fldErr {border: 1px solid red;}
+

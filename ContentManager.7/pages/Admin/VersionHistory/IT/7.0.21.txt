@@ -1,0 +1,11 @@
+Nuova opzione di login per community basata su Facebook
+
+Migliorie oggetto editoriale per Form Captcha
+
+Supporto Universal Analytics di Google
+
+Revisione responsive menu amministrativo per invio Newsletter SMS da smartphone
+
+Migliorie modulo Newsletter: verifica eventuali errori in html lettera e anteprima prima dell'invio
+
+Security Fix per XSS su Motore di Ricerca

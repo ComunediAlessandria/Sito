@@ -1,0 +1,29 @@
+/* misureantismog.css */
+.level0 {
+	background-color: green;
+	color:#fff;
+}
+.level1 {
+	background-color: #FDBA00;
+	color:#333333;
+}
+.level2 {
+	background-color: #C72037;
+	color:#fff;
+}
+.iconsmog {
+	margin-bottom:5px;
+}
+
+.level0 a .ts {
+	color:#fff;
+}
+.level1 a .ts {
+	color:#333333;
+}
+.level2 a .ts {
+	color:#fff;
+}
+.tsmog table tr th, .tsmog table tr td {
+	width:33%;
+}

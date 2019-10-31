@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='iso-8859-1' ?>
+<ui id='Feed'>
+
+	<page
+		title='__(bo-feed.edittile)'
+		permission='FEED'
+	/>
+
+	<presenter
+		type='Template'
+		filename='FeedItem/tFeedItemEdit.html'
+	/>
+
+	<elements>
+		<element	id='Name'	BO='Name'	type='text'	size='40'	maxlen='255'	label='__(bo-feed.feedname)' class='span8' />
+
+		<element	id='Definition'	bo='Definition'		type='classification'		configuration='pageextractor' label='__(bo-feed.taxonomy)' 	/>
+		<element	id='Mode'	bo='Mode'	type='radio'	valueset='vsMode' label='__(bo-feed.modedesc)' />
+		<element	id='Copyright'	BO='Copyright'	type='text'	size='40'		maxlen='255'			label='__(.copy)' class='span8' />
+		<element	id='Editor'	BO='Editor'	type='text'	size='40'		maxlen='255'			label='__(.emaileditor)' class='span8' />
+		<element	id='ImagePath'	BO='ImagePath'	type='img'	path='AppData/Redational/Feeds/Images/'	maxwidth='100' maxheight='100'		label='__(.img)' />
+
+		<!-- campi I18N -->
+
+		<element	id='jTitle'		BO='jTitle'		type='multitext'	valueset='Languages' 	mapping='Lang:Text'	label='__(bo-feed.feedtitle)' class='span8' />
+		<element	id='jDescription'		BO='jDescription' type='multitextarea' rows='3' cols='80'		valueset='Languages'	mapping='Lang:Text'	label='__(bo-feed.desc)' class='span8' />
+	</elements>
+
+	<_valueset id='Languages' kind='DISTINCT' table='Languages' colid='Lang' column='DescrizioneIT' />
+
+	<valueset id='vsMode'>
+		<value id='0' text='OR' />
+		<value id='1' text='AND' />
+	</valueset>
+
+	<validations>
+		<validation id='Name'	type='mandatory'	forfield='Name' />
+		<validation id='jTitle'	type='mandatory'	forfield='jTitle' message="__(bo-feed.errtitlelanguages)" />
+		<validation id='jDescription'	type='mandatory'	forfield='jDescription' message="__(bo-feed.errdesclanguages)" />
+		<validation id='Definition'	type='mandatory'	forfield='Definition' message="__(bo-feed.errtaxonomy)" />
+		<validation id='Mode'	type='mandatory'	forfield='Mode' />
+	</validations>
+
+	<!-- UI per la cancellazione - per adesso qui, domani in un file XML separato -->
+
+	<delete
+		template='FeedItem/tFeedItemDelAsk.html'
+	/>
+
+</ui>

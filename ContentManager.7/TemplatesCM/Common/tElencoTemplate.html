@@ -1,0 +1,60 @@
+<form id='F' method='post' action='{ACTION}'>
+
+<div id="AdminCorpoBox">
+	<h1>{DESC}</h1>
+	<div class="AdminPageFooterCommand"><a href='{ADDLINK}'>{ADDIMG} __(pgaet.add)</a></div>
+<!--
+	NON CANCELLARE: E' il filtro da attivare quanso servirà
+
+	<div id="AdminFiltroElencoPagine">
+		<fieldset>
+			<legend>Modelli da mostrare</legend>
+			<div>{CMBFILTER}</div>
+			{CMBCANALE}
+			<label for="filterTitle">contenenti nel titolo la parola:</label>{FILTER}
+		</fieldset>
+			<label for="sort">ordina per:</label> {CMBSORT}
+			<input type="submit" name="Aggiorna" value="Aggiorna" id="AdminFiltroElencoSubmit" />
+			<input type="submit" name="nofilter" value="Reimposta"  id="AdminFiltroElencoReset" />
+	</div>
+	{HIDDEN}{CMBKIND}
+-->
+
+	<!-- BEGIN tHead -->
+	<table summary="__(.td)" id='tablePages'>
+		<thead>
+			<tr>
+				<th scope="col" class='AdminIcoCellWide'>__(.tha)</th>
+				<th scope="col">__(.thn)</th>
+				<th scope="col">__(.tht)</th>
+				<th scope="col">__(.thgp)</th>
+				<th scope="col">__(.thgs)</th>
+			</tr>
+		</thead>
+		<tbody>
+	<!-- END tHead -->
+
+	<!-- BEGIN row -->
+			  <tr class="{CLASSTR}">
+
+			<td class='AdminIcoCellWide'>{IMGDEL} {IMGDUP} {IMGMOD}</td>
+			<td>{ID}</td>
+			<th scope="row">{PAGETITLE}</th>
+			<td>{OWNER}</td>
+			<td>{GROUPS}</td>
+		  </tr>
+	<!-- END row -->
+
+	<!-- BEGIN tFooter -->
+		</tbody>
+	</table>
+	<div class="AdminPageFooterStatus">__(.f): {TOTRECORDS}</div>
+	<!-- END tFooter -->
+
+	<!-- BEGIN noData -->
+	<div class="AdminPageFooterCommand">__(.no)</div>
+	<!-- END noData -->
+
+</div>
+
+</form>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="lang" defaultlang="IT">
+  <group id="snViewUserFriendslist" define="false">
+    <message id="sort" lang:it="Ordina" lang:en="Sort" lang:fr="Trier" lang:de="Sortieren" lang:es="Ordenar" lang:ru="род"/>
+    <message id="sname" lang:it="Nome" lang:en="Name" lang:fr="Nom" lang:de="Name" lang:es="Nombre" lang:ru="Имя"/>
+    <message id="sdate" lang:it="Data" lang:en="Date" lang:fr="Date" lang:de="Datum" lang:es="Fecha" lang:ru="дата"/>
+    <message id="find" lang:it="Cerca" lang:en="Search" lang:fr="Rechercher" lang:de="Suchen" lang:es="Buscar" lang:ru="Поиск"/>
+    <message id="none" lang:it="Nessun Contatto corrispondente ai criteri impostati." lang:en="No contact matches criteria set." lang:fr="Pas de contact correspond ensemble de critères." lang:de="Kein Kontakt übereinstimmt Kriterien festgelegt." lang:es="No hay contacto coincide con los criterios de set." lang:ru="Отсутствие контакта не соответствует заданным критериям."/>
+    <message id="del" lang:it="Elimina" lang:en="Delete" lang:fr="Supprimer" lang:de="Löschen" lang:es="Borrar" lang:ru="удалять"/>
+    <message id="info" lang:it="Contatti da %s a %s di %s (%s totali)" lang:en="Contacts from %s to %s of %s (for a total of %s)" lang:fr="Contacts de %s à %s de %s (%s au total)" lang:de="Kontakte %s bis %s von %s (%s gesamt)" lang:es="Contacts from %s to %s of %s (for a total of %s)" lang:ru="Контакты %s по %s из %s (всего %s)"/>
+    <message id="tdel"/>
+  </group>
+</messages>

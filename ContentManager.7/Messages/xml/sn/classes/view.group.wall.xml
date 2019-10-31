@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="lang" defaultlang="IT">
+	<group id="snViewGroupWall" define="false">
+		<message id="none"
+			lang:it="Non ci sono Elementi da visualizzare."
+			lang:en="There are no items to display."
+			lang:fr="Il n'y a pas d'article à afficher."
+			lang:de="Es sind keine Artikel angezeigt werden soll."
+			lang:es="No hay elementos para mostrar."
+			lang:ru="Там нет объектов для отображения."
+		/>
+		<message id="aactivity"
+			lang:it="Attività"
+			lang:en="Activity"
+			lang:fr="Activités"
+			lang:de="Aktivitäten"
+			lang:es="Actividades"
+			lang:ru="Деятельности"
+		/>
+		<message id="more"
+			lang:it="Altri post"
+			lang:en="More posts"
+			lang:fr="Plus de posts"
+			lang:de="Weitere Beiträge"
+			lang:es="Más mensajes"
+			lang:ru="Еще записи"
+		/>
+		<message id="show"
+			lang:it="Visualizza"
+			lang:en="Show"
+			lang:fr="Afficher"
+			lang:de="Bulletin Board"
+			lang:es="Mostrar"
+			lang:ru="Показать"
+		/>
+		<message id="sall"
+			lang:it="Tutte le Notizie"
+			lang:en="All the news"
+			lang:fr="Toutes les nouvelles"
+			lang:de="All the news"
+			lang:es="Todas las noticias"
+			lang:ru="Все новости"
+		/>
+		<message id="sadmin"
+			lang:it="Da Amministratore"
+			lang:en="As an administrator"
+			lang:fr="En tant qu'administrateur"
+			lang:de="Als Administrator"
+			lang:es="Como administrador"
+			lang:ru="Как администратор"
+		/>
+	</group>
+</messages>

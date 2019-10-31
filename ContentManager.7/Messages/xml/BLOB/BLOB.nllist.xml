@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="it">
+	<group id="bnllist" define="false">
+		<message id="en" lang:it="Elenco Newsletter" lang:en="Newsletter List"/>
+		<message id="dsc" lang:it="Data Spedizione (crescente)" lang:en="Sending Date (ascending)"/>
+		<message id="dsd" lang:it="Data Spedizione (decrescente)" lang:en="Sending Date (descending)"/>
+		<message id="titolo" lang:it="Titolo" lang:en="Title"/>
+		<message id="aspetto" lang:it="Aspetto" lang:en="Layout"/>
+		<message id="nt" lang:it="Nome Telaio" lang:en="Template Name"/>
+		<message id="newsletter" lang:it="Newsletter" lang:en="Newsletter"/>
+		<message id="nn" lang:it="Nome Newsletter" lang:en="Newsletter Name"/>
+		<message id="ordinamento" lang:it="Ordinamento" lang:en="Sorting"/>
+	</group>
+</messages>

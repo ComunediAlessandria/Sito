@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="lang" defaultlang="IT">
+	<group id="snPHDoc" define="false">
+		<message id="err"
+			lang:it="Errore: non è possibile accedere al documento richiesto"
+			lang:en="Error: it is not possible to open the document requested"
+			lang:fr="Erreur: il n'est pas possible d'ouvrir le document demandé"
+			lang:de="Fehler: Es ist nicht möglich, öffnen Sie das Dokument angefordert"
+			lang:es="Error: no se puede abrir el documento solicitado"
+			lang:ru="Ошибка: не удается открыть документ просил"
+		/>
+	</group>
+</messages>

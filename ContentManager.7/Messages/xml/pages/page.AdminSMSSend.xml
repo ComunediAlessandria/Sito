@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE FlexCMPMessages SYSTEM '/FlexCMPMessages.dtd'>
+<messages xmlns:lang='#' defaultlang='IT'>
+	<group id='pgass' define='false'>
+
+		<message id='bs'
+			lang:it='Spedizione Definitiva'
+			lang:en='Final Sending'
+		/>
+
+		<message id='bst'
+			lang:it='Spedizione di Test'
+			lang:en='Sending Test'
+		/>
+
+		<message id='dd'
+			lang:it='Giorno'
+			lang:en='Day'
+		/>
+
+		<message id='mm'
+			lang:it='Mese'
+			lang:en='Month'
+		/>
+
+		<message id='hh'
+			lang:it='Ore'
+			lang:en='Hours'
+		/>
+
+		<message id='nn'
+			lang:it='Minuti'
+			lang:en='Minutes'
+		/>
+
+		<message id='none'
+			lang:it='Nessun destinatario cui spedire SMS'
+			lang:en='No recipients available'
+		/>
+
+		<message id='vt'
+			lang:it='Non è stato inserito alcun testo'
+			lang:en='No text was inserted'
+		/>
+
+		<message id='vp'
+			lang:it='È necessario inserire nel testo solamente placeholder riconosciuti'
+			lang:en='Only recognized placeholders can be inserted in text'
+		/>
+
+		<message id='vn'
+			lang:it='Non è stato inserito alcun numero a cui effettuare la spedizione di test'
+			lang:en='No number was inserted for test sending'
+		/>
+
+		<message id='vx'
+			lang:it="Nel numero '%s' non è stato indicato il prefisso internazionale (es. +39 ...)"
+			lang:en="In the inserted number '%s' the internationa prefix wasn't specified (eg. +39 ...)"
+		/>
+
+		<message id='err'
+			lang:it='Si sono verificati i seguenti errori'
+			lang:en='The following errors was detected'
+		/>
+
+		<!-- template tSMSSelectNL -->
+		
+		<message id='tspt'
+			lang:it='Invio SMS'
+			lang:en='Send SMS'
+		/>
+
+		<message id='tsnl'
+			lang:it='Newsletter SMS'
+			lang:en='Newsletter SMS'
+		/>
+		
+		<message id='tss'
+			lang:it='Seleziona'
+			lang:en='Select'
+		/>
+
+		<!-- template tSMSConfirm -->
+
+		<message id='tcc'
+			lang:it='Conferma la spedizione del messaggio'
+			lang:en='Confirm sending of following message'
+		/>
+
+		<message id='tct'
+			lang:it='Alla Newsletter SMS'
+			lang:en='To SMS Newsletter'
+		/>
+
+		<message id='tctm'
+			lang:it='la spedizione avverrà il'
+			lang:en='sending will be on'
+		/>
+
+		<message id='tcca'
+			lang:it='Annulla'
+			lang:en='Cancel'
+		/>
+
+		<message id='tcse'
+			lang:it='Spedisci'
+			lang:en='Send'
+		/>
+
+		<!-- template tSMSSent -->
+
+		<message id='te1'
+			lang:it='Il messaggio è stato accodato per la spedizione e sarà spedito il'
+			lang:en='Message was queued for sending at'
+		/>
+
+		<message id='te2'
+			lang:it='la data indicata è indicativa - la spedizione potrebbe avvenire con un ritardo di qualche minuto'
+			lang:en='sending time is approxximate - effective sending can have some delay'
+		/>
+
+		<!-- template tSMSSend -->
+
+		<message id='tdt'
+			lang:it='Testo del messaggio'
+			lang:en='Message Text'
+		/>
+
+		<message id='tdr'
+			lang:it='Caratteri rimanenti per il messaggio numero'
+			lang:en='Remaining characters'
+		/>
+
+		<message id='tdn'
+			lang:it='Numero/i di test'
+			lang:en='Test number/s'
+		/>
+
+		<message id='tdf'
+			lang:it='Invio definitivo'
+			lang:en='Final Sending'
+		/>
+
+	</group>
+</messages>

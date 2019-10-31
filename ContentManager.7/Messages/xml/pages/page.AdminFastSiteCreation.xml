@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE FlexCMPMessages SYSTEM '/FlexCMPMessages.dtd'>
+<messages xmlns:lang='#' defaultlang='IT'>
+	<group id='pafsc' define='false'>
+
+		<message id='pt'
+			lang:it='Distruzione e Rigenerazione Sito'
+			lang:en='Destroy and Regenerate Site'
+		/>
+
+		<message id='em'
+			lang:it='Errore nel caricamento del file'
+			lang:en='An error occurred loading the file'
+		/>
+
+		<message id='m1'>
+			<trans lang='it'><![CDATA[
+				In caso di inserimento errato, usare la seguente URL per ripristinare
+				il sito (reimpostando pagine ed indici):
+			]]></trans>
+			<trans lang='en'><![CDATA[
+				In the case of errors, use the following URL to restore the site
+				(resetting pages and indexes)
+			]]></trans>
+		</message>
+
+		<message id='rst'
+			lang:it='Reimposta'
+			lang:en='Reset'
+		/>
+
+		<message id='l1'
+			lang:it="Elimina tutte le pagine prima dell'elaborazione"
+			lang:en='Eliminate all pages before processing'
+		/>
+
+		<message id='l2'
+			lang:it="Inserisci titolo indice nel titolo delle pagine"
+			lang:en='Insert index title in page titles'
+		/>
+
+		<message id='l3'
+			lang:it="Rigenera"
+			lang:en='Regenerate'
+		/>
+
+	</group>
+</messages>

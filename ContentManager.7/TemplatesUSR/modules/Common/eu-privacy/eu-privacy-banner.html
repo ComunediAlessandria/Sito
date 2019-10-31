@@ -1,0 +1,61 @@
+<style type='text/css'>
+
+#eu-privacy {
+
+	top: -100%;
+
+	-webkit-transition: all 0.5s ease-in;
+	-moz-transition: all 0.5s ease-in;
+	-ms-transition: all 0.5s ease-in;
+	-o-transition: all 0.5s ease-in;
+	transition: all 0.5s ease-in;
+}
+
+#eu-privacy.open {
+
+	top: 0;
+}
+
+#eu-privacy, #eu-privacy a {
+
+    color: rgb(245, 243, 243);
+    background-color: #464B4F;
+}
+
+#eu-privacy {
+
+	border-bottom: 2px solid rgb(89, 89, 15);
+}
+
+#eu-privacy-inner { margin: 10px 150px 10px 30px; }
+#eu-privacy-inner p { font-size: 14px; color: rgb(245, 243, 243); }
+#eu-privacy-inner p a { text-decoration: underline; }
+#eu-privacy-inner p a:hover { text-decoration: none; }
+
+#eu-privacy-close {
+
+	position: absolute;
+
+	right: 20px;
+	top: 16px;
+
+	border: 1px solid #fff;
+	border-radius: 4px;
+	font-size: 14px;
+	padding: 2px;
+}
+
+a#eu-privacy-close { text-decoration: none; }
+a#eu-privacy-close:hover { background-color: white; color: #464B4F; }
+
+</style>
+
+<p>
+	{:message:eupr.banner}
+</p>
+
+<!-- a id='eu-privacy-close' href='#'>
+	<img src='./close-md.png' />
+</a -->
+
+<a id='eu-privacy-close' href='#'>&nbsp;{:message:eupr.button}&nbsp;</a>

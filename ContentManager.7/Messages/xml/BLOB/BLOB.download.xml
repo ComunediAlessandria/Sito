@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="it">
+	<group id="bdnl" define="false">
+		<message id="download" lang:it="Download" lang:en="Download" lang:es="Download"/>
+		<message id="id" lang:it="Immagine Download:" lang:en="Download Image" lang:es="Imagen de Download"/>
+		<!-- <message id="elidon" lang:it="Elimina l'immagine dell'oggetto n. " lang:en="DELETE Image in object n. " lang:es="DELETE Image in object n. "/>
+		<message id="eifdon" lang:it="Elimina il file dell'oggetto n. " lang:en="DELETE File in object n. " lang:es="DELETE File in object n. "/>
+-->
+		<message id="tdldd" lang:it="Testo del Link di download:" lang:en="Download Link" lang:es="Texto del enlace de descarga"/>
+		<message id="ip" lang:it="Immagine predefinita:" lang:en="Standard Image" lang:es="Imagen predefinida"/>
+		<message id="aiunfsisa" lang:it="Apre in una nuova finestra (sconsigliato in siti accessibili)" lang:en="Open link in a new window (please don't use this in accessible sites)" lang:es="Abrir una nueva ventana (desaconsejado en sitios web accesibles)"/>
+		<message id="ss" lang:it="Mostra dimensioni documento" lang:en="Show file size" lang:es="[es] Show file size"/>
+	</group>
+</messages>

@@ -1,0 +1,61 @@
+<h1 class="viewTitolo">Registrazione Utente</h1>
+
+	{ERR}
+
+<form id="AdminFormBO" method="post" action="{ACTION}">
+
+<div id="CommunityUserForm">
+
+	<label for='{TAG_Nome}' class="CommunityUserLbl">{LBL_Nome}</label>
+	<span class="CommunityUserFormText">{VAL_Nome}</span>
+
+	<label for='{TAG_Cognome}' class="CommunityUserLbl">{LBL_Cognome}</label>
+	<span class="CommunityUserFormText">{VAL_Cognome}</span>
+
+	<label for='{TAG_Username}' lang='en' class="CommunityUserLbl">{LBL_Username}</label>
+	<span class="CommunityUserFormText">{VAL_Username}</span>
+
+
+	<label for='{TAG_Password}' lang='en' class="CommunityUserLbl">{LBL_Password}</label>
+	<span class="CommunityUserFormText">{VAL_Password}</span>
+
+	<label for='{TAG_Password2}' lang='en' class="CommunityUserLbl">{LBL_Password2}</label>
+	<span class="CommunityUserFormText">{VAL_Password2}</span>
+
+
+	<label for='{TAG_email}' lang='en' class="CommunityUserLbl">{LBL_email}</label>
+	<span class="CommunityUserFormText">{VAL_email}</span>
+
+	<div>
+		<label for='{TAG_Lang}' lang='en' class="CommunityUserLbl">{LBL_Lang}</label>
+		<span class="CommunityUserFormSelect">{VAL_Lang}</span>
+	</div>
+
+	<!-- BEGIN CommunitySelect -->
+	<fieldset>
+		<legend>Seleziona le community a cui vuoi iscriverti <!--{LBL_jCommunity}--></legend>
+		{VAL_jCommunity}
+	</fieldset>
+	<!-- END CommunitySelect -->
+
+	<span class="CommunityUserFormCheck">{VAL_ReceiveNL}</span>
+	<label for='{TAG_ReceiveNL}'>{LBL_ReceiveNL}</label>
+
+
+	<p>
+		Nota: le comunicazioni amministrative connesse alla iscrizione al sito non sono eliminabili.
+	</p>
+
+	{HIDDEN}
+
+
+	<span class="CommunityUserFormCheck">{VAL_Privacy}</span>
+	<label for='{TAG_Privacy}'>{LBL_Privacy}</label>
+
+	<div>
+		<input name="Submit" type="submit" value="Registrati" id="CommunityUserFormSubmit" />
+	</div>
+
+</div>
+
+</form>

@@ -1,0 +1,193 @@
+[[:section:frame]]
+
+	<div class='well well-small form-inline'>
+
+		{:if:notempty:include-add}
+
+			[[ id: addKind, kind: pagekindlist, class: 'form-control' ]]
+
+			<button name='btnAddPage' class='btn btn-success btn-sm' type='submit'>
+				<i class='moon-icon-plus icon-white'></i>
+				_(lblAddPage)_
+			</button>
+
+		{:endif}
+
+		<span class='pull-right'>
+			<a href='{href-wastebasket}' class='btn btn-default'><i class='moon-icon-remove-5'></i> _(lblWastebasket)_</a>
+		</span>
+	</div>
+
+	<div class='row row-well form-group form-filter'>
+
+			<div class='col-md-2'>
+				<label for='filter'>_(lblToShow)_</label>
+
+				[[ id: filter, kind: pagefilter, class: form-control]]
+
+			</div>
+			<div class='col-md-2'>
+				<label for='text'>_(lblCnt)_</label>
+
+				[[ id: text, kind: text, maxlength: 255, class: 'form-control fx-clearable', 'data-clearable-autosubmit': 'true' ]]
+
+			</div>
+			<div class='col-md-2'>
+				<label for='sort'>_(lblSort)_</label>
+
+				[[ id: sort, kind: pagesort, class: form-control ]]
+
+			</div>
+
+			<div class='col-md-2'>
+				<label for='rpp'>_(lblRPP)_</label>
+
+				[[ id: rpp, kind: dropdown, values: { 20: 20, 40: 40, 80: 80}, class: form-control ]]
+
+			</div>
+
+
+			<div class='col-md-4 pull-right'>
+				<div class='btn-toolbar btn-main-filter'>
+				    <a class='btn btn-default' data-toggle='collapse' data-target='#filter-collapsable'>
+					<i class='moon-icon-arrow-down-12' id='morefilters'></i>
+				    _(lblOther)_
+				    </a>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<button name='btnReset' class='btn btn-default' type='submit'> _(lblReset)_</button>
+					<button class='btn btn-primary' type='submit'> <i class='moon-icon-loop-4 icon-white'></i> _(lblUpdate)_</button>
+				</div>
+			</div>
+
+
+		<div id='filter-collapsable' class='col-md-12 clearfix form-filter collapse {filter-collapsable-class}'>
+			<div class='row'>
+
+				<div class='col-md-2'>
+					<label for='group'>_(lblGruppo)_</label>
+
+					[[ id: group, kind: groupslist, class: form-control ]]
+
+				</div>
+
+				<div class='col-md-3'>
+					<label for='cmn'>_(lblCommunity)_</label>
+
+					[[ id: cmn, kind: communitieslist, class: form-control ]]
+
+				</div>
+
+				<div class='col-md-4'>
+					<label for='tpl'>_(lblTelaio)_</label>
+
+					[[ id: tpl, kind: tpllist, class: form-control ]]
+
+				</div>
+			</div>
+
+			<div class='row'>
+
+				<div class='col-md-12'>
+					<label>_(lblCl)_</label>
+					<div>
+
+						[[ id: channel, kind: channelchooser, cgroup: pagelist ]]
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+</div>
+
+	{results}
+
+	[[ id: p, kind: paginator, slicesize: 4 ]]
+
+[[:section:tResults]]
+
+	<!-- BEGIN tooMany -->
+
+		<div class='alert alert-info'>
+  			<button type='button' class='close' data-dismiss='alert'>&times;</button>
+  			{msg}
+		</div>
+
+	<!-- END tooMany -->
+
+	<!-- BEGIN tHead -->
+
+		<table class='table table-striped table-condensed table-hover flexbo-list-table results'>
+
+		    <thead>
+				<tr>
+					<th>
+						_(thAzioni)_
+
+						{aCtl}
+					</th>
+					<th>_(thNumero)_</th>
+					<th>_(thTitolo)_</th>
+					<th>_(thCl)_</th>
+					<th>_(thTpl)_</th>
+					<th>_(thPer)_</th>
+					<th>_(thVal)_</th>
+					<th colspan='{numlang}' class='t-center'>_(thSt)_</th>
+				</tr>
+			</thead>
+
+			<tbody>
+
+	<!-- END tHead -->
+
+	<!-- BEGIN tRow -->
+
+				<tr>
+					<td>
+
+						{item-toolbar}
+
+					</td>
+					<td><a href='{href-view}'>{id}</a></td>
+					<td class='col-maximize'>
+						{title} {fmod}<br /><em>{surl}</em>
+					</td>
+
+					<td>
+						{cl}
+					</td>
+
+					<td>{tpl}</td>
+					<td>{own}</td>
+					<td>{val}</td>
+
+					{lstatus}
+				</tr>
+
+	<!-- END tRow -->
+
+	<!-- BEGIN tFooter -->
+
+				<tr class='tfooter'>
+					<td colspan='{numcols}'>
+
+						<div class='pull-right'>
+							{paginator}
+						</div>
+
+						<p>_(lblTotPages)_: {totpages}</p>
+
+					</td>
+				</tr>
+		</tbody>
+	</table>
+
+	<!-- END tFooter -->
+
+	<!-- BEGIN noItems -->
+
+		<div class='alert alert-info'>
+  			_(none)_
+		</div>
+
+	<!-- END noItems -->

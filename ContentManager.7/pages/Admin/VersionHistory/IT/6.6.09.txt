@@ -1,0 +1,9 @@
+Modifica oggetto estrattore di canale con nuovo criterio di filtro temporale. Aggiunta la possibilit&agrave; di filtrare le sole pagine modificate in data odierna e sulla base della data evento.
+
+Evoluzione Motore di Ricerca con funzionalit&agrave; aggiuntive: <br /> - possibilit&agrave; di raffinare le ricerche rispetto ad un asse di catalogazione <br /> - possibilit&agrave; di inserire dati aggiuntivi nei risultati di ricerca (classificazione, data ultima modifica, porzione del contenuto del documento, ...) <br />- possibilit&agrave; di ordinare i risultati secondo diversi criteri
+
+Modifica oggetto Sottotitolo + Paragrafo + Immagine con possibilit&agrave; di aprire link su nuova pagina.
+
+Modifica oggetto Testo Personalizzato con possibilit&agrave; di aprire link su nuova pagina.
+
+Aggiunto il campo Note nel backoffice dei gruppi.

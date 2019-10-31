@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="lang" defaultlang="IT">
+  <group id="snActionMemberRequest" define="false">
+    <message id="sent"
+    lang:it="La richiesta di iscrizione al gruppo &amp;egrave; stata inviata all'amministratore."
+    lang:en="The request to join the group was sent to the administrator."
+    lang:fr="La demande de rejoindre le groupe a été envoyé à l'administrateur."
+    lang:de="Der Antrag, der Gruppe beizutreten wurde an den Administrator gesendet."
+    lang:es="La solicitud para unirse al grupo fue enviado al administrador."
+    lang:ru="Запрос на присоединение к группе было отправлено администратору."
+    />
+  </group>
+</messages>

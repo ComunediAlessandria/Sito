@@ -1,0 +1,5 @@
+Nuova funzionalit&agrave; nell'oggetto IMMAGINE e SOTTOTITOLO-PARAGRAFO-IMMAGINE che permette il ridimensionamento automatico delle immagini caricate nell'oggetto. E' possibile ridimensionare una immagine caricata, specificandone dimensione in pixel e forzando o meno all'atto del ridimensionamento il mantenimento del rapporto tra le dimensioni.
+ 
+Nuova funzionalit&agrave; nell'oggetto IMMAGINE e SOTTOTITOLO-PARAGRAFO-IMMAGINE che permette per le immagini ridimensionate di avere una effettistica animata per la visualizzazione dell'immagine ingrandita, con 3 diversi effetti di animazione.
+ 
+Possibilit&agrave; di svincolare una "pagina da modello" dal modello da cui &egrave; stata creata, trasformandola irreversibilmente in una "pagina ad impaginazione libera". Tale possibilit&agrave; &egrave; vincolata ad un diritto dato sul gruppo.

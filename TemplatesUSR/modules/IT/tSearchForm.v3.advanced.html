@@ -1,0 +1,24 @@
+			<div class="RicAvanz">
+				<h1 class='viewTitolo'>Ricerca avanzata</h1>
+				<div>
+					<label for='text' class='viewPar'>
+						Ricerca all'interno di pagine e documenti PDF presenti sul sito
+						che contengano le parole:
+					</label>
+					[[ id: text, kind: Text, maxlength: 40 ]]
+				</div>
+				<div>
+					<label for='exclude' class='viewPar'>
+						ma che non contengano le parole:
+					</label>
+
+					[[ id: exclude, kind: Text, maxlength: 20 ]]
+				</div>
+
+	
+				<div>&nbsp;</div>
+				<div>
+					[[ id: btnOK, kind: Submit, value: 'Filtra', class: 'AdminPageFooterCommandButton' ]]
+					<!-- [[ id: btnReset, kind: Submit, value: 'Reimposta', class: 'AdminPageFooterCommandButton' ]] -->
+				</div>
+			</div>

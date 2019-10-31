@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="lang" defaultlang="IT">
+  <group id="snLayoutJSReadMore" define="false">
+    <message id="all"
+    	lang:it="Leggi Tutto"
+    	lang:en="Read More"
+    	lang:fr="lire la suite"
+    	lang:de="Lesen Sie mehr"
+    	lang:es="Leer más"
+    	lang:ru="Подробнее"
+    />
+  </group>
+</messages>

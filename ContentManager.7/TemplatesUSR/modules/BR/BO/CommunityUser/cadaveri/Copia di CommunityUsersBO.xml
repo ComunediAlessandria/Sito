@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='iso-8859-1' ?>
+<bo id='CommunityUsers'>
+
+	<table name='CommunityUsers' />
+	<key name='IDCommunityUser' />
+
+	<field name='Username'			type='varchar'		len='50'	default='' />
+	<field name='Password'			type='varchar'		len='50'	default='' />
+	<field name='email'				type='varchar'		len='50'	default='' />
+	<field name='emailConfermata'	type='tinyint'		len='4'		default='0' />
+	<field name='Enabled'			type='tinyint'		len='4'		default='0' />
+	<field name='DataInserimento'	type='datetime'					default='0000-00-00 00:00:00' />
+	<field name='Lang'				type='char'			len='2'		default='IT' />
+	<field name='Nome'				type='varchar'		len='250'	default='' />
+	<field name='Cognome'			type='varchar'		len='250'	default='' />
+	<field name='ReceiveNL'			type='tinyint'		len='4'		default='1' />
+
+	<join kind='M:N' name='jCommunity'
+		joinTable='CommunityJUsers'
+		joinFields='IDCommunityUser:IDCommunity'
+		dstTable='Community'
+		dstField='IDCommunity:Description'
+		where='IsPublic=1'
+	/>
+
+	<event id='onAfterNew' when='onAfterNew' type='php'>
+		<![CDATA[
+
+				// in $pars
+		
+				// imposta la lingua a quella corrente
+				
+			//if ($pars['BO']->ID() == -1)
+			$pars['BO']->SetField('Lang', $GLOBALS['gLanguage']);
+		]]>
+	</event>
+
+	<event id='onBeforeSave' when='onBeforeSave' type='php'>
+		<![CDATA[
+
+				// in $pars
+		
+				// imposta la data di creazione solo nel caso di nuovo utente
+				
+			if ($pars['BO']->ID() == -1)
+				$pars['BO']->SetField('DataInserimento', DBTimeToSQL());
+		]]>
+	</event>
+
+</bo>

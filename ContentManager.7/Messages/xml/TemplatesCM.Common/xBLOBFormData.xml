@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="IT">
+	<group id="xBLOBFormData" define="false">
+
+		<message id='pt'
+			lang:it='Esportazione Dati Form'
+			lang:en='Form Data Export'
+		/>
+
+		<message id='none'
+			lang:it='Non ci sono elementi'
+			lang:en='No data'
+		/>
+
+		<message id='nm'
+			lang:it='NUMERO OGGETTI ELENCATI'
+			lang:en='NUMBER OF LISTED OBJECTS'
+		/>
+
+		<!-- tabella -->
+
+		<message id='tsum'
+			lang:it="Tabella contenente l'elenco"
+			lang:en='Table containing items list'
+		/>
+
+		<message id='tha'
+			lang:it='Azioni'
+			lang:en='Actions'
+		/>
+
+		<message id='thn'
+			lang:it='Nome Archivio'
+			lang:en='Archive Name'
+		/>
+
+		<message id='thr'
+			lang:it='Numero Righe'
+			lang:en='Row Number'
+		/>
+
+		<message id='thl'
+			lang:it='Ultima Riga inserita'
+			lang:en='Last inserted row'
+		/>
+
+		<message id='del'
+			lang:it='Elimina Dati'
+			lang:en='Delete Data'
+		/>
+
+		<message id='xls'
+			lang:it='xls'
+			lang:en='xls'
+		/>
+
+		<message id='csv'
+			lang:it='csv'
+			lang:en='csv'
+		/>
+
+		<message id='xml'
+			lang:it='xml'
+			lang:en='xml'
+		/>
+
+		<message id='ddTitle'
+			lang:it='Eliminazione Dati'
+			lang:en='Data Delete'
+		/>
+
+		<message id='ddBtnOK'
+			lang:it='Elimina'
+			lang:en='Delete'
+		/>
+
+		<message id='ddBtnCancel'
+			lang:it='Annulla'
+			lang:en='Cancel'
+		/>
+
+		<message id='ddText'>
+			<trans lang='IT'><![CDATA[
+				Vuoi davvero cancellare tutti i dati raccolti per il modulo?
+			]]></trans>
+			<trans lang='EN'><![CDATA[
+				Do you really want to delete all data collected?
+			]]></trans>
+		</message>
+
+		<message id='ddNote'>
+			<trans lang='IT'><![CDATA[
+				I dati cancellati non potranno essere ripristinati in alcun modo.
+			]]></trans>
+			<trans lang='EN'><![CDATA[
+				The deleted data can not be restored in any way.
+			]]></trans>
+		</message>
+
+
+	</group>
+</messages>

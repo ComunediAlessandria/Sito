@@ -1,0 +1,92 @@
+{ERR}
+
+<form class="form-horizontal" method="post" action="{ACTION}">
+
+	<div class="well well-small">
+		
+		<div class="control-group">
+			<!-- Elementi usati dallo switcher JS per le lingue -->
+			<strong>__(bo-common.slc)</strong>:
+			<span id='BOPanelSwitchPanel'></span>
+			<div>__(bo-common.curlang): <span id='BOPanelSwitchCurLanguage'></span></div>
+		</div>	
+
+		<div class="control-group">
+			<label class="control-label" for="{TAG_IDGallery}">{LBL_IDGallery}</label>
+			<div class="controls"> {VAL_IDGallery}</div>
+		</div>
+		
+	
+		<div class="control-group">
+			<label class="control-label">{LBL_jTitle}</label>
+			<div class="controls"> {VAL_jTitle}</div>
+		</div>
+		
+		<div class="control-group">
+			<label class="control-label">{LBL_jDescription}</label>
+			<div class="controls"> {VAL_jDescription}</div>
+		</div>
+
+
+		<div class="control-group">
+			<label class="control-label" for="{TAG_ViewMode}">{LBL_ViewMode}</label>
+			<div class="controls"> {VAL_ViewMode}</div>
+		</div>		
+
+		<div class="control-group">
+			<span class="control-label">__(bo-gallery.maxphotosize)</span>
+			<div class="controls"> 
+				<div class="form-inline"> 
+						<label for='{TAG_SingleMaxW}'>{LBL_SingleMaxW}</label> {VAL_SingleMaxW} X
+						<label for='{TAG_SingleMaxH}'>{LBL_SingleMaxH}</label> {VAL_SingleMaxH}		
+				</div>		
+			</div>
+		</div>
+
+		<div class="control-group">
+			<span class="control-label">__(bo-gallery.maxthumbsize)</span>
+			<div class="controls"> 
+				<div class="form-inline"> 
+							<label for='{TAG_ThumbW}'>{LBL_ThumbW}</label> {VAL_ThumbW} X
+							<label for='{TAG_ThumbH}'>{LBL_ThumbH}</label> {VAL_ThumbH}				
+				</div>
+			</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label" for="{TAG_ThumbXPage}">{LBL_ThumbXPage}</label>
+			<div class="controls"> {VAL_ThumbXPage}</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label">{LBL_ShowInList}</label>
+			<div class="controls"> {VAL_ShowInList}</div>
+		</div>
+
+
+		<div class="control-group">
+			<div class="control-label">{LBL_DataOraUltimaModificaFormatted}</div>
+			<div class="controls"> {VAL_DataOraUltimaModificaFormatted}</div>
+		</div>
+
+		<div class="control-group">
+			<div class="control-label">{LBL_UtenteUltimaModifica}</div>
+			<div class="controls"> {VAL_UtenteUltimaModifica}</div>
+		</div>
+
+	</div>
+	
+	<div class='well well-small'>
+		<div class='row'>
+			<div class='span2'>
+					<input name="btnCancel" type="submit" class='btn' value="__(bo-common.canc)" />
+			</div>
+			<div class='span2'>
+				{HIDDEN}
+				<input name="Submit" type="submit" class='btn btn-primary' value="__(bo-common.save)" />
+			</div>
+		</div>
+	</div>
+
+
+</form>

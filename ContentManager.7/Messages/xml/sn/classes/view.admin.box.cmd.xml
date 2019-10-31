@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="lang" defaultlang="IT">
+  <group id="snViewAdminBoxCmd" define="false">
+    <message id="create" lang:it="Crea un Gruppo" lang:en="Create a new group" lang:fr="Créer un nouveau groupe" lang:de="Erstellen Sie eine neue Gruppe" lang:es="Crear un nuevo grupo" lang:ru="Создать новую группу"/>
+    <message id="tcreate" lang:it="Crea un nuovo Gruppo" lang:en="Create a new group" lang:fr="Créer un nouveau groupe" lang:de="Erstellen Sie eine neue Gruppe" lang:es="Crear un nuevo grupo" lang:ru="Создать новую группу"/>
+    <message id="notify" lang:it="Gestione Notifiche" lang:en="Manage notifications" lang:fr="Gérer les notifications" lang:de="Verwalten Meldungen" lang:es="Administrar notificaciones" lang:ru="Управление уведомлений"/>
+    <message id="tnotify" lang:it="Gestisci le Notifiche" lang:en="Manage notifications" lang:fr="Gérer les notifications" lang:de="Verwalten Meldungen" lang:es="Administrar notificaciones" lang:ru="Управление уведомлений"/>
+    <message id="tbox" lang:it="Amministrazione" lang:en="Administration"
+			lang:fr="Administration"
+			lang:de="Verwaltung"
+			lang:es="Administración"
+			lang:ru="администрация" />
+  </group>
+</messages>

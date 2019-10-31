@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="IT">
+	<group id="xAdminElencoRepository" define="false" scope='json'>
+
+		<message id='pt'
+			lang:it='Libreria'
+			lang:en='Repository'
+		/>
+
+		<message id='add'
+			lang:it='Aggiungi un nuovo oggetto'
+			lang:en='Add new item'
+		/>
+
+		<message id='badd'
+			lang:it='Aggiungi'
+			lang:en='Add'
+		/>
+
+		<message id='srt'
+			lang:it='ordina per'
+			lang:en='sort by'
+		/>
+
+		<message id='lo'
+			lang:it='Elenca oggetti di tipo'
+			lang:en='List items by type'
+		/>
+
+		<message id='ln'
+			lang:it='il cui nome contiene'
+			lang:en='name containing'
+		/>
+
+		<message id='upd'
+			lang:it='Aggiorna'
+			lang:en='Update List'
+		/>
+
+		<message id='all'
+			lang:it='Tutti'
+			lang:en='All'
+		/>
+
+		<message id='nm'
+			lang:it='NUMERO OGGETTI ELENCATI'
+			lang:en='NUMBER OF LISTED OBJECTS'
+		/>
+
+		<message id='none'
+			lang:it='NON CI SONO OGGETTI DA VISUALIZZARE CHE RISPONDANO AI CRITERI IMPOSTATI'
+			lang:en='NO OBJECTS'
+		/>
+
+		<message id='bmod'
+			lang:it='MODIFICA oggetto'
+			lang:en='EDIT'
+		/>
+		
+		<message id='bdup'
+			lang:it='DUPLICA oggetto'
+			lang:en='DUPLICATE'
+		/>
+
+		<message id='bdel'
+			lang:it='ELIMINA oggetto'
+			lang:en='DELETE'
+		/>
+
+		<!-- tabella -->
+		
+		<message id='tsum'
+			lang:it="Tabella contenente l'elenco degli oggetti libreria: nella prima colonna sono contenuti i comandi di eliminazione, duplicazione, modifica, anteprima"
+			lang:en='Table containing items list'
+		/>
+
+		<message id='tha'
+			lang:it='Azioni'
+			lang:en='Actions'
+		/>
+
+		<message id='thnm'
+			lang:it='Numero'
+			lang:en='Number'
+		/>
+
+		<message id='thno'
+			lang:it='Nome'
+			lang:en='Name'
+		/>
+
+		<message id='thcl'
+			lang:it='Canali'
+			lang:en='Classification'
+		/>
+
+		<message id='thg'
+			lang:it='Gerarchia'
+			lang:en='Hierarchy'
+		/>
+
+		<message id='tht'
+			lang:it='Tipo'
+			lang:en='Kind'
+		/>
+
+		<!-- dialog cancellazione -->
+
+		<message id='ddTitle'
+			lang:it='Cancellazione Oggetto di Libreria'
+			lang:en='Delete Repository Object'
+		/>
+
+		<message id='ddText'>
+			<trans lang='IT'><![CDATA[
+				Vuoi davvero cancellare l'oggetto di Libreria '<strong>%s</strong>'?
+			]]></trans>
+			<trans lang='EN'><![CDATA[
+				Do you really want to delete the repository object '<strong>%s</strong>'?
+			]]></trans>
+		</message>
+
+		<message id='ddNote'
+			lang:it="L'operazione eliminerà definitvamente l'oggetto di libreria scelto."
+			lang:en='The object will be permanently deleted.'
+		/>
+
+		<message id='ddBtnOK'
+			lang:it='Elimina'
+			lang:en='Delete'
+		/>
+
+		<message id='ddBtnCancel'
+			lang:it='Annulla'
+			lang:en='Cancel'
+		/>
+
+		<!-- dialog duplicazione -->
+
+		<message id='dpTitle'
+			lang:it='Duplicazione Oggetto di Libreria'
+			lang:en='Duplicate Repository Object'
+		/>
+
+		<message id='dpText'>
+			<trans lang='IT'><![CDATA[
+				Vuoi davvero duplicare l'oggetto di Libreria '<strong>%s</strong>'?
+			]]></trans>
+			<trans lang='EN'><![CDATA[
+				Do you really want to duplicate the repository object '<strong>%s</strong>'?
+			]]></trans>
+		</message>
+
+		<message id='dpBtnOK'
+			lang:it='Duplica'
+			lang:en='Duplicate'
+		/>
+
+		<message id='dpBtnCancel'
+			lang:it='Annulla'
+			lang:en='Cancel'
+		/>
+
+		<!-- conferma cancellazione -->
+
+		<message id='bdTitle'
+			lang:it='Oggetto Eliminato.'
+			lang:en='The object was deleted.'
+		/>
+
+		<message id='bdText'>
+			<trans lang='IT'><![CDATA[
+				L'oggetto di Libreria '<strong>%s</strong>' è stato definitivamente eliminato.
+			]]></trans>
+			<trans lang='EN'><![CDATA[
+				The repository object '<strong>%s</strong>' was deleted.
+			]]></trans>
+		</message>
+
+		<!-- conferma duplicazione -->
+
+		<message id='bpTitle'
+			lang:it='Oggetto Duplicato.'
+			lang:en='The object was duplicated.'
+		/>
+
+		<message id='bpText'>
+			<trans lang='IT'><![CDATA[
+				L'oggetto di Libreria '<strong>%s</strong>' è stato duplicato.
+			]]></trans>
+			<trans lang='EN'><![CDATA[
+				The repository object '<strong>%s</strong>' was duplicated.
+			]]></trans>
+		</message>
+
+	</group>
+</messages>

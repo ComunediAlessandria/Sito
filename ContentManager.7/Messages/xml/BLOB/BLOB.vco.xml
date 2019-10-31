@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="it">
+	<group id="bvco" define="false">
+
+		<!-- nome dell'oggetto nella toolbar (cfr: Messages.BLOBEdit.toolbar.v2) -->
+
+		<message id="n" lang:it="Layout Manager" lang:en="Layout Manager"/>
+
+		<message id='not'>
+			<trans lang='IT'><![CDATA[
+				Il template specificato non esiste o non è stato scelto alcun template.
+			]]></trans>
+			<trans lang='EN'><![CDATA[
+				The selected template doesn't exists or no template was choosen.
+			]]></trans>
+		</message>
+
+		<!-- template modificato -->
+
+		<message id="tm-tt" lang:it="Attenzione" lang:en="Warning"/>
+		<message id='tm-tx'>
+			<trans lang='IT'><![CDATA[
+				il template su cui è basato questo elemento è stato
+				modificato dall'ultimo inserimento.
+				È possibile che si verifichino delle perdite di dati.
+			]]></trans>
+			<trans lang='EN'><![CDATA[
+				the template used in the element was modified since
+				last data editing. Proceed with caution.
+			]]></trans>
+		</message>
+
+		<message id="l-s" lang:it="Mostra nella Sezione" lang:en="Show in Section"/>
+		<message id="l-sp" lang:it="Sezione Principale" lang:en="Main Section"/>
+
+	</group>
+</messages>

@@ -1,0 +1,4 @@
+a:14:{s:6:"addnew";s:15:"Add a new Group";s:3:"act";s:7:"Actions";s:2:"gn";s:10:"Group Name";s:4:"memb";s:15:"Group's members";s:2:"hm";s:13:"GROUPS NUMBER";s:7:"cantdel";s:36:"WARNING! You can not erase the Group";s:9:"waringdel";s:42:"WARNING! You are going to delete the Group";s:9:"listtitle";s:6:"Groups";s:9:"edittitle";s:10:"Group Form";s:11:"deletetitle";s:14:"Group Deletion";s:9:"groupname";s:12:"Group's Name";s:4:"note";s:5:"Notes";s:8:"grmember";s:15:"Group's members";s:10:"cantdelete";s:210:"
+				<strong> Warning </strong>: You can't delete the group  {DescrizioneIT} because there are {nRec}  users associated with the group. <br />
+				First delete the associated user and then delete the group.
+			";}

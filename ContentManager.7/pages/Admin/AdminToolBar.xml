@@ -1,0 +1,1689 @@
+<?xml version='1.0' encoding="ISO-8859-1" ?>
+<admin
+	id='ADMIN'
+	xmlns:description="#1"
+	xmlns:pagetitle="#2"
+
+	xmlns:bc="#"
+>
+
+	<page
+		title='Area Amministrativa'
+		template='tAdminUtils.html'
+	/>
+
+	<!--
+		Siccome il vecchio BO non ha modo di sapere la voce di menu, qui inserisco le
+		equivalenze fra BO e menu ID, ed una descrizione per il BC per la pagina di modifica
+
+		Lo stesso meccanismo è usato anche dalle fixed pages. E' una sorta di aliasing.
+
+		Quando il page tag fa patch con l'elemento 'bo', è come se fosse stato scelto l'elemento indicato in menuid
+	-->
+
+	<BOequiv id='BOequiv'>
+
+		<item bo='AccessStats'			menuid='Access'		/>
+		<item bo='ElVersioning'			menuid='Pages'		/>
+		<item bo='EditIndexAc'			menuid='ListIndex' />
+		<item bo='EditIndex'			menuid='ListIndex' />
+		<item bo='CacheClean'			menuid='SiteCache'	 />
+
+		<item bo='AdminYouTube'	menuid='AdminYouTube' />
+
+		<item bo='AxeList'			menuid='Axe'		/>
+		<item bo='AxeEdit'			menuid='Axe'		bc='Scheda Asse'		help=''	/>
+		<item bo='AxesConf'			menuid='AxesConf'		/>
+
+		<item bo='api-keys-edit'	menuid='api-keys-list'		bc='Edit'		help=''	/>
+
+		<!--
+			Il nuovo BO ha il tag di pagina che è composto da BOLIST/BOEDIT/BODEL più il tag dell'oggetto BO corrispondente
+		-->
+
+		<item bo='BOEDIT:index'			menuid='ListIndex'		bc='Scheda Indice'	bc:EN='Index Form'		help='gestioneindici_scheda'		/>
+		<item bo='BODEL:index'			menuid='ListIndex'		bc='Cancellazione Indice'	bc:EN='Index Deletion'	help='gestioneindici_cancella'	/>
+
+		<item bo='BOLIST:canale'		menuid='Channels'		/>
+		<item bo='BOEDIT:canale'		menuid='Channels'		bc='Scheda Canale'		bc:EN='Channel Form'	help='canali_scheda'	/>
+		<item bo='BODEL:canale'			menuid='Channels'		bc='Cancellazione Canale'	bc:EN='Channel Deletion'	help='canali_cancella'	/>
+
+		<item bo='BOLIST:AxesBC'		menuid='AxesBC'		/>
+		<item bo='BOEDIT:AxesBC'		menuid='AxesBC'		bc='Scheda Breadcrumb - Classificazioni'	bc:EN='Form'	help='axesbc_scheda'	/>
+		<item bo='BODEL:AxesBC'			menuid='AxesBC'		bc='Cancellazione Breadcrumb - Classificazioni'	bc:EN='Deletion'	help='axesbc_cancella'	/>
+
+		<item bo='BOLIST:gruppi'		menuid='Groups'			/>
+		<item bo='BOEDIT:gruppi'		menuid='Groups'			bc='Scheda Gruppo' bc:EN='Group Form'			help='gruppi_scheda' />
+		<item bo='BODEL:gruppi'			menuid='Groups'			bc='Cancellazione Gruppo'	bc:EN='Group Deletion'	help='gruppi_cancella'/>
+
+		<!--<item bo='BOLIST:user'			menuid='Users'			/>-->
+		<item bo='BOEDIT:user'			menuid='Users'			bc='Scheda Utente'	bc:EN='User Form'		help='utenti_scheda'	/>
+		<item bo='BODEL:user'			menuid='Users'			bc='Cancellazione Utente'	bc:EN='User Deletion'	help='utenti_cancella'	/>
+
+		<item bo='BOLIST:FlexValid'		menuid='Validations'	/>
+		<item bo='BOEDIT:FlexValid'		menuid='Validations'	bc='Scheda Validazione'			bc:EN='Validation Form' help='validazioni_scheda'	/>
+		<item bo='BODEL:FlexValid'		menuid='Validations'	bc='Cancellazione Validazione'	bc:EN='Validation Deletion' help='validazioni_cancella'/>
+
+		<item bo='BOLIST:acronym'		menuid='Acronyms'		/>
+		<item bo='BOEDIT:acronym'		menuid='Acronyms'		bc='Scheda Acronimi'		bc:EN='Acronym Form'	help='acronimi_scheda'	/>
+		<item bo='BODEL:acronym'		menuid='Acronyms'		bc='Cancellazione Acronimi'	bc:EN='Acronym Deletion'	help='acronimi_cancella'	/>
+
+		<item bo='BOLIST:poll'			menuid='Poll'			/>
+		<item bo='BOEDIT:poll'			menuid='Poll'			bc='Scheda Sondaggio'		bc:EN='Poll Form'	help='sondaggi_scheda'	/>
+		<item bo='BODEL:poll'			menuid='Poll'			bc='Cancellazione Sondaggio' bc:EN='Poll Deletion'	help='sondaggi_cancella' />
+
+		<item bo='BOLIST:forum'			menuid='Forum'			/>
+		<item bo='BOEDIT:forum'			menuid='Forum'			bc='Scheda Forum'		bc:EN='Forum Form'	help='forum_scheda'	/>
+		<item bo='BODEL:forum'			menuid='Forum'			bc='Cancellazione Forum'	bc:EN='Forum Deletion'	help='forum_cancella' />
+
+		<item bo='BOLIST:lingue'		menuid='Languages'		/>
+		<item bo='BOEDIT:lingue'		menuid='Languages'		bc='Scheda Lingua'		bc:EN='Language Form'	help='lingue_scheda'	/>
+		<item bo='BODEL:lingue'			menuid='Languages'		bc='Cancellazione Lingue'	bc:EN='Language Deletion'	help='lingue_cancella' />
+
+		<item bo='BOLIST:alias'			menuid='Aliases'		/>
+		<item bo='BOEDIT:alias'			menuid='Aliases'		bc='Scheda Alias'		bc:EN='Alias Form'	help='alias_scheda'	/>
+		<item bo='BODEL:alias'			menuid='Aliases'		bc='Cancellazione Alias'	bc:EN='Alias Deletion'	help='alias_cancella' />
+
+		<item bo='BOLIST:AccessRules'		menuid='AccessRules'		/>
+		<item bo='BOEDIT:AccessRules'		menuid='AccessRules'		bc='Scheda Condizione di accesso'	bc:EN='Access Rule Form'	help='accessrules_scheda'	/>
+		<item bo='BODEL:AccessRules'		menuid='AccessRules'		bc='Cancellazione Condizione di accesso'	bc:EN='Access Rule Deletion' help='accessrules_cancella' />
+
+		<item bo='BOLIST:communityitem'		menuid='CommunityItem'		/>
+		<item bo='BOEDIT:communityitem'		menuid='CommunityItem'		bc='Scheda Community'		bc:EN='Community Form'	help=''	/>
+		<item bo='BODEL:communityitem'		menuid='CommunityItem'		bc='Cancellazione Community'	bc:EN='Community Deletion'	help='' />
+
+		<item bo='BOLIST:communityuser'		menuid='CommunityUser'		/>
+		<item bo='BOEDIT:communityuser'		menuid='CommunityUser'		bc='Scheda Utente Community'	bc:EN='Community User Form'		help=''	/>
+		<item bo='BODEL:communityuser'		menuid='CommunityUser'		bc='Cancellazione Utente Community'	 bc:EN='Community User Deletion'	help='' />
+
+		<item bo='BOLIST:NewsletterItem'	menuid='NewsletterItem'		/>
+		<item bo='BOEDIT:NewsletterItem'	menuid='NewsletterItem'		bc='Scheda Newsletter'	bc:EN='Newsletter Form'	help=''	/>
+		<item bo='BODEL:NewsletterItem'		menuid='NewsletterItem'		bc='Cancellazione Newsletter'	bc:EN='Newsletter Deletion'	help='' />
+
+		<item bo='ElNewsletter'			menuid='NewsletterLetter'		/>
+		<item bo='SendNewsletter'		menuid='NewsletterLetter'		/>
+
+		<item bo='BOLIST:SMSNewsletterItem'		menuid='SMSNewsletterItem'		/>
+		<item bo='BOEDIT:SMSNewsletterItem'		menuid='SMSNewsletterItem'		bc='Scheda Newsletter SMS'	bc:EN='SMS Newsletter Form'	help=''	/>
+		<item bo='BODEL:SMSNewsletterItem'		menuid='SMSNewsletterItem'		bc='Cancellazione Newsletter SMS'	bc:EN='SMS Newsletter Deletion' help='' />
+
+		<item bo='BOLIST:GPGallery'	menuid='GPGallery'		/>
+		<item bo='BOEDIT:GPGallery'	menuid='GPGallery'	bc='Scheda Galleria'	bc:EN='Photo Gallery Form'	/>
+		<item bo='BODEL:GPGallery'	menuid='GPGallery'	bc='Cancellazione Galleria' 	bc:EN='Photo Gallery Deletion'	/>
+
+		<item bo='BOLIST:GPAlbum'	menuid='GPAlbum'		/>
+		<item bo='BOEDIT:GPAlbum'	menuid='GPAlbum'	bc='Scheda Album'	bc:EN='Album Form'	/>
+		<item bo='BODEL:GPAlbum'	menuid='GPAlbum'	bc='Cancellazione Album'	bc:EN='Album Deletion'	/>
+
+		<item bo='BOLIST:GPImg'		menuid='GPImg'		/>
+		<item bo='BOEDIT:GPImg'		menuid='GPImg'		bc='Scheda Foto'	bc:EN='Photo Form'	/>
+		<item bo='BODEL:GPImg'		menuid='GPImg'		bc='Cancellazione Foto'	bc:EN='Photo Deletion' />
+
+		<item bo='BOEDIT:FYTVideo'		menuid='AdminYouTube'		bc='Scheda Video'	bc:EN='Video Form'	/>
+		<item bo='BODEL:FYTVideo'		menuid='AdminYouTube'		bc='Cancellazione Video' bc:EN='Video Deletion'	/>
+
+		<item bo='BOLIST:feeditem'		menuid='FeedItem'		/>
+		<item bo='BOEDIT:feeditem'		menuid='FeedItem'		bc='Scheda Feed'	bc:EN='Feed Form'	/>
+		<item bo='BODEL:feeditem'		menuid='FeedItem'		bc='Cancellazione Feed'	bc:EN='Feed Deletion' />
+
+		<item bo='SOURCELIST'		menuid='NewsletterSources' />
+		<item bo='SOURCEEDIT'		menuid='NewsletterSources' />
+
+		<item bo='BOLIST:commentset'	menuid='Comment'	/>
+		<item bo='BOEDIT:commentset'	menuid='Comment'  bc='Scheda Commento' bc:EN='Comment Form' />
+		<item bo='BODEL:commentset'		menuid='Comment' 	bc='Cancellazione Commento' bc:EN='Comment Deletion' />
+
+		<item bo='BOLIST:sqconn'	menuid='SQConn'	/>
+		<item bo='BOEDIT:sqconn'	menuid='SQConn'	bc:EN='Connection Form' bc='Scheda connessione' />
+		<item bo='BODEL:sqconn'		menuid='SQConn'	bc:EN='Connection Deletion' bc='Cancellazione connessione' />
+
+	</BOequiv>
+
+	<menu id='MENU'>
+		<!--
+			Negli item di menu &egrave; possibile inserire questi attributi:
+
+			id: identificativo *univoco* della voce di indice - deve fare match con quello dichiarato
+					dalla pagina
+			description: descrizione della pagina (compare nel 'bottone')
+			url: indirizzo della pagina
+				- può essere introdotto da una condizione: ?<condizione>/true/false
+				- &egrave; composto da due parti, separate da ':' - la prima &egrave; il metodo, la seconda il valore
+					K: costante
+					FIXED:<fixedpage>
+					INI:<valore prelevato dall'INI>
+					HTTP:<url>
+			pars: parametri da passare alla pagina, coppie nome = valore separati da ';'
+			permission: permesso necessario - il valore 'ANY' fa match con qualsiasi permesso (ma utente registrato)
+			help: context help ID
+
+			pagetitle: titolo della sezione (solo per sezioni che hanno figli, e non hanno url/pars)
+			liclass: class dell'elemento LI usato per il rendering
+		-->
+		<item
+			id='Pages'
+			_url='K:kPageEditPages'
+			pars='pageKind=Pages'
+			permission='EDC|EDS|PTPL'
+			help='pagine_elenco'
+			liclass='Pag'
+			icon='moon-icon-file-5'
+			v2url='listPages'
+			childless='true'
+
+			description:IT='Pagine'
+			description:EN='Pages'
+			description:ES='Páginas'
+		/>
+
+		<item
+			id='ListIndex'
+			_url='K:kPageListIndex'
+			permission='IN|IDHD'
+			help='indici_albero'
+			liclass='Ind'
+			icon='moon-icon-tree-5 '
+			v2url='listIndexes'
+			childless='true'
+
+			description:IT='Indici'
+			description:EN='Indexes'
+			description:ES='Indices'
+		/>
+
+		<item
+			id='UsersNGroups'
+			permission='UT|GR'
+			liclass='UG'
+			icon='moon-icon-users '
+
+			pagetitle:IT='Utenti e Gruppi'
+			pagetitle:EN='Users and Groups'
+			pagetitle:ES='Usuarios y grupos'
+
+			description:IT='Utenti e Gruppi'
+			description:EN='Users and Groups'
+			description:ES='Usuarios y grupos'
+		>
+			<item
+				id='Users'
+				_url='K:kPageElencoUtenti'
+				_pars='OBJ=user'
+				permission='UT'
+				help='utenti_elenco'
+				liclass='UG'
+				v2url='listUsers'
+
+				description:IT='Utenti'
+				description:EN='Users'
+				description:ES='Usuarios'
+			>
+				<info lang='IT'><![CDATA[
+					Gestione Utenti Amministrativi. Permette di definire username, password, caratteristiche dell'utente ed appartenenza ai gruppi amministrativi.
+				]]></info>
+				<info lang='EN'><![CDATA[
+					Manage Administrative Users. Allows you to define usernames, passwords and user characteristics
+				]]></info>
+				<info lang='ES'><![CDATA[
+					Gestión administrativa de los usuarios. Permite definir el nombre, la contraseña, características del usuario y la participación en los grupos administrativos.
+				]]></info>
+			</item>
+
+			<item
+				id='Groups'
+				url='K:kPageBOList'
+				pars='OBJ=gruppi'
+				permission='GR'
+				help='gruppi_elenco'
+				liclass='UG'
+
+				description:IT='Gruppi'
+				description:EN='Groups'
+				description:ES='Grupos'
+			>
+				<info lang='IT'><![CDATA[
+					Gestione Gruppi Amministrativi. Permette di definire l'insieme di permessi associati a ciascun gruppo.
+				]]></info>
+				<info lang='EN'><![CDATA[
+					Manage Administrative Groups. Allows you to define permission sets associated with each group.
+				]]></info>
+				<info lang='ES'><![CDATA[
+					Gestión administrativa de los grupos. Permite definir el conjunto de permisos asociados a cada unos de los grupos.
+				]]></info>
+			</item>
+
+		</item>
+
+		<item
+			id='Utility'
+			permission='ANY'
+			liclass='Str'
+			icon='moon-icon-tools'
+
+			pagetitle:IT='Strumenti'
+			pagetitle:EN='Tools'
+			pagetitle:ES='Instrumentos'
+
+			description:IT='Strumenti'
+			description:EN='Tools'
+			description:ES='Instrumentos'
+		>
+			<![CDATA[
+				Descrizione di Strumenti
+			]]>
+
+			<item
+				id='SearchEngine'
+				_url='K:kPageAdminSearchEngine'
+				_pars=''
+				permission='IDX'
+				help='indicizza'
+				v2url='searchEngine'
+
+				description:IT='Aggiornamento motore di ricerca'
+				description:EN='Update Search Engine'
+				description:ES='Actualización de los motores de busqueda.'
+			>
+				<info lang='IT'><![CDATA[
+					Ogni volta che si aggiungono contenuti, o si modificano pagine esistenti, &egrave; necessario indicizzare
+					nuovamente il sito per consentire agli utenti di trovare (attraverso il motore di ricerca interno)
+					le nuove informazioni.
+				]]></info>
+				<info lang='EN'><![CDATA[
+					Every time you add content, or modify existing pages, it is necessary to spider the site
+					to allow users to find (via the search engine) the new information.
+				]]></info>
+				<info lang='ES'><![CDATA[
+					Cada vez que se añaden contenidos o se modifican páginas existentes, es necesario indexar de
+					nuevo el sitio para consentir a los demás usuarios encontrar ( a través del motor de busqueda interno) las nuevas informaciones
+				]]></info>
+			</item>
+
+<!--
+
+ELIMINATE IN QUANTO NON FUNZIONANTI
+
+			<item
+				id='SiteAnalisys'
+				permission='STAT'
+
+				pagetitle:IT='Analisi del sito'
+				pagetitle:EN='Site Analysis'
+				pagetitle:ES='Análisis del sitio'
+
+				description:IT='Analisi del sito'
+				description:EN='Site Analysis'
+				description:ES='Análisis del sitio'
+			>
+				<info lang='IT'><![CDATA[
+					Attraverso queste funzionalit&agrave; &egrave; possibile effettuare analisi e verifiche
+					sull'intero sito. In particolare &egrave; possibile verificare la conformit&agrave; XHTML,
+					&egrave; possibile controllare le descrizioni alternative dei contenuti multimediali, &egrave;
+					possibile esaminare tutti i link inseriti in ogni pagina al fine di verificare la comprensibilit&agrave;
+					al di fuori del contesto nel quale sono inseriti.
+				]]></info>
+				<info lang='EN'><![CDATA[
+					Allows you to carry out analysis and verifications on the entire site. In particular, it is possible
+					to verify XHTML conformity, control the alternative descriptions of multimedia content,
+					examine all inserted links found on every page to verify their comprehensibility out of the context.
+				]]></info>
+				<info lang='ES'><![CDATA[
+					Por medio de esta función es posible efectuar analisis y comprobaciones dentro del
+					sitio web. En particular es posible verificar la conformidad XHTML es posible controlar
+					las descripciones alternativas de los contenidos multimedia, es posible exáminar todos
+					los enlaces inseridos en cada página con el fin de verificar la comprensión fuera
+					del contexto en el que son inseridos.
+				]]></info>
+
+				<item
+					id='IMGVerify'
+					_url='K:kPageCheckAccess'
+					pars='M=I'
+					permission='ANY'
+					help='verifica_immagini'
+					v2url='checkAccess'
+
+					description:IT='Verifica Immagini e Multimedia'
+					description:EN='Images and Multimedia Report'
+					description:ES='Verífica Imágenes y Multimedia'
+				>
+					<info lang='IT'><![CDATA[
+						La Verifica Immagini e Multimedia consente di esaminare, attraverso un report riassuntivo, le descrizioni testuali
+						alternative di ogni immagine o contenuto multimediale delle pagine create con FlexCMP.
+					]]></info>
+					<info lang='EN'><![CDATA[
+						The summarised Images and Multimedia Report allows you to examine the alternative
+						textual descriptions of all the images or multimedia content found in FlexCMP created pages.
+					]]></info>
+					<info lang='ES'><![CDATA[
+						La verificación de Imágenes y Multimedia consiente examinar, a través de
+						un examen sintetizador las descripciones textuales alternativas de cada imagen
+						o contenido multimedia de las páginas creadas con FlexCMP
+					]]></info>
+				</item>
+
+				<item
+					id='LinkVerify'
+					_url='K:kPageCheckAccess'
+					pars='M=L'
+					permission='ANY'
+					help='verifica_link'
+					v2url='checkAccess'
+
+					description:IT='Verifica Link'
+					description:EN='Link Report'
+					description:ES='Verífica del link'
+				>
+					<info lang='IT'><![CDATA[
+						La Verifica Link consente di esaminare, attraverso un report riassuntivo, i link presenti nelle pagine create con FlexCMP,
+						al fine di verificare la comprensibilit&agrave; degli stessi al di fuori del contesto nel quale sono inseriti.
+					]]></info>
+					<info lang='EN'><![CDATA[
+						The summarised Link Report allows you to examine the links present in
+						the FlexCMP created pages in order to verify their understandability outside the context they have been inserted in.
+					]]></info>
+					<info lang='ES'><![CDATA[
+						La verífica del enlace permite exáminar por medio de un informe sintetizador
+						los enlaces/links que se encuentran en las páginas creadas con FlexCMP para verificar
+						la comprensión fuera del contexto en el cual fueron inseridos.
+					]]></info>
+				</item>
+
+				<item
+					id='ReadabilityVerify'
+					_url='K:kPageCheckAccess'
+					pars='M=R'
+					permission='ANY'
+					help='verifica_leggibilita'
+					v2url='checkAccess'
+
+					description:IT='Verifica di Leggibilita'
+					description:EN='Readability Report'
+					description:ES='Verífica de legibilidad'
+				>
+					<info lang='IT'><![CDATA[
+						La verifica di leggibilit&agrave; evidenzia, attraverso un report riassuntivo,
+						tutte le pagine che hanno un indice di di leggibilit&agrave; inferiore al valore di soglia minima.
+					]]></info>
+					<info lang='EN'><![CDATA[
+						The summarised Readability Report highlights all the pages which have a legibility index  less than the minimum threshold value.
+					]]></info>
+					<info lang='ES'><![CDATA[
+						La verífica de legibilidad evidencia, por medio de un examen sintetizador, todas las
+						páginas que tienen un indice de legibilidad inferior al valor del limite inferior.
+					]]></info>
+				</item>
+
+
+
+QUESTE ERANO DISABILITATE
+
+				<item
+					id='LocalXHTMLValidation'
+					description:IT='Validazione XHTML locale'
+					description:EN='Local XHTML validation'
+					description:ES='Validación XHTML Local'
+					url='K:kPageCheck'
+					pars='M=XHTML'
+					permission='ANY'
+					help='validxhtml_locale'
+				>
+					<info lang='IT'><![CDATA[
+					Per verificare la conformit&agrave; XHTML dell'intero sito &egrave; possibile utilizzare il servizio di Validazione XHTML locale.
+					Rispetto alla verifica attraverso il validatore W3C questo controllo &egrave; meno approfondito ma pi&ugrave; veloce
+					perch&egrave; non richiede il collegamento al sito del W3C per ogni pagina.
+					]]></info>
+					<info lang='EN'><![CDATA[
+					If you would like to verify the XHTML conformity of the entire site, you can use the local XHTML Validation service. This test is less comprehensive than the W3C validator test, however, it is quicker as you do not have to connect to the W3C site for every page.
+					]]></info>
+					<info lang='ES'><![CDATA[
+					Para verificar la conformidad XHTML de todo el sitio web es posible utilizar el servicio de validación XHTML local con respecto
+					a la verífica del validador W3C Este control es menos profundo pero más rápido porque no necesita la conexión al sitio web de W3C con cada página.
+					]]></info>
+				</item>
+
+				<item
+					id='RemoteXHTMLValidation'
+					description:IT='Validazione XHTML W3C'
+					description:EN='XHTML W3C validation'
+					description:ES='Validación XHTML W3C'
+					url='K:kPageCheck'
+					pars='M=W3C'
+					permission='ANY'
+					help='validxhtml_w3c'
+				>
+					<info lang='IT'><![CDATA[
+					La validazione XHTML W3C sottopone ogni pagina pubblica del sito al validatore W3C (http://validator.w3c.org).
+					Attenzione: la procedura pu&ograve; richiedere sino a 30 secondi a pagina.
+					]]></info>
+					<info lang='EN'><![CDATA[
+					The XHTML W3C validation subjects every one of the site’s publicly viewed pages to the W3C validator (http://validator.w3c.org). Be careful: this procedure can take up to 30 seconds per page
+					]]></info>
+					<info lang='ES'><![CDATA[
+					La Validación XHTML W3C somete cada página pública del sitio web al validador  W3C (http://validator.w3c.org)
+					Atención El procedimento puede necesitar hasta 30 segundos por página
+					]]></info>
+				</item>
+
+
+				<item
+					id='CheckTemplate'
+					description:IT='Validazione Template'
+					description:EN='Template Validation'
+					description:ES='Validación Template'
+					url='K:kPageCheckTpl'
+					permission='ANY'
+					help='validxhtml_locale'
+
+				>
+					<info lang='IT'><![CDATA[
+						Tramite questa funzione &egrave; possibile effettuare una validazione
+						dei template di sito.
+					]]></info>
+					<info lang='EN'><![CDATA[
+						This function allows you to carry out a validation of the contents of the templates used in the site.
+					]]></info>
+					<info lang='ES'><![CDATA[
+						...
+					]]></info>
+				</item>
+
+			</item>
+-->
+			<item
+				id='Stats'
+				permission='STAT'
+
+				pagetitle:IT='Statistiche'
+				pagetitle:EN='Statistics'
+				pagetitle:ES='Estadísticas'
+
+				description:IT='Statistiche'
+				description:EN='Statistics'
+				description:ES='Estadísticas'
+			>
+				<info lang='IT'><![CDATA[
+					Statistiche di accesso al sito.
+				]]></info>
+				<info lang='EN'><![CDATA[
+					Site access statistics.
+				]]></info>
+				<info lang='ES'><![CDATA[
+					Estadistícas de acceso al sitio web.
+				]]></info>
+
+				<item
+					id='Access'
+					_url='K:kPageStats'
+					permission='STAT'
+					help='statistiche_flexcmp'
+					v2url='mainStats'
+
+					description:IT='Statistiche Accesso'
+					description:EN='Statistics'
+					description:ES='Estadistícas de acceso'
+				>
+				<info lang='IT'><![CDATA[
+					Statistiche di accesso al sito elaborate a partire dalle registrazioni effettuate da FlexCMP
+					(vengono conteggiate solo le richieste delle pagine gestite da FlexCMP).
+				]]></info>
+				<info lang='EN'><![CDATA[
+					Language not available: Statistiche di accesso al sito elaborate a partire dalle registrazioni effettuate da FlexCMP
+					(vengono conteggiate solo le richieste delle pagine gestite da FlexCMP).
+				]]></info>
+				<info lang='ES'><![CDATA[
+					Language not available: Statistiche di accesso al sito elaborate a partire dalle registrazioni effettuate da FlexCMP
+					(vengono conteggiate solo le richieste delle pagine gestite da FlexCMP).
+				]]></info>
+				</item>
+
+				<item
+					id='StatC'
+					_url='K:kPageStatsCommunity'
+					permission='COS'
+					help='#'
+					v2url='communityStats'
+
+					description:IT='Statistiche Community'
+					description:EN='Community Statistics'
+					description:ES='Community Statistics'
+				>
+				<info lang='IT'><![CDATA[
+					Statistiche di accesso alle pagine di Community
+				]]></info>
+				<info lang='EN'><![CDATA[
+					Access statistics of Community pages.
+				]]></info>
+				<info lang='ES'><![CDATA[
+					Statistiche delle visite alle pagine di Community
+				]]></info>
+				</item>
+
+			</item>
+
+			<item
+				id='Scheduler'
+				permission='SCH'
+				_url='K:kPageScheduler'
+				help='scheduler'
+				v2url='schedulerList'
+
+				description:IT='Operazioni pianificate'
+				description:EN='Scheduled Tasks'
+				description:ES='Scheduled Tasks'
+			>
+				<info lang='IT'><![CDATA[
+					Monitoraggio e gestione delle operazioni pianificate (aggiornamento motore di ricerca, ricalcolo statistiche, aggiornamento alias, spedizione newsletter, ecc.).
+				]]></info>
+				<info lang='EN'><![CDATA[
+					Monitoring and management of scheduled tasks (updating search engine, recalculating statistics, updating aliases, sending newsletters, etc..).
+				]]></info>
+				<info lang='ES'><![CDATA[
+					Language not available: Monitoraggio e gestione delle operazioni pianificate (aggiornamento motore di ricerca, ricalcolo statistiche, aggiornamento alias, spedizione newsletter, ecc.).
+				]]></info>
+
+			</item>
+
+			<item
+				id='BLOBFormData'
+				permission='RFD'
+				_url='K:kPageScheduler'
+				help='scheduler'
+				v2url='blobFormData'
+
+				description:IT='Accesso dati da Modulo'
+				description:EN='Data from Forms in Pages'
+				description:ES='[ES] Data from Forms in Pages'
+			>
+				<info lang='IT'><![CDATA[
+					...
+				]]></info>
+				<info lang='EN'><![CDATA[
+					...
+				]]></info>
+				<info lang='ES'><![CDATA[
+					...
+				]]></info>
+
+			</item>
+
+			<!--
+			<item
+				id='IndexUtils'
+				description:IT='Gestione Indici'
+				description:EN='Manage Menus'
+				url='K:kPageBOList'
+				pars='OBJ=index'
+				permission='IDHD'
+				help='gestioneindici_elenco'
+			>
+			<![CDATA[
+				Consente di creare nuovi indici di navigazione e di eliminare quelli inutilizzati. ATTENZIONE: eliminando
+				un indice del sito non sar&agrave; possibile ripristinarlo se non da un backup.
+			]]>
+			</item>
+			-->
+			<item
+				id='SiteCache'
+				_url='K:kPageAdminCleanCache'
+				permission='CAC|CMD'
+				v2url='cleanCache'
+
+				description:IT='Rigenerazione Cache'
+				description:EN='Cache Regeneration'
+				description:ES='Regeneración caché'
+			>
+				<info lang='IT'><![CDATA[
+					Permette di forzare un ricalcolo delle strutture temporanee del sito, al fine di visualizzare immediatamente eventuali modifiche che comprendono telai grafici e/o procedure personalizzate.
+				]]></info>
+				<info lang='EN'><![CDATA[
+					Allows you to force a recalculation of the site's temporary structure, so you can immediately visualise eventual changes to the graphic frame and/or personalised procedures.
+				]]></info>
+				<info lang='ES'><![CDATA[
+					Permite forzar un recuento de las estructuras temporales del sitio web con la finalidad de visualizar inmediatamente eventuales modificaciones que comprenden filtros gráficos y/o procedimientos personalizados.
+				]]></info>
+			</item>
+
+			<item
+				id='SiteRegeneration'
+				_url='K:kPageAdminFastSiteCreation'
+				permission='FSC'
+				help='distruzione_rigenerazione'
+				v2url='fastSiteCreation'
+
+				description:IT='Distruzione e Rigenerazione Sito'
+				description:EN='Destroy and Regenerate Site'
+				description:ES='Eliminación y regeneración'
+			>
+				<info lang='IT'><![CDATA[
+					Questa funzionalit&agrave; consente di ricreare da zero l'intero sito. Tutte le pagine e tutti gli indici esistenti verranno
+					cancellati. Sar&agrave; poi possibile creare pagine vuote ed interi indici a partire da un file di testo contenente la mappa del
+					sito. ATTENZIONE: una volta distrutto l'intero sito non sar&agrave; possibile tornare annullare l'operazione se non attraverso i backup.
+				]]></info>
+				<info lang='EN'><![CDATA[
+					Allows you to recreate an entire site from scratch. All pages and existing menus are cancelled.
+					It is then possible to create empty pages and entire menus from a line of text containing the site map.
+					WARNING: once you have destroyed a site you cannot cancel the operation unless, you have a backup.
+				]]></info>
+				<info lang='ES'><![CDATA[
+					Esta función permite recrear desde cero toda la página. Todas las páginas y todos los indicios existentes vendrán eliminados, será posible crear páginas
+					vacías e indices completos a partir de un documento de texto que contiene el mapa del sitio web.
+					ATENCIÓN una vez destruida toda la página web no sera posible anular la operación sólo a trevés del backup.
+				]]></info>
+			</item>
+
+			<item
+				id='VersionHistory'
+				_url='K:kPageAdminVersionHistory'
+				permission='ANY'
+				v2url='versionHistory'
+
+				description:IT='Novit&amp;agrave; Versioni'
+				description:EN='Version History'
+				description:ES='Nueva versión'
+			>
+				<info lang='IT'><![CDATA[
+					Permette di conoscere le novit&agrave; di ogni versione di FlexCMP.
+				]]></info>
+				<info lang='EN'><![CDATA[
+					Allows you to find out all the latest news on all FlexCMP versions.
+				]]></info>
+				<info lang='ES'><![CDATA[
+					Permite conocer las novedades de cada versión FlexCMP.
+				]]></info>
+			</item>
+
+			<item
+				id='batchMDEdit'
+				permission='MMOD'
+				v2url='batchMDEdit'
+
+				description:IT='Modifica Metadati in insiemi di Pagine'
+				description:EN='Pages Metadata Editing'
+				description:ES='...'
+			>
+				<info lang='IT'><![CDATA[
+					...
+				]]></info>
+				<info lang='EN'><![CDATA[
+					...
+				]]></info>
+				<info lang='ES'><![CDATA[
+					...
+				]]></info>
+			</item>
+
+		</item>
+
+		<item
+			id='Setup'
+			permission='ANY'
+			liclass='Imp'
+			icon='moon-icon-settings '
+
+			pagetitle:IT='Impostazioni'
+			pagetitle:EN='Settings'
+			pagetitle:ES='Configuración'
+
+			description:IT='Impostazioni'
+			description:EN='Settings'
+			description:ES='Configuración'
+		>
+			<![CDATA[
+				Descrizione di Impostazioni
+			]]>
+
+<!--
+			<item
+				id='Channels'
+				description:IT='Canali'
+				description:EN='Thematics'
+				url='K:kPageBOList'
+				pars='OBJ=canale'
+				permission='CAN'
+				help='canali_elenco'
+				condition='configmatch:ChannelMode:classic'
+			>
+				<info lang='IT'><![CDATA[
+					Attraverso la gestione canali &egrave; possibile creare, rinominare o eliminare i canali utilizzati nel sito.
+					Ogni pagina del sito pu&ograve; essere assegnata ad un Canale. Questo consente di organizzare meglio le pagine
+					poich&egrave; nella gestione pagine &egrave; possibile filtrare le pagine per canale.
+					E' inoltre possibile specificare, per ogni pagina assegnata ad un canale, un abstract della pagina stessa che pu&ograve;
+					essere utilizzato per la pubblicazione di elenchi automatici di pagine. Un'applicazione tipica &egrave; la creazione di sezioni
+					News, eventi, circolari, ecc.
+				]]></info>
+				<info lang='EN'><![CDATA[
+					Language not available: Attraverso la gestione canali &egrave; possibile creare, rinominare o eliminare i canali utilizzati nel sito.
+					Ogni pagina del sito pu&ograve; essere assegnata ad un Canale. Questo consente di organizzare meglio le pagine
+					poich&egrave; nella gestione pagine &egrave; possibile filtrare le pagine per canale.
+					E' inoltre possibile specificare, per ogni pagina assegnata ad un canale, un abstract della pagina stessa che pu&ograve;
+					essere utilizzato per la pubblicazione di elenchi automatici di pagine. Un'applicazione tipica &egrave; la creazione di sezioni
+					News, eventi, circolari, ecc.
+				]]></info>
+			</item>
+-->
+
+			<item
+				id='Classification'
+				permission='CAN'
+				_condition='configmatch:ChannelMode:axes'
+				liclass='Imp'
+
+				pagetitle:IT='Classificazione'
+				pagetitle:EN='Classification'
+				pagetitle:ES='Clasificación'
+
+				description:IT='Classificazione'
+				description:EN='Classification'
+				description:ES='Clasificación'
+			>
+				<info lang='IT'><![CDATA[
+					Gestione delle funzionalit&agrave; legate alla classificazione delle informazioni.
+				]]></info>
+				<info lang='EN'><![CDATA[
+					Management of the functions regarding information classification.
+				]]></info>
+				<info lang='ES'><![CDATA[
+					Gestión de la funcionalidad unido a la clasificación de la información.
+				]]></info>
+
+					<item
+						id='AxesBC'
+						url='K:kPageBOList'
+						pars='OBJ=AxesBC'
+						permission='CAN'
+						help=''
+						__condition='configmatch:ChannelMode:axes'
+
+						description:IT='BreadCrumb - Classificazioni'
+						description:EN='BreadCrumb - Classification'
+						description:ES='BreadCrumb - Classificazioni'
+					>
+						<info lang='IT'><![CDATA[
+							Definizione delle pagine di BreadCrumb associate a specifici pattern di classificazione.
+							Permette alle pagine classificate e non inserite in un menu di navigazione, di utilizzare un breadcrumb coerente,
+							generato a partire dalla pagina di breadcrumb associata al loro pattern di classificazione.
+						]]></info>
+						<info lang='EN'><![CDATA[
+							The definition of BreadCrumb pages associated to specific classification patterns.
+							It allows classified pages which are not included in a navigation menu to use a logical breadcrumb,
+							which is generated from the breadcrumb page associated to their classification pattern
+						]]></info>
+						<info lang='ES'><![CDATA[
+						Definizione delle pagine di BreadCrumb associate a specifici pattern di classificazione.
+						Permette alle pagine classificate e non inserite in un menu di navigazione, di utilizzare un breadcrumb coerente, generato a partire dalla pagina di breadcrumb associata al loro pattern di classificazione.
+						]]></info>
+					</item>
+
+					<item
+						id='Axe'
+						_url='PAGES:AdminAxeList.php'
+						permission='CAN'
+						help=''
+						__condition='configmatch:ChannelMode:axes'
+						v2url='axeList'
+
+						description:IT='Gestione Assi'
+						description:EN='Axes'
+						description:ES='Axes'
+					>
+						<info lang='IT'><![CDATA[
+							Gestione degli assi di classificazione. Permette di aggiungere, rinominare e riorganizzare gli elementi all'interno di ogni asse.
+						]]></info>
+						<info lang='EN'><![CDATA[
+							Management of classification axes.
+							Allows you to add, rename and reorganise the elements within each axis.
+						]]></info>
+						<info lang='ES'><![CDATA[
+							Gestione degli assi di classificazione. Permette di aggiungere, rinominare e riorganizzare gli elementi all'interno di ogni asse.
+						]]></info>
+					</item>
+
+					<item
+						id='AxesConf'
+						_url='PAGES:AdminAxesConfEdit.php'
+						permission='CAN'
+						help=''
+						__condition='configmatch:ChannelMode:axes'
+						v2url='axesConfEdit'
+
+						description:IT='Configurazione Classificazione'
+						description:EN='Classification Settings'
+						description:ES='Configurazione Classificazione'
+					>
+						<info lang='IT'><![CDATA[
+							Configurazione del sistema di classificazione. Permette di aggiungere assi e di definirne gli ambiti di utilizzo.
+						]]></info>
+						<info lang='EN'><![CDATA[
+							Configuration of the classification system.
+							Allows you to add axes and define their range of use.
+						]]></info>
+						<info lang='ES'><![CDATA[
+							Configurazione del sistema di classificazione. Permette di aggiungere assi e di definirne gli ambiti di utilizzo.
+						]]></info>
+					</item>
+
+			</item>
+
+			<item
+				id='Validations'
+				url='K:kPageBOList'
+				pars='OBJ=FlexValid'
+				permission='EDV'
+				help='validazioni_elenco'
+
+				description:IT='Validazioni'
+				description:EN='Validations'
+				description:ES='Validaciones'
+			>
+				<info lang='IT'><![CDATA[
+					Attraverso la gestione Validazioni &egrave; possibile fornire suggerimenti o sottoporre a vincoli i contributori
+					durante la fase di creazione e/o modifica dei contenuti. &Egrave; possibile definire, per ogni utente,
+					schemi di validazione differenti nei quali specificare i controlli da attivare e se FlexCMP deve fornire un
+					semplice suggerimento o addirittura impedire il salvataggio di una pagina non conforme.
+				]]></info>
+				<info lang='EN'><![CDATA[
+					Allows you to supply suggestions or submit contributors to constraints during the creation and/or modification of
+					content. It is possible to define different validation schemes for every user.
+					By doing this you can specify the controls to activate and if FlexCMP has to supply a simple suggestion or
+					even block the saving of a page which does not conform.
+				]]></info>
+				<info lang='ES'><![CDATA[
+					A través de la gestión de Validaciones es posible proveer sugerencias o someter a vinculos a los contribuidores
+					durante la fase de creación y/o modificación de los contenidos. Es posible definir, para cada usuario, esquemas de
+					validación diferentes en los cuales especificar los controles para activar y si FlexCMP debe proveer unas simple sugerencia o incluso impedir publicación de una pagina con la que no se esta de acuerdo.
+				]]></info>
+			</item>
+			<item
+				id='ElTemplates'
+				_url='K:kPageElencoTemplate'
+				permission='ETPL'
+				help='modelli_elenco'
+				v2url='listPageTemplate'
+
+				description:IT='Modelli di pagina'
+				description:EN='Page Models'
+				description:ES='Modelos de Página'
+			>
+				<info lang='IT'><![CDATA[
+					Attraverso la gestione Modelli di pagina &egrave; possibile definire degli schemi di pagina che possono essere utilizzati dai contributori del sito per la creazione delle normali pagine.
+					La creazione di una nuova pagina pu&ograve; infatti essere ad impaginazione libera oppure vincolata da modello. E' possibile attraverso la gestione di gruppi ed utenti definire per ogni utente quale modalit&agrave; pu&ograve; utilizzare per la creazione e/o modifica delle pagine.
+					La creazione di una nuova pagina da modello, essendo vincolata, &egrave; pi&ugrave; semplice della creazione di una pagina ad impaginazione libera ed &egrave; quindi indicata per i contributori con limitate capacit&egrave; editoriali o con limitata autonomia.
+				]]></info>
+				<info lang='EN'><![CDATA[
+					Allows you to define model pages which can be used by contributors to create normal pages.
+					The creation of a new page can either be in free pagination or constrained by models.
+					Through the management of groups and users it is possible to define which modality users can use to create and /or modify pages.
+					The creation of a new page model, while under constraint, is a lot easier than the creation of a page in free pagination and is
+					therefore recommended for contributors with limited editorial skills or autonomy.
+				]]></info>
+				<info lang='ES'><![CDATA[
+					A través de la gestión de Modelos de Página es posible definir los esquemas de páginas normales. La creación de una página nueva
+					puede ser, de hecho, a paginación libre o bien vinculada con el modelo.Es posible, a través de la gestión de grupos y usuarios
+					definir para cada usuario la modalidad que puede utilizar para la creación y/o modificación de las páginas. La creación de una página
+					modelo nueva, siendo vinculada, es más simple que la creación de una página de paginación libre y es, por lo tanto, indicada para los colaboradores
+					con una capacidad editorial limitada o con una autonomía limitada.
+				]]></info>
+			</item>
+			<item
+				id='FeedItem'
+				url='K:kPageBOList'
+				pars='OBJ=feeditem'
+				permission='FEED'
+				help='feed_item'
+				__condition='configmatch:ChannelMode:axes'
+
+				description:IT='Gestione Feed'
+				description:EN='Feed management'
+				description:ES='Feed management'
+			>
+				<info lang='IT'><![CDATA[
+					Gestione dei flussi informativi (Feed) esportati dal sito. Permette di definire i dati generici del flusso (titolo, descrizione, copyright, ecc.) ed i valori di classificazione in base ai quali estrarre le informazioni incluse nel fedd stesso.
+				]]></info>
+				<info lang='EN'><![CDATA[
+					Management of information flows (Feeds) exported from the site. Allows you to define the general details of the flow (title, description, copyright, etc) and other parameters.
+				]]></info>
+				<info lang='ES'><![CDATA[
+					Gestione dei flussi informativi (Feed) esportati dal sito. Permette di definire i dati generici del flusso (titolo, descrizione, copyright, ecc.) ed i valori di classificazione in base ai quali estrarre le informazioni incluse nel fedd stesso.
+				]]></info>
+			</item>
+
+			<item
+				id='Acronyms'
+				url='K:kPageBOList'
+				pars='OBJ=acronym'
+				permission='ACR'
+				help='acronimi_elenco'
+
+				description:IT='Acronimi'
+				description:EN='Acronyms'
+				description:ES='Acrónimos'
+			>
+				<info lang='IT'><![CDATA[
+					Le linee Guida per la accessibilit&agrave; WCAG 1.0 richiedono di Esplicitare la lingua utilizzata al fine
+					di consentire agli screen reader di utilizzare la pronuncia pi&ugrave; appropriata. In particolare la Checklist
+					delle WCAG 1.0 prevede al punto 4.1 di esplicitare ogni cambio di lingua ed al punto 4.2 di espandere ogni Abbreviazione
+					o Acronimo. Attraverso questa funzionalit&agrave; &egrave; possibile gestire Acronimi, Abbreviazioni e Parole
+					straniere d'uso comune che richiedano il cambio di lingua rispetto alla lingua dell'intero documento.
+				]]></info>
+				<info lang='EN'><![CDATA[
+					WCAG 1.0 accessibility guidelines require you to specify the language used to allow the screen reader use
+					the most appropriate pronunciation. WCAG 1.0 checklist article 4.1, in particular, provides for the clear
+					identification of changes in the natural language while 4.2 specifies the expansion of each abbreviation or acronym.
+					Through this function you can manage acronyms, abbreviations and commonly used foreign words which require a change
+					in language with respect to the language of the entire document.
+				]]></info>
+				<info lang='ES'><![CDATA[
+					Las lineas Guia para la accesibilidad a WCAG 1.0 te piden especificar el idioma utilizado con el fin de permitir a los lectores de pantalla (screen reader)
+					utilizar la pronunciación máss adecuada. En particular la checklist de WCAG 1.0 prevé en el punto 4.1 especificar cada
+					cambio de idioma y en el punto 4.2 expandir cada abreviación o acrónimo. A través de esta función es posible la gestión de acrónimos,
+					abreviaciones y palabras en otros idiomas de uso común que necesitan un cambio de idioma con respecto a la lengua del resto del documento.
+				]]></info>
+			</item>
+
+			<item
+				id='Aliases'
+				url='K:kPageBOList'
+				pars='OBJ=alias'
+				permission='ALIS'
+				help='alias_elenco'
+
+				description:IT='Alias'
+				description:EN='Aliases'
+				description:ES='Alias'
+			>
+				<info lang='IT'><![CDATA[
+					Attraverso la gestione Alias &egrave; possibile definire uno o pi&ugrave; indirizzi (URL) brevi da associare ad una pagina del sito.
+				]]></info>
+				<info lang='EN'><![CDATA[
+					This allows you to define one, or more, short URLs which are then associated with a site page.
+				]]></info>
+				<info lang='ES'><![CDATA[
+					A través de la gestión Alias, es posible definir una o mas direcciones (URL) breves para asociar  a una pagina del sitio web.
+				]]></info>
+			</item>
+
+			<item
+				id='AccessRules'
+				url='K:kPageBOList'
+				pars='OBJ=AccessRules'
+				permission='LAN'
+				help='accessrules_elenco'
+
+				description:IT='Condizioni di accesso'
+				description:EN='Access rules'
+				description:ES='Condiciones de Acceso'
+			>
+				<info lang='IT'><![CDATA[
+				Attraverso la gestione Condizioni d'accesso &egrave; possibile definire uno o pi&ugrave; condizioni, anche composte, alle quali sottostare per la visualizzazione di porzioni di pagine.
+				Se attraverso l'appartenenza a Community &egrave; possibile limitare la visione di intere pagine, con le Condizioni di accesso si pu&ograve; limitare la visione di porzioni ed implementare condizioni complesse ed articolate.
+				]]></info>
+				<info lang='EN'><![CDATA[
+					This allows you to define one, or more, conditions, even compound ones which need to be submitted to visualise page portions.
+					If through membership of a community, it is possible to limit the visibility of entire pages, access conditions limit the visibility of portions and
+					implement complex and articulate conditions.
+				]]></info>
+				<info lang='ES'><![CDATA[
+					A través de la gestión de Condiciones de Acceso es posible definir una o mas condiciones,
+					incluso compuestas, a las cuales estar sometidas para la visualización de fragmentos de páginas. Si a través de la participación en una Community es posible limitar la visión
+					de páginas enteras, con las Condiciones de Acceso se puede limitar la visión de fragmentos  e incrementar condiciones complejas y articuladas.
+				]]></info>
+			</item>
+
+			<item
+				id='Licences'
+				_url='K:kPageLicence'
+				permission='LIC'
+				help='licenze'
+				v2url='licence'
+
+				description:IT='Licenze'
+				description:EN='Licence'
+				description:ES='Licencia'
+			>
+				<info lang='IT'><![CDATA[
+					Per il funzionamento dell'interfaccia amministrativa di FlexCMP &egrave; necessario inserire periodicamente
+					le chiavi di attivazione delle Licenze acquistate. Attraverso la gestione Licenze &egrave; possibile
+					inserire le chiavi di attivazione.
+				]]></info>
+				<info lang='EN'><![CDATA[
+					For the functioning of FlexCMP's administrative interface it is necessary to periodically
+					insert the activation key of the purchased licence. The licence setting allows you insert the activation key.
+				]]></info>
+				<info lang='ES'><![CDATA[
+					Para el funcionamiento de la interfaz administrativa de FlexCMP es necesario insertar periódicamente las claves
+					de activación de la licencia  adquirida. A través de la gestión de Licencia es posible insertar las claves de activación.
+				]]></info>
+			</item>
+
+			<item
+				id='HomePage'
+				_url='PAGES:AdminHomePage.php'
+				permission='IN'
+				_help='licenze'
+				v2url='homePage'
+
+				description:IT='Definizione Home Page del sito'
+				description:EN="Site's Home Page definition"
+				description:ES-disabled='Licencia'
+			>
+				<info lang='IT'><![CDATA[
+					Impostazione pagina home del sito: viene servita quando ci si
+					collega al sito senza specificare una pagina specifica
+				]]></info>
+				<info lang='EN'><![CDATA[
+					Setting the home page of the website: is served when you connect to the site without specifying a specific page
+				]]></info>
+			</item>
+
+			<!-- item
+				id='Parameters'
+				description='PARAMETRI DI FUNZIONAMENTO (necessiter&agrave; di un nuovo permesso data la delicatezza dei dati qui contenuti)'
+				url='???'
+				permission='ANY'
+			/ -->
+
+			<item
+				id='api-keys-list'
+				_url='PAGES:AdminHomePage.php'
+				permission='AK'
+				_help='api-keys'
+				v2url='api-keys-list'
+
+				description:IT='Gestione API KEYs'
+				description:EN='API KEYs Handling'
+				description:ES-disabled='__'
+			>
+				<info lang='IT'><![CDATA[
+					Gestione delle Chiavi per l'accesso tramite API
+				]]></info>
+				<info lang='EN'><![CDATA[
+					API Key Handling
+				]]></info>
+			</item>
+
+		</item>
+
+		<item
+			id='Modules'
+			permission='ANY'
+
+			icon='moon-icon-archive'
+			liclass='Mod'
+
+			pagetitle:IT='Moduli'
+			pagetitle:EN='Modules'
+			pagetitle:ES='Módulos'
+
+			description:IT='Moduli'
+			description:EN='Modules'
+			description:ES='Módulos'
+		>
+			<![CDATA[
+				Descrizione di Moduli
+			]]>
+
+			<item
+				id='ElRepository'
+				_url='K:kPageAdminElencoRepository'
+				_pars='OBJ=canale'
+				licence='Repository'
+				permission='LIB'
+				help='libreria_elenco'
+				v2url='repositoryList'
+
+				description:IT='Libreria'
+				description:EN='Repository'
+				description:ES='Libreria'
+			>
+				<info lang='IT'><![CDATA[
+					La Libreria (o Repository) consente di inserire elementi utilizzabili nelle pagine FlexMCP: link, immagini, documenti, frammenti di pagina. Se nelle pagine si utilizza pi&ugrave; volte un oggetto di Libreria, quando di modifica l'oggetto la modifica si propaga a tutte le pagine che ne fanno uso.
+				]]></info>
+				<info lang='EN'><![CDATA[
+					The Library (or repository) allows you to insert elements which will be usable in FlexCMP pages:
+					links, photos, documents, and page fragments. If you use the same object more than once on different pages,
+					when you change the object in the repository, it is changed automatically on all pages.
+				]]></info>
+				<info lang='ES'><![CDATA[
+					Con la Libreria (o repository) se pueden introducir elementos utilizables en las páginas FlexCMP enlaces, imágenes, documentos, fragmentos de página. Si en las páginas se utiliza mas veces un objeto de la libreria, cuando se modifica el objeto, la modificación se propaga por todas las páginas que lo han usado.
+				]]></info>
+			</item>
+
+			<item
+				id='Community'
+				permission='COU|COM|COA'
+				licence='Community'
+
+				pagetitle:IT='Community'
+				pagetitle:EN='Community'
+				pagetitle:ES='Community'
+
+				description:IT='Community'
+				description:EN='Community'
+				description:ES='Community'
+			>
+
+			<info lang='IT'><![CDATA[
+				Attraverso le community di utenti &egrave; possibile differenziare l'accesso ai contenuti (Aree Riservate) ed ai servizi.
+
+			]]></info>
+			<info lang='EN'><![CDATA[
+				The community module allows you to differentiate user's access to content (Reserved area) and services.
+			]]></info>
+			<info lang='ES'><![CDATA[
+				A través de las comunidades (community) de usuarios es posible diferenciar el acceso a los contenidos ( Area Reservada) y a los servicios.
+			]]></info>
+				<item
+					id='CommunityUser'
+					_url='K:kPageCommunityUserList'
+					licence='Community'
+					permission='COU|COA'
+					v2url='communityUserList'
+
+					description:IT='Utenti Community'
+					description:EN='Community Users'
+					description:ES='Community Users'
+				>
+					<info lang='IT'><![CDATA[
+						Gestione utenti iscritti alla community.
+					]]></info>
+					<info lang='EN'><![CDATA[
+						Manage Community Users.
+					]]></info>
+					<info lang='ES'><![CDATA[
+						Manage Community Users.
+					]]></info>
+				</item>
+
+				<item
+					id='CommunityItem'
+					url='K:kPageBOList'
+					pars='OBJ=communityitem'
+					licence='Community'
+					permission='COM'
+
+					description:IT='Community'
+					description:EN='Communities List'
+					description:ES='Manage Communities'
+				>
+					<info lang='IT'><![CDATA[
+						Gestione community.
+					]]></info>
+					<info lang='EN'><![CDATA[
+						Manage Communities.
+					]]></info>
+					<info lang='ES'><![CDATA[
+						Manage Communities.
+					]]></info>
+				</item>
+
+			</item>
+
+			<item
+				id='Newsletter'
+				permission='NL|NLL'
+				licence='Newsletter'
+
+				pagetitle:IT='Newsletter'
+				pagetitle:EN='Newsletter'
+				pagetitle:ES='Newsletter'
+
+				description:IT='Newsletter'
+				description:EN='Newsletter'
+				description:ES='Newsletter '
+			>
+			<info lang='IT'><![CDATA[
+				Attraverso il modulo Newsletter si possono inviare comunicazioni informative via Email a gruppi di utenti definiti attraverso la gestione Community.
+			]]></info>
+			<info lang='EN'><![CDATA[
+				The newsletter module allows you to send informative communications via email to user groups which have been defined by the communities.
+			]]></info>
+			<info lang='ES'><![CDATA[
+				A través del modulo Newsletter se pueden enviar comunicados informativos por medio del correo electrónico a grupos de usuarios definidos a través de la gestion Community.
+			]]></info>
+				<item
+					id='NewsletterItem'
+					url='K:kPageBOList'
+					pars='OBJ=NewsletterItem'
+					licence='Newsletter'
+					permission='NL'
+
+					description:IT='Gestione Newsletter'
+					description:EN='Manage Newsletter'
+					description:ES='Manage Newsletter'
+				>
+					<info lang='IT'><![CDATA[
+						Gestione Newsletter.
+					]]></info>
+					<info lang='EN'><![CDATA[
+						Manage Newsletter.
+					]]></info>
+					<info lang='ES'><![CDATA[
+						Manage Newsletter.
+					]]></info>
+					</item>
+
+				<item
+					id='NewsletterLetter'
+					_url='K:kPageAdminElencoNewsletter'
+					v2url='nllist'
+					licence='Newsletter'
+					permission='NLL'
+
+					description:IT='Gestione Lettere'
+					description:EN='Manage Letters'
+					description:ES='Manage Letters'
+				>
+					<info lang='IT'><![CDATA[
+						Gestione Lettere.
+					]]></info>
+					<info lang='EN'><![CDATA[
+						Manage Emails.
+					]]></info>
+					<info lang='ES'><![CDATA[
+						Manage Emails.
+					]]></info>
+				</item>
+
+				<item
+					id='NewsletterSources'
+					_url='K:kPageSourcesList'
+					v2url='sourcelist'
+					licence='Newsletter'
+					permission='NL'
+
+					description:IT='Gestione Sorgenti'
+					description:EN='Manage Sources'
+					description:ES='Manage Sources'
+				>
+					<info lang='IT'><![CDATA[
+						Gestione Sorgenti di dati per spedizione newsletter.
+					]]></info>
+					<info lang='EN'><![CDATA[
+						Manage Sources.
+					]]></info>
+					<info lang='ES'><![CDATA[
+						Manage Sources.
+					]]></info>
+
+				</item>
+
+			</item>
+
+			<item
+				id='SMSNewsletter'
+				permission='NLSMS|NLSMSMSG'
+				licence='SMS'
+
+				pagetitle:IT='SMS'
+				pagetitle:EN='SMS'
+				pagetitle:ES='SMS'
+
+				description:IT='SMS'
+				description:EN='SMS'
+				description:ES='SMS'
+			>
+			<info lang='IT'><![CDATA[
+				Attraverso il modulo SMS si possono inviare brevi messaggi di testo a numeri telefonici definiti attraverso sorgenti di vario tipo (file CSV, Community, ecc.).
+			]]></info>
+			<info lang='EN'><![CDATA[
+				Using the SMS module, short text messages can be sent to telephone numbers which have been defined according to various types of source (CSV files, Community, etc).
+			]]></info>
+			<info lang='ES'><![CDATA[
+				Attraverso il modulo SMS si possono inviare brevi messaggi di testo a numeri telefonici definiti attraverso sorgenti di vario tipo (file CSV, Community, ecc.).
+			]]></info>
+				<item
+					id='SMSNewsletterItem'
+					url='K:kPageBOList'
+					pars='OBJ=SMSNewsletterItem'
+					licence='SMS'
+					permission='NLSMS'
+
+					description:IT='Newsletter SMS'
+					description:EN='SMS Newsletters'
+					description:ES='Newsletter SMS'
+				>
+				<info lang='IT'><![CDATA[
+					Gestione Newsletter SMS.
+				]]></info>
+				<info lang='EN'><![CDATA[
+					SMS Newsletters Management.
+				]]></info>
+				<info lang='ES'><![CDATA[
+					Gestione Newsletter SMS.
+				]]></info>
+				</item>
+
+				<item
+					id='SMSNewsletterMessageSend'
+					__url='K:kPageAdminSMSSend'
+					licence='SMS'
+					permission='NLSMSMSG'
+					v2url='smsSend'
+
+					description:IT='Invio SMS'
+					description:EN='SMS Send'
+					description:ES='SMS Send'
+				>
+				<info lang='IT'><![CDATA[
+					Invio Messaggi SMS.
+				]]></info>
+				<info lang='EN'><![CDATA[
+					Send SMS.
+				]]></info>
+				<info lang='ES'><![CDATA[
+					Invio Messaggi SMS.
+				]]></info>
+				</item>
+
+				<item
+					id='SMSNewsletterMessageList'
+					url='K:kPageAdminSMSList'
+					licence='SMS'
+					permission='NLSMSMSG'
+
+					description:IT='Archivio SMS inviati'
+					description:EN='SMS Sent'
+					description:ES='SMS Sent'
+				>
+				<info lang='IT'><![CDATA[
+					Archivio dei Messaggi SMS inviati.
+				]]></info>
+				<info lang='EN'><![CDATA[
+					Sent SMS archive.
+				]]></info>
+				<info lang='ES'><![CDATA[
+					Archivio dei Messaggi SMS inviati.
+				]]></info>
+				</item>
+
+				<item
+					id='SMSNewsletterSourceConfig'
+					url='PAGES:AdminSMSSourceConfig.php'
+					licence='SMS'
+					permission='NLSMS'
+
+					description:IT='Gestione Sorgenti'
+					description:EN='Sources Magagement'
+					description:ES='Sources Magagement'
+				>
+				<info lang='IT'><![CDATA[
+					Configurazione Sorgenti di Numeri Destinatari degli SMS.
+				]]></info>
+				<info lang='EN'><![CDATA[
+					Sources Configuration of SMS Recipient Numbers.
+				]]></info>
+				<info lang='ES'><![CDATA[
+					Language not available: Configurazione Sorgenti di Numeri Destinatari degli SMS.
+				]]></info>
+				</item>
+
+				<item
+					id='SMSNewsletterSourceUpload'
+					url='K:kPageAdminSMSSourceUpload'
+					licence='SMS'
+					permission='NLSMS'
+
+					description:IT='Caricamento Sorgenti'
+					description:EN='Sources Upload'
+					description:ES='Sources Upload'
+				>
+				<info lang='IT'><![CDATA[
+					Caricamento Sorgenti di Numeri Destinatari degli SMS attraverso file CSV.
+				]]></info>
+				<info lang='EN'><![CDATA[
+					Upload Sources of SMS Recipient Numbers using CSV files.
+				]]></info>
+				<info lang='ES'><![CDATA[
+				Language not available: Caricamento Sorgenti di Numeri Destinatari degli SMS attraverso file CSV.
+				]]></info>
+				</item>
+
+			</item>
+
+			<item
+				id='Forum'
+				url='K:kPageBOList'
+				pars='OBJ=forum'
+				licence='Forum'
+				permission='FOR'
+				help='forum_elenco'
+
+				description:IT='Forum'
+				description:EN='Forum'
+				description:ES='Foro'
+			>
+				<info lang='IT'><![CDATA[
+					La gestione Forum consente di creare, rinominare o eliminare Forum di discussione moderati
+					e non. Nei forum moderati gli articoli inseriti dagli utenti non sono visibili sino alla esplicita
+					approvazione del moderatore mentre nei forum non moderati ogni articolo inserito &egrave;
+					immediatamente visibile.
+				]]></info>
+				<info lang='EN'><![CDATA[
+					Management of the forum allows you to create, rename or eliminate moderated or unmoderated discussion forums.
+					In moderated forums articles inserted by the users are not visible until they have been approved by the moderator,
+					while in unmoderated forums every article inserted is immediately visible.
+				]]></info>
+				<info lang='ES'><![CDATA[
+					La gestión del Foro consiste en crear, penombrar o eliminar foros de discusiones moderadas y no moderadas.
+					En los foros moderados los artículos  insertados por los usuarios no son visibiles sin la aprobación explícita del moderador,
+					mientras que en los foros no moderados cada artículo insertado es visible inmediatamente.
+				]]></info>
+			</item>
+
+			<item
+				id='Poll'
+				url='K:kPageBOList'
+				pars='OBJ=poll'
+				licence='Poll'
+				permission='POLL'
+
+				description:IT='Sondaggi'
+				description:EN='Surveys'
+				description:ES='Sondeos'
+			>
+				<info lang='IT'><![CDATA[
+					Attraverso la gestione sondaggi &egrave; possibile inserire nel sito uno o pi&uacute;
+					sondaggi a risposta multipla. Ogni sondaggio pu&oacute; prevedere due o pi&uacute; risposte possibili.
+					Gli utenti del sito posso accedere ai risultati rappresentati in forma numerica e grafica.
+				]]></info>
+				<info lang='EN'><![CDATA[
+					The survey module allows you to insert one, or more, multiple choice surveys.
+					Every survey can have two or more possible responses. Site users can access the results in numerical and graphic form.
+				]]></info>
+				<info lang='ES'><![CDATA[
+					Por medio de la gestión Sondeos es posible insertar en el sitio web uno o mas sondeos con respuesta multiple,
+					cada sondeo puede preveer dos o mas respuestas posibles. Los usuarios del sitio pueden acceder a los resultados representados en forma numérica o gráfica.
+				]]></info>
+			</item>
+
+			<item
+				id='Comment'
+				url='K:kPageBOList'
+				pars='OBJ=commentset'
+				licence='Comments'
+				permission='COMS'
+
+				description:IT='Commenti'
+				description:EN='Comments'
+				description:ES-disabled='Sondeos'
+			>
+				<info lang='IT'><![CDATA[
+					Attraverso la Gestione Commenti &egrave; possibile
+					inserire nelle pagine editoriali un oggetto che
+					permetta agli utenti di lasciare un commento sulla
+					pagina stessa.
+				]]></info>
+				<info lang='EN'><![CDATA[
+					Comments management allows users to leave comments on web pages.
+				]]></info>
+				<info lang='ES'><![CDATA[
+					...
+				]]></info>
+			</item>
+
+			<item
+				id='GPGallery'
+				url='K:kPageBOList'
+				pars='OBJ=GPGallery'
+				licence='GalleryPlus'
+				permission='GPG|GPA'
+
+				description:IT='Gallerie di Foto'
+				description:EN='Photo Galleries'
+				description:ES='Galeria de imágenes'
+			>
+				<info lang='IT'><![CDATA[
+					Gestione delle Gallerie di Foto.
+				]]></info>
+				<info lang='EN'><![CDATA[
+					Allows you to manage photo galleries.
+				]]></info>
+				<info lang='ES'><![CDATA[
+					Gestión de la Galeria de imágenes.
+				]]></info>
+				<item
+					id='GPAlbum'
+					description='Album'
+					url='K:kPageBOList'
+					pars='OBJ=GPAlbum'
+					licence='GalleryPlus'
+					permission='GPA'
+				>
+					<item
+						id='GPImg'
+						description='Immagini'
+						url='PAGES:AdminGPImageList.php'
+						pars='OBJ=GPImg'
+						licence='GalleryPlus'
+						permission='GPA'
+
+					/>
+				</item>
+			</item>
+
+			<item
+				id='AdminYouTube'
+				_url='PAGES:AdminYouTube.php'
+				v2url='videoYouTubeList'
+				licence='YouTube'
+				permission='YTA'
+
+				description:IT='Gallerie di Video'
+				description:EN='Videos Gallery'
+				description:ES='Galeria de videos'
+			>
+				<info lang='IT'><![CDATA[
+					Gestione dei Video YouTube.
+				]]></info>
+				<info lang='EN'><![CDATA[
+					YouTube videos management.
+				]]></info>
+				<info lang='ES'><![CDATA[
+					Gestión de la Galeria de videos YouTube.
+				]]></info>
+			</item>
+
+
+			<item
+				id='Languages'
+				url='K:kPageBOList'
+				pars='OBJ=lingue'
+				licence='Languages'
+				permission='LAN'
+				help='lingue_elenco'
+
+				description:IT='Lingue'
+				description:EN='Languages'
+				description:ES='Idioma'
+			>
+				<info lang='IT'><![CDATA[
+					Attraverso la gestione Lingue &egrave; possibile creare e attivare le lingue del sito.
+					FlexCMP &egrave; in grado di gestire siti in pi&uacute; lingue. Ogni pagina, se non
+					tradotta in una lingua ttiva del sito, appare nella lingua master con un messaggio che
+					avvisa la non disponibilit&agrave; della pagina tradotta. Grazie allo status di ogni pagina &egrave;
+					comunque possibile impostare per ogni lingua lo stato di pagina in costruzione o nascosta consentendo,
+					di fatto, di avere pagine presenti in certe lingue e non in altre.
+				]]></info>
+				<info lang='EN'><![CDATA[
+					The language module allows you to create and activate the languages of the site.
+					FlexCMP is able to manage sites in various languages. Each page, if not already translated in a language already present on the site,
+					appears in the master language with a warning message informing you that a translated version of the page is unavailable.
+					Thanks to the status of every page it is possible to set the state of the page under construction or hidden for every language,
+					allowing you to have pages available in one language but not in others.
+				]]></info>
+				<info lang='ES'><![CDATA[
+					A través de la gestión de Idioma es posible crear y activar el idioma del sitio web. FlexCMP se encuetra en grado de gestionar
+					sitios web en otros idiomas. Cada página, si no traducida en un idioma activo del sitio web, aparece en la lengua master
+					con un mensage que avisa de la indisponibilidad de la página traducida. Gracias al estado de cada página es de todas formas
+					posible impostar para cada idioma el estado de página en construcción escondida, consintiendo, de hecho, tener páginas presentes en ciertos idioma y en otros no.
+				]]></info>
+			</item>
+
+
+			<item
+				id='SQConn'
+				url='K:kPageBOList'
+				pars='OBJ=sqconn'
+				licence='SQ'
+				permission='SQ'
+
+				description:IT='Simple Query'
+				description:EN='Simple Query'
+				description:ES='Simple Query'
+			>
+				<info lang='IT'><![CDATA[
+					Gestione configurazioni Simple Query
+				]]></info>
+				<info lang='EN'><![CDATA[
+					Simple Query configurations management.
+				]]></info>
+				<info lang='ES'><![CDATA[
+					Simple Query configurations management.
+				]]></info>
+			</item>
+
+		</item>
+
+		<item
+			id='Pers'
+			permission='ANY'
+
+			icon='moon-icon-stackoverflow'
+			liclass='Int'
+
+			pagetitle:IT='Personalizzazioni'
+			pagetitle:EN='Custom Applications'
+			pagetitle:ES='Personalización'
+
+			description:IT='Personalizzazioni'
+			description:EN='Custom Applications'
+			description:ES='Personalización'
+		>
+		<![CDATA[
+			Descrizione di personalizzazioni
+		]]>
+
+			<include
+				method='file'
+				file='AdminCustomExtensions.xml'
+			/>
+
+			<!-- include AdminCustomExtensions.xml -->
+
+			<!--
+			<item
+				id='DBImport'
+				description='Importazione SQL'
+				url='K:kPageImportDB'
+				permission='DBC'
+			>
+			<![CDATA[
+				Importazione SQL
+			]]>
+			</item>
+			-->
+
+		</item>
+	</menu>
+</admin>

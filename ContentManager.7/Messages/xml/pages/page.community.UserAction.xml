@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE FlexCMPMessages SYSTEM '/FlexCMPMessages.dtd'>
+<messages xmlns:lang='#' defaultlang='IT'>
+	<group id='pgcua' define='false'>
+
+		<message id='ic'
+			lang:it='Iscrizione Completata'
+		/>
+
+		<message id='neu'
+			lang:it='Utente non esistente'
+		/>
+
+		<message id='rcu'
+			lang:it='Richiesta di Cancellazione Utente'
+		/>
+
+		<message id='dc'
+			lang:it='Cancellazione Utente Confermata'
+		/>
+
+		<message id='he'
+			lang:it='Errore verifica hash'
+		/>
+
+		<message id='pe'
+			lang:it='Errore Parametri'
+		/>
+
+	</group>
+</messages>

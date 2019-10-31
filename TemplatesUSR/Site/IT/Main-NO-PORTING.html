@@ -1,0 +1,49 @@
+
+{#Include TemplatesUSR-Site-include/Header.html}
+<body class="push-body-toright home no-porting" id="Amministrazione">
+<div id="fb-root"></div>
+
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v2.8&appId=299466920230993";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+        <div class="push_container">
+{#Include TemplatesUSR-Site-include/Testata.html}
+            <!-- START INDEX -->
+                  
+        <section class="WhiteContent">
+            <div class="container"> 
+                <div class="row ">
+                    <div class="col-xs-12 ">
+                        
+                            
+                            {CORPOPAGINA}
+                            
+                            {:if:notempty:PAGE.LEGGIALTRO}
+                                    {PAGE.LEGGIALTRO}
+                            {:endif} 
+                            
+                        
+                    </div>
+                    
+                       
+                </div>
+            </div>
+        </section>
+
+    <!-- STOP INDEX -->
+            
+    {#Include TemplatesUSR-Site-include/Footer.html}
+
+    {#Include TemplatesUSR-Site-include/AdminLink.html}
+            
+        </div>
+    </body>
+</html>

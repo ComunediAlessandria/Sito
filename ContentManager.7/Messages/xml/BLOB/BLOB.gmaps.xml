@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="it">
+	<group id="bgmaps" define="false">
+		<message id="mg" lang:it="Mappa GMap" lang:en="Google Map"/>
+		<message id="scdnuqoisa" lang:it="Si consiglia di non utilizzare questo oggetto in siti accessibili" lang:en="It's strongly suggested you don't use this object in an accessible site"/>
+		<message id="dimensioni" lang:it="Dimensioni" lang:en="Dimensions"/>
+		<message id="larghezza" lang:it="Larghezza" lang:en="Width"/>
+		<message id="altezza" lang:it="Altezza" lang:en="Height"/>
+		<message id="posizione" lang:it="Posizione sulla Mappa" lang:en="Map Position"/>
+		<message id="latitudine" lang:it="Latitudine" lang:en="Latitude"/>
+		<message id="longitudine" lang:it="Longitudine" lang:en="Longitude"/>
+		<message id="tm" lang:it="Testo Marker" lang:en="Marker's Text"/>
+		<message id="icona" lang:it="Icona" lang:en="Icon"/>
+		<message id="oi" lang:it="Ombra Icona" lang:en="Icon's Shadow"/>
+		<message id="normale" lang:it="Normale" lang:en="Street"/>
+		<message id="satellite" lang:it="Satellite" lang:en="Satelite"/>
+		<message id="ibrida" lang:it="Ibrida" lang:en="Hybrid"/>
+		<message id="phy" lang:it="Territorio" lang:en="Physical"/>
+		<message id="nessuno" lang:it="Nessuno" lang:en="None"/>
+		<message id="piccolo" lang:it="Piccolo" lang:en="Small"/>
+		<message id="grande" lang:it="Grande" lang:en="Large"/>
+		<message id="marker" lang:it="Marker" lang:en="Marker"/>
+		<message id="opzioni" lang:it="Opzioni" lang:en="Options"/>
+		<message id="tdm" lang:it="Tipo di Mappa" lang:en="Map Type"/>
+		<message id="cz" lang:it="Controllo Zoom" lang:en="Zoom Control"/>
+		<message id="wz" lang:it="Consenti Zoom con ScrollWheel del mouse" lang:en="Allow map zoom using mouse scrollwheel"/>
+		<message id="ctdm" lang:it="Controllo tipo di Mappa" lang:en="Map Kind Control"/>
+		<message id="cn" lang:it="Controllo Navigazione" lang:en="Navigation Control"/>
+		<message id="ms" lang:it="Mostra Scala" lang:en="Show Map Scale"/>
+		<message id="mm" lang:it="Mostra Mappa" lang:en="Show Map"/>
+		<message id="mw" lang:it="Usa Scroll Wheel per Zoom" lang:en="Use Scroll Wheel for Zoom"/>
+		<message id="ldzi" lang:it="Livello di zoom iniziale" lang:en="Initial Zoom Level"/>
+
+	</group>
+</messages>

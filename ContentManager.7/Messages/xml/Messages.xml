@@ -1,0 +1,692 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
+<messages xmlns:lang="#" defaultlang="it">
+
+	<!--
+
+		Uso:
+
+			$GLOBALS['gTranslator']->Translate(kMessageAdvancedSearchExclusion)
+			T(kMessageAdvancedSearchExclusion[, $p1, $p2])
+
+		Per i messaggi con variabili posizionali:
+
+			Pagina n. %2$s %1$s
+
+		Per i Language code vedere:
+			http://www.loc.gov/standards/iso639-2/langcodes.html
+
+	-->
+
+	<group id='main'>
+
+		<message id='kBlankLinkMessage'>
+			<trans lang='IT'> (Questo collegamento aprirà una nuova finestra)</trans>
+			<trans lang='EN'> (This link will be displayed in a new window)</trans>
+			<trans lang='NL'> (This link will be displayed in a new window)</trans>
+			<trans lang='FR'> (C'est lien ouvrira une nouvelle fenêtre de navigateur)</trans>
+			<trans lang='ES'> (Esto link se abrirá en una nueva ventana)</trans>
+			<trans lang='DE'> (Dieser Link wird öffnen in einem neuen Fenster)</trans>
+			<trans lang='BR'> (abre em uma janela nova)</trans>
+			<trans lang='PL'> (To połączenie otworzy nowe okno)</trans>
+			<trans lang='RU'> (Эта ссылка откроется в новом окне)</trans>
+		</message>
+
+			<!-- errore di accesso alla pagina per permesso -->
+
+		<message id='kMessageAccessNotAllowed'>
+			<trans lang='IT'>Non hai sufficienti diritti per accedere a questa pagina</trans>
+			<trans lang='EN'>You are not allowed to enter this page</trans>
+			<trans lang='FR'>Vous n'avez pas le droit de rentrer dans cette page</trans>
+			<trans lang='ES'>You are not allowed to enter this page</trans>
+			<trans lang='DE'>Ihnen werden nicht erlaubt, diese Seite zu betreten</trans>
+			<trans lang='BR'>Não é permitido você entrar nesta página</trans>
+			<trans lang='PL'>Nie masz wystarczających uprawnień, aby wejść do tego okna</trans>
+			<trans lang='RU'>Вы не обладаете правом доступа на эту страницу</trans>
+		</message>
+
+	</group>
+
+		<!--
+				informazioni della pagina di login
+		-->
+
+	<group id='login'>
+
+		<message id='kMessageLoginNoUsername'>
+			<trans lang='IT'>Non è stato specificato il nome utente</trans>
+			<trans lang='EN'>Username not specified</trans>
+			<trans lang='FR'>Le nom utilisateur n'a pas été saisi correctement</trans>
+			<trans lang='ES'>Username no está especificado</trans>
+			<trans lang='DE'>Username nicht spezifiziert</trans>
+			<trans lang='BR'>Username não especificado</trans>
+			<trans lang='PL'>Nie zostało wyszczególnione nazwisko użytkownika</trans>
+			<trans lang='RU'>Не указано имя пользователя</trans>
+		</message>
+
+		<message id='kMessageLoginNoPassword'>
+			<trans lang='IT'>Non è stata specificata la password</trans>
+			<trans lang='EN'>Password not specified</trans>
+			<trans lang='FR'>Le mot de passe n'a pas été saisi</trans>
+			<trans lang='ES'>Contraseña no està; especificada</trans>
+			<trans lang='DE'>Kennwort nicht spezifiziert</trans>
+			<trans lang='BR'>Senha não especificada</trans>
+			<trans lang='PL'>Nie zostało wyszczególnione hasło</trans>
+			<trans lang='RU'>Не указан пароль</trans>
+		</message>
+
+		<message id='kMessageLoginUnexistentUsername'>
+			<trans lang='IT'>Non esiste alcun utente con lo username specificato</trans>
+			<trans lang='EN'>No user found with the supplied username</trans>
+			<trans lang='FR'>Aucun utilisateur n'a trouvé avec l'username fourni</trans>
+			<trans lang='ES'>Ningún usuario encontró con el username proveído </trans>
+			<trans lang='DE'>Kein Benutzer fand mit dem gelieferten username</trans>
+			<trans lang='BR'>Nenhum usuário encontrou com o username fornecido</trans>
+			<trans lang='PL'>Nie ma żadnego użytkownika z wyszczególnionym username</trans>
+			<trans lang='RU'>Пользователя с данным именем не существует</trans>
+		</message>
+
+		<message id='kMessageLoginWrongPassword'>
+			<trans lang='IT'>La password inserita non è corretta</trans>
+			<trans lang='EN'>Incorrect Password</trans>
+			<trans lang='FR'>Le mot de passe saisi n'est pas correct</trans>
+			<trans lang='ES'>Contraseña incorrecta</trans>
+			<trans lang='DE'>Falsches Kennwort</trans>
+			<trans lang='BR'>Senha Incorreta</trans>
+			<trans lang='PL'>Wpisane hasło nie jest prawidłowe</trans>
+			<trans lang='RU'>Введен неправильный пароль</trans>
+		</message>
+
+	</group>
+
+		<!--
+				pagina di cambio password
+		-->
+
+	<group id='chPasswd'>
+
+		<message id='kMessageChPasswdWrongNew'>
+			<trans lang='IT'>La nuova password inserita non è corretta</trans>
+			<trans lang='EN'>The new password is incorrect</trans>
+			<trans lang='FR'>Le mot de passe utilisè n'est pas correct</trans>
+			<trans lang='ES'>La nueva contraseña es incorrecta</trans>
+			<trans lang='DE'>Das neue Kennwort ist falsch</trans>
+			<trans lang='BR'>A senha nova está incorreta</trans>
+			<trans lang='PL'>Nowo wpisane hasło nie jest prawidłowe</trans>
+			<trans lang='RU'>Новый введенный пароль неверный</trans>
+		</message>
+
+		<message id='kMessageChPasswdWrongOriginal'>
+			<trans lang='IT'>La password originale inserita non è corretta</trans>
+			<trans lang='EN'>The original password is incorrect</trans>
+			<trans lang='FR'>Le mot de passe originale n'est pas correct</trans>
+			<trans lang='ES'>La contraseña original es incorrecta</trans>
+			<trans lang='DE'>Das ursprüngliche Kennwort ist falsch</trans>
+			<trans lang='BR'>A senha original está incorreta</trans>
+			<trans lang='PL'>Wpisane oryginalne hasło nie jest prawidłowe</trans>
+			<trans lang='RU'>Первоначальный введенный пароль неверный</trans>
+		</message>
+	</group>
+
+		<!--
+				BLOB
+		-->
+
+	<group id='BLOB'>
+		<message id='kNoLanguagePage'>
+			<trans lang='IT'>Pagina non disponibile in questa lingua</trans>
+			<trans lang='EN'>Page not available in this language</trans>
+			<trans lang='FR'>Page non disponible dans cette langue</trans>
+			<trans lang='ES'>Pàgina no disponible en este idioma</trans>
+			<trans lang='DE'>Seite nicht vorhanden in dieser Sprache</trans>
+			<trans lang='BR'>Página nao disponível nesta língua</trans>
+			<trans lang='PL'>Strona nie dysponuje tym językiem</trans>
+			<trans lang='RU'>Страница не доступна на этом языке</trans>
+			<trans lang='JA'>Page not available in this language</trans>
+		</message>
+
+		<message id='kBLOBCopySuffix'>
+			<trans lang='IT'>- COPIA -</trans>
+			<trans lang='EN'>- COPY -</trans>
+			<trans lang='FR'>- COPIE -</trans>
+			<trans lang='ES'>- COPIA -</trans>
+			<trans lang='DE'>- KOPIE -</trans>
+			<trans lang='BR'>- CÓPIA -</trans>
+			<trans lang='PL'>- KOPIA -</trans>
+		</message>
+
+		<message id='kBLOBPreview'>
+			<trans lang='IT'>ANTEPRIMA</trans>
+			<trans lang='EN'>PREVIEW</trans>
+			<trans lang='FR'>PRÉVISION</trans>
+			<trans lang='ES'>INSPECCIÓN PREVIO</trans>
+			<trans lang='DE'>VORBETRACHTUNG</trans>
+			<trans lang='BR'>INSPECÇÃO PRÉVIA</trans>
+			<trans lang='PL'>WCZEŚNIEJ</trans>
+		</message>
+
+		<message id='cs'>
+			<trans lang='IT'>Calendario mensile</trans>
+			<trans lang='EN'>Monthly calendar</trans>
+			<trans lang='FR'>Calendrier mensuel</trans>
+			<trans lang='ES'>Calendario mensual</trans>
+			<trans lang='DE'>Monatskalender</trans>
+			<trans lang='BR'>Calendário mensal</trans>
+			<trans lang='BR'>Miesięczny kalendarz</trans>
+		</message>
+
+	</group>
+
+		<!--
+				informazioni della pagina di ricerca
+		-->
+
+	<group id='search'>
+
+			<!-- pagina di ricerca -->
+
+		<message id='kMessageSearchTitle'>
+			<trans lang='IT'>Risultato della Ricerca</trans>
+			<trans lang='EN'>Search result</trans>
+			<trans lang='FR'>Résultat de la recherche</trans>
+			<trans lang='ES'>Resultado de la bù;squeda</trans>
+			<trans lang='DE'>Suchresultat</trans>
+			<trans lang='BR'>Resultado da busca</trans>
+			<trans lang='PL'>Wyniki poszukiwań</trans>
+		</message>
+
+		<message id='kMessageSearchBreadCrumb' ref='kMessageSearchTitle' />
+
+			<!-- pagina di ricerca avanzata -->
+
+		<message id='kMessageAdvancedSearchTitle'>
+			<trans lang='IT'>Ricerca Avanzata</trans>
+			<trans lang='EN'>Advanced Search</trans>
+			<trans lang='FR'>Recherche Avancée</trans>
+			<trans lang='ES'>Búsqueda Advanzada</trans>
+			<trans lang='DE'>Vorgerückte Suche</trans>
+			<trans lang='BR'>Busca Avançada</trans>
+			<trans lang='PL'>Poszukiwanie zaawansowane</trans>
+		</message>
+
+		<message id='kMessageAdvancedSearchBreadCrumb' ref='kMessageAdvancedSearchTitle' />
+
+			<!-- descrizione della ricerca nella ricerca avanzata -->
+
+		<message id='kMessageAdvancedSearchLimitChannel'>
+			<trans lang='IT'>, limitatamente al canale </trans>
+			<trans lang='EN'>, within channel </trans>
+			<trans lang='FR'>, limité à la section </trans>
+			<trans lang='ES'>, y limitadamente al canal </trans>
+			<trans lang='DE'>limitedly zur Führung</trans>
+			<trans lang='BR'>limitedly à canaleta</trans>
+			<trans lang='PL'>ograniczenie do kanału</trans>
+		</message>
+
+		<message id='kMessageAdvancedSearchLimitAxes'>
+			<trans lang='IT'>, limitatamente a </trans>
+			<trans lang='EN'>, within  </trans>
+			<trans lang='FR'>, limité à </trans>
+			<trans lang='ES'>, y limitadamente </trans>
+			<trans lang='DE'> limitedly zur </trans>
+			<trans lang='BR'> limitedly à </trans>
+			<trans lang='PL'> ograniczenie do </trans>
+		</message>
+
+		<message id='kMessageAdvancedSearchExclusion'>
+			<trans lang='IT'>, con esclusione di </trans>
+			<trans lang='EN'>, with the exclusion of </trans>
+			<trans lang='FR'>, avec exclusion de </trans>
+			<trans lang='ES'>, excluyendo </trans>
+			<trans lang='DE'> mit dem Ausschluß von</trans>
+			<trans lang='BR'> com a exclusão de</trans>
+			<trans lang='PL'> za wyjątkiem</trans>
+		</message>
+
+		<!-- label per la selezione del canale -->
+
+		<message id='kMessageAdvancedSearchCanale'>
+			<trans lang='IT'>Canale</trans>
+			<trans lang='EN'>Channel</trans>
+			<trans lang='PL'>Kanał</trans>
+		</message>
+
+	</group>
+
+		<!--
+				traduzioni per i nomi dei mesi
+		-->
+
+	<group id='mesi'>
+
+		<message id='kMessageMonth01'>
+			<trans lang='IT'>Gennaio</trans>
+			<trans lang='EN'>January</trans>
+			<trans lang='FR'>Janvier</trans>
+			<trans lang='ES'>Enero</trans>
+			<trans lang='DE'>Januar</trans>
+			<trans lang='BR'>Janeiro</trans>
+			<trans lang='DA'>Gennaio</trans>
+			<trans lang='SV'>Gennaio</trans>
+			<trans lang='PL'>Styczeń</trans>
+		</message>
+
+		<message id='kMessageMonth02'>
+			<trans lang='IT'>Febbraio</trans>
+			<trans lang='EN'>February</trans>
+			<trans lang='FR'>Février</trans>
+			<trans lang='ES'>Febrero</trans>
+			<trans lang='DE'>Februar</trans>
+			<trans lang='BR'>Fevereiro</trans>
+			<trans lang='DA'>February</trans>
+			<trans lang='SV'>February</trans>
+			<trans lang='PL'>Luty</trans>
+		</message>
+
+		<message id='kMessageMonth03'>
+			<trans lang='IT'>Marzo</trans>
+			<trans lang='EN'>March</trans>
+			<trans lang='FR'>Mars</trans>
+			<trans lang='ES'>Marzo</trans>
+			<trans lang='DE'>März</trans>
+			<trans lang='BR'>Março</trans>
+			<trans lang='DA'>March</trans>
+			<trans lang='SV'>March</trans>
+			<trans lang='PL'>Marzec</trans>
+		</message>
+
+		<message id='kMessageMonth04'>
+			<trans lang='IT'>Aprile</trans>
+			<trans lang='EN'>April</trans>
+			<trans lang='FR'>Avril</trans>
+			<trans lang='ES'>Abril</trans>
+			<trans lang='DE'>April</trans>
+			<trans lang='BR'>Abril</trans>
+			<trans lang='DA'>April</trans>
+			<trans lang='SV'>April</trans>
+			<trans lang='PL'>Kwiecień</trans>
+		</message>
+
+		<message id='kMessageMonth05'>
+			<trans lang='IT'>Maggio</trans>
+			<trans lang='EN'>May</trans>
+			<trans lang='FR'>Mai</trans>
+			<trans lang='ES'>Mayo</trans>
+			<trans lang='DE'>Mai</trans>
+			<trans lang='BR'>Maio</trans>
+			<trans lang='DA'>May</trans>
+			<trans lang='SV'>May</trans>
+			<trans lang='PL'>Maj</trans>
+		</message>
+
+		<message id='kMessageMonth06'>
+			<trans lang='IT'>Giugno</trans>
+			<trans lang='EN'>June</trans>
+			<trans lang='FR'>Juin</trans>
+			<trans lang='ES'>Junio</trans>
+			<trans lang='DE'>Juni</trans>
+			<trans lang='BR'>Junho</trans>
+			<trans lang='DA'>June</trans>
+			<trans lang='SV'>June</trans>
+			<trans lang='PL'>Czerwiec</trans>
+		</message>
+
+		<message id='kMessageMonth07'>
+			<trans lang='IT'>Luglio</trans>
+			<trans lang='EN'>July</trans>
+			<trans lang='FR'>Juillet</trans>
+			<trans lang='ES'>Julio</trans>
+			<trans lang='DE'>Juli</trans>
+			<trans lang='BR'>Julho</trans>
+			<trans lang='DA'>July</trans>
+			<trans lang='SV'>July</trans>
+			<trans lang='PL'>Lipiec</trans>
+		</message>
+
+		<message id='kMessageMonth08'>
+			<trans lang='IT'>Agosto</trans>
+			<trans lang='EN'>August</trans>
+			<trans lang='FR'>Aout</trans>
+			<trans lang='ES'>Agosto</trans>
+			<trans lang='DE'>August</trans>
+			<trans lang='BR'>Agosto</trans>
+			<trans lang='DA'>August</trans>
+			<trans lang='SV'>August</trans>
+			<trans lang='PL'>Sierpień</trans>
+		</message>
+
+		<message id='kMessageMonth09'>
+			<trans lang='IT'>Settembre</trans>
+			<trans lang='EN'>September</trans>
+			<trans lang='FR'>Septembre</trans>
+			<trans lang='ES'>Septiembre</trans>
+			<trans lang='DE'>September</trans>
+			<trans lang='BR'>Setembro</trans>
+			<trans lang='DA'>September</trans>
+			<trans lang='SV'>September</trans>
+			<trans lang='PL'>Wrzesień</trans>
+		</message>
+
+		<message id='kMessageMonth10'>
+			<trans lang='IT'>Ottobre</trans>
+			<trans lang='EN'>October</trans>
+			<trans lang='FR'>Octobre</trans>
+			<trans lang='ES'>Octubre</trans>
+			<trans lang='DE'>Oktober</trans>
+			<trans lang='BR'>Outubro</trans>
+			<trans lang='DA'>October</trans>
+			<trans lang='SV'>October</trans>
+			<trans lang='PL'>Październik</trans>
+		</message>
+
+		<message id='kMessageMonth11'>
+			<trans lang='IT'>Novembre</trans>
+			<trans lang='EN'>November</trans>
+			<trans lang='FR'>Novembre</trans>
+			<trans lang='ES'>Noviembre</trans>
+			<trans lang='DE'>November</trans>
+			<trans lang='BR'>Novembro</trans>
+			<trans lang='DA'>November</trans>
+			<trans lang='SV'>Listopad</trans>
+			<trans lang='PL'>November</trans>
+		</message>
+
+		<message id='kMessageMonth12'>
+			<trans lang='IT'>Dicembre</trans>
+			<trans lang='EN'>December</trans>
+			<trans lang='FR'>Décembre</trans>
+			<trans lang='ES'>Diciembre</trans>
+			<trans lang='DE'>Dezember</trans>
+			<trans lang='BR'>Dezembro</trans>
+			<trans lang='DA'>December</trans>
+			<trans lang='SV'>December</trans>
+			<trans lang='PL'>Grudzień</trans>
+		</message>
+
+	</group>
+
+		<!--
+				traduzioni per i nomi dei giorni della settimana
+		-->
+
+	<group id='giorni'>
+
+		<message id='kMessageDay00'>
+			<trans lang='IT'>Domenica</trans>
+			<trans lang='EN'>Sunday</trans>
+			<trans lang='FR'>Dimanche</trans>
+			<trans lang='ES'>Domingo</trans>
+			<trans lang='DE'>Sonntag</trans>
+			<trans lang='BR'>Domingo</trans>
+			<trans lang='DA'>Sunday</trans>
+			<trans lang='SV'>Sunday</trans>
+			<trans lang='PL'>Niedziela</trans>
+		</message>
+
+		<message id='kMessageDay01'>
+			<trans lang='IT'>Lunedì</trans>
+			<trans lang='EN'>Monday</trans>
+			<trans lang='FR'>Lundi</trans>
+			<trans lang='ES'>Lunes</trans>
+			<trans lang='DE'>Montag</trans>
+			<trans lang='BR'>Segunda-feira</trans>
+			<trans lang='DA'>Monday</trans>
+			<trans lang='SV'>Monday</trans>
+			<trans lang='PL'>Poniedziałek </trans>
+		</message>
+
+		<message id='kMessageDay02'>
+			<trans lang='IT'>Martedì</trans>
+			<trans lang='EN'>Tuesday</trans>
+			<trans lang='FR'>Mardi</trans>
+			<trans lang='ES'>Martes</trans>
+			<trans lang='DE'>Dienstag</trans>
+			<trans lang='BR'>Terça-feira</trans>
+			<trans lang='DA'>Tuesday</trans>
+			<trans lang='SV'>Tuesday</trans>
+			<trans lang='PL'>Wtorek</trans>
+		</message>
+
+		<message id='kMessageDay03'>
+			<trans lang='IT'>Mercoledì</trans>
+			<trans lang='EN'>Wednesday</trans>
+			<trans lang='FR'>Mercredi</trans>
+			<trans lang='ES'>Miércoles</trans>
+			<trans lang='DE'>Mittwoch</trans>
+			<trans lang='BR'>Quarta-feira</trans>
+			<trans lang='DA'>Wednesday</trans>
+			<trans lang='SV'>Wednesday</trans>
+			<trans lang='PL'>Środa</trans>
+		</message>
+
+		<message id='kMessageDay04'>
+			<trans lang='IT'>Giovedì</trans>
+			<trans lang='EN'>Thursday</trans>
+			<trans lang='FR'>Jeudi</trans>
+			<trans lang='DE'>Donnerstag </trans>
+			<trans lang='ES'>Jueves</trans>
+			<trans lang='BR'>Quinta-feira</trans>
+			<trans lang='DA'>Thursday</trans>
+			<trans lang='SV'>Thursday</trans>
+			<trans lang='PL'>Czwartek</trans>
+		</message>
+
+		<message id='kMessageDay05'>
+			<trans lang='IT'>Venerdì</trans>
+			<trans lang='EN'>Friday</trans>
+			<trans lang='FR'>Vendredi</trans>
+			<trans lang='ES'>Viernes</trans>
+			<trans lang='DE'>Freitag</trans>
+			<trans lang='BR'>Sexta-feira</trans>
+			<trans lang='DA'>Friday</trans>
+			<trans lang='SV'>Friday</trans>
+			<trans lang='PL'>Piątek</trans>
+		</message>
+
+		<message id='kMessageDay06'>
+			<trans lang='IT'>Sabato</trans>
+			<trans lang='EN'>Saturday</trans>
+			<trans lang='FR'>Samedi</trans>
+			<trans lang='ES'>Sàbado</trans>
+			<trans lang='DE'>Samstag</trans>
+			<trans lang='BR'>Sábado</trans>
+			<trans lang='DA'>Saturday</trans>
+			<trans lang='SV'>Saturday</trans>
+			<trans lang='PL'>Sobota</trans>
+		</message>
+
+	</group>
+
+		<!--
+				community
+		-->
+
+	<group id='community'>
+
+<!--
+		<message id='kMessageCommunityRememberEmptyFields'>
+			<trans lang='IT'>è necessario inserire o lo username o l'email</trans>
+			<trans lang='PL'>konieczne jest podanie username albo e-mail</trans>
+		</message>
+
+		<message id='kMessageCommunityRememberNoUser'>
+			<trans lang='IT'>Non esistono utenti corrispondenti ai criteri inseriti</trans>
+			<trans lang='PL'>Nie ma użytkowników odpowiadających podanym kryteriom</trans>
+		</message>
+
+		<message id='kMessageCommunityChPassNoOldPass'>
+			<trans lang='IT'>Non è stata inserita la vecchia password</trans>
+			<trans lang='PL'>Nie podano dawnego hasła</trans>
+		</message>
+
+		<message id='kMessageCommunityChPassNoNewPass'>
+			<trans lang='IT'>Non è stata inserita la nuova password</trans>
+			<trans lang='PL'>Nie podano dawnego hasła</trans>
+		</message>
+
+		<message id='kMessageCommunityChPassNoMatch'>
+			<trans lang='IT'>Non c'è corrispondenza fra le nuove password inserite</trans>
+			<trans lang='PL'>Nie ma zgodności pomiędzy dołączonymi nowymi hasłami</trans>
+		</message>
+
+		<message id='kMessageCommunityChPassWrongPass'>
+			<trans lang='IT'>La password inserita non è corretta</trans>
+			<trans lang='PL'>Podane hasło nie jest poprawne</trans>
+		</message>
+
+		<message id='kMessageCommunityChPassError'>
+			<trans lang='IT'>Si è verificato un errore nel cambio della password</trans>
+			<trans lang='PL'>Nastąpił błąd przy zmianie hasła</trans>
+		</message>
+-->
+	</group>
+
+		<!--
+				Forum
+		-->
+
+	<group id='forum'>
+
+			<!-- elenco dei thread -->
+
+		<message id='kMessageForumNextThread'>
+			<trans lang='IT'>Pagina Successiva</trans>
+			<trans lang='PL'>Kolejne okno</trans>
+		</message>
+
+		<message id='kMessageForumPrevThread'>
+			<trans lang='IT'>Pagina Precedente</trans>
+			<trans lang='PL'>Poprzednie okno</trans>
+		</message>
+
+		<message id='kMessageForumFirstThread'>
+			<trans lang='IT'>Prima Pagina</trans>
+			<trans lang='PL'>Pierwsze okno</trans>
+		</message>
+
+		<message id='kMessageForumLastThread'>
+			<trans lang='IT'>Ultima Pagina</trans>
+			<trans lang='PL'>Ostanie okno</trans>
+		</message>
+
+			<!-- nome da usare nei tooltip per i link -->
+
+		<message id='kMessageForumPage'>
+			<trans lang='IT'>Pagina n %s</trans>
+			<trans lang='PL'>Okno n %s</trans>
+		</message>
+
+			<!-- elenco dei messaggi di un thread -->
+
+		<message id='kMessageForumNextMessage'>
+			<trans lang='IT'>Pagina Successiva</trans>
+			<trans lang='PL'>Kolejne okno</trans>
+		</message>
+
+		<message id='kMessageForumPrevMessage'>
+			<trans lang='IT'>Pagina Precedente</trans>
+			<trans lang='PL'>Poprzednie okno</trans>
+		</message>
+
+		<message id='kMessageForumFirstMessage'>
+			<trans lang='IT'>Prima Pagina</trans>
+			<trans lang='PL'>Pierwsze okno</trans>
+		</message>
+
+		<message id='kMessageForumLastMessage'>
+			<trans lang='IT'>Ultima Pagina</trans>
+			<trans lang='PL'>Ostanie okno</trans>
+		</message>
+	</group>
+
+		<!--
+				Gallery plus
+		-->
+
+	<group id='galleryplus'>
+
+		<!-- messaggi per paginazione galleria -->
+
+		<message id='kMessageGPPage'>
+			<trans lang='IT'>Pagina</trans>
+			<trans lang='EN'>Page</trans>
+			<trans lang='FR'>Page</trans>
+			<trans lang='DE'>Seite</trans>
+			<trans lang='ES'>Página</trans>
+			<trans lang='PL'>Okno</trans>
+		</message>
+
+		<message id='kMessageGPFirstPage'>
+			<trans lang='IT'>Prima pagina</trans>
+			<trans lang='EN'>First page</trans>
+			<trans lang='FR'>Première page</trans>
+			<trans lang='DE'>Erste Seite</trans>
+			<trans lang='ES'>Primera página</trans>
+			<trans lang='PL'>Pierwsze okno</trans>
+		</message>
+
+		<message id='kMessageGPLastPage'>
+			<trans lang='IT'>Ultima pagina</trans>
+			<trans lang='EN'>Last page</trans>
+			<trans lang='FR'>Dernière page</trans>
+			<trans lang='DE'>Letzte Seite</trans>
+			<trans lang='ES'>Última página</trans>
+			<trans lang='PL'>Ostanie okno</trans>
+		</message>
+
+		<message id='kMessageGPNextPage'>
+			<trans lang='IT'>Pagina successiva</trans>
+			<trans lang='EN'>Next page</trans>
+			<trans lang='FR'>Page suivante</trans>
+			<trans lang='DE'>Nächste Seite</trans>
+			<trans lang='ES'>Página siguiente</trans>
+			<trans lang='PL'>Kolejne okno</trans>
+		</message>
+
+		<message id='kMessageGPPrevPage'>
+			<trans lang='IT'>Pagina precedente</trans>
+			<trans lang='EN'>Previous page</trans>
+			<trans lang='FR'>Précédente</trans>
+			<trans lang='DE'>Vorige Seite</trans>
+			<trans lang='ES'>Página anterior</trans>
+			<trans lang='PL'>Poprzednie okno</trans>
+		</message>
+
+		<message id='kMessageGPFirstImage'>
+			<trans lang='IT'>Prima immagine</trans>
+			<trans lang='EN'>First image</trans>
+			<trans lang='FR'>Première image</trans>
+			<trans lang='DE'>Erstes Bild</trans>
+			<trans lang='ES'>Primera imagen</trans>
+			<trans lang='PL'>Pierwszy obraz</trans>
+		</message>
+
+		<message id='kMessageGPLastImage'>
+			<trans lang='IT'>Ultima immagine</trans>
+			<trans lang='EN'>Last image</trans>
+			<trans lang='FR'>Dernière image</trans>
+			<trans lang='DE'>Letztes Bild</trans>
+			<trans lang='ES'>Última imagen</trans>
+			<trans lang='PL'>Ostatni obraz</trans>
+		</message>
+
+		<message id='kMessageGPNextImage'>
+			<trans lang='IT'>Immagine successiva</trans>
+			<trans lang='EN'>Previous image</trans>
+			<trans lang='FR'>Image suivante</trans>
+			<trans lang='DE'>Nächstes Bild</trans>
+			<trans lang='ES'>Siguiente imagen</trans>
+			<trans lang='PL'>Kolejny obraz</trans>
+		</message>
+
+		<message id='kMessageGPPrevImage'>
+			<trans lang='IT'>Immagine precedente</trans>
+			<trans lang='EN'>Next image</trans>
+			<trans lang='FR'>Image précédente</trans>
+			<trans lang='DE'>Voriges Bild</trans>
+			<trans lang='ES'>Imagen Anterior</trans>
+			<trans lang='PL'>Poprzedni obraz</trans>
+		</message>
+	</group>
+
+</messages>
