@@ -1,0 +1,60 @@
+# This repository adheres to the publiccode.yml standard by including this 
+# metadata file that makes public software easily discoverable.
+# More info at https://github.com/italia/publiccode.yml
+
+publiccodeYmlVersion: '0.2'
+applicationSuite: Portale web basato di FlexCMP
+categories:
+  - website-builder
+description:
+  it:
+    documentation: 'http://www.flexcmp.com'
+    features:
+      - Pubblicazione pagine web
+    genericName: Portale basato su CMS
+    longDescription: >
+      Il portale del Comune di Alessandria è stato rinnovato nel corso del 2019.
+      E' ora una istanza personalizzata graficamente di un CMS con licenza
+      commerciale basato su php chiamato FlexCMP, prodotto dalla azienda
+      italiana Dedagroup Wiz srl; le customizzazioni prevedono templates
+      responsive aderenti alle linee guida PA testate sui principali dispositivi
+      e una riprogettazione editoriale per navigare il portale per Argomenti. Il
+      portale prevede le macro sezioni  Amministrazione, Amministrazione
+      Trasparente, Vivere la Città, Tutti gli Argomenti, Notizie, Eventi,
+      Comunicati stampa. 
+    shortDescription: >-
+      Istanza del portale pubblico istituzionale del Comune di Alessandria,
+      basato su un CMS con licenza commerciale
+developmentStatus: stable
+it:
+  conforme:
+    gdpr: true
+    lineeGuidaDesign: true
+    misureMinimeSicurezza: true
+    modelloInteroperabilita: false
+  countryExtensionVersion: '0.2'
+  piattaforme:
+    anpr: false
+    cie: false
+    pagopa: false
+    spid: false
+legal:
+  license: XXXXXXXXX
+  mainCopyrightOwner: Dedagroup Wiz Srl
+  repoOwner: Comune di AlessandriaXXXXXXXXX
+localisation:
+  availableLanguages:
+    - it
+  localisationReady: true
+maintenance:
+  contractors:
+    - name: XXXXXXXXDedagroup Wiz srlXXXXXXXXXXX
+      until: 'XXX2020-08-31'
+  type: contract
+name: Portale web Comune di Alessandria
+platforms:
+  - linux
+releaseDate: '2019-02-05'
+softwareType: addon
+softwareVersion: v. 7.7.11
+url: 'XXXXXXhttps://github.com/italia/publiccode.ymlXXXXXXXXXXXXXX'
