@@ -41,15 +41,15 @@ it:
 legal:
   license: XXXXXXXXX
   mainCopyrightOwner: Dedagroup Wiz Srl
-  repoOwner: Comune di AlessandriaXXXXXXXXX
+  repoOwner: Comune di Alessandria
 localisation:
   availableLanguages:
     - it
   localisationReady: true
 maintenance:
   contractors:
-    - name: XXXXXXXXDedagroup Wiz srlXXXXXXXXXXX
-      until: 'XXX2020-08-31'
+    - name: Dedagroup Wiz srl
+      until: '2020-08-31'
   type: contract
 name: Portale web Comune di Alessandria
 platforms:
@@ -57,4 +57,4 @@ platforms:
 releaseDate: '2019-02-05'
 softwareType: addon
 softwareVersion: v. 7.7.11
-url: 'XXXXXXhttps://github.com/italia/publiccode.ymlXXXXXXXXXXXXXX'
+url: 'https://github.com/ComunediAlessandria/Sito'
