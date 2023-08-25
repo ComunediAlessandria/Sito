@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
-<messages xmlns:lang="#" defaultlang="it">
-	<group id="bimg" define="false">
-		<message id="immagine" lang:it="Immagine" lang:en="Image" lang:es="Imagen"/>
-		<message id="elidon" lang:it="Elimina l'immagine dell'oggetto n." lang:en="Delete Image in item n." lang:es="Elimina l'immagine dell'oggetto n."/>
-	</group>
-</messages>

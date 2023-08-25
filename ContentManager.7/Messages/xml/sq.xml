@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
-<messages xmlns:lang="#" defaultlang="it">
-	<group id="sq" define="false">
-		<message id="filtra" lang:it="Filtra" lang:en="Filter" lang:fr="Filtres" lang:de="Filter"/>
-	</group>
-</messages>

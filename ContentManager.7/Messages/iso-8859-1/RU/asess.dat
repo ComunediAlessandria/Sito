@@ -1,8 +1,0 @@
-a:9:{s:2:"pt";s:19:"[RU] Accesso Negato";s:4:"nopt";s:27:"[RU] Permessi Insufficienti";s:4:"nopm";s:46:"?? ?? ????????? ?????? ??????? ?? ??? ????????";s:4:"expt";s:21:"[RU] Sessione Scaduta";s:4:"expm";s:102:"[RU] 
-				L'accesso non è consentito:
-				occorre effettuare nuovamente il <a href='%s'>Login</a>.
-			";s:4:"nolt";s:36:"[RU] Licenza non abilitata o scaduta";s:4:"nolm";s:107:"[RU] 
-				Per continuare ad utilizzare le funzionalità del prodotto è necessario aggiornare la licenza.
-			";s:5:"gerrt";s:20:"[RU] Errore Generico";s:5:"gerrm";s:88:"[RU] 
-				Si è verificato un errore. <a href='%s'>Torna all'area amministrativa</a>.
-			";}

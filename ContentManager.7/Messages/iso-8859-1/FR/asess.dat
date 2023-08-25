@@ -1,8 +1,0 @@
-a:9:{s:2:"pt";s:19:"[FR] Accesso Negato";s:4:"nopt";s:27:"[FR] Permessi Insufficienti";s:4:"nopm";s:51:"Vous n'avez pas le droit de rentrer dans cette page";s:4:"expt";s:21:"[FR] Sessione Scaduta";s:4:"expm";s:102:"[FR] 
-				L'accesso non è consentito:
-				occorre effettuare nuovamente il <a href='%s'>Login</a>.
-			";s:4:"nolt";s:36:"[FR] Licenza non abilitata o scaduta";s:4:"nolm";s:107:"[FR] 
-				Per continuare ad utilizzare le funzionalità del prodotto è necessario aggiornare la licenza.
-			";s:5:"gerrt";s:20:"[FR] Errore Generico";s:5:"gerrm";s:88:"[FR] 
-				Si è verificato un errore. <a href='%s'>Torna all'area amministrativa</a>.
-			";}

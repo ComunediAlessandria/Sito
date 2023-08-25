@@ -1,5 +1,0 @@
-a:17:{s:2:"pt";s:16:"Form Data Export";s:4:"none";s:7:"No data";s:2:"nm";s:24:"NUMBER OF LISTED OBJECTS";s:4:"tsum";s:27:"Table containing items list";s:3:"tha";s:7:"Actions";s:3:"thn";s:12:"Archive Name";s:3:"thr";s:10:"Row Number";s:3:"thl";s:17:"Last inserted row";s:3:"del";s:11:"Delete Data";s:3:"xls";s:3:"xls";s:3:"csv";s:3:"csv";s:3:"xml";s:3:"xml";s:7:"ddTitle";s:11:"Data Delete";s:7:"ddBtnOK";s:6:"Delete";s:11:"ddBtnCancel";s:6:"Cancel";s:6:"ddText";s:57:"
-				Do you really want to delete all data collected?
-			";s:6:"ddNote";s:57:"
-				The deleted data can not be restored in any way.
-			";}

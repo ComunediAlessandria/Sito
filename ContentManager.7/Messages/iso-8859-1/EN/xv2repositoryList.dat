@@ -1,9 +1,0 @@
-a:32:{s:2:"pt";s:10:"Repository";s:3:"add";s:12:"Add new item";s:4:"badd";s:3:"Add";s:3:"srt";s:7:"sort by";s:2:"lo";s:18:"List items by type";s:2:"ln";s:15:"name containing";s:3:"upd";s:11:"Update List";s:3:"all";s:3:"All";s:2:"nm";s:24:"NUMBER OF LISTED OBJECTS";s:4:"none";s:10:"NO OBJECTS";s:4:"bdup";s:9:"DUPLICATE";s:4:"bdel";s:6:"DELETE";s:4:"tsum";s:27:"Table containing items list";s:3:"tha";s:7:"Actions";s:4:"thnm";s:6:"Number";s:4:"thno";s:4:"Name";s:4:"thcl";s:14:"Classification";s:3:"thg";s:9:"Hierarchy";s:3:"tht";s:4:"Kind";s:7:"ddTitle";s:24:"Delete Repository Object";s:6:"ddText";s:82:"
-				Do you really want to delete the repository object '<strong>%s</strong>'?
-			";s:6:"ddNote";s:39:"The object will be permanently deleted.";s:7:"ddBtnOK";s:6:"Delete";s:11:"ddBtnCancel";s:6:"Cancel";s:7:"dpTitle";s:27:"Duplicate Repository Object";s:6:"dpText";s:85:"
-				Do you really want to duplicate the repository object '<strong>%s</strong>'?
-			";s:7:"dpBtnOK";s:9:"Duplicate";s:11:"dpBtnCancel";s:6:"Cancel";s:7:"bdTitle";s:23:"The object was deleted.";s:6:"bdText";s:65:"
-				The repository object '<strong>%s</strong>' was deleted.
-			";s:7:"bpTitle";s:26:"The object was duplicated.";s:6:"bpText";s:68:"
-				The repository object '<strong>%s</strong>' was duplicated.
-			";}

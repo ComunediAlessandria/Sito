@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
-<messages xmlns:lang="lang" defaultlang="IT">
-	<group id="snViewPageFriendslistFriend" define="false">
-		<message id="title"/>
-	</group>
-</messages>

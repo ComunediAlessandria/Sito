@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
-<messages xmlns:lang="#" defaultlang="it">
-	<group id="bforum" define="false">
-		<message id="forum" lang:it="Forum" lang:en="Forum"/>
-	</group>
-</messages>

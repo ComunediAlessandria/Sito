@@ -1,8 +1,0 @@
- in wysihtml5.dom.parse ~4926:
-
-	assegna:
-	  parse.attributeCheckMethods = {
-
-	in modo che sia accessibile come
-
-		wysihtml5.dom.parse.attributeCheckMethods

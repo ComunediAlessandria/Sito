@@ -1,9 +1,0 @@
-a:33:{s:2:"pt";s:13:"[BR] Libreria";s:3:"add";s:30:"[BR] Aggiungi un nuovo oggetto";s:4:"badd";s:13:"[BR] Aggiungi";s:3:"srt";s:15:"[BR] ordina per";s:2:"lo";s:27:"[BR] Elenca oggetti di tipo";s:2:"ln";s:25:"[BR] il cui nome contiene";s:3:"upd";s:13:"[BR] Aggiorna";s:3:"all";s:10:"[BR] Tutti";s:2:"nm";s:28:"[BR] NUMERO OGGETTI ELENCATI";s:4:"none";s:76:"[BR] NON CI SONO OGGETTI DA VISUALIZZARE CHE RISPONDANO AI CRITERI IMPOSTATI";s:4:"bmod";s:21:"[BR] MODIFICA oggetto";s:4:"bdup";s:20:"[BR] DUPLICA oggetto";s:4:"bdel";s:20:"[BR] ELIMINA oggetto";s:4:"tsum";s:152:"[BR] Tabella contenente l'elenco degli oggetti libreria: nella prima colonna sono contenuti i comandi di eliminazione, duplicazione, modifica, anteprima";s:3:"tha";s:11:"[BR] Azioni";s:4:"thnm";s:11:"[BR] Numero";s:4:"thno";s:9:"[BR] Nome";s:4:"thcl";s:11:"[BR] Canali";s:3:"thg";s:14:"[BR] Gerarchia";s:3:"tht";s:9:"[BR] Tipo";s:7:"ddTitle";s:38:"[BR] Cancellazione Oggetto di Libreria";s:6:"ddText";s:82:"[BR] 
-				Vuoi davvero cancellare l'oggetto di Libreria '<strong>%s</strong>'?
-			";s:6:"ddNote";s:72:"[BR] L'operazione eliminerà definitvamente l'oggetto di libreria scelto.";s:7:"ddBtnOK";s:12:"[BR] Elimina";s:11:"ddBtnCancel";s:12:"[BR] Annulla";s:7:"dpTitle";s:37:"[BR] Duplicazione Oggetto di Libreria";s:6:"dpText";s:81:"[BR] 
-				Vuoi davvero duplicare l'oggetto di Libreria '<strong>%s</strong>'?
-			";s:7:"dpBtnOK";s:12:"[BR] Duplica";s:11:"dpBtnCancel";s:12:"[BR] Annulla";s:7:"bdTitle";s:23:"[BR] Oggetto Eliminato.";s:6:"bdText";s:92:"[BR] 
-				L'oggetto di Libreria '<strong>%s</strong>' è stato definitivamente eliminato.
-			";s:7:"bpTitle";s:23:"[BR] Oggetto Duplicato.";s:6:"bpText";s:76:"[BR] 
-				L'oggetto di Libreria '<strong>%s</strong>' è stato duplicato.
-			";}

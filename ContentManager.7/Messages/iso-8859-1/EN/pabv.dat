@@ -1,5 +1,0 @@
-a:20:{s:9:"pageTitle";s:35:"List of versions of the page no. %s";s:6:"pageno";s:14:"Page number %s";s:7:"verlist";s:12:"Version List";s:3:"del";s:17:"Delete Version %s";s:4:"rest";s:18:"Restore Version %s";s:7:"ddTitle";s:14:"Delete Version";s:6:"ddText";s:72:"
-				Do you really want to delete the version '<strong>%s</strong>'?
-			";s:6:"ddNote";s:39:"The object will be permanently deleted.";s:7:"ddBtnOK";s:6:"Delete";s:11:"ddBtnCancel";s:6:"Cancel";s:9:"restTitle";s:20:"Restore Confirmation";s:8:"restText";s:73:"
-				Do you really want to restore the version '<strong>%s</strong>'?
-			";s:9:"restBtnOK";s:7:"Restore";s:3:"ver";s:7:"Version";s:4:"prev";s:7:"Preview";s:2:"pt";s:10:"Page Title";s:2:"dv";s:12:"Version Date";s:4:"auth";s:6:"Autore";s:3:"cur";s:7:"Current";s:2:"hm";s:18:"NUMBER OF VERSIONS";}

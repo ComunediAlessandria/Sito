@@ -1,7 +1,0 @@
-Miglioramento ed evoluzione dello spider integrato al motore di ricerca.
-
-Evoluzione modulo Community: possibilit&agrave; di filtrare gli utenti nell'export Excel.
-
-Evoluzione modulo SMS: possibiliti&agrave; di spedire SMS differenziati per ogni destinatario con dati impostabili attraverso fonti dati csv.
-
-Nuove API di programmazione

@@ -1,5 +1,0 @@
-a:20:{s:9:"pageTitle";s:33:"[JA] Elenco Versioni Pagina n. %s";s:6:"pageno";s:21:"[JA] Pagina numero %s";s:7:"verlist";s:20:"[JA] Elenco versioni";s:3:"del";s:24:"[JA] Elimina Versione %s";s:4:"rest";s:27:"[JA] Ripristina Versione %s";s:7:"ddTitle";s:27:"[JA] Cancellazione Versione";s:6:"ddText";s:72:"[JA] 
-				Vuoi davvero cancellare la versione '<strong>%s</strong>'?
-			";s:6:"ddNote";s:63:"[JA] L'operazione eliminerà definitvamente la versione scelta.";s:7:"ddBtnOK";s:12:"[JA] Elimina";s:11:"ddBtnCancel";s:12:"[JA] Annulla";s:9:"restTitle";s:24:"[JA] Conferma Ripristino";s:8:"restText";s:74:"[JA] 
-				Vuoi davvero ripristinare la versione '<strong>%s</strong>'?
-			";s:9:"restBtnOK";s:15:"[JA] Ripristina";s:3:"ver";s:13:"[JA] Versione";s:4:"prev";s:14:"[JA] Anteprima";s:2:"pt";s:18:"[JA] Titolo Pagina";s:2:"dv";s:18:"[JA] Data Versione";s:4:"auth";s:11:"[JA] Author";s:3:"cur";s:12:"[JA] Attuale";s:2:"hm";s:29:"[JA] NUMERO VERSIONI PRESENTI";}

@@ -1,9 +1,0 @@
-Nuova interfaccia di gestione utenti amministrativi, con possibilit&agrave; di filtro ed esportazione in formato Excel.
-
-Nuova impostazione attivabile a livello di sito che permette di forzare la scadenza delle password degli utenti amministrativi dopo un certo periodo (senza possibilit&agrave; di utilizzare l'ultima password impostata). 
-Possibilit&agrave; di definire a livello di sito la complessit&agrave; minima della password.
-Possibilit&agrave; di definire a livello di singolo utente amministrativo se la password deve scadere o meno.
-
-Possibilit&agrave; di definire a livello di sito l'esclusione dalle statistiche di specifici indirizzi IP oppure di specifici UserAgent. 
-
-Correzione di alcuni bug.

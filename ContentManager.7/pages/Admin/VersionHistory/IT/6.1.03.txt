@@ -1,9 +1,0 @@
-Modificato nel modulo Newsletter l'informazione sui Destinatari Effettivi / Totale Utenti membri delle community associate. In precedenza il totale indicava i soli membri validi.
-
-Modificato il servizio dei file scaricabili: ora non vengono serviti direttamente dal webserver ma da apposita procedura che effettua i controlli di accesso necessari.
-
-Modificata la messaggistica di accesso negato alle pagine riservate ai membri di community. Ora &egrave; possibile fornire messaggi differenziati nel caso la pagina sia limitata a community pubbliche o private. Ad esempio nel caso una pagina sia limitata ai membri di una community pubblica &egrave; possibile inserire nel messaggio di accesso negato l'invito all'iscrizione con il relativo link. Al contrario nel caso una pagina sia limitata ai membri di una community privata &egrave; possibile notificare che l'iscrizione va richiesta ai gestori del sito oppure, se non si desidera che ci&ograve; avvenga, limitarsi al messaggio di accesso negato.
-
-Migliorata la paginazione in area amministrativa e personalizzazioni con esplicitazione dei link alle diverse pagine della paginazione (precedentemente erano presenti solo i link a pagina precedente e successiva)
-
-Correzione di alcuni bug.

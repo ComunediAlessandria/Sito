@@ -1,9 +1,0 @@
-<?xml version='1.0' encoding='iso-8859-1' ?>
-<bo id='AccessRules'>
-	<table name='AccessRules' />
-	<key name='IDAccessRule' />
-
-	<field name='IsUser'	type='int'		default='1' />
-	<field name='Title'		type='varchar'	len='50'	default='' />
-	<field name='XML'		type='text'		default='' />
-</bo>

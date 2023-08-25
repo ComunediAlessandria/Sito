@@ -1,6 +1,0 @@
-Completa riprogettazione del sistema di gestione delle statistiche di accesso. <br/>
-Ora le statistiche vengono pre calcolate giornalmente per offrire una consultazione rapida ed efficace. <br />
-Le nuove statistiche distinguono visite (sessioni), pagine ed IP di provenienza e forniscono gli accessi per giorno, per ore del giorno, per giorno della settimana e per mese. <br />
-In siti con più lingue è possibile discriminare i dati di accesso per lingua. <br />
-Sono disponibili nuove funzionalità di controllo delle pagine più viste, funzionalità per l'esame dei siti di provenienza con dettaglio delle parole chiave utilizzate nei principali motori di ricerca, funzionalità di distribuzione delle visite per tempo di permanenza e pagine viste. <br />
-Le nuove statistiche forniscono dati di acceso sia comprendendo che escludendo le richieste effettuate dagli spider dei motori di ricerca, per permettere analisi ancora più puntuali. 

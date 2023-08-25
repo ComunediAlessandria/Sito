@@ -1,8 +1,0 @@
-a:9:{s:2:"pt";s:9:"Forbidden";s:4:"nopt";s:24:"Unsufficient Permissions";s:4:"nopm";s:38:"You are not allowed to enter this page";s:4:"expt";s:15:"Expired Session";s:4:"expm";s:64:"
-
-				Access Forbidden. Please <a href='%s'>Login</a> again.
-			";s:4:"nolt";s:36:"[en] Licenza non abilitata o scaduta";s:4:"nolm";s:109:"
-				[en] Per continuare ad utilizzare le funzionalità del prodotto è necessario aggiornare la licenza.
-			";s:5:"gerrt";s:18:"[en] Generic Error";s:5:"gerrm";s:52:"
-				[en] Error. <a href='%s'>Back to Admin</a>.
-			";}

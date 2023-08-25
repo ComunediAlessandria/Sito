@@ -1,7 +1,0 @@
-
-Utilità per il Social Wall
-
-Funzioni disponibili:
-
-	- rebuild: ricostruisce i riferimenti esterni
-

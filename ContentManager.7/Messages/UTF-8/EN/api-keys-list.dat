@@ -1,8 +1,0 @@
-a:20:{s:2:"pt";s:12:"API Key List";s:4:"badd";s:20:"Create a new API Key";s:4:"tsum";s:24:"Table with API KEYs list";s:3:"tha";s:7:"Actions";s:5:"thkey";s:3:"KEY";s:5:"thdtc";s:7:"Created";s:5:"thcby";s:2:"by";s:5:"thdte";s:6:"Expire";s:3:"thn";s:5:"Notes";s:2:"nm";s:14:"Number of Keys";s:9:"link-edit";s:4:"Edit";s:8:"link-del";s:6:"Delete";s:11:"link-enable";s:10:"Enable Key";s:12:"link-disable";s:11:"Disable Key";s:4:"none";s:28:"
-				No API Keys created
-			";s:12:"dialog-title";s:14:"Delete API Key";s:11:"dialog-text";s:59:"
-				Do you really want to delete the selected API Key?
-			";s:11:"dialog-note";s:107:"
-				Once deleted, every external application referring this API Key
-				will no longer work correctly.
-			";s:13:"dialog-btn-ok";s:6:"Delete";s:17:"dialog-btn-cancel";s:6:"Cancel";}

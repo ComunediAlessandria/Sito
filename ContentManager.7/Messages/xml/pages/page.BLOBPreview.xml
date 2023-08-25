@@ -1,8 +1,0 @@
-<?xml version='1.0' encoding='utf-8' ?>
-<!DOCTYPE FlexCMPMessages SYSTEM '/FlexCMPMessages.dtd'>
-<messages xmlns:lang='#' defaultlang='IT'>
-	<group id='pgprv' define='false'>
-		<message id='vc' lang:it='Visualizza per il Canale' lang:en='View by Channel'/>
-		<message id='upd' lang:it='Aggiorna' lang:en='Refresh'/>
-	</group>
-</messages>

@@ -1,8 +1,0 @@
-
-Funzioni che vengono usate all'interno degli script CLI
-
-Sostituiscono:
-
-	Scripts/Func.inc.php
-	class/clsCmdLine.php
-	class/clsCommandLine.php

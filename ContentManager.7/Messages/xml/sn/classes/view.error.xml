@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE FlexCMPMessages SYSTEM "/FlexCMPMessages.dtd">
-<messages xmlns:lang="lang" defaultlang="IT">
-  <group id="snViewError" define="false">
-    <message id="err" lang:it="Impossibile trovare la view specificata" lang:en="I cannot find the specified view" lang:fr="Je ne peux pas trouver la vue spécifiée" lang:de="Ich kann nicht finden, die angegebene Ansicht" lang:es="No puedo encontrar la vista especificada" lang:ru="Я не могу найти указанный вид"/>
-    <message id="test"/>
-  </group>
-</messages>

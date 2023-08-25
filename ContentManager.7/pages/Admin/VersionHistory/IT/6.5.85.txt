@@ -1,9 +1,0 @@
-Introdotta la data Fine Evento con ripercussioni sui calendari e sugli elencatori. Nel caso di un evento che perdura pi&uacute; di un giorno, verranno marcati più giorni nei calendari. Nelle impostazioni di classificazione &egrave; possibile specificare se la ripartizione temporale delle pagine classificate deve basarsi sulla data inizio validit&aacute; o sulla nuova data inizio evento.
-
-Possibilit&aacute; di specificare attraverso file di configurazione l'anno di partenza dei controlli di tipo data (impostato altrimenti a 2000).
-
-Introdotto nell'Elenco Pagine il filtro per telaio grafico.
-
-Modificata la gestione URL Parlanti per ammettere i caratteri . e - (per attivare la funzione &egrave; necessario disporre di modRewrite sul webserver ed opportuno file .htaccess. Se desiderato richiedere il servizio aDedagroup Wiz).
-
-Correzioni di alcuni bug.
